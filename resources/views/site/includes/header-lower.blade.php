@@ -65,9 +65,7 @@
                                 </ul>
                             </li>
 
-                            <li class="dropdown"><a href="#">News</a>
-
-                            </li>
+                            <li class="dropdown"><a href="{!! route('news') !!}">News</a></li>
 
                             <li class="dropdown"><a href="#">Publications</a>
                                 <ul>

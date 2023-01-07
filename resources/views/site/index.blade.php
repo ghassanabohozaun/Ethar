@@ -17,7 +17,6 @@
 
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
 
-
         <!-- main header -->
         @include('site.includes.header')
         <!-- main-header end -->

@@ -70,5 +70,14 @@ Route::group(
         return view('site.projects.project-details');
     })->name('project-details');
 
+
+    Route::get('/news', function (){
+        return view('site.news.new');
+    })->name('news');
+
+    Route::get('/new-details', function (){
+        return view('site.news.new-details');
+    })->name('new-details');
+
 });
 
