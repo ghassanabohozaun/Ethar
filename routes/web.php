@@ -79,5 +79,24 @@ Route::group(
         return view('site.news.new-details');
     })->name('new-details');
 
+
+    Route::get('/advertisements', function (){
+        return view('site.publications.advertisements');
+    })->name('advertisements');
+
+    Route::get('/advertisement-details', function (){
+        return view('site.publications.advertisements-details');
+    })->name('advertisement-details');
+
+
+    Route::get('/reports', function (){
+        return view('site.reports.report');
+    })->name('reports');
+
+
+    Route::get('/report-details', function (){
+        return view('site.reports.report-details');
+    })->name('report-details');
+
 });
 

@@ -29,12 +29,12 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>new</h1>
+                        <h1>Advertisements details</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="{!! route('index') !!}">Home</a></li>
                         <li>Pages</li>
-                        <li>new</li>
+                        <li>Advertisements details</li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         <div class="blog-details-content">
                             <div class="content-one">
                                 <div class="upper-box">
-                                    <span># news #</span>
+                                    <span># Advertisements #</span>
                                     <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
                                     <ul class="post-info clearfix">
                                         <li><i class="far fa-user"></i>By Name of writer</li>

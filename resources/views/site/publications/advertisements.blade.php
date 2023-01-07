@@ -29,58 +29,165 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>new</h1>
+                        <h1>Advertisements</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="{!! route('index') !!}">Home</a></li>
                         <li>Pages</li>
-                        <li>new</li>
+                        <li>Advertisements</li>
                     </ul>
                 </div>
             </div>
         </section>
         <!-- End Page Title -->
 
+
         <!-- sidebar-page-container -->
         <section class="sidebar-page-container">
             <div class="auto-container">
                 <div class="row clearfix">
-                    <!-- left  -->
                     <div class="col-lg-8 col-md-12 col-sm-12 content-side">
-                        <div class="blog-details-content">
-                            <div class="content-one">
-                                <div class="upper-box">
-                                    <span># news #</span>
-                                    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-                                    <ul class="post-info clearfix">
-                                        <li><i class="far fa-user"></i>By Name of writer</li>
-                                        <li><i class="far fa-eye"></i>25 Views</li>
-                                    </ul>
-                                </div>
-                                <figure class="image-box">
-                                    <img src="{!! asset('site/assets/images/news/news-14.jpg') !!}" alt="">
-                                    <span class="post-date">03.03.2021</span>
-                                </figure>
-                                <div class="text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen
-                                        book. It has survived not only five centuries, but also the leap into electronic
-                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum</p>
+                        <div class="blog-list-content">
+
+                            <div class="news-block-two">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <a href="#">
+                                            <img src="{!! asset('site/assets/images/news/news-9.jpg') !!}" alt="">
+                                        </a>
+                                    </figure>
+                                    <div class="content-box">
+                                        <div class="text">
+                                            <span class="post-date">03.03.2021</span>
+                                            <div class="category">
+                                                <a href="#"># News</a>
+                                            </div>
+                                            <h3>
+                                                <a href="#">Lorem Ipsum is simply dummy text of the printing</a>
+                                            </h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                        <div class="info clearfix">
+                                            <div class="link-box pull-left">
+                                                <a href="{!! route('advertisement-details') !!}">More Details</a>
+                                            </div>
+                                            <ul class="post-info pull-right clearfix">
+                                                <li>
+                                                    <i class="far fa-user"></i>
+                                                    <a href="#">By Richardson</a>
+                                                </li>
+                                                <li>
+                                                    <i class="far fa-eye"></i>
+                                                    <a href="#">08 views</a>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-share-alt"></i>
+                                                    <a href="#">Share</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="news-block-two">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <a href="#"><img src="{!! asset('site/assets/images/news/news-9.jpg') !!}"
+                                                         alt=""></a>
+                                    </figure>
+                                    <div class="content-box">
+                                        <div class="text">
+                                            <span class="post-date">03.03.2021</span>
+                                            <div class="category">
+                                                <a href="#"># News</a>
+                                            </div>
+                                            <h3>
+                                                <a href="#">Lorem Ipsum is simply dummy text of the printing</a>
+                                            </h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                        <div class="info clearfix">
+                                            <div class="link-box pull-left">
+                                                <a href="{!! route('advertisement-details') !!}">More Details</a>
+                                            </div>
+                                            <ul class="post-info pull-right clearfix">
+                                                <li>
+                                                    <i class="far fa-user"></i>
+                                                    <a href="#">By Richardson</a>
+                                                </li>
+                                                <li>
+                                                    <i class="far fa-eye"></i>
+                                                    <a href="#">08 views</a>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-share-alt"></i>
+                                                    <a href="#">Share</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news-block-two">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <a href="#"><img src="{!! asset('site/assets/images/news/news-9.jpg') !!}"
+                                                         alt=""></a>
+                                    </figure>
+                                    <div class="content-box">
+                                        <div class="text">
+                                            <span class="post-date">03.03.2021</span>
+                                            <div class="category">
+                                                <a href="#"># News</a>
+                                            </div>
+                                            <h3>
+                                                <a href="#">Lorem Ipsum is simply dummy text of the printing</a>
+                                            </h3>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                                since the 1500s</p>
+                                        </div>
+                                        <div class="info clearfix">
+                                            <div class="link-box pull-left">
+                                                <a href="{!! route('advertisement-details') !!}">More Details</a>
+                                            </div>
+                                            <ul class="post-info pull-right clearfix">
+                                                <li>
+                                                    <i class="far fa-user"></i>
+                                                    <a href="#">By Richardson</a>
+                                                </li>
+                                                <li>
+                                                    <i class="far fa-eye"></i>
+                                                    <a href="#">08 views</a>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-share-alt"></i>
+                                                    <a href="#">Share</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pagination-wrapper centred">
+                                <ul class="pagination clearfix">
+                                    <li><a href="blog-2.html"><i class="fas fa-arrow-left"></i></a></li>
+                                    <li><a href="blog-2.html" class="current">1</a></li>
+                                    <li><a href="blog-2.html">2</a></li>
+                                    <li><a href="blog-2.html">3</a></li>
+                                    <li><a href="blog-2.html"><i class="fas fa-arrow-right"></i></a></li>
+                                </ul>
+                            </div>
+
                         </div>
                     </div>
-                    <!-- left end -->
 
 
                     <!-- right  -->
@@ -128,6 +235,29 @@
                                                 industry.</a></h5>
                                         <span class="post-date">03.03.2021</span>
                                     </div>
+
+                                    <div class="post">
+                                        <figure class="post-thumb">
+                                            <a href="#">
+                                                <img src="{!! asset('site/assets/images/news/post-4.jpg') !!}" alt="">
+                                            </a>
+                                        </figure>
+                                        <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.</a></h5>
+                                        <span class="post-date">03.03.2021</span>
+                                    </div>
+
+                                    <div class="post">
+                                        <figure class="post-thumb">
+                                            <a href="#">
+                                                <img src="{!! asset('site/assets/images/news/post-4.jpg') !!}" alt="">
+                                            </a>
+                                        </figure>
+                                        <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.</a></h5>
+                                        <span class="post-date">03.03.2021</span>
+                                    </div>
+
 
                                 </div>
                             </div>

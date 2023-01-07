@@ -70,7 +70,7 @@
                             <li class="dropdown"><a href="#">Publications</a>
                                 <ul>
                                     <li>
-                                        <a href="#">ِAdvertisements</a>
+                                        <a href="{!! route('advertisements') !!}">ِAdvertisements</a>
                                     </li>
                                     <li>
                                         <a href="#">Brochures</a>
