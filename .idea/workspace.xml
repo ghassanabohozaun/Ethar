@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/site/publications/advertisements-details.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/site/publications/advertisements.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/site/publications/new-details.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/site/publications/new.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/includes/header-lower.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/header-lower.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/news/new.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/news/new.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/reports/report-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/reports/report-details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/reports/report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/reports/report.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +232,7 @@
       <workItem from="1673085711271" duration="1674000" />
       <workItem from="1673087425759" duration="9000" />
       <workItem from="1673091514390" duration="3416000" />
-      <workItem from="1673121572941" duration="1888000" />
+      <workItem from="1673121572941" duration="2740000" />
     </task>
     <servers />
   </component>

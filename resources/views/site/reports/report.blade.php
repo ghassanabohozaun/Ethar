@@ -29,12 +29,12 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Projects</h1>
+                        <h1>Reports</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="{!! route('index') !!}">Home</a></li>
                         <li>Pages</li>
-                        <li>Projects</li>
+                        <li>Reports</li>
                     </ul>
                 </div>
             </div>
@@ -42,188 +42,61 @@
         <!-- End Page Title -->
 
 
-        <!-- case-page-section -->
-        <section class="case-page-section list-view">
+        <br> <br> <br> <br> <br>
+        <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
+
+
+
+        <!-- history-section -->
+        <section class="history-section">
+            <div class="pattern-layer"></div>
             <div class="auto-container">
+                <div class="inner-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-12 col-md-12 col-sm-12 image-column">
+                            <div class="tabs-box">
+                                <div class="tab-btn-box">
+                                    <ul class="tab-btns tab-buttons clearfix">
+                                        <a href="{!! route('report-details') !!}">
+                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
+                                          <i class="far fa-calendar-alt"></i>2022
+                                        </li>
+                                        </a>
+                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
+                                            <i class="far fa-calendar-alt"></i>2021
+                                        </li>
+                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
+                                            <i class="far fa-calendar-alt"></i>2020
+                                        </li>
+                                        <li class="tab-btn active-btn" style="margin-bottom: 20px" data-tab="#tab-1">
+                                            <i class="far fa-calendar-alt"></i>2019
+                                        </li>
+                                        <li class="tab-btn active-btn" style="margin-bottom: 20px" data-tab="#tab-1">
+                                            <i class="far fa-calendar-alt"></i>2018
+                                        </li>
+                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
+                                            <i class="far fa-calendar-alt"></i>2017
+                                        </li>
+                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
+                                            <i class="far fa-calendar-alt"></i>2016
+                                        </li>
+                                        <li class="tab-btn active-btn" style="margin-bottom: 20px" data-tab="#tab-1">
+                                            <i class="far fa-calendar-alt"></i>2015
+                                        </li>
 
-
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
-                                </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                            <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
                                     </ul>
-                                </li>
-                            </ul>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-
-
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
-                                </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                            <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
-                                </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                            <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
-                                </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                            <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pagination-wrapper centred">
-                    <ul class="pagination clearfix">
-                        <li><a href="donations.html"><i class="fas fa-arrow-left"></i></a></li>
-                        <li><a href="donations.html" class="current">1</a></li>
-                        <li><a href="donations.html">2</a></li>
-                        <li><a href="donations.html">3</a></li>
-                        <li><a href="donations.html"><i class="fas fa-arrow-right"></i></a></li>
-                    </ul>
                 </div>
             </div>
         </section>
-        <!-- case-page-section end -->
+        <!-- history-section end -->
+
+
+
 
 
         <!-- main-footer -->

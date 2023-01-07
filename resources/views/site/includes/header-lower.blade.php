@@ -86,7 +86,7 @@
                             </li>
 
                             <li class="dropdown">
-                                <a href="#">Reports</a>
+                                <a href="{!! route('reports') !!}">Reports</a>
                             </li>
 
                             <li class="dropdown"><a href="#">Media</a>
