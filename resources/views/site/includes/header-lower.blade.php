@@ -61,12 +61,14 @@
                                     <li><a href="{!! route('project-details') !!}">Current Project 3</a></li>
                                     <li><a href="{!! route('project-details') !!}">Current Project 4</a></li>
                                     <li><a href="{!! route('project-details') !!}">Current Project 4</a></li>
+                                    <li><a href="{!! route('project-details') !!}">Current Project 5</a></li>
                                 </ul>
                             </li>
 
                             <li class="dropdown"><a href="#">News</a>
 
                             </li>
+
                             <li class="dropdown"><a href="#">Publications</a>
                                 <ul>
                                     <li>
