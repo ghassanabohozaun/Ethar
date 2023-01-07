@@ -60,6 +60,7 @@
                                     <li><a href="{!! route('project-details') !!}">Current Project 2</a></li>
                                     <li><a href="{!! route('project-details') !!}">Current Project 3</a></li>
                                     <li><a href="{!! route('project-details') !!}">Current Project 4</a></li>
+                                    <li><a href="{!! route('project-details') !!}">Current Project 4</a></li>
                                 </ul>
                             </li>
 
