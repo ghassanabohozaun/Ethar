@@ -1,0 +1,25 @@
+/* Start Body scroller */
+.scroller {
+    overflow-y: scroll;
+    scrollbar-color: #C0C0C0 #F1F1F1;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #F1F1F1;
+    border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #C0C0C0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #A8A8A8;
+}
