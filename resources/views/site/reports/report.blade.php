@@ -46,7 +46,6 @@
         <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
 
 
-
         <!-- history-section -->
         <section class="history-section">
             <div class="pattern-layer"></div>
@@ -57,11 +56,9 @@
                             <div class="tabs-box">
                                 <div class="tab-btn-box">
                                     <ul class="tab-btns tab-buttons clearfix">
-                                        <a href="{!! route('report-details') !!}">
                                         <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
-                                          <i class="far fa-calendar-alt"></i>2022
+                                            <a href="{!! route('report-details') !!}"><i class="far fa-calendar-alt"></i>2022</a>
                                         </li>
-                                        </a>
                                         <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
                                             <i class="far fa-calendar-alt"></i>2021
                                         </li>
