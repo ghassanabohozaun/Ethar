@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Admin;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
 
 class AdminSeeder extends Seeder
@@ -17,6 +18,7 @@ class AdminSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => bcrypt('123456'),
             'status'=>'on',
+            'role_id'=>Role::pluck('id')->first(),
         ]);
     }
 }

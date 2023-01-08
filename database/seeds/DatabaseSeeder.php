@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Database\Seeder;
 
+use App\Models\Role;
+use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -11,7 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(AdminSeeder::class);
-        $this->call(SettingsSeeder::class);
+
+        Role::create([
+            'role_name_ar' => 'admin',
+            'role_name_en'=> 'admin',
+            'permissions'=> json_encode(["dashboard", "settings", "admins", "roles", "users", "support-center", "articles"]),
+        ]);
+
+        $this->call([
+            SettingsSeeder::class,
+            AdminSeeder::class,
+        ]);
+
     }
 }
