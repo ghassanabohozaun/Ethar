@@ -65,14 +65,12 @@
                                 </ul>
                             </li>
 
-                            <li class="dropdown"><a href="#">News</a>
-
-                            </li>
+                            <li class="dropdown"><a href="{!! route('news') !!}">News</a></li>
 
                             <li class="dropdown"><a href="#">Publications</a>
                                 <ul>
                                     <li>
-                                        <a href="#">ِAdvertisements</a>
+                                        <a href="{!! route('advertisements') !!}">ِAdvertisements</a>
                                     </li>
                                     <li>
                                         <a href="#">Brochures</a>
@@ -88,7 +86,7 @@
                             </li>
 
                             <li class="dropdown">
-                                <a href="#">Reports</a>
+                                <a href="{!! route('reports') !!}">Reports</a>
                             </li>
 
                             <li class="dropdown"><a href="#">Media</a>
