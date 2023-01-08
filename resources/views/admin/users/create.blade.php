@@ -270,8 +270,8 @@
 
 @push('js')
     <script type="text/javascript">
+
         //////////////////////////////////////////////////////
-        ///
         var user_photo = new KTImageInput('kt_user_photo');
 
         /////////////////////////////////////////////////////////
