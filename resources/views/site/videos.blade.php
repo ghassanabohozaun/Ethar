@@ -42,6 +42,167 @@
         <!-- End Page Title -->
 
 
+        <!-- events-page-section -->
+        <section class="events-page-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 events-block">
+                        <div class="events-block-two">
+                            <div class="inner-box">
+                                <div class="post-date"><h3>31<span>2/2020</span></h3></div>
+                                <figure class="image-box"><img
+                                        src="{!! asset('site/assets/images/events/events-4.jpg') !!}" alt=""></figure>
+                                <div class="content-box">
+
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>11.30 min</li>
+                                        <li><i class="fab fa-youtube"></i>youtube</li>
+                                    </ul>
+                                    <h3><a href="#">Video Title</a></h3>
+                                    <div class="links">
+                                        <a href="https://www.youtube.com/watch?v=DzwIRzD7da4"
+                                           class="lightbox-image" data-caption="">
+                                            <i class="icon-play-arrow"></i>
+                                            Play Video
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 events-block">
+                        <div class="events-block-two">
+                            <div class="inner-box">
+                                <div class="post-date"><h3>31<span>2/2020</span></h3></div>
+                                <figure class="image-box"><img
+                                        src="{!! asset('site/assets/images/events/events-4.jpg') !!}" alt=""></figure>
+                                <div class="content-box">
+
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>11.30 min</li>
+                                        <li><i class="fab fa-youtube"></i>youtube</li>
+                                    </ul>
+                                    <h3><a href="#">Video Title</a></h3>
+                                    <div class="links">
+                                        <a href="https://www.youtube.com/watch?v=DzwIRzD7da4"
+                                           class="lightbox-image" data-caption="">
+                                            <i class="icon-play-arrow"></i>
+                                            Play Video
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 events-block">
+                        <div class="events-block-two">
+                            <div class="inner-box">
+                                <div class="post-date"><h3>31<span>2/2020</span></h3></div>
+                                <figure class="image-box"><img
+                                        src="{!! asset('site/assets/images/events/events-4.jpg') !!}" alt=""></figure>
+                                <div class="content-box">
+
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>11.30 min</li>
+                                        <li><i class="fab fa-youtube"></i>youtube</li>
+                                    </ul>
+                                    <h3><a href="#">Video Title</a></h3>
+                                    <div class="links">
+                                        <a href="https://www.youtube.com/watch?v=DzwIRzD7da4"
+                                           class="lightbox-image" data-caption="">
+                                            <i class="icon-play-arrow"></i>
+                                            Play Video
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 events-block">
+                        <div class="events-block-two">
+                            <div class="inner-box">
+                                <div class="post-date"><h3>31<span>2/2020</span></h3></div>
+                                <figure class="image-box"><img
+                                        src="{!! asset('site/assets/images/events/events-4.jpg') !!}" alt=""></figure>
+                                <div class="content-box">
+
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>11.30 min</li>
+                                        <li><i class="fab fa-youtube"></i>youtube</li>
+                                    </ul>
+                                    <h3><a href="#">Video Title</a></h3>
+                                    <div class="links">
+                                        <a href="https://www.youtube.com/watch?v=DzwIRzD7da4"
+                                           class="lightbox-image" data-caption="">
+                                            <i class="icon-play-arrow"></i>
+                                            Play Video
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 events-block">
+                        <div class="events-block-two">
+                            <div class="inner-box">
+                                <div class="post-date"><h3>31<span>2/2020</span></h3></div>
+                                <figure class="image-box"><img
+                                        src="{!! asset('site/assets/images/events/events-4.jpg') !!}" alt=""></figure>
+                                <div class="content-box">
+
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>11.30 min</li>
+                                        <li><i class="fab fa-youtube"></i>youtube</li>
+                                    </ul>
+                                    <h3><a href="#">Video Title</a></h3>
+                                    <div class="links">
+                                        <a href="https://www.youtube.com/watch?v=DzwIRzD7da4"
+                                           class="lightbox-image" data-caption="">
+                                            <i class="icon-play-arrow"></i>
+                                            Play Video
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12 events-block">
+                        <div class="events-block-two">
+                            <div class="inner-box">
+                                <div class="post-date"><h3>31<span>2/2020</span></h3></div>
+                                <figure class="image-box"><img
+                                        src="{!! asset('site/assets/images/events/events-4.jpg') !!}" alt=""></figure>
+                                <div class="content-box">
+
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>11.30 min</li>
+                                        <li><i class="fab fa-youtube"></i>youtube</li>
+                                    </ul>
+                                    <h3><a href="#">Video Title</a></h3>
+                                    <div class="links">
+                                        <a href="https://www.youtube.com/watch?v=DzwIRzD7da4"
+                                           class="lightbox-image" data-caption="">
+                                            <i class="icon-play-arrow"></i>
+                                            Play Video
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="more-btn centred"><a href="#" class="theme-btn btn-one">Load More</a></div>
+            </div>
+        </section>
+        <!-- events-page-section -->
+
         <!-- essentials-section -->
         <section class="essentials-section centred">
             <div class="auto-container">
@@ -49,7 +210,8 @@
                     <div class="row clearfix">
                         <div class="col-lg-4 col-md-4 col-sm-6 single-column">
                             <div class="single-item">
-                                <div class="bg-layer" style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
+                                <div class="bg-layer"
+                                     style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
                                 <h3>Video Title</h3>
                                 <p style="font-size: 16px">
                                     <span style="color: #9f3a38 ; font-weight: bolder ">Date </span> : 20-20-2022
@@ -60,7 +222,6 @@
                                         <span class="fab fa-youtube fa-2x " style="color: #9f3a38 ; "></span>
                                         <span style="padding: 2px 10px">Play Now</span>
                                     </div>
-
 
 
                                 </a>
@@ -68,7 +229,8 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 single-column">
                             <div class="single-item">
-                                <div class="bg-layer" style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
+                                <div class="bg-layer"
+                                     style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
                                 <h3>Video Title</h3>
                                 <p style="font-size: 16px">
                                     <span style="color: #9f3a38 ; font-weight: bolder ">Date </span> : 20-20-2022
@@ -79,7 +241,6 @@
                                         <span class="fab fa-youtube fa-2x " style="color: #9f3a38 ; "></span>
                                         <span style="padding: 2px 10px">Play Now</span>
                                     </div>
-
 
 
                                 </a>
@@ -87,7 +248,8 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 single-column">
                             <div class="single-item">
-                                <div class="bg-layer" style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
+                                <div class="bg-layer"
+                                     style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
                                 <h3>Video Title</h3>
                                 <p style="font-size: 16px">
                                     <span style="color: #9f3a38 ; font-weight: bolder ">Date </span> : 20-20-2022
@@ -98,7 +260,6 @@
                                         <span class="fab fa-youtube fa-2x " style="color: #9f3a38 ; "></span>
                                         <span style="padding: 2px 10px">Play Now</span>
                                     </div>
-
 
 
                                 </a>
@@ -106,7 +267,8 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 single-column">
                             <div class="single-item">
-                                <div class="bg-layer" style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
+                                <div class="bg-layer"
+                                     style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
                                 <h3>Video Title</h3>
                                 <p style="font-size: 16px">
                                     <span style="color: #9f3a38 ; font-weight: bolder ">Date </span> : 20-20-2022
@@ -117,7 +279,6 @@
                                         <span class="fab fa-youtube fa-2x " style="color: #9f3a38 ; "></span>
                                         <span style="padding: 2px 10px">Play Now</span>
                                     </div>
-
 
 
                                 </a>
@@ -125,7 +286,8 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 single-column">
                             <div class="single-item">
-                                <div class="bg-layer" style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
+                                <div class="bg-layer"
+                                     style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
                                 <h3>Video Title</h3>
                                 <p style="font-size: 16px">
                                     <span style="color: #9f3a38 ; font-weight: bolder ">Date </span> : 20-20-2022
@@ -136,7 +298,6 @@
                                         <span class="fab fa-youtube fa-2x " style="color: #9f3a38 ; "></span>
                                         <span style="padding: 2px 10px">Play Now</span>
                                     </div>
-
 
 
                                 </a>
@@ -144,7 +305,8 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 single-column">
                             <div class="single-item">
-                                <div class="bg-layer" style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
+                                <div class="bg-layer"
+                                     style="background-image: url({!! asset('site/assets/images/resource/contact-1.jpg') !!});"></div>
                                 <h3>Video Title</h3>
                                 <p style="font-size: 16px">
                                     <span style="color: #9f3a38 ; font-weight: bolder ">Date </span> : 20-20-2022
@@ -155,7 +317,6 @@
                                         <span class="fab fa-youtube fa-2x " style="color: #9f3a38 ; "></span>
                                         <span style="padding: 2px 10px">Play Now</span>
                                     </div>
-
 
 
                                 </a>
