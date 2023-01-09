@@ -54,12 +54,7 @@
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="dtable scroll">
-                                            <style>
-                                                .table td {
-                                                    vertical-align: middle;
-                                                }
-                                            </style>
+                                        <div class="scroll">
                                             <div class="table-responsive">
                                                 <table class="table table-hover" id="myTable">
                                                     <thead>

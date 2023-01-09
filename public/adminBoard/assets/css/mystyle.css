@@ -5,7 +5,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 1px;
 }
 
 /* Track */
@@ -148,4 +148,9 @@ tr:nth-child(even) > td {
 }
 .trash_btn i {
     padding-left: 0;
+}
+
+
+.myTable td {
+    vertical-align: middle;
 }
