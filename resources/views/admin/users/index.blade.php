@@ -93,24 +93,22 @@
                                                                                     @if($user->gender == trans('general.male'))
                                                                                         <img
                                                                                             src="{{asset('adminBoard/images/male.jpeg')}}"
-                                                                                            width="50" height="50"
-                                                                                            class=" img-thumbnail"/>
+                                                                                            width="70"
+                                                                                            class="img-fluid img-thumbnail"/>
                                                                                     @else
                                                                                         <img
                                                                                             src="{{asset('adminBoard/images/female.jpeg')}}"
-                                                                                            width="50" height="50"
-                                                                                            class="img-thumbnail"/>
+                                                                                            width="70"
+                                                                                            class="img-fluid img-thumbnail"/>
                                                                                     @endif
 
                                                                                 @else
                                                                                     <img
                                                                                         src="{{asset(Storage::url($user->photo))}}"
-                                                                                        width="70" height="70"
+                                                                                        width="70"
                                                                                         style="border-radius: 10px"
-                                                                                        class=""/>
+                                                                                        class="img-fluid img-thumbnail"/>
                                                                                 @endif
-
-
                                                                             </td>
                                                                             <td>{{ $user->name }}</td>
                                                                             <td>{{ $user->email }}</td>

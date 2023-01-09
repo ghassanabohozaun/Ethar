@@ -77,24 +77,21 @@
                                                                     @if($user->gender == trans('general.male'))
                                                                         <img
                                                                             src="{{asset('adminBoard/images/male.jpeg')}}"
-                                                                            width="50" height="50"
-                                                                            class=" img-thumbnail"/>
+                                                                            width="70"
+                                                                            class="img-fluid img-thumbnail"/>
                                                                     @else
                                                                         <img
                                                                             src="{{asset('adminBoard/images/female.jpeg')}}"
-                                                                            width="50" height="50"
-                                                                            class="img-thumbnail"/>
+                                                                            width="70"
+                                                                            class="img-fluid img-thumbnail"/>
                                                                     @endif
 
                                                                 @else
-                                                                    <img
-                                                                        src="{{asset(Storage::url($user->photo))}}"
-                                                                        width="70" height="70"
-                                                                        style="border-radius: 10px"
-                                                                        class=""/>
+                                                                    <img src="{{asset(Storage::url($user->photo))}}"
+                                                                         width="70"
+                                                                         style="border-radius: 10px"
+                                                                         class="img-fluid img-thumbnail"/>
                                                                 @endif
-
-
                                                             </td>
                                                             <td>{{ $user->name }}</td>
                                                             <td>{{ $user->email }}</td>
@@ -218,7 +215,7 @@
                                     customClass: {confirmButton: 'delete_user_button'}
                                 });
                                 $('.delete_user_button').click(function () {
-                                    $('#myTable').load(location.href+(' #myTable'));
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
                         },//end success
@@ -267,7 +264,7 @@
                             customClass: {confirmButton: 'restore_user_button'}
                         });
                         $('.restore_user_button').click(function () {
-                            $('#myTable').load(location.href+(' #myTable'));
+                            $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },//end success
