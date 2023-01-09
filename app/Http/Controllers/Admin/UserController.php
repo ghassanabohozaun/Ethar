@@ -27,11 +27,11 @@ class UserController extends Controller
             ->withoutTrashed()
             ->orderByDesc('created_at')
             ->where('id', '!=', \auth('admin')->user()->id)
-            ->get();
+            ->paginate(1);
 
 
 
-        return view('admin.users.index', compact('title'));
+        return view('admin.users.index', compact('title','users'));
     }
     /////////////////////////////////////////
     /// Get Users

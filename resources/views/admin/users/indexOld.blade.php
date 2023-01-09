@@ -66,66 +66,24 @@
                                     <div class="col-12">
                                         <div class="dtable scroll">
                                             <!--begin: Datatable -->
-                                            <!--begin: Datatable-->
-                                            <div class="portlet-body">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="dtable scroll">
-                                                            <!--begin: Datatable -->
-                                                            <div class="table-responsive">
-                                                                <table class="table table-hover">
-                                                                    <thead>
-                                                                    <tr>
-                                                                        <th>Name</th>
-                                                                        <th>Products count</th>
-                                                                        <th>Parent</th>
-                                                                        <th>Status</th>
-                                                                        <th>Created at</th>
-                                                                        <th class="text-center" style="width: 30px;">Actions</th>
-                                                                    </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                    @forelse($users as $user)
-                                                                        <tr>
-                                                                            <td>{{ $user->name }}</td>
-
-                                                                            <td>
-                                                                                {{--                                                                <div class="btn-group btn-group-sm">--}}
-                                                                                {{--                                                                    <a href="{{ route('admin.product_categories.edit', $category->id) }}" class="btn btn-primary">--}}
-                                                                                {{--                                                                        <i class="fa fa-edit"></i>--}}
-                                                                                {{--                                                                    </a>--}}
-                                                                                {{--                                                                    <a href="javascript:void(0);" onclick="if (confirm('Are you sure to delete this record?')) { document.getElementById('delete-product-category-{{ $category->id }}').submit(); } else { return false; }" class="btn btn-danger">--}}
-                                                                                {{--                                                                        <i class="fa fa-trash"></i>--}}
-                                                                                {{--                                                                    </a>--}}
-                                                                                {{--                                                                </div>--}}
-                                                                                {{--                                                                <form action="{{ route('admin.product_categories.destroy', $category->id) }}" method="post" id="delete-product-category-{{ $category->id }}" class="d-none">--}}
-                                                                                {{--                                                                    @csrf--}}
-                                                                                {{--                                                                    @method('DELETE')--}}
-                                                                                {{--                                                                </form>--}}
-                                                                            </td>
-                                                                        </tr>
-                                                                    @empty
-                                                                        <tr>
-                                                                            <td colspan="6" class="text-center">No categories found</td>
-                                                                        </tr>
-                                                                    @endforelse
-                                                                    </tbody>
-                                                                    <tfoot>
-                                                                    <tr>
-                                                                        <td colspan="6">
-                                                                            <div class="float-right">
-                                                                                {!! $users->appends(request()->all())->links() !!}
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    </tfoot>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--end: Datatable-->
+                                            <table class="table d-table" id="m_table_1">
+                                                <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>@lang('users.photo')</th>
+                                                    <th>@lang('users.name')</th>
+                                                    <th>@lang('users.email')</th>
+                                                    <th>@lang('users.role_id')</th>
+                                                    <th>@lang('users.mobile')</th>
+                                                    <th>@lang('users.gender')</th>
+                                                    <th>@lang('users.last_login_at')</th>
+                                                    <th>@lang('users.status')</th>
+                                                    <th>@lang('general.actions')</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
