@@ -23,6 +23,14 @@ class UserController extends Controller
     public function index()
     {
         $title = trans('menu.users');
+        $users = Admin::with('role')
+            ->withoutTrashed()
+            ->orderByDesc('created_at')
+            ->where('id', '!=', \auth('admin')->user()->id)
+            ->get();
+
+
+
         return view('admin.users.index', compact('title'));
     }
     /////////////////////////////////////////
