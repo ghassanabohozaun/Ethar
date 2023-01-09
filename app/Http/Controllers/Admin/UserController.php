@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Http\Requests\UserUpdateRequest;
-use App\Http\Resources\UsersResource;
-use App\Http\Resources\UsersTrashedResource;
 use App\Models\Admin;
 use App\Models\Role;
 use App\Traits\GeneralTrait;
@@ -27,36 +25,8 @@ class UserController extends Controller
             ->withoutTrashed()
             ->orderByDesc('created_at')
             ->where('id', '!=', \auth('admin')->user()->id)
-            ->paginate(1);
-
-
-
-        return view('admin.users.index', compact('title','users'));
-    }
-    /////////////////////////////////////////
-    /// Get Users
-    public function getUsers(Request $request)
-    {
-        $perPage = 10;
-        if ($request->has('length')) {
-            $perPage = $request->length;
-        }
-
-        $offset = 0;
-        if ($request->has('start')) {
-            $offset = $request->start;
-        }
-
-        $list = Admin::with('role')->withoutTrashed()->orderByDesc('created_at')->offset($offset)->take($perPage)->where('id', '!=', \auth('admin')->user()->id)->get();
-        $arr = UsersResource::collection($list);
-        $recordsTotal = Admin::get()->count();
-        $recordsFiltered = Admin::get()->count();
-        return response()->json([
-            'draw' => $request->draw,
-            'recordsTotal' => $recordsTotal,
-            'recordsFiltered' => $recordsFiltered,
-            'data' => $arr
-        ]);
+            ->paginate(15);
+        return view('admin.users.index', compact('title', 'users'));
     }
 
     /////////////////////////////////////////
@@ -64,33 +34,8 @@ class UserController extends Controller
     public function trashedUser()
     {
         $title = trans('menu.trashed_users');
-        return view('admin.users.trashed-users', compact('title'));
-    }
-
-    /////////////////////////////////////////
-    /// Get Trashed users
-    public function getTrashedUsers(Request $request)
-    {
-        $perPage = 10;
-        if ($request->has('length')) {
-            $perPage = $request->length;
-        }
-
-        $offset = 0;
-        if ($request->has('start')) {
-            $offset = $request->start;
-        }
-
-        $list = Admin::onlyTrashed()->orderByDesc('created_at')->offset($offset)->take($perPage)->get();
-        $arr = UsersTrashedResource::collection($list);
-        $recordsTotal = Admin::get()->count();
-        $recordsFiltered = Admin::get()->count();
-        return response()->json([
-            'draw' => $request->draw,
-            'recordsTotal' => $recordsTotal,
-            'recordsFiltered' => $recordsFiltered,
-            'data' => $arr
-        ]);
+        $trashedUsers = Admin::onlyTrashed()->orderByDesc('created_at')->paginate(15);
+        return view('admin.users.trashed-users', compact('title', 'trashedUsers'));
     }
 
     /////////////////////////////////////////
@@ -126,7 +71,6 @@ class UserController extends Controller
         }//end catch
     }
 
-
     /////////////////////////////////////////
     ///  edit
     public function edit($id = null)
@@ -144,7 +88,6 @@ class UserController extends Controller
 
         return view('admin.users.update', compact('title', 'user', 'roles'));
     }
-
 
     /////////////////////////////////////////
     ///  Update

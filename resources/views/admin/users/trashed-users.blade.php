@@ -55,23 +55,111 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="dtable scroll">
-                                            <!--begin: Datatable -->
-                                            <table class="table d-table" id="m_table_1">
-                                                <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>@lang('users.photo')</th>
-                                                    <th>@lang('users.name')</th>
-                                                    <th>@lang('users.email')</th>
-                                                    <th>@lang('users.mobile')</th>
-                                                    <th>@lang('users.gender')</th>
-                                                    <th>@lang('users.last_login_at')</th>
-                                                    <th>@lang('general.actions')</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                            <style>
+                                                .table td {
+                                                    vertical-align: middle;
+                                                }
+                                            </style>
+                                            <div class="table-responsive">
+                                                <table class="table table-hover" id="myTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Photo</th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>role_id</th>
+                                                        <th>status</th>
+                                                        <th class="text-center" style="width: 100px;">
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @forelse($trashedUsers as $user)
+                                                        <tr>
+                                                            <td>
+                                                                @if($user->photo == null)
+                                                                    @if($user->gender == trans('general.male'))
+                                                                        <img
+                                                                            src="{{asset('adminBoard/images/male.jpeg')}}"
+                                                                            width="50" height="50"
+                                                                            class=" img-thumbnail"/>
+                                                                    @else
+                                                                        <img
+                                                                            src="{{asset('adminBoard/images/female.jpeg')}}"
+                                                                            width="50" height="50"
+                                                                            class="img-thumbnail"/>
+                                                                    @endif
+
+                                                                @else
+                                                                    <img
+                                                                        src="{{asset(Storage::url($user->photo))}}"
+                                                                        width="70" height="70"
+                                                                        style="border-radius: 10px"
+                                                                        class=""/>
+                                                                @endif
+
+
+                                                            </td>
+                                                            <td>{{ $user->name }}</td>
+                                                            <td>{{ $user->email }}</td>
+                                                            <td>
+
+                                                                @if(Lang()=='ar')
+                                                                    <span class="text-info">
+                                                                                      {!! $user->role->role_name_ar !!}
+                                                                                    </span>
+                                                                @else
+                                                                    <span class="text-info">
+                                                                                       {!! $user->role->role_name_en !!}
+                                                                                    </span>
+                                                                @endif
+                                                            </td>
+                                                            <td>
+                                                                <div class="cst-switch switch-sm">
+                                                                    <input type="checkbox"
+                                                                           id="change_status"
+                                                                           {{$user->status == 'on' ? 'checked':''}}  data-id="{{$user->id}}"
+                                                                           class="change_status">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_user_btn"
+                                                                   data-id="{{$user->id}}"
+                                                                   title="{{trans('general.restore')}}">
+                                                                    <i class="fa fa-trash-restore fa-1x"></i>
+                                                                </a>
+
+
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_user_btn"
+                                                                   data-id="{{$user->id}}"
+                                                                   title="{{trans('general.force_delete')}}">
+                                                                    <i class="fa fa-trash-alt fa-1x"></i>
+                                                                </a>
+
+
+                                                            </td>
+                                                        </tr>
+                                                    @empty
+                                                        <tr>
+                                                            <td colspan="6" class="text-center">
+                                                                No Users found
+                                                            </td>
+                                                        </tr>
+                                                    @endforelse
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <div class="float-right">
+                                                                {!! $trashedUsers->appends(request()->all())->links() !!}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -97,32 +185,10 @@
     </div>
     <!--end::content-->
 
-
-
 @endsection
 @push('js')
 
-    <script
-        src="{{asset('adminBoard/assets/plugins/custom/datatables/datatables.bundle.js')}}"
-        type="text/javascript"></script>
-    <script src="{{asset('adminBoard/assets/js/data_table.js')}}" type="text/javascript"></script>
-
-    <script>
-        window.data_url = "{{route('get.trashed.users')}}";
-        window.columns = [{data: "id"},
-            {data: "photo"},
-            {data: "name"},
-            {data: "email"},
-            {data: "mobile"},
-            {data: "gender"},
-            {data: "last_login_at"},
-            {data: "actions"}
-        ];
-    </script>
-
     <script type="text/javascript">
-
-
         ///////////////////////////////////////////////////
         /// Delete user
         $(document).on('click', '.force_delete_user_btn', function (e) {
@@ -157,7 +223,7 @@
                                     customClass: {confirmButton: 'delete_user_button'}
                                 });
                                 $('.delete_user_button').click(function () {
-                                    updateDataTable();
+                                    $('#myTable').load(location.href+(' #myTable'));
                                 });
                             }
                         },//end success
@@ -206,13 +272,12 @@
                             customClass: {confirmButton: 'restore_user_button'}
                         });
                         $('.restore_user_button').click(function () {
-                            updateDataTable();
+                            $('#myTable').load(location.href+(' #myTable'));
                         });
                     }
                 },//end success
             })
         })
-
 
 
     </script>

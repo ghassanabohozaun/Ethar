@@ -70,43 +70,97 @@
                                             <div class="portlet-body">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <div class="dtable scroll">
-                                                            <!--begin: Datatable -->
+                                                        <div class="scroll">
+
+                                                            <style>
+                                                                .table td {
+                                                                    vertical-align: middle;
+                                                                }
+                                                            </style>
                                                             <div class="table-responsive">
-                                                                <table class="table table-hover">
+                                                                <table class="table table-hover" id="myTable">
                                                                     <thead>
                                                                     <tr>
+                                                                        <th>Photo</th>
                                                                         <th>Name</th>
-                                                                        <th>Products count</th>
-                                                                        <th>Parent</th>
-                                                                        <th>Status</th>
-                                                                        <th>Created at</th>
-                                                                        <th class="text-center" style="width: 30px;">Actions</th>
+                                                                        <th>Email</th>
+                                                                        <th>role_id</th>
+                                                                        <th>status</th>
+                                                                        <th class="text-center" style="width: 100px;">
+                                                                            Actions
+                                                                        </th>
                                                                     </tr>
                                                                     </thead>
                                                                     <tbody>
                                                                     @forelse($users as $user)
                                                                         <tr>
-                                                                            <td>{{ $user->name }}</td>
-
                                                                             <td>
-                                                                                {{--                                                                <div class="btn-group btn-group-sm">--}}
-                                                                                {{--                                                                    <a href="{{ route('admin.product_categories.edit', $category->id) }}" class="btn btn-primary">--}}
-                                                                                {{--                                                                        <i class="fa fa-edit"></i>--}}
-                                                                                {{--                                                                    </a>--}}
-                                                                                {{--                                                                    <a href="javascript:void(0);" onclick="if (confirm('Are you sure to delete this record?')) { document.getElementById('delete-product-category-{{ $category->id }}').submit(); } else { return false; }" class="btn btn-danger">--}}
-                                                                                {{--                                                                        <i class="fa fa-trash"></i>--}}
-                                                                                {{--                                                                    </a>--}}
-                                                                                {{--                                                                </div>--}}
-                                                                                {{--                                                                <form action="{{ route('admin.product_categories.destroy', $category->id) }}" method="post" id="delete-product-category-{{ $category->id }}" class="d-none">--}}
-                                                                                {{--                                                                    @csrf--}}
-                                                                                {{--                                                                    @method('DELETE')--}}
-                                                                                {{--                                                                </form>--}}
+                                                                                @if($user->photo == null)
+                                                                                    @if($user->gender == trans('general.male'))
+                                                                                        <img
+                                                                                            src="{{asset('adminBoard/images/male.jpeg')}}"
+                                                                                            width="50" height="50"
+                                                                                            class=" img-thumbnail"/>
+                                                                                    @else
+                                                                                        <img
+                                                                                            src="{{asset('adminBoard/images/female.jpeg')}}"
+                                                                                            width="50" height="50"
+                                                                                            class="img-thumbnail"/>
+                                                                                    @endif
+
+                                                                                @else
+                                                                                    <img
+                                                                                        src="{{asset(Storage::url($user->photo))}}"
+                                                                                        width="70" height="70"
+                                                                                        style="border-radius: 10px"
+                                                                                        class=""/>
+                                                                                @endif
+
+
+                                                                            </td>
+                                                                            <td>{{ $user->name }}</td>
+                                                                            <td>{{ $user->email }}</td>
+                                                                            <td>
+
+                                                                                @if(Lang()=='ar')
+                                                                                    <span class="text-info">
+                                                                                      {!! $user->role->role_name_ar !!}
+                                                                                    </span>
+                                                                                @else
+                                                                                    <span class="text-info">
+                                                                                       {!! $user->role->role_name_en !!}
+                                                                                    </span>
+                                                                                @endif
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="cst-switch switch-sm">
+                                                                                    <input type="checkbox"
+                                                                                           id="change_status"
+                                                                                           {{$user->status == 'on' ? 'checked':''}}  data-id="{{$user->id}}"
+                                                                                           class="change_status">
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <a href="{{route('user.edit',$user->id)}}"
+                                                                                   class="btn btn-hover-primary btn-icon btn-pill "
+                                                                                   title="{{trans('general.edit')}}">
+                                                                                    <i class="fa fa-edit fa-1x"></i>
+                                                                                </a>
+
+                                                                                <a href="#"
+                                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_user_btn"
+                                                                                   data-id="{{$user->id}}"
+                                                                                   title="{{trans('general.delete')}}">
+                                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                                </a>
+
                                                                             </td>
                                                                         </tr>
                                                                     @empty
                                                                         <tr>
-                                                                            <td colspan="6" class="text-center">No categories found</td>
+                                                                            <td colspan="6" class="text-center">
+                                                                                No Users found
+                                                                            </td>
                                                                         </tr>
                                                                     @endforelse
                                                                     </tbody>
@@ -151,33 +205,11 @@
     </div>
     <!--end::content-->
 
-
-
 @endsection
 @push('js')
 
-    <script
-        src="{{asset('adminBoard/assets/plugins/custom/datatables/datatables.bundle.js')}}"
-        type="text/javascript"></script>
-    <script src="{{asset('adminBoard/assets/js/data_table.js')}}" type="text/javascript"></script>
-
-    <script>
-        window.data_url = "{{route('get.users')}}";
-        window.columns = [{data: "id"},
-            {data: "photo"},
-            {data: "name"},
-            {data: "email"},
-            {data: "role_id"},
-            {data: "mobile"},
-            {data: "gender"},
-            {data: "last_login_at"},
-            {data: "status"},
-            {data: "actions"}
-        ];
-    </script>
 
     <script type="text/javascript">
-
 
         ///////////////////////////////////////////////////
         /// Show user Delete Notify
@@ -213,7 +245,8 @@
                                     customClass: {confirmButton: 'delete_user_button'}
                                 });
                                 $('.delete_user_button').click(function () {
-                                    updateDataTable();
+                                    //updateDataTable
+                                    $('#myTable').load(location.href+(' #myTable'));
                                 });
                             }
                         },//end success
@@ -235,20 +268,19 @@
 
         // switch english language
         var switchStatus = false;
-        $('body').on('change','.change_status', function (e) {
+        $('body').on('change', '.change_status', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
             if ($(this).is(':checked')) {
                 switchStatus = $(this).is(':checked');
-            }
-            else {
+            } else {
                 switchStatus = $(this).is(':checked');
             }
 
             $.ajax({
                 url: "{{route('user.change.status')}}",
-                data: {switchStatus: switchStatus ,id:id},
+                data: {switchStatus: switchStatus, id: id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
@@ -275,7 +307,6 @@
                 },//end success
             })
         });
-
 
 
     </script>
