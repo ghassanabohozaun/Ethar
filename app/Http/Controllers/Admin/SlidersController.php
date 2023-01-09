@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SlidersRequest;
 use App\Http\Requests\SlidersUpdateRequest;
 use App\Http\Resources\SliderResource;
+use App\Models\Admin;
 use App\Models\Slider;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
@@ -187,6 +188,9 @@ class SlidersController extends Controller
     /// change Status
     public function changeStatus(Request $request)
     {
+
+        return response()->json('ok');
+
         try {
             $slider = Slider::find($request->id);
             if ($request->switchStatus == 'false') {

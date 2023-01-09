@@ -268,13 +268,10 @@
 
 
 
-
-        /////////////////////////////////////////////////////////////////////////////////////
-        // change Slider status
+        // switch english language
         var switchStatus = false;
-        $('body').on('click', '.change_status', function (e) {
+        $('body').on('change', '.change_status', function (e) {
             e.preventDefault();
-
             var id = $(this).data('id');
 
             if ($(this).is(':checked')) {
@@ -298,22 +295,21 @@
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
-                    if (data.status == true) {
-                        Swal.fire({
-                            title: data.msg,
-                            text: "",
-                            icon: "success",
-                            allowOutsideClick: false,
-                            customClass: {confirmButton: 'switch_status_toggle'}
-                        });
-                        $('.switch_status_toggle').click(function () {
-                        });
-                    }
+                    // if (data.status == true) {
+                    //     Swal.fire({
+                    //         title: data.msg,
+                    //         text: "",
+                    //         icon: "success",
+                    //         allowOutsideClick: false,
+                    //         customClass: {confirmButton: 'switch_status_toggle'}
+                    //     });
+                    //     $('.switch_status_toggle').click(function () {
+                    //     });
+                    // }
                 },//end success
             })
-
-
         });
+
     </script>
 @endpush
 

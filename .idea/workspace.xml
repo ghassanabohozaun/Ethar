@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SlidersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/SlidersRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/SlidersUpdateRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_24_091414_create_sliders_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/sliders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/sliders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/parts/button_status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/parts/details_status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/parts/options.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/parts/photo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/parts/status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/global.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SlidersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SlidersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +238,7 @@
       <workItem from="1673091514390" duration="3416000" />
       <workItem from="1673121572941" duration="3143000" />
       <workItem from="1673181466013" duration="1201000" />
-      <workItem from="1673270793356" duration="15336000" />
+      <workItem from="1673270793356" duration="15689000" />
     </task>
     <servers />
   </component>
