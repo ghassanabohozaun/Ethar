@@ -10,5 +10,6 @@ return [
         'users' => 'app.users',
         'support-center' => 'app.support-center',
         'articles' => 'app.articles',
+        'landing-page'=>'app.landing-page',
     ]
 ];
