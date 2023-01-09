@@ -91,7 +91,7 @@
 
                             <li class="dropdown"><a href="#">Media</a>
                                 <ul>
-                                    <li><a href="#">Our Photos</a></li>
+                                    <li><a href="{!! route('our-photos') !!}">Our Photos</a></li>
                                     <li><a href="#">Our Videos</a></li>
                                 </ul>
                             </li>

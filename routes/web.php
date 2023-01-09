@@ -98,5 +98,11 @@ Route::group(
         return view('site.reports.report-details');
     })->name('report-details');
 
+
+    Route::get('/our-photos', function (){
+        return view('site.photos.our-photos');
+    })->name('our-photos');
+
+
 });
 

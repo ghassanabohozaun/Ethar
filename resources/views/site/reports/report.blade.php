@@ -42,58 +42,91 @@
         <!-- End Page Title -->
 
 
-        <br> <br> <br> <br> <br>
-        <br> <br> <br> <br> <br>  <br> <br> <br> <br> <br>
-
-
-        <!-- history-section -->
-        <section class="history-section">
-            <div class="pattern-layer"></div>
+        <!-- shop-details -->
+        <section class="shop-details">
             <div class="auto-container">
-                <div class="inner-container">
-                    <div class="row clearfix">
-                        <div class="col-lg-12 col-md-12 col-sm-12 image-column">
-                            <div class="tabs-box">
-                                <div class="tab-btn-box">
-                                    <ul class="tab-btns tab-buttons clearfix">
-                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <a href="{!! route('report-details') !!}"><i class="far fa-calendar-alt"></i>2022</a>
-                                        </li>
-                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <i class="far fa-calendar-alt"></i>2021
-                                        </li>
-                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <i class="far fa-calendar-alt"></i>2020
-                                        </li>
-                                        <li class="tab-btn active-btn" style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <i class="far fa-calendar-alt"></i>2019
-                                        </li>
-                                        <li class="tab-btn active-btn" style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <i class="far fa-calendar-alt"></i>2018
-                                        </li>
-                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <i class="far fa-calendar-alt"></i>2017
-                                        </li>
-                                        <li class="tab-btn active-btn " style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <i class="far fa-calendar-alt"></i>2016
-                                        </li>
-                                        <li class="tab-btn active-btn" style="margin-bottom: 20px" data-tab="#tab-1">
-                                            <i class="far fa-calendar-alt"></i>2015
-                                        </li>
+                <div class="discription-inner">
+                    <div class="row clearfix reports-section">
 
-                                    </ul>
-                                </div>
-
-                            </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                    <h3>2022</h3>
+                                </button>
+                            </a>
                         </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                    <h3>2021</h3>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                    <h3>2020</h3>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                    <h3>2019</h3>
+                                </button>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                            <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                <h3>2018</h3>
+                            </button>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                            <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                <h3>2017</h3>
+                            </button>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                    <h3>2016</h3>
+                                </button>
+                            </a>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                            <a href="{!! route('report-details') !!}">
+                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                    <h3>2015</h3>
+                                </button>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
+
             </div>
         </section>
-        <!-- history-section end -->
-
-
-
+        <!-- shop-details end -->
 
 
         <!-- main-footer -->
