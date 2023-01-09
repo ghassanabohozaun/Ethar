@@ -92,11 +92,11 @@
                             <li class="dropdown"><a href="#">Media</a>
                                 <ul>
                                     <li><a href="{!! route('our-photos') !!}">Our Photos</a></li>
-                                    <li><a href="#">Our Videos</a></li>
+                                    <li><a href="{!! route('videos') !!}">Our Videos</a></li>
                                 </ul>
                             </li>
 
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{!! route('contact') !!}">Contact</a></li>
 
                         </ul>
                     </div>

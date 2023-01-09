@@ -48,20 +48,24 @@
                     <div class="filters">
                         <ul class="filter-tabs filter-btns clearfix">
                             <li class="active filter" data-role="button" data-filter=".all">View All</li>
-                            <li class="filter" data-role="button" data-filter=".activities">Activities</li>
-                            <li class="filter" data-role="button" data-filter=".awareness">Awareness</li>
-                            <li class="filter" data-role="button" data-filter=".education">Education</li>
-                            <li class="filter" data-role="button" data-filter=".health">Health</li>
-                            <li class="filter" data-role="button" data-filter=".helping">Helping</li>
+                            <li class="filter" data-role="button" data-filter=".2022">2022</li>
+                            <li class="filter" data-role="button" data-filter=".2021">2021</li>
+                            <li class="filter" data-role="button" data-filter=".2020">2020</li>
+                            <li class="filter" data-role="button" data-filter=".2019">2019</li>
+                            <li class="filter" data-role="button" data-filter=".2018">2018</li>
+                            <li class="filter" data-role="button" data-filter=".2017">2017</li>
+                            <li class="filter" data-role="button" data-filter=".2016">2016</li>
+                            <li class="filter" data-role="button" data-filter=".2015">2015</li>
                         </ul>
                     </div>
 
                     <div class="items-container row clearfix">
                         <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all education activities awareness helping">
+                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020 2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
-                                    <figure class="image"><img src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
                                     </figure>
                                     <div class="content-box">
                                         <ul class="links-list clearfix">
@@ -70,7 +74,7 @@
                                         </ul>
                                         <div class="text">
                                             <span>2022</span>
-                                            <h3><a href="#">Album Name</a></h3>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -78,10 +82,11 @@
                         </div>
 
                         <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all education activities awareness helping">
+                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all  2021 2020 ">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
-                                    <figure class="image"><img src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
                                     </figure>
                                     <div class="content-box">
                                         <ul class="links-list clearfix">
@@ -90,7 +95,7 @@
                                         </ul>
                                         <div class="text">
                                             <span>2022</span>
-                                            <h3><a href="#">Album Name</a></h3>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -98,10 +103,11 @@
                         </div>
 
                         <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all education activities awareness helping">
+                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021  2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
-                                    <figure class="image"><img src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
                                     </figure>
                                     <div class="content-box">
                                         <ul class="links-list clearfix">
@@ -110,7 +116,7 @@
                                         </ul>
                                         <div class="text">
                                             <span>2022</span>
-                                            <h3><a href="#">Album Name</a></h3>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -118,10 +124,11 @@
                         </div>
 
                         <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all education activities awareness helping">
+                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022  2020 2019 2018">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
-                                    <figure class="image"><img src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
                                     </figure>
                                     <div class="content-box">
                                         <ul class="links-list clearfix">
@@ -130,7 +137,7 @@
                                         </ul>
                                         <div class="text">
                                             <span>2022</span>
-                                            <h3><a href="#">Album Name</a></h3>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -138,10 +145,11 @@
                         </div>
 
                         <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all education activities awareness helping">
+                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
-                                    <figure class="image"><img src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
                                     </figure>
                                     <div class="content-box">
                                         <ul class="links-list clearfix">
@@ -150,7 +158,7 @@
                                         </ul>
                                         <div class="text">
                                             <span>2022</span>
-                                            <h3><a href="#">Album Name</a></h3>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
                                         </div>
                                     </div>
                                 </div>
@@ -158,10 +166,11 @@
                         </div>
 
                         <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all education activities awareness helping">
+                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020 2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
-                                    <figure class="image"><img src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
                                     </figure>
                                     <div class="content-box">
                                         <ul class="links-list clearfix">
@@ -170,7 +179,7 @@
                                         </ul>
                                         <div class="text">
                                             <span>2022</span>
-                                            <h3><a href="#">Album Name</a></h3>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
                                         </div>
                                     </div>
                                 </div>

@@ -104,5 +104,18 @@ Route::group(
     })->name('our-photos');
 
 
+    Route::get('/photo-details', function (){
+        return view('site.photos.photo-details');
+    })->name('photo-details');
+
+    Route::get('/videos', function (){
+        return view('site.videos');
+    })->name('videos');
+
+    Route::get('/contact', function (){
+        return view('site.contact');
+    })->name('contact');
+
+
 });
 
