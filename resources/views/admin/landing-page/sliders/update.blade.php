@@ -333,7 +333,6 @@
 
         $('#form_sliders_update').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
             //////////////////////////////////////////////////////////////
 
             $('#title_ar').css('border-color', '');
@@ -386,7 +385,6 @@
                 },//end success
 
                 error: function (reject) {
-                    $.notifyClose();
                     var response = $.parseJSON(reject.responseText);
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0]);

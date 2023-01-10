@@ -169,7 +169,6 @@
 
         $('#form_role_update').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
             ///////////////////////////////////////////////////////////////////////////
             $('#role_name_ar_error').text('');
             $('#role_name_en_error').text('');

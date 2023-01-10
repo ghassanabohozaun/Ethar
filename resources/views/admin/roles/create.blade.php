@@ -155,7 +155,6 @@
 
         $('#form_role_add').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
             ///////////////////////////////////////////////////////////////////////////
             $('#role_name_ar_error').text('');
             $('#role_name_en_error').text('');

@@ -140,7 +140,6 @@
 
         $('#form_article_update').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
 
             ////////////////////////////////////////////////////////////////////
             $('#photo_error').text('');
