@@ -31,10 +31,10 @@
                             <label> {{trans('articles.abstract_ar')}}</label>
                             <textarea class="form-control summernote"
                                       placeholder="{{trans('articles.enter_abstract_ar')}}"
-                                      name="abstract_ar"
-                                      id="abstract_ar"></textarea>
+                                      name="details_ar"
+                                      id="details_ar"></textarea>
                             <span class="form-text text-danger"
-                                  id="abstract_ar_error"></span>
+                                  id="details_ar_error"></span>
                         </div>
                         <!--end::Group-->
 

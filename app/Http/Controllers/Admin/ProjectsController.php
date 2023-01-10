@@ -23,42 +23,38 @@ class ProjectsController extends Controller
 
     public function store(ProjectsRequest $request){
 
+        // save image
         if ($request->hasFile('photo')) {
-            $photo_path = $request->file('photo')->store('ArticlesPhotos');
+            $image = $request->file('photo');
+            $destinationPath = public_path('adminBoard/uploadedImages/projects');
+            $photo_path = $this->saveResizeImage($image,$destinationPath);
         } else {
             $photo_path = '';
         }
 
+        // save File
 
-        if (setting()->site_lang_en == 'on') {
-            Projects::create([
-                'photo'         => $photo_path,
-                'language'      => 'ar_en',
-                'details_ar'    => $request->details_ar,
-                'details_en'    =>$request->details_en,
-                'title_ar'      => $request->title_ar,
-                'title_en'      => $request->title_en,
-                'status'        => $request->status,
-                'file'          => $request->file,
-                'date'          => $request->date,
-                'writer'        => $request->writer,
-                'type'          =>$request->type,
-            ]);
+        if ($request->hasFile('file')) {
+            $file = $this->saveImage($request->hasFile('file'), 'adminBoard/uploadedFiles/project');
         } else {
+            $file = '';
+        }
+
+        $lang_en =setting()->site_lang_en ;
+
             Projects::create([
                 'photo'         => $photo_path,
                 'language'      => 'ar_en',
                 'details_ar'    => $request->details_ar,
-                'details_en'    => null,
+                'details_en'    => $lang_en == 'on'?$request->details_en:null,
                 'title_ar'      => $request->title_ar,
-                'title_en'      => null,
-                'status'        => $request->status,
-                'file'          => $request->file,
+                'title_en'      => $lang_en == 'on'?$request->title_en:null,
+                'file'          => $file,
                 'date'          => $request->date,
                 'writer'        => $request->writer,
                 'type'          => $request->type,
             ]);
-        }
+
         return $this->returnSuccessMessage(trans('general.add_success_message'));
     }
 }

@@ -12,7 +12,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('articles.photo')}}
+                                {{-- {{trans('articles.photo')}} --}}صورة المشروع
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div
@@ -50,12 +50,12 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('articles.publish_date')}}
+                                {{-- {{trans('articles.publish_date')}}  --}} تاريخ نشر المشروع
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
-                                           id="publish_date" name="publish_date"
+                                           id="publish_date" name="date"
                                            readonly placeholder="{{trans('articles.enter_publish_date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <span class="form-text text-danger"
-                                      id="publish_date_error"></span>
+                                      id="date_error"></span>
                             </div>
                             <!--end::Group-->
                         </div>
@@ -73,19 +73,52 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('articles.publisher_name')}}
+                                {{trans('articles.publisher_name')}} اسم ناشر المشروع
                             </label>
 
                             <div  class="col-lg-9 col-xl-9">
                                 <input type="text" class="form-control form-control-solid form-control-lg"
-                                       name="publisher_name" id="publisher_name"
-                                       placeholder="{{trans('articles.enter_publisher_name')}}"
+                                       name="writer" id="writer"
+                                       placeholder="{{trans('project.writer')}}"
                                        autocomplete="off">
                                 <span class="form-text text-danger"
-                                      id="publisher_name_error"></span>
+                                      id="writer_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->
+
+                         <!--begin::Group-->
+                         <div class="form-group row">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                {{-- {{trans('users.gender')}}   --}}نوع المشروع
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+
+                                <select
+                                    class="form-control  form-control-lg"
+                                    name="type" id="type" type="text">
+
+                                    <option value="current">
+                                        current
+
+                                    </option>
+
+                                    <option value="previous">
+                                        previous
+
+                                    </option>
+
+
+
+                                </select>
+                                <span class="form-text text-danger"
+                                      id="gender_error"></span>
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
+
+
 
 
                     </div>
