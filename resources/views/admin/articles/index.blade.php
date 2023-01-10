@@ -31,6 +31,12 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
+                <a href="{!! route('admin.articles.trashed') !!}"
+                   class="btn btn-light-danger trash_btn" title="{{trans('general.trash')}}">
+                    <i class="fa fa-trash"></i>
+                </a>
+                &nbsp;
+
                 <a href="{{route('admin.articles.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
@@ -60,25 +66,79 @@
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="dtable scroll">
-                                            <!--begin: Datatable -->
-                                            <table class="table d-table" id="m_table_1">
-                                                <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>@lang('articles.photo')</th>
-                                                    <th>@lang('articles.title_ar')</th>
-                                                    <th>@lang('articles.title_en')</th>
-                                                    <th>@lang('articles.publisher_name')</th>
-                                                    <th>@lang('articles.publish_date')</th>
-                                                    <th>@lang('articles.status')</th>
-                                                    <th>@lang('general.actions')</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+
+                                        <div class="scroll">
+                                            <div class="table-responsive">
+                                                <table class="table myTable table-hover" id="myTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>@lang('articles.photo')</th>
+                                                        <th>@lang('articles.title_ar')</th>
+                                                        <th>@lang('articles.title_en')</th>
+                                                        <th>@lang('articles.publisher_name')</th>
+                                                        <th>@lang('articles.publish_date')</th>
+                                                        <th>@lang('articles.status')</th>
+                                                        <th>@lang('general.actions')</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @forelse($articles as $article)
+                                                        <tr>
+                                                            <td>
+                                                                <img
+                                                                    src="{{asset(\Illuminate\Support\Facades\Storage::url($article->photo))}}"
+                                                                    style="width: 80px; height: 60px"
+                                                                    class=" img-thumbnail"/>
+                                                            </td>
+                                                            <td>{{ $article->title_ar }}</td>
+                                                            <td>{{ $article->title_en }}</td>
+                                                            <td>{{ $article->publisher_name }}</td>
+                                                            <td>{{ $article->publish_date }}</td>
+
+                                                            <td>
+                                                                <div class="cst-switch switch-sm">
+                                                                    <input type="checkbox"
+                                                                           {{$article->status == 'on' ? 'checked':''}}  data-id="{{$article->id}}"
+                                                                           class="change_status">
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <a href="{{route('admin.articles.edit',$article->id)}}"
+                                                                   class="btn btn-hover-primary btn-icon btn-pill "
+                                                                   title="{{trans('general.edit')}}">
+                                                                    <i class="fa fa-edit fa-1x"></i>
+                                                                </a>
+
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_article_btn"
+                                                                   data-id="{{$article->id}}"
+                                                                   title="{{trans('general.delete')}}">
+                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    @empty
+                                                        <tr>
+                                                            <td colspan="7" class="text-center">
+                                                                @lang('articles.no_articles_found')
+                                                            </td>
+                                                        </tr>
+                                                    @endforelse
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td colspan="7">
+                                                            <div class="float-right">
+                                                                {!! $articles->appends(request()->all())->links() !!}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -114,27 +174,8 @@
 @endsection
 @push('js')
 
-    <script
-        src="{{asset('adminBoard/assets/plugins/custom/datatables/datatables.bundle.js')}}"
-        type="text/javascript"></script>
-    <script src="{{asset('adminBoard/assets/js/data_table.js')}}" type="text/javascript"></script>
-
-    <script>
-        window.data_url = "{{route('admin.get.articles')}}";
-        window.columns = [{data: "id"},
-            {data: "photo"},
-            {data: "title_ar"},
-            {data: "title_en"},
-            {data: "publisher_name"},
-            {data: "publish_date"},
-            {data: "status"},
-            {data: "actions"},
-        ];
-    </script>
 
     <script type="text/javascript">
-
-
         /////////////////////////////////////////////////////////////////
         ///  article Delete
         $(document).on('click', '.delete_article_btn', function (e) {
@@ -169,7 +210,7 @@
                                     customClass: {confirmButton: 'delete_article_button'}
                                 });
                                 $('.delete_article_button').click(function () {
-                                    updateDataTable();
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             } else if (data.status == false) {
                                 Swal.fire({
@@ -236,14 +277,12 @@
                             customClass: {confirmButton: 'switch_status_toggle'}
                         });
                         $('.switch_status_toggle').click(function () {
-                            updateDataTable();
+                            $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },//end success
             })
         });
-
-
 
 
     </script>

@@ -8,7 +8,6 @@ class ArticleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
-     *
      * @return bool
      */
     public function authorize()
@@ -19,26 +18,46 @@ class ArticleRequest extends FormRequest
     public function rules()
     {
 
+        $route = $this->route()->getName();
 
         if (setting()->site_lang_en == 'on') {
-            return [
-                'photo' => 'required|image|mimes:jpeg,jpg,png|max:1024',
-                'title_ar' => 'required|unique:articles',
-                'title_en' => 'required|unique:articles',
+
+            $rules = [
+                'title_ar' => 'required',
+                'title_en' => 'required',
                 'abstract_ar' => 'required',
                 'abstract_en' => 'required',
                 'publish_date' => 'required',
                 'publisher_name' => 'required',
             ];
+
+            if($route == 'admin.articles.store'){
+                $rules['title_ar'] = ['unique:articles'];
+                $rules['title_en'] = ['unique:articles'];
+                $rules['photo'] = ['required', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
+            }else if($route == 'admin.articles.update'){
+                $rules['photo'] = ['sometimes', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
+            }
+
         } else {
-            return [
-                'photo' => 'required|image|mimes:jpeg,jpg,png|max:1024',
+            $rules = [
                 'title_ar' => 'required|unique:articles',
                 'abstract_ar' => 'required',
                 'publish_date' => 'required',
                 'publisher_name' => 'required',
             ];
+
+            if($route == 'admin.articles.store'){
+                $rules['title_ar'] = ['unique:articles'];
+                $rules['title_en'] = ['unique:articles'];
+                $rules['photo'] = ['required', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
+            }else if($route == 'admin.articles.update'){
+                $rules['photo'] = ['sometimes', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
+            }
+
         }
+
+        return $rules;
 
     }
 
@@ -52,7 +71,6 @@ class ArticleRequest extends FormRequest
             'abstract_en.required' => trans('articles.abstract_en_required'),
             'publish_date.required' => trans('articles.publish_date_required'),
             'publisher_name.required' => trans('articles.publisher_name_required'),
-
             'in' => trans('articles.in'),
             'numeric' => trans('articles.numeric'),
             'image' => trans('articles.image'),

@@ -26,6 +26,7 @@ class CreateArticlesTable extends Migration
             $table->string('publisher_name')->nullable();
             $table->enum('language', ['ar', 'ar_en'])->default('ar');
             $table->string('status')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
