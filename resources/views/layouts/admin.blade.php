@@ -33,10 +33,9 @@
     <!--end::Page Vendors Styles-->
 
 
-@if( LaravelLocalization::getCurrentLocale() =='ar')
+    @if( LaravelLocalization::getCurrentLocale() =='ar')
 
-
-    <!--begin::Global Theme Styles(used by all pages)-->
+        <!--begin::Global Theme Styles(used by all pages)-->
         <link href="{{asset('adminBoard/assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}"
               rel="stylesheet"
               type="text/css"/>
@@ -68,8 +67,8 @@
             }
         </style>
 
-@else
-    <!--begin::Global Theme Styles(used by all pages)-->
+    @else
+        <!--begin::Global Theme Styles(used by all pages)-->
         <link href="{{asset('adminBoard/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet"
               type="text/css"/>
         <link href="{{asset('adminBoard/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css"/>
@@ -131,9 +130,9 @@
                     </a>
                 @else
                     LOGO
-            @endif
+                @endif
 
-            <!--end::Logo-->
+                <!--end::Logo-->
 
                 <!--begin::Toggle-->
                 <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
@@ -165,8 +164,8 @@
         <!--begin::Wrapper-->
         <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
             <!--begin::Header-->
-        @include('admin.includes.header')
-        <!--end::Header-->
+            @include('admin.includes.header')
+            <!--end::Header-->
 
             <!--begin::Content-->
             <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -175,8 +174,8 @@
             <!--end::Content-->
 
             <!--begin::Footer-->
-        @include('admin.includes.footer')
-        <!--end::Footer-->
+            @include('admin.includes.footer')
+            <!--end::Footer-->
         </div>
         <!--end::Wrapper-->
     </div>
@@ -206,10 +205,11 @@
                 <a href="{{{route('get.admin')}}}">
                     <div class="symbol-label"
                          @if(empty(admin()->user()->photo))
-                         style=" background-image: url('{{asset('adminBoard/images/user.jpg')}}');"
+                             style=" background-image: url('{{asset('adminBoard/images/user.jpg')}}');"
                          @else
-                         style=" background-image: url({{asset(\Illuminate\Support\Facades\Storage::url(admin()->user()->photo))}});"
-                        @endif></div>
+                             style=" background-image: url({{asset('adminBoard/uploadedImages/admin/'.admin()->user()->photo)}});"
+                        @endif>
+                    </div>
                 </a>
 
                 <i class="symbol-badge bg-success"></i>

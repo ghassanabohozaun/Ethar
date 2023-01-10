@@ -2,7 +2,6 @@
 @section('title') @endsection
 @section('content')
 
-
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
         <div
@@ -303,7 +302,6 @@
 
 @push('js')
 
-
     <script type="text/javascript">
         var admin_photo = new KTImageInput('kt_admin_photo');
 
@@ -321,9 +319,9 @@
                     $('#email').val(data.data.email);
 
                     var photo = data.data.photo;
-                    var url = '{{asset('adminBoard/uploadedImages/admin')}}/' + photo;
+                    var url = '{{asset('adminBoard/uploadedImages/admin')}}/'+data.data.photo
+                    $('#kt_admin_photo').css("background-image", url);
 
-                    $('#kt_admin_photo').css("background-image", "{{asset('adminBoard/uploadedImages/admin/1673368051.png')}}");
                 }
             });//end get ajax
 
