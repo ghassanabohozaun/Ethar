@@ -9,7 +9,6 @@ use App\Models\Article;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Image;
 
 class ArticlesController extends Controller
 {
@@ -46,22 +45,9 @@ class ArticlesController extends Controller
     public function store(ArticleRequest $request)
     {
         if ($request->hasFile('photo')) {
-            // $photo_path = $request->file('photo')->store('ArticlesPhotos');
-
-
             $image = $request->file('photo');
-            $input['photo'] = time().'.'.$image->getClientOriginalExtension();
-
             $destinationPath = public_path('adminBoard/uploadedImages/articles');
-
-            $imgFile = Image::make($image->getRealPath());
-
-            $imgFile->resize(500, 500, function ($constraint) {
-                $constraint->aspectRatio();
-            })->save($destinationPath.'/'.$input['photo']);
-
-
-            $photo_path = $input['photo'] ;
+            $photo_path = $this->saveResizeImage($image,$destinationPath);
 
         } else {
             $photo_path = '';
@@ -122,6 +108,7 @@ class ArticlesController extends Controller
     {
 
         $article = Article::find($request->id);
+
         if (!$article) {
             return redirect()->route('admin.not.found');
         }

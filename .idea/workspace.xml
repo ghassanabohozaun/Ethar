@@ -7,9 +7,7 @@
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/trashed-articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/trashed-articles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/GeneralTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/GeneralTrait.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +238,7 @@
       <workItem from="1673121572941" duration="3143000" />
       <workItem from="1673181466013" duration="1201000" />
       <workItem from="1673270793356" duration="16245000" />
-      <workItem from="1673337018214" duration="15787000" />
+      <workItem from="1673337018214" duration="16266000" />
     </task>
     <servers />
   </component>

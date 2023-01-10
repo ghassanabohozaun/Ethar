@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Traits;
+use Image;
 
 trait GeneralTrait
 {
@@ -81,6 +82,18 @@ trait GeneralTrait
         $image_name->move($path,$ImageName);
 
         return $ImageName;
+
+    }
+
+
+    public function saveResizeImage($image , $destinationPath){
+        $input['photo'] = time().'.'.$image->getClientOriginalExtension();
+        $imgFile = Image::make($image->getRealPath());
+        $imgFile->resize(500, 500, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$input['photo']);
+
+        return  $input['photo'];
 
     }
 
