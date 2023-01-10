@@ -16,7 +16,7 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.media')}}
+                            {{trans('menu.landing_page')}}
                         </a>
                     </li>
 
@@ -130,11 +130,11 @@
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
-                                                                           {{$slider->status == '1' ? 'checked':''}}  data-id="{{$slider->id}}"
+                                                                           id="change_status"
+                                                                           {{$slider->status == 'on' ? 'checked':''}}  data-id="{{$slider->id}}"
                                                                            class="change_status">
                                                                 </div>
                                                             </td>
-
                                                             <td>
                                                                 <a href="{{route('admin.slider.edit',$slider->id)}}"
                                                                    class="btn btn-hover-primary btn-icon btn-pill "
@@ -149,10 +149,11 @@
                                                                     <i class="fa fa-trash fa-1x"></i>
                                                                 </a>
                                                             </td>
+
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="6" class="text-center">
+                                                            <td colspan="10" class="text-center">
                                                                 No Users found
                                                             </td>
                                                         </tr>
@@ -160,7 +161,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="6">
+                                                        <td colspan="10">
                                                             <div class="float-right">
                                                                 {!! $sliders->appends(request()->all())->links() !!}
                                                             </div>
@@ -295,17 +296,17 @@
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
-                    // if (data.status == true) {
-                    //     Swal.fire({
-                    //         title: data.msg,
-                    //         text: "",
-                    //         icon: "success",
-                    //         allowOutsideClick: false,
-                    //         customClass: {confirmButton: 'switch_status_toggle'}
-                    //     });
-                    //     $('.switch_status_toggle').click(function () {
-                    //     });
-                    // }
+                    if (data.status == true) {
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'switch_status_toggle'}
+                        });
+                        $('.switch_status_toggle').click(function () {
+                        });
+                    }
                 },//end success
             })
         });

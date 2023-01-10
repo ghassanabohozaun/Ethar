@@ -189,7 +189,7 @@ class SlidersController extends Controller
     public function changeStatus(Request $request)
     {
 
-        return response()->json('ok');
+
 
         try {
             $slider = Slider::find($request->id);
