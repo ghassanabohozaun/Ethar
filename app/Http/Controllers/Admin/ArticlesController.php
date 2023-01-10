@@ -48,7 +48,6 @@ class ArticlesController extends Controller
             $image = $request->file('photo');
             $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
             $photo_path = $this->saveResizeImage($image, $destinationPath);
-
         } else {
             $photo_path = '';
         }
