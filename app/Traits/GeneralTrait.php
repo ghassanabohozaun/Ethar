@@ -69,20 +69,13 @@ trait GeneralTrait
     }
 
     ////////////////////////////////////////////////////////////////////////
-    public function saveImage($image_name , $path){
-        $ImageExtenstion = $image_name->getClientOriginalExtension();
+    public function saveImage($name , $path){
+        $ImageExtenstion = $name->getClientOriginalExtension();
         $ImageName = time().rand().'.'.$ImageExtenstion;
-
-        $image_name->resize(150, 150, function ($constraint) {
-		    $constraint->aspectRatio();
-
-		})->save($path.'/'.$ImageName);
-
-        $image_name->move($path,$ImageName);
-
+        $name->move($path,$ImageName);
         return $ImageName;
-
     }
 
+    
 
 }

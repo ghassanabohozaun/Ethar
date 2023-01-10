@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
 use App\Http\Requests\ArticleUpdateRequest;
+use App\Http\Resources\ArticleResource;
 use App\Http\Resources\NewResource;
-use App\Models\Admin;
 use App\Models\Article;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
@@ -21,17 +21,32 @@ class ArticlesController extends Controller
     public function index()
     {
         $title = trans('menu.articles');
-        $articles = Article::withoutTrashed()->orderByDesc('created_at')->paginate(15);
-        return view('admin.articles.index', compact('title', 'articles'));
+        return view('admin.articles.index', compact('title'));
     }
-
-    /////////////////////////////////////////
-    /// get trashed articles index
-    public function trashedArticles()
+    ///////////////////////////////////////////////
+    /// index
+    public function getArticles(Request $request)
     {
-        $title = trans('menu.trashed_articles');
-        $trashedArticles = Article::onlyTrashed()->orderByDesc('created_at')->paginate(15);
-        return view('admin.articles.trashed-articles', compact('title', 'trashedArticles'));
+        $perPage = 10;
+        if ($request->has('length')) {
+            $perPage = $request->length;
+        }
+
+        $offset = 0;
+        if ($request->has('start')) {
+            $offset = $request->start;
+        }
+
+        $list = Article::orderByDesc('created_at')->offset($offset)->take($perPage)->get();
+        $arr = ArticleResource::collection($list);
+        $recordsTotal = Article::get()->count();
+        $recordsFiltered = Article::get()->count();
+        return response()->json([
+            'draw' => $request->draw,
+            'recordsTotal' => $recordsTotal,
+            'recordsFiltered' => $recordsFiltered,
+            'data' => $arr
+        ]);
     }
 
     ///////////////////////////////////////////////
@@ -44,12 +59,11 @@ class ArticlesController extends Controller
 
     /////////////////////////////////////////////////
     /// store
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
 
         if ($request->hasFile('photo')) {
-            // $photo_path = $request->file('photo')->store('ArticlesPhotos');
-            $photo_path = $this->saveImage($request->file('photo'), 'ArticlesImage');
+            $photo_path = $request->file('photo')->store('ArticlesPhotos');
         } else {
             $photo_path = '';
         }
@@ -103,10 +117,12 @@ class ArticlesController extends Controller
 
     }
 
+
     /////////////////////////////////////////////////
     /// update
-    public function update(ArticleRequest $request)
+    public function update(ArticleUpdateRequest $request)
     {
+
 
         $article = Article::find($request->id);
         if (!$article) {
@@ -123,6 +139,7 @@ class ArticlesController extends Controller
         } else {
             if (!empty($article->photo)) {
                 $photo_path = $article->photo;
+
             } else {
                 $photo_path = '';
             }
@@ -163,61 +180,19 @@ class ArticlesController extends Controller
     /// destroy
     public function destroy(Request $request)
     {
-        try {
-            if ($request->ajax()) {
-                $article = Article::find($request->id);
-                if (!$article) {
-                    return redirect()->route('admin.not.found');
-                }
-                $article->delete();
-                return $this->returnSuccessMessage(trans('general.move_to_trash'));
+        if ($request->ajax()) {
+            $article = Article::find($request->id);
+
+            if (!$article) {
+                return redirect()->route('admin.not.found');
             }
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
-    }
-
-    /////////////////////////////////////////
-    ///  restore
-    public function restore(Request $request)
-    {
-        try {
-            if ($request->ajax()) {
-                $article = Article::onlyTrashed()->find($request->id);
-                if (!$article) {
-                    return redirect()->route('admin.not.found');
-                }
-                $article->restore();
-                return $this->returnSuccessMessage(trans('general.restore_success_message'));
+            if (!empty($article->photo)) {
+                Storage::delete($article->photo);
             }
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
+            $article->delete();
+            return $this->returnSuccessMessage(trans('general.delete_success_message'));
+        }
     }
-
-    /////////////////////////////////////////
-    ///  force delete
-    public function forceDelete(Request $request)
-    {
-        try {
-            if ($request->ajax()) {
-                $article = Article::onlyTrashed()->find($request->id);
-                if (!$article) {
-                    return redirect()->route('admin.not.found');
-                }
-                if (!empty($article->photo)) {
-                    Storage::delete($article->photo);
-                }
-                $article->forceDelete();
-
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
-            }
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
-
-    }
-
 
     ////////////////////////////////////////////////////////////////////
     /// change Status
