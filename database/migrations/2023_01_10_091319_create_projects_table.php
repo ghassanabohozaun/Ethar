@@ -26,6 +26,7 @@ return new class extends Migration
             $table->date('date')->nullable();
             $table->string('writer');
             $table->enum('type', ['current','previous'])->default('current');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

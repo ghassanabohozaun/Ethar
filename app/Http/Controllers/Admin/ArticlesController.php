@@ -44,7 +44,7 @@ class ArticlesController extends Controller
 
     /////////////////////////////////////////////////
     /// store
-    public function store(ArticleRequest $request)
+    public function store(Request $request)
     {
 
         if ($request->hasFile('photo')) {
