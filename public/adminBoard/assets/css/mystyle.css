@@ -165,3 +165,12 @@ tr:nth-child(even) > td {
     max-width: 100%;
     height: auto;
 }
+
+
+.image-input .image-input-wrapper {
+    width: 120px;
+    height: 110px;
+    border-radius: 0.42rem;
+    background-repeat: no-repeat;
+    background-size: 120px 110px;
+}

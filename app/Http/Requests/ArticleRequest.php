@@ -32,8 +32,8 @@ class ArticleRequest extends FormRequest
             ];
 
             if($route == 'admin.articles.store'){
-//                $rules['title_ar'] = ['unique:articles'];
-//                $rules['title_en'] = ['unique:articles'];
+                $rules['title_ar'] = ['unique:articles'];
+                $rules['title_en'] = ['unique:articles'];
                 $rules['photo'] = ['required', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
             }else if($route == 'admin.articles.update'){
                 $rules['photo'] = ['sometimes', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
@@ -41,15 +41,15 @@ class ArticleRequest extends FormRequest
 
         } else {
             $rules = [
-                'title_ar' => 'required|unique:articles',
+                'title_ar' => 'required',
                 'abstract_ar' => 'required',
                 'publish_date' => 'required',
                 'publisher_name' => 'required',
             ];
 
             if($route == 'admin.articles.store'){
-//                $rules['title_ar'] = ['unique:articles'];
-//                $rules['title_en'] = ['unique:articles'];
+                $rules['title_ar'] = ['unique:articles'];
+                $rules['title_en'] = ['unique:articles'];
                 $rules['photo'] = ['required', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
             }else if($route == 'admin.articles.update'){
                 $rules['photo'] = ['sometimes', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
@@ -74,8 +74,8 @@ class ArticleRequest extends FormRequest
              'in' => trans('articles.in'),
              'numeric' => trans('articles.numeric'),
              'image' => trans('articles.image'),
-             'title_ar.unique' => trans('articles.unique_ar'),
-             'title_en.unique' => trans('articles.unique_en'),
+//             'title_ar.unique' => trans('articles.unique_ar'),
+//             'title_en.unique' => trans('articles.unique_en'),
              'mimes' => trans('articles.mimes'),
              'max' => trans('articles.image_max'),
              'photo.required' => trans('articles.photo_required'),
