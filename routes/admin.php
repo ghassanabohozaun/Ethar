@@ -16,16 +16,18 @@ Route::group([
     'namespace' => 'Admin',
     'middleware' => ['auth:admin', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
 ], function () {
+
     //////////////////////////////////////////////////////////////////
     /// not found page
     Route::get('/notFound', 'DashboardController@notFound')->name('admin.not.found');
-    //////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// dashboard
     Route::get('/', 'DashboardController@index')->name('admin.dashboard')->middleware('can:dashboard');
     Route::get('/dashboard', 'DashboardController@index')->name('admin.dashboard')->middleware('can:dashboard');
 
 
-    //////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// settings
     Route::get('settings', 'DashboardController@getSettings')
         ->name('get.admin.settings')->middleware('can:settings');
@@ -36,32 +38,32 @@ Route::group([
     Route::post('switch-frontend-lang', 'DashboardController@switchFrontendLang')
         ->name('switch.frontend.lang');
 
-    ///////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// Notifications Routes
-    Route::group(['prefix' => 'notifications', 'middleware' => 'can:notifications'], function () {
-        Route::get('/', 'NotificationsController@index')->name('admin.notifications');
-        Route::get('/get-notifications', 'NotificationsController@getNotificationsResource')
-            ->name('get.admin.notifications.resource');
-
-        Route::get('/get/admin/notifications', 'NotificationsController@getNotifications')
-            ->name('admin.get.notifications');
-        Route::get('/get/one/admin/notification', 'NotificationsController@getOneNotification')
-            ->name('admin.get.one.notification');
-        Route::post('/admin/notification/make/read', 'NotificationsController@makeRead')
-            ->name('admin.notification.make.read');
-    });
-    ///////////////////////////////////////////////////////////////////
+//    Route::group(['prefix' => 'notifications', 'middleware' => 'can:notifications'], function () {
+//        Route::get('/', 'NotificationsController@index')->name('admin.notifications');
+//        Route::get('/get-notifications', 'NotificationsController@getNotificationsResource')
+//            ->name('get.admin.notifications.resource');
+//
+//        Route::get('/get/admin/notifications', 'NotificationsController@getNotifications')
+//            ->name('admin.get.notifications');
+//        Route::get('/get/one/admin/notification', 'NotificationsController@getOneNotification')
+//            ->name('admin.get.one.notification');
+//        Route::post('/admin/notification/make/read', 'NotificationsController@makeRead')
+//            ->name('admin.notification.make.read');
+//    });
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// Revenues Routes
     Route::group(['prefix' => 'Revenues', 'middleware' => 'can:revenues'], function () {
         Route::get('/', 'RevenuesController@index')->name('admin.revenues');
         Route::get('/get-revenues', 'RevenuesController@getRevenues')->name('admin.get.revenues');
     });
 
-    ///////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// Landing Page Routes
     Route::group(['prefix' => 'landing-page', 'middleware' => 'can:landing-page'], function () {
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////////////////////////////////
         /// Sliders routes
         Route::group(['prefix' => 'sliders'], function () {
             Route::get('/', 'SlidersController@index')->name('admin.sliders');
@@ -100,12 +102,13 @@ Route::group([
 
     });
 
-    //////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// admin routes
     Route::get('/admin', 'AdminsController@index')->name('get.admin')->middleware('can:admins');
     Route::get('/get-admin-by-id', 'AdminsController@getAdminById')->name('get.admin.by.id');
     Route::post('/admin-update', 'AdminsController@adminUpdate')->name('admin.update');
-    //////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// Support Center Route
     Route::group(['prefix' => 'support-center', 'middleware' => 'can:support-center'], function () {
         Route::get('/', 'SupportCenterController@index')
@@ -126,9 +129,9 @@ Route::group([
         Route::get('/get-one-message', 'SupportCenterController@getOneMessage')
             ->name('admin.support.center.get.one.message');
 
-
     });
-    //////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// users Routes
     Route::group(['prefix' => 'users', 'middleware' => 'can:users'], function () {
         Route::get('/', 'UserController@index')->name('users');
@@ -143,10 +146,9 @@ Route::group([
         Route::get('/get-trashed-users', 'UserController@getTrashedUsers')->name('get.trashed.users');
         Route::post('/force-delete', 'UserController@forceDelete')->name('user.force.delete');
         Route::post('/restore', 'UserController@restore')->name('user.restore');
-
-
     });
-    ///////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// Roles Routes
     Route::group(['prefix' => 'roles', 'middleware' => 'can:roles'], function () {
         Route::get('/', 'RolesController@index')->name('admin.roles');
@@ -157,9 +159,8 @@ Route::group([
         Route::get('/edit/{id?}', 'RolesController@edit')->name('admin.role.edit');
         Route::post('/update', 'RolesController@update')->name('admin.role.update');
     });
-    ///////////////////////////////////////////////////////////////////
 
-    ///////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// Articles  Routes
     Route::group(['prefix' => 'articles', 'middleware' => 'can:articles'], function () {
         Route::get('/', 'ArticlesController@index')->name('admin.articles');
@@ -170,33 +171,41 @@ Route::group([
         Route::post('/store', 'ArticlesController@store')->name('admin.articles.store');
         Route::get('/edit/{id?}', 'ArticlesController@edit')->name('admin.articles.edit');
         Route::post('/update', 'ArticlesController@update')->name('admin.articles.update');
-
         Route::get('/trashed-articles', 'ArticlesController@trashedArticles')->name('admin.articles.trashed');
         Route::post('/force-delete', 'ArticlesController@forceDelete')->name('admin.articles.force.delete');
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
     });
 
-    // project
-    Route::resource('project', ProjectsController::class );
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /// Projects Routes
+    Route::group(['prefix' => 'projects', 'middleware' => 'can:projects'], function () {
+        Route::get('/', 'ProjectsController@index')->name('admin.projects');
+        Route::get('/get-projects', 'ProjectsController@getArticles')->name('admin.get.projects');
+        Route::post('/destroy', 'ProjectsController@destroy')->name('admin.projects.destroy');
+        Route::post('/change-status', 'ProjectsController@changeStatus')->name('admin.projects.change.status');
+        Route::get('/create', 'ProjectsController@create')->name('admin.projects.create');
+        Route::post('/store', 'ProjectsController@store')->name('admin.projects.store');
+        Route::get('/edit/{id?}', 'ProjectsController@edit')->name('admin.projects.edit');
+        Route::post('/update', 'ProjectsController@update')->name('admin.projects.update');
+        Route::get('/trashed-projects', 'ProjectsController@trashedArticles')->name('admin.projects.trashed');
+        Route::post('/force-delete', 'ProjectsController@forceDelete')->name('admin.projects.force.delete');
+        Route::post('/restore', 'ProjectsController@restore')->name('admin.projects.restore');
+    });
+
+    //Route::resource('project', ProjectsController::class );
 
 });
 
-
-///////////////////////////////////////////////////////////////////
-
-//////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 /// Guest => that mean:must not be admin => because any one must be able to access login page
 Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin'], function () {
     Route::get('login', 'LoginController@getLogin')->name('get.admin.login');
     Route::post('login', 'LoginController@doLogin')->name('admin.login');
-
     Route::get('/login2', function () {
         return view('admin.auth.login2');
     });
-
-
 });
-//////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 /// Logout
 Route::get('logout', 'Admin\LoginController@logout')->name('admin.logout');
 
