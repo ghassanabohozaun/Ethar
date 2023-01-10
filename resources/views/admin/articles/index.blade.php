@@ -86,7 +86,7 @@
                                                         <tr>
                                                             <td>
                                                                 <img
-                                                                    src="{{asset(\Illuminate\Support\Facades\Storage::url($article->photo))}}"
+                                                                    src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
                                                                     style="width: 80px; height: 60px"
                                                                     class=" img-thumbnail"/>
                                                             </td>
