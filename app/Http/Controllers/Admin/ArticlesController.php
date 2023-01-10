@@ -4,12 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
-<<<<<<< HEAD
 use App\Http\Requests\ArticleUpdateRequest;
 use App\Http\Resources\ArticleResource;
 use App\Http\Resources\NewResource;
-=======
->>>>>>> 40aeb964a5161ec120a3542ac5f1fd69a60a6c06
 use App\Models\Article;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
@@ -51,20 +48,11 @@ class ArticlesController extends Controller
     public function store(ArticleRequest $request)
     {
         if ($request->hasFile('photo')) {
-<<<<<<< HEAD
-
-            $photo_path = $request->file('photo')->store('ArticlesPhotos');
-
-=======
->>>>>>> 40aeb964a5161ec120a3542ac5f1fd69a60a6c06
             $image = $request->file('photo');
             $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
             $photo_path = $this->saveResizeImage($image, $destinationPath);
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 40aeb964a5161ec120a3542ac5f1fd69a60a6c06
         } else {
             $photo_path = '';
         }
