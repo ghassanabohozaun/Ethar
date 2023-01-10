@@ -142,7 +142,7 @@ Route::group([
         Route::get('/get-trashed-users', 'UserController@getTrashedUsers')->name('get.trashed.users');
         Route::post('/force-delete', 'UserController@forceDelete')->name('user.force.delete');
         Route::post('/restore', 'UserController@restore')->name('user.restore');
-        Route::get('/bar-chart', 'UserController@barChart')->name('user.bar.chart');
+
 
     });
     ///////////////////////////////////////////////////////////////////
@@ -169,6 +169,10 @@ Route::group([
         Route::post('/store', 'ArticlesController@store')->name('admin.articles.store');
         Route::get('/edit/{id?}', 'ArticlesController@edit')->name('admin.articles.edit');
         Route::post('/update', 'ArticlesController@update')->name('admin.articles.update');
+
+        Route::get('/trashed-articles', 'ArticlesController@trashedArticles')->name('admin.articles.trashed');
+        Route::post('/force-delete', 'ArticlesController@forceDelete')->name('admin.articles.force.delete');
+        Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
     });
 
 });

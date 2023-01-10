@@ -30,8 +30,6 @@ return [
     'enter_file'=>'Enter File',
     'enter_status'=>'Enter Status',
 
-
-
     'language_required'=>'Article Language Required',
     'title_ar_required'=>'Arabic Article Title Required',
     'title_en_required'=>'English Article Title Required',
@@ -51,8 +49,9 @@ return [
     'mimes'=>'image with png format only',
     'photo_required'=>'Article Photo Required',
     'unique'=>'Article Title must be unique',
-
     'unique_ar'=>'Arabic Title must be unique',
     'unique_en'=>'English Title must be unique',
+
+    'no_articles_found'=>'No Articles Found',
 
 ];

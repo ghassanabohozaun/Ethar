@@ -64,114 +64,103 @@
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="dtable scroll">
-                                            <!--begin: Datatable -->
-                                            <!--begin: Datatable-->
-                                            <div class="portlet-body">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="scroll">
-                                                            <div class="table-responsive">
-                                                                <table class="table myTable table-hover" id="myTable">
-                                                                    <thead>
-                                                                    <tr>
-                                                                        <th>Photo</th>
-                                                                        <th>Name</th>
-                                                                        <th>Email</th>
-                                                                        <th>role_id</th>
-                                                                        <th>status</th>
-                                                                        <th class="text-center" style="width: 100px;">
-                                                                            Actions
-                                                                        </th>
-                                                                    </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                    @forelse($users as $user)
-                                                                        <tr>
-                                                                            <td>
-                                                                                @if($user->photo == null)
-                                                                                    @if($user->gender == trans('general.male'))
-                                                                                        <img
-                                                                                            src="{{asset('adminBoard/images/male.jpeg')}}"
-                                                                                            width="70"
-                                                                                            class="img-fluid img-thumbnail"/>
-                                                                                    @else
-                                                                                        <img
-                                                                                            src="{{asset('adminBoard/images/female.jpeg')}}"
-                                                                                            width="70"
-                                                                                            class="img-fluid img-thumbnail"/>
-                                                                                    @endif
+                                        <div class="scroll">
+                                            <div class="table-responsive">
+                                                <table class="table myTable table-hover" id="myTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Photo</th>
+                                                        <th>Name</th>
+                                                        <th>Email</th>
+                                                        <th>role_id</th>
+                                                        <th>status</th>
+                                                        <th class="text-center" style="width: 100px;">
+                                                            Actions
+                                                        </th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @forelse($users as $user)
+                                                        <tr>
+                                                            <td>
+                                                                @if($user->photo == null)
+                                                                    @if($user->gender == trans('general.male'))
+                                                                        <img
+                                                                            src="{{asset('adminBoard/images/male.jpeg')}}"
+                                                                            width="70"
+                                                                            class="img-fluid img-thumbnail"/>
+                                                                    @else
+                                                                        <img
+                                                                            src="{{asset('adminBoard/images/female.jpeg')}}"
+                                                                            width="70"
+                                                                            class="img-fluid img-thumbnail"/>
+                                                                    @endif
 
-                                                                                @else
-                                                                                    <img
-                                                                                        src="{{asset(Storage::url($user->photo))}}"
-                                                                                        width="70"
-                                                                                        style="border-radius: 10px"
-                                                                                        class="img-fluid img-thumbnail"/>
-                                                                                @endif
-                                                                            </td>
-                                                                            <td>{{ $user->name }}</td>
-                                                                            <td>{{ $user->email }}</td>
-                                                                            <td>
+                                                                @else
+                                                                    <img
+                                                                        src="{{asset(Storage::url($user->photo))}}"
+                                                                        width="70"
+                                                                        style="border-radius: 10px"
+                                                                        class="img-fluid img-thumbnail"/>
+                                                                @endif
+                                                            </td>
+                                                            <td>{{ $user->name }}</td>
+                                                            <td>{{ $user->email }}</td>
+                                                            <td>
 
-                                                                                @if(Lang()=='ar')
-                                                                                    <span class="text-info">
+                                                                @if(Lang()=='ar')
+                                                                    <span class="text-info">
                                                                                       {!! $user->role->role_name_ar !!}
                                                                                     </span>
-                                                                                @else
-                                                                                    <span class="text-info">
+                                                                @else
+                                                                    <span class="text-info">
                                                                                        {!! $user->role->role_name_en !!}
                                                                                     </span>
-                                                                                @endif
-                                                                            </td>
-                                                                            <td>
-                                                                                <div class="cst-switch switch-sm">
-                                                                                    <input type="checkbox"
-                                                                                           id="change_status"
-                                                                                           {{$user->status == 'on' ? 'checked':''}}  data-id="{{$user->id}}"
-                                                                                           class="change_status">
-                                                                                </div>
-                                                                            </td>
-                                                                            <td>
-                                                                                <a href="{{route('user.edit',$user->id)}}"
-                                                                                   class="btn btn-hover-primary btn-icon btn-pill "
-                                                                                   title="{{trans('general.edit')}}">
-                                                                                    <i class="fa fa-edit fa-1x"></i>
-                                                                                </a>
+                                                                @endif
+                                                            </td>
+                                                            <td>
+                                                                <div class="cst-switch switch-sm">
+                                                                    <input type="checkbox"
+                                                                           id="change_status"
+                                                                           {{$user->status == 'on' ? 'checked':''}}  data-id="{{$user->id}}"
+                                                                           class="change_status">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="{{route('user.edit',$user->id)}}"
+                                                                   class="btn btn-hover-primary btn-icon btn-pill "
+                                                                   title="{{trans('general.edit')}}">
+                                                                    <i class="fa fa-edit fa-1x"></i>
+                                                                </a>
 
-                                                                                <a href="#"
-                                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_user_btn"
-                                                                                   data-id="{{$user->id}}"
-                                                                                   title="{{trans('general.delete')}}">
-                                                                                    <i class="fa fa-trash fa-1x"></i>
-                                                                                </a>
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_user_btn"
+                                                                   data-id="{{$user->id}}"
+                                                                   title="{{trans('general.delete')}}">
+                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                </a>
 
-                                                                            </td>
-                                                                        </tr>
-                                                                    @empty
-                                                                        <tr>
-                                                                            <td colspan="6" class="text-center">
-                                                                                No Users found
-                                                                            </td>
-                                                                        </tr>
-                                                                    @endforelse
-                                                                    </tbody>
-                                                                    <tfoot>
-                                                                    <tr>
-                                                                        <td colspan="6">
-                                                                            <div class="float-right">
-                                                                                {!! $users->appends(request()->all())->links() !!}
-                                                                            </div>
-                                                                        </td>
-                                                                    </tr>
-                                                                    </tfoot>
-                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    @empty
+                                                        <tr>
+                                                            <td colspan="6" class="text-center">
+                                                                No Users found
+                                                            </td>
+                                                        </tr>
+                                                    @endforelse
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <div class="float-right">
+                                                                {!! $users->appends(request()->all())->links() !!}
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
                                             </div>
-                                            <!--end: Datatable-->
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +188,6 @@
 
 @endsection
 @push('js')
-
 
     <script type="text/javascript">
 
@@ -238,7 +226,7 @@
                                 });
                                 $('.delete_user_button').click(function () {
                                     //updateDataTable
-                                    $('#myTable').load(location.href+(' #myTable'));
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
                         },//end success
@@ -256,10 +244,6 @@
             });
 
         })
-
-
-
-
 
 
         // switch english language

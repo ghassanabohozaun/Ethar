@@ -9,22 +9,23 @@
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
 
-                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
                 <!--begin::Actions-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
+
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
-                        <a href="{!! route('users') !!}" class="text-muted">
-                            {{trans('menu.users')}}
+                        <a href="{!! route('admin.articles') !!}" class="text-muted">
+                            {{trans('menu.articles')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="javascript(avoid);" class="text-muted">
-                            {{trans('menu.trashed_users')}}
+                            {{trans('menu.trashed_articles')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
-                        <a href="{!! route('users.trashed') !!}" class="text-muted">
+                        <a href="{!! route('admin.articles.trashed') !!}" class="text-muted">
                             {{trans('menu.show_all')}}
                         </a>
                     </li>
@@ -34,7 +35,16 @@
             </div>
             <!--end::Info-->
 
-
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <a href="{{route('admin.articles.create')}}"
+                   class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
+                    <i class="fa fa-plus-square"></i>
+                    {{trans('menu.add_new_article')}}
+                </a>
+                &nbsp;
+            </div>
+            <!--end::Toolbar-->
         </div>
     </div>
     <!--end::Subheader-->
@@ -43,6 +53,8 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class=" container-fluid ">
+
+
             <!--begin::Row-->
             <div class="row">
                 <div class="col-lg-12">
@@ -54,88 +66,53 @@
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
+
                                         <div class="scroll">
                                             <div class="table-responsive">
-                                                <table class="table table-hover" id="myTable">
+                                                <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>Photo</th>
-                                                        <th>Name</th>
-                                                        <th>Email</th>
-                                                        <th>role_id</th>
-                                                        <th>status</th>
-                                                        <th class="text-center" style="width: 100px;">
-                                                            Actions
-                                                        </th>
+                                                        <th>@lang('articles.photo')</th>
+                                                        <th>@lang('articles.title_ar')</th>
+                                                        <th>@lang('articles.title_en')</th>
+                                                        <th>@lang('articles.publisher_name')</th>
+                                                        <th>@lang('articles.publish_date')</th>
+                                                        <th>@lang('general.actions')</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    @forelse($trashedUsers as $user)
+                                                    @forelse($trashedArticles as $article)
                                                         <tr>
                                                             <td>
-                                                                @if($user->photo == null)
-                                                                    @if($user->gender == trans('general.male'))
-                                                                        <img
-                                                                            src="{{asset('adminBoard/images/male.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
-                                                                    @else
-                                                                        <img
-                                                                            src="{{asset('adminBoard/images/female.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
-                                                                    @endif
-
-                                                                @else
-                                                                    <img src="{{asset(Storage::url($user->photo))}}"
-                                                                         width="70"
-                                                                         style="border-radius: 10px"
-                                                                         class="img-fluid img-thumbnail"/>
-                                                                @endif
+                                                                <img
+                                                                    src="{{asset(\Illuminate\Support\Facades\Storage::url($article->photo))}}"
+                                                                    style="width: 80px; height: 60px"
+                                                                    class=" img-thumbnail"/>
                                                             </td>
-                                                            <td>{{ $user->name }}</td>
-                                                            <td>{{ $user->email }}</td>
-                                                            <td>
+                                                            <td>{{ $article->title_ar }}</td>
+                                                            <td>{{ $article->title_en }}</td>
+                                                            <td>{{ $article->publisher_name }}</td>
+                                                            <td>{{ $article->publish_date }}</td>
 
-                                                                @if(Lang()=='ar')
-                                                                    <span class="text-info">
-                                                                                      {!! $user->role->role_name_ar !!}
-                                                                                    </span>
-                                                                @else
-                                                                    <span class="text-info">
-                                                                                       {!! $user->role->role_name_en !!}
-                                                                                    </span>
-                                                                @endif
-                                                            </td>
                                                             <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           id="change_status"
-                                                                           {{$user->status == 'on' ? 'checked':''}}  data-id="{{$user->id}}"
-                                                                           class="change_status">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-
-                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_user_btn"
-                                                                   data-id="{{$user->id}}"
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_article_btn"
+                                                                   data-id="{{$article->id}}"
                                                                    title="{{trans('general.restore')}}">
                                                                     <i class="fa fa-trash-restore fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_user_btn"
-                                                                   data-id="{{$user->id}}"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_article_btn"
+                                                                   data-id="{{$article->id}}"
                                                                    title="{{trans('general.force_delete')}}">
                                                                     <i class="fa fa-trash-alt fa-1x"></i>
                                                                 </a>
-
                                                             </td>
                                                         </tr>
                                                     @empty
                                                         <tr>
                                                             <td colspan="6" class="text-center">
-                                                                No Users found
+                                                                @lang('articles.no_articles_found')
                                                             </td>
                                                         </tr>
                                                     @endforelse
@@ -144,7 +121,7 @@
                                                     <tr>
                                                         <td colspan="6">
                                                             <div class="float-right">
-                                                                {!! $trashedUsers->appends(request()->all())->links() !!}
+                                                                {!! $trashedArticles->appends(request()->all())->links() !!}
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -152,6 +129,7 @@
                                                 </table>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -159,30 +137,39 @@
 
                         </div>
 
-                        <form class="d-none" id="form_user_delete">
-                            <input type="text" id="user_delete_id">
+                        <form class="d-none" id="form_article_delete">
+                            <input type="hidden" id="article_delete_id">
                         </form>
                         <!--end::Form-->
 
                     </div>
                     <!--end::Card-->
+
+
                 </div>
+
             </div>
             <!--end::Row-->
+
+
         </div>
         <!--end::Container-->
 
         <!--begin::Form-->
-    </div>
-    <!--end::content-->
 
+
+    </div>
+
+
+    <!--end::content-->
 @endsection
 @push('js')
 
+
     <script type="text/javascript">
         ///////////////////////////////////////////////////
-        /// Delete user
-        $(document).on('click', '.force_delete_user_btn', function (e) {
+        /// delete article
+        $(document).on('click', '.force_delete_article_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
@@ -199,7 +186,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('user.force.delete') !!}',
+                        url: '{!! route('admin.articles.force.delete') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -211,9 +198,9 @@
                                     text: "{!! trans('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_user_button'}
+                                    customClass: {confirmButton: 'delete_article_button'}
                                 });
-                                $('.delete_user_button').click(function () {
+                                $('.delete_article_button').click(function () {
                                     $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
@@ -226,7 +213,7 @@
                         text: "{!! trans('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
-                        customClass: {confirmButton: 'cancel_delete_user_button'}
+                        customClass: {confirmButton: 'cancel_delete_article_button'}
                     })
                 }
             });
@@ -234,13 +221,13 @@
 
 
         ////////////////////////////////////////////////////
-        // restore user
-        $(document).on('click', '.restore_user_btn', function (e) {
+        // restore article
+        $(document).on('click', '.restore_article_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
             $.ajax({
-                url: "{{route('user.restore')}}",
+                url: "{{route('admin.articles.restore')}}",
                 data: {id, id},
                 type: 'post',
                 dataType: 'JSON',
@@ -260,9 +247,9 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'restore_user_button'}
+                            customClass: {confirmButton: 'restore_article_button'}
                         });
-                        $('.restore_user_button').click(function () {
+                        $('.restore_article_button').click(function () {
                             $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
@@ -273,4 +260,3 @@
 
     </script>
 @endpush
-

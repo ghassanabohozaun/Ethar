@@ -28,7 +28,6 @@ class UserController extends Controller
             ->paginate(15);
         return view('admin.users.index', compact('title', 'users'));
     }
-
     /////////////////////////////////////////
     /// Get Trashed users index
     public function trashedUser()
@@ -208,26 +207,4 @@ class UserController extends Controller
 
     }
 
-    /////////////////////////////////////////
-    /// User Growth Bar Chart
-    public function barChart()
-    {
-        $users = Admin::select(DB::raw("COUNT(*) as count"))
-            ->whereYear('created_at', date('Y'))
-            ->groupBy(DB::raw("Month(created_at)"))
-            ->pluck('count');
-
-
-        $months = Admin::select(DB::raw("Month(created_at) as month"))
-            ->whereYear('created_at', date('Y'))
-            ->groupBy(DB::raw("Month(created_at)"))
-            ->pluck('month');
-
-        $datas = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-
-        foreach ($months as $index => $month) {
-            $datas[$month] = $users[$index];
-        }
-        return view('admin.users.bar-chart', compact('datas'));
-    }
 }
