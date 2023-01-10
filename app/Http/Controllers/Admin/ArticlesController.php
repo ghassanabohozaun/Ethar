@@ -61,7 +61,7 @@ class ArticlesController extends Controller
             })->save($destinationPath.'/'.$input['photo']);
 
 
-            $image->move($destinationPath, $input['photo']);
+            //$image->move($destinationPath, $input['photo']);
 
             $photo_path = $input['photo'] ;
 
