@@ -54,10 +54,10 @@
                                         <div class="symbol symbol-30 symbol-lg-80">
                                             @if(!empty($admin->photo) )
                                                 <img alt="Pic"
-                                                     src="{{asset(\Illuminate\Support\Facades\Storage::url($admin->photo))}}"/>
+                                                     src="{{asset('adminBoard/uploadedImages/admin/'.$admin->photo)}}"/>
                                             @else
                                                 <img alt="Pic"
-                                                     src="{{asset('adminBoard/assets/media//users/default.jpg')}}"/>
+                                                     src="{!! asset('adminBoard/images/male.png') !!}"/>
                                             @endif
                                         </div>
                                     </div>
@@ -321,8 +321,9 @@
                     $('#email').val(data.data.email);
 
                     var photo = data.data.photo;
-                    var url = '{{Storage::url('')}}' + photo;
-                    $('#kt_admin_photo').css("background-image", "url(" + url + ")");
+                    var url = '{{asset('adminBoard/uploadedImages/admin')}}/' + photo;
+
+                    $('#kt_admin_photo').css("background-image", "{{asset('adminBoard/uploadedImages/admin/1673368051.png')}}");
                 }
             });//end get ajax
 

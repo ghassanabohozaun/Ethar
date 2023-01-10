@@ -7,8 +7,7 @@ use App\Http\Requests\AdminUpdateRequest;
 use App\Models\Admin;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
+use File;
 class AdminsController extends Controller
 {
     use GeneralTrait;
@@ -43,12 +42,22 @@ class AdminsController extends Controller
             if (!$admin) {
                 return redirect()->route('admin.not.found');
             }
+
+
             if ($request->hasFile('photo')) {
                 if (!empty($admin->photo)) {
-                    Storage::delete($admin->photo);
-                    $photo_path = $request->file('photo')->store('admins');
+                    $image_path = public_path("\adminBoard\uploadedImages\admin\\") . $admin->photo;
+                    if (File::exists($image_path)) {
+                        File::delete($image_path);
+                    }
+                    $image = $request->file('photo');
+                    $destinationPath = public_path('\adminBoard\uploadedImages\admin\\');
+                    $photo_path = $this->saveResizeImage($image, $destinationPath);
+
                 } else {
-                    $photo_path = $request->file('photo')->store('admins');
+                    $image = $request->file('photo');
+                    $destinationPath = public_path('\adminBoard\uploadedImages\admin\\');
+                    $photo_path = $this->saveResizeImage($image, $destinationPath);
                 }
             } else {
                 if (!empty($admin->photo)) {
@@ -57,6 +66,7 @@ class AdminsController extends Controller
                     $photo_path = '';
                 }
             }
+
 
             if (!empty($request->input('password'))) {
                 $password = bcrypt($request->password);

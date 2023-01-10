@@ -7,16 +7,53 @@
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/100_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/300_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/default.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/user1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/user2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/user3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/user4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/media/users/user5.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/modals.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/modals.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +285,7 @@
       <workItem from="1673181466013" duration="1201000" />
       <workItem from="1673270793356" duration="16245000" />
       <workItem from="1673337018214" duration="16899000" />
-      <workItem from="1673357287622" duration="7956000" />
+      <workItem from="1673357287622" duration="8892000" />
     </task>
     <servers />
   </component>
