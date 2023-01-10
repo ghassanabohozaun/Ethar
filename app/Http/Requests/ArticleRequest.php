@@ -21,7 +21,6 @@ class ArticleRequest extends FormRequest
         $route = $this->route()->getName();
 
         if (setting()->site_lang_en == 'on') {
-
             $rules = [
                 'title_ar' => 'required',
                 'title_en' => 'required',
@@ -74,8 +73,8 @@ class ArticleRequest extends FormRequest
              'in' => trans('articles.in'),
              'numeric' => trans('articles.numeric'),
              'image' => trans('articles.image'),
-//             'title_ar.unique' => trans('articles.unique_ar'),
-//             'title_en.unique' => trans('articles.unique_en'),
+             'title_ar.unique' => trans('articles.unique_ar'),
+             'title_en.unique' => trans('articles.unique_en'),
              'mimes' => trans('articles.mimes'),
              'max' => trans('articles.image_max'),
              'photo.required' => trans('articles.photo_required'),
