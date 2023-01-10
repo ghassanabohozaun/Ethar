@@ -7,6 +7,7 @@ use App\Http\Requests\ArticleRequest;
 use App\Http\Resources\NewResource;
 use App\Models\Article;
 use App\Traits\GeneralTrait;
+use File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -47,7 +48,7 @@ class ArticlesController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/articles');
-            $photo_path = $this->saveResizeImage($image,$destinationPath);
+            $photo_path = $this->saveResizeImage($image, $destinationPath);
 
         } else {
             $photo_path = '';
@@ -115,10 +116,18 @@ class ArticlesController extends Controller
 
         if ($request->hasFile('photo')) {
             if (!empty($article->photo)) {
-                Storage::delete($article->photo);
-                $photo_path = $request->file('photo')->store('ArticlesPhotos');
+                $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+                $image = $request->file('photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath);
+
             } else {
-                $photo_path = $request->file('photo')->store('ArticlesPhotos');
+                $image = $request->file('photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath);
             }
         } else {
             if (!empty($article->photo)) {

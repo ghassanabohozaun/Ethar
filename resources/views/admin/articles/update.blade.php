@@ -191,7 +191,7 @@
                             customClass: {confirmButton: 'update_article_button'}
                         });
                         $('.update_article_button').click(function () {
-                            window.location.href = "{{route('admin.articles')}}";
+                           // window.location.href = "{{route('admin.articles')}}";
                         });
                     }
 

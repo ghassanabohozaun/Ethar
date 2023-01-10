@@ -32,8 +32,8 @@ class ArticleRequest extends FormRequest
             ];
 
             if($route == 'admin.articles.store'){
-                $rules['title_ar'] = ['unique:articles'];
-                $rules['title_en'] = ['unique:articles'];
+//                $rules['title_ar'] = ['unique:articles'];
+//                $rules['title_en'] = ['unique:articles'];
                 $rules['photo'] = ['required', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
             }else if($route == 'admin.articles.update'){
                 $rules['photo'] = ['sometimes', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
@@ -48,8 +48,8 @@ class ArticleRequest extends FormRequest
             ];
 
             if($route == 'admin.articles.store'){
-                $rules['title_ar'] = ['unique:articles'];
-                $rules['title_en'] = ['unique:articles'];
+//                $rules['title_ar'] = ['unique:articles'];
+//                $rules['title_en'] = ['unique:articles'];
                 $rules['photo'] = ['required', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
             }else if($route == 'admin.articles.update'){
                 $rules['photo'] = ['sometimes', 'image', 'mimes:jpeg,jpg,png', 'max:1024'];
