@@ -107,7 +107,6 @@ class ArticlesController extends Controller
     public function update(ArticleRequest $request)
     {
 
-
         $article = Article::find($request->id);
         if (!$article) {
             return redirect()->route('admin.not.found');
@@ -123,7 +122,6 @@ class ArticlesController extends Controller
         } else {
             if (!empty($article->photo)) {
                 $photo_path = $article->photo;
-
             } else {
                 $photo_path = '';
             }
