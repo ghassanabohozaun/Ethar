@@ -101,9 +101,9 @@
 
 
                                 <div class="tab-content mt-5">
-                                    @include('admin.project.create_tabs.settings')
-                                    @include('admin.project.create_tabs.details_ar')
-                                    @include('admin.project.create_tabs.details_en')
+                                    @include('admin.projects.create_tabs.settings')
+                                    @include('admin.projects.create_tabs.details_ar')
+                                    @include('admin.projects.create_tabs.details_en')
                                 </div>
 
 
