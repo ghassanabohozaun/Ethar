@@ -35,7 +35,7 @@
                                     id="kt_article_photo">
 
                                     <div class="image-input-wrapper"
-                                         style="background-image: url({{asset(Storage::url($article->photo))}})"></div>
+                                         style="background-image: url({{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }})"></div>
                                     <label
                                         class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                         data-action="change" data-toggle="tooltip" title=""

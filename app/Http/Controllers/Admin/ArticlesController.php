@@ -56,12 +56,10 @@ class ArticlesController extends Controller
 
             $imgFile = Image::make($image->getRealPath());
 
-            $imgFile->resize(150, 150, function ($constraint) {
+            $imgFile->resize(500, 500, function ($constraint) {
                 $constraint->aspectRatio();
             })->save($destinationPath.'/'.$input['photo']);
 
-
-            //$image->move($destinationPath, $input['photo']);
 
             $photo_path = $input['photo'] ;
 
