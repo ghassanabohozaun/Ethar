@@ -59,12 +59,11 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>Photo</th>
-                                                        <th>Name</th>
-                                                        <th>role_id</th>
-                                                        <th>Email</th>
-                                                        <th>Mobile</th>
-                                                        <th class="text-center" style="width: 100px;">Actions</th>
+                                                        <th>@lang('users.photo')</th>
+                                                        <th>@lang('users.name')</th>
+                                                        <th>@lang('users.email')</th>
+                                                        <th>@lang('users.role_id')</th>
+                                                        <th class="text-center" style="width: 100px;">@lang('general.actions')</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -124,7 +123,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="6" class="text-center">
-                                                                No Users found
+                                                                @lang('users.no_users_found')
                                                             </td>
                                                         </tr>
                                                     @endforelse

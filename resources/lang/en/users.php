@@ -34,5 +34,6 @@ return [
     'min' => 'Password Must be Grater than 6 characters',
     'numeric' => 'Must Be Numeric',
     'email_unique' => 'This email is already in use !',
+    'no_users_found' => 'No Users Found',
 
 ];

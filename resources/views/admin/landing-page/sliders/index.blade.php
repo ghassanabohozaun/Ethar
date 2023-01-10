@@ -96,8 +96,7 @@
                                                             <td>{!! $loop->iteration!!}</td>
                                                             <td>
                                                                 <img src="{{asset(Storage::url($slider->photo))}}"
-                                                                     width="100" height="80"
-                                                                     class="img-fluid img-thumbnail"/>
+                                                                     class="img-fluid img-thumbnail table-image "/>
                                                             </td>
                                                             <td>{{ $slider->title_ar }}</td>
                                                             <td>{{ $slider->title_en }}</td>

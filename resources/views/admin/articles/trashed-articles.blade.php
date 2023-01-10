@@ -86,8 +86,7 @@
                                                             <td>
                                                                 <img
                                                                     src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
-                                                                    style="width: 80px; height: 60px"
-                                                                    class=" img-thumbnail"/>
+                                                                    class="img-fluid img-thumbnail table-image "/>
                                                             </td>
                                                             <td>{{ $article->title_ar }}</td>
                                                             <td>{{ $article->title_en }}</td>
