@@ -87,21 +87,17 @@
                                                                     @if($user->gender == trans('general.male'))
                                                                         <img
                                                                             src="{{asset('adminBoard/images/male.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
+                                                                            class="img-fluid img-thumbnail table-image "/>
                                                                     @else
                                                                         <img
                                                                             src="{{asset('adminBoard/images/female.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
+                                                                            class="img-fluid img-thumbnail table-image "/>
                                                                     @endif
 
                                                                 @else
                                                                     <img
                                                                         src="{{asset(Storage::url($user->photo))}}"
-                                                                        width="70"
-                                                                        style="border-radius: 10px"
-                                                                        class="img-fluid img-thumbnail"/>
+                                                                        class="img-fluid img-thumbnail table-image "/>
                                                                 @endif
                                                             </td>
                                                             <td>{{ $user->name }}</td>

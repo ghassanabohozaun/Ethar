@@ -28,7 +28,7 @@ return [
     'welcome_message_details' => 'نرحب بك في لوحة تحكم الموقع   ، توفر لك هذه اللوحة تحكم كامل بالموقع .  ',
     'profile' => 'الملف الشخصي',
     'sign_out' => 'تسجيل خروج',
-    'copy_rights'=>'موهوب',
+    'copy_rights'=>'ايثار',
     'teachers_count'=>'عدد المدرسين',
     'mawhobs_count'=>'عدد الموهبين',
     'courses_count'=>'عدد الدورات',

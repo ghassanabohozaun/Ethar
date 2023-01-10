@@ -56,17 +56,15 @@
                                     <div class="col-12">
                                         <div class="scroll">
                                             <div class="table-responsive">
-                                                <table class="table table-hover" id="myTable">
+                                                <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
                                                         <th>Photo</th>
                                                         <th>Name</th>
-                                                        <th>Email</th>
                                                         <th>role_id</th>
-                                                        <th>status</th>
-                                                        <th class="text-center" style="width: 100px;">
-                                                            Actions
-                                                        </th>
+                                                        <th>Email</th>
+                                                        <th>Mobile</th>
+                                                        <th class="text-center" style="width: 100px;">Actions</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -77,46 +75,37 @@
                                                                     @if($user->gender == trans('general.male'))
                                                                         <img
                                                                             src="{{asset('adminBoard/images/male.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
+                                                                            class="img-fluid img-thumbnail table-image "/>
                                                                     @else
                                                                         <img
                                                                             src="{{asset('adminBoard/images/female.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
+                                                                            class="img-fluid img-thumbnail table-image "/>
                                                                     @endif
-
                                                                 @else
                                                                     <img src="{{asset(Storage::url($user->photo))}}"
-                                                                         width="70"
-                                                                         style="border-radius: 10px"
-                                                                         class="img-fluid img-thumbnail"/>
+                                                                         class="img-fluid img-thumbnail table-image "/>
                                                                 @endif
                                                             </td>
-                                                            <td>{{ $user->name }}</td>
-                                                            <td>{{ $user->email }}</td>
-                                                            <td>
 
+                                                            <td>{{ $user->name }}</td>
+
+                                                            <td>
                                                                 @if(Lang()=='ar')
                                                                     <span class="text-info">
-                                                                                      {!! $user->role->role_name_ar !!}
-                                                                                    </span>
+                                                                        {!! $user->role->role_name_ar !!}
+                                                                    </span>
                                                                 @else
                                                                     <span class="text-info">
-                                                                                       {!! $user->role->role_name_en !!}
-                                                                                    </span>
+                                                                        {!! $user->role->role_name_en !!}
+                                                                    </span>
                                                                 @endif
                                                             </td>
-                                                            <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           id="change_status"
-                                                                           {{$user->status == 'on' ? 'checked':''}}  data-id="{{$user->id}}"
-                                                                           class="change_status">
-                                                                </div>
-                                                            </td>
-                                                            <td>
 
+                                                            <td>{{ $user->email }}</td>
+
+                                                            <td>{{ $user->mobile }}</td>
+
+                                                            <td>
                                                                 <a class="btn btn-hover-warning btn-icon btn-pill restore_user_btn"
                                                                    data-id="{{$user->id}}"
                                                                    title="{{trans('general.restore')}}">
