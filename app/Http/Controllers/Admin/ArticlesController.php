@@ -4,13 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
-use App\Http\Requests\ArticleUpdateRequest;
 use App\Http\Resources\NewResource;
-use App\Models\Admin;
 use App\Models\Article;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Image;
 
 class ArticlesController extends Controller
 {
@@ -44,12 +43,28 @@ class ArticlesController extends Controller
 
     /////////////////////////////////////////////////
     /// store
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-
         if ($request->hasFile('photo')) {
             // $photo_path = $request->file('photo')->store('ArticlesPhotos');
-            $photo_path = $this->saveImage($request->file('photo'), 'ArticlesImage');
+
+
+            $image = $request->file('photo');
+            $input['photo'] = time().'.'.$image->getClientOriginalExtension();
+
+            $destinationPath = public_path('adminBoard/uploadedImages/articles');
+
+            $imgFile = Image::make($image->getRealPath());
+
+            $imgFile->resize(150, 150, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($destinationPath.'/'.$input['photo']);
+
+
+            $image->move($destinationPath, $input['photo']);
+
+            $photo_path = $input['photo'] ;
+
         } else {
             $photo_path = '';
         }
