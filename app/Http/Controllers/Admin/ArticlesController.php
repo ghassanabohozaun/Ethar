@@ -63,7 +63,8 @@ class ArticlesController extends Controller
     {
 
         if ($request->hasFile('photo')) {
-            $photo_path = $request->file('photo')->store('ArticlesPhotos');
+            // $photo_path = $request->file('photo')->store('ArticlesPhotos');
+            $photo_path = $this->saveImage($request->file('photo'), 'ArticlesImage');
         } else {
             $photo_path = '';
         }

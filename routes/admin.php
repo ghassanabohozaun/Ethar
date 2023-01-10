@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -170,6 +171,9 @@ Route::group([
         Route::get('/edit/{id?}', 'ArticlesController@edit')->name('admin.articles.edit');
         Route::post('/update', 'ArticlesController@update')->name('admin.articles.update');
     });
+
+    // project
+    Route::resource('project', ProjectsController::class );
 
 });
 
