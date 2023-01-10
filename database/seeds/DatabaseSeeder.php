@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        Role::create([
+        Role::create([ 
             'role_name_ar' => 'admin',
             'role_name_en'=> 'admin',
             'permissions'=> json_encode(["dashboard", "settings", "admins", "roles", "users", "support-center", "articles"]),
