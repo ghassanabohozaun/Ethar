@@ -4,12 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
-use App\Http\Resources\NewResource;
 use App\Models\Article;
 use App\Traits\GeneralTrait;
-use File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use File;
 
 class ArticlesController extends Controller
 {
@@ -25,7 +24,7 @@ class ArticlesController extends Controller
     }
 
     /////////////////////////////////////////
-    /// get trashed articles index
+    /// trashed articles index
     public function trashedArticles()
     {
         $title = trans('menu.trashed_articles');
@@ -47,7 +46,7 @@ class ArticlesController extends Controller
     {
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('adminBoard/uploadedImages/articles');
+            $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
             $photo_path = $this->saveResizeImage($image, $destinationPath);
 
         } else {
@@ -115,10 +114,12 @@ class ArticlesController extends Controller
 
         if ($request->hasFile('photo')) {
             if (!empty($article->photo)) {
-                $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
-                if (File::exists($image_path)) {
-                    File::delete($image_path);
+                //delete old photo
+                $old_image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
+                if (File::exists($old_image_path)) {
+                    File::delete($old_image_path);
                 }
+
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
                 $photo_path = $this->saveResizeImage($image, $destinationPath);
