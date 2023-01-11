@@ -54,21 +54,12 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class=" container-fluid ">
-
-
             <!--begin::Row-->
             <div class="row">
                 <div class="col-lg-12">
                     <!--begin::Card-->
                     <div class="card card-custom" id="card_posts">
                         <div class="card-body">
-
-                            <style>
-                                .datatable.datatable-default > .datatable-table > .datatable-body .datatable-row-detail .datatable-detail {
-                                    margin-bottom: 5px;
-                                }
-                            </style>
-
                             <!--begin: Datatable-->
                             <div class="portlet-body">
                                 <div class="row">
@@ -200,17 +191,12 @@
 
 
     </div>
-
-
     <!--end::content-->
 @endsection
 @push('js')
-
     <script type="text/javascript">
 
-
-        ///////////////////////////////////////////////////
-        /// Show user Delete Notify
+        //Show user Delete Notify
         $(document).on('click', '.delete_slider_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -265,9 +251,6 @@
         })
 
 
-
-
-
         // switch english language
         var switchStatus = false;
         $('body').on('change', '.change_status', function (e) {
@@ -311,8 +294,4 @@
         });
 
     </script>
-@endpush
-
-@push('css')
-
 @endpush

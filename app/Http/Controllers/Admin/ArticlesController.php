@@ -201,13 +201,20 @@ class ArticlesController extends Controller
     {
         try {
             if ($request->ajax()) {
+
                 $article = Article::onlyTrashed()->find($request->id);
+
                 if (!$article) {
                     return redirect()->route('admin.not.found');
                 }
+
                 if (!empty($article->photo)) {
-                    Storage::delete($article->photo);
+                    $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
+                    if (File::exists($image_path)) {
+                        File::delete($image_path);
+                    }
                 }
+
                 $article->forceDelete();
 
                 return $this->returnSuccessMessage(trans('general.delete_success_message'));

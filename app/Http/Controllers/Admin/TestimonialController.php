@@ -11,6 +11,7 @@ use App\Models\ClientOpinion;
 use App\Models\testimonial;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class TestimonialController extends Controller
@@ -125,22 +126,23 @@ class TestimonialController extends Controller
 
     }
 
-/////////////////////////////////////////////////
-/// destroy
-    public
-    function destroy(Request $request)
+    /////////////////////////////////////////////////
+    /// destroy
+    public function destroy(Request $request)
     {
         try {
             if ($request->ajax()) {
-                $clientOpinion = ClientOpinion::find($request->id);
-                if (!$clientOpinion) {
+                $testimonial = testimonial::find($request->id);
+                if (!$testimonial) {
                     return redirect()->route('admin.not.found');
                 }
-                if (!empty($clientOpinion->photo)) {
-                    Storage::delete($clientOpinion->photo);
-                }
-                $clientOpinion->delete();
 
+                if (!empty($testimonial->photo)) {
+                    if(File::exists($testimonial->photo)) {
+                        File::delete($testimonial->photo);
+                    }
+                }
+                $testimonial->delete();
                 return $this->returnSuccessMessage(trans('general.delete_success_message'));
             }
         } catch
@@ -149,22 +151,20 @@ class TestimonialController extends Controller
         }
     }
 
-////////////////////////////////////////////////////////////////////
-/// change Status
-    public
-    function changeStatus(Request $request)
+
+    ////////////////////////////////////////////////////////////////////
+    /// change Status
+    public function changeStatus(Request $request)
     {
+        $testimonial = testimonial::find($request->id);
 
-        $clientOpinion = ClientOpinion::find($request->id);
-
-        if ($clientOpinion->status == '1') {
-            $clientOpinion->status = '0';
-            $clientOpinion->save();
+        if ($request->switchStatus == '1') {
+            $testimonial->status = '0';
+            $testimonial->save();
         } else {
-            $clientOpinion->status = '1';
-            $clientOpinion->save();
+            $testimonial->status = '1';
+            $testimonial->save();
         }
-
         return $this->returnSuccessMessage(trans('general.change_status_success_message'));
     }
 }

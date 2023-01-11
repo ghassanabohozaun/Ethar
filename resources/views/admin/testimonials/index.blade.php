@@ -143,83 +143,74 @@
 @push('js')
 
     <script type="text/javascript">
-        //////////////////////////////////////////////////////
-        // show  delete opinion notify
-        $(document).on('click', '.delete_opinion_btn', function (e) {
+        //Show user Delete Notify
+        $(document).on('click', '.delete_testimonial_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
-            $('#opinion_delete_id').val(id);
 
-            $.notifyClose();
-            notify_message = " <i class='fa fa-trash' style='color:white'></i> &nbsp; {{trans('general.ask_delete_record')}}<br /><br />" +
-                "<button type='button' id='btn_opinion_delete'  class=' btn btn-outline-light btn-sm m-btn m-btn--air m-btn--wide '" +
-                ">{{trans('general.yes')}}</button> &nbsp;" +
-                "<button type='button' id='btn_opinion_close' class=' btn btn-outline-light btn-sm m-btn m-btn--air m-btn--wide '" +
-                ">{{trans('general.no')}}</button>"
-
-            notifyDelete(notify_message, 'danger')
-
-        });
-        //////////////////////////////////////////////////////
-        //  close delete opinion notify
-        $('body').on('click', '#btn_opinion_close', function (e) {
-            e.preventDefault();
-            $.notifyClose();
-            $('#opinion_delete_id').val('');
-        })
-        //////////////////////////////////////////////////////
-        //  delete opinion
-        $('body').on('click', '#btn_opinion_delete', function (e) {
-            e.preventDefault();
-            $.notifyClose();
-
-            var id = $('#opinion_delete_id').val();
-
-            $.ajax({
-                url: "{{route('admin.testimonials.destroy')}}",
-                data: {id, id},
-                dataType: 'json',
-                type: 'POST',
-                beforeSend: function () {
-                    KTApp.blockPage({
-                        overlayColor: '#000000',
-                        state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+            Swal.fire({
+                title: "{{trans('general.ask_delete_record')}}",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "{{trans('general.yes')}}",
+                cancelButtonText: "{{trans('general.no')}}",
+                reverseButtons: false,
+                allowOutsideClick: false,
+            }).then(function (result) {
+                if (result.value) {
+                    //////////////////////////////////////
+                    // Delete User
+                    $.ajax({
+                        url: '{!! route('admin.testimonials.destroy') !!}',
+                        data: {id, id},
+                        type: 'post',
+                        dataType: 'json',
+                        success: function (data) {
+                            console.log(data);
+                            if (data.status == true) {
+                                Swal.fire({
+                                    title: "{!! trans('general.deleted') !!}",
+                                    text: data.msg,
+                                    icon: "success",
+                                    allowOutsideClick: false,
+                                    customClass: {confirmButton: 'delete_testimonial_button'}
+                                });
+                                $('.delete_testimonial_button').click(function () {
+                                    $('#myTable').load(location.href+(' #myTable'));
+                                });
+                            }
+                        },//end success
                     });
-                },
-                success: function (data) {
-                    KTApp.unblockPage();
-                    console.log(data);
-                    if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        $('#opinion_delete_id').val('');
-                        updateDataTable();
-                    }
 
-                    if (data.status == false) {
-                        notifySuccessOrError(data.msg, 'warning');
-                    }
-                },
-
-                complete: function () {
-                    KTApp.unblockPage();
+                } else if (result.dismiss === "cancel") {
+                    Swal.fire({
+                        title: "{!! trans('general.cancelled') !!}",
+                        text: "{!! trans('general.cancelled_message') !!}",
+                        icon: "error",
+                        allowOutsideClick: false,
+                        customClass: {confirmButton: 'cancel_delete_testimonial_button'}
+                    })
                 }
             });
 
-
         })
 
-        /////////////////////////////////////////////////////////////////////////////////////
-        // change opinion status
-        $('body').on('click', '.change_status', function (e) {
-            e.preventDefault();
-            $.notifyClose();
 
+        // switch english language
+        var switchStatus = false;
+        $('body').on('change', '.change_status', function (e) {
+            e.preventDefault();
             var id = $(this).data('id');
+
+            if ($(this).is(':checked')) {
+                switchStatus = $(this).is(':checked');
+            } else {
+                switchStatus = $(this).is(':checked');
+            }
 
             $.ajax({
                 url: "{{route('admin.testimonials.change-status')}}",
-                data: {id: id},
+                data: {switchStatus: switchStatus, id: id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
@@ -228,19 +219,23 @@
                         state: 'danger',
                         message: "{{trans('general.please_wait')}}",
                     });
-                },
+                },//end beforeSend
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
                     if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        updateDataTable();
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'switch_status_toggle'}
+                        });
+                        $('.switch_status_toggle').click(function () {
+                        });
                     }
                 },//end success
-
             })
-
-
         });
 
     </script>
