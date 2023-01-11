@@ -28,7 +28,7 @@ class SupportCenterRequest extends FormRequest
             'customer_email' => 'required|email',
             'title' => 'required',
             'message' => 'required',
-            'captcha' => 'required|captcha'
+           // 'captcha' => 'required|captcha'
         ];
     }
 

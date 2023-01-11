@@ -11,7 +11,6 @@ return [
     'mark_as_contacted' => 'mark as contacted',
     'mark_as_solved'=>'mark as solved',
 
-
     'customer_name' => 'Customer Name',
     'customer_email' => 'Customer Email',
     'title' => 'Title',
@@ -29,5 +28,5 @@ return [
     'required' => 'This Field Required',
     'email_email' => 'Email Must be in this format admin@admin.com',
     'captcha'=>'Please Check Captcha',
-
+    'no_messages_found' => 'No Support Center Message Found',
 ];

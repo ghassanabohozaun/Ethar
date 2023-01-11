@@ -11,7 +11,7 @@ class Article extends Model
 
     protected $table = "articles";
     protected $fillable = [
-        'photo', 'language', 'slug_ar', 'slug_en', 'title_ar', 'title_en', 'abstract_ar', 'abstract_en', 'publish_date', 'publisher_name', 'status',
+        'photo', 'language', 'title_ar', 'title_en', 'abstract_ar', 'abstract_en', 'publish_date', 'publisher_name', 'status',
     ];
     protected $hidden = ['updated_at'];
     //////////////////////////////////////////////////////////////

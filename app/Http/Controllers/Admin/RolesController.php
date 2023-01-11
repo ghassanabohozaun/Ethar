@@ -22,35 +22,9 @@ class RolesController extends Controller
     public function index()
     {
         $title = trans('menu.permissions');
-        return view('admin.roles.index', compact('title'));
+        $roles = Role::orderByDesc('created_at')->paginate();
+        return view('admin.roles.index', compact('title','roles'));
     }
-
-    /////////////////////////////////////////////////
-    /// get roles
-    public function getRoles(Request $request)
-    {
-        $perPage = 10;
-        if ($request->has('length')) {
-            $perPage = $request->length;
-        }
-
-        $offset = 0;
-        if ($request->has('start')) {
-            $offset = $request->start;
-        }
-
-        $list = Role::orderByDesc('created_at')->offset($offset)->take($perPage)->get();
-        $arr = RoleResource::collection($list);
-        $recordsTotal = Role::get()->count();
-        $recordsFiltered = Role::get()->count();
-        return response()->json([
-            'draw' => $request->draw,
-            'recordsTotal' => $recordsTotal,
-            'recordsFiltered' => $recordsFiltered,
-            'data' => $arr
-        ]);
-    }
-
 
     /////////////////////////////////////////////////
     /// destroy roles

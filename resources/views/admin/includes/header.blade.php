@@ -143,7 +143,7 @@
                         class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{{admin()->user()->name}}</span>
                     <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
                         @if(!empty(admin()->user()->photo))
-                            <img src="{{asset(\Illuminate\Support\Facades\Storage::url(admin()->user()->photo))}}">
+                            <img  src="{{asset('adminBoard/uploadedImages/admin/'.admin()->user()->photo)}}"/>
                         @else
                             <img src="{{asset('adminBoard/images/user.jpg')}}">
                         @endif

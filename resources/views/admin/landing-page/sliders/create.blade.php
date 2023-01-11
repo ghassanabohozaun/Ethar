@@ -343,7 +343,6 @@
                 },//end success
 
                 error: function (reject) {
-                    $.notifyClose();
                     var response = $.parseJSON(reject.responseText);
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0]);

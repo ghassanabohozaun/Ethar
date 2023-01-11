@@ -54,30 +54,76 @@
                     <div class="card card-custom" id="card_posts">
                         <div class="card-body">
 
+
                             <!--begin: Datatable-->
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="dtable scroll">
-                                            <!--begin: Datatable -->
-                                            <table class="table d-table" id="m_table_1">
-                                                <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th class="col-lg-1">@lang('roles.role_name_ar')</th>
-                                                    <th class="col-lg-1">@lang('roles.role_name_en')</th>
-                                                    <th>@lang('roles.permissions')</th>
-                                                    <th>@lang('general.actions')</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                        <div class="scroll">
+                                            <div class="table-responsive">
+                                                <table class="table myTable table-hover" id="myTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th class="col-lg-1"> {!! __('roles.role_name_ar') !!}</th>
+                                                        <th class="col-lg-1"> {!! __('roles.role_name_en') !!}</th>
+                                                        <th class="col-lg-9"> {!! __('roles.permissions') !!}</th>
+                                                        <th>@lang('general.actions')</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @forelse($roles as $role)
+                                                        <tr>
+                                                            <td>{{ $loop->iteration }}</td>
+                                                            <td>{{ $role->role_name_ar }}</td>
+                                                            <td>{{ $role->role_name_en }}</td>
+                                                            <td>@foreach(config('global.permissions') as $name=>$value)
+                                                                    {{ in_array($name,$role->permissions) ? __(config('global.permissions.',$value)).' | ' :''}}
+                                                                @endforeach
+                                                            </td>
+                                                            <td>
+                                                                <a href="{!! route('admin.role.edit',$role->id) !!}"
+                                                                   class="btn btn-hover-primary btn-icon btn-pill "
+                                                                   title="{{trans('general.edit')}}">
+                                                                    <i class="fa fa-edit fa-1x"></i>
+                                                                </a>
+
+
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill role_delete_btn"
+                                                                   data-id="{{$role->id}}"
+                                                                   title="{{trans('general.delete')}}">
+                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                </a>
+
+
+                                                            </td>
+                                                        </tr>
+                                                    @empty
+                                                        <tr>
+                                                            <td colspan="6" class="text-center">
+                                                                {!! __('roles.no_permissions_found') !!}
+                                                            </td>
+                                                        </tr>
+                                                    @endforelse
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <div class="float-right">
+                                                                {!! $roles->appends(request()->all())->links() !!}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!--end: Datatable-->
+
 
                         </div>
 
@@ -98,29 +144,10 @@
     </div>
     <!--end::content-->
 
-
-
 @endsection
 @push('js')
 
-    <script
-        src="{{asset('adminBoard/assets/plugins/custom/datatables/datatables.bundle.js')}}"
-        type="text/javascript"></script>
-    <script src="{{asset('adminBoard/assets/js/data_table.js')}}" type="text/javascript"></script>
-
-    <script>
-        window.data_url = "{{route('get.admin.roles')}}";
-        window.columns = [{data: "id"},
-            {data: "role_name_ar"},
-            {data: "role_name_en"},
-            {data: "permissions"},
-            {data: "actions"},
-        ];
-    </script>
-
     <script type="text/javascript">
-
-
         ///////////////////////////////////////////////////////////////////////
         //  delete role notify
         $(document).on('click', '.role_delete_btn', function (e) {
@@ -155,7 +182,7 @@
                                     customClass: {confirmButton: 'delete_role_button'}
                                 });
                                 $('.delete_role_button').click(function () {
-                                    updateDataTable();
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
 

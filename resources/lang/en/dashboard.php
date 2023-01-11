@@ -27,8 +27,7 @@ return [
     'welcome_message_details' => 'We welcome you to the site control panel, this panel provides you with complete control over the site .',
     'profile' => 'Profile',
     'sign_out' => 'Sign Out',
-    'copy_rights' => 'Mawhoob',
-
+    'copy_rights' => 'Ethar',
     'teachers_count'=>'Teachers Count',
     'mawhobs_count'=>'Mawhobs Count',
     'revenues_value'=>'Revenues Value',

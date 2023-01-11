@@ -58,8 +58,6 @@ class ArticlesController extends Controller
             Article::create([
                 'photo' => $photo_path,
                 'language' => 'ar_en',
-                'slug_ar' => slug($request->title_ar),
-                'slug_en' => slug($request->title_en),
                 'title_ar' => $request->title_ar,
                 'title_en' => $request->title_en,
                 'abstract_ar' => $request->abstract_ar,
@@ -71,8 +69,6 @@ class ArticlesController extends Controller
             Article::create([
                 'photo' => $photo_path,
                 'language' => 'ar',
-                'slug_ar' => slug($request->title_ar),
-                'slug_en' => null,
                 'title_ar' => $request->title_ar,
                 'title_en' => null,
                 'abstract_ar' => $request->abstract_ar,
@@ -141,8 +137,6 @@ class ArticlesController extends Controller
             $article->update([
                 'photo' => $photo_path,
                 'language' => 'ar_en',
-                'slug_ar' => slug($request->title_ar),
-                'slug_en' => slug($request->title_en),
                 'title_ar' => $request->title_ar,
                 'title_en' => $request->title_en,
                 'abstract_ar' => $request->abstract_ar,
@@ -154,8 +148,6 @@ class ArticlesController extends Controller
             $article->update([
                 'photo' => $photo_path,
                 'language' => 'ar',
-                'slug_ar' => slug($request->title_ar),
-                'slug_en' => null,
                 'title_ar' => $request->title_ar,
                 'title_en' => null,
                 'abstract_ar' => $request->abstract_ar,

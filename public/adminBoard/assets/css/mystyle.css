@@ -88,12 +88,14 @@
 .cst-switch input[type="checkbox"]:checked:after {
     right: 18px;
 }
+
 /* End switch*/
 
 .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-heading, .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-link {
-     background-color: #ffffff;
+    background-color: #ffffff;
 
 }
+
 .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-heading .menu-text, .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-link .menu-text {
     color: #242222;
 }
@@ -101,15 +103,15 @@
 .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-heading .menu-icon.svg-icon svg g [fill], .aside-menu .menu-nav > .menu-item.menu-item-active > .menu-link .menu-icon.svg-icon svg g [fill] {
     -webkit-transition: fill 0.3s ease;
     transition: fill 0.3s ease;
-     fill: #494b74;
+    fill: #494b74;
 }
-
 
 
 .teacher_aside_menu .menu-nav > .menu-item.menu-item-active > .menu-heading, .teacher_aside_menu .menu-nav > .menu-item.menu-item-active > .menu-link {
     background-color: #EF9034;
 
 }
+
 .teacher_aside_menu .menu-nav > .menu-item.menu-item-active > .menu-heading .menu-text, .teacher_aside_menu .menu-nav > .menu-item.menu-item-active > .menu-link .menu-text {
     color: #171616;
 }
@@ -121,23 +123,22 @@
 }
 
 
-
-
 .form-control:disabled, .form-control[readonly] {
 
     opacity: 1;
     color: #0b2e13;
 }
+
 tr:nth-child(even) > td {
     background-color: #f5f5f5;
 }
 
 
-.notification_alert_dot{
+.notification_alert_dot {
     margin-top: -25px;
-    color:white;
-    background:red;
-    border-radius:70%;
+    color: white;
+    background: red;
+    border-radius: 70%;
     height: 10px;
     width: 10px;
     line-height: 10px;
@@ -146,6 +147,7 @@ tr:nth-child(even) > td {
     font-weight: bold;
     text-align: center;
 }
+
 .trash_btn i {
     padding-left: 0;
 }
@@ -164,4 +166,20 @@ tr:nth-child(even) > td {
     box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
     max-width: 100%;
     height: auto;
+}
+
+
+.image-input .image-input-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 0.42rem;
+    background-repeat: no-repeat;
+    background-size: 120px 110px;
+}
+
+
+.table-image {
+    width: 80px;
+    height: 65px;
+    border-radius: 10px;
 }

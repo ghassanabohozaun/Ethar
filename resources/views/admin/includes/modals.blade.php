@@ -86,14 +86,12 @@
         // close add brochure modal by cancel
         $('body').on('click', '#cancel_brochure_btn', function (e) {
             e.preventDefault();
-            $.notifyClose();
             $('#modal_Brochure').modal('hide');
         });
         /////////////////////////////////////////////////////////////////////////////////////
         // Close add brochure modal By event
         $('#modal_Brochure').on('hidden.bs.modal', function (e) {
             e.preventDefault();
-            $.notifyClose();
             $('#modal_Brochure').modal('hide');
         });
 

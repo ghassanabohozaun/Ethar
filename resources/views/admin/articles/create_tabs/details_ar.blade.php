@@ -29,7 +29,7 @@
                         <!--begin::Group-->
                         <div class="form-group">
                             <label> {{trans('articles.abstract_ar')}}</label>
-                            <textarea class="form-control summernote"
+                            <textarea class="form-control form-control-solid form-control-lg summernote"
                                       placeholder="{{trans('articles.enter_abstract_ar')}}"
                                       name="abstract_ar"
                                       id="abstract_ar"></textarea>

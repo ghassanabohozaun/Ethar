@@ -69,14 +69,12 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>Photo</th>
-                                                        <th>Name</th>
-                                                        <th>Email</th>
-                                                        <th>role_id</th>
-                                                        <th>status</th>
-                                                        <th class="text-center" style="width: 100px;">
-                                                            Actions
-                                                        </th>
+                                                        <th>@lang('users.photo')</th>
+                                                        <th>@lang('users.name')</th>
+                                                        <th>@lang('users.email')</th>
+                                                        <th>@lang('users.role_id')</th>
+                                                        <th>@lang('users.status')</th>
+                                                        <th class="text-center" style="width: 100px;">@lang('general.actions')</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -87,21 +85,17 @@
                                                                     @if($user->gender == trans('general.male'))
                                                                         <img
                                                                             src="{{asset('adminBoard/images/male.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
+                                                                            class="img-fluid img-thumbnail table-image "/>
                                                                     @else
                                                                         <img
                                                                             src="{{asset('adminBoard/images/female.jpeg')}}"
-                                                                            width="70"
-                                                                            class="img-fluid img-thumbnail"/>
+                                                                            class="img-fluid img-thumbnail table-image "/>
                                                                     @endif
 
                                                                 @else
                                                                     <img
                                                                         src="{{asset(Storage::url($user->photo))}}"
-                                                                        width="70"
-                                                                        style="border-radius: 10px"
-                                                                        class="img-fluid img-thumbnail"/>
+                                                                        class="img-fluid img-thumbnail table-image "/>
                                                                 @endif
                                                             </td>
                                                             <td>{{ $user->name }}</td>
@@ -145,7 +139,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="6" class="text-center">
-                                                                No Users found
+                                                                @lang('users.no_users_found')
                                                             </td>
                                                         </tr>
                                                     @endforelse

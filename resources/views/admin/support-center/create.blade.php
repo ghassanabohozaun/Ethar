@@ -80,7 +80,7 @@
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
-                                                                class="form-control  form-control-lg"
+                                                                class="form-control form-control-solid form-control-lg"
                                                                 name="customer_name" id="customer_name" type="text"
                                                                 placeholder=" {{trans('supportCenter.enter_customer_name')}}"
                                                                 autocomplete="off"/>
@@ -98,7 +98,7 @@
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
-                                                                class="form-control  form-control-lg"
+                                                                class="form-control form-control-solid form-control-lg"
                                                                 name="customer_email" id="customer_email" type="email"
                                                                 placeholder=" {{trans('supportCenter.enter_customer_email')}}"
                                                                 autocomplete="off"/>
@@ -116,7 +116,7 @@
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
-                                                                class="form-control  form-control-lg"
+                                                                class="form-control form-control-solid form-control-lg"
                                                                 name="title" id="title" type="text"
                                                                 placeholder=" {{trans('supportCenter.enter_title')}}"
                                                                 autocomplete="off"/>
@@ -133,7 +133,7 @@
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="7"
-                                                                      class="form-control  form-control-lg"
+                                                                      class="form-control form-control-solid form-control-lg"
                                                                       name="message" id="message" type="text"
                                                                       placeholder=" {{trans('supportCenter.enter_message')}}"
                                                                       autocomplete="off"></textarea>

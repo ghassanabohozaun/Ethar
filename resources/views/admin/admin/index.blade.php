@@ -2,7 +2,6 @@
 @section('title') @endsection
 @section('content')
 
-
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
         <div
@@ -54,10 +53,10 @@
                                         <div class="symbol symbol-30 symbol-lg-80">
                                             @if(!empty($admin->photo) )
                                                 <img alt="Pic"
-                                                     src="{{asset(\Illuminate\Support\Facades\Storage::url($admin->photo))}}"/>
+                                                     src="{{asset('adminBoard/uploadedImages/admin/'.$admin->photo)}}"/>
                                             @else
                                                 <img alt="Pic"
-                                                     src="{{asset('adminBoard/assets/media//users/default.jpg')}}"/>
+                                                     src="{!! asset('adminBoard/images/male.png') !!}"/>
                                             @endif
                                         </div>
                                     </div>
@@ -85,7 +84,6 @@
                                                            font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
                                                                 <span
                                                                     class="svg-icon svg-icon-md svg-icon-gray-500 mr-1">
-
                                                                  <i class="fa fa-mail-bulk"></i>
                                                                     {{$admin->email}}
                                                                 </span>
@@ -181,9 +179,7 @@
                                                     <div
                                                         class="image-input image-input-outline"
                                                         id="kt_admin_photo">
-                                                        <!--style="background-image: url('')"-->
-                                                        <div class="image-input-wrapper"
-                                                        ></div>
+                                                        <div class="image-input-wrapper"></div>
                                                         <label
                                                             class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                             data-action="change" data-toggle="tooltip" title=""
@@ -214,7 +210,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg"
+                                                        class="form-control form-control-solid form-control-lg"
                                                         name="name" id="name" type="text"
                                                         placeholder=" {{trans('login.enter_name')}}"
                                                         autocomplete="off"/>
@@ -231,7 +227,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg "
+                                                        class="form-control form-control-solid form-control-lg "
                                                         name="email" id="email" type="email" disabled="disabled"
                                                         placeholder=" {{trans('login.enter_email')}}"
                                                         autocomplete="off"/>
@@ -250,7 +246,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg"
+                                                        class="form-control form-control-solid form-control-lg"
                                                         name="password" id="password" type="password"
                                                         placeholder=" {{trans('login.enter_password')}}"
                                                         autocomplete="off"/>
@@ -269,7 +265,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg"
+                                                        class="form-control form-control-solid form-control-lg"
                                                         name="confirm_password" id="confirm_password" type="password"
                                                         placeholder=" {{trans('login.enter_confirm_password')}}"
                                                         autocomplete="off"/>
@@ -303,7 +299,6 @@
 
 @push('js')
 
-
     <script type="text/javascript">
         var admin_photo = new KTImageInput('kt_admin_photo');
 
@@ -320,9 +315,12 @@
                     $('#name').val(data.data.name);
                     $('#email').val(data.data.email);
 
+
                     var photo = data.data.photo;
-                    var url = '{{Storage::url('')}}' + photo;
+                    var url = '{{asset('adminBoard/uploadedImages/admin/')}}/' + photo;
                     $('#kt_admin_photo').css("background-image", "url(" + url + ")");
+
+
                 }
             });//end get ajax
 

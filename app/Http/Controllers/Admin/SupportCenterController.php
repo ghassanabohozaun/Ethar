@@ -19,33 +19,9 @@ class SupportCenterController extends Controller
     public function index()
     {
         $title = trans('menu.support_center');
-        return view('admin.support-center.index', compact('title'));
-
+        $supportCenters = SupportCenter::orderByDesc('created_at')->paginate(10);
+        return view('admin.support-center.index', compact('title','supportCenters'));
     }
-    //////////////////////////////////////////////////////////////
-    /// Get Support Center
-    public function getSupportCenter(Request $request)
-    {
-        $perPage = 10;
-        if ($request->has('length')) {
-            $perPage = $request->length;
-        }
-        $offset = 0;
-        if ($request->has('start')) {
-            $offset = $request->start;
-        }
-        $list = SupportCenter::orderByDesc('created_at')->offset($offset)->take($perPage)->get();
-        $arr = SupportCenterResourece::collection($list);
-        $recordsTotal = SupportCenter::get()->count();
-        $recordsFiltered = SupportCenter::get()->count();
-        return response()->json([
-            'draw' => $request->draw,
-            'recordsTotal' => $recordsTotal,
-            'recordsFiltered' => $recordsFiltered,
-            'data' => $arr
-        ]);
-    }
-
     //////////////////////////////////////////////////
     /// create
     public function create()
@@ -69,6 +45,7 @@ class SupportCenterController extends Controller
             return $this->returnError(trans('general.try_catch_error_message'), 500);
         }//end catch
     }
+
     //////////////////////////////////////////////////
     /// change Status
     public function changeStatus(Request $request)
@@ -92,6 +69,7 @@ class SupportCenterController extends Controller
             return $this->returnError(trans('general.try_catch_error_message'), 500);
         }//end catch
     }
+
     //////////////////////////////////////////////////
     /// get One Message
     public function getOneMessage(Request $request)

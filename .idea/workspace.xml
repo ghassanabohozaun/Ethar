@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/adminBoard/uploadedImages/articles/1673357037.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1673360749.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_ar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_en.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/supportCenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/supportCenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/parts/options.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/parts/options.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/parts/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/parts/permissions.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +185,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/etharps/resources/views/admin/articles&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/etharps/app/Http/Controllers/Admin&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -198,18 +197,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\app\Http\Controllers\Admin" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\articles" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
       <recent name="C:\laragon\www\etharps\resources\lang\ar" />
       <recent name="C:\laragon\www\etharps\app\Models" />
-      <recent name="C:\laragon\www\etharps\resources\views\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\resources\views\admin\support-center" />
       <recent name="C:\laragon\www\etharps\app\Http\Requests" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page" />
       <recent name="C:\laragon\www\etharps\public\site\assets\images" />
-      <recent name="C:\laragon\www\etharps\resources\views\site" />
     </key>
   </component>
   <component name="RunManager">
@@ -245,7 +244,8 @@
       <workItem from="1673181466013" duration="1201000" />
       <workItem from="1673270793356" duration="16245000" />
       <workItem from="1673337018214" duration="16899000" />
-      <workItem from="1673357287622" duration="2421000" />
+      <workItem from="1673357287622" duration="10809000" />
+      <workItem from="1673423315361" duration="3242000" />
     </task>
     <servers />
   </component>
@@ -257,7 +257,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php</url>
-          <line>125</line>
+          <line>99</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\Admin\RolesController" />
             <option name="methodName" value="update" />

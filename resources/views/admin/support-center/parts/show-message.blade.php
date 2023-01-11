@@ -1,5 +1,5 @@
 <a href="#" class="btn btn-warning btn-icon btn-pill  btn-sm mr-3  support_center_message_show_btn"
-   data-id="{{$instance->id}}"
+   data-id="{{$supportCenter->id}}"
    title="{{trans('general.show')}}">
    <span class="svg-icon  svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Visible.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
