@@ -15,12 +15,12 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.articles')}}
+                            {{__('menu.articles')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -32,7 +32,7 @@
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
                 <a href="{!! route('admin.articles.trashed') !!}"
-                   class="btn btn-light-danger trash_btn" title="{{trans('general.trash')}}">
+                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">
                     <i class="fa fa-trash"></i>
                 </a>
                 &nbsp;
@@ -40,7 +40,7 @@
                 <a href="{{route('admin.articles.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_article')}}
+                    {{__('menu.add_new_article')}}
                 </a>
                 &nbsp;
             </div>
@@ -72,13 +72,13 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>@lang('articles.photo')</th>
-                                                        <th>@lang('articles.title_ar')</th>
-                                                        <th>@lang('articles.title_en')</th>
-                                                        <th>@lang('articles.publisher_name')</th>
-                                                        <th>@lang('articles.publish_date')</th>
-                                                        <th>@lang('articles.status')</th>
-                                                        <th>@lang('general.actions')</th>
+                                                        <th>{{__('articles.photo')}}</th>
+                                                        <th>{{__('articles.title_ar')}}</th>
+                                                        <th>{{__('articles.title_en')}}</th>
+                                                        <th>{{__('articles.publisher_name')}}</th>
+                                                        <th>{{__('articles.publish_date')}}</th>
+                                                        <th>{{__('articles.status')}}</th>
+                                                        <th>{{__('general.actions')}}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -105,14 +105,14 @@
                                                             <td>
                                                                 <a href="{{route('admin.articles.edit',$article->id)}}"
                                                                    class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{trans('general.edit')}}">
+                                                                   title="{{__('general.edit')}}">
                                                                     <i class="fa fa-edit fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
                                                                    class="btn btn-hover-danger btn-icon btn-pill delete_article_btn"
                                                                    data-id="{{$article->id}}"
-                                                                   title="{{trans('general.delete')}}">
+                                                                   title="{{__('general.delete')}}">
                                                                     <i class="fa fa-trash fa-1x"></i>
                                                                 </a>
                                                             </td>
@@ -120,7 +120,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="7" class="text-center">
-                                                                @lang('articles.no_articles_found')
+                                                                {{__('articles.no_articles_found')}}
                                                             </td>
                                                         </tr>
                                                     @endforelse
@@ -173,7 +173,6 @@
 @endsection
 @push('js')
 
-
     <script type="text/javascript">
         /////////////////////////////////////////////////////////////////
         ///  article Delete
@@ -182,11 +181,11 @@
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -202,7 +201,7 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
@@ -213,7 +212,7 @@
                                 });
                             } else if (data.status == false) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "warning",
                                     allowOutsideClick: false,
@@ -227,8 +226,8 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_article_button'}
@@ -261,7 +260,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

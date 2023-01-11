@@ -99,7 +99,7 @@
 
     <link href="{{asset('adminBoard/assets/css/mystyle.css')}}" rel="stylesheet" type="text/css"/>
 
-    <link rel="shortcut icon" href="{{asset(Storage::url(setting()->site_icon))}}"/>
+    <link rel="shortcut icon" href="{{asset('adminBoard/uploadedImages/logos/'.setting()->site_icon)}}"/>
 
 </head>
 <!--end::Head-->
@@ -125,8 +125,8 @@
                 <!--begin::Logo-->
                 @if(!empty(setting()->site_logo))
                     <a href="#" class="brand-logo">
-                        <img src="{{asset(Storage::url(setting()->site_logo))}}"
-                             style=";width: 105px; height: 70px; border-radius: 80px">
+                        <img src="{{asset('adminBoard/uploadedImages/logos/'.setting()->site_logo)}}"
+                             style="width: 105px; height: 70px; border-radius: 80px">
                     </a>
                 @else
                     LOGO

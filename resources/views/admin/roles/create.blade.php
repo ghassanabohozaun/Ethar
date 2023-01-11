@@ -18,13 +18,13 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.roles')}}" class="text-muted">
-                                {{trans('menu.permissions')}}
+                                {{__('menu.permissions')}}
                             </a>
                         </li>
 
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('menu.add_new_permission')}}
+                                {{__('menu.add_new_permission')}}
                             </a>
                         </li>
                     </ul>
@@ -38,7 +38,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -69,17 +69,16 @@
                                                 <!--begin::body-->
                                                 <div class="my-5">
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('roles.role_name_ar')}}
+                                                            {{__('roles.role_name_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="role_name_ar" id="role_name_ar" type="text"
-                                                                placeholder=" {{trans('roles.enter_role_name_ar')}}"
+                                                                placeholder=" {{__('roles.enter_role_name_ar')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="role_name_ar_error"></span>
@@ -91,13 +90,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('roles.role_name_en')}}
+                                                            {{__('roles.role_name_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="role_name_en" id="role_name_en" type="text"
-                                                                placeholder=" {{trans('roles.enter_role_name_en')}}"
+                                                                placeholder=" {{__('roles.enter_role_name_en')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="role_name_en_error"></span>
@@ -108,7 +107,7 @@
 
                                                     <div class="form-group row">
                                                         <label
-                                                            class="col-3 col-form-label">{{trans('roles.permissions') }}</label>
+                                                            class="col-3 col-form-label">{{__('roles.permissions') }}</label>
                                                         <div class="col-9 col-form-label">
                                                             @foreach(config('global.permissions') as $name=>$value)
                                                                 <div class="checkbox-inline" style="margin-top: 5px">
@@ -180,7 +179,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
 

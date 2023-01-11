@@ -4,17 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SettingRequest;
-use App\Models\Contest;
-use App\Models\Course;
-use App\Models\Mawhob;
-use App\Models\Program;
-use App\Models\Revenue;
 use App\Models\Setting;
-use App\Models\Teacher;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
+use File;
 class DashboardController extends Controller
 {
     use GeneralTrait;
@@ -41,11 +34,23 @@ class DashboardController extends Controller
         $settings = Setting::get();
         if ($settings->isEmpty()) {
 
+
+            // save logo
             if ($request->hasFile('site_icon')) {
-                $site_icon = $request->file('site_icon')->store('settings');
+                $image = $request->file('site_icon');
+                $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                $site_icon = $this->saveResizeImage($image, $destinationPath,200,200);
+            } else {
+                $site_icon = '';
             }
+
+            // save icon
             if ($request->hasFile('site_logo')) {
-                $site_logo = $request->file('site_logo')->store('settings');
+                $image = $request->file('site_logo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                $site_logo = $this->saveResizeImage($image, $destinationPath,200,200);
+            } else {
+                $site_logo = '';
             }
 
             Setting::create([
@@ -79,28 +84,53 @@ class DashboardController extends Controller
             //////////////////////////////////////////////////////
             /// check and upload icon and logo
 
-            /// Icon
+
             if ($request->hasFile('site_icon')) {
+                $image_path = public_path("\adminBoard\uploadedImages\logos\\") . $settings->site_icon;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+
                 if (!empty($settings->site_icon)) {
-                    Storage::delete($settings->site_icon);
-                    $site_icon = $request->file('site_icon')->store('settings');
+                    $image = $request->file('site_icon');
+                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $site_icon = $this->saveResizeImage($image, $destinationPath,200,200);
                 } else {
-                    $site_icon = $request->file('site_icon')->store('settings');
+                    $image = $request->file('site_icon');
+                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $site_icon = $this->saveResizeImage($image, $destinationPath,200,200);
                 }
             } else {
-                $site_icon = $settings->site_icon;
+                if (!empty($settings->site_icon)) {
+                    $site_icon = $settings->site_icon;
+                } else {
+                    $site_icon = '';
+                }
             }
 
-            /// logo
-            if ($request->has('site_logo')) {
+
+
+            if ($request->hasFile('site_logo')) {
+                $image_path = public_path("\adminBoard\uploadedImages\logos\\") . $settings->site_logo;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+
                 if (!empty($settings->site_logo)) {
-                    Storage::delete($settings->site_logo);
-                    $site_logo = $request->file('site_logo')->store('settings');
+                    $image = $request->file('site_logo');
+                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $site_logo = $this->saveResizeImage($image, $destinationPath,200,200);
                 } else {
-                    $site_logo = $request->file('site_logo')->store('settings');
+                    $image = $request->file('site_logo');
+                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $site_logo = $this->saveResizeImage($image, $destinationPath,200,200);
                 }
             } else {
-                $site_logo = $settings->site_logo;
+                if (!empty($settings->site_logo)) {
+                    $site_logo = $settings->site_logo;
+                } else {
+                    $site_logo = '';
+                }
             }
 
 
@@ -146,7 +176,6 @@ class DashboardController extends Controller
         }
         return $this->returnSuccessMessage(__('general.change_status_success_message'));
     }
-
 
     ////////////////////////////////////////////////////////
     ///  switchFrontend Language

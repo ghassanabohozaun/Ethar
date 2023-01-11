@@ -80,7 +80,7 @@
                                                                         class="image-input image-input-outline"
                                                                         id="kt_site_icon">
                                                                         <div class="image-input-wrapper"
-                                                                             style="background-image: url({{asset(Storage::url(setting()->site_icon))}});"></div>
+                                                                             style="background-image: url({{asset('adminBoard/uploadedImages/logos/'.setting()->site_icon)}});"></div>
                                                                         <label
                                                                             class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                             data-action="change" data-toggle="tooltip"
@@ -117,7 +117,7 @@
                                                                         class="image-input image-input-outline "
                                                                         id="kt_site_logo">
                                                                         <div class="image-input-wrapper"
-                                                                             style="background-image: url({{asset(Storage::url(setting()->site_logo))}})"></div>
+                                                                             style="background-image: url({{asset('adminBoard/uploadedImages/logos/'.setting()->site_logo)}})"></div>
                                                                         <label
                                                                             class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                             data-action="change" data-toggle="tooltip"

@@ -2,8 +2,9 @@
     <!--begin::Logo-->
 
     @if(!empty(setting()->site_logo))
-        <a href="#" >
-            <img src="{{asset(Storage::url(setting()->site_logo))}}" style="border-radius: 10%;width: 55px; height: 50px">
+        <a href="#">
+            <img src="{{asset('adminBoard/uploadedImages/logos/'.setting()->site_logo)}}"
+                 style="border-radius: 10%;width: 55px; height: 50px">
         </a>
     @else
         LOGO
