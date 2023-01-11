@@ -68,7 +68,7 @@
                                                         <th class="col-lg-1"> {!! __('roles.role_name_ar') !!}</th>
                                                         <th class="col-lg-1"> {!! __('roles.role_name_en') !!}</th>
                                                         <th class="col-lg-9"> {!! __('roles.permissions') !!}</th>
-                                                        <th>{!! __('general.actions') !!}</th>
+                                                        <th class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>

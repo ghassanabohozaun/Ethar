@@ -14,13 +14,13 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="javascript:void(0);" class="text-muted">
-                            {{trans('menu.users')}}
+                            {{__('menu.users')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
                         <a href="" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -33,14 +33,14 @@
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
                 <a href="{!! route('users.trashed') !!}"
-                   class="btn btn-light-danger trash_btn" title="{{trans('general.trash')}}">
+                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">
                     <i class="fa fa-trash"></i>
                 </a>
                 &nbsp;
                 <a href="{!! route('user.create') !!}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_user')}}
+                    {{__('menu.add_new_user')}}
                 </a>
                 &nbsp;
             </div>
@@ -69,12 +69,12 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>@lang('users.photo')</th>
-                                                        <th>@lang('users.name')</th>
-                                                        <th>@lang('users.email')</th>
-                                                        <th>@lang('users.role_id')</th>
-                                                        <th>@lang('users.status')</th>
-                                                        <th class="text-center" style="width: 100px;">@lang('general.actions')</th>
+                                                        <th>{!! __('users.photo') !!}</th>
+                                                        <th>{!! __('users.name') !!}</th>
+                                                        <th>{!! __('users.email') !!}</th>
+                                                        <th>{!! __('users.role_id') !!}</th>
+                                                        <th>{!! __('users.status') !!}</th>
+                                                        <th class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -82,7 +82,7 @@
                                                         <tr>
                                                             <td>
                                                                 @if($user->photo == null)
-                                                                    @if($user->gender == trans('general.male'))
+                                                                    @if($user->gender == __('general.male'))
                                                                         <img
                                                                             src="{{asset('adminBoard/images/male.jpeg')}}"
                                                                             class="img-fluid img-thumbnail table-image "/>
@@ -105,11 +105,11 @@
                                                                 @if(Lang()=='ar')
                                                                     <span class="text-info">
                                                                                       {!! $user->role->role_name_ar !!}
-                                                                                    </span>
+                                                                    </span>
                                                                 @else
                                                                     <span class="text-info">
                                                                                        {!! $user->role->role_name_en !!}
-                                                                                    </span>
+                                                                    </span>
                                                                 @endif
                                                             </td>
                                                             <td>
@@ -123,14 +123,14 @@
                                                             <td>
                                                                 <a href="{{route('user.edit',$user->id)}}"
                                                                    class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{trans('general.edit')}}">
+                                                                   title="{{__('general.edit')}}">
                                                                     <i class="fa fa-edit fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
                                                                    class="btn btn-hover-danger btn-icon btn-pill delete_user_btn"
                                                                    data-id="{{$user->id}}"
-                                                                   title="{{trans('general.delete')}}">
+                                                                   title="{{__('general.delete')}}">
                                                                     <i class="fa fa-trash fa-1x"></i>
                                                                 </a>
 
@@ -139,7 +139,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="6" class="text-center">
-                                                                @lang('users.no_users_found')
+                                                                {!! __('users.no_users_found') !!}
                                                             </td>
                                                         </tr>
                                                     @endforelse
@@ -192,11 +192,11 @@
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -212,7 +212,7 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
@@ -228,8 +228,8 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_user_button'}
@@ -261,7 +261,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

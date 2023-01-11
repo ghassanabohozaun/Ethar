@@ -12,6 +12,7 @@ return [
     'gender' => 'Gender',
     'last_login_at' => 'Last Login At',
     'last_login_ip' => 'Last Login IP',
+    'status'=>'status',
     'role_id'=>'Role',
 
     'enter_name' => 'Enter Name',
@@ -22,7 +23,6 @@ return [
     'enter_gender' => 'Enter Gender',
     'enter_last_login_at' => 'Enter Last Login At',
     'enter_last_login_ip' => 'Enter Last Login IP',
-
 
     'required' => 'This Field is Required ',
     'image' => 'Must be Image ',

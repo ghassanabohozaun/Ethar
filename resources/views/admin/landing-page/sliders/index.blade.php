@@ -76,7 +76,7 @@
                                                         <th>{!! __('sliders.details_status') !!}</th>
                                                         <th>{!! __('sliders.button_status') !!}</th>
                                                         <th>{!! __('sliders.status') !!}</th>
-                                                        <th>{!! __('general.actions') !!}</th>
+                                                        <th class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
