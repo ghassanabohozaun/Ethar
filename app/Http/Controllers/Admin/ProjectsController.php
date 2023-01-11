@@ -161,15 +161,20 @@ class ProjectsController extends Controller
     {
         try {
             if ($request->ajax()) {
+
                 $project = Projects::onlyTrashed()->find($request->id);
+
                 if (!$project) {
                     return redirect()->route('admin.not.found');
                 }
+
                 if (!empty($project->photo)) {
-                    if(File::exists($project->photo)) {
-                        File::delete($project->photo);
+                    $image_path = public_path("\adminBoard\uploadedImages\projects\\") . $project->photo;
+                    if (File::exists($image_path)) {
+                        File::delete($image_path);
                     }
                 }
+
                 $project->forceDelete();
 
                 return $this->returnSuccessMessage(trans('general.delete_success_message'));
