@@ -18,13 +18,13 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.support.center')}}" class="text-muted">
-                                {{trans('menu.support_center')}}
+                                {{__('menu.support_center')}}
                             </a>
                         </li>
 
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('supportCenter.send_message')}}
+                                {{__('supportCenter.send_message')}}
                             </a>
                         </li>
                     </ul>
@@ -42,7 +42,7 @@
                         @else
                             <i class="fa fa-angle-double-right"></i>
                         @endif
-                        {{trans('general.submit')}}
+                        {{__('general.submit')}}
                     </button>
 
                 </div>
@@ -76,13 +76,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('supportCenter.customer_name')}}
+                                                            {{__('supportCenter.customer_name')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="customer_name" id="customer_name" type="text"
-                                                                placeholder=" {{trans('supportCenter.enter_customer_name')}}"
+                                                                placeholder=" {{__('supportCenter.enter_customer_name')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="customer_name_error"></span>
@@ -94,13 +94,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('supportCenter.customer_email')}}
+                                                            {{__('supportCenter.customer_email')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="customer_email" id="customer_email" type="email"
-                                                                placeholder=" {{trans('supportCenter.enter_customer_email')}}"
+                                                                placeholder=" {{__('supportCenter.enter_customer_email')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="customer_email_error"></span>
@@ -112,13 +112,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('supportCenter.title')}}
+                                                            {{__('supportCenter.title')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="title" id="title" type="text"
-                                                                placeholder=" {{trans('supportCenter.enter_title')}}"
+                                                                placeholder=" {{__('supportCenter.enter_title')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger" id="title_error"></span>
                                                         </div>
@@ -129,13 +129,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('supportCenter.message')}}
+                                                            {{__('supportCenter.message')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="7"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="message" id="message" type="text"
-                                                                      placeholder=" {{trans('supportCenter.enter_message')}}"
+                                                                      placeholder=" {{__('supportCenter.enter_message')}}"
                                                                       autocomplete="off"></textarea>
                                                             <span class="form-text text-danger"
                                                                   id="message_error"></span>
@@ -201,7 +201,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

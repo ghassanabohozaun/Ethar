@@ -14,13 +14,13 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="javascript:void(0);" class="text-muted">
-                            {{trans('menu.support_center')}}
+                            {{__('menu.support_center')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
                         <a href="" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -33,12 +33,8 @@
             <div class="d-flex align-items-center">
                 <a href="{!! route('admin.support.center.create') !!}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
-                    @if(Lang()=='ar')
-                        <i class="fa fa-angle-double-left"></i>
-                    @else
-                        <i class="fa fa-angle-double-right"></i>
-                    @endif
-                    {{trans('supportCenter.send_message')}}
+                    <i class="fa {!! Lang()=='ar'? ' fa-angle-double-left':'fa-angle-double-right' !!}"></i>
+                    {{__('supportCenter.send_message')}}
                 </a>
                 &nbsp;
             </div>
@@ -68,19 +64,18 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>@lang('supportCenter.customer_name')</th>
-                                                        <th>@lang('supportCenter.customer_email')</th>
-                                                        <th>@lang('supportCenter.title')</th>
-                                                        <th>@lang('supportCenter.status')</th>
-                                                        <th>@lang('supportCenter.show_message')</th>
-                                                        <th>@lang('general.actions')</th>
-                                                        <th>@lang('general.delete')</th>
+                                                        <th>{!! __('supportCenter.customer_name') !!}</th>
+                                                        <th>{!! __('supportCenter.customer_email') !!}</th>
+                                                        <th>{!! __('supportCenter.title') !!}</th>
+                                                        <th>{!! __('supportCenter.status') !!}</th>
+                                                        <th>{!! __('supportCenter.show_message') !!}</th>
+                                                        <th>{!! __('general.actions') !!}</th>
+                                                        <th>{!! __('general.delete') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     @forelse($supportCenters as $supportCenter)
                                                         <tr>
-
                                                             <td>{{ $supportCenter->customer_name }}</td>
                                                             <td>{{ $supportCenter->customer_email }}</td>
                                                             <td>{{ $supportCenter->title }}</td>
@@ -88,17 +83,17 @@
                                                                 @if( $supportCenter->status == 'new')
                                                                     <span
                                                                         class="label label-lg font-weight-bold label-light-warning label-inline">
-                                                                          {!! trans('supportCenter.new') !!}
+                                                                          {!! __('supportCenter.new') !!}
                                                                     </span>
                                                                 @elseif( $supportCenter->status == 'contacted')
                                                                     <span
                                                                         class="label label-lg font-weight-bold label-light-ifo label-inline">
-                                                                             {!! trans('supportCenter.contacted') !!}
+                                                                             {!! __('supportCenter.contacted') !!}
                                                                     </span>
                                                                 @elseif( $supportCenter->status == 'solved')
                                                                     <span
                                                                         class="label label-lg font-weight-bold label-light-success label-inline">
-                                                                             {!! trans('supportCenter.solved') !!}
+                                                                             {!! __('supportCenter.solved') !!}
                                                                     </span>
                                                                 @endif
                                                             </td>
@@ -109,7 +104,7 @@
                                                                 <a href="#"
                                                                    class="btn btn-hover-danger btn-icon btn-pill delete_support_center_message_btn"
                                                                    data-id="{{$supportCenter->id}}"
-                                                                   title="{{trans('general.delete')}}">
+                                                                   title="{{__('general.delete')}}">
                                                                     <i class="fa fa-trash fa-1x"></i>
                                                                 </a>
 
@@ -118,7 +113,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="7" class="text-center">
-                                                                @lang('supportCenter.no_messages_found')
+                                                                {!! __('supportCenter.no_messages_found') !!}
                                                             </td>
                                                         </tr>
                                                     @endforelse
@@ -168,7 +163,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{trans('supportCenter.show_message')}}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{__('supportCenter.show_message')}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i aria-hidden="true" class="ki ki-close"></i>
                     </button>
@@ -189,7 +184,7 @@
                                         <!--begin::Group-->
                                         <div class="form-group row">
                                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                                {{trans('supportCenter.title')}}
+                                                {{__('supportCenter.title')}}
                                             </label>
                                             <div class="col-lg-9 col-xl-9">
                                                 <textarea rows="2" disabled="disabled"
@@ -204,7 +199,7 @@
                                         <!--begin::Group-->
                                         <div class="form-group row">
                                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                                {{trans('supportCenter.message')}}
+                                                {{__('supportCenter.message')}}
                                             </label>
                                             <div class="col-lg-9 col-xl-9">
                                                     <textarea rows="8" disabled="disabled"
@@ -228,7 +223,7 @@
                 <div class="modal-footer">
                     <button type="#" id="cancel_support_center_message_btn"
                             class="btn btn-light-primary font-weight-bold">
-                        {{trans('general.cancel')}}
+                        {{__('general.cancel')}}
                     </button>
                 </div>
             </div>
@@ -255,7 +250,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {
@@ -293,7 +288,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {
@@ -359,11 +354,11 @@
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -379,7 +374,7 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
@@ -390,7 +385,7 @@
                                 });
                             } else if (data.status == false) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "warning",
                                     allowOutsideClick: false,
@@ -402,8 +397,8 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_support_center_message_button'}
