@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('project.store')}}" method="POST" id="form_article_store"
+    <form class="form" action="{{route('admin.project.store')}}" method="POST" id="form_project_store"
           enctype="multipart/form-data">
     @csrf
     <!--begin::Subheader-->
@@ -18,7 +18,7 @@
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
-                            <a href="{{route('admin.articles')}}" class="text-muted">
+                            <a href="{{route('admin.project.index')}}" class="text-muted">
                                 {{trans('menu.articles')}}
                             </a>
                         </li>
@@ -138,7 +138,7 @@
     <script type="text/javascript">
 
 
-        $('#form_article_store').on('submit', function (e) {
+        $('#form_project_store').on('submit', function (e) {
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
@@ -190,7 +190,7 @@
                             customClass: {confirmButton: 'add_article_button'}
                         });
                         $('.add_article_button').click(function () {
-                            window.location.href = "{{route('admin.articles')}}";
+                            window.location.href = "{{route('admin.project.index')}}";
                         });
                     }
                 },//end success

@@ -33,6 +33,10 @@ return [
     'articles' => 'Articles',
     'trashed_articles' => 'Trashed Articles',
     'add_new_article' => 'Add New Article',
+
+    'projects' => 'Projects',
+    'trashed_projects' => 'Trashed Projects',
+    'add_new_project' => 'Add New Project',
 ];
 
 

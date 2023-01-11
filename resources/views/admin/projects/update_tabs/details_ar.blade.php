@@ -14,7 +14,7 @@
                             </label>
 
                             <input type="text" class="form-control form-control-solid form-control-lg"
-                                   name="title_ar" id="title_ar" value="{{$article->title_ar}}"
+                                   name="title_ar" id="title_ar" value="{{$project->title_ar}}"
                                    placeholder="{{trans('articles.enter_title_ar')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
@@ -29,8 +29,8 @@
                             <label> {{trans('articles.abstract_ar')}}</label>
                             <textarea class="form-control summernote"
                                       placeholder="{{trans('articles.enter_abstract_ar')}}"
-                                      name="abstract_ar"
-                                      id="abstract_ar">{{$article->abstract_ar}}</textarea>
+                                      name="details_ar"
+                                      id="abstract_ar">{{$project->details_ar}}</textarea>
                             <span class="form-text text-danger"
                                   id="abstract_ar_error"></span>
                         </div>

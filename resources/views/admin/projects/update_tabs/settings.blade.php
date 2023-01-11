@@ -15,10 +15,11 @@
                                 ID
                             </label>
                             <div class="col-lg-9 col-xl-9">
-                                <input value="{{$article->id}}"
+                                <input value="{{$project->id}}"
                                        class="form-control form-control-solid form-control-lg"
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
+                                       <input type="hidden" name="ph" value="ph">
                             </div>
                         </div>
                         <!--end::Group-->
@@ -35,7 +36,7 @@
                                     id="kt_article_photo">
 
                                     <div class="image-input-wrapper"
-                                         style="background-image: url({{asset(Storage::url($article->photo))}})"></div>
+                                         style="background-image: url({{asset('adminBoard/uploadedImages/projects/'.$project->photo)}})"></div>
                                     <label
                                         class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                         data-action="change" data-toggle="tooltip" title=""
@@ -44,6 +45,7 @@
                                         <input type="file" name="photo" id="photo"
                                                class="table-responsive-sm">
                                         <input type="hidden" name="photo_remove"/>
+
                                     </label>
 
                                     <span
@@ -59,6 +61,23 @@
                         </div>
                         <!--end::Group-->
 
+                          <!--begin::Group-->
+                          <div class="form-group row">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                {{trans('courses.course_details')}}
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <input
+                                    class="form-control  form-control-lg"
+                                    type="file" name="file" id="file"
+                                    
+                                    placeholder=""/>
+                                <span class="form-text text-danger"
+                                      id="course_details_error"></span>
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
 
 
                         <!--begin::Group-->
@@ -69,7 +88,7 @@
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
-                                           id="publish_date" name="publish_date" value="{{$article->publish_date}}"
+                                           id="publish_date" name="date" value="{{$project->date}}"
                                            readonly placeholder="{{trans('articles.enter_publish_date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
@@ -92,11 +111,41 @@
 
                             <div class="col-lg-9 col-xl-9">
                                 <input type="text" class="form-control form-control-solid form-control-lg"
-                                       name="publisher_name" id="publisher_name" value="{{$article->publisher_name}}"
+                                       name="writer" id="writer" value="{{$project->writer}}"
                                        placeholder="{{trans('articles.enter_publisher_name')}}"
                                        autocomplete="off">
                                 <span class="form-text text-danger"
                                       id="publisher_name_error"></span>
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
+                          <!--begin::Group-->
+                          <div class="form-group row">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                {{-- {{trans('users.gender')}}   --}}نوع المشروع
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+
+                                <select
+                                    class="form-control  form-control-lg"
+                                    name="type" id="type" type="text">
+
+                                    <option value="current" {{$project->type == 'current'?'selected':''}}>
+                                        current
+
+                                    </option>
+
+                                    <option value="previous" {{$project->type == 'previous'?'selected':''}}>
+                                        previous
+
+                                    </option>
+
+
+
+                                </select>
+                                <span class="form-text text-danger"
+                                      id="gender_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->

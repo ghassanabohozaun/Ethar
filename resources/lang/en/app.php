@@ -9,4 +9,5 @@ return [
     'support-center' => 'Support Center Management',
     'articles' => 'Articles Management',
     'landing-page'=>'Landing Page Management',
+    'projects' =>'Projects Management',
 ];

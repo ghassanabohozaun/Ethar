@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.articles.update')}}" method="POST" id="form_article_update"
+    <form class="form" action="{{route('admin.project.update')}}" method="POST" id="form_project_update"
           enctype="multipart/form-data">
     @csrf
     <!--begin::Subheader-->
@@ -18,7 +18,7 @@
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
-                            <a href="{{route('admin.articles')}}" class="text-muted">
+                            <a href="{{route('admin.project.index')}}" class="text-muted">
                                 {{trans('menu.articles')}}
                             </a>
                         </li>
@@ -101,9 +101,9 @@
 
 
                                 <div class="tab-content mt-5">
-                                    @include('admin.articles.update_tabs.settings')
-                                    @include('admin.articles.update_tabs.details_ar')
-                                    @include('admin.articles.update_tabs.details_en')
+                                    @include('admin.projects.update_tabs.settings')
+                                    @include('admin.projects.update_tabs.details_ar')
+                                    @include('admin.projects.update_tabs.details_en')
                                 </div>
 
 
@@ -138,7 +138,7 @@
     <script type="text/javascript">
 
 
-        $('#form_article_update').on('submit', function (e) {
+        $('#form_project_update').on('submit', function (e) {
             e.preventDefault();
             $.notifyClose();
 
@@ -191,7 +191,7 @@
                             customClass: {confirmButton: 'update_article_button'}
                         });
                         $('.update_article_button').click(function () {
-                            window.location.href = "{{route('admin.articles')}}";
+                            window.location.href = "{{route('admin.project.index')}}";
                         });
                     }
 

@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\Admin\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -177,8 +177,18 @@ Route::group([
     });
 
     // project
-    Route::resource('project', ProjectsController::class );
-
+    Route::group(['prefix' => 'project', 'middleware' => 'can:projects'], function () {
+        Route::get('/', [ProjectsController::class, 'index'])->name('admin.project.index');
+        Route::get('/create', [ProjectsController::class, 'create'])->name('admin.project.create');
+        Route::post('/store', [ProjectsController::class, 'store'])->name('admin.project.store');
+        Route::get('/edit/{id}', [ProjectsController::class, 'edit'])->name('admin.project.edit');
+        Route::post('/update', [ProjectsController::class, 'update'])->name('admin.project.update');
+        Route::get('/trashed-project',  [ProjectsController::class, 'trashed'])->name('admin.project.trashed');
+        Route::post('/destroy',  [ProjectsController::class, 'destroy'])->name('admin.project.destroy');
+        Route::post('/force-delete', [ProjectsController::class, 'forceDelete'])->name('admin.project.force.delete');
+        Route::post('/restore', [ProjectsController::class, 'restore'])->name('admin.project.restore');
+        Route::post('/change-status', [ProjectsController::class, 'changeStatus'])->name('admin.project.change.status');
+    });
 });
 
 
