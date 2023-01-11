@@ -78,7 +78,7 @@
                                                         <th>{{__('articles.publisher_name')}}</th>
                                                         <th>{{__('articles.publish_date')}}</th>
                                                         <th>{{__('articles.status')}}</th>
-                                                        <th>{{__('general.actions')}}</th>
+                                                        <th class="text-center" style="width: 100px;">{{__('general.actions')}}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>

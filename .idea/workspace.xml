@@ -6,21 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SupportCenterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SupportCenterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestimonialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestimonialController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/articles/1673456678.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/articles/1673457267.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/articles/1673457274.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/articles/1673457528.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/trashed-users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/trashed-users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/trashed-articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/trashed-articles.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +244,7 @@
       <workItem from="1673427350945" duration="16000" />
       <workItem from="1673438913058" duration="2369000" />
       <workItem from="1673444620240" duration="14000" />
-      <workItem from="1673447064326" duration="16087000" />
+      <workItem from="1673447064326" duration="16324000" />
     </task>
     <servers />
   </component>
