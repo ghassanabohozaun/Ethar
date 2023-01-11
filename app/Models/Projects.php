@@ -8,23 +8,22 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Projects extends Model
 {
-    use HasFactory  , SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'id',	'title_ar',	'title_en',
-        'details_ar',	'details_en',	'status',
-        'photo',	'language',	'file',
-        'date',	'writer',	'type',
+        'id', 'title_ar', 'title_en', 'details_ar', 'details_en', 'status',
+        'photo', 'language', 'file', 'date', 'writer', 'type',
     ];
 
-    public function getTypeAttribute($value){
-        if(Lang() == 'ar'){
-            if($value =='previous' ){
+    public function getTypeAttribute($value)
+    {
+        if (Lang() == 'ar') {
+            if ($value == 'previous') {
                 return 'السابق';
-            }else{
+            } else {
                 return 'الحالي ';
             }
-        }else{
+        } else {
             return $value;
         }
     }
