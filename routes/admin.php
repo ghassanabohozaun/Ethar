@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\Admin\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -176,24 +176,20 @@ Route::group([
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
     });
 
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Projects Routes
-    Route::group(['prefix' => 'projects', 'middleware' => 'can:projects'], function () {
-        Route::get('/', 'ProjectsController@index')->name('admin.projects');
-        Route::get('/get-projects', 'ProjectsController@getArticles')->name('admin.get.projects');
-        Route::post('/destroy', 'ProjectsController@destroy')->name('admin.projects.destroy');
-        Route::post('/change-status', 'ProjectsController@changeStatus')->name('admin.projects.change.status');
-        Route::get('/create', 'ProjectsController@create')->name('admin.projects.create');
-        Route::post('/store', 'ProjectsController@store')->name('admin.projects.store');
-        Route::get('/edit/{id?}', 'ProjectsController@edit')->name('admin.projects.edit');
-        Route::post('/update', 'ProjectsController@update')->name('admin.projects.update');
-        Route::get('/trashed-projects', 'ProjectsController@trashedArticles')->name('admin.projects.trashed');
-        Route::post('/force-delete', 'ProjectsController@forceDelete')->name('admin.projects.force.delete');
-        Route::post('/restore', 'ProjectsController@restore')->name('admin.projects.restore');
+
+    // project
+    Route::group(['prefix' => 'project', 'middleware' => 'can:projects'], function () {
+        Route::get('/', [ProjectsController::class, 'index'])->name('admin.project.index');
+        Route::get('/create', [ProjectsController::class, 'create'])->name('admin.project.create');
+        Route::post('/store', [ProjectsController::class, 'store'])->name('admin.project.store');
+        Route::get('/edit/{id}', [ProjectsController::class, 'edit'])->name('admin.project.edit');
+        Route::post('/update', [ProjectsController::class, 'update'])->name('admin.project.update');
+        Route::get('/trashed-project',  [ProjectsController::class, 'trashed'])->name('admin.project.trashed');
+        Route::post('/destroy',  [ProjectsController::class, 'destroy'])->name('admin.project.destroy');
+        Route::post('/force-delete', [ProjectsController::class, 'forceDelete'])->name('admin.project.force.delete');
+        Route::post('/restore', [ProjectsController::class, 'restore'])->name('admin.project.restore');
+        Route::post('/change-status', [ProjectsController::class, 'changeStatus'])->name('admin.project.change.status');
     });
-
-    //Route::resource('project', ProjectsController::class );
-
 
 });
 

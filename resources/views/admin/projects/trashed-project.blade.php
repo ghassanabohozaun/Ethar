@@ -14,12 +14,18 @@
 
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
+                        <a href="{!! route('admin.project.index') !!}" class="text-muted">
                             {{trans('menu.articles')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="" class="text-muted">
+                        <a href="javascript(avoid);" class="text-muted">
+                            {{trans('menu.trashed_articles')}}
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="{!! route('admin.articles.trashed') !!}" class="text-muted">
                             {{trans('menu.show_all')}}
                         </a>
                     </li>
@@ -31,13 +37,7 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-                <a href="{!! route('admin.project.trashed') !!}"
-                   class="btn btn-light-danger trash_btn" title="{{trans('general.trash')}}">
-                    <i class="fa fa-trash"></i>
-                </a>
-                &nbsp;
-
-                <a href="{{route('admin.project.create')}}"
+                <a href="{{route('admin.articles.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
                     {{trans('menu.add_new_article')}}
@@ -72,12 +72,11 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>@lang('articles.photo') </th>
+                                                        <th>@lang('articles.photo')</th>
                                                         <th>@lang('articles.title_ar')</th>
                                                         <th>@lang('articles.title_en')</th>
                                                         <th>@lang('articles.publisher_name')</th>
                                                         <th>@lang('articles.publish_date')</th>
-                                                        <th>@lang('articles.status')</th>
                                                         <th>@lang('general.actions')</th>
                                                     </tr>
                                                     </thead>
@@ -96,31 +95,23 @@
                                                             <td>{{ $project->date }}</td>
 
                                                             <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           {{$project->status == 'show' ? 'checked':''}}  data-id="{{$project->id}}"
-                                                                           class="change_status">
-                                                                </div>
-                                                            </td>
-
-                                                            <td>
-                                                                <a href="{{route('admin.project.edit',$project->id)}}"
-                                                                   class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{trans('general.edit')}}">
-                                                                    <i class="fa fa-edit fa-1x"></i>
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_article_btn"
+                                                                   data-id="{{$project->id}}"
+                                                                   title="{{trans('general.restore')}}">
+                                                                    <i class="fa fa-trash-restore fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_article_btn"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_article_btn"
                                                                    data-id="{{$project->id}}"
-                                                                   title="{{trans('general.delete')}}">
-                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                   title="{{trans('general.force_delete')}}">
+                                                                    <i class="fa fa-trash-alt fa-1x"></i>
                                                                 </a>
                                                             </td>
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="7" class="text-center">
+                                                            <td colspan="6" class="text-center">
                                                                 @lang('articles.no_articles_found')
                                                             </td>
                                                         </tr>
@@ -128,7 +119,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="7">
+                                                        <td colspan="6">
                                                             <div class="float-right">
                                                                 {!! $projects->appends(request()->all())->links() !!}
                                                             </div>
@@ -176,14 +167,14 @@
 
 
     <script type="text/javascript">
-        /////////////////////////////////////////////////////////////////
-        ///  article Delete
-        $(document).on('click', '.delete_article_btn', function (e) {
+        ///////////////////////////////////////////////////
+        /// delete article
+        $(document).on('click', '.force_delete_article_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{trans('general.ask_permanent_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonText: "{{trans('general.yes')}}",
@@ -195,7 +186,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.project.destroy') !!}',
+                        url: '{!! route('admin.project.force.delete') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -204,23 +195,13 @@
                             if (data.status == true) {
                                 Swal.fire({
                                     title: "{!! trans('general.deleted') !!}",
-                                    text: data.msg,
+                                    text: "{!! trans('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
                                     customClass: {confirmButton: 'delete_article_button'}
                                 });
                                 $('.delete_article_button').click(function () {
                                     $('#myTable').load(location.href + (' #myTable'));
-                                });
-                            } else if (data.status == false) {
-                                Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
-                                    text: data.msg,
-                                    icon: "warning",
-                                    allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_article_button'}
-                                });
-                                $('.delete_article_button').click(function () {
                                 });
                             }
                         },//end success
@@ -229,33 +210,25 @@
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
                         title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        text: "{!! trans('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_article_button'}
                     })
                 }
             });
-
         })
 
 
-        /////////////////////////////////////////////////////////////////
-        // switch status
-        var switchStatus = false;
-        $('body').on('change', '.change_status', function (e) {
+        ////////////////////////////////////////////////////
+        // restore article
+        $(document).on('click', '.restore_article_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
-            if ($(this).is(':checked')) {
-                switchStatus = $(this).is(':checked');
-            } else {
-                switchStatus = $(this).is(':checked');
-            }
-
             $.ajax({
-                url: "{{route('admin.project.change.status')}}",
-                data: {switchStatus: switchStatus, id: id},
+                url: "{{route('admin.project.restore')}}",
+                data: {id, id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
@@ -264,7 +237,7 @@
                         state: 'danger',
                         message: "{{trans('general.please_wait')}}",
                     });
-                },//end beforeSend
+                },
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
@@ -274,15 +247,15 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'switch_status_toggle'}
+                            customClass: {confirmButton: 'restore_article_button'}
                         });
-                        $('.switch_status_toggle').click(function () {
+                        $('.restore_article_button').click(function () {
                             $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },//end success
             })
-        });
+        })
 
 
     </script>

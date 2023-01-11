@@ -46,6 +46,22 @@
                         </div>
                         <!--end::Group-->
 
+                        <!--begin::Group-->
+                        <div class="form-group row">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                {{trans('courses.course_details')}}
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <input
+                                    class="form-control  form-control-lg"
+                                    type="file" name="file" id="file"
+                                    placeholder=""/>
+                                <span class="form-text text-danger"
+                                      id="course_details_error"></span>
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
 
                         <!--begin::Group-->
                         <div class="form-group row">

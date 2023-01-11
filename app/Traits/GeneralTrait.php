@@ -88,5 +88,13 @@ trait GeneralTrait
         return  $input['photo'];
     }
 
+    ///////////////////////////////////////////
+    public function saveFile($name , $path){
+        $ImageExtenstion = $name->getClientOriginalName();
+        $ImageName = time().rand().'.'.$ImageExtenstion;
+        $name->move($path,$ImageName);
+        return $ImageName;
+    }
+
 
 }
