@@ -28,4 +28,5 @@ return [
     'min' => 'Must Choose one permission at least',
     'delete_error_message'=>'Sorry , This permission cannot be deleted because it is belongs to one of the users ',
 
+    'no_permissions_found' => 'No Permissions Found',
 ];

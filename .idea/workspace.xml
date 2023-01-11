@@ -6,16 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SupportCenterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SupportCenterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SupportCenterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SupportCenterRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/supportCenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/supportCenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/roles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/supportCenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/supportCenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/delete.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/options.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/parts/options.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/show-message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/parts/show-message.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/status.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/parts/options.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/parts/options.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/parts/permissions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/parts/permissions.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +245,7 @@
       <workItem from="1673270793356" duration="16245000" />
       <workItem from="1673337018214" duration="16899000" />
       <workItem from="1673357287622" duration="10809000" />
-      <workItem from="1673423315361" duration="2625000" />
+      <workItem from="1673423315361" duration="3242000" />
     </task>
     <servers />
   </component>
@@ -260,7 +257,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php</url>
-          <line>125</line>
+          <line>99</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\Admin\RolesController" />
             <option name="methodName" value="update" />

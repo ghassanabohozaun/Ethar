@@ -11,7 +11,6 @@ return [
     'mark_as_contacted' => 'mark as contacted',
     'mark_as_solved'=>'mark as solved',
 
-
     'customer_name' => 'Customer Name',
     'customer_email' => 'Customer Email',
     'title' => 'Title',
