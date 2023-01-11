@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SlidersRequest;
 use App\Http\Requests\SlidersUpdateRequest;
 use App\Http\Resources\SliderResource;
-use App\Models\Admin;
+use App\Models\Article;
 use App\Models\Slider;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
@@ -23,7 +23,7 @@ class SlidersController extends Controller
         $title = trans('menu.sliders');
 
         $sliders = Slider::orderByDesc('created_at')->paginate(15);
-        return view('admin.landing-page.sliders.index', compact('title','sliders'));
+        return view('admin.landing-page.sliders.index', compact('title', 'sliders'));
     }
 
 
@@ -39,49 +39,32 @@ class SlidersController extends Controller
 
     protected function store(SlidersRequest $request)
     {
+        // save image
+        if ($request->hasFile('photo')) {
+            $image = $request->file('photo');
+            $destinationPath = public_path('adminBoard/uploadedImages/sliders');
+            $photo_path = $this->saveResizeImage($image, $destinationPath);
+        } else {
+            $photo_path = '';
+        }
 
-        try {
-            if ($request->hasFile('photo')) {
-                $photo_path = $request->file('photo')->store('sliders');
-            } else {
-                $photo_path = '';
-            }
+        $lang_en = setting()->site_lang_en;
+        Article::create([
+            'photo' => $photo_path,
+            'language' => 'ar_en',
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'details_ar' => $request->details_ar,
+            'details_en' => $lang_en == 'on' ? $request->details_en : null,
+            'details_status' => $request->details_status,
+            'button_status' => $request->button_status,
+            'url_ar' => null,
+            'url_en' => null,
+            'order' => $request->order,
+        ]);
 
-            if (setting()->site_lang_en == 'on') {
-                Slider::create([
-                    'title_ar' => $request->title_ar,
-                    'title_en' => $request->title_en,
-                    'details_ar' => $request->details_ar,
-                    'details_en' => $request->details_en,
-                    'details_status' => $request->details_status,
-                    'button_status' => $request->button_status,
-                    'url_ar' => null,
-                    'url_en' =>null,
-                    'photo' => $photo_path,
-                    'order' => $request->order,
-                    'language' => 'ar_en',
-                ]);
+        return $this->returnSuccessMessage(trans('general.add_success_message'));
 
-            } else {
-                Slider::create([
-                    'title_ar' => $request->title_ar,
-                    'title_en' => null,
-                    'details_ar' => $request->details_ar,
-                    'details_en' => null,
-                    'details_status' => $request->details_status,
-                    'button_status' => $request->button_status,
-                    'url_ar' =>null,
-                    'url_en' => null,
-                    'photo' => $photo_path,
-                    'order' => $request->order,
-                    'language' => 'ar',
-                ]);
-            }
-            return $this->returnSuccessMessage(trans('general.add_success_message'));
-
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
     }
 
     ////////////////////////////////////////////
@@ -102,62 +85,54 @@ class SlidersController extends Controller
     protected function update(SlidersUpdateRequest $request)
     {
 
+        $slider = Slider::find($request->id);
+        if (!$slider) {
+            return redirect()->route('admin.not.found');
+        }
 
-        try {
-            $slider = Slider::find($request->id);
-            if (!$slider) {
-                return redirect()->route('admin.not.found');
+
+        if ($request->hasFile('photo')) {
+
+            $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
             }
-            //// check photo
-            if ($request->hasFile('photo')) {
-                if (!empty($slider->photo)) {
-                    Storage::delete($slider->photo);
-                    $photo_path = $request->file('photo')->store('sliders');
-                } else {
-                    $photo_path = $request->file('photo')->store('sliders');
-                }
+
+            if (!empty($article->photo)) {
+                $image = $request->file('photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath);
             } else {
-                if (!empty($slider->photo)) {
-                    $photo_path = $slider->photo;
-                } else {
-                    $photo_path = '';
-                }
+                $image = $request->file('photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath);
             }
-
-            if (setting()->site_lang_en == 'on') {
-                $slider->update([
-                    'title_ar' => $request->title_ar,
-                    'title_en' => $request->title_en,
-                    'details_ar' => $request->details_ar,
-                    'details_en' => $request->details_en,
-                    'details_status' => $request->details_status,
-                    'button_status' => $request->button_status,
-                    'url_ar' =>null,
-                    'url_en' => null,
-                    'photo' => $photo_path,
-                    'order' => $request->order,
-                    'language' => 'ar_en',
-                ]);
+        } else {
+            if (!empty($article->photo)) {
+                $photo_path = $article->photo;
             } else {
-                $slider->update([
-                    'title_ar' => $request->title_ar,
-                    'title_en' => null,
-                    'details_ar' => $request->details_ar,
-                    'details_en' => null,
-                    'details_status' => $request->details_status,
-                    'button_status' => $request->button_status,
-                    'url_ar' => null,
-                    'url_en' => null,
-                    'photo' => $photo_path,
-                    'order' => $request->order,
-                    'language' => 'ar',
-                ]);
+                $photo_path = '';
             }
-            return $this->returnSuccessMessage(trans('general.update_success_message'));
+        }
 
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
+        $lang_en = setting()->site_lang_en;
+        $slider::update([
+            'photo' => $photo_path,
+            'language' => 'ar_en',
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'details_ar' => $request->details_ar,
+            'details_en' => $lang_en == 'on' ? $request->details_en : null,
+            'details_status' => $request->details_status,
+            'button_status' => $request->button_status,
+            'url_ar' => null,
+            'url_en' => null,
+            'order' => $request->order,
+        ]);
+
+
+        return $this->returnSuccessMessage(trans('general.update_success_message'));
+
     }
 
     ////////////////////////////////////////////
@@ -188,7 +163,6 @@ class SlidersController extends Controller
     /// change Status
     public function changeStatus(Request $request)
     {
-
 
 
         try {
