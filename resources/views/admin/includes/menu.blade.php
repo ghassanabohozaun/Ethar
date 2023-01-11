@@ -328,7 +328,7 @@
                                 </span>
                         <span class="menu-text">{{trans('menu.articles')}}</span>
                         <span class="menu-label">
-                        <span class="label label-rounded label-danger">
+                        <span class="label label-rounded label-light-warning">
                              {{App\Models\Article::count()}}
                         </span>
                     </span>
