@@ -14,18 +14,18 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="{!! route('users') !!}" class="text-muted">
-                            {{trans('menu.users')}}
+                            {{__('menu.users')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="javascript(avoid);" class="text-muted">
-                            {{trans('menu.trashed_users')}}
+                            {{__('menu.trashed_users')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
                         <a href="{!! route('users.trashed') !!}" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -59,11 +59,12 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>@lang('users.photo')</th>
-                                                        <th>@lang('users.name')</th>
-                                                        <th>@lang('users.email')</th>
-                                                        <th>@lang('users.role_id')</th>
-                                                        <th class="text-center" style="width: 100px;">@lang('general.actions')</th>
+                                                        <th>{!! __('users.photo') !!}</th>
+                                                        <th>{!! __('users.name') !!}</th>
+                                                        <th>{!! __('users.email') !!}</th>
+                                                        <th>{!! __('users.role_id') !!}</th>
+                                                        <th class="text-center"
+                                                            style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -71,7 +72,7 @@
                                                         <tr>
                                                             <td>
                                                                 @if($user->photo == null)
-                                                                    @if($user->gender == trans('general.male'))
+                                                                    @if($user->gender == __('general.male'))
                                                                         <img
                                                                             src="{{asset('adminBoard/images/male.jpeg')}}"
                                                                             class="img-fluid img-thumbnail table-image "/>
@@ -81,7 +82,7 @@
                                                                             class="img-fluid img-thumbnail table-image "/>
                                                                     @endif
                                                                 @else
-                                                                    <img src="{{asset(Storage::url($user->photo))}}"
+                                                                    <img src="{{asset('adminBoard/uploadedImages/users/'.$user->photo)}}"
                                                                          class="img-fluid img-thumbnail table-image "/>
                                                                 @endif
                                                             </td>
@@ -107,14 +108,14 @@
                                                             <td>
                                                                 <a class="btn btn-hover-warning btn-icon btn-pill restore_user_btn"
                                                                    data-id="{{$user->id}}"
-                                                                   title="{{trans('general.restore')}}">
+                                                                   title="{{__('general.restore')}}">
                                                                     <i class="fa fa-trash-restore fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
                                                                    class="btn btn-hover-danger btn-icon btn-pill force_delete_user_btn"
                                                                    data-id="{{$user->id}}"
-                                                                   title="{{trans('general.force_delete')}}">
+                                                                   title="{{__('general.force_delete')}}">
                                                                     <i class="fa fa-trash-alt fa-1x"></i>
                                                                 </a>
 
@@ -123,7 +124,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="6" class="text-center">
-                                                                @lang('users.no_users_found')
+                                                                {!! __('users.no_users_found') !!}
                                                             </td>
                                                         </tr>
                                                     @endforelse
@@ -175,11 +176,11 @@
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_permanent_delete_record')}}",
+                title: "{{__('general.ask_permanent_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -195,8 +196,8 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
-                                    text: "{!! trans('general.delete_success_message') !!}",
+                                    title: "{!! __('general.deleted') !!}",
+                                    text: "{!! __('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
                                     customClass: {confirmButton: 'delete_user_button'}
@@ -210,8 +211,8 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.error_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_user_button'}
@@ -236,7 +237,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

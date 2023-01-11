@@ -4,11 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SupportCenterRequest;
-use App\Http\Resources\SupportCenterResourece;
 use App\Models\SupportCenter;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
-
 
 class SupportCenterController extends Controller
 {

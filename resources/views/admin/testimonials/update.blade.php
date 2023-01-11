@@ -3,8 +3,8 @@
 @section('content')
 
     <form class="form" action="{{route('admin.testimonials.update')}}" method="POST" id="form_opinions_update">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -82,7 +82,8 @@
                                                                 name="id" id="id" type="hidden"
                                                                 value="{{$testimonial->id}}"/>
 
-                                                            <input type="hidden" name="hidden_photo" value="hidden_photo">
+                                                            <input type="hidden" name="hidden_photo"
+                                                                   value="hidden_photo">
                                                         </div>
 
                                                     </div>
@@ -282,104 +283,123 @@
                                                                 <option value='an'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag an"
-                                                                        data-title="Netherlands Antilles"  {{$testimonial->country == 'an'?'selected':'' }}
+                                                                        data-title="Netherlands Antilles" {{$testimonial->country == 'an'?'selected':'' }}
                                                                 >Netherlands
                                                                     Antilles
                                                                 </option>
                                                                 <option value='ao'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ao" data-title="Angola"  {{$testimonial->country == 'ao'?'selected':'' }}
+                                                                        data-imagecss="flag ao"
+                                                                        data-title="Angola" {{$testimonial->country == 'ao'?'selected':'' }}
                                                                 >
                                                                     Angola
                                                                 </option>
                                                                 <option value='aq'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag aq" data-title="Antarctica"  {{$testimonial->country == 'aq'?'selected':'' }}
+                                                                        data-imagecss="flag aq"
+                                                                        data-title="Antarctica" {{$testimonial->country == 'aq'?'selected':'' }}
                                                                 >
                                                                     Antarctica
                                                                 </option>
                                                                 <option value='ar'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ar" data-title="Argentina"  {{$testimonial->country == 'ar'?'selected':'' }}
+                                                                        data-imagecss="flag ar"
+                                                                        data-title="Argentina" {{$testimonial->country == 'ar'?'selected':'' }}
                                                                 >
                                                                     Argentina
                                                                 </option>
                                                                 <option value='as'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag as"
-                                                                        data-title="American Samoa"  {{$testimonial->country == 'as'?'selected':'' }}
+                                                                        data-title="American Samoa" {{$testimonial->country == 'as'?'selected':'' }}
                                                                 >American Samoa
                                                                 </option>
                                                                 <option value='at'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag at" data-title="Austria"  {{$testimonial->country == 'at'?'selected':'' }}
+                                                                        data-imagecss="flag at"
+                                                                        data-title="Austria" {{$testimonial->country == 'at'?'selected':'' }}
                                                                 >
                                                                     Austria
                                                                 </option>
                                                                 <option value='au'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag au" data-title="Australia"  {{$testimonial->country == 'au'?'selected':'' }}
+                                                                        data-imagecss="flag au"
+                                                                        data-title="Australia" {{$testimonial->country == 'au'?'selected':'' }}
                                                                 >
                                                                     Australia
                                                                 </option>
                                                                 <option value='aw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag aw" data-title="Aruba"  {{$testimonial->country == 'aw'?'selected':'' }}>Aruba
+                                                                        data-imagecss="flag aw"
+                                                                        data-title="Aruba" {{$testimonial->country == 'aw'?'selected':'' }}>
+                                                                    Aruba
                                                                 </option>
                                                                 <option value='ax'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ax"
-                                                                        data-title="Aland Islands"  {{$testimonial->country == 'ax'?'selected':'' }}>Aland Islands
+                                                                        data-title="Aland Islands" {{$testimonial->country == 'ax'?'selected':'' }}>
+                                                                    Aland Islands
                                                                 </option>
                                                                 <option value='az'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag az" data-title="Azerbaijan"  {{$testimonial->country == 'az'?'selected':'' }}>
+                                                                        data-imagecss="flag az"
+                                                                        data-title="Azerbaijan" {{$testimonial->country == 'az'?'selected':'' }}>
                                                                     Azerbaijan
                                                                 </option>
                                                                 <option value='ba'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ba"
-                                                                        data-title="Bosnia and Herzegovina"  {{$testimonial->country == 'ba'?'selected':'' }}>Bosnia and
+                                                                        data-title="Bosnia and Herzegovina" {{$testimonial->country == 'ba'?'selected':'' }}>
+                                                                    Bosnia and
                                                                     Herzegovina
                                                                 </option>
                                                                 <option value='bb'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bb" data-title="Barbados"  {{$testimonial->country == 'bb'?'selected':'' }}>
+                                                                        data-imagecss="flag bb"
+                                                                        data-title="Barbados" {{$testimonial->country == 'bb'?'selected':'' }}>
                                                                     Barbados
                                                                 </option>
                                                                 <option value='bd'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bd" data-title="Bangladesh"  {{$testimonial->country == 'bd'?'selected':'' }}>
+                                                                        data-imagecss="flag bd"
+                                                                        data-title="Bangladesh" {{$testimonial->country == 'bd'?'selected':'' }}>
                                                                     Bangladesh
                                                                 </option>
                                                                 <option value='be'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag be" data-title="Belgium"  {{$testimonial->country == 'be'?'selected':'' }}>
+                                                                        data-imagecss="flag be"
+                                                                        data-title="Belgium" {{$testimonial->country == 'be'?'selected':'' }}>
                                                                     Belgium
                                                                 </option>
                                                                 <option value='bf'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag bf"
-                                                                        data-title="Burkina Faso"  {{$testimonial->country == 'bf'?'selected':'' }}>Burkina Faso
+                                                                        data-title="Burkina Faso" {{$testimonial->country == 'bf'?'selected':'' }}>
+                                                                    Burkina Faso
                                                                 </option>
                                                                 <option value='bg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bg" data-title="Bulgaria"  {{$testimonial->country == 'bg'?'selected':'' }}>
+                                                                        data-imagecss="flag bg"
+                                                                        data-title="Bulgaria" {{$testimonial->country == 'bg'?'selected':'' }}>
                                                                     Bulgaria
                                                                 </option>
                                                                 <option value='bh'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bh" data-title="Bahrain"  {{$testimonial->country == 'bh'?'selected':'' }}>
+                                                                        data-imagecss="flag bh"
+                                                                        data-title="Bahrain" {{$testimonial->country == 'bh'?'selected':'' }}>
                                                                     Bahrain
                                                                 </option>
                                                                 <option value='bi'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bi" data-title="Burundi"  {{$testimonial->country == 'bi'?'selected':'' }}>
+                                                                        data-imagecss="flag bi"
+                                                                        data-title="Burundi" {{$testimonial->country == 'bi'?'selected':'' }}>
                                                                     Burundi
                                                                 </option>
                                                                 <option value='bj'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bj" data-title="Benin"  {{$testimonial->country == 'bj'?'selected':'' }}>Benin
+                                                                        data-imagecss="flag bj"
+                                                                        data-title="Benin" {{$testimonial->country == 'bj'?'selected':'' }}>
+                                                                    Benin
                                                                 </option>
                                                                 <option value='bm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
@@ -390,254 +410,308 @@
                                                                 <option value='bn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag bn"
-                                                                        data-title="Brunei Darussalam"  {{$testimonial->country == 'bn'?'selected':'' }}>Brunei Darussalam
+                                                                        data-title="Brunei Darussalam" {{$testimonial->country == 'bn'?'selected':'' }}>
+                                                                    Brunei Darussalam
                                                                 </option>
                                                                 <option value='bo'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bo" data-title="Bolivia"  {{$testimonial->country == 'bo'?'selected':'' }}>
+                                                                        data-imagecss="flag bo"
+                                                                        data-title="Bolivia" {{$testimonial->country == 'bo'?'selected':'' }}>
                                                                     Bolivia
                                                                 </option>
                                                                 <option value='br'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag br" data-title="Brazil"  {{$testimonial->country == 'br'?'selected':'' }}>
+                                                                        data-imagecss="flag br"
+                                                                        data-title="Brazil" {{$testimonial->country == 'br'?'selected':'' }}>
                                                                     Brazil
                                                                 </option>
                                                                 <option value='bs'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bs" data-title="Bahamas"  {{$testimonial->country == 'bs'?'selected':'' }}>
+                                                                        data-imagecss="flag bs"
+                                                                        data-title="Bahamas" {{$testimonial->country == 'bs'?'selected':'' }}>
                                                                     Bahamas
                                                                 </option>
                                                                 <option value='bt'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bt" data-title="Bhutan"  {{$testimonial->country == 'bt'?'selected':'' }}>
+                                                                        data-imagecss="flag bt"
+                                                                        data-title="Bhutan" {{$testimonial->country == 'bt'?'selected':'' }}>
                                                                     Bhutan
                                                                 </option>
                                                                 <option value='bv'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag bv"
-                                                                        data-title="Bouvet Island"  {{$testimonial->country == 'bv'?'selected':'' }}>Bouvet Island
+                                                                        data-title="Bouvet Island" {{$testimonial->country == 'bv'?'selected':'' }}>
+                                                                    Bouvet Island
                                                                 </option>
                                                                 <option value='bw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bw" data-title="Botswana"  {{$testimonial->country == 'bw'?'selected':'' }}>
+                                                                        data-imagecss="flag bw"
+                                                                        data-title="Botswana" {{$testimonial->country == 'bw'?'selected':'' }}>
                                                                     Botswana
                                                                 </option>
                                                                 <option value='by'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag by" data-title="Belarus"  {{$testimonial->country == 'by'?'selected':'' }}>
+                                                                        data-imagecss="flag by"
+                                                                        data-title="Belarus" {{$testimonial->country == 'by'?'selected':'' }}>
                                                                     Belarus
                                                                 </option>
                                                                 <option value='bz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag bz" data-title="Belize"  {{$testimonial->country == 'bz'?'selected':'' }}>
+                                                                        data-imagecss="flag bz"
+                                                                        data-title="Belize" {{$testimonial->country == 'bz'?'selected':'' }}>
                                                                     Belize
                                                                 </option>
                                                                 <option value='ca'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ca" data-title="Canada"  {{$testimonial->country == 'ca'?'selected':'' }}>
+                                                                        data-imagecss="flag ca"
+                                                                        data-title="Canada" {{$testimonial->country == 'ca'?'selected':'' }}>
                                                                     Canada
                                                                 </option>
                                                                 <option value='cc'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag cc"
-                                                                        data-title="Cocos (Keeling) Islands"  {{$testimonial->country == 'cc'?'selected':'' }}>Cocos
+                                                                        data-title="Cocos (Keeling) Islands" {{$testimonial->country == 'cc'?'selected':'' }}>
+                                                                    Cocos
                                                                     (Keeling)
                                                                     Islands
                                                                 </option>
                                                                 <option value='cd'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag cd"
-                                                                        data-title="Democratic Republic of the Congo"  {{$testimonial->country == 'cd'?'selected':'' }}>
+                                                                        data-title="Democratic Republic of the Congo" {{$testimonial->country == 'cd'?'selected':'' }}>
                                                                     Democratic
                                                                     Republic of the Congo
                                                                 </option>
                                                                 <option value='cf'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag cf"
-                                                                        data-title="Central African Republic"  {{$testimonial->country == 'cf'?'selected':'' }}>Central
+                                                                        data-title="Central African Republic" {{$testimonial->country == 'cf'?'selected':'' }}>
+                                                                    Central
                                                                     African
                                                                     Republic
                                                                 </option>
                                                                 <option value='cg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cg" data-title="Congo"  {{$testimonial->country == 'cg'?'selected':'' }}>Congo
+                                                                        data-imagecss="flag cg"
+                                                                        data-title="Congo" {{$testimonial->country == 'cg'?'selected':'' }}>
+                                                                    Congo
                                                                 </option>
                                                                 <option value='ch'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ch"
-                                                                        data-title="Switzerland"  {{$testimonial->country == 'ch'?'selected':'' }}>Switzerland
+                                                                        data-title="Switzerland" {{$testimonial->country == 'ch'?'selected':'' }}>
+                                                                    Switzerland
                                                                 </option>
                                                                 <option value='ci'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ci"
-                                                                        data-title="Cote D'Ivoire (Ivory Coast)"  {{$testimonial->country == 'ci'?'selected':'' }}>Cote
+                                                                        data-title="Cote D'Ivoire (Ivory Coast)" {{$testimonial->country == 'ci'?'selected':'' }}>
+                                                                    Cote
                                                                     D'Ivoire
                                                                     (Ivory Coast)
                                                                 </option>
                                                                 <option value='ck'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ck"
-                                                                        data-title="Cook Islands"  {{$testimonial->country == 'ck'?'selected':'' }}>Cook Islands
+                                                                        data-title="Cook Islands" {{$testimonial->country == 'ck'?'selected':'' }}>
+                                                                    Cook Islands
                                                                 </option>
                                                                 <option value='cl'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cl" data-title="Chile"  {{$testimonial->country == 'cl'?'selected':'' }}>Chile
+                                                                        data-imagecss="flag cl"
+                                                                        data-title="Chile" {{$testimonial->country == 'cl'?'selected':'' }}>
+                                                                    Chile
                                                                 </option>
                                                                 <option value='cm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cm" data-title="Cameroon"  {{$testimonial->country == 'cm'?'selected':'' }}>
+                                                                        data-imagecss="flag cm"
+                                                                        data-title="Cameroon" {{$testimonial->country == 'cm'?'selected':'' }}>
                                                                     Cameroon
                                                                 </option>
                                                                 <option value='cn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cn" data-title="China"  {{$testimonial->country == 'cn'?'selected':'' }}>China
+                                                                        data-imagecss="flag cn"
+                                                                        data-title="China" {{$testimonial->country == 'cn'?'selected':'' }}>
+                                                                    China
                                                                 </option>
                                                                 <option value='co'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag co" data-title="Colombia"  {{$testimonial->country == 'co'?'selected':'' }}>
+                                                                        data-imagecss="flag co"
+                                                                        data-title="Colombia" {{$testimonial->country == 'co'?'selected':'' }}>
                                                                     Colombia
                                                                 </option>
                                                                 <option value='cr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cr" data-title="Costa Rica"  {{$testimonial->country == 'cr'?'selected':'' }}>
+                                                                        data-imagecss="flag cr"
+                                                                        data-title="Costa Rica" {{$testimonial->country == 'cr'?'selected':'' }}>
                                                                     Costa Rica
                                                                 </option>
                                                                 <option value='cs'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag cs"
-                                                                        data-title="Serbia and Montenegro"  {{$testimonial->country == 'cs'?'selected':'' }}>Serbia and
+                                                                        data-title="Serbia and Montenegro" {{$testimonial->country == 'cs'?'selected':'' }}>
+                                                                    Serbia and
                                                                     Montenegro
                                                                 </option>
                                                                 <option value='cu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cu" data-title="Cuba"  {{$testimonial->country == 'cu'?'selected':'' }}>Cuba
+                                                                        data-imagecss="flag cu"
+                                                                        data-title="Cuba" {{$testimonial->country == 'cu'?'selected':'' }}>
+                                                                    Cuba
                                                                 </option>
                                                                 <option value='cv'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cv" data-title="Cape Verde  {{$testimonial->country == 'cv'?'selected':'' }}">
+                                                                        data-imagecss="flag cv"
+                                                                        data-title="Cape Verde  {{$testimonial->country == 'cv'?'selected':'' }}">
                                                                     Cape Verde
                                                                 </option>
                                                                 <option value='cx'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag cx"
-                                                                        data-title="Christmas Island"  {{$testimonial->country == 'cx'?'selected':'' }}>Christmas Island
+                                                                        data-title="Christmas Island" {{$testimonial->country == 'cx'?'selected':'' }}>
+                                                                    Christmas Island
                                                                 </option>
                                                                 <option value='cy'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag cy" data-title="Cyprus"  {{$testimonial->country == 'cy'?'selected':'' }}>
+                                                                        data-imagecss="flag cy"
+                                                                        data-title="Cyprus" {{$testimonial->country == 'cy'?'selected':'' }}>
                                                                     Cyprus
                                                                 </option>
                                                                 <option value='cz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag cz"
-                                                                        data-title="Czech Republic"  {{$testimonial->country == 'cz'?'selected':'' }}>Czech Republic
+                                                                        data-title="Czech Republic" {{$testimonial->country == 'cz'?'selected':'' }}>
+                                                                    Czech Republic
                                                                 </option>
                                                                 <option value='de'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag de" data-title="Germany"  {{$testimonial->country == 'de'?'selected':'' }}>
+                                                                        data-imagecss="flag de"
+                                                                        data-title="Germany" {{$testimonial->country == 'de'?'selected':'' }}>
                                                                     Germany
                                                                 </option>
                                                                 <option value='dj'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag dj" data-title="Djibouti"  {{$testimonial->country == 'dj'?'selected':'' }}>
+                                                                        data-imagecss="flag dj"
+                                                                        data-title="Djibouti" {{$testimonial->country == 'dj'?'selected':'' }}>
                                                                     Djibouti
                                                                 </option>
                                                                 <option value='dk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag dk" data-title="Denmark"  {{$testimonial->country == 'dk'?'selected':'' }}>
+                                                                        data-imagecss="flag dk"
+                                                                        data-title="Denmark" {{$testimonial->country == 'dk'?'selected':'' }}>
                                                                     Denmark
                                                                 </option>
                                                                 <option value='dm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag dm" data-title="Dominica"  {{$testimonial->country == 'dm'?'selected':'' }}>
+                                                                        data-imagecss="flag dm"
+                                                                        data-title="Dominica" {{$testimonial->country == 'dm'?'selected':'' }}>
                                                                     Dominica
                                                                 </option>
                                                                 <option value='do'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag do"
-                                                                        data-title="Dominican Republic"  {{$testimonial->country == 'do'?'selected':'' }}>Dominican
+                                                                        data-title="Dominican Republic" {{$testimonial->country == 'do'?'selected':'' }}>
+                                                                    Dominican
                                                                     Republic
                                                                 </option>
                                                                 <option value='dz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag dz" data-title="Algeria"  {{$testimonial->country == 'dz'?'selected':'' }}>
+                                                                        data-imagecss="flag dz"
+                                                                        data-title="Algeria" {{$testimonial->country == 'dz'?'selected':'' }}>
                                                                     Algeria
                                                                 </option>
                                                                 <option value='ec'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ec" data-title="Ecuador"  {{$testimonial->country == 'ec'?'selected':'' }}>
+                                                                        data-imagecss="flag ec"
+                                                                        data-title="Ecuador" {{$testimonial->country == 'ec'?'selected':'' }}>
                                                                     Ecuador
                                                                 </option>
                                                                 <option value='ee'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ee" data-title="Estonia"  {{$testimonial->country == 'ee'?'selected':'' }}>
+                                                                        data-imagecss="flag ee"
+                                                                        data-title="Estonia" {{$testimonial->country == 'ee'?'selected':'' }}>
                                                                     Estonia
                                                                 </option>
                                                                 <option value='eg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag eg" data-title="Egypt"  {{$testimonial->country == 'eg'?'selected':'' }}>Egypt
+                                                                        data-imagecss="flag eg"
+                                                                        data-title="Egypt" {{$testimonial->country == 'eg'?'selected':'' }}>
+                                                                    Egypt
                                                                 </option>
                                                                 <option value='eh'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag eh"
-                                                                        data-title="Western Sahara"  {{$testimonial->country == 'eh'?'selected':'' }}>Western Sahara
+                                                                        data-title="Western Sahara" {{$testimonial->country == 'eh'?'selected':'' }}>
+                                                                    Western Sahara
                                                                 </option>
                                                                 <option value='er'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag er" data-title="Eritrea"  {{$testimonial->country == 'er'?'selected':'' }}>
+                                                                        data-imagecss="flag er"
+                                                                        data-title="Eritrea" {{$testimonial->country == 'er'?'selected':'' }}>
                                                                     Eritrea
                                                                 </option>
                                                                 <option value='es'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag es" data-title="Spain"  {{$testimonial->country == 'es'?'selected':'' }}>Spain
+                                                                        data-imagecss="flag es"
+                                                                        data-title="Spain" {{$testimonial->country == 'es'?'selected':'' }}>
+                                                                    Spain
                                                                 </option>
                                                                 <option value='et'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag et" data-title="Ethiopia"  {{$testimonial->country == 'et'?'selected':'' }}>
+                                                                        data-imagecss="flag et"
+                                                                        data-title="Ethiopia" {{$testimonial->country == 'et'?'selected':'' }}>
                                                                     Ethiopia
                                                                 </option>
                                                                 <option value='fi'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag fi" data-title="Finland"  {{$testimonial->country == 'fi'?'selected':'' }}>
+                                                                        data-imagecss="flag fi"
+                                                                        data-title="Finland" {{$testimonial->country == 'fi'?'selected':'' }}>
                                                                     Finland
                                                                 </option>
                                                                 <option value='fj'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag fj" data-title="Fiji"  {{$testimonial->country == 'fj'?'selected':'' }}>Fiji
+                                                                        data-imagecss="flag fj"
+                                                                        data-title="Fiji" {{$testimonial->country == 'fj'?'selected':'' }}>
+                                                                    Fiji
                                                                 </option>
                                                                 <option value='fk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag fk"
-                                                                        data-title="Falkland Islands (Malvinas)"  {{$testimonial->country == 'fk'?'selected':'' }}>
+                                                                        data-title="Falkland Islands (Malvinas)" {{$testimonial->country == 'fk'?'selected':'' }}>
                                                                     Falkland
                                                                     Islands (Malvinas)
                                                                 </option>
                                                                 <option value='fm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag fm"
-                                                                        data-title="Federated States of Micronesia"  {{$testimonial->country == 'fm'?'selected':'' }}>
+                                                                        data-title="Federated States of Micronesia" {{$testimonial->country == 'fm'?'selected':'' }}>
                                                                     Federated
                                                                     States of Micronesia
                                                                 </option>
                                                                 <option value='fo'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag fo"
-                                                                        data-title="Faroe Islands"  {{$testimonial->country == 'fo'?'selected':'' }}>Faroe Islands
+                                                                        data-title="Faroe Islands" {{$testimonial->country == 'fo'?'selected':'' }}>
+                                                                    Faroe Islands
                                                                 </option>
                                                                 <option value='fr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag fr" data-title="France"  {{$testimonial->country == 'fr'?'selected':'' }}>
+                                                                        data-imagecss="flag fr"
+                                                                        data-title="France" {{$testimonial->country == 'fr'?'selected':'' }}>
                                                                     France
                                                                 </option>
                                                                 <option value='fx'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag fx"
-                                                                        data-title="France, Metropolitan"  {{$testimonial->country == 'fx'?'selected':'' }}>France,
+                                                                        data-title="France, Metropolitan" {{$testimonial->country == 'fx'?'selected':'' }}>
+                                                                    France,
                                                                     Metropolitan
                                                                 </option>
                                                                 <option value='ga'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ga" data-title="Gabon"  {{$testimonial->country == 'ga'?'selected':'' }}>Gabon
+                                                                        data-imagecss="flag ga"
+                                                                        data-title="Gabon" {{$testimonial->country == 'ga'?'selected':'' }}>
+                                                                    Gabon
                                                                 </option>
                                                                 <option value='gb'
                                                                         data-image="images/msdropdown/icons/blank.gif"
@@ -649,738 +723,910 @@
                                                                 </option>
                                                                 <option value='gd'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gd" data-title="Grenada"  {{$testimonial->country == 'gd'?'selected':'' }}>
+                                                                        data-imagecss="flag gd"
+                                                                        data-title="Grenada" {{$testimonial->country == 'gd'?'selected':'' }}>
                                                                     Grenada
                                                                 </option>
                                                                 <option value='ge'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ge" data-title="Georgia"  {{$testimonial->country == 'ge'?'selected':'' }}>
+                                                                        data-imagecss="flag ge"
+                                                                        data-title="Georgia" {{$testimonial->country == 'ge'?'selected':'' }}>
                                                                     Georgia
                                                                 </option>
                                                                 <option value='gf'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag gf"
-                                                                        data-title="French Guiana"  {{$testimonial->country == 'gf'?'selected':'' }}>French Guiana
+                                                                        data-title="French Guiana" {{$testimonial->country == 'gf'?'selected':'' }}>
+                                                                    French Guiana
                                                                 </option>
                                                                 <option value='gh'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gh" data-title="Ghana"  {{$testimonial->country == 'gh'?'selected':'' }}>Ghana
+                                                                        data-imagecss="flag gh"
+                                                                        data-title="Ghana" {{$testimonial->country == 'gh'?'selected':'' }}>
+                                                                    Ghana
                                                                 </option>
                                                                 <option value='gi'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gi" data-title="Gibraltar"  {{$testimonial->country == 'gi'?'selected':'' }}>
+                                                                        data-imagecss="flag gi"
+                                                                        data-title="Gibraltar" {{$testimonial->country == 'gi'?'selected':'' }}>
                                                                     Gibraltar
                                                                 </option>
                                                                 <option value='gl'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gl" data-title="Greenland"  {{$testimonial->country == 'gl'?'selected':'' }}>
+                                                                        data-imagecss="flag gl"
+                                                                        data-title="Greenland" {{$testimonial->country == 'gl'?'selected':'' }}>
                                                                     Greenland
                                                                 </option>
                                                                 <option value='gm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gm" data-title="Gambia"  {{$testimonial->country == 'gm'?'selected':'' }}>
+                                                                        data-imagecss="flag gm"
+                                                                        data-title="Gambia" {{$testimonial->country == 'gm'?'selected':'' }}>
                                                                     Gambia
                                                                 </option>
                                                                 <option value='gn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gn" data-title="Guinea"  {{$testimonial->country == 'gn'?'selected':'' }}>
+                                                                        data-imagecss="flag gn"
+                                                                        data-title="Guinea" {{$testimonial->country == 'gn'?'selected':'' }}>
                                                                     Guinea
                                                                 </option>
                                                                 <option value='gp'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gp" data-title="Guadeloupe"  {{$testimonial->country == 'gp'?'selected':'' }}>
+                                                                        data-imagecss="flag gp"
+                                                                        data-title="Guadeloupe" {{$testimonial->country == 'gp'?'selected':'' }}>
                                                                     Guadeloupe
                                                                 </option>
                                                                 <option value='gq'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag gq"
-                                                                        data-title="Equatorial Guinea"  {{$testimonial->country == 'gq'?'selected':'' }}>Equatorial Guinea
+                                                                        data-title="Equatorial Guinea" {{$testimonial->country == 'gq'?'selected':'' }}>
+                                                                    Equatorial Guinea
                                                                 </option>
                                                                 <option value='gr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gr" data-title="Greece"  {{$testimonial->country == 'gr'?'selected':'' }}>
+                                                                        data-imagecss="flag gr"
+                                                                        data-title="Greece" {{$testimonial->country == 'gr'?'selected':'' }}>
                                                                     Greece
                                                                 </option>
                                                                 <option value='gs'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag gs"
-                                                                        data-title="S. Georgia and S. Sandwich Islands"  {{$testimonial->country == 'gs'?'selected':'' }}>
+                                                                        data-title="S. Georgia and S. Sandwich Islands" {{$testimonial->country == 'gs'?'selected':'' }}>
                                                                     S.
                                                                     Georgia and S. Sandwich Islands
                                                                 </option>
                                                                 <option value='gt'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gt" data-title="Guatemala"  {{$testimonial->country == 'gt'?'selected':'' }}>
+                                                                        data-imagecss="flag gt"
+                                                                        data-title="Guatemala" {{$testimonial->country == 'gt'?'selected':'' }}>
                                                                     Guatemala
                                                                 </option>
                                                                 <option value='gu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gu" data-title="Guam"  {{$testimonial->country == 'gu'?'selected':'' }}>Guam
+                                                                        data-imagecss="flag gu"
+                                                                        data-title="Guam" {{$testimonial->country == 'gu'?'selected':'' }}>
+                                                                    Guam
                                                                 </option>
                                                                 <option value='gw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag gw"
-                                                                        data-title="Guinea-Bissau"  {{$testimonial->country == 'gw'?'selected':'' }}>Guinea-Bissau
+                                                                        data-title="Guinea-Bissau" {{$testimonial->country == 'gw'?'selected':'' }}>
+                                                                    Guinea-Bissau
                                                                 </option>
                                                                 <option value='gy'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag gy" data-title="Guyana"  {{$testimonial->country == 'gy'?'selected':'' }}>
+                                                                        data-imagecss="flag gy"
+                                                                        data-title="Guyana" {{$testimonial->country == 'gy'?'selected':'' }}>
                                                                     Guyana
                                                                 </option>
                                                                 <option value='hk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag hk" data-title="Hong Kong"  {{$testimonial->country == 'hk'?'selected':'' }}>
+                                                                        data-imagecss="flag hk"
+                                                                        data-title="Hong Kong" {{$testimonial->country == 'hk'?'selected':'' }}>
                                                                     Hong Kong
                                                                 </option>
                                                                 <option value='hm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag hm"
-                                                                        data-title="Heard Island and McDonald Islands"  {{$testimonial->country == 'hm'?'selected':'' }}>
+                                                                        data-title="Heard Island and McDonald Islands" {{$testimonial->country == 'hm'?'selected':'' }}>
                                                                     Heard
                                                                     Island and McDonald Islands
                                                                 </option>
                                                                 <option value='hn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag hn" data-title="Honduras"  {{$testimonial->country == 'hn'?'selected':'' }}>
+                                                                        data-imagecss="flag hn"
+                                                                        data-title="Honduras" {{$testimonial->country == 'hn'?'selected':'' }}>
                                                                     Honduras
                                                                 </option>
                                                                 <option value='hr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag hr"
-                                                                        data-title="Croatia (Hrvatska)"  {{$testimonial->country == 'hr'?'selected':'' }}>Croatia
+                                                                        data-title="Croatia (Hrvatska)" {{$testimonial->country == 'hr'?'selected':'' }}>
+                                                                    Croatia
                                                                     (Hrvatska)
                                                                 </option>
                                                                 <option value='ht'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ht" data-title="Haiti"  {{$testimonial->country == 'ht'?'selected':'' }}>Haiti
+                                                                        data-imagecss="flag ht"
+                                                                        data-title="Haiti" {{$testimonial->country == 'ht'?'selected':'' }}>
+                                                                    Haiti
                                                                 </option>
                                                                 <option value='hu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag hu" data-title="Hungary"  {{$testimonial->country == 'hu'?'selected':'' }}>
+                                                                        data-imagecss="flag hu"
+                                                                        data-title="Hungary" {{$testimonial->country == 'hu'?'selected':'' }}>
                                                                     Hungary
                                                                 </option>
                                                                 <option value='id'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag id" data-title="Indonesia"  {{$testimonial->country == 'id'?'selected':'' }}>
+                                                                        data-imagecss="flag id"
+                                                                        data-title="Indonesia" {{$testimonial->country == 'id'?'selected':'' }}>
                                                                     Indonesia
                                                                 </option>
                                                                 <option value='ie'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ie" data-title="Ireland"  {{$testimonial->country == 'ie'?'selected':'' }}>
+                                                                        data-imagecss="flag ie"
+                                                                        data-title="Ireland" {{$testimonial->country == 'ie'?'selected':'' }}>
                                                                     Ireland
                                                                 </option>
                                                                 <option value='il'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag il" data-title="Israel"  {{$testimonial->country == 'il'?'selected':'' }}>
+                                                                        data-imagecss="flag il"
+                                                                        data-title="Israel" {{$testimonial->country == 'il'?'selected':'' }}>
                                                                     Israel
                                                                 </option>
                                                                 <option value='in'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag in" data-title="India"  {{$testimonial->country == 'in'?'selected':'' }}>India
+                                                                        data-imagecss="flag in"
+                                                                        data-title="India" {{$testimonial->country == 'in'?'selected':'' }}>
+                                                                    India
                                                                 </option>
                                                                 <option value='io'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag io"
-                                                                        data-title="British Indian Ocean Territory"  {{$testimonial->country == 'io'?'selected':'' }}>
+                                                                        data-title="British Indian Ocean Territory" {{$testimonial->country == 'io'?'selected':'' }}>
                                                                     British
                                                                     Indian Ocean Territory
                                                                 </option>
                                                                 <option value='iq'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag iq" data-title="Iraq"  {{$testimonial->country == 'iq'?'selected':'' }}>Iraq
+                                                                        data-imagecss="flag iq"
+                                                                        data-title="Iraq" {{$testimonial->country == 'iq'?'selected':'' }}>
+                                                                    Iraq
                                                                 </option>
                                                                 <option value='ir'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ir" data-title="Iran"  {{$testimonial->country == 'ir'?'selected':'' }}>Iran
+                                                                        data-imagecss="flag ir"
+                                                                        data-title="Iran" {{$testimonial->country == 'ir'?'selected':'' }}>
+                                                                    Iran
                                                                 </option>
                                                                 <option value='is'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag is" data-title="Iceland"  {{$testimonial->country == 'is'?'selected':'' }}>
+                                                                        data-imagecss="flag is"
+                                                                        data-title="Iceland" {{$testimonial->country == 'is'?'selected':'' }}>
                                                                     Iceland
                                                                 </option>
                                                                 <option value='it'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag it" data-title="Italy"  {{$testimonial->country == 'it'?'selected':'' }}>Italy
+                                                                        data-imagecss="flag it"
+                                                                        data-title="Italy" {{$testimonial->country == 'it'?'selected':'' }}>
+                                                                    Italy
                                                                 </option>
                                                                 <option value='jm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag jm" data-title="Jamaica"  {{$testimonial->country == 'jm'?'selected':'' }}>
+                                                                        data-imagecss="flag jm"
+                                                                        data-title="Jamaica" {{$testimonial->country == 'jm'?'selected':'' }}>
                                                                     Jamaica
                                                                 </option>
                                                                 <option value='jo'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag jo" data-title="Jordan"  {{$testimonial->country == 'jo'?'selected':'' }}>
+                                                                        data-imagecss="flag jo"
+                                                                        data-title="Jordan" {{$testimonial->country == 'jo'?'selected':'' }}>
                                                                     Jordan
                                                                 </option>
                                                                 <option value='jp'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag jp" data-title="Japan"  {{$testimonial->country == 'jp'?'selected':'' }}>Japan
+                                                                        data-imagecss="flag jp"
+                                                                        data-title="Japan" {{$testimonial->country == 'jp'?'selected':'' }}>
+                                                                    Japan
                                                                 </option>
                                                                 <option value='ke'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ke" data-title="Kenya"  {{$testimonial->country == 'ke'?'selected':'' }}>Kenya
+                                                                        data-imagecss="flag ke"
+                                                                        data-title="Kenya" {{$testimonial->country == 'ke'?'selected':'' }}>
+                                                                    Kenya
                                                                 </option>
                                                                 <option value='kg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag kg" data-title="Kyrgyzstan"  {{$testimonial->country == 'kg'?'selected':'' }}>
+                                                                        data-imagecss="flag kg"
+                                                                        data-title="Kyrgyzstan" {{$testimonial->country == 'kg'?'selected':'' }}>
                                                                     Kyrgyzstan
                                                                 </option>
                                                                 <option value='kh'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag kh" data-title="Cambodia"  {{$testimonial->country == 'kh'?'selected':'' }}>
+                                                                        data-imagecss="flag kh"
+                                                                        data-title="Cambodia" {{$testimonial->country == 'kh'?'selected':'' }}>
                                                                     Cambodia
                                                                 </option>
                                                                 <option value='ki'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ki" data-title="Kiribati"  {{$testimonial->country == 'ki'?'selected':'' }}>
+                                                                        data-imagecss="flag ki"
+                                                                        data-title="Kiribati" {{$testimonial->country == 'ki'?'selected':'' }}>
                                                                     Kiribati
                                                                 </option>
                                                                 <option value='km'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag km" data-title="Comoros"  {{$testimonial->country == 'km'?'selected':'' }}>
+                                                                        data-imagecss="flag km"
+                                                                        data-title="Comoros" {{$testimonial->country == 'km'?'selected':'' }}>
                                                                     Comoros
                                                                 </option>
                                                                 <option value='kn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag kn"
-                                                                        data-title="Saint Kitts and Nevis"  {{$testimonial->country == 'kn'?'selected':'' }}>Saint Kitts
+                                                                        data-title="Saint Kitts and Nevis" {{$testimonial->country == 'kn'?'selected':'' }}>
+                                                                    Saint Kitts
                                                                     and Nevis
                                                                 </option>
                                                                 <option value='kp'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag kp"
-                                                                        data-title="Korea (North)"  {{$testimonial->country == 'kp'?'selected':'' }}>Korea (North)
+                                                                        data-title="Korea (North)" {{$testimonial->country == 'kp'?'selected':'' }}>
+                                                                    Korea (North)
                                                                 </option>
                                                                 <option value='kr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag kr"
-                                                                        data-title="Korea (South)"  {{$testimonial->country == 'kr'?'selected':'' }}>Korea (South)
+                                                                        data-title="Korea (South)" {{$testimonial->country == 'kr'?'selected':'' }}>
+                                                                    Korea (South)
                                                                 </option>
                                                                 <option value='kw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag kw" data-title="Kuwait"  {{$testimonial->country == 'kw'?'selected':'' }}>
+                                                                        data-imagecss="flag kw"
+                                                                        data-title="Kuwait" {{$testimonial->country == 'kw'?'selected':'' }}>
                                                                     Kuwait
                                                                 </option>
                                                                 <option value='ky'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ky"
-                                                                        data-title="Cayman Islands"  {{$testimonial->country == 'ky'?'selected':'' }}>Cayman Islands
+                                                                        data-title="Cayman Islands" {{$testimonial->country == 'ky'?'selected':'' }}>
+                                                                    Cayman Islands
                                                                 </option>
                                                                 <option value='kz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag kz" data-title="Kazakhstan"  {{$testimonial->country == 'kz'?'selected':'' }}>
+                                                                        data-imagecss="flag kz"
+                                                                        data-title="Kazakhstan" {{$testimonial->country == 'kz'?'selected':'' }}>
                                                                     Kazakhstan
                                                                 </option>
                                                                 <option value='la'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag la" data-title="Laos"  {{$testimonial->country == 'la'?'selected':'' }}>Laos
+                                                                        data-imagecss="flag la"
+                                                                        data-title="Laos" {{$testimonial->country == 'la'?'selected':'' }}>
+                                                                    Laos
                                                                 </option>
                                                                 <option value='lb'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag lb" data-title="Lebanon"  {{$testimonial->country == 'lb'?'selected':'' }}>
+                                                                        data-imagecss="flag lb"
+                                                                        data-title="Lebanon" {{$testimonial->country == 'lb'?'selected':'' }}>
                                                                     Lebanon
                                                                 </option>
                                                                 <option value='lc'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag lc"
-                                                                        data-title="Saint Lucia"  {{$testimonial->country == 'lc'?'selected':'' }}>Saint Lucia
+                                                                        data-title="Saint Lucia" {{$testimonial->country == 'lc'?'selected':'' }}>
+                                                                    Saint Lucia
                                                                 </option>
                                                                 <option value='li'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag li"
-                                                                        data-title="Liechtenstein"  {{$testimonial->country == 'li'?'selected':'' }}>Liechtenstein
+                                                                        data-title="Liechtenstein" {{$testimonial->country == 'li'?'selected':'' }}>
+                                                                    Liechtenstein
                                                                 </option>
                                                                 <option value='lk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag lk" data-title="Sri Lanka"  {{$testimonial->country == 'lk'?'selected':'' }}>
+                                                                        data-imagecss="flag lk"
+                                                                        data-title="Sri Lanka" {{$testimonial->country == 'lk'?'selected':'' }}>
                                                                     Sri Lanka
                                                                 </option>
                                                                 <option value='lr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag lr" data-title="Liberia"  {{$testimonial->country == 'lr'?'selected':'' }}>
+                                                                        data-imagecss="flag lr"
+                                                                        data-title="Liberia" {{$testimonial->country == 'lr'?'selected':'' }}>
                                                                     Liberia
                                                                 </option>
                                                                 <option value='ls'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ls" data-title="Lesotho"  {{$testimonial->country == 'ls'?'selected':'' }}>
+                                                                        data-imagecss="flag ls"
+                                                                        data-title="Lesotho" {{$testimonial->country == 'ls'?'selected':'' }}>
                                                                     Lesotho
                                                                 </option>
                                                                 <option value='lt'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag lt" data-title="Lithuania"  {{$testimonial->country == 'lt'?'selected':'' }}>
+                                                                        data-imagecss="flag lt"
+                                                                        data-title="Lithuania" {{$testimonial->country == 'lt'?'selected':'' }}>
                                                                     Lithuania
                                                                 </option>
                                                                 <option value='lu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag lu" data-title="Luxembourg"  {{$testimonial->country == 'lu'?'selected':'' }}>
+                                                                        data-imagecss="flag lu"
+                                                                        data-title="Luxembourg" {{$testimonial->country == 'lu'?'selected':'' }}>
                                                                     Luxembourg
                                                                 </option>
                                                                 <option value='lv'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag lv" data-title="Latvia"  {{$testimonial->country == 'lv'?'selected':'' }}>
+                                                                        data-imagecss="flag lv"
+                                                                        data-title="Latvia" {{$testimonial->country == 'lv'?'selected':'' }}>
                                                                     Latvia
                                                                 </option>
                                                                 <option value='ly'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ly" data-title="Libya"  {{$testimonial->country == 'ly'?'selected':'' }}>Libya
+                                                                        data-imagecss="flag ly"
+                                                                        data-title="Libya" {{$testimonial->country == 'ly'?'selected':'' }}>
+                                                                    Libya
                                                                 </option>
                                                                 <option value='ma'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ma" data-title="Morocco"  {{$testimonial->country == 'ma'?'selected':'' }}>
+                                                                        data-imagecss="flag ma"
+                                                                        data-title="Morocco" {{$testimonial->country == 'ma'?'selected':'' }}>
                                                                     Morocco
                                                                 </option>
                                                                 <option value='mc'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mc" data-title="Monaco"  {{$testimonial->country == 'mc'?'selected':'' }}>
+                                                                        data-imagecss="flag mc"
+                                                                        data-title="Monaco" {{$testimonial->country == 'mc'?'selected':'' }}>
                                                                     Monaco
                                                                 </option>
                                                                 <option value='md'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag md" data-title="Moldova"  {{$testimonial->country == 'md'?'selected':'' }}>
+                                                                        data-imagecss="flag md"
+                                                                        data-title="Moldova" {{$testimonial->country == 'md'?'selected':'' }}>
                                                                     Moldova
                                                                 </option>
                                                                 <option value='mg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mg" data-title="Madagascar"  {{$testimonial->country == 'mg'?'selected':'' }}>
+                                                                        data-imagecss="flag mg"
+                                                                        data-title="Madagascar" {{$testimonial->country == 'mg'?'selected':'' }}>
                                                                     Madagascar
                                                                 </option>
                                                                 <option value='mh'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag mh"
-                                                                        data-title="Marshall Islands"  {{$testimonial->country == 'mh'?'selected':'' }}>Marshall Islands
+                                                                        data-title="Marshall Islands" {{$testimonial->country == 'mh'?'selected':'' }}>
+                                                                    Marshall Islands
                                                                 </option>
                                                                 <option value='mk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mk" data-title="Macedonia"  {{$testimonial->country == 'mk'?'selected':'' }}>
+                                                                        data-imagecss="flag mk"
+                                                                        data-title="Macedonia" {{$testimonial->country == 'mk'?'selected':'' }}>
                                                                     Macedonia
                                                                 </option>
                                                                 <option value='ml'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ml" data-title="Mali"  {{$testimonial->country == 'ml'?'selected':'' }}>Mali
+                                                                        data-imagecss="flag ml"
+                                                                        data-title="Mali" {{$testimonial->country == 'ml'?'selected':'' }}>
+                                                                    Mali
                                                                 </option>
                                                                 <option value='mm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mm" data-title="Myanmar"  {{$testimonial->country == 'mm'?'selected':'' }}>
+                                                                        data-imagecss="flag mm"
+                                                                        data-title="Myanmar" {{$testimonial->country == 'mm'?'selected':'' }}>
                                                                     Myanmar
                                                                 </option>
                                                                 <option value='mn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mn" data-title="Mongolia"  {{$testimonial->country == 'mn'?'selected':'' }}>
+                                                                        data-imagecss="flag mn"
+                                                                        data-title="Mongolia" {{$testimonial->country == 'mn'?'selected':'' }}>
                                                                     Mongolia
                                                                 </option>
                                                                 <option value='mo'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mo" data-title="Macao"  {{$testimonial->country == 'mo'?'selected':'' }}>Macao
+                                                                        data-imagecss="flag mo"
+                                                                        data-title="Macao" {{$testimonial->country == 'mo'?'selected':'' }}>
+                                                                    Macao
                                                                 </option>
                                                                 <option value='mp'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag mp"
-                                                                        data-title="Northern Mariana Islands"  {{$testimonial->country == 'mp'?'selected':'' }}>Northern
+                                                                        data-title="Northern Mariana Islands" {{$testimonial->country == 'mp'?'selected':'' }}>
+                                                                    Northern
                                                                     Mariana
                                                                     Islands
                                                                 </option>
                                                                 <option value='mq'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mq" data-title="Martinique"  {{$testimonial->country == 'mq'?'selected':'' }}>
+                                                                        data-imagecss="flag mq"
+                                                                        data-title="Martinique" {{$testimonial->country == 'mq'?'selected':'' }}>
                                                                     Martinique
                                                                 </option>
                                                                 <option value='mr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mr" data-title="Mauritania"  {{$testimonial->country == 'mr'?'selected':'' }}>
+                                                                        data-imagecss="flag mr"
+                                                                        data-title="Mauritania" {{$testimonial->country == 'mr'?'selected':'' }}>
                                                                     Mauritania
                                                                 </option>
                                                                 <option value='ms'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ms" data-title="Montserrat"  {{$testimonial->country == 'ms'?'selected':'' }}>
+                                                                        data-imagecss="flag ms"
+                                                                        data-title="Montserrat" {{$testimonial->country == 'ms'?'selected':'' }}>
                                                                     Montserrat
                                                                 </option>
                                                                 <option value='mt'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mt" data-title="Malta"  {{$testimonial->country == 'mt'?'selected':'' }}>Malta
+                                                                        data-imagecss="flag mt"
+                                                                        data-title="Malta" {{$testimonial->country == 'mt'?'selected':'' }}>
+                                                                    Malta
                                                                 </option>
                                                                 <option value='mu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mu" data-title="Mauritius"  {{$testimonial->country == 'mu'?'selected':'' }}>
+                                                                        data-imagecss="flag mu"
+                                                                        data-title="Mauritius" {{$testimonial->country == 'mu'?'selected':'' }}>
                                                                     Mauritius
                                                                 </option>
                                                                 <option value='mv'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mv" data-title="Maldives"  {{$testimonial->country == 'mv'?'selected':'' }}>
+                                                                        data-imagecss="flag mv"
+                                                                        data-title="Maldives" {{$testimonial->country == 'mv'?'selected':'' }}>
                                                                     Maldives
                                                                 </option>
                                                                 <option value='mw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mw" data-title="Malawi"  {{$testimonial->country == 'mw'?'selected':'' }}>
+                                                                        data-imagecss="flag mw"
+                                                                        data-title="Malawi" {{$testimonial->country == 'mw'?'selected':'' }}>
                                                                     Malawi
                                                                 </option>
                                                                 <option value='mx'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mx" data-title="Mexico"  {{$testimonial->country == 'mx'?'selected':'' }}>
+                                                                        data-imagecss="flag mx"
+                                                                        data-title="Mexico" {{$testimonial->country == 'mx'?'selected':'' }}>
                                                                     Mexico
                                                                 </option>
                                                                 <option value='my'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag my" data-title="Malaysia"  {{$testimonial->country == 'my'?'selected':'' }}>
+                                                                        data-imagecss="flag my"
+                                                                        data-title="Malaysia" {{$testimonial->country == 'my'?'selected':'' }}>
                                                                     Malaysia
                                                                 </option>
                                                                 <option value='mz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag mz" data-title="Mozambique"  {{$testimonial->country == 'mz'?'selected':'' }}>
+                                                                        data-imagecss="flag mz"
+                                                                        data-title="Mozambique" {{$testimonial->country == 'mz'?'selected':'' }}>
                                                                     Mozambique
                                                                 </option>
                                                                 <option value='na'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag na" data-title="Namibia"  {{$testimonial->country == 'na'?'selected':'' }}>
+                                                                        data-imagecss="flag na"
+                                                                        data-title="Namibia" {{$testimonial->country == 'na'?'selected':'' }}>
                                                                     Namibia
                                                                 </option>
                                                                 <option value='nc'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag nc"
-                                                                        data-title="New Caledonia"  {{$testimonial->country == 'nc'?'selected':'' }}>New Caledonia
+                                                                        data-title="New Caledonia" {{$testimonial->country == 'nc'?'selected':'' }}>
+                                                                    New Caledonia
                                                                 </option>
                                                                 <option value='ne'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ne" data-title="Niger"  {{$testimonial->country == 'ne'?'selected':'' }}>Niger
+                                                                        data-imagecss="flag ne"
+                                                                        data-title="Niger" {{$testimonial->country == 'ne'?'selected':'' }}>
+                                                                    Niger
                                                                 </option>
                                                                 <option value='nf'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag nf"
-                                                                        data-title="Norfolk Island"  {{$testimonial->country == 'nf'?'selected':'' }}>Norfolk Island
+                                                                        data-title="Norfolk Island" {{$testimonial->country == 'nf'?'selected':'' }}>
+                                                                    Norfolk Island
                                                                 </option>
                                                                 <option value='ng'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ng" data-title="Nigeria"  {{$testimonial->country == 'ng'?'selected':'' }}>
+                                                                        data-imagecss="flag ng"
+                                                                        data-title="Nigeria" {{$testimonial->country == 'ng'?'selected':'' }}>
                                                                     Nigeria
                                                                 </option>
                                                                 <option value='ni'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ni" data-title="Nicaragua"  {{$testimonial->country == 'ni'?'selected':'' }}>
+                                                                        data-imagecss="flag ni"
+                                                                        data-title="Nicaragua" {{$testimonial->country == 'ni'?'selected':'' }}>
                                                                     Nicaragua
                                                                 </option>
                                                                 <option value='nl'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag nl"
-                                                                        data-title="Netherlands"  {{$testimonial->country == 'nl'?'selected':'' }}>Netherlands
+                                                                        data-title="Netherlands" {{$testimonial->country == 'nl'?'selected':'' }}>
+                                                                    Netherlands
                                                                 </option>
                                                                 <option value='no'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag no" data-title="Norway"  {{$testimonial->country == 'no'?'selected':'' }}>
+                                                                        data-imagecss="flag no"
+                                                                        data-title="Norway" {{$testimonial->country == 'no'?'selected':'' }}>
                                                                     Norway
                                                                 </option>
                                                                 <option value='np'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag np" data-title="Nepal"  {{$testimonial->country == 'np'?'selected':'' }}>Nepal
+                                                                        data-imagecss="flag np"
+                                                                        data-title="Nepal" {{$testimonial->country == 'np'?'selected':'' }}>
+                                                                    Nepal
                                                                 </option>
                                                                 <option value='nr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag nr" data-title="Nauru"  {{$testimonial->country == 'nr'?'selected':'' }}>Nauru
+                                                                        data-imagecss="flag nr"
+                                                                        data-title="Nauru" {{$testimonial->country == 'nr'?'selected':'' }}>
+                                                                    Nauru
                                                                 </option>
                                                                 <option value='nu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag nu" data-title="Niue"  {{$testimonial->country == 'nu'?'selected':'' }}>Niue
+                                                                        data-imagecss="flag nu"
+                                                                        data-title="Niue" {{$testimonial->country == 'nu'?'selected':'' }}>
+                                                                    Niue
                                                                 </option>
                                                                 <option value='nz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag nz"
-                                                                        data-title="New Zealand (Aotearoa)"  {{$testimonial->country == 'nz'?'selected':'' }}>New Zealand
+                                                                        data-title="New Zealand (Aotearoa)" {{$testimonial->country == 'nz'?'selected':'' }}>
+                                                                    New Zealand
                                                                     (Aotearoa)
                                                                 </option>
                                                                 <option value='om'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag om" data-title="Oman"  {{$testimonial->country == 'om'?'selected':'' }}>Oman
+                                                                        data-imagecss="flag om"
+                                                                        data-title="Oman" {{$testimonial->country == 'om'?'selected':'' }}>
+                                                                    Oman
                                                                 </option>
                                                                 <option value='pa'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag pa" data-title="Panama"  {{$testimonial->country == 'pa'?'selected':'' }}>
+                                                                        data-imagecss="flag pa"
+                                                                        data-title="Panama" {{$testimonial->country == 'pa'?'selected':'' }}>
                                                                     Panama
                                                                 </option>
                                                                 <option value='pe'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag pe" data-title="Peru"  {{$testimonial->country == 'pe'?'selected':'' }}>Peru
+                                                                        data-imagecss="flag pe"
+                                                                        data-title="Peru" {{$testimonial->country == 'pe'?'selected':'' }}>
+                                                                    Peru
                                                                 </option>
                                                                 <option value='pf'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag pf"
-                                                                        data-title="French Polynesia"  {{$testimonial->country == 'pf'?'selected':'' }}>French Polynesia
+                                                                        data-title="French Polynesia" {{$testimonial->country == 'pf'?'selected':'' }}>
+                                                                    French Polynesia
                                                                 </option>
                                                                 <option value='pg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag pg"
-                                                                        data-title="Papua New Guinea"  {{$testimonial->country == 'pg'?'selected':'' }}>Papua New Guinea
+                                                                        data-title="Papua New Guinea" {{$testimonial->country == 'pg'?'selected':'' }}>
+                                                                    Papua New Guinea
                                                                 </option>
                                                                 <option value='ph'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ph"
-                                                                        data-title="Philippines"  {{$testimonial->country == 'ph'?'selected':'' }}>Philippines
+                                                                        data-title="Philippines" {{$testimonial->country == 'ph'?'selected':'' }}>
+                                                                    Philippines
                                                                 </option>
                                                                 <option value='pk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag pk" data-title="Pakistan"  {{$testimonial->country == 'pk'?'selected':'' }}>
+                                                                        data-imagecss="flag pk"
+                                                                        data-title="Pakistan" {{$testimonial->country == 'pk'?'selected':'' }}>
                                                                     Pakistan
                                                                 </option>
                                                                 <option value='pl'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag pl" data-title="Poland"  {{$testimonial->country == 'pl'?'selected':'' }}>
+                                                                        data-imagecss="flag pl"
+                                                                        data-title="Poland" {{$testimonial->country == 'pl'?'selected':'' }}>
                                                                     Poland
                                                                 </option>
                                                                 <option value='pm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag pm"
-                                                                        data-title="Saint Pierre and Miquelon"  {{$testimonial->country == 'pm'?'selected':'' }}>Saint
+                                                                        data-title="Saint Pierre and Miquelon" {{$testimonial->country == 'pm'?'selected':'' }}>
+                                                                    Saint
                                                                     Pierre and
                                                                     Miquelon
                                                                 </option>
                                                                 <option value='pn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag pn" data-title="Pitcairn"  {{$testimonial->country == 'pn'?'selected':'' }}>
+                                                                        data-imagecss="flag pn"
+                                                                        data-title="Pitcairn" {{$testimonial->country == 'pn'?'selected':'' }}>
                                                                     Pitcairn
                                                                 </option>
                                                                 <option value='pr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag pr"
-                                                                        data-title="Puerto Rico"  {{$testimonial->country == 'pr'?'selected':'' }}>Puerto Rico
+                                                                        data-title="Puerto Rico" {{$testimonial->country == 'pr'?'selected':'' }}>
+                                                                    Puerto Rico
                                                                 </option>
                                                                 <option value='ps'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ps"
-                                                                        data-title="Palestinian Territory"  {{$testimonial->country == 'ps'?'selected':'' }}>Palestinian
+                                                                        data-title="Palestinian Territory" {{$testimonial->country == 'ps'?'selected':'' }}>
+                                                                    Palestinian
                                                                     Territory
                                                                 </option>
                                                                 <option value='pt'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag pt" data-title="Portugal"  {{$testimonial->country == 'pt'?'selected':'' }}>
+                                                                        data-imagecss="flag pt"
+                                                                        data-title="Portugal" {{$testimonial->country == 'pt'?'selected':'' }}>
                                                                     Portugal
                                                                 </option>
                                                                 <option value='pw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag pw" data-title="Palau"  {{$testimonial->country == 'pw'?'selected':'' }}>Palau
+                                                                        data-imagecss="flag pw"
+                                                                        data-title="Palau" {{$testimonial->country == 'pw'?'selected':'' }}>
+                                                                    Palau
                                                                 </option>
                                                                 <option value='py'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag py" data-title="Paraguay"  {{$testimonial->country == 'py'?'selected':'' }}>
+                                                                        data-imagecss="flag py"
+                                                                        data-title="Paraguay" {{$testimonial->country == 'py'?'selected':'' }}>
                                                                     Paraguay
                                                                 </option>
                                                                 <option value='qa'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag qa" data-title="Qatar"  {{$testimonial->country == 'qa'?'selected':'' }}>Qatar
+                                                                        data-imagecss="flag qa"
+                                                                        data-title="Qatar" {{$testimonial->country == 'qa'?'selected':'' }}>
+                                                                    Qatar
                                                                 </option>
                                                                 <option value='re'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag re" data-title="Reunion"  {{$testimonial->country == 're'?'selected':'' }}>
+                                                                        data-imagecss="flag re"
+                                                                        data-title="Reunion" {{$testimonial->country == 're'?'selected':'' }}>
                                                                     Reunion
                                                                 </option>
                                                                 <option value='ro'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ro" data-title="Romania"  {{$testimonial->country == 'ro'?'selected':'' }}>
+                                                                        data-imagecss="flag ro"
+                                                                        data-title="Romania" {{$testimonial->country == 'ro'?'selected':'' }}>
                                                                     Romania
                                                                 </option>
                                                                 <option value='ru'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag ru"
-                                                                        data-title="Russian Federation"  {{$testimonial->country == 'ru'?'selected':'' }}>Russian
+                                                                        data-title="Russian Federation" {{$testimonial->country == 'ru'?'selected':'' }}>
+                                                                    Russian
                                                                     Federation
                                                                 </option>
                                                                 <option value='rw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag rw" data-title="Rwanda"  {{$testimonial->country == 'rw'?'selected':'' }}>
+                                                                        data-imagecss="flag rw"
+                                                                        data-title="Rwanda" {{$testimonial->country == 'rw'?'selected':'' }}>
                                                                     Rwanda
                                                                 </option>
                                                                 <option value='sa'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag sa"
-                                                                        data-title="Saudi Arabia"  {{$testimonial->country == 'sa'?'selected':'' }}>Saudi Arabia
+                                                                        data-title="Saudi Arabia" {{$testimonial->country == 'sa'?'selected':'' }}>
+                                                                    Saudi Arabia
                                                                 </option>
                                                                 <option value='sb'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag sb"
-                                                                        data-title="Solomon Islands"  {{$testimonial->country == 'sb'?'selected':'' }}>Solomon Islands
+                                                                        data-title="Solomon Islands" {{$testimonial->country == 'sb'?'selected':'' }}>
+                                                                    Solomon Islands
                                                                 </option>
                                                                 <option value='sc'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sc" data-title="Seychelles"  {{$testimonial->country == 'sc'?'selected':'' }}>
+                                                                        data-imagecss="flag sc"
+                                                                        data-title="Seychelles" {{$testimonial->country == 'sc'?'selected':'' }}>
                                                                     Seychelles
                                                                 </option>
                                                                 <option value='sd'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sd" data-title="Sudan"  {{$testimonial->country == 'sd'?'selected':'' }}>Sudan
+                                                                        data-imagecss="flag sd"
+                                                                        data-title="Sudan" {{$testimonial->country == 'sd'?'selected':'' }}>
+                                                                    Sudan
                                                                 </option>
                                                                 <option value='se'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag se" data-title="Sweden"  {{$testimonial->country == 'se'?'selected':'' }}>
+                                                                        data-imagecss="flag se"
+                                                                        data-title="Sweden" {{$testimonial->country == 'se'?'selected':'' }}>
                                                                     Sweden
                                                                 </option>
                                                                 <option value='sg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sg" data-title="Singapore"  {{$testimonial->country == 'sg'?'selected':'' }}>
+                                                                        data-imagecss="flag sg"
+                                                                        data-title="Singapore" {{$testimonial->country == 'sg'?'selected':'' }}>
                                                                     Singapore
                                                                 </option>
                                                                 <option value='sh'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag sh"
-                                                                        data-title="Saint Helena"  {{$testimonial->country == 'sh'?'selected':'' }}>Saint Helena
+                                                                        data-title="Saint Helena" {{$testimonial->country == 'sh'?'selected':'' }}>
+                                                                    Saint Helena
                                                                 </option>
                                                                 <option value='si'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag si" data-title="Slovenia"  {{$testimonial->country == 'si'?'selected':'' }}>
+                                                                        data-imagecss="flag si"
+                                                                        data-title="Slovenia" {{$testimonial->country == 'si'?'selected':'' }}>
                                                                     Slovenia
                                                                 </option>
                                                                 <option value='sj'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag sj"
-                                                                        data-title="Svalbard and Jan Mayen"  {{$testimonial->country == 'sj'?'selected':'' }}>Svalbard and
+                                                                        data-title="Svalbard and Jan Mayen" {{$testimonial->country == 'sj'?'selected':'' }}>
+                                                                    Svalbard and
                                                                     Jan
                                                                     Mayen
                                                                 </option>
                                                                 <option value='sk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sk" data-title="Slovakia"  {{$testimonial->country == 'sk'?'selected':'' }}>
+                                                                        data-imagecss="flag sk"
+                                                                        data-title="Slovakia" {{$testimonial->country == 'sk'?'selected':'' }}>
                                                                     Slovakia
                                                                 </option>
                                                                 <option value='sl'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag sl"
-                                                                        data-title="Sierra Leone"  {{$testimonial->country == 'sl'?'selected':'' }}>Sierra Leone
+                                                                        data-title="Sierra Leone" {{$testimonial->country == 'sl'?'selected':'' }}>
+                                                                    Sierra Leone
                                                                 </option>
                                                                 <option value='sm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sm" data-title="San Marino"  {{$testimonial->country == 'sm'?'selected':'' }}>
+                                                                        data-imagecss="flag sm"
+                                                                        data-title="San Marino" {{$testimonial->country == 'sm'?'selected':'' }}>
                                                                     San Marino
                                                                 </option>
                                                                 <option value='sn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sn" data-title="Senegal"  {{$testimonial->country == 'sn'?'selected':'' }}>
+                                                                        data-imagecss="flag sn"
+                                                                        data-title="Senegal" {{$testimonial->country == 'sn'?'selected':'' }}>
                                                                     Senegal
                                                                 </option>
                                                                 <option value='so'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag so" data-title="Somalia"  {{$testimonial->country == 'so'?'selected':'' }}>
+                                                                        data-imagecss="flag so"
+                                                                        data-title="Somalia" {{$testimonial->country == 'so'?'selected':'' }}>
                                                                     Somalia
                                                                 </option>
                                                                 <option value='sr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sr" data-title="Suriname"  {{$testimonial->country == 'sr'?'selected':'' }}>
+                                                                        data-imagecss="flag sr"
+                                                                        data-title="Suriname" {{$testimonial->country == 'sr'?'selected':'' }}>
                                                                     Suriname
                                                                 </option>
                                                                 <option value='st'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag st"
-                                                                        data-title="Sao Tome and Principe"  {{$testimonial->country == 'st'?'selected':'' }}>Sao Tome and
+                                                                        data-title="Sao Tome and Principe" {{$testimonial->country == 'st'?'selected':'' }}>
+                                                                    Sao Tome and
                                                                     Principe
                                                                 </option>
                                                                 <option value='su'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag su"
-                                                                        data-title="USSR (former)"  {{$testimonial->country == 'su'?'selected':'' }}>USSR (former)
+                                                                        data-title="USSR (former)" {{$testimonial->country == 'su'?'selected':'' }}>
+                                                                    USSR (former)
                                                                 </option>
                                                                 <option value='sv'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag sv"
-                                                                        data-title="El Salvador"  {{$testimonial->country == 'sv'?'selected':'' }}>El Salvador
+                                                                        data-title="El Salvador" {{$testimonial->country == 'sv'?'selected':'' }}>
+                                                                    El Salvador
                                                                 </option>
                                                                 <option value='sy'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sy" data-title="Syria"  {{$testimonial->country == 'sy'?'selected':'' }}>Syria
+                                                                        data-imagecss="flag sy"
+                                                                        data-title="Syria" {{$testimonial->country == 'sy'?'selected':'' }}>
+                                                                    Syria
                                                                 </option>
                                                                 <option value='sz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag sz" data-title="Swaziland"  {{$testimonial->country == 'sz'?'selected':'' }}>
+                                                                        data-imagecss="flag sz"
+                                                                        data-title="Swaziland" {{$testimonial->country == 'sz'?'selected':'' }}>
                                                                     Swaziland
                                                                 </option>
                                                                 <option value='tc'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag tc"
-                                                                        data-title="Turks and Caicos Islands"  {{$testimonial->country == 'tc'?'selected':'' }}>Turks and
+                                                                        data-title="Turks and Caicos Islands" {{$testimonial->country == 'tc'?'selected':'' }}>
+                                                                    Turks and
                                                                     Caicos
                                                                     Islands
                                                                 </option>
                                                                 <option value='td'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag td" data-title="Chad"  {{$testimonial->country == 'td'?'selected':'' }}>Chad
+                                                                        data-imagecss="flag td"
+                                                                        data-title="Chad" {{$testimonial->country == 'td'?'selected':'' }}>
+                                                                    Chad
                                                                 </option>
                                                                 <option value='tf'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag tf"
-                                                                        data-title="French Southern Territories"  {{$testimonial->country == 'tf'?'selected':'' }}>French
+                                                                        data-title="French Southern Territories" {{$testimonial->country == 'tf'?'selected':'' }}>
+                                                                    French
                                                                     Southern
                                                                     Territories
                                                                 </option>
                                                                 <option value='tg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tg" data-title="Togo"  {{$testimonial->country == 'tg'?'selected':'' }}>Togo
+                                                                        data-imagecss="flag tg"
+                                                                        data-title="Togo" {{$testimonial->country == 'tg'?'selected':'' }}>
+                                                                    Togo
                                                                 </option>
                                                                 <option value='th'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag th" data-title="Thailand"  {{$testimonial->country == 'th'?'selected':'' }}>
+                                                                        data-imagecss="flag th"
+                                                                        data-title="Thailand" {{$testimonial->country == 'th'?'selected':'' }}>
                                                                     Thailand
                                                                 </option>
                                                                 <option value='tj'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tj" data-title="Tajikistan"  {{$testimonial->country == 'tj'?'selected':'' }}>
+                                                                        data-imagecss="flag tj"
+                                                                        data-title="Tajikistan" {{$testimonial->country == 'tj'?'selected':'' }}>
                                                                     Tajikistan
                                                                 </option>
                                                                 <option value='tk'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tk" data-title="Tokelau"  {{$testimonial->country == 'tk'?'selected':'' }}>
+                                                                        data-imagecss="flag tk"
+                                                                        data-title="Tokelau" {{$testimonial->country == 'tk'?'selected':'' }}>
                                                                     Tokelau
                                                                 </option>
                                                                 <option value='tl'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag tl"
-                                                                        data-title="Timor-Leste"  {{$testimonial->country == 'tl'?'selected':'' }}>Timor-Leste
+                                                                        data-title="Timor-Leste" {{$testimonial->country == 'tl'?'selected':'' }}>
+                                                                    Timor-Leste
                                                                 </option>
                                                                 <option value='tm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag tm"
-                                                                        data-title="Turkmenistan"  {{$testimonial->country == 'tm'?'selected':'' }}>Turkmenistan
+                                                                        data-title="Turkmenistan" {{$testimonial->country == 'tm'?'selected':'' }}>
+                                                                    Turkmenistan
                                                                 </option>
                                                                 <option value='tn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tn" data-title="Tunisia"  {{$testimonial->country == 'tn'?'selected':'' }}>
+                                                                        data-imagecss="flag tn"
+                                                                        data-title="Tunisia" {{$testimonial->country == 'tn'?'selected':'' }}>
                                                                     Tunisia
                                                                 </option>
                                                                 <option value='to'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag to" data-title="Tonga"  {{$testimonial->country == 'to'?'selected':'' }}>Tonga
+                                                                        data-imagecss="flag to"
+                                                                        data-title="Tonga" {{$testimonial->country == 'to'?'selected':'' }}>
+                                                                    Tonga
                                                                 </option>
                                                                 <option value='tp'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tp" data-title="East Timor"  {{$testimonial->country == 'tp'?'selected':'' }}>
+                                                                        data-imagecss="flag tp"
+                                                                        data-title="East Timor" {{$testimonial->country == 'tp'?'selected':'' }}>
                                                                     East Timor
                                                                 </option>
                                                                 <option value='tr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tr" data-title="Turkey"  {{$testimonial->country == 'tr'?'selected':'' }}>
+                                                                        data-imagecss="flag tr"
+                                                                        data-title="Turkey" {{$testimonial->country == 'tr'?'selected':'' }}>
                                                                     Turkey
                                                                 </option>
                                                                 <option value='tt'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag tt"
-                                                                        data-title="Trinidad and Tobago"  {{$testimonial->country == 'tt'?'selected':'' }}>Trinidad and
+                                                                        data-title="Trinidad and Tobago" {{$testimonial->country == 'tt'?'selected':'' }}>
+                                                                    Trinidad and
                                                                     Tobago
                                                                 </option>
                                                                 <option value='tv'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tv" data-title="Tuvalu"  {{$testimonial->country == 'tv'?'selected':'' }}>
+                                                                        data-imagecss="flag tv"
+                                                                        data-title="Tuvalu" {{$testimonial->country == 'tv'?'selected':'' }}>
                                                                     Tuvalu
                                                                 </option>
                                                                 <option value='tw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tw" data-title="Taiwan"  {{$testimonial->country == 'tw'?'selected':'' }}>
+                                                                        data-imagecss="flag tw"
+                                                                        data-title="Taiwan" {{$testimonial->country == 'tw'?'selected':'' }}>
                                                                     Taiwan
                                                                 </option>
                                                                 <option value='tz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag tz" data-title="Tanzania"  {{$testimonial->country == 'tz'?'selected':'' }}>
+                                                                        data-imagecss="flag tz"
+                                                                        data-title="Tanzania" {{$testimonial->country == 'tz'?'selected':'' }}>
                                                                     Tanzania
                                                                 </option>
                                                                 <option value='ua'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ua" data-title="Ukraine"  {{$testimonial->country == 'ua'?'selected':'' }}>
+                                                                        data-imagecss="flag ua"
+                                                                        data-title="Ukraine" {{$testimonial->country == 'ua'?'selected':'' }}>
                                                                     Ukraine
                                                                 </option>
                                                                 <option value='ug'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ug" data-title="Uganda"  {{$testimonial->country == 'ug'?'selected':'' }}>
+                                                                        data-imagecss="flag ug"
+                                                                        data-title="Uganda" {{$testimonial->country == 'ug'?'selected':'' }}>
                                                                     Uganda
                                                                 </option>
                                                                 <option value='uk'
@@ -1393,109 +1639,128 @@
                                                                 <option value='um'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag um"
-                                                                        data-title="United States Minor Outlying Islands"  {{$testimonial->country == 'um'?'selected':'' }}>
+                                                                        data-title="United States Minor Outlying Islands" {{$testimonial->country == 'um'?'selected':'' }}>
                                                                     United
                                                                     States Minor Outlying Islands
                                                                 </option>
                                                                 <option value='us'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag us"
-                                                                        data-title="United States"  {{$testimonial->country == 'us'?'selected':'' }}>United States
+                                                                        data-title="United States" {{$testimonial->country == 'us'?'selected':'' }}>
+                                                                    United States
                                                                 </option>
                                                                 <option value='uy'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag uy" data-title="Uruguay"  {{$testimonial->country == 'uy'?'selected':'' }}>
+                                                                        data-imagecss="flag uy"
+                                                                        data-title="Uruguay" {{$testimonial->country == 'uy'?'selected':'' }}>
                                                                     Uruguay
                                                                 </option>
                                                                 <option value='uz'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag uz" data-title="Uzbekistan"  {{$testimonial->country == 'uz'?'selected':'' }}>
+                                                                        data-imagecss="flag uz"
+                                                                        data-title="Uzbekistan" {{$testimonial->country == 'uz'?'selected':'' }}>
                                                                     Uzbekistan
                                                                 </option>
                                                                 <option value='va'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag va"
-                                                                        data-title="Vatican City State (Holy See)"  {{$testimonial->country == 'va'?'selected':'' }}>
+                                                                        data-title="Vatican City State (Holy See)" {{$testimonial->country == 'va'?'selected':'' }}>
                                                                     Vatican City
                                                                     State (Holy See)
                                                                 </option>
                                                                 <option value='vc'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag vc"
-                                                                        data-title="Saint Vincent and the Grenadines"  {{$testimonial->country == 'vc'?'selected':'' }}>
+                                                                        data-title="Saint Vincent and the Grenadines" {{$testimonial->country == 'vc'?'selected':'' }}>
                                                                     Saint
                                                                     Vincent and the Grenadines
                                                                 </option>
                                                                 <option value='ve'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ve" data-title="Venezuela"  {{$testimonial->country == 've'?'selected':'' }}>
+                                                                        data-imagecss="flag ve"
+                                                                        data-title="Venezuela" {{$testimonial->country == 've'?'selected':'' }}>
                                                                     Venezuela
                                                                 </option>
                                                                 <option value='vg'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag vg"
-                                                                        data-title="Virgin Islands (British)"  {{$testimonial->country == 'vg'?'selected':'' }}>Virgin
+                                                                        data-title="Virgin Islands (British)" {{$testimonial->country == 'vg'?'selected':'' }}>
+                                                                    Virgin
                                                                     Islands
                                                                     (British)
                                                                 </option>
                                                                 <option value='vi'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag vi"
-                                                                        data-title="Virgin Islands (U.S.)"  {{$testimonial->country == 'vi'?'selected':'' }}>Virgin
+                                                                        data-title="Virgin Islands (U.S.)" {{$testimonial->country == 'vi'?'selected':'' }}>
+                                                                    Virgin
                                                                     Islands (U.S.)
                                                                 </option>
                                                                 <option value='vn'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag vn" data-title="Viet Nam"  {{$testimonial->country == 'vn'?'selected':'' }}>
+                                                                        data-imagecss="flag vn"
+                                                                        data-title="Viet Nam" {{$testimonial->country == 'vn'?'selected':'' }}>
                                                                     Viet Nam
                                                                 </option>
                                                                 <option value='vu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag vu" data-title="Vanuatu"  {{$testimonial->country == 'vu'?'selected':'' }}>
+                                                                        data-imagecss="flag vu"
+                                                                        data-title="Vanuatu" {{$testimonial->country == 'vu'?'selected':'' }}>
                                                                     Vanuatu
                                                                 </option>
                                                                 <option value='wf'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag wf"
-                                                                        data-title="Wallis and Futuna"  {{$testimonial->country == 'wf'?'selected':'' }}>Wallis and Futuna
+                                                                        data-title="Wallis and Futuna" {{$testimonial->country == 'wf'?'selected':'' }}>
+                                                                    Wallis and Futuna
                                                                 </option>
                                                                 <option value='ws'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ws" data-title="Samoa"  {{$testimonial->country == 'ws'?'selected':'' }}>Samoa
+                                                                        data-imagecss="flag ws"
+                                                                        data-title="Samoa" {{$testimonial->country == 'ws'?'selected':'' }}>
+                                                                    Samoa
                                                                 </option>
                                                                 <option value='ye'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag ye" data-title="Yemen"  {{$testimonial->country == 'ye'?'selected':'' }}>Yemen
+                                                                        data-imagecss="flag ye"
+                                                                        data-title="Yemen" {{$testimonial->country == 'ye'?'selected':'' }}>
+                                                                    Yemen
                                                                 </option>
                                                                 <option value='yt'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag yt" data-title="Mayotte"  {{$testimonial->country == 'yt'?'selected':'' }}>
+                                                                        data-imagecss="flag yt"
+                                                                        data-title="Mayotte" {{$testimonial->country == 'yt'?'selected':'' }}>
                                                                     Mayotte
                                                                 </option>
                                                                 <option value='yu'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag yu"
-                                                                        data-title="Yugoslavia (former)"  {{$testimonial->country == 'yu'?'selected':'' }}>Yugoslavia
+                                                                        data-title="Yugoslavia (former)" {{$testimonial->country == 'yu'?'selected':'' }}>
+                                                                    Yugoslavia
                                                                     (former)
                                                                 </option>
                                                                 <option value='za'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag za"
-                                                                        data-title="South Africa"  {{$testimonial->country == 'za'?'selected':'' }}>South Africa
+                                                                        data-title="South Africa" {{$testimonial->country == 'za'?'selected':'' }}>
+                                                                    South Africa
                                                                 </option>
                                                                 <option value='zm'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag zm" data-title="Zambia"  {{$testimonial->country == 'zm'?'selected':'' }}>
+                                                                        data-imagecss="flag zm"
+                                                                        data-title="Zambia" {{$testimonial->country == 'zm'?'selected':'' }}>
                                                                     Zambia
                                                                 </option>
                                                                 <option value='zr'
                                                                         data-image="images/msdropdown/icons/blank.gif"
                                                                         data-imagecss="flag zr"
-                                                                        data-title="Zaire (former)"  {{$testimonial->country == 'zr'?'selected':'' }}>Zaire (former)
+                                                                        data-title="Zaire (former)" {{$testimonial->country == 'zr'?'selected':'' }}>
+                                                                    Zaire (former)
                                                                 </option>
                                                                 <option value='zw'
                                                                         data-image="images/msdropdown/icons/blank.gif"
-                                                                        data-imagecss="flag zw" data-title="Zimbabwe"  {{$testimonial->country == 'zw'?'selected':'' }}>
+                                                                        data-imagecss="flag zw"
+                                                                        data-title="Zimbabwe" {{$testimonial->country == 'zw'?'selected':'' }}>
                                                                     Zimbabwe
                                                                 </option>
                                                             </select>

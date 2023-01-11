@@ -19,13 +19,13 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{!! route('users') !!}" class="text-muted">
-                                {{trans('menu.users')}}
+                                {{__('menu.users')}}
                             </a>
                         </li>
 
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('menu.add_new_user')}}
+                                {{__('menu.add_new_user')}}
                             </a>
                         </li>
 
@@ -41,7 +41,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -75,18 +75,17 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('users.photo')}}
+                                                            {{__('users.photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
                                                                 class="image-input image-input-outline"
                                                                 id="kt_user_photo">
-                                                            <!--  style="background-image: url({{--asset(Storage::url(setting()->site_icon))--}})"-->
                                                                 <div class="image-input-wrapper"></div>
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{trans('general.change_image')}}">
+                                                                    data-original-title="{{__('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="photo" id="photo"
                                                                            class="table-responsive-sm">
@@ -101,7 +100,7 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
@@ -113,13 +112,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('users.name')}}
+                                                            {{__('users.name')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="name" id="name" type="text"
-                                                                placeholder=" {{trans('users.enter_name')}}"
+                                                                placeholder=" {{__('users.enter_name')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="name_error"></span>
@@ -131,7 +130,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('users.gender')}}
+                                                            {{__('users.gender')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
 
@@ -140,15 +139,15 @@
                                                                 name="gender" id="gender" type="text">
 
                                                                 <option value="">
-                                                                    {{trans('general.select_from_list')}}
+                                                                    {{__('general.select_from_list')}}
                                                                 </option>
 
                                                                 <option value="male">
-                                                                    {{trans('general.male')}}
+                                                                    {{__('general.male')}}
                                                                 </option>
 
                                                                 <option value="female">
-                                                                    {{trans('general.female')}}
+                                                                    {{__('general.female')}}
                                                                 </option>
 
                                                             </select>
@@ -161,13 +160,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('users.email')}}
+                                                            {{__('users.email')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="email" id="email" type="email"
-                                                                placeholder=" {{trans('users.enter_email')}}"
+                                                                placeholder=" {{__('users.enter_email')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="email_error"></span>
@@ -179,13 +178,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('users.password')}}
+                                                            {{__('users.password')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="password" id="password" type="password"
-                                                                placeholder=" {{trans('users.enter_password')}}"
+                                                                placeholder=" {{__('users.enter_password')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="password_error"></span>
@@ -196,7 +195,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('users.role_id')}}
+                                                            {{__('users.role_id')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
 
@@ -205,7 +204,7 @@
                                                                 name="role_id" id="role_id" type="text">
 
                                                                 <option value="">
-                                                                    {{trans('general.select_from_list')}}
+                                                                    {{__('general.select_from_list')}}
                                                                 </option>
 
                                                                 @if($roles && $roles->count()>0)
@@ -230,13 +229,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('users.mobile')}}
+                                                            {{__('users.mobile')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="mobile" id="mobile" type="text"
-                                                                placeholder=" {{trans('users.enter_mobile')}}"
+                                                                placeholder=" {{__('users.enter_mobile')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="mobile_error"></span>
@@ -313,7 +312,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

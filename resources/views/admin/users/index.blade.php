@@ -72,6 +72,7 @@
                                                         <th>{!! __('users.photo') !!}</th>
                                                         <th>{!! __('users.name') !!}</th>
                                                         <th>{!! __('users.email') !!}</th>
+                                                        <th>{!! __('users.mobile') !!}</th>
                                                         <th>{!! __('users.role_id') !!}</th>
                                                         <th>{!! __('users.status') !!}</th>
                                                         <th class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
@@ -94,12 +95,13 @@
 
                                                                 @else
                                                                     <img
-                                                                        src="{{asset(Storage::url($user->photo))}}"
+                                                                        src="{{asset('adminBoard/uploadedImages/users/'.$user->photo)}}"
                                                                         class="img-fluid img-thumbnail table-image "/>
                                                                 @endif
                                                             </td>
                                                             <td>{{ $user->name }}</td>
                                                             <td>{{ $user->email }}</td>
+                                                            <td>{{ $user->mobile }}</td>
                                                             <td>
 
                                                                 @if(Lang()=='ar')
@@ -138,7 +140,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="6" class="text-center">
+                                                            <td colspan="7" class="text-center">
                                                                 {!! __('users.no_users_found') !!}
                                                             </td>
                                                         </tr>
@@ -146,7 +148,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="6">
+                                                        <td colspan="7">
                                                             <div class="float-right">
                                                                 {!! $users->appends(request()->all())->links() !!}
                                                             </div>

@@ -9,65 +9,60 @@ use App\Models\Admin;
 use App\Models\Role;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
-
+use File;
 class UserController extends Controller
 {
     use GeneralTrait;
 
-    /////////////////////////////////////////
-    /// index
+    // index
     public function index()
     {
-        $title = trans('menu.users');
-        $users = Admin::with('role')
-            ->withoutTrashed()
-            ->orderByDesc('created_at')
-            ->where('id', '!=', \auth('admin')->user()->id)
-            ->paginate(15);
+        $title = __('menu.users');
+        $users = Admin::with('role')->withoutTrashed()->orderByDesc('created_at')
+            ->where('id', '!=', \auth('admin')->user()->id)->paginate(15);
         return view('admin.users.index', compact('title', 'users'));
     }
-    /////////////////////////////////////////
-    /// Get Trashed users index
+
+    // trashed users
     public function trashedUser()
     {
-        $title = trans('menu.trashed_users');
+        $title = __('menu.trashed_users');
         $trashedUsers = Admin::onlyTrashed()->orderByDesc('created_at')->paginate(15);
         return view('admin.users.trashed-users', compact('title', 'trashedUsers'));
     }
 
-    /////////////////////////////////////////
-    ///  create
+    //  create
     public function create()
     {
-        $title = trans('menu.add_new_user');
+        $title = __('menu.add_new_user');
         $roles = Role::get();
         return view('admin.users.create', compact('title', 'roles'));
     }
-    /////////////////////////////////////////
-    ///  store
+
+    //  store
     public function store(UserRequest $request)
     {
-        try {
-            if ($request->hasFile('photo')) {
-                $photo_path = $request->file('photo')->store('Users');
-            } else {
-                $photo_path = '';
-            }
-            Admin::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => bcrypt($request->password),
-                'role_id' => $request->role_id,
-                'photo' => $photo_path,
-                'mobile' => $request->mobile,
-                'gender' => $request->gender,
-            ]);
-            return $this->returnSuccessMessage(trans('general.add_success_message'));
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
+
+        // save image
+        if ($request->hasFile('photo')) {
+            $image = $request->file('photo');
+            $destinationPath = public_path('\adminBoard\uploadedImages\users\\');
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 250);
+        } else {
+            $photo_path = '';
+        }
+
+        Admin::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'role_id' => $request->role_id,
+            'photo' => $photo_path,
+            'mobile' => $request->mobile,
+            'gender' => $request->gender,
+        ]);
+        return $this->returnSuccessMessage(__('general.add_success_message'));
+
     }
 
     /////////////////////////////////////////
@@ -83,7 +78,7 @@ class UserController extends Controller
             return redirect()->route('admin.not.found');
         }
         $roles = Role::get();
-        $title = trans('users.update_users');
+        $title = __('users.update_users');
 
         return view('admin.users.update', compact('title', 'user', 'roles'));
     }
@@ -92,42 +87,48 @@ class UserController extends Controller
     ///  Update
     public function update(UserUpdateRequest $request)
     {
-        try {
-            $user = Admin::find($request->id);
+        $user = Admin::find($request->id);
 
-            if ($request->hasFile('photo')) {
-                if (!empty($user->photo)) {
-                    Storage::delete($user->photo);
-                    $photo_path = $request->file('photo')->store('Users');
-                } else {
-                    $photo_path = $request->file('photo')->store('Users');
-                }
-            } else {
-                if (!empty($user->photo)) {
-                    $photo_path = $user->photo;
-                } else {
-                    $photo_path = '';
-                }
+        if ($request->hasFile('photo')) {
+            $image_path = public_path("\adminBoard\uploadedImages\users\\") . $user->photo;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
             }
 
-            if (!empty($request->input('password'))) {
-                $password = bcrypt($request->password);
+            if (!empty($user->photo)) {
+                $image = $request->file('photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\users\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 250);
             } else {
-                $password = $user->password;
+                $image = $request->file('photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\users\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 250);
             }
-            $user->update([
-                'name' => $request->name,
-                'password' => $password,
-                'role_id' => $request->role_id,
-                'photo' => $photo_path,
-                'mobile' => $request->mobile,
-                'gender' => $request->gender,
-            ]);
+        } else {
+            if (!empty($user->photo)) {
+                $photo_path = $user->photo;
+            } else {
+                $photo_path = '';
+            }
+        }
 
-            return $this->returnSuccessMessage(trans('general.update_success_message'));
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
+        if (!empty($request->input('password'))) {
+            $password = bcrypt($request->password);
+        } else {
+            $password = $user->password;
+        }
+
+        $user->update([
+            'name' => $request->name,
+            'password' => $password,
+            'role_id' => $request->role_id,
+            'photo' => $photo_path,
+            'mobile' => $request->mobile,
+            'gender' => $request->gender,
+        ]);
+
+        return $this->returnSuccessMessage(__('general.update_success_message'));
+
     }
     /////////////////////////////////////////
     ///  restore
@@ -140,70 +141,60 @@ class UserController extends Controller
                     return redirect()->route('admin.not.found');
                 }
                 $user->restore();
-                return $this->returnSuccessMessage(trans('general.restore_success_message'));
+                return $this->returnSuccessMessage(__('general.restore_success_message'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
     /////////////////////////////////////////
     ///  Destroy
     public function destroy(Request $request)
     {
-        try {
-            if ($request->ajax()) {
-                $user = Admin::find($request->id);
-                if (!$user) {
-                    return redirect()->route('admin.not.found');
-                }
-                $user->delete();
-                return $this->returnSuccessMessage(trans('general.move_to_trash'));
+        if ($request->ajax()) {
+            $user = Admin::find($request->id);
+            if (!$user) {
+                return redirect()->route('admin.not.found');
             }
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
-
+            $user->delete();
+            return $this->returnSuccessMessage(__('general.move_to_trash'));
+        }
     }
 
     /////////////////////////////////////////
     ///  force delete
     public function forceDelete(Request $request)
     {
-        try {
-            if ($request->ajax()) {
-                $user = Admin::onlyTrashed()->find($request->id);
-                if (!$user) {
-                    return redirect()->route('admin.not.found');
-                }
-                if (!empty($user->photo)) {
-                    Storage::delete($user->photo);
-                }
-                $user->forceDelete();
-
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
+        if ($request->ajax()) {
+            $user = Admin::onlyTrashed()->find($request->id);
+            if (!$user) {
+                return redirect()->route('admin.not.found');
             }
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
 
+            if (!empty($user->photo)) {
+                $image_path = public_path("\adminBoard\uploadedImages\users\\") . $user->photo;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+            }
+            $user->forceDelete();
+
+            return $this->returnSuccessMessage(__('general.delete_success_message'));
+        }
     }
     /////////////////////////////////////////
     /// change  status
     public function changeStatus(Request $request)
     {
-        try {
-            $admin = Admin::find($request->id);
-            if ($request->switchStatus == 'false') {
-                $admin->status = null;
-                $admin->save();
-            } else {
-                $admin->status = 'on';
-                $admin->save();
-            }
-            return $this->returnSuccessMessage(trans('general.change_status_success_message'));
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
+        $admin = Admin::find($request->id);
+        if ($request->switchStatus == 'false') {
+            $admin->status = null;
+            $admin->save();
+        } else {
+            $admin->status = 'on';
+            $admin->save();
+        }
+        return $this->returnSuccessMessage(__('general.change_status_success_message'));
 
     }
 

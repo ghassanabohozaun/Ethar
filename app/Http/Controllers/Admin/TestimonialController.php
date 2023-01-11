@@ -3,16 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\OpinionRequest;
-use App\Http\Requests\OpinionUpdateRequest;
 use App\Http\Requests\TestimonialRequest;
-use App\Http\Resources\ClientOpinionResource;
-use App\Models\ClientOpinion;
 use App\Models\testimonial;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 
 class TestimonialController extends Controller
 {

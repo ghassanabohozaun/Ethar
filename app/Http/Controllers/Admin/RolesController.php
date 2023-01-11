@@ -4,10 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RoleRequest;
-use App\Http\Resources\OfferResource;
-use App\Http\Resources\RoleResource;
 use App\Models\Admin;
-use App\Models\Offer;
 use App\Models\Role;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
-use App\Http\Resources\NewResource;
 use App\Models\Article;
 use App\Traits\GeneralTrait;
 use File;
@@ -47,7 +46,7 @@ class ArticlesController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/articles');
-            $photo_path = $this->saveResizeImage($image, $destinationPath);
+            $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
 
         } else {
             $photo_path = '';
@@ -107,11 +106,11 @@ class ArticlesController extends Controller
             if (!empty($article->photo)) {
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath);
+                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
             } else {
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath);
+                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
             }
         } else {
             if (!empty($article->photo)) {

@@ -9,7 +9,6 @@ use App\Traits\GeneralTrait;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 
-
 class ProjectsController extends Controller
 {
     use GeneralTrait ;
