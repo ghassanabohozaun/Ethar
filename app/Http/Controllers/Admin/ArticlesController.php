@@ -9,7 +9,6 @@ use App\Models\Article;
 use App\Traits\GeneralTrait;
 use File;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class ArticlesController extends Controller
 {
@@ -54,29 +53,18 @@ class ArticlesController extends Controller
             $photo_path = '';
         }
 
-        if (setting()->site_lang_en == 'on') {
-            Article::create([
-                'photo' => $photo_path,
-                'language' => 'ar_en',
-                'title_ar' => $request->title_ar,
-                'title_en' => $request->title_en,
-                'abstract_ar' => $request->abstract_ar,
-                'abstract_en' => $request->abstract_en,
-                'publish_date' => $request->publish_date,
-                'publisher_name' => $request->publisher_name,
-            ]);
-        } else {
-            Article::create([
-                'photo' => $photo_path,
-                'language' => 'ar',
-                'title_ar' => $request->title_ar,
-                'title_en' => null,
-                'abstract_ar' => $request->abstract_ar,
-                'abstract_en' => null,
-                'publish_date' => $request->publish_date,
-                'publisher_name' => $request->publisher_name,
-            ]);
-        }
+        $lang_en = setting()->site_lang_en;
+        Article::create([
+            'photo' => $photo_path,
+            'language' => 'ar_en',
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'abstract_ar' => $request->abstract_ar,
+            'abstract_en' => $lang_en == 'on' ? $request->abstract_en : null,
+            'publish_date' => $request->publish_date,
+            'publisher_name' => $request->publisher_name,
+        ]);
+
         return $this->returnSuccessMessage(trans('general.add_success_message'));
 
     }
@@ -110,15 +98,16 @@ class ArticlesController extends Controller
         }
 
         if ($request->hasFile('photo')) {
+
+            $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+
             if (!empty($article->photo)) {
-                $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
-                if (File::exists($image_path)) {
-                    File::delete($image_path);
-                }
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
                 $photo_path = $this->saveResizeImage($image, $destinationPath);
-
             } else {
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
@@ -133,29 +122,18 @@ class ArticlesController extends Controller
         }
 
 
-        if (setting()->site_lang_en == 'on') {
-            $article->update([
-                'photo' => $photo_path,
-                'language' => 'ar_en',
-                'title_ar' => $request->title_ar,
-                'title_en' => $request->title_en,
-                'abstract_ar' => $request->abstract_ar,
-                'abstract_en' => $request->abstract_en,
-                'publish_date' => $request->publish_date,
-                'publisher_name' => $request->publisher_name,
-            ]);
-        } else {
-            $article->update([
-                'photo' => $photo_path,
-                'language' => 'ar',
-                'title_ar' => $request->title_ar,
-                'title_en' => null,
-                'abstract_ar' => $request->abstract_ar,
-                'abstract_en' => null,
-                'publish_date' => $request->publish_date,
-                'publisher_name' => $request->publisher_name,
-            ]);
-        }
+        $lang_en = setting()->site_lang_en;
+        $article->update([
+            'photo' => $photo_path,
+            'language' => 'ar_en',
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'abstract_ar' => $request->abstract_ar,
+            'abstract_en' => $lang_en == 'on' ? $request->abstract_en : null,
+            'publish_date' => $request->publish_date,
+            'publisher_name' => $request->publisher_name,
+        ]);
+
         return $this->returnSuccessMessage(trans('general.update_success_message'));
     }
 
