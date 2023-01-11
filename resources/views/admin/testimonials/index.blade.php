@@ -71,7 +71,7 @@
                                                         <th>{!! __('testimonials.name_en') !!}</th>
                                                         <th>{!! __('testimonials.rating') !!}</th>
                                                         <th>{!! __('testimonials.status') !!}</th>
-                                                        <th>{!! __('general.actions') !!}</th>
+                                                        <th  class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>

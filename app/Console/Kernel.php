@@ -19,7 +19,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        CourseLectureStatus::class
+        //CourseLectureStatus::class
     ];
 
     /**
@@ -30,7 +30,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('lecture:status')->everyMinute();
+       // $schedule->command('lecture:status')->everyMinute();
     }
 
     /**

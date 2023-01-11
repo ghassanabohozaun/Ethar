@@ -36,7 +36,7 @@ class TestimonialController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/testimonials');
-            $photo_path = $this->saveResizeImage($image, $destinationPath);
+            $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
         } else {
             $photo_path = '';
         }
@@ -101,7 +101,7 @@ class TestimonialController extends Controller
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\testimonials\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath);
+                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
 
             } else {
                 $image_path =  public_path('\adminBoard\uploadedImages\testimonials\\') . $testimonial->photo;
@@ -111,7 +111,7 @@ class TestimonialController extends Controller
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\testimonials\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath);
+                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
             }
         } else {
             if (!empty($testimonial->photo)) {
