@@ -6,15 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/adminBoard/assets/css/mystyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/trashed-articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/trashed-articles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/trashed-users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/trashed-users.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_ar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_en.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_ar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_en.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/update.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,23 +183,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/app/Http/Controllers/Admin",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/etharps/app/Http/Controllers/Admin&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\etharps\app\Http\Controllers\Admin" />
@@ -246,7 +249,8 @@
       <workItem from="1673181466013" duration="1201000" />
       <workItem from="1673270793356" duration="16245000" />
       <workItem from="1673337018214" duration="16899000" />
-      <workItem from="1673357287622" duration="10517000" />
+      <workItem from="1673357287622" duration="10809000" />
+      <workItem from="1673423315361" duration="571000" />
     </task>
     <servers />
   </component>

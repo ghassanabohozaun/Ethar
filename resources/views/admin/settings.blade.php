@@ -154,7 +154,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control form-control-lg"
+                                                                        class="form-control form-control-solid form-control-lg"
                                                                         name="site_name_ar" id="site_name_ar"
                                                                         type="text"
                                                                         placeholder=" {{trans('settings.enter_site_name_ar')}}"
@@ -173,7 +173,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control  form-control-lg"
+                                                                        class="form-control form-control-solid  form-control-lg"
                                                                         name="site_name_en" id="site_name_en"
                                                                         type="text"
                                                                         placeholder=" {{trans('settings.enter_site_name_en')}}"
@@ -201,7 +201,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control form-control-lg"
+                                                                        class="form-control form-control-solid form-control-lg"
                                                                         name="site_email" id="site_email" type="text"
                                                                         placeholder=" {{trans('settings.enter_site_email')}}"
                                                                         autocomplete="off"
@@ -219,7 +219,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control  form-control-lg"
+                                                                        class="form-control form-control-solid form-control-lg"
                                                                         name="site_gmail" id="site_gmail" type="text"
                                                                         placeholder=" {{trans('settings.enter_site_gmail')}}"
                                                                         autocomplete="off"
@@ -238,7 +238,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control  form-control-lg"
+                                                                        class="form-control form-control-solid form-control-lg"
                                                                         name="site_facebook" id="site_facebook"
                                                                         type="text"
                                                                         placeholder=" {{trans('settings.enter_site_facebook')}}"
@@ -257,7 +257,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control form-control-lg"
+                                                                        class="form-control form-control-solid form-control-lg"
                                                                         name="site_twitter" id="site_twitter"
                                                                         type="text"
                                                                         placeholder=" {{trans('settings.enter_site_twitter')}}"
@@ -276,7 +276,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control  form-control-lg"
+                                                                        class="form-control form-control-solid  form-control-lg"
                                                                         name="site_youtube" id="site_youtube"
                                                                         type="text"
                                                                         placeholder=" {{trans('settings.enter_site_youtube')}}"
@@ -296,7 +296,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control  form-control-lg"
+                                                                        class="form-control form-control-solid  form-control-lg"
                                                                         name="site_instagram" id="site_instagram"
                                                                         type="text"
                                                                         placeholder=" {{trans('settings.enter_site_instagram')}}"
@@ -316,7 +316,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control  form-control-lg"
+                                                                        class="form-control form-control-solid  form-control-lg"
                                                                         name="site_phone" id="site_phone" type="text"
                                                                         placeholder=" {{trans('settings.enter_site_phone')}}"
                                                                         autocomplete="off"
@@ -335,7 +335,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
-                                                                        class="form-control  form-control-lg"
+                                                                        class="form-control form-control-solid  form-control-lg"
                                                                         name="site_mobile" id="site_mobile" type="text"
                                                                         placeholder=" {{trans('settings.enter_site_mobile')}}"
                                                                         autocomplete="off"
@@ -422,7 +422,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="3"
-                                                                      class="form-control  form-control-lg"
+                                                                      class="form-control form-control-solid  form-control-lg"
                                                                       name="site_description_ar"
                                                                       id="site_description_ar"
                                                                       type="text"
@@ -443,7 +443,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="3"
-                                                                      class="form-control  form-control-lg"
+                                                                      class="form-control form-control-solid form-control-lg"
                                                                       name="site_description_en"
                                                                       id="site_description_en"
                                                                       type="text"
@@ -464,7 +464,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
-                                                                      class="form-control  form-control-lg"
+                                                                      class="form-control form-control-solid form-control-lg"
                                                                       name="site_keywords_ar" id="site_keywords_ar"
                                                                       type="text"
                                                                       placeholder=" {{trans('settings.enter_site_keywords_ar')}}"
@@ -484,7 +484,7 @@
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
-                                                                      class="form-control  form-control-lg"
+                                                                      class="form-control form-control-solid form-control-lg"
                                                                       name="site_keywords_en" id="site_keywords_en"
                                                                       type="text"
                                                                       placeholder=" {{trans('settings.enter_site_keywords_en')}}"

@@ -88,7 +88,7 @@
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
-                                                                class="form-control  form-control-lg"
+                                                                class="form-control form-control-solid form-control-lg"
                                                                 name="role_name_ar" id="role_name_ar" type="text"
                                                                 value="{{ $role->role_name_ar }}"
                                                                 placeholder=" {{trans('roles.enter_role_name_ar')}}"
@@ -106,7 +106,7 @@
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
-                                                                class="form-control  form-control-lg"
+                                                                class="form-control form-control-solid form-control-lg"
                                                                 name="role_name_en" id="role_name_en" type="text"
                                                                 value="{{ $role->role_name_en }}"
                                                                 placeholder=" {{trans('roles.enter_role_name_en')}}"

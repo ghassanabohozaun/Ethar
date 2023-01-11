@@ -210,7 +210,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg"
+                                                        class="form-control form-control-solid form-control-lg"
                                                         name="name" id="name" type="text"
                                                         placeholder=" {{trans('login.enter_name')}}"
                                                         autocomplete="off"/>
@@ -227,7 +227,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg "
+                                                        class="form-control form-control-solid form-control-lg "
                                                         name="email" id="email" type="email" disabled="disabled"
                                                         placeholder=" {{trans('login.enter_email')}}"
                                                         autocomplete="off"/>
@@ -246,7 +246,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg"
+                                                        class="form-control form-control-solid form-control-lg"
                                                         name="password" id="password" type="password"
                                                         placeholder=" {{trans('login.enter_password')}}"
                                                         autocomplete="off"/>
@@ -265,7 +265,7 @@
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
-                                                        class="form-control  form-control-lg"
+                                                        class="form-control form-control-solid form-control-lg"
                                                         name="confirm_password" id="confirm_password" type="password"
                                                         placeholder=" {{trans('login.enter_confirm_password')}}"
                                                         autocomplete="off"/>

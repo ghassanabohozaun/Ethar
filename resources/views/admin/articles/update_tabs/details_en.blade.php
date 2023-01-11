@@ -26,7 +26,7 @@
                         <!--begin::Group-->
                         <div class="form-group">
                             <label> {{trans('articles.abstract_en')}}</label>
-                            <textarea class="form-control summernote"
+                            <textarea class="form-control form-control-solid form-control-lg summernote"
                                       placeholder="{{trans('articles.enter_abstract_en')}}"
                                       name="abstract_en"
                                       id="abstract_en">{{$article->abstract_en}}</textarea>

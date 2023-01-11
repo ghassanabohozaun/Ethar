@@ -54,7 +54,7 @@
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control form-control-solid form-control-lg"
                                            id="publish_date" name="publish_date"
                                            readonly placeholder="{{trans('articles.enter_publish_date')}}"/>
                                     <div class="input-group-append">
