@@ -36,16 +36,11 @@ return [
     'projects' => 'Projects',
     'trashed_projects' => 'Trashed Projects',
     'add_new_project' => 'Add New Project',
-<<<<<<< HEAD
-
 
     'testimonials' => 'Testimonials',
     'trashed_testimonials' => 'Trashed Testimonials',
     'add_new_testimonial' => 'Add New Testimonial',
 
-=======
- 
->>>>>>> 762310d8760fb82e0a835c0c23aa8472cf3cebed
 ];
 
 
