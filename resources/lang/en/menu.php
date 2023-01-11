@@ -33,10 +33,6 @@ return [
     'articles' => 'Articles',
     'trashed_articles' => 'Trashed Articles',
     'add_new_article' => 'Add New Article',
-<<<<<<< HEAD
-
-=======
->>>>>>> a41705afa03b13a9b0dacf619b237e760cb018cb
     'projects' => 'Projects',
     'trashed_projects' => 'Trashed Projects',
     'add_new_project' => 'Add New Project',

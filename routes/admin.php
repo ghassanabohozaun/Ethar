@@ -176,7 +176,7 @@ Route::group([
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
     });
 
-<<<<<<< HEAD
+
     // project
     Route::group(['prefix' => 'project', 'middleware' => 'can:projects'], function () {
         Route::get('/', [ProjectsController::class, 'index'])->name('admin.project.index');
@@ -190,27 +190,7 @@ Route::group([
         Route::post('/restore', [ProjectsController::class, 'restore'])->name('admin.project.restore');
         Route::post('/change-status', [ProjectsController::class, 'changeStatus'])->name('admin.project.change.status');
     });
-=======
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Projects Routes
-    Route::group(['prefix' => 'projects', 'middleware' => 'can:projects'], function () {
-        Route::get('/', 'ProjectsController@index')->name('admin.projects');
-        Route::get('/get-projects', 'ProjectsController@getArticles')->name('admin.get.projects');
-        Route::post('/destroy', 'ProjectsController@destroy')->name('admin.projects.destroy');
-        Route::post('/change-status', 'ProjectsController@changeStatus')->name('admin.projects.change.status');
-        Route::get('/create', 'ProjectsController@create')->name('admin.projects.create');
-        Route::post('/store', 'ProjectsController@store')->name('admin.projects.store');
-        Route::get('/edit/{id?}', 'ProjectsController@edit')->name('admin.projects.edit');
-        Route::post('/update', 'ProjectsController@update')->name('admin.projects.update');
-        Route::get('/trashed-projects', 'ProjectsController@trashedArticles')->name('admin.projects.trashed');
-        Route::post('/force-delete', 'ProjectsController@forceDelete')->name('admin.projects.force.delete');
-        Route::post('/restore', 'ProjectsController@restore')->name('admin.projects.restore');
-    });
 
-    //Route::resource('project', ProjectsController::class );
-
-
->>>>>>> a41705afa03b13a9b0dacf619b237e760cb018cb
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////
