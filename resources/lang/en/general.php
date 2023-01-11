@@ -52,6 +52,7 @@ return [
     'submit' => 'Submit',
     'change_image' => 'Change image',
     'image_format_allow' => 'Allowed file types jpg,jpeg,png',
+    'file_format_allow' => 'Allowed file types pdf',
     'add_success_message' => ' Added Successfully',
     'delete_success_message' => ' deleted Successfully',
     'update_success_message' => ' updated Successfully',

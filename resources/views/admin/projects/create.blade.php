@@ -19,12 +19,12 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.project.index')}}" class="text-muted">
-                                {{trans('menu.articles')}}
+                                {{trans('menu.projects')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{__('menu.add_new_article')}}
+                                {{__('menu.add_new_project')}}
                             </a>
                         </li>
                     </ul>
@@ -75,35 +75,39 @@
 
                                 <ul class="nav nav-tabs" id="myTab2" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="article_settings_tab" data-toggle="tab"
+                                        <a class="nav-link active" id="settings_tab" data-toggle="tab"
                                            href="#article_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{__('articles.article_settings_tab')}}</span>
+                                            <span class="nav-text">{{__('projects.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="article_details_ar_tab" data-toggle="tab"
+                                        <a class="nav-link" id="details_ar_tab" data-toggle="tab"
                                            href="#article_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_details_ar_tab')}}</span>
+                                            <span class="nav-text">{{trans('projects.details_ar_tab')}}</span>
                                         </a>
                                     </li>
+                                    @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
-                                        <a class="nav-link" id="article_details_en_tab" data-toggle="tab"
+                                        <a class="nav-link" id="details_en_tab" data-toggle="tab"
                                            href="#article_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_details_en_tab')}}</span>
+                                            <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
 
 
                                 <div class="tab-content mt-5">
                                     @include('admin.projects.create_tabs.settings')
                                     @include('admin.projects.create_tabs.details_ar')
+                                    @if($lang_en =setting()->site_lang_en == 'on')
                                     @include('admin.projects.create_tabs.details_en')
+                                    @endif
                                 </div>
 
 
@@ -187,9 +191,9 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'add_article_button'}
+                            customClass: {confirmButton: 'add_project_button'}
                         });
-                        $('.add_article_button').click(function () {
+                        $('.add_project_button').click(function () {
                             window.location.href = "{{route('admin.project.index')}}";
                         });
                     }

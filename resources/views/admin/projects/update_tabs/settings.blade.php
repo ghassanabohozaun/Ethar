@@ -28,7 +28,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('articles.photo')}}
+                                {{trans('projects.photo')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div
@@ -64,7 +64,7 @@
                           <!--begin::Group-->
                           <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('courses.course_details')}}
+                                {{trans('projects.file')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <input
@@ -72,6 +72,7 @@
                                     type="file" name="file" id="file"
 
                                     placeholder=""/>
+                                    <span class="form-text text-muted">{{trans('general.file_format_allow')}}</span>
                                 <span class="form-text text-danger"
                                       id="course_details_error"></span>
                             </div>
@@ -83,13 +84,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('articles.publish_date')}}
+                                {{trans('projects.date')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
                                            id="publish_date" name="date" value="{{$project->date}}"
-                                           readonly placeholder="{{trans('articles.enter_publish_date')}}"/>
+                                           readonly placeholder="{{trans('projects.date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
 								        <i class="la la-calendar-check-o"></i>
@@ -106,7 +107,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('articles.publisher_name')}}
+                                {{trans('projects.writer')}}
                             </label>
 
                             <div class="col-lg-9 col-xl-9">
@@ -123,7 +124,7 @@
                           <!--begin::Group-->
                           <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{-- {{trans('users.gender')}}   --}}نوع المشروع
+                                {{trans('projects.type')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 
@@ -132,16 +133,20 @@
                                     name="type" id="type" type="text">
 
                                     <option value="current" {{$project->type == 'current'?'selected':''}}>
+                                        @if(Lang() == 'ar')
+                                        الحالي
+                                        @elseif(Lang() == 'en')
                                         current
-
+                                        @endif
                                     </option>
 
                                     <option value="previous" {{$project->type == 'previous'?'selected':''}}>
+                                        @if(Lang() == 'ar')
+                                        السابق
+                                        @elseif(Lang() == 'en')
                                         previous
-
+                                        @endif
                                     </option>
-
-
 
                                 </select>
                                 <span class="form-text text-danger"
