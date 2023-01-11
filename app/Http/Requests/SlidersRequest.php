@@ -23,41 +23,22 @@ class SlidersRequest extends FormRequest
      */
     public function rules()
     {
-
-        if ($this->input('button_status') == 'show') {
-
-            if (setting()->site_lang_en == 'on') {
-                return [
-                    'title_ar' => 'required',
-                    'title_en' => 'required',
-                    'details_ar' => 'required',
-                    'details_en' => 'required',
-                    'photo' => 'required|image|mimes:jpeg,jpg,png|max:5120',
-                ];
-            } else {
-                return [
-                    'title_ar' => 'required',
-                    'details_ar' => 'required',
-                    'photo' => 'required|image|mimes:jpeg,jpg,png|max:5120',
-                ];
-            }
-        }else{
-            if (setting()->site_lang_en == 'on') {
-                return [
-                    'title_ar' => 'required',
-                    'title_en' => 'required',
-                    'details_ar' => 'required',
-                    'details_en' => 'required',
-                    'photo' => 'required|image|mimes:jpeg,jpg,png|max:5120',
-                ];
-            } else{
-                return [
-                    'title_ar' => 'required',
-                    'details_ar' => 'required',
-                    'photo' => 'required|image|mimes:jpeg,jpg,png|max:5120',
-                ];
-            }
+        if (setting()->site_lang_en == 'on') {
+            return [
+                'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                'title_ar' => 'required|unique:articles',
+                'title_en' => 'required|unique:articles',
+                'details_ar' => 'required',
+                'details_en' => 'required',
+            ];
+        } else {
+            return [
+                'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                'title_ar' => 'required|unique:articles',
+                'details_ar' => 'required',
+            ];
         }
+
 
 
     }

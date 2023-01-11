@@ -86,7 +86,7 @@
                                                         <tr>
                                                             <td>{!! $loop->iteration!!}</td>
                                                             <td>
-                                                                <img src="{{asset(Storage::url($slider->photo))}}"
+                                                                <img src="{{asset('adminBoard/uploadedImages/sliders/'.$slider->photo)}}"
                                                                      class="img-fluid img-thumbnail table-image "/>
                                                             </td>
                                                             <td>{{ $slider->title_ar }}</td>

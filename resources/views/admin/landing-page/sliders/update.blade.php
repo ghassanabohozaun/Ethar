@@ -84,6 +84,7 @@
                                                                    class="form-control form-control-solid form-control-lg"
                                                                    name="id" id="id" type="hidden"
                                                                    autocomplete="off"/>
+                                                            <input type="hidden" name="hidden_photo" value="hidden_photo">
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
@@ -100,7 +101,7 @@
                                                                 id="kt_slider_photo">
                                                             <!--  style="background-image: url({{--asset(Storage::url(setting()->site_icon))--}})"-->
                                                                 <div class="image-input-wrapper"
-                                                                     style="background-image: url({{asset(Storage::url($slider->photo))}}">
+                                                                     style="background-image: url({{asset('adminBoard/uploadedImages/sliders/'.$slider->photo)}}">
 
                                                                 </div>
                                                                 <label
