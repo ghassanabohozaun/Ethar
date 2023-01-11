@@ -4,7 +4,7 @@
         <div class="col-xl-12 col-xxl-10">
 
             <div class="row justify-content-center">
-                <div class="col-xl-9" style="height: 400px">
+                <div class="col-xl-9" style="height: 580px">
 
                     <!--begin::body-->
                     <div class="my-5">
@@ -74,7 +74,7 @@
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
-                                           id="publish_date" name="date"
+                                           id="date" name="date"
                                            readonly placeholder="{{trans('articles.enter_publish_date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
@@ -133,11 +133,7 @@
                                         @elseif(Lang() == 'en')
                                         previous
                                         @endif
-
-
                                     </option>
-
-
 
                                 </select>
                                 <span class="form-text text-danger"
@@ -145,10 +141,6 @@
                             </div>
                         </div>
                         <!--end::Group-->
-
-
-
-
 
                     </div>
                 </div>
@@ -168,7 +160,7 @@
         var article_photo = new KTImageInput('kt_article_photo');
         ////////////////////////////////////////////////////////////
         ///////// Datepicker
-        $('#publish_date').datepicker({
+        $('#date').datepicker({
             format: "yyyy-mm-dd",
             todayBtn: true,
             clearBtn: false,

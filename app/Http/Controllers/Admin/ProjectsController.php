@@ -6,17 +6,18 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectsRequest;
 use App\Models\Projects;
 use App\Traits\GeneralTrait;
-use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ProjectsController extends Controller
 {
-    use GeneralTrait ;
+    use GeneralTrait;
+
     public function index()
     {
         $projects = Projects::paginate(15);
         $title = __('menu.projects');
-        return view('admin.projects.index' , compact('projects' , 'title'));
+        return view('admin.projects.index', compact('projects', 'title'));
     }
 
     public function create()
@@ -25,53 +26,51 @@ class ProjectsController extends Controller
         return view('admin.projects.create');
     }
 
-    public function store(ProjectsRequest $request){
+    public function store(ProjectsRequest $request)
+    {
 
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/projects');
-            $photo_path = $this->saveResizeImage($image,$destinationPath);
-
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = '';
         }
 
         // save File
-
         if ($request->hasFile('file')) {
-
-           $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/project');
+            $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/project');
         } else {
             $file = '';
         }
 
 
-
-        $lang_en =setting()->site_lang_en ;
-
-            Projects::create([
-                'photo'         => $photo_path,
-                'language'      => 'ar_en',
-                'details_ar'    => $request->details_ar,
-                'details_en'    => $lang_en == 'on'?$request->details_en:null,
-                'title_ar'      => $request->title_ar,
-                'title_en'      => $lang_en == 'on'?$request->title_en:null,
-                'file'          => $file,
-                'date'          => $request->date,
-                'writer'        => $request->writer,
-                'type'          => $request->type,
-            ]);
+        $lang_en = setting()->site_lang_en;
+        Projects::create([
+            'photo' => $photo_path,
+            'language' => 'ar_en',
+            'details_ar' => $request->details_ar,
+            'details_en' => $lang_en == 'on' ? $request->details_en : null,
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'file' => $file,
+            'date' => $request->date,
+            'writer' => $request->writer,
+            'type' => $request->type,
+        ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
     }
 
-    public function edit( $id){
+    public function edit($id)
+    {
         $project = Projects::findOrFail($id);
         return view('admin.projects.update', compact('project'));
     }
 
-    public function update(ProjectsRequest $request){
+    public function update(ProjectsRequest $request)
+    {
         // return $request->all();
         $project = Projects::findORFail($request->id);
 
@@ -79,7 +78,7 @@ class ProjectsController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/projects');
-            $photo_path = $this->saveResizeImage($image,$destinationPath);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = $project->photo;
         }
@@ -89,23 +88,23 @@ class ProjectsController extends Controller
         if ($request->hasFile('file')) {
 
             $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/project');
-         } else {
-             $file = $project->file;
-         }
+        } else {
+            $file = $project->file;
+        }
 
-        $lang_en =setting()->site_lang_en ;
-           $project->update([
-                'photo'         => $photo_path,
-                'language'      => 'ar_en',
-                'details_ar'    => $request->details_ar,
-                'details_en'    => $lang_en == 'on'?$request->details_en:null,
-                'title_ar'      => $request->title_ar,
-                'title_en'      => $lang_en == 'on'?$request->title_en:null,
-                'file'          => $file,
-                'date'          => $request->date,
-                'writer'        => $request->writer,
-                'type'          => $request->type,
-            ]);
+        $lang_en = setting()->site_lang_en;
+        $project->update([
+            'photo' => $photo_path,
+            'language' => 'ar_en',
+            'details_ar' => $request->details_ar,
+            'details_en' => $lang_en == 'on' ? $request->details_en : null,
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'file' => $file,
+            'date' => $request->date,
+            'writer' => $request->writer,
+            'type' => $request->type,
+        ]);
 
         return $this->returnSuccessMessage(__('general.update_success_message'));
     }
@@ -118,7 +117,7 @@ class ProjectsController extends Controller
     }
 
 
-     ///////////////////////////////////////////////
+    ///////////////////////////////////////////////
     /// destroy
     public function destroy(Request $request)
     {
@@ -191,10 +190,10 @@ class ProjectsController extends Controller
         $project = Projects::find($request->id);
 
         if ($request->switchStatus == 'false') {
-            $project->status = 'hide';
+            $project->status = null;
             $project->save();
         } else {
-            $project->status = 'show';
+            $project->status = 'on';
             $project->save();
         }
 

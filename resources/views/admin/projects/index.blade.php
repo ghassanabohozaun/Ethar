@@ -106,7 +106,7 @@
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
-                                                                           {{$project->status == 'show' ? 'checked':''}}  data-id="{{$project->id}}"
+                                                                           {{$project->status == 'on' ? 'checked':''}}  data-id="{{$project->id}}"
                                                                            class="change_status">
                                                                 </div>
                                                             </td>

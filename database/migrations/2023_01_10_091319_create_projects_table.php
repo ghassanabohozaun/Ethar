@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('title_en')->nullable();
             $table->text('details_ar')->nullable();
             $table->text('details_en')->nullable();
-            $table->enum('status', ['show', 'hide'])->default('show');
+            $table->string('status')->nullable();
             $table->string('photo')->nullable();
             $table->enum('language',['ar','ar_en'])->default('ar');
             $table->text('file')->nullable();
