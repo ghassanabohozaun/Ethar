@@ -24,10 +24,9 @@ class ProjectsRequest extends FormRequest
     public function rules()
     {
 
-
             if (setting()->site_lang_en == 'on') {
                 return [
-                    'photo' => 'required_without:ph|image|mimes:jpeg,jpg,png|max:1024',
+                    'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
                     'title_ar' => 'required|unique:articles',
                     'title_en' => 'required|unique:articles',
                     'details_ar' => 'required',
@@ -38,7 +37,7 @@ class ProjectsRequest extends FormRequest
                 ];
             } else {
                 return [
-                    'photo' => 'required_without:ph|image|mimes:jpeg,jpg,png|max:1024',
+                    'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
                     'title_ar' => 'required|unique:articles',
                     'details_ar' => 'required',
                     'date' => 'required',

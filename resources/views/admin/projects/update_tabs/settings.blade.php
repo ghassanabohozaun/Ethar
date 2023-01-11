@@ -19,7 +19,7 @@
                                        class="form-control form-control-solid form-control-lg"
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
-                                       <input type="hidden" name="ph" value="ph">
+                                       <input type="hidden" name="hidden_photo" value="hidden_photo">
                             </div>
                         </div>
                         <!--end::Group-->
@@ -70,7 +70,7 @@
                                 <input
                                     class="form-control  form-control-lg"
                                     type="file" name="file" id="file"
-                                    
+
                                     placeholder=""/>
                                 <span class="form-text text-danger"
                                       id="course_details_error"></span>
