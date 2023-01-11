@@ -43,7 +43,7 @@ class SlidersController extends Controller
         $lang_en = setting()->site_lang_en;
         Slider::create([
             'photo' => $photo_path,
-            'language' => 'ar_en',
+            'language' => $lang_en == 'on' ?  'ar_en' : 'ar',
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'details_ar' => $request->details_ar,
@@ -52,7 +52,7 @@ class SlidersController extends Controller
             'button_status' => $request->button_status,
             'url_ar' => null,
             'url_en' => null,
-            'order' => $request->order,
+            'order' => null,
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
@@ -76,16 +76,12 @@ class SlidersController extends Controller
     {
 
         $slider = Slider::find($request->id);
+
         if (!$slider) {
             return redirect()->route('admin.not.found');
         }
 
         if ($request->hasFile('photo')) {
-
-            $image_path = public_path("\adminBoard\uploadedImages\sliders\\") . $slider->photo;
-            if (File::exists($image_path)) {
-                File::delete($image_path);
-            }
 
             if (!empty($article->photo)) {
                 $image = $request->file('photo');
@@ -107,7 +103,7 @@ class SlidersController extends Controller
         $lang_en = setting()->site_lang_en;
         $slider->update([
             'photo' => $photo_path,
-            'language' => 'ar_en',
+            'language' => $lang_en == 'on' ?  'ar_en' : 'ar',
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'details_ar' => $request->details_ar,

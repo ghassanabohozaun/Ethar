@@ -17,7 +17,7 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="#" class="text-muted">
-                                {{__('menu.media')}}
+                                {{__('menu.landing_page')}}
                             </a>
                         </li>
 
@@ -214,7 +214,6 @@
                                                              {{__('sliders.exist_number')}}
                                                                 &nbsp;
                                                                 {{App\Models\Slider::select('order')->orderBy('order','desc')->pluck('order')}}
-
                                                             </span>
                                                             <span class="form-text text-danger" id="order_error"></span>
                                                         </div>
@@ -300,9 +299,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
-
-
                                                 </div>
                                                 <!--begin::body-->
 
@@ -340,14 +336,14 @@
             $('#title_en').css('border-color', '');
             $('#details_ar').css('border-color', '');
             $('#details_en').css('border-color', '');
-            $('#order').css('border-color', '');
+            //$('#order').css('border-color', '');
 
 
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
             $('#details_ar_error').text('');
             $('#details_en_error').text('');
-            $('#order_error').text('');
+            //$('#order_error').text('');
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);
             var type = $(this).attr('method');

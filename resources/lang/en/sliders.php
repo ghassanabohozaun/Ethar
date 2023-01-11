@@ -11,7 +11,7 @@ return [
     'hide' => 'Hide',
 
     'treatment_areas' => 'Treatment Areas',
-    'slider_size' => ' Slider Size :  1920 * 1080',
+    'slider_size' => ' Slider Size :  1920 * 908',
 
     'title_ar' => 'Slider Title | ar',
     'title_en' => 'Slider Title | en',
