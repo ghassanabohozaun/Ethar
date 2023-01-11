@@ -36,6 +36,12 @@ return [
     'projects' => 'Projects',
     'trashed_projects' => 'Trashed Projects',
     'add_new_project' => 'Add New Project',
+
+
+    'testimonials' => 'Testimonials',
+    'trashed_testimonials' => 'Trashed Testimonials',
+    'add_new_testimonial' => 'Add New Testimonial',
+
 ];
 
 

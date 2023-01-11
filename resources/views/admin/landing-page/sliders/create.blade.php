@@ -229,7 +229,6 @@
                                                                       name="details_ar" id="details_ar" type="text"
                                                                       placeholder=" {{trans('sliders.enter_details_ar')}}"
                                                                       autocomplete="off"></textarea>
-
                                                             <span class="form-text text-danger"
                                                                   id="details_ar_error"></span>
 

@@ -11,7 +11,7 @@ return [
         'support-center' => 'app.support-center',
         'articles'       => 'app.articles',
         'landing-page'   =>'app.landing-page',
-        'projects'       => 'app.projects'
-
+        'projects'       => 'app.projects',
+        'testimonials'       => 'app.testimonials',
     ]
 ];

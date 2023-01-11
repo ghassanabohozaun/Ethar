@@ -176,19 +176,31 @@ Route::group([
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
     });
 
-
-    // project
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /// project
     Route::group(['prefix' => 'project', 'middleware' => 'can:projects'], function () {
         Route::get('/', [ProjectsController::class, 'index'])->name('admin.project.index');
         Route::get('/create', [ProjectsController::class, 'create'])->name('admin.project.create');
         Route::post('/store', [ProjectsController::class, 'store'])->name('admin.project.store');
         Route::get('/edit/{id}', [ProjectsController::class, 'edit'])->name('admin.project.edit');
         Route::post('/update', [ProjectsController::class, 'update'])->name('admin.project.update');
-        Route::get('/trashed-project',  [ProjectsController::class, 'trashed'])->name('admin.project.trashed');
-        Route::post('/destroy',  [ProjectsController::class, 'destroy'])->name('admin.project.destroy');
+        Route::get('/trashed-project', [ProjectsController::class, 'trashed'])->name('admin.project.trashed');
+        Route::post('/destroy', [ProjectsController::class, 'destroy'])->name('admin.project.destroy');
         Route::post('/force-delete', [ProjectsController::class, 'forceDelete'])->name('admin.project.force.delete');
         Route::post('/restore', [ProjectsController::class, 'restore'])->name('admin.project.restore');
         Route::post('/change-status', [ProjectsController::class, 'changeStatus'])->name('admin.project.change.status');
+    });
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /// testimonials routes
+    Route::group(['prefix' => 'testimonials', 'middleware' => 'can:testimonials'], function () {
+        Route::get('/', 'TestimonialController@index')->name('admin.testimonials');
+        Route::get('/create', 'TestimonialController@create')->name('admin.testimonials.create');
+        Route::post('/store', 'TestimonialController@store')->name('admin.testimonials.store');
+        Route::get('/edit/{id?}', 'TestimonialController@edit')->name('admin.testimonials.edit');
+        Route::post('/update', 'TestimonialController@update')->name('admin.testimonials.update');
+        Route::post('/destroy', 'TestimonialController@destroy')->name('admin.testimonials.destroy');
+        Route::post('/change-status', 'TestimonialController@changeStatus')->name('admin.testimonials.change-status');
     });
 
 });

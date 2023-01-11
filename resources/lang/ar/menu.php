@@ -32,4 +32,9 @@ return [
     'trashed_projects' => 'المشاريع المحذوفة',
     'add_new_project' => 'اضافة مشروع جديد',
 
+    'testimonials' => 'الشهادات',
+    'trashed_testimonials' => 'الشهادات المحذوفة',
+    'add_new_testimonial' => 'اضافة شهادة جديد',
+
+
 ];

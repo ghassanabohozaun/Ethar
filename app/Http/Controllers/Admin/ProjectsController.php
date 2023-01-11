@@ -34,7 +34,6 @@ class ProjectsController extends Controller
             $destinationPath = public_path('adminBoard/uploadedImages/projects');
             $photo_path = $this->saveResizeImage($image,$destinationPath);
 
-
         } else {
             $photo_path = '';
         }
