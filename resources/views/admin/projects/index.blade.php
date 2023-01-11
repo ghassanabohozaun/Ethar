@@ -15,7 +15,7 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.articles')}}
+                            {{trans('menu.projects')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
@@ -40,7 +40,7 @@
                 <a href="{{route('admin.project.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_article')}}
+                    {{trans('menu.add_new_project')}}
                 </a>
                 &nbsp;
             </div>
@@ -72,11 +72,14 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>@lang('articles.photo') </th>
-                                                        <th>@lang('articles.title_ar')</th>
-                                                        <th>@lang('articles.title_en')</th>
-                                                        <th>@lang('articles.publisher_name')</th>
-                                                        <th>@lang('articles.publish_date')</th>
+                                                        <th>@lang('projects.photo') </th>
+                                                        <th>@lang('projects.title_ar')</th>
+                                                        @if($lang_en =setting()->site_lang_en == 'on')
+                                                        <th>@lang('projects.title_en')</th>
+                                                        @endif
+                                                        <th>@lang('projects.writer')</th>
+                                                        <th>@lang('projects.date')</th>
+                                                        <th>@lang('projects.type')</th>
                                                         <th>@lang('articles.status')</th>
                                                         <th>@lang('general.actions')</th>
                                                     </tr>
@@ -91,9 +94,13 @@
                                                                     class=" img-thumbnail"/>
                                                             </td>
                                                             <td>{{ $project->title_ar }}</td>
+                                                            @if($lang_en =setting()->site_lang_en == 'on')
                                                             <td>{{ $project->title_en }}</td>
+                                                            @endif
                                                             <td>{{ $project->writer }}</td>
                                                             <td>{{ $project->date }}</td>
+                                                            <td>{{ $project->type }}</td>
+
 
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
@@ -121,7 +128,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="7" class="text-center">
-                                                                @lang('articles.no_articles_found')
+                                                                @lang('projects.no_found')
                                                             </td>
                                                         </tr>
                                                     @endforelse

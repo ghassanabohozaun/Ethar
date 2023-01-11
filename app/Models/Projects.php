@@ -17,4 +17,16 @@ class Projects extends Model
         'date',	'writer',	'type',
     ];
 
+    public function getTypeAttribute($value){
+        if(Lang() == 'ar'){
+            if($value =='previous' ){
+                return 'السابق';
+            }else{
+                return 'الحالي ';
+            }
+        }else{
+            return $value;
+        }
+    }
+
 }

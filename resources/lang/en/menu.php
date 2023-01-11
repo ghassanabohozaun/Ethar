@@ -36,6 +36,7 @@ return [
     'projects' => 'Projects',
     'trashed_projects' => 'Trashed Projects',
     'add_new_project' => 'Add New Project',
+ 
 ];
 
 

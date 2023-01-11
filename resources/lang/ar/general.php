@@ -58,6 +58,8 @@ return [
 
     'change_image' => 'تغير الصورة',
     'image_format_allow' => 'صيغ الصور المسموح بها هي jpg ,jpeg, png فقط',
+    'file_format_allow' => 'صيغ الملفات المسموح بها pdf فقط',
+
     'add_success_message' => 'تمت عملية الحفظ بنجاح',
     'delete_success_message' => 'تمت عملية الحذف بنجاح',
     'update_success_message' => 'تمت عملية التعديل بنجاح',

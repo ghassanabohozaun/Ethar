@@ -12,13 +12,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{-- {{trans('articles.photo')}} --}}صورة المشروع
+                            {{trans('projects.photo')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div
                                     class="image-input image-input-outline"
                                     id="kt_article_photo">
-                                <!--  style="background-image: url({{--asset(Storage::url(setting()->site_icon))--}})"-->
+
                                     <div class="image-input-wrapper"
                                     ></div>
                                     <label
@@ -49,13 +49,16 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('courses.course_details')}}
+                                {{trans('projects.file')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <input
                                     class="form-control  form-control-lg"
                                     type="file" name="file" id="file"
                                     placeholder=""/>
+                                    <span
+                                    class="form-text text-muted">{{trans('general.file_format_allow')}}
+                                                            </span>
                                 <span class="form-text text-danger"
                                       id="course_details_error"></span>
                             </div>
@@ -66,7 +69,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{-- {{trans('articles.publish_date')}}  --}} تاريخ نشر المشروع
+                              {{trans('projects.date')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
@@ -89,13 +92,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('articles.publisher_name')}} اسم ناشر المشروع
+                                {{trans('projects.writer')}}
                             </label>
 
                             <div  class="col-lg-9 col-xl-9">
                                 <input type="text" class="form-control form-control-solid form-control-lg"
                                        name="writer" id="writer"
-                                       placeholder="{{trans('project.writer')}}"
+                                       placeholder="{{trans('projects.writer')}}"
                                        autocomplete="off">
                                 <span class="form-text text-danger"
                                       id="writer_error"></span>
@@ -106,7 +109,7 @@
                          <!--begin::Group-->
                          <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{-- {{trans('users.gender')}}   --}}نوع المشروع
+                             {{trans('projects.type')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 
@@ -115,12 +118,22 @@
                                     name="type" id="type" type="text">
 
                                     <option value="current">
+                                        @if(Lang() == 'ar')
+                                        الحالي
+                                        @elseif(Lang() == 'en')
                                         current
+                                        @endif
 
                                     </option>
 
                                     <option value="previous">
+
+                                        @if(Lang() == 'ar')
+                                        السابق
+                                        @elseif(Lang() == 'en')
                                         previous
+                                        @endif
+
 
                                     </option>
 

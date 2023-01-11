@@ -19,12 +19,12 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.project.index')}}" class="text-muted">
-                                {{trans('menu.articles')}}
+                                {{trans('menu.projects')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('articles.update_article')}}
+                                {{trans('projects.update')}}
                             </a>
                         </li>
                     </ul>
@@ -78,7 +78,7 @@
                                         <a class="nav-link active" id="article_settings_tab" data-toggle="tab"
                                            href="#article_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_settings_tab')}}</span>
+                                            <span class="nav-text">{{trans('projects.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -86,24 +86,28 @@
                                            href="#article_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_details_ar_tab')}}</span>
+                                            <span class="nav-text">{{trans('projects.details_ar_tab')}}</span>
                                         </a>
                                     </li>
+                                    @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
                                         <a class="nav-link" id="article_details_en_tab" data-toggle="tab"
                                            href="#article_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_details_en_tab')}}</span>
+                                            <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
                                         </a>
                                     </li>
+                                    @endif
                                 </ul>
 
 
                                 <div class="tab-content mt-5">
                                     @include('admin.projects.update_tabs.settings')
                                     @include('admin.projects.update_tabs.details_ar')
+                                    @if($lang_en =setting()->site_lang_en == 'on')
                                     @include('admin.projects.update_tabs.details_en')
+                                    @endif
                                 </div>
 
 
