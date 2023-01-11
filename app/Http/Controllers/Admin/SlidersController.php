@@ -16,7 +16,7 @@ class SlidersController extends Controller
     // index
     public function index()
     {
-        $title = trans('menu.sliders');
+        $title = __('menu.sliders');
         $sliders = Slider::orderByDesc('created_at')->paginate(15);
         return view('admin.landing-page.sliders.index', compact('title', 'sliders'));
     }
@@ -24,7 +24,7 @@ class SlidersController extends Controller
     // create
     public function create()
     {
-        $title = trans('menu.add_new_slider');
+        $title = __('menu.add_new_slider');
         return view('admin.landing-page.sliders.create', compact('title'));
     }
 
@@ -55,7 +55,7 @@ class SlidersController extends Controller
             'order' => $request->order,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.add_success_message'));
+        return $this->returnSuccessMessage(__('general.add_success_message'));
 
     }
 
@@ -66,7 +66,7 @@ class SlidersController extends Controller
         if (!$slider) {
             return redirect()->route('admin.not.found');
         }
-        $title = trans('sliders.slider_update');
+        $title = __('sliders.slider_update');
         return view('admin.landing-page.sliders.update', compact('title', 'slider'));
     }
 
@@ -119,43 +119,33 @@ class SlidersController extends Controller
             'order' => $request->order,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.update_success_message'));
+        return $this->returnSuccessMessage(__('general.update_success_message'));
     }
 
     ////////////////////////////////////////////
     /// destroy
     public function destroy(Request $request)
     {
-        try {
             if ($request->ajax()) {
                 $slider = Slider::find($request->id);
                 if (!$slider) {
                     return redirect()->route('admin.not.found');
                 }
-
                 if (!empty($slider->photo)) {
                     $image_path = public_path("\adminBoard\uploadedImages\sliders\\") . $slider->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }
                 }
-
                 $slider->delete();
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
+                return $this->returnSuccessMessage(__('general.delete_success_message'));
             }
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), '500');
-        }
-
     }
 
     ////////////////////////////////////////////////////////////////////
     /// change Status
     public function changeStatus(Request $request)
     {
-
-
-        try {
             $slider = Slider::find($request->id);
             if ($request->switchStatus == 'false') {
                 $slider->status = null;
@@ -164,12 +154,7 @@ class SlidersController extends Controller
                 $slider->status = 'on';
                 $slider->save();
             }
-            return $this->returnSuccessMessage(trans('general.change_status_success_message'));
-
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
-
+            return $this->returnSuccessMessage(__('general.change_status_success_message'));
     }
 
 }

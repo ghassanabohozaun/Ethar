@@ -18,18 +18,18 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="#" class="text-muted">
-                                {{trans('menu.media')}}
+                                {{__('menu.media')}}
                             </a>
                         </li>
 
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.sliders')}}" class="text-muted">
-                                {{trans('menu.sliders')}}
+                                {{__('menu.sliders')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.sliders.create')}}" class="text-muted">
-                                {{trans('menu.add_new_slider')}}
+                                {{__('menu.add_new_slider')}}
                             </a>
                         </li>
                     </ul>
@@ -44,7 +44,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -79,7 +79,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.photo')}}
+                                                            {{__('sliders.photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
@@ -91,7 +91,7 @@
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{trans('general.change_image')}}">
+                                                                    data-original-title="{{__('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="photo" id="photo"
                                                                            class="table-responsive-sm">
@@ -106,10 +106,10 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                             </span>
                                                             <span
-                                                                class="form-text text-info">{{trans('sliders.slider_size')}}
+                                                                class="form-text text-info">{{__('sliders.slider_size')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
@@ -121,7 +121,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.details_status')}}
+                                                            {{__('sliders.details_status')}}
                                                         </label>
                                                         <div class="col-lg-9 col-md-9" style="margin-top: 10px">
                                                             <div class="form-check pl-0 radio-inline">
@@ -130,14 +130,14 @@
                                                                            name="details_status"
                                                                            value="show"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.show')}}
+                                                                    {{__('sliders.show')}}
                                                                 </label>
                                                                 <label class="radio radio-outline">
                                                                     <input type="radio" id="details_status"
                                                                            name="details_status" checked
                                                                            value="hide"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.hide')}}
+                                                                    {{__('sliders.hide')}}
                                                                 </label>
 
                                                             </div>
@@ -150,7 +150,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.button_status')}}
+                                                            {{__('sliders.button_status')}}
                                                         </label>
                                                         <div class="col-lg-9 col-md-9" style="margin-top: 10px">
                                                             <div class="form-check pl-0 radio-inline">
@@ -159,14 +159,14 @@
                                                                            name="button_status"
                                                                            value="show"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.show')}}
+                                                                    {{__('sliders.show')}}
                                                                 </label>
                                                                 <label class="radio radio-outline">
                                                                     <input type="radio" id="button_status"
                                                                            name="button_status" checked
                                                                            value="hide"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.hide')}}
+                                                                    {{__('sliders.hide')}}
                                                                 </label>
 
                                                             </div>
@@ -181,13 +181,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.title_ar')}}
+                                                            {{__('sliders.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="title_ar" id="title_ar" type="text"
-                                                                placeholder=" {{trans('sliders.enter_title_ar')}}"
+                                                                placeholder=" {{__('sliders.enter_title_ar')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -201,13 +201,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.title_en')}}
+                                                            {{__('sliders.title_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="title_en" id="title_en" type="text"
-                                                                placeholder=" {{trans('sliders.enter_title_en')}}"
+                                                                placeholder=" {{__('sliders.enter_title_en')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -221,13 +221,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.details_ar')}}
+                                                            {{__('sliders.details_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="details_ar" id="details_ar" type="text"
-                                                                      placeholder=" {{trans('sliders.enter_details_ar')}}"
+                                                                      placeholder=" {{__('sliders.enter_details_ar')}}"
                                                                       autocomplete="off"></textarea>
                                                             <span class="form-text text-danger"
                                                                   id="details_ar_error"></span>
@@ -240,13 +240,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.details_en')}}
+                                                            {{__('sliders.details_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="details_en" id="details_en" type="text"
-                                                                      placeholder=" {{trans('sliders.enter_details_en')}}"
+                                                                      placeholder=" {{__('sliders.enter_details_en')}}"
                                                                       autocomplete="off"></textarea>
 
                                                             <span class="form-text text-danger"
@@ -322,7 +322,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

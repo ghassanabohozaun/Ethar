@@ -43,4 +43,6 @@ return [
     'image_max' => 'Max allow image size 2 mega',
     'photo_required' => 'Slider Photo Required',
 
+    'no_sliders_found'=>'No Sliders Found',
+
 ];

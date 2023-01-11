@@ -9,25 +9,24 @@
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
 
-
                 <!--begin::Actions-->
                 <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
 
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.landing_page')}}
+                            {{__('menu.landing_page')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.sliders')}}
+                            {{__('menu.sliders')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="{{route('admin.sliders')}}" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -42,7 +41,7 @@
                 <a href="{{route('admin.sliders.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_slider')}}
+                    {{__('menu.add_new_slider')}}
                 </a>
             </div>
             <!--end::Toolbar-->
@@ -70,15 +69,15 @@
                                                     <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>@lang('sliders.photo')</th>
-                                                        <th>@lang('sliders.title_ar')</th>
-                                                        <th>@lang('sliders.title_en')</th>
-                                                        <th>@lang('sliders.language')</th>
-                                                        <th>@lang('sliders.order')</th>
-                                                        <th>@lang('sliders.details_status')</th>
-                                                        <th>@lang('sliders.button_status')</th>
-                                                        <th>@lang('sliders.status')</th>
-                                                        <th>@lang('general.actions')</th>
+                                                        <th>{!! __('sliders.photo') !!}</th>
+                                                        <th>{!! __('sliders.title_ar') !!}</th>
+                                                        <th>{!! __('sliders.title_en') !!}</th>
+                                                        <th>{!! __('sliders.language') !!}</th>
+                                                        <th>{!! __('sliders.order') !!}</th>
+                                                        <th>{!! __('sliders.details_status') !!}</th>
+                                                        <th>{!! __('sliders.button_status') !!}</th>
+                                                        <th>{!! __('sliders.status') !!}</th>
+                                                        <th>{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -86,8 +85,9 @@
                                                         <tr>
                                                             <td>{!! $loop->iteration!!}</td>
                                                             <td>
-                                                                <img src="{{asset('adminBoard/uploadedImages/sliders/'.$slider->photo)}}"
-                                                                     class="img-fluid img-thumbnail table-image "/>
+                                                                <img
+                                                                    src="{{asset('adminBoard/uploadedImages/sliders/'.$slider->photo)}}"
+                                                                    class="img-fluid img-thumbnail table-image "/>
                                                             </td>
                                                             <td>{{ $slider->title_ar }}</td>
                                                             <td>{{ $slider->title_en }}</td>
@@ -95,11 +95,13 @@
                                                             <td>{{ $slider->order }}</td>
                                                             <td>
                                                                 @if( $slider->details_status == trans('sliders.show'))
-                                                                    <span class="label label-light-info label-inline mr-2">
+                                                                    <span
+                                                                        class="label label-light-info label-inline mr-2">
                                                                         {!! $slider->details_status !!}
                                                                     </span>
                                                                 @else
-                                                                    <span class="label label-light-danger label-inline mr-2">
+                                                                    <span
+                                                                        class="label label-light-danger label-inline mr-2">
                                                                         {!! $slider->details_status !!}
                                                                     </span>
                                                                 @endif
@@ -144,7 +146,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="10" class="text-center">
-                                                                No Users found
+                                                                {!! __('sliders.no_sliders_found') !!}
                                                             </td>
                                                         </tr>
                                                     @endforelse
@@ -231,7 +233,7 @@
                                 $('.delete_user_button').click(function () {
                                     //updateDataTable
                                     $('#form_slider_delete').find('#slider_delete_id').val();
-                                    $('#myTable').load(location.href+(' #myTable'));
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
                         },//end success

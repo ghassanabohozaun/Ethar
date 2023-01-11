@@ -17,18 +17,18 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="#" class="text-muted">
-                                {{trans('menu.media')}}
+                                {{__('menu.media')}}
                             </a>
                         </li>
 
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.sliders')}}" class="text-muted">
-                                {{trans('menu.sliders')}}
+                                {{__('menu.sliders')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.slider.edit',$slider->id)}}" class="text-muted">
-                                {{trans('sliders.slider_update')}}
+                                {{__('sliders.slider_update')}}
                             </a>
                         </li>
                     </ul>
@@ -43,7 +43,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -93,7 +93,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.photo')}}
+                                                            {{__('sliders.photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
@@ -107,7 +107,7 @@
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{trans('general.change_image')}}">
+                                                                    data-original-title="{{__('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="photo" id="photo"
                                                                            class="table-responsive-sm">
@@ -122,10 +122,10 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                             </span>
                                                             <span
-                                                                class="form-text text-info">{{trans('sliders.slider_size')}}
+                                                                class="form-text text-info">{{__('sliders.slider_size')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
@@ -137,25 +137,25 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.details_status')}}
+                                                            {{__('sliders.details_status')}}
                                                         </label>
                                                         <div class="col-lg-9 col-md-9" style="margin-top: 10px">
                                                             <div class="form-check pl-0 radio-inline">
                                                                 <label class="radio radio-outline">
                                                                     <input type="radio" id="details_status"
                                                                            name="details_status"
-                                                                           {{$slider->details_status == trans('sliders.show')?'checked':''}}
+                                                                           {{$slider->details_status == __('sliders.show')?'checked':''}}
                                                                            value="show"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.show')}}
+                                                                    {{__('sliders.show')}}
                                                                 </label>
                                                                 <label class="radio radio-outline">
                                                                     <input type="radio" id="details_status"
                                                                            name="details_status"
-                                                                           {{$slider->details_status == trans('sliders.hide')?'checked':''}}
+                                                                           {{$slider->details_status == __('sliders.hide')?'checked':''}}
                                                                            value="hide"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.hide')}}
+                                                                    {{__('sliders.hide')}}
                                                                 </label>
 
                                                             </div>
@@ -169,25 +169,25 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.button_status')}}
+                                                            {{__('sliders.button_status')}}
                                                         </label>
                                                         <div class="col-lg-9 col-md-9" style="margin-top: 10px">
                                                             <div class="form-check pl-0 radio-inline">
                                                                 <label class="radio radio-outline">
                                                                     <input type="radio" id="button_status"
                                                                            name="button_status"
-                                                                           {{$slider->button_status == trans('sliders.show') ? 'checked':''}}
+                                                                           {{$slider->button_status == __('sliders.show') ? 'checked':''}}
                                                                            value="show"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.show')}}
+                                                                    {{__('sliders.show')}}
                                                                 </label>
                                                                 <label class="radio radio-outline">
                                                                     <input type="radio" id="button_status"
                                                                            name="button_status"
-                                                                           {{$slider->button_status ==trans('sliders.hide') ? 'checked':''}}
+                                                                           {{$slider->button_status ==__('sliders.hide') ? 'checked':''}}
                                                                            value="hide"/>
                                                                     <span></span>
-                                                                    {{trans('sliders.hide')}}
+                                                                    {{__('sliders.hide')}}
                                                                 </label>
 
                                                             </div>
@@ -202,16 +202,16 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.order')}}
+                                                            {{__('sliders.order')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input value="{{$slider->order}}"
                                                                    class="form-control form-control-solid form-control-lg"
                                                                    name="order" id="order" type="text"
-                                                                   placeholder=" {{trans('sliders.enter_order')}}"
+                                                                   placeholder=" {{__('sliders.enter_order')}}"
                                                                    autocomplete="off"/>
                                                             <span class="form-text text-muted">
-                                                             {{trans('sliders.exist_number')}}
+                                                             {{__('sliders.exist_number')}}
                                                                 &nbsp;
                                                                 {{App\Models\Slider::select('order')->orderBy('order','desc')->pluck('order')}}
 
@@ -224,13 +224,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.title_ar')}}
+                                                            {{__('sliders.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input value="{{$slider->title_ar}}"
                                                                    class="form-control form-control-solid form-control-lg"
                                                                    name="title_ar" id="title_ar" type="text"
-                                                                   placeholder=" {{trans('sliders.enter_title_ar')}}"
+                                                                   placeholder=" {{__('sliders.enter_title_ar')}}"
                                                                    autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -244,13 +244,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.title_en')}}
+                                                            {{__('sliders.title_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input value="{{$slider->title_en}}"
                                                                    class="form-control form-control-solid form-control-lg"
                                                                    name="title_en" id="title_en" type="text"
-                                                                   placeholder=" {{trans('sliders.enter_title_en')}}"
+                                                                   placeholder=" {{__('sliders.enter_title_en')}}"
                                                                    autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -264,13 +264,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.details_ar')}}
+                                                            {{__('sliders.details_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="details_ar" id="details_ar" type="text"
-                                                                      placeholder=" {{trans('sliders.enter_details_ar')}}"
+                                                                      placeholder=" {{__('sliders.enter_details_ar')}}"
                                                                       autocomplete="off">{{$slider->details_ar}}</textarea>
 
                                                             <span class="form-text text-danger"
@@ -284,13 +284,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('sliders.details_en')}}
+                                                            {{__('sliders.details_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="details_en" id="details_en" type="text"
-                                                                      placeholder=" {{trans('sliders.enter_details_en')}}"
+                                                                      placeholder=" {{__('sliders.enter_details_en')}}"
                                                                       autocomplete="off">{{$slider->details_en}}</textarea>
 
                                                             <span class="form-text text-danger"
@@ -365,7 +365,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
 
