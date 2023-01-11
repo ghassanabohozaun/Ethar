@@ -17,7 +17,7 @@ class TestimonialController extends Controller
     /// index
     public function index()
     {
-        $title = trans('menu.testimonials');
+        $title = __('menu.testimonials');
         $testimonials = testimonial::orderByDesc('created_at')->paginate();
         return view('admin.testimonials.index', compact('title', 'testimonials'));
     }
@@ -25,7 +25,7 @@ class TestimonialController extends Controller
     /// create
     public function create()
     {
-        $title = trans('menu.add_new_testimonial');
+        $title = __('menu.add_new_testimonial');
         return view('admin.testimonials.create', compact('title'));
     }
     /////////////////////////////////////////////////
@@ -60,7 +60,7 @@ class TestimonialController extends Controller
         ]);
 
 
-        return $this->returnSuccessMessage(trans('general.add_success_message'));
+        return $this->returnSuccessMessage(__('general.add_success_message'));
 
     }
 
@@ -75,7 +75,7 @@ class TestimonialController extends Controller
         if (!$testimonial) {
             return redirect()->route('admin.not.found');
         }
-        $title = trans('testimonials.update_testimonial');
+        $title = __('testimonials.update_testimonial');
         return view('admin.testimonials.update', compact('title', 'testimonial'));
     }
 
@@ -138,7 +138,7 @@ class TestimonialController extends Controller
             'rating' => $request->rating,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.update_success_message'));
+        return $this->returnSuccessMessage(__('general.update_success_message'));
 
     }
 
@@ -164,11 +164,11 @@ class TestimonialController extends Controller
 
                 $testimonial->delete();
 
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
+                return $this->returnSuccessMessage(__('general.delete_success_message'));
             }
         } catch
         (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), '500');
+            return $this->returnError(__('general.try_catch_error_message'), '500');
         }
     }
 
@@ -187,7 +187,7 @@ class TestimonialController extends Controller
             $testimonial->save();
         }
 
-        return $this->returnSuccessMessage(trans('general.change_status_success_message'));
+        return $this->returnSuccessMessage(__('general.change_status_success_message'));
     }
 
 }

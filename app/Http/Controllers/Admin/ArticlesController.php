@@ -17,7 +17,7 @@ class ArticlesController extends Controller
     /// index
     public function index()
     {
-        $title = trans('menu.articles');
+        $title = __('menu.articles');
         $articles = Article::withoutTrashed()->orderByDesc('created_at')->paginate(15);
         return view('admin.articles.index', compact('title', 'articles'));
     }
@@ -26,7 +26,7 @@ class ArticlesController extends Controller
     /// get trashed articles index
     public function trashedArticles()
     {
-        $title = trans('menu.trashed_articles');
+        $title = __('menu.trashed_articles');
         $trashedArticles = Article::onlyTrashed()->orderByDesc('created_at')->paginate(15);
         return view('admin.articles.trashed-articles', compact('title', 'trashedArticles'));
     }
@@ -35,7 +35,7 @@ class ArticlesController extends Controller
     /// create
     public function create()
     {
-        $title = trans('menu.add_new_article');
+        $title = __('menu.add_new_article');
         return view('admin.articles.create', compact('title'));
     }
 
@@ -64,7 +64,7 @@ class ArticlesController extends Controller
             'publisher_name' => $request->publisher_name,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.add_success_message'));
+        return $this->returnSuccessMessage(__('general.add_success_message'));
 
     }
 
@@ -75,7 +75,7 @@ class ArticlesController extends Controller
         if (!$id) {
             return redirect()->route('admin.not.found');
         }
-        $title = trans('articles.update_article');
+        $title = __('articles.update_article');
         $article = Article::find($id);
 
         if (!$article) {
@@ -133,7 +133,7 @@ class ArticlesController extends Controller
             'publisher_name' => $request->publisher_name,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.update_success_message'));
+        return $this->returnSuccessMessage(__('general.update_success_message'));
     }
 
     ///////////////////////////////////////////////
@@ -147,10 +147,10 @@ class ArticlesController extends Controller
                     return redirect()->route('admin.not.found');
                 }
                 $article->delete();
-                return $this->returnSuccessMessage(trans('general.move_to_trash'));
+                return $this->returnSuccessMessage(__('general.move_to_trash'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
@@ -165,10 +165,10 @@ class ArticlesController extends Controller
                     return redirect()->route('admin.not.found');
                 }
                 $article->restore();
-                return $this->returnSuccessMessage(trans('general.restore_success_message'));
+                return $this->returnSuccessMessage(__('general.restore_success_message'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
@@ -194,10 +194,10 @@ class ArticlesController extends Controller
 
                 $article->forceDelete();
 
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
+                return $this->returnSuccessMessage(__('general.delete_success_message'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
 
     }
@@ -217,7 +217,7 @@ class ArticlesController extends Controller
             $article->save();
         }
 
-        return $this->returnSuccessMessage(trans('general.change_status_success_message'));
+        return $this->returnSuccessMessage(__('general.change_status_success_message'));
     }
 
 }

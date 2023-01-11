@@ -16,7 +16,7 @@ class SupportCenterController extends Controller
     /// index
     public function index()
     {
-        $title = trans('menu.support_center');
+        $title = __('menu.support_center');
         $supportCenters = SupportCenter::orderByDesc('created_at')->paginate(10);
         return view('admin.support-center.index', compact('title','supportCenters'));
     }
@@ -24,7 +24,7 @@ class SupportCenterController extends Controller
     /// create
     public function create()
     {
-        $title = trans('supportCenter.send_message');
+        $title = __('supportCenter.send_message');
         return view('admin.support-center.create', compact('title'));
     }
     //////////////////////////////////////////////////
@@ -38,9 +38,9 @@ class SupportCenterController extends Controller
                 'title' => $request->title,
                 'message' => $request->message,
             ]);
-            return $this->returnSuccessMessage(trans('general.send_success_message'));
+            return $this->returnSuccessMessage(__('general.send_success_message'));
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
@@ -62,9 +62,9 @@ class SupportCenterController extends Controller
                 $supportCenterMessage->status = 'solved';
                 $supportCenterMessage->save();
             }
-            return $this->returnSuccessMessage(trans('general.change_status_success_message'));
+            return $this->returnSuccessMessage(__('general.change_status_success_message'));
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
@@ -91,10 +91,10 @@ class SupportCenterController extends Controller
                     return redirect()->route('admin.not.found');
                 }
                 $supportCenterMesssage->delete();
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
+                return $this->returnSuccessMessage(__('general.delete_success_message'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 }

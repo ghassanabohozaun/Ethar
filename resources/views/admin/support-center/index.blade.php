@@ -31,12 +31,12 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-                <a href="{!! route('admin.support.center.create') !!}"
-                   class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
-                    <i class="fa {!! Lang()=='ar'? ' fa-angle-double-left':'fa-angle-double-right' !!}"></i>
-                    {{__('supportCenter.send_message')}}
-                </a>
-                &nbsp;
+{{--                <a href="{!! route('admin.support.center.create') !!}"--}}
+{{--                   class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">--}}
+{{--                    <i class="fa {!! Lang()=='ar'? ' fa-angle-double-left':'fa-angle-double-right' !!}"></i>--}}
+{{--                    {{__('supportCenter.send_message')}}--}}
+{{--                </a>--}}
+{{--                &nbsp;--}}
             </div>
             <!--end::Toolbar-->
         </div>
@@ -70,7 +70,7 @@
                                                         <th>{!! __('supportCenter.status') !!}</th>
                                                         <th>{!! __('supportCenter.show_message') !!}</th>
                                                         <th>{!! __('general.actions') !!}</th>
-                                                        <th>{!! __('general.delete') !!}</th>
+                                                        <th >{!! __('general.delete') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>

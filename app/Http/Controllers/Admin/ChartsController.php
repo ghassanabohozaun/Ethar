@@ -22,7 +22,7 @@ class ChartsController extends Controller
         }
 
         $chart['labels'] = $labels;
-        $chart['datasets'][0]['name'] = trans('dashboard.new_mawobs_growth') ;
+        $chart['datasets'][0]['name'] = __('dashboard.new_mawobs_growth') ;
         $chart['datasets'][0]['values'] = $mawhobs->values()->toArray();
 
         return response()->json($chart);
@@ -40,7 +40,7 @@ class ChartsController extends Controller
         }
 
         $chart['labels'] = $labels;
-        $chart['datasets'][0]['name'] = trans('dashboard.new_revenues_growth') ;
+        $chart['datasets'][0]['name'] = __('dashboard.new_revenues_growth') ;
         $chart['datasets'][0]['values'] = $revenues->values()->toArray();
 
         return response()->json($chart);

@@ -63,7 +63,7 @@ class ProjectsController extends Controller
                 'type'          => $request->type,
             ]);
 
-        return $this->returnSuccessMessage(trans('general.add_success_message'));
+        return $this->returnSuccessMessage(__('general.add_success_message'));
     }
 
     public function edit( $id){
@@ -107,12 +107,12 @@ class ProjectsController extends Controller
                 'type'          => $request->type,
             ]);
 
-        return $this->returnSuccessMessage(trans('general.update_success_message'));
+        return $this->returnSuccessMessage(__('general.update_success_message'));
     }
 
     public function trashed()
     {
-        $title = trans('menu.trashed_articles');
+        $title = __('menu.trashed_articles');
         $projects = Projects::onlyTrashed()->orderByDesc('created_at')->paginate(15);
         return view('admin.projects.trashed-project', compact('title', 'projects'));
     }
@@ -129,10 +129,10 @@ class ProjectsController extends Controller
                     return redirect()->route('admin.not.found');
                 }
                 $project->delete();
-                return $this->returnSuccessMessage(trans('general.move_to_trash'));
+                return $this->returnSuccessMessage(__('general.move_to_trash'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
@@ -147,10 +147,10 @@ class ProjectsController extends Controller
                     return redirect()->route('admin.not.found');
                 }
                 $project->restore();
-                return $this->returnSuccessMessage(trans('general.restore_success_message'));
+                return $this->returnSuccessMessage(__('general.restore_success_message'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
@@ -176,10 +176,10 @@ class ProjectsController extends Controller
 
                 $project->forceDelete();
 
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
+                return $this->returnSuccessMessage(__('general.delete_success_message'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
 
     }
@@ -198,6 +198,6 @@ class ProjectsController extends Controller
             $project->save();
         }
 
-        return $this->returnSuccessMessage(trans('general.change_status_success_message'));
+        return $this->returnSuccessMessage(__('general.change_status_success_message'));
     }
 }

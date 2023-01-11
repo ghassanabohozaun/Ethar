@@ -18,7 +18,7 @@ class AdminsController extends Controller
     {
         $id = admin()->user()->id;
         $admin = Admin::find($id);
-        $title = trans('menu.admin');
+        $title = __('menu.admin');
         return view('admin.admin.index', compact('title', 'admin'));
     }
 
@@ -81,9 +81,9 @@ class AdminsController extends Controller
                 'password' => $password,
             ]);
 
-            return $this->returnSuccessMessage(trans('general.update_success_message'));
+            return $this->returnSuccessMessage(__('general.update_success_message'));
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), '500');
+            return $this->returnError(__('general.try_catch_error_message'), '500');
         }
     }
 }

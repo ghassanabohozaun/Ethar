@@ -26,7 +26,7 @@ class LoginController extends Controller
 
         if (!$admin) {
             return redirect()->route('get.admin.login')
-                ->with(['error' => trans('login.account_unavailable')]);
+                ->with(['error' => __('login.account_unavailable')]);
         } else {
             if($admin->status == 'on'){
 
@@ -40,11 +40,11 @@ class LoginController extends Controller
                     return redirect()->route('admin.dashboard');
 
                 } else {
-                    return redirect()->route('get.admin.login')->with(['error' => trans('login.login_failed')]);
+                    return redirect()->route('get.admin.login')->with(['error' => __('login.login_failed')]);
                 }
             }else{
                 return redirect()->route('get.admin.login')
-                    ->with(['error' => trans('login.account_disabled')]);
+                    ->with(['error' => __('login.account_disabled')]);
             }
 
         }

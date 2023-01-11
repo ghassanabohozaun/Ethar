@@ -18,7 +18,7 @@ class RolesController extends Controller
     /// index
     public function index()
     {
-        $title = trans('menu.permissions');
+        $title = __('menu.permissions');
         $roles = Role::orderByDesc('created_at')->paginate();
         return view('admin.roles.index', compact('title','roles'));
     }
@@ -38,14 +38,14 @@ class RolesController extends Controller
                 $admins = Admin::where('role_id', $request->id)->get();
                 if ($admins->isEmpty()) {
                     $role->delete();
-                    return $this->returnSuccessMessage(trans('general.delete_success_message'));
+                    return $this->returnSuccessMessage(__('general.delete_success_message'));
                 } else {
-                    return $this->returnError(trans('roles.delete_error_message'),500);
+                    return $this->returnError(__('roles.delete_error_message'),500);
                 }
 
             }
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }
 
     }
@@ -54,7 +54,7 @@ class RolesController extends Controller
     /// create
     public function create()
     {
-        $title = trans('menu.add_new_permission');
+        $title = __('menu.add_new_permission');
         return view('admin.roles.create', compact('title'));
     }
 
@@ -69,9 +69,9 @@ class RolesController extends Controller
                 'role_name_en' => $request->role_name_en,
                 'permissions' => $permissions,
             ]);
-            return $this->returnSuccessMessage(trans('general.add_success_message'));
+            return $this->returnSuccessMessage(__('general.add_success_message'));
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
@@ -79,7 +79,7 @@ class RolesController extends Controller
     /// edit
     public function edit($id = null)
     {
-        $title = trans('roles.update_permission');
+        $title = __('roles.update_permission');
         if (!$id) {
             return redirect()->route('admin.not.found');
         }
@@ -107,9 +107,9 @@ class RolesController extends Controller
                 'role_name_en' => $request->role_name_en,
                 'permissions' => $permissions,
             ]);
-            return $this->returnSuccessMessage(trans('general.update_success_message'));
+            return $this->returnSuccessMessage(__('general.update_success_message'));
         } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
+            return $this->returnError(__('general.try_catch_error_message'), 500);
         }//end catch
     }
 
