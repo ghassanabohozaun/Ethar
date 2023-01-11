@@ -8,18 +8,8 @@ class Slider extends Model
 {
     protected $table = 'sliders';
     protected $fillable = [
-        'title_ar',
-        'title_en',
-        'details_ar',
-        'details_en',
-        'status',
-        'details_status',
-        'button_status',
-        'url_ar',
-        'url_en',
-        'photo',
-        'order',
-        'language',
+        'title_ar', 'title_en', 'details_ar', 'details_en', 'status', 'details_status',
+        'button_status', 'url_ar', 'url_en', 'photo', 'order', 'language',
     ];
     protected $hidden = ['updated_at'];
 
