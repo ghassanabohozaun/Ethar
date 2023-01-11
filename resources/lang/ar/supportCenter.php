@@ -29,6 +29,7 @@ return [
     'required' => 'هذا الحقل مطلوب',
     'email_email' => 'يجب ان تكون صيغة الايميل مثل admin@admin.com',
     'captcha'=>'الرجاء التاكد من كلمة التحقق',
+    'no_messages_found' => 'لا يوجد رسائل دعم فني حالياً'
 
 
 ];

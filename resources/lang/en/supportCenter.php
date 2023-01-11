@@ -29,5 +29,5 @@ return [
     'required' => 'This Field Required',
     'email_email' => 'Email Must be in this format admin@admin.com',
     'captcha'=>'Please Check Captcha',
-
+    'no_messages_found' => 'No Support Center Message Found',
 ];

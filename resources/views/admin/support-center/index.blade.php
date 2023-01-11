@@ -29,20 +29,20 @@
             </div>
             <!--end::Info-->
 
-        <!--begin::Toolbar--
+            <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
                 <a href="{!! route('admin.support.center.create') !!}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     @if(Lang()=='ar')
-            <i class="fa fa-angle-double-left"></i>
-@else
-            <i class="fa fa-angle-double-right"></i>
-@endif
-        {{trans('supportCenter.send_message')}}
-            </a>
-&nbsp;
+                        <i class="fa fa-angle-double-left"></i>
+                    @else
+                        <i class="fa fa-angle-double-right"></i>
+                    @endif
+                    {{trans('supportCenter.send_message')}}
+                </a>
+                &nbsp;
             </div>
-            --end::Toolbar-->
+            <!--end::Toolbar-->
         </div>
     </div>
     <!--end::Subheader-->
@@ -58,34 +58,90 @@
                     <div class="card card-custom" id="card_posts">
                         <div class="card-body">
 
+
                             <!--begin: Datatable-->
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="dtable scroll">
-                                            <!--begin: Datatable -->
-                                            <table class="table d-table" id="m_table_1">
-                                                <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>@lang('supportCenter.customer_name')</th>
-                                                    <th>@lang('supportCenter.customer_email')</th>
-                                                    <th>@lang('supportCenter.title')</th>
-                                                    <th>@lang('supportCenter.status')</th>
-                                                    <th>@lang('supportCenter.show_message')</th>
-                                                    <th>@lang('general.actions')</th>
-                                                    <th>@lang('general.delete')</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                        <div class="scroll">
+                                            <div class="table-responsive">
+                                                <table class="table myTable table-hover" id="myTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>@lang('supportCenter.customer_name')</th>
+                                                        <th>@lang('supportCenter.customer_email')</th>
+                                                        <th>@lang('supportCenter.title')</th>
+                                                        <th>@lang('supportCenter.status')</th>
+                                                        <th>@lang('supportCenter.show_message')</th>
+                                                        <th>@lang('general.actions')</th>
+                                                        <th>@lang('general.delete')</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @forelse($supportCenters as $supportCenter)
+                                                        <tr>
+
+                                                            <td>{{ $supportCenter->customer_name }}</td>
+                                                            <td>{{ $supportCenter->customer_email }}</td>
+                                                            <td>{{ $supportCenter->title }}</td>
+                                                            <td>
+                                                                @if( $supportCenter->status == 'new')
+                                                                    <span
+                                                                        class="label label-lg font-weight-bold label-light-warning label-inline">
+                                                                          {!! trans('supportCenter.new') !!}
+                                                                    </span>
+                                                                @elseif( $supportCenter->status == 'contacted')
+                                                                    <span
+                                                                        class="label label-lg font-weight-bold label-light-ifo label-inline">
+                                                                             {!! trans('supportCenter.contacted') !!}
+                                                                    </span>
+                                                                @elseif( $supportCenter->status == 'solved')
+                                                                    <span
+                                                                        class="label label-lg font-weight-bold label-light-success label-inline">
+                                                                             {!! trans('supportCenter.solved') !!}
+                                                                    </span>
+                                                                @endif
+                                                            </td>
+
+                                                            <td>@include('admin.support-center.parts.show-message')</td>
+                                                            <td>@include('admin.support-center.parts.options')</td>
+                                                            <td>
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_support_center_message_btn"
+                                                                   data-id="{{$supportCenter->id}}"
+                                                                   title="{{trans('general.delete')}}">
+                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                </a>
+
+                                                            </td>
+                                                        </tr>
+                                                    @empty
+                                                        <tr>
+                                                            <td colspan="7" class="text-center">
+                                                                @lang('supportCenter.no_messages_found')
+                                                            </td>
+                                                        </tr>
+                                                    @endforelse
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td colspan="7">
+                                                            <div class="float-right">
+                                                                {!! $supportCenters->appends(request()->all())->links() !!}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!--end: Datatable-->
+
                         </div>
+
                         <form class="d-none" id="form_category_delete">
                             <input type="hidden" id="offer_category_id">
                         </form>
@@ -180,32 +236,10 @@
     </div>
     <!-- end support center message show modal -->
 
-
 @endsection
 @push('js')
 
-    <script
-        src="{{asset('adminBoard/assets/plugins/custom/datatables/datatables.bundle.js')}}"
-        type="text/javascript"></script>
-    <script src="{{asset('adminBoard/assets/js/data_table.js')}}" type="text/javascript"></script>
-
-    <script>
-        window.data_url = "{!! route('get.admin.support.center') !!}";
-        window.columns = [
-            {data: "id"},
-            {data: "customer_name"},
-            {data: "customer_email"},
-            {data: "title"},
-            {data: "status"},
-            {data: "show_message"},
-            {data: "actions"},
-            {data: "delete"},
-        ];
-
-    </script>
-
     <script type="text/javascript">
-
 
         ////////////////////////////////////////////////////////////////////////////////
         // change message status to contacted
@@ -236,7 +270,7 @@
                             customClass: {confirmButton: 'change_message_status_button'}
                         });
                         $('.change_message_status_button').click(function () {
-                            updateDataTable();
+                            $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },
@@ -246,7 +280,7 @@
         });
 
         ////////////////////////////////////////////////////////////////////////////////
-        // change message status to solved
+        // change message status
         $('body').on('click', '.support_center_message_status_solved_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -274,7 +308,7 @@
                             customClass: {confirmButton: 'change_message_status_button'}
                         });
                         $('.change_message_status_button').click(function () {
-                            updateDataTable();
+                            $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },
@@ -352,7 +386,7 @@
                                     customClass: {confirmButton: 'delete_support_center_message_button'}
                                 });
                                 $('.delete_support_center_message_button').click(function () {
-                                    updateDataTable();
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             } else if (data.status == false) {
                                 Swal.fire({

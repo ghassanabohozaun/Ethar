@@ -6,18 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_ar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_en.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_ar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_en.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/roles/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/roles/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SupportCenterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SupportCenterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SupportCenterRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SupportCenterRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/supportCenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/supportCenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/supportCenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/supportCenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/delete.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/options.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/parts/options.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/show-message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/support-center/parts/show-message.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/support-center/parts/status.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,11 +207,11 @@
       <recent name="C:\laragon\www\etharps\app\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\resources\views\admin\support-center" />
       <recent name="C:\laragon\www\etharps\app\Http\Requests" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page" />
       <recent name="C:\laragon\www\etharps\public\site\assets\images" />
-      <recent name="C:\laragon\www\etharps\resources\views\site" />
     </key>
   </component>
   <component name="RunManager">
@@ -250,7 +248,7 @@
       <workItem from="1673270793356" duration="16245000" />
       <workItem from="1673337018214" duration="16899000" />
       <workItem from="1673357287622" duration="10809000" />
-      <workItem from="1673423315361" duration="571000" />
+      <workItem from="1673423315361" duration="2625000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,9 @@
 
 
 <a href="#" title="{!! trans('supportCenter.mark_as_contacted') !!}"
-   class="btn btn-info btn-icon btn-pill  btn-sm mr-3   {!! $instance->status=='contacted' ?'disabled':'' !!}
+   class="btn btn-info btn-icon btn-pill  btn-sm mr-3   {!! $supportCenter->status=='contacted' ?'disabled':'' !!}
        support_center_message_status_contacted_btn"
-   data-id="{{$instance->id}}">
+   data-id="{{$supportCenter->id}}">
     <span class="svg-icon">
         <svg xmlns="http://www.w3.org/2000/svg"
              width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -19,7 +19,7 @@
 
 <a href="#" title="{!! trans('supportCenter.mark_as_solved') !!}"
    class="btn btn-success btn-icon btn-pill btn-sm mr-3
-{!! $instance->status=='solved' ?'disabled':'' !!}  support_center_message_status_solved_btn" data-id="{{$instance->id}}">
+{!! $supportCenter->status=='solved' ?'disabled':'' !!}  support_center_message_status_solved_btn" data-id="{{$supportCenter->id}}">
 <span class="svg-icon svg-icon-white"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Like.svg--><svg
         xmlns="http://www.w3.org/2000/svg"
         width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
