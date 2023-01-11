@@ -72,7 +72,6 @@
                                                         <th>{!! __('sliders.photo') !!}</th>
                                                         <th>{!! __('sliders.title_ar') !!}</th>
                                                         <th>{!! __('sliders.title_en') !!}</th>
-                                                        <th>{!! __('sliders.language') !!}</th>
                                                         <th>{!! __('sliders.order') !!}</th>
                                                         <th>{!! __('sliders.details_status') !!}</th>
                                                         <th>{!! __('sliders.button_status') !!}</th>
@@ -91,7 +90,6 @@
                                                             </td>
                                                             <td>{{ $slider->title_ar }}</td>
                                                             <td>{{ $slider->title_en }}</td>
-                                                            <td>{{ $slider->language }}</td>
                                                             <td>{{ $slider->order }}</td>
                                                             <td>
                                                                 @if( $slider->details_status == trans('sliders.show'))
@@ -145,7 +143,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="10" class="text-center">
+                                                            <td colspan="9" class="text-center">
                                                                 {!! __('sliders.no_sliders_found') !!}
                                                             </td>
                                                         </tr>
@@ -153,7 +151,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="10">
+                                                        <td colspan="9">
                                                             <div class="float-right">
                                                                 {!! $sliders->appends(request()->all())->links() !!}
                                                             </div>

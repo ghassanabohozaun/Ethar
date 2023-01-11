@@ -8,7 +8,7 @@
                 <ul class="menu-nav ">
                     <li class="menu-item  menu-item-open menu-item-here
                      menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active">
-                        <a href="#" class="menu-link ">
+                        <a href="{!! route('index') !!}" class="menu-link ">
                             <span class="menu-text">{{trans('dashboard.website')}}</span><i class="menu-arrow"></i></a>
                     </li>
 
@@ -106,10 +106,7 @@
                     <!--begin::Nav-->
                     <ul class="navi navi-hover py-4">
                         <!--begin::Item-->
-
                         <!--end::Item-->
-
-
                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                             <li class="navi-item">
                                 <a class="navi-link" rel="alternate" hreflang="{{ $localeCode }}"
@@ -123,7 +120,6 @@
                                 </a>
                             </li>
                         @endforeach
-
 
                     </ul>
                     <!--end::Nav-->

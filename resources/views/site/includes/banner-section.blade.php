@@ -16,7 +16,7 @@
                             <p>Charity is a continuous process toward success and happiness <br/>Let’s help them
                                 now.</p>
                             <div class="btn-box">
-                                <a href="index-2.html" class="banner-btn">Read More</a>
+                                <a href="#" class="banner-btn">Read More</a>
                             </div>
                         </div>
                     </div>

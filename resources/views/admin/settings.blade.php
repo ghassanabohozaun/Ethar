@@ -19,7 +19,7 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('get.admin.settings')}}" class="text-muted">
-                                {{trans('menu.settings')}}
+                                {{__('menu.settings')}}
                             </a>
                         </li>
 
@@ -35,7 +35,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -68,13 +68,13 @@
 
                                                     <div class="card my-2">
                                                         <div class="card-body p-5">
-                                                            <h3>{{trans('settings.logo_and_icon')}} </h3>
+                                                            <h3>{{__('settings.logo_and_icon')}} </h3>
                                                             <hr/>
                                                             <br/>
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-xl-3 col-lg-3 col-form-label text-left">{{trans('settings.site_icon')}}</label>
+                                                                    class="col-xl-3 col-lg-3 col-form-label text-left">{{__('settings.site_icon')}}</label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <div
                                                                         class="image-input image-input-outline"
@@ -85,7 +85,7 @@
                                                                             class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                             data-action="change" data-toggle="tooltip"
                                                                             title=""
-                                                                            data-original-title="{{trans('general.change_image')}}">
+                                                                            data-original-title="{{__('general.change_image')}}">
                                                                             <i class="fa fa-pen icon-sm text-muted"></i>
                                                                             <input type="file" name="site_icon"
                                                                                    id="site_icon"/>
@@ -101,7 +101,7 @@
                                                                  </span>
                                                                     </div>
                                                                     <span
-                                                                        class="form-text text-muted">{{trans('settings.image_format_allow')}}</span>
+                                                                        class="form-text text-muted">{{__('settings.image_format_allow')}}</span>
                                                                     <span class="form-text text-danger"
                                                                           id="site_icon_error"></span>
                                                                 </div>
@@ -111,7 +111,7 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label
-                                                                    class="col-xl-3 col-lg-3 col-form-label text-left">{{trans('settings.site_logo')}}</label>
+                                                                    class="col-xl-3 col-lg-3 col-form-label text-left">{{__('settings.site_logo')}}</label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <div
                                                                         class="image-input image-input-outline "
@@ -122,7 +122,7 @@
                                                                             class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                             data-action="change" data-toggle="tooltip"
                                                                             title=""
-                                                                            data-original-title="{{trans('general.change_image')}}">
+                                                                            data-original-title="{{__('general.change_image')}}">
                                                                             <i class="fa fa-pen icon-sm text-muted"></i>
                                                                             <input type="file" name="site_logo"
                                                                                    id="site_logo"/>
@@ -138,7 +138,7 @@
                                                                  </span>
                                                                     </div>
                                                                     <span class="form-text text-muted">
-                                                                {{trans('settings.image_format_allow')}}
+                                                                {{__('settings.image_format_allow')}}
                                                               <span class="form-text text-danger"
                                                                     id="site_logo_error"></span>
                                                             </span>
@@ -150,14 +150,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_name_ar')}}
+                                                                    {{__('settings.site_name_ar')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid form-control-lg"
                                                                         name="site_name_ar" id="site_name_ar"
                                                                         type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_name_ar')}}"
+                                                                        placeholder=" {{__('settings.enter_site_name_ar')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_name_ar}}"/>
                                                                     <span class="form-text text-danger"
@@ -169,14 +169,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_name_en')}}
+                                                                    {{__('settings.site_name_en')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid  form-control-lg"
                                                                         name="site_name_en" id="site_name_en"
                                                                         type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_name_en')}}"
+                                                                        placeholder=" {{__('settings.enter_site_name_en')}}"
                                                                         autocomplete="off"
                                                                         value="{{setting()->site_name_en}}"/>
                                                                     <span class="form-text text-danger"
@@ -191,19 +191,19 @@
 
                                                     <div class="card my-2">
                                                         <div class="card-body p-5">
-                                                            <h3>{{trans('settings.contact_us')}} </h3>
+                                                            <h3>{{__('settings.contact_us')}} </h3>
                                                             <hr/>
                                                             <br/>
                                                             <!--begin::Group-->
                                                             <div class="d-none form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_email')}}
+                                                                    {{__('settings.site_email')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid form-control-lg"
                                                                         name="site_email" id="site_email" type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_email')}}"
+                                                                        placeholder=" {{__('settings.enter_site_email')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_email}}"/>
                                                                     <span class="form-text text-danger"
@@ -215,13 +215,13 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_gmail')}}
+                                                                    {{__('settings.site_gmail')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid form-control-lg"
                                                                         name="site_gmail" id="site_gmail" type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_gmail')}}"
+                                                                        placeholder=" {{__('settings.enter_site_gmail')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_gmail}}"/>
                                                                     <span class="form-text text-danger"
@@ -234,14 +234,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_facebook')}}
+                                                                    {{__('settings.site_facebook')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid form-control-lg"
                                                                         name="site_facebook" id="site_facebook"
                                                                         type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_facebook')}}"
+                                                                        placeholder=" {{__('settings.enter_site_facebook')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_facebook}}"/>
                                                                     <span class="form-text text-danger"
@@ -253,14 +253,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_twitter')}}
+                                                                    {{__('settings.site_twitter')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid form-control-lg"
                                                                         name="site_twitter" id="site_twitter"
                                                                         type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_twitter')}}"
+                                                                        placeholder=" {{__('settings.enter_site_twitter')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_twitter}}"/>
                                                                     <span class="form-text text-danger"
@@ -272,14 +272,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_youtube')}}
+                                                                    {{__('settings.site_youtube')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid  form-control-lg"
                                                                         name="site_youtube" id="site_youtube"
                                                                         type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_youtube')}}"
+                                                                        placeholder=" {{__('settings.enter_site_youtube')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_youtube}}"/>
                                                                     <span class="form-text text-danger"
@@ -292,14 +292,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_instagram')}}
+                                                                    {{__('settings.site_instagram')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid  form-control-lg"
                                                                         name="site_instagram" id="site_instagram"
                                                                         type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_instagram')}}"
+                                                                        placeholder=" {{__('settings.enter_site_instagram')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_instagram}}"/>
                                                                     <span class="form-text text-danger"
@@ -312,13 +312,13 @@
                                                             <!--begin::Group-->
                                                             <div class="d-none form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_phone')}}
+                                                                    {{__('settings.site_phone')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid  form-control-lg"
                                                                         name="site_phone" id="site_phone" type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_phone')}}"
+                                                                        placeholder=" {{__('settings.enter_site_phone')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_phone}}"/>
                                                                     <span class="form-text text-danger"
@@ -331,13 +331,13 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_mobile')}}
+                                                                    {{__('settings.site_mobile')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <input
                                                                         class="form-control form-control-solid  form-control-lg"
                                                                         name="site_mobile" id="site_mobile" type="text"
-                                                                        placeholder=" {{trans('settings.enter_site_mobile')}}"
+                                                                        placeholder=" {{__('settings.enter_site_mobile')}}"
                                                                         autocomplete="off"
                                                                         value="{{ setting()->site_mobile}}"/>
                                                                     <span class="form-text text-danger"
@@ -352,7 +352,7 @@
 
                                                     <div class="card my-2">
                                                         <div class="card-body p-5">
-                                                            <h3>{{trans('settings.language_section')}} </h3>
+                                                            <h3>{{__('settings.language_section')}} </h3>
                                                             <hr/>
                                                             <br/>
 
@@ -360,7 +360,7 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('general.ar')}}
+                                                                    {{__('general.ar')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                                     <div class="cst-switch switch-lg">
@@ -377,7 +377,7 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('general.en')}}
+                                                                    {{__('general.en')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9 " id="site_lang_en_section">
                                                                     <div class="cst-switch switch-lg" >
@@ -394,7 +394,7 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.lang_front_button_status')}}
+                                                                    {{__('settings.lang_front_button_status')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9 " id="site_lang_en_section">
                                                                     <div class="cst-switch switch-lg" >
@@ -412,13 +412,13 @@
 
                                                     <div class="card my-2">
                                                         <div class="card-body p-5">
-                                                            <h3>{{trans('settings.seo_section')}} </h3>
+                                                            <h3>{{__('settings.seo_section')}} </h3>
                                                             <hr/>
                                                             <br/>
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_description_ar')}}
+                                                                    {{__('settings.site_description_ar')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="3"
@@ -426,7 +426,7 @@
                                                                       name="site_description_ar"
                                                                       id="site_description_ar"
                                                                       type="text"
-                                                                      placeholder=" {{trans('settings.enter_site_description_ar')}}"
+                                                                      placeholder=" {{__('settings.enter_site_description_ar')}}"
                                                                       autocomplete="off">{{ setting()->site_description_ar}}</textarea>
 
                                                                     <span class="form-text text-danger"
@@ -439,7 +439,7 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_description_en')}}
+                                                                    {{__('settings.site_description_en')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="3"
@@ -447,7 +447,7 @@
                                                                       name="site_description_en"
                                                                       id="site_description_en"
                                                                       type="text"
-                                                                      placeholder=" {{trans('settings.enter_site_description_en')}}"
+                                                                      placeholder=" {{__('settings.enter_site_description_en')}}"
                                                                       autocomplete="off">{{ setting()->site_description_en}}</textarea>
 
                                                                     <span class="form-text text-danger"
@@ -460,14 +460,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_keywords_ar')}}
+                                                                    {{__('settings.site_keywords_ar')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="site_keywords_ar" id="site_keywords_ar"
                                                                       type="text"
-                                                                      placeholder=" {{trans('settings.enter_site_keywords_ar')}}"
+                                                                      placeholder=" {{__('settings.enter_site_keywords_ar')}}"
                                                                       autocomplete="off">{{ setting()->site_keywords_ar}}</textarea>
 
                                                                     <span class="form-text text-danger"
@@ -480,14 +480,14 @@
                                                             <!--begin::Group-->
                                                             <div class="form-group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    {{trans('settings.site_keywords_en')}}
+                                                                    {{__('settings.site_keywords_en')}}
                                                                 </label>
                                                                 <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="5"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="site_keywords_en" id="site_keywords_en"
                                                                       type="text"
-                                                                      placeholder=" {{trans('settings.enter_site_keywords_en')}}"
+                                                                      placeholder=" {{__('settings.enter_site_keywords_en')}}"
                                                                       autocomplete="off">{{ setting()->site_keywords_en}}</textarea>
 
                                                                     <span class="form-text text-danger"
@@ -595,7 +595,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },// end beforeSend
 
@@ -657,7 +657,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {
@@ -703,7 +703,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

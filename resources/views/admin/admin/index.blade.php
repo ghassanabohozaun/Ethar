@@ -14,7 +14,7 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="" class="text-muted">
-                            {{trans('menu.admin')}}
+                            {{__('menu.admin')}}
                         </a>
                     </li>
 
@@ -72,8 +72,8 @@
                                                 <!--begin::Name-->
                                                 <a href="#"
                                                    class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">
-                                                    {{$admin->name}} <i
-                                                        class="flaticon2-correct text-success icon-md ml-2"></i>
+                                                    {{$admin->name}}
+                                                    <i class="flaticon2-correct text-success icon-md ml-2"></i>
                                                 </a>
                                                 <!--end::Name-->
 
@@ -97,8 +97,9 @@
                                             <!--begin::Actions-->
                                             <div class="my-lg-0 my-1">
                                                 <a href="#" data-id="{{$admin->id}}" id="admin_update_modal"
-                                                   class="btn btn-sm btn-primary font-weight-bolder text-uppercase mr-2">
-                                                    <i class="fa fa-pencil-alt"></i> {{trans('general.update')}}
+                                                   class="btn btn-sm btn-primary font-weight-bolder text-uppercase  mt-1 mr-2">
+                                                    <i class="fa fa-pencil-alt"></i>
+                                                    <span>{{__('general.update')}}</span>
                                                 </a>
                                             </div>
                                             <!--end::Actions-->
@@ -135,7 +136,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{trans('general.update')}}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{__('general.update')}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i aria-hidden="true" class="ki ki-close"></i>
                     </button>
@@ -174,7 +175,7 @@
 
                                             <div class="form-group row">
                                                 <label
-                                                    class="col-xl-3 col-lg-3 col-form-label text-left">{{trans('login.photo')}}</label>
+                                                    class="col-xl-3 col-lg-3 col-form-label text-left">{{__('login.photo')}}</label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <div
                                                         class="image-input image-input-outline"
@@ -183,7 +184,7 @@
                                                         <label
                                                             class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                             data-action="change" data-toggle="tooltip" title=""
-                                                            data-original-title="{{trans('general.change_image')}}">
+                                                            data-original-title="{{__('general.change_image')}}">
                                                             <i class="fa fa-pen icon-sm text-muted"></i>
                                                             <input type="file" name="photo" id="photo"/>
                                                             <input type="hidden" name="site_logo_remove"/>
@@ -197,7 +198,7 @@
                                                        </span>
                                                     </div>
                                                     <span
-                                                        class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                        class="form-text text-muted">{{__('general.image_format_allow')}}
                                                     </span>
                                                 </div>
                                             </div>
@@ -206,13 +207,13 @@
                                             <!--begin::Group-->
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                    {{trans('login.name')}}
+                                                    {{__('login.name')}}
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
                                                         class="form-control form-control-solid form-control-lg"
                                                         name="name" id="name" type="text"
-                                                        placeholder=" {{trans('login.enter_name')}}"
+                                                        placeholder=" {{__('login.enter_name')}}"
                                                         autocomplete="off"/>
                                                     <span class="form-text text-danger" id="name_error"></span>
                                                 </div>
@@ -223,13 +224,13 @@
                                             <!--begin::Group-->
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                    {{trans('login.email')}}
+                                                    {{__('login.email')}}
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
                                                         class="form-control form-control-solid form-control-lg "
                                                         name="email" id="email" type="email" disabled="disabled"
-                                                        placeholder=" {{trans('login.enter_email')}}"
+                                                        placeholder=" {{__('login.enter_email')}}"
                                                         autocomplete="off"/>
                                                     <span class="form-text text-danger" id="email_error"></span>
 
@@ -242,13 +243,13 @@
                                             <!--begin::Group-->
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                    {{trans('login.password')}}
+                                                    {{__('login.password')}}
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
                                                         class="form-control form-control-solid form-control-lg"
                                                         name="password" id="password" type="password"
-                                                        placeholder=" {{trans('login.enter_password')}}"
+                                                        placeholder=" {{__('login.enter_password')}}"
                                                         autocomplete="off"/>
                                                     <span class="form-text text-danger" id="password_error"></span>
 
@@ -261,13 +262,13 @@
                                             <!--begin::Group-->
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                    {{trans('login.confirm_password')}}
+                                                    {{__('login.confirm_password')}}
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
                                                         class="form-control form-control-solid form-control-lg"
                                                         name="confirm_password" id="confirm_password" type="password"
-                                                        placeholder=" {{trans('login.enter_confirm_password')}}"
+                                                        placeholder=" {{__('login.enter_confirm_password')}}"
                                                         autocomplete="off"/>
                                                     <span class="form-text text-danger" id="confirm_password_error">
                                                     </span>
@@ -282,11 +283,11 @@
                     </div>
                     <div class="modal-footer">
                         <button type="" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">
-                            {{trans('general.cancel')}}
+                            {{__('general.cancel')}}
                         </button>
 
                         <button type="submit" class="btn btn-primary font-weight-bold">
-                            {{trans('general.save')}}
+                            {{__('general.save')}}
                         </button>
                     </div>
                 </form>
@@ -360,7 +361,7 @@
                     KTApp.block('#model_admin_update .modal-content', {
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {
