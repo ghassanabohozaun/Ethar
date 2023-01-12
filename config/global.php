@@ -12,6 +12,7 @@ return [
         'articles'       => 'app.articles',
         'landing-page'   =>'app.landing-page',
         'projects'       => 'app.projects',
-        'testimonials'       => 'app.testimonials',
+        'testimonials'   => 'app.testimonials',
+        'publications'   => 'app.publications',
     ]
 ];

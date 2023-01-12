@@ -11,5 +11,6 @@ return [
     'landing-page'=>'Landing Page Management',
     'projects' =>'Projects Management',
     'testimonials' =>'Testimonials Management',
+    'publications'=>'Publications Management',
 
 ];
