@@ -78,13 +78,13 @@
                                                         <tr>
                                                             <td>{!! $loop->iteration!!}</td>
                                                             <td>@include('admin.videos.parts.photo') </td>
-                                                            <td>{{ $slider->title_ar }}</td>
-                                                            <td>{{ $slider->title_en }}</td>
-                                                            <td>{{ $slider->duration }}</td>
+                                                            <td>{{ $video->title_ar }}</td>
+                                                            <td>{{ $video->title_en }}</td>
+                                                            <td>{{ $video->duration }}</td>
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
-                                                                           {{$slider->status == '1' ? 'checked':''}}  data-id="{{$instance->id}}"
+                                                                           {{$video->status == '1' ? 'checked':''}}  data-id="{{$video->id}}"
                                                                            class="change_status">
                                                                 </div>
                                                             </td>
@@ -325,7 +325,7 @@
             notifySuccessOrError("{{__('general.copied')}}", 'success');
         })
     </script>
-    
+
 @endpush
 
 @push('css')

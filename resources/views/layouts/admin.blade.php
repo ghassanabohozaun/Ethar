@@ -327,26 +327,19 @@
     };
 </script>
 <!--end::Global Config-->
-
 <!--begin::Global Theme Bundle(used by all pages)-->
 <script src="{{asset('adminBoard/assets/plugins/global/plugins.bundle.js')}}"></script>
 <script src="{{asset('adminBoard/assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
 <script src="{{asset('adminBoard/assets/js/scripts.bundle.js')}}"></script>
 <!--end::Global Theme Bundle-->
-
 <script src="{{asset('adminBoard/assets/js/my_general_script.js')}}"></script>
-
-
 <!--begin::Page Vendors(used by this page)-->
 <script src="{{asset('adminBoard/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
-
-
 <script src="{{asset('adminBoard/assets/plugins/custom/jstree/jstree.bundle.js')}}"></script>
 
 <!--end::Page Vendors-->
 
 <!--begin::Page Scripts(used by this page)-->
-<script src="{{asset('adminBoard/assets/js/pages/crud/ktdatatable/base/data-ajax.js')}}"></script>
 <script src="{{asset('adminBoard/assets/js/pages/widgets.js')}}"></script>
 <script src="{{asset('adminBoard/assets/js/pages/crud/forms/widgets/bootstrap-switch.js')}}"></script>
 <script src="{{asset('adminBoard/assets/js/pages/features/miscellaneous/bootstrap-notify.js')}}"></script>
@@ -359,12 +352,8 @@
 <script src="{{asset('adminBoard/assets/js/pages/widgets.js')}}"></script>
 <script src="{{asset('adminBoard/assets/js/pages/custom/profile/profile.js')}}"></script>
 
-
 <!--end::Page Scripts-->
-
-
 @stack('js')
-
 <!--Start:: Scripts-->
 <script type="text/javascript">
 
@@ -373,7 +362,6 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-
 
     ///////////////////////////////////////////////////////////////////////////
     //////// Textarea Limit characters
@@ -401,11 +389,7 @@
                 cc.innerHTML = '';
             }
         }
-
-
     }
-
-
     ///////////////////////////////////////////////////////////////////////////
     //////// Translate validation
     var required_validation = "{{ __('general.required') }}";
@@ -414,37 +398,6 @@
     var personal_id_validation = "{{ __('general.personal_id_validation') }}";
     var mobile_number_validation = "{{ __('general.mobile_number_validation') }}";
     var choose_validation = "{{ __('general.choose_validation') }}";
-
-
-    ///////////////////////////////////////////////////////////////////////////
-    ////////  Datatable Fonts
-    pdfMake.fonts = {
-        Roboto: {
-            normal: "{!! asset('adminBoard/assets/fonts/ArbFONTS-bein-ar-normal.ttf') !!}",
-            bold: "{!! asset('adminBoard/assets/fonts/ArbFONTS-bein-ar-normal.ttf') !!}",
-            italics: "{!! asset('adminBoard/assets/fonts/ArbFONTS-beIN Normal .ttf') !!}",
-            bolditalics: "{!! asset('adminBoard/assets/fonts/ArbFONTS-beIN Normal .ttf') !!}"
-        },
-    }
-
-    ///////////////////////////////////////////////////////////////////////////
-    //////// Translate Datatable
-    window.lang = {
-        lengthMenu: "@lang('general.show') _MENU_",
-        info: "@lang('general.entries_from') _START_ @lang('general.to') _END_ @lang('general.form') _TOTAL_",
-        infoEmpty: "@lang('general.entries_from') 0 @lang('general.to') 0 @lang('general.form') 0",
-        infoFiltered: "(@lang('filtered_from') _MAX_ @lang('general.from_entries'))",
-        processing: "@lang('general.processing')",
-        loadingRecords: "@lang('general.loadingRecords')",
-        zeroRecords: "@lang('general.not_result')",
-        emptyTable: "@lang('general.not_values')",
-        paginate: {
-            first: "@lang('general.first')",
-            previous: "@lang('general.previous')",
-            next: "@lang('general.next')",
-            last: "@lang('general.last')"
-        }
-    }
 
 </script>
 
@@ -456,7 +409,6 @@
         .fa-caret-down::before {
             content: "\f0d9";
         }
-
         .fa-caret-right::before {
             content: "\f0d7";
         }
