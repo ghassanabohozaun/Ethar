@@ -28,7 +28,7 @@ class PublicationsController extends Controller
 
     public function store(PublicationsRequest $request)
     {
-        
+
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
@@ -80,6 +80,13 @@ class PublicationsController extends Controller
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/publications');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+
+            $image_path = public_path("\adminBoard\uploadedImages\publications\\") . $publication->photo;
+              if (File::exists($image_path))
+              {
+                File::delete($image_path);
+              }
+
         } else {
             $photo_path = $publication->photo;
         }
