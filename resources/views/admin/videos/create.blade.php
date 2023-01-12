@@ -16,19 +16,13 @@
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
-                            <a href="#" class="text-muted">
-                                {{trans('menu.media')}}
-                            </a>
-                        </li>
-
-                        <li class="breadcrumb-item">
                             <a href="{{route('admin.videos')}}" class="text-muted">
-                                {{trans('menu.videos')}}
+                                {{__('menu.videos')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.videos.create')}}" class="text-muted">
-                                {{trans('menu.add_new_video')}}
+                                {{__('menu.add_new_video')}}
                             </a>
                         </li>
                     </ul>
@@ -43,7 +37,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -78,7 +72,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.photo')}}
+                                                            {{__('videos.photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
@@ -89,7 +83,7 @@
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{trans('general.change_image')}}">
+                                                                    data-original-title="{{__('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="photo" id="photo"
                                                                            class="table-responsive-sm">
@@ -104,7 +98,7 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
@@ -116,7 +110,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.language')}}
+                                                            {{__('videos.language')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
 
@@ -125,14 +119,14 @@
                                                                 name="language" id="language" type="text">
 
                                                                 <option value="ar">
-                                                                    {{trans('general.ar')}}
+                                                                    {{__('general.ar')}}
                                                                 </option>
 
                                                                 <option value="en">
-                                                                    {{trans('general.en')}}
+                                                                    {{__('general.en')}}
                                                                 </option>
                                                                 <option value="ar_en">
-                                                                    {{trans('general.ar_en')}}
+                                                                    {{__('general.ar_en')}}
                                                                 </option>
                                                             </select>
                                                             <span class="form-text text-danger"
@@ -145,13 +139,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.title_ar')}}
+                                                            {{__('videos.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="title_ar" id="title_ar"
-                                                                placeholder=" {{trans('videos.enter_title_ar')}}"
+                                                                placeholder=" {{__('videos.enter_title_ar')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="title_ar_error"></span>
@@ -163,13 +157,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.title_en')}}
+                                                            {{__('videos.title_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="title_en" id="title_en"
-                                                                placeholder=" {{trans('videos.enter_title_en')}}"
+                                                                placeholder=" {{__('videos.enter_title_en')}}"
                                                                 autocomplete="off"/>
 
 
@@ -184,13 +178,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.duration')}}
+                                                            {{__('videos.duration')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="duration" id="duration" type="text"
-                                                                placeholder=" {{trans('videos.enter_duration')}}"
+                                                                placeholder=" {{__('videos.enter_duration')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="duration_error"></span>
@@ -202,14 +196,14 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.added_date')}}
+                                                            {{__('videos.added_date')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div class="input-group date">
                                                                 <input type="text" class="form-control"
                                                                        id="added_date" name="added_date"
                                                                        readonly
-                                                                       placeholder="{{trans('videos.enter_added_date')}}"/>
+                                                                       placeholder="{{__('videos.enter_added_date')}}"/>
                                                                 <div class="input-group-append">
                                                              <span class="input-group-text">
                                                                 <i class="la la-calendar-check-o"></i>
@@ -224,17 +218,17 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.link')}}
+                                                            {{__('videos.link')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="link" id="link" type="text"
-                                                                placeholder=" {{trans('videos.enter_link')}}"
+                                                                placeholder=" {{__('videos.enter_link')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-muted">
-                                                                {{trans('general.example')}} :
+                                                                {{__('general.example')}} :
                                                                  https://www.youtube.com/watch?v=DzwIRzD7da4
                                                             </span>
                                                             <span class="form-text text-danger" id="link_error"></span>
@@ -269,10 +263,7 @@
 @push('js')
     <script type="text/javascript">
 
-        var video_photo_album = new KTImageInput('kt_video_photo_album');
-
-        ////////////////////////////////////////////////
-        ///////// Datepicker
+        // Datepicker
         $('#added_date').datepicker({
             format: "yyyy-mm-dd",
             todayBtn: true,
@@ -282,10 +273,12 @@
             autoclose: true,
             todayHighlight: true,
         });
+        // KTImageInput
+        var video_photo_album = new KTImageInput('kt_video_photo_album');
+
 
         $('#form_videos_add').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
             //////////////////////////////////////////////////////////////
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
@@ -315,33 +308,35 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {
                     KTApp.unblockPage();
-                    console.log(data);
                     if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        setTimeout(function () {
-                            window.location.href = "{{route('admin.videos')}}"
-                        })
-                    }
-                    if (data.status == false) {
-                        $.notifyClose();
-                        notifySuccessOrError(data.msg, 'danger');
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'add_video_button'}
+                        });
+                        $('.add_video_button').click(function () {
+                            window.location.href = "{{route('admin.videos')}}";
+                        });
                     }
                 },//end success
 
                 error: function (reject) {
-                    $.notifyClose();
                     var response = $.parseJSON(reject.responseText);
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0]);
-                        $('#' + key).css('border-color', '#F64E60')
+                        $('#' + key).css('border-color', '#F64E60');
+                        $('html, body').animate({scrollTop: 20}, 300);
                     });
 
                 },//end error
+
                 complete: function () {
                     KTApp.unblockPage();
                 },//end complete

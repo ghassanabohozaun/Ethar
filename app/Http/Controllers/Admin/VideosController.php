@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\VideosRequest;
 use App\Http\Resources\VideosResource;
+use App\Models\Slider;
 use App\Models\Video;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
@@ -14,110 +15,57 @@ class VideosController extends Controller
 {
     use GeneralTrait;
 
-    ////////////////////////////////////////////
-    /// index
+    // index
     public function index()
     {
         $title = trans('menu.videos');
-        return view('admin.medias.videos.index', compact('title'));
+        $videos = Video::orderByDesc('created_at')->paginate();
+        return view('admin.videos.index', compact('title', 'videos'));
     }
 
-    ////////////////////////////////////////////
-    /// get Videos
-    public function getVideos(Request $request)
-    {
-        $perPage = 10;
-        if ($request->has('length')) {
-            $perPage = $request->length;
-        }
-
-        $offset = 0;
-        if ($request->has('start')) {
-            $offset = $request->start;
-        }
-
-        $list = Video::orderByDesc('created_at')->offset($offset)->take($perPage)->get();
-        $arr = VideosResource::collection($list);
-        $recordsTotal = Video::get()->count();
-        $recordsFiltered = Video::get()->count();
-        return response()->json([
-            'draw' => $request->draw,
-            'recordsTotal' => $recordsTotal,
-            'recordsFiltered' => $recordsFiltered,
-            'data' => $arr
-        ]);
-    }
-
-    ////////////////////////////////////////////
-    /// create
+    // create
     public function create()
     {
         $title = trans('menu.add_new_video');
-        return view('admin.medias.videos.create', compact('title'));
+        return view('admin.videos.create', compact('title'));
     }
 
-    ////////////////////////////////////////////
-    /// store
+    // store
     public function store(VideosRequest $request)
     {
 
-        try {
-
-            if ($request->has('link')) {
-
-                if (preg_match('@^(?:https://(?:www\\.)?youtube.com/)(watch\\?v=|v/)([a-zA-Z0-9_]*)@', $request->link, $match)) {
-                    $VideoLink = $this->getVideoLink($request->link);
-                } else {
-                    return $this->returnError(trans('videos.url_invalid'), '500');
-                }
-            }
-
-
-            if ($request->hasFile('photo')) {
-                $photo_path = $request->file('photo')->store('videos_photos');
+        if ($request->has('link')) {
+            if (preg_match('@^(?:https://(?:www\\.)?youtube.com/)(watch\\?v=|v/)([a-zA-Z0-9_]*)@', $request->link, $match)) {
+                $VideoLink = $this->getVideoLink($request->link);
             } else {
-                $photo_path = '';
+                return $this->returnError(trans('videos.url_invalid'), '500');
             }
-
-
-            if ($request->language == 'ar') {
-                Video::create([
-                    'language' => $request->language,
-                    'title_ar' => $request->title_ar,
-                    'title_en' => null,
-                    'link' => $VideoLink,
-                    'photo' => $photo_path,
-                    'duration' => $request->duration,
-                    'added_date' => $request->added_date,
-
-                ]);
-            } elseif ($request->language == 'en') {
-                Video::create([
-                    'language' => $request->language,
-                    'title_ar' => null,
-                    'title_en' => $request->title_en,
-                    'link' => $VideoLink,
-                    'photo' => $photo_path,
-                    'duration' => $request->duration,
-                    'added_date' => $request->added_date,
-                ]);
-            } elseif ($request->language == 'ar_en') {
-                Video::create([
-                    'language' => $request->language,
-                    'title_ar' => $request->title_ar,
-                    'title_en' => $request->title_en,
-                    'link' => $VideoLink,
-                    'photo' => $photo_path,
-                    'duration' => $request->duration,
-                    'added_date' => $request->added_date,
-                ]);
-            }
-            return $this->returnSuccessMessage(trans('general.add_success_message'));
-
-        } catch (\Exception $exception) {
-
-            return $this->returnError(trans('general.try_catch_error_message'), '500');
         }
+
+
+        // save image
+        if ($request->hasFile('photo')) {
+            $image = $request->file('photo');
+            $destinationPath = public_path('\adminBoard\uploadedImages\videos\\');
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+        } else {
+            $photo_path = '';
+        }
+
+
+        $lang_en = setting()->site_lang_en;
+        Video::create([
+            'photo' => $photo_path,
+            'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'link' => $VideoLink,
+            'duration' => $request->duration,
+            'added_date' => $request->added_date,
+        ]);
+
+
+        return $this->returnSuccessMessage(trans('general.add_success_message'));
 
 
     }

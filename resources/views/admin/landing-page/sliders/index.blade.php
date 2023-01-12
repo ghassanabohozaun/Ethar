@@ -59,6 +59,7 @@
                     <!--begin::Card-->
                     <div class="card card-custom" id="card_posts">
                         <div class="card-body">
+
                             <!--begin: Datatable-->
                             <div class="portlet-body">
                                 <div class="row">
@@ -173,23 +174,13 @@
                             <input type="hidden" id="slider_delete_id">
                         </form>
                         <!--end::Form-->
-
                     </div>
                     <!--end::Card-->
-
-
                 </div>
-
             </div>
             <!--end::Row-->
-
-
         </div>
         <!--end::Container-->
-
-        <!--begin::Form-->
-
-
     </div>
     <!--end::content-->
 @endsection

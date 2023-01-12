@@ -23,30 +23,21 @@ class VideosRequest extends FormRequest
      */
     public function rules()
     {
-        if ($this->input('language') == 'ar') {
+
+        if (setting()->site_lang_en == 'on') {
             return [
-                'language' => 'required|in:ar,en,ar_en',
                 'title_ar' => 'required',
-                'link' => 'required',
-                'photo'=>'sometimes|nullable|image|mimes:jpg,jpeg,png|max:1024',
-            ];
-        } elseif ($this->input('language') == 'en') {
-            return [
-                'language' => 'required|in:ar,en,ar_en',
                 'title_en' => 'required',
                 'link' => 'required',
                 'photo'=>'sometimes|nullable|image|mimes:jpg,jpeg,png|max:1024',
             ];
-        } elseif ($this->input('language') == 'ar_en') {
+        } else {
             return [
-                'language' => 'required|in:ar,en,ar_en',
                 'title_ar' => 'required',
-                'title_en' => 'required',
                 'link' => 'required',
                 'photo'=>'sometimes|nullable|image|mimes:jpg,jpeg,png|max:1024',
             ];
         }
-
     }
 
     public function messages()

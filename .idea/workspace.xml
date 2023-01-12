@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/app/Models/Video.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/global.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SlidersRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/SlidersRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/VideosRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/VideosRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_12_113829_create_videos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_12_113978_create_videos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/videos.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/videos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/videos.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/videos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/parts/options.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/options.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/parts/photo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/photo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,11 +214,11 @@
       <recent name="C:\laragon\www\etharps\app\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\app\Models" />
       <recent name="C:\laragon\www\etharps\app\Http\Requests" />
       <recent name="C:\laragon\www\etharps\app\Http\Controllers\Admin" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
-      <recent name="C:\laragon\www\etharps\resources\lang\ar" />
     </key>
   </component>
   <component name="RunManager">
@@ -248,7 +261,7 @@
       <workItem from="1673444620240" duration="14000" />
       <workItem from="1673447064326" duration="18871000" />
       <workItem from="1673525024377" duration="1716000" />
-      <workItem from="1673533458125" duration="1895000" />
+      <workItem from="1673533458125" duration="4517000" />
     </task>
     <servers />
   </component>
@@ -302,6 +315,11 @@
           <url>file://$PROJECT_DIR$/resources/views/site/reports/report-details.blade.php</url>
           <line>51</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/lang/ar/videos.php</url>
+          <line>32</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

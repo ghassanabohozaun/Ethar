@@ -284,8 +284,6 @@
 
         var slider_photo = new KTImageInput('kt_slider_photo');
 
-
-
         $('#form_sliders_add').on('submit', function (e) {
             e.preventDefault();
             //////////////////////////////////////////////////////////////

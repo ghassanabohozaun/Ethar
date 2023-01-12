@@ -36,15 +36,15 @@ return [
     'projects' => 'Projects',
     'trashed_projects' => 'Trashed Projects',
     'add_new_project' => 'Add New Project',
-
     'testimonials' => 'Testimonials',
     'trashed_testimonials' => 'Trashed Testimonials',
     'add_new_testimonial' => 'Add New Testimonial',
-
-
     'publications' => 'Publications',
+    'trashed_publications' => 'Trashed Publications',
     'add_new_publication' =>  'Add New Publication',
-
+    'videos' => 'Videos',
+    'trashed_videos' => 'Trashed Videos',
+    'add_new_video' =>  'Add New Video',
 
 ];
 

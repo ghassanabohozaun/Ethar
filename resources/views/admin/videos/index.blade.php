@@ -3,7 +3,6 @@
 @section('css')@endsection
 @section('content')
 
-
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
         <div
@@ -16,18 +15,12 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.media')}}
-                        </a>
-                    </li>
-
-                    <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
-                            {{trans('menu.videos')}}
+                            {{__('menu.videos')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="{{route('admin.videos')}}" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -38,15 +31,10 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-                <a href="{!! route('videos') !!}" target="_blank"
-                   class="btn btn-secondary btn-sm font-weight-bold font-size-base  mr-1">
-                    <i class="fa fa-eye"></i>
-                    {{trans('general.view')}}
-                </a>
                 <a href="{{route('admin.videos.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_video')}}
+                    {{__('menu.add_new_video')}}
                 </a>
             </div>
             <!--end::Toolbar-->
@@ -67,53 +55,79 @@
                     <div class="card card-custom" id="card_posts">
                         <div class="card-body">
 
-
                             <!--begin: Datatable-->
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="dtable scroll">
-                                            <!--begin: Datatable -->
-                                            <table class="table d-table" id="m_table_1">
-                                                <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>@lang('videos.photo')</th>
-                                                    <th>@lang('videos.title_ar')</th>
-                                                    <th>@lang('videos.title_en')</th>
-                                                    <th>@lang('videos.language')</th>
-                                                    <th>@lang('videos.duration')</th>
-                                                    <th>@lang('videos.status')</th>
-                                                    <th>@lang('general.actions')</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                        <div class="scroll">
+                                            <div class="table-responsive">
+                                                <table class="table myTable table-hover" id="myTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>{!! __('videos.photo') !!}</th>
+                                                        <th>{!! __('videos.title_ar') !!}</th>
+                                                        <th>{!! __('videos.title_en') !!}</th>
+                                                        <th>{!! __('videos.duration') !!}</th>
+                                                        <th>{!! __('videos.status') !!}</th>
+                                                        <th>{!! __('general.actions') !!}</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @forelse($videos as $video)
+                                                        <tr>
+                                                            <td>{!! $loop->iteration!!}</td>
+                                                            <td>@include('admin.videos.parts.photo') </td>
+                                                            <td>{{ $slider->title_ar }}</td>
+                                                            <td>{{ $slider->title_en }}</td>
+                                                            <td>{{ $slider->duration }}</td>
+                                                            <td>
+                                                                <div class="cst-switch switch-sm">
+                                                                    <input type="checkbox"
+                                                                           {{$slider->status == '1' ? 'checked':''}}  data-id="{{$instance->id}}"
+                                                                           class="change_status">
+                                                                </div>
+                                                            </td>
+                                                            <td>@include('admin.videos.parts.options')</td>
+
+                                                        </tr>
+                                                    @empty
+                                                        <tr>
+                                                            <td colspan="7" class="text-center">
+                                                                {!! __('videos.no_videos_found') !!}
+                                                            </td>
+                                                        </tr>
+                                                    @endforelse
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td colspan="7">
+                                                            <div class="float-right">
+                                                                {!! $videos->appends(request()->all())->links() !!}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                             <!--end: Datatable-->
-
-
                         </div>
 
                         <form class="d-none" id="form_video_delete">
-                            <input type="hidden" id="slider_video_id">
+                            <input type="hidden" id="video_id">
                         </form>
                         <!--end::Form-->
-
                     </div>
                     <!--end::Card-->
-
-
                 </div>
 
             </div>
             <!--end::Row-->
-
-
         </div>
         <!--end::Container-->
 
@@ -160,86 +174,61 @@
 @endsection
 @push('js')
 
-    <script
-        src="{{asset('adminBoard/assets/plugins/custom/datatables/datatables.bundle.js')}}"
-        type="text/javascript"></script>
-    <script src="{{asset('adminBoard/assets/js/data_table.js')}}" type="text/javascript"></script>
-
-    <script>
-        window.data_url = "{{route('get.admin.videos')}}";
-        window.columns = [{data: "id"}, {data: "photo"},
-            {data: "title_ar"}, {data: "title_en"},
-            {data: "language"}, {data: "duration"},
-            {data: "status"}, {data: "actions"},];
-    </script>
-
-
     <script type="text/javascript">
 
 
-        //////////////////////////////////////////////////////
-        // show delete video notify
+        //Show user Delete Notify
         $(document).on('click', '.delete_video_btn', function (e) {
             e.preventDefault();
-
             var id = $(this).data('id');
-            $('#form_video_delete').find('#slider_video_id').val(id);
 
-            $.notifyClose();
-            notify_message = " <i class='fa fa-trash' style='color:white'></i> &nbsp; {{trans('general.ask_delete_record')}}<br /><br />" +
-                "<button type='button' id='btn_video_delete'  class=' btn btn-outline-light btn-sm m-btn m-btn--air m-btn--wide '" +
-                ">{{trans('general.yes')}}</button> &nbsp;" +
-                "<button type='button' id='btn_video_close' class=' btn btn-outline-light btn-sm m-btn m-btn--air m-btn--wide '" +
-                ">{{trans('general.no')}}</button>"
-
-            notifyDelete(notify_message, 'danger')
-
-        });//end click
-
-        //////////////////////////////////////////////////////
-        //  delete video notify close
-        $('body').on('click', '#btn_video_close', function (e) {
-            e.preventDefault();
-            $.notifyClose();
-            $('#form_video_delete').find('#slider_video_id').val('');
-        });//end click
-
-        //////////////////////////////////////////////////////
-        //  delete Video
-        $('body').on('click', '#btn_video_delete', function (e) {
-            e.preventDefault();
-            $.notifyClose();
-
-            var id = $('#form_video_delete').find('#slider_video_id').val();
-
-            $.ajax({
-                url: "{{route('admin.video.destroy')}}",
-                data: {id, id},
-                type: 'POST',
-                dataType: 'json',
-                beforeSend: function () {
-                    KTApp.blockPage({
-                        overlayColor: '#000000',
-                        state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+            Swal.fire({
+                title: "{{trans('general.ask_delete_record')}}",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "{{trans('general.yes')}}",
+                cancelButtonText: "{{trans('general.no')}}",
+                reverseButtons: false,
+                allowOutsideClick: false,
+            }).then(function (result) {
+                if (result.value) {
+                    //////////////////////////////////////
+                    // Delete User
+                    $.ajax({
+                        url: '{!! route('admin.video.destroy') !!}',
+                        data: {id, id},
+                        type: 'post',
+                        dataType: 'json',
+                        success: function (data) {
+                            console.log(data);
+                            if (data.status == true) {
+                                Swal.fire({
+                                    title: "{!! trans('general.deleted') !!}",
+                                    text: data.msg,
+                                    icon: "success",
+                                    allowOutsideClick: false,
+                                    customClass: {confirmButton: 'delete_video_button'}
+                                });
+                                $('.delete_video_button').click(function () {
+                                    $('#video_id').find('#video_id').val();
+                                    $('#myTable').load(location.href + (' #myTable'));
+                                });
+                            }
+                        },//end success
                     });
-                },//end beforeSend
-                success: function (data) {
-                    KTApp.unblockPage();
-                    console.log(data);
-                    if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        $('#form_video_delete').find('#slider_video_id').val('');
-                        updateDataTable();
-                    }
-                }, // end success
-                complete: function () {
-                    KTApp.unblockPage();
-                },//end complete
 
+                } else if (result.dismiss === "cancel") {
+                    Swal.fire({
+                        title: "{!! trans('general.cancelled') !!}",
+                        text: "{!! trans('general.cancelled_message') !!}",
+                        icon: "error",
+                        allowOutsideClick: false,
+                        customClass: {confirmButton: 'cancel_delete_user_button'}
+                    })
+                }
+            });
 
-            });//end ajax
-        });//end click
+        })
 
 
         /////////////////////////////////////////////////////////////////////////////////////
@@ -250,35 +239,41 @@
             $("#video_view iframe").attr('src', '');
             $('#model_show_video').modal('hide');
         });
-        /////////////////////////////////////////////////////////////////////////////////////
-        // show Video
-        $(document).on('click', '.show_video_btn', function (e) {
+        {{--/////////////////////////////////////////////////////////////////////////////////////--}}
+        {{--// show Video--}}
+        {{--$(document).on('click', '.show_video_btn', function (e) {--}}
+        {{--    e.preventDefault();--}}
+
+        {{--    var id = $(this).data('id');--}}
+        {{--    $('#video_view').empty();--}}
+
+        {{--    $.get("{{route('admin.video.view')}}", {id, id}, function (data) {--}}
+        {{--        console.log(data);--}}
+        {{--        $('#video_view').html('<div class="videoWrapper">' +--}}
+        {{--            '<iframe  width="420" height="315" align="middle"' +--}}
+        {{--            'src="https://www.youtube.com/embed/' + data.data.link + '"></iframe></div>');--}}
+
+        {{--        $('#model_show_video').modal('show');--}}
+        {{--    });--}}
+        {{--});--}}
+
+
+
+        //change status
+        var switchStatus = false;
+        $('body').on('change', '.change_status', function (e) {
             e.preventDefault();
-
             var id = $(this).data('id');
-            $('#video_view').empty();
 
-            $.get("{{route('admin.video.view')}}", {id, id}, function (data) {
-                console.log(data);
-                $('#video_view').html('<div class="videoWrapper">' +
-                    '<iframe  width="420" height="315" align="middle"' +
-                    'src="https://www.youtube.com/embed/' + data.data.link + '"></iframe></div>');
-
-                $('#model_show_video').modal('show');
-            });
-        });
-
-        /////////////////////////////////////////////////////////////////////////////////////
-        // change video status
-        $('body').on('click', '.change_status', function (e) {
-            e.preventDefault();
-            $.notifyClose();
-
-            var id = $(this).data('id');
+            if ($(this).is(':checked')) {
+                switchStatus = $(this).is(':checked');
+            } else {
+                switchStatus = $(this).is(':checked');
+            }
 
             $.ajax({
                 url: "{{route('admin.video.change.status')}}",
-                data: {id: id},
+                data: {switchStatus: switchStatus, id: id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
@@ -292,8 +287,15 @@
                     KTApp.unblockPage();
                     console.log(data);
                     if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        updateDataTable();
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'switch_status_toggle'}
+                        });
+                        $('.switch_status_toggle').click(function () {
+                        });
                     }
                 },//end success
             })
@@ -320,9 +322,10 @@
             el.select();
             document.execCommand('copy');
             document.body.removeChild(el);
-            notifySuccessOrError("{{trans('general.copied')}}", 'success');
+            notifySuccessOrError("{{__('general.copied')}}", 'success');
         })
     </script>
+    
 @endpush
 
 @push('css')

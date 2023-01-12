@@ -29,5 +29,5 @@ return [
     'in' => 'The entered value incorrect',
     'mimes'=>'image with jpeg, jpg, png formats only',
     'image_max'=>'Max allow image size 1 mega',
-
+    'no_videos_found'=>'No Videos Found'
 ];

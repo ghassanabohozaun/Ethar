@@ -185,7 +185,7 @@ Route::group([
 
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// publication routes
-    Route::group(['prefix' => 'publication', 'middleware' => 'can:projects'], function () {
+    Route::group(['prefix' => 'publication', 'middleware' => 'can:publications'], function () {
         Route::get('/', [PublicationsController::class, 'index'])->name('admin.publication.index');
         Route::get('/create', [PublicationsController::class, 'create'])->name('admin.publication.create');
         Route::post('/store', [PublicationsController::class, 'store'])->name('admin.publication.store');
@@ -201,7 +201,7 @@ Route::group([
 
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// Videos routes
-    Route::group(['prefix' => 'videos', 'middleware' => 'can:projects'], function () {
+    Route::group(['prefix' => 'videos', 'middleware' => 'can:videos'], function () {
         Route::get('/', 'VideosController@index')->name('admin.videos');
         Route::get('/get-videos', 'VideosController@getVideos')->name('get.admin.videos');
         Route::get('/create', 'VideosController@create')->name('admin.videos.create');

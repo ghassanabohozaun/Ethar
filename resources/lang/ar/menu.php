@@ -40,5 +40,8 @@ return [
     'trashed_publications' => 'المنشورات المحذوفة',
     'add_new_publication' => 'إضافة منشور جديد',
 
+    'videos' => 'الفيديوهات',
+    'trashed_videos' => 'الفيديوهات المحذوفة',
+    'add_new_video' => 'إضافة فيديو جديد',
 
 ];
