@@ -79,6 +79,13 @@ class ProjectsController extends Controller
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/projects');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+
+            $image_path = public_path("\adminBoard\uploadedImages\projects\\") . $project->photo;
+
+            if (File::exists($image_path))
+            {
+              File::delete($image_path);
+            }
         } else {
             $photo_path = $project->photo;
         }
