@@ -7,9 +7,12 @@
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Traits/GeneralTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/GeneralTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_12_113978_create_videos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_12_113978_create_videos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/sliders/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/parts/photo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/photo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/parts/status.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/update.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +251,7 @@
       <workItem from="1673444620240" duration="14000" />
       <workItem from="1673447064326" duration="18871000" />
       <workItem from="1673525024377" duration="1716000" />
-      <workItem from="1673533458125" duration="5236000" />
+      <workItem from="1673533458125" duration="6517000" />
     </task>
     <servers />
   </component>

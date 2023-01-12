@@ -3,8 +3,8 @@
 @section('content')
 
     <form class="form" action="{{route('admin.video.update')}}" method="POST" id="form_videos_update">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -16,12 +16,6 @@
                     <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-                        <li class="breadcrumb-item">
-                            <a href="#" class="text-muted">
-                                {{trans('menu.media')}}
-                            </a>
-                        </li>
-
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.videos')}}" class="text-muted">
                                 {{trans('menu.videos')}}
@@ -74,6 +68,21 @@
 
                                                 <!--begin::body-->
                                                 <div class="my-5">
+                                                    <!--begin::Group-->
+                                                    <div class="d-none form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            ID
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="id" id="id" type="hidden"
+                                                                value="{{$video->id}}"/>
+                                                            <input type="hidden" name="hidden_photo"
+                                                                   value="hidden_photo">
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
@@ -85,7 +94,7 @@
                                                                 class="image-input image-input-outline"
                                                                 id="kt_video_photo_album">
                                                                 <div class="image-input-wrapper"
-                                                                     style="background-image: url({{asset(Storage::url($video->photo))}})"></div>
+                                                                     style="background-image: url({{asset('adminBoard/uploadedImages/videos/'.$video->photo)}})"></div>
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
@@ -111,55 +120,6 @@
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
-
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="d-none form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            ID
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-                                                            <input
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                name="id" id="id" type="hidden"
-                                                                value="{{$video->id}}"/>
-                                                        </div>
-
-                                                    </div>
-                                                    <!--end::Group-->
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.language')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-
-                                                            <select
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                name="language" id="language" type="text">
-
-                                                                <option
-                                                                    value="ar" {{$video->language ==trans('general.ar') ?'selected':'' }}>
-                                                                    {{trans('general.ar')}}
-                                                                </option>
-
-                                                                <option
-                                                                    value="en" {{$video->language ==trans('general.en') ?'selected':'' }}>
-                                                                    {{trans('general.en')}}
-                                                                </option>
-                                                                <option
-                                                                    value="ar_en" {{$video->language ==trans('general.ar_en') ?'selected':'' }}>
-                                                                    {{trans('general.ar_en')}}
-                                                                </option>
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="language_error"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Group-->
-
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
@@ -210,7 +170,8 @@
                                                                 name="duration" id="duration" type="text"
                                                                 placeholder=" {{trans('videos.enter_duration')}}"
                                                                 autocomplete="off" value="{{$video->duration}} "/>
-                                                            <span class="form-text text-danger" id="duration_error"></span>
+                                                            <span class="form-text text-danger"
+                                                                  id="duration_error"></span>
                                                         </div>
 
                                                     </div>
@@ -301,9 +262,9 @@
             autoclose: true,
             todayHighlight: true,
         });
+
         $('#form_videos_update').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
             //////////////////////////////////////////////////////////////
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
@@ -311,13 +272,11 @@
             $('#link').css('border-color', '');
             $('#photo').css('border-color', '');
 
-
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
             $('#language_error').text('');
             $('#link_error').text('');
             $('#photo_error').text('');
-
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);
             var type = $(this).attr('method');
@@ -335,29 +294,31 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {
                     KTApp.unblockPage();
-                    console.log(data);
                     if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        setTimeout(function () {
-                            window.location.href = "{{route('admin.videos')}}"
-                        })
-                    }
-                    if (data.status == false) {
-                        notifySuccessOrError(data.msg, 'warning');
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'update_video_button'}
+                        });
+                        $('.update_video_button').click(function () {
+                            window.location.href = "{{route('admin.videos')}}";
+                        });
                     }
                 },//end success
 
                 error: function (reject) {
-                    $.notifyClose();
                     var response = $.parseJSON(reject.responseText);
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0]);
-                        $('#' + key).css('border-color', '#F64E60')
+                        $('#' + key).css('border-color', '#F64E60');
+                        $('html, body').animate({scrollTop: 20}, 300);
                     });
 
                 },//end error
@@ -369,6 +330,7 @@
             });
 
         });//end submit
+
 
 
     </script>

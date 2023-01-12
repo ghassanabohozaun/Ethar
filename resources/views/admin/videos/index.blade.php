@@ -84,7 +84,8 @@
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
-                                                                           {{$video->status == '1' ? 'checked':''}}  data-id="{{$video->id}}"
+                                                                           id="change_status"
+                                                                           {{$video->status == 'on' ? 'checked':''}}  data-id="{{$video->id}}"
                                                                            class="change_status">
                                                                 </div>
                                                             </td>
@@ -259,7 +260,7 @@
 
 
 
-        //change status
+        // switch english language
         var switchStatus = false;
         $('body').on('change', '.change_status', function (e) {
             e.preventDefault();
@@ -280,7 +281,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

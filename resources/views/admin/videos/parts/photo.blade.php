@@ -3,7 +3,7 @@
          width="100" height="80"
          class="img-fluid img-thumbnail"/>
 @else
-    <img src="{{asset(Storage::url($video->photo))}}"
+    <img src="{{asset('adminBoard/uploadedImages/videos/'.$video->photo)}}"
          width="100" height="80"
          class="img-fluid img-thumbnail"/>
 @endif

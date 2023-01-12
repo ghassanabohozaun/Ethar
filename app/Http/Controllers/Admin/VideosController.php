@@ -136,7 +136,7 @@ class VideosController extends Controller
 
 
         $lang_en = setting()->site_lang_en;
-        $video - update([
+        $video->update([
             'photo' => $photo_path,
             'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
             'title_ar' => $request->title_ar,
@@ -162,7 +162,7 @@ class VideosController extends Controller
                 return redirect()->route('admin.not.found');
             }
             if (!empty($video->photo)) {
-                $image_path = public_path("\adminBoard\uploadedImages\vvideos\\") . $video->photo;
+                $image_path =  public_path('\adminBoard\uploadedImages\videos\\') . $video->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
@@ -182,7 +182,8 @@ class VideosController extends Controller
         }
     }
 
-    // change Status
+    /////////////////////////////////////////
+    /// change  status
     public function changeStatus(Request $request)
     {
         $video = Video::find($request->id);
@@ -194,6 +195,7 @@ class VideosController extends Controller
             $video->save();
         }
         return $this->returnSuccessMessage(__('general.change_status_success_message'));
+
     }
 
 }

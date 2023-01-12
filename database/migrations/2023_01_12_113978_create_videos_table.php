@@ -15,16 +15,14 @@ class CreateVideosTable extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->enum('language', ['ar', 'en', 'ar_en'])->default('en');
-            $table->enum('status', ['0', '1'])->default('0');
+            $table->enum('language', ['ar', 'ar_en'])->default('en');
+            $table->string('status')->nullable();
             $table->text('title_ar')->nullable();
             $table->text('title_en')->nullable();
             $table->string('link');
             $table->string('photo')->nullable();
             $table->string('duration')->nullable();
             $table->string('added_date')->nullable();
-
-
             $table->timestamps();
         });
     }

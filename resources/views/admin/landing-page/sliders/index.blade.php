@@ -241,7 +241,6 @@
 
         })
 
-
         // switch english language
         var switchStatus = false;
         $('body').on('change', '.change_status', function (e) {
