@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Models\Publications;
 use App\Models\Role;
 use Database\Seeders\ProjectsSeeder;
 use Database\Seeders\PublicationsSeeder;
@@ -30,8 +31,8 @@ class DatabaseSeeder extends Seeder
             SettingsSeeder::class,
             AdminSeeder::class,
             ProjectsSeeder::class,
-            PublicationsSeeder::class,
         ]);
+        Publications::factory()->count(20)->create();
 
     }
 }

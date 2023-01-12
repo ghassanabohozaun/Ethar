@@ -12,7 +12,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                            {{trans('projects.photo')}}
+                            {{trans('publications.photo')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div
@@ -49,7 +49,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.file')}}
+                                {{trans('publications.file')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <input
@@ -69,7 +69,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                              {{trans('projects.date')}}
+                              {{trans('publications.date')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
@@ -92,13 +92,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.writer')}}
+                                {{trans('publications.writer')}}
                             </label>
 
                             <div  class="col-lg-9 col-xl-9">
                                 <input type="text" class="form-control form-control-solid form-control-lg"
                                        name="writer" id="writer"
-                                       placeholder="{{trans('projects.writer')}}"
+                                       placeholder="{{trans('publications.writer')}}"
                                        autocomplete="off">
                                 <span class="form-text text-danger"
                                       id="writer_error"></span>
@@ -109,51 +109,52 @@
                          <!--begin::Group-->
                          <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                             {{trans('projects.type')}}
+                             {{trans('publications.type')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 
                                 <select
-                                class="form-control  form-control-lg"
-                                name="type" id="type" type="text">
+                                    class="form-control  form-control-lg"
+                                    name="type" id="type" type="text">
 
-                                <option value="Advertisements">
-                                    @if(Lang() == 'ar')
-                                    الإعلانات
-                                    @elseif(Lang() == 'en')
-                                    Advertisements
-                                    @endif
+                                    <option value="Advertisements">
+                                        @if(Lang() == 'ar')
+                                        الإعلانات
+                                        @elseif(Lang() == 'en')
+                                        Advertisements
+                                        @endif
 
-                                </option>
+                                    </option>
 
-                                <option value="Brochures">
+                                    <option value="Brochures">
 
-                                    @if(Lang() == 'ar')
-                                    نشرة
-                                    @elseif(Lang() == 'en')
-                                    Brochures
-                                    @endif
-                                </option>
+                                        @if(Lang() == 'ar')
+                                        نشرة
+                                        @elseif(Lang() == 'en')
+                                        Brochures
+                                        @endif
+                                    </option>
 
-                                <option value="CaseStudy">
-                                    @if(Lang() == 'ar')
-                                    دراسة الحالة
-                                    @elseif(Lang() == 'en')
-                                    Case Study
-                                    @endif
+                                    <option value="CaseStudy">
+                                        @if(Lang() == 'ar')
+                                        دراسة الحالة
+                                        @elseif(Lang() == 'en')
+                                        Case Study
+                                        @endif
 
-                                </option>
+                                    </option>
 
-                                <option value="ScientificArticles">
+                                    <option value="ScientificArticles">
 
-                                    @if(Lang() == 'ar')
-                                    مقالات علمية
-                                    @elseif(Lang() == 'en')
-                                    Scientific Articles
-                                    @endif
-                                </option>
+                                        @if(Lang() == 'ar')
+                                        مقالات علمية
+                                        @elseif(Lang() == 'en')
+                                        Scientific Articles
+                                        @endif
+                                    </option>
 
-                            </select>
+                                </select>
+                                
                                 <span class="form-text text-danger"
                                       id="gender_error"></span>
                             </div>

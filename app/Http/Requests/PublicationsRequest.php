@@ -13,7 +13,7 @@ class PublicationsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,28 @@ class PublicationsRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-        ];
+
+            if (setting()->site_lang_en == 'on') {
+                return [
+                    'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                    'title_ar' => 'required|unique:articles',
+                    'title_en' => 'required|unique:articles',
+                    'details_ar' => 'required',
+                    'details_en' => 'required',
+                    'date' => 'required',
+                    'writer' => 'required',
+                    'file'   => ['mimes:pdf']
+                ];
+            } else {
+                return [
+                    'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                    'title_ar' => 'required|unique:articles',
+                    'details_ar' => 'required',
+                    'date' => 'required',
+                    'writer' => 'required',
+                    'file'   => ['mimes:pdf']
+                ];
+            }
+ 
     }
 }

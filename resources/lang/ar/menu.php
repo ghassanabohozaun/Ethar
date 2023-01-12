@@ -36,5 +36,9 @@ return [
     'trashed_testimonials' => 'الشهادات المحذوفة',
     'add_new_testimonial' => 'اضافة شهادة جديد',
 
+    'publications' => 'المنشورات',
+    'trashed_publications' => 'المنشورات المحذوفة',
+    'add_new_publication' => 'إضافة منشور جديد',
+
 
 ];

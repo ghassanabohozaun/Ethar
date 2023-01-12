@@ -10,11 +10,11 @@
                         <!--begin::Group-->
                         <div class="form-group">
                             <label>
-                                {{trans('projects.title_en')}}
+                                {{trans('publications.title_en')}}
                             </label>
                             <input type="text" class="form-control form-control-solid form-control-lg"
-                                   name="title_en" id="title_en" value="{{$project->title_en}}"
-                                   placeholder="{{trans('projects.title_en')}}"
+                                   name="title_en" id="title_en" value="{{$publication->title_en}}"
+                                   placeholder="{{trans('publications.title_en')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
                                   id="title_en_error"></span>
@@ -25,11 +25,11 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{trans('projects.des_en')}}</label>
+                            <label> {{trans('publications.des_en')}}</label>
                             <textarea class="form-control summernote"
-                                      placeholder="{{trans('projects.des_en')}}"
+                                      placeholder="{{trans('publications.des_en')}}"
                                       name="details_en"
-                                      id="details_en">{{$project->details_en}}</textarea>
+                                      id="details_en">{{$publication->details_en}}</textarea>
                             <span class="form-text text-danger"
                                   id="abstract_en_error"></span>
                         </div>

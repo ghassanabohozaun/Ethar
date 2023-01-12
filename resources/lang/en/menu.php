@@ -41,6 +41,11 @@ return [
     'trashed_testimonials' => 'Trashed Testimonials',
     'add_new_testimonial' => 'Add New Testimonial',
 
+
+    'publications' => 'Publications',
+    'add_new_publication' =>  'Add New Publication',
+
+
 ];
 
 

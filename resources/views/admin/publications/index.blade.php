@@ -15,7 +15,7 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{__('menu.projects')}}
+                            {{__('menu.publications')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
@@ -72,14 +72,14 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>{!! __('projects.photo') !!} </th>
-                                                        <th>{!! __('projects.title_ar') !!}</th>
+                                                        <th>{!! __('publications.photo') !!} </th>
+                                                        <th>{!! __('publications.title_ar') !!}</th>
                                                         @if($lang_en =setting()->site_lang_en == 'on')
-                                                            <th>{!! __('projects.title_en') !!}</th>
+                                                            <th>{!! __('publications.title_en') !!}</th>
                                                         @endif
-                                                        <th>{!! __('projects.writer') !!}</th>
-                                                        <th>{!! __('projects.date') !!}</th>
-                                                        <th>{!! __('projects.type') !!}</th>
+                                                        <th>{!! __('publications.writer') !!}</th>
+                                                        <th>{!! __('publications.date') !!}</th>
+                                                        <th>{!! __('publications.type') !!}</th>
                                                         <th>{!! __('articles.status') !!}</th>
                                                         <th class="text-center"
                                                             style="width: 100px;">{!! __('general.actions') !!}</th>
@@ -90,7 +90,7 @@
                                                         <tr>
                                                             <td>
                                                                 <img
-                                                                    src="{{ asset('adminBoard/uploadedImages/projects/'.$publication->photo) }}"
+                                                                    src="{{ asset('adminBoard/uploadedImages/publications/'.$publication->photo) }}"
                                                                     style="width: 80px; height: 60px"
                                                                     class=" img-thumbnail"/>
                                                             </td>
@@ -129,7 +129,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="7" class="text-center">
-                                                                {!! __('projects.no_found') !!}
+                                                                {!! __('publications.no_found') !!}
                                                             </td>
                                                         </tr>
                                                     @endforelse
@@ -202,7 +202,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.project.destroy') !!}',
+                        url: '{!! route('admin.publication.destroy') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -261,7 +261,7 @@
             }
 
             $.ajax({
-                url: "{{route('admin.project.change.status')}}",
+                url: "{{route('admin.publication.change.status')}}",
                 data: {switchStatus: switchStatus, id: id},
                 type: 'post',
                 dataType: 'JSON',

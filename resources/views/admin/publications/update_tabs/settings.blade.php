@@ -15,7 +15,7 @@
                                 ID
                             </label>
                             <div class="col-lg-9 col-xl-9">
-                                <input value="{{$project->id}}"
+                                <input value="{{$publication->id}}"
                                        class="form-control form-control-solid form-control-lg"
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
@@ -28,7 +28,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.photo')}}
+                                {{trans('publications.photo')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div
@@ -36,7 +36,7 @@
                                     id="kt_article_photo">
 
                                     <div class="image-input-wrapper"
-                                         style="background-image: url({{asset('adminBoard/uploadedImages/projects/'.$project->photo)}})"></div>
+                                         style="background-image: url({{asset('adminBoard/uploadedImages/publications/'.$publication->photo)}})"></div>
                                     <label
                                         class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                         data-action="change" data-toggle="tooltip" title=""
@@ -64,7 +64,7 @@
                           <!--begin::Group-->
                           <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.file')}}
+                                {{trans('publications.file')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <input
@@ -84,13 +84,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.date')}}
+                                {{trans('publications.date')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
-                                           id="publish_date" name="date" value="{{$project->date}}"
-                                           readonly placeholder="{{trans('projects.date')}}"/>
+                                           id="publish_date" name="date" value="{{$publication->date}}"
+                                           readonly placeholder="{{trans('publications.date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
 								        <i class="la la-calendar-check-o"></i>
@@ -107,12 +107,12 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.writer')}}
+                                {{trans('publications.writer')}}
                             </label>
 
                             <div class="col-lg-9 col-xl-9">
                                 <input type="text" class="form-control form-control-solid form-control-lg"
-                                       name="writer" id="writer" value="{{$project->writer}}"
+                                       name="writer" id="writer" value="{{$publication->writer}}"
                                        placeholder="{{trans('articles.enter_publisher_name')}}"
                                        autocomplete="off">
                                 <span class="form-text text-danger"
@@ -124,7 +124,7 @@
                           <!--begin::Group-->
                           <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.type')}}
+                                {{trans('publications.type')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 
@@ -132,7 +132,7 @@
                                 class="form-control  form-control-lg"
                                 name="type" id="type" type="text">
 
-                                <option value="Advertisements">
+                                <option value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>
                                     @if(Lang() == 'ar')
                                     الإعلانات
                                     @elseif(Lang() == 'en')
@@ -141,7 +141,7 @@
 
                                 </option>
 
-                                <option value="Brochures">
+                                <option value="Brochures" {{$publication->type == 'Brochures'?'selected':''}}>
 
                                     @if(Lang() == 'ar')
                                     نشرة
@@ -150,7 +150,7 @@
                                     @endif
                                 </option>
 
-                                <option value="CaseStudy">
+                                <option value="CaseStudy"  {{$publication->type == 'CaseStudy'?'selected':''}}>
                                     @if(Lang() == 'ar')
                                     دراسة الحالة
                                     @elseif(Lang() == 'en')
@@ -159,7 +159,7 @@
 
                                 </option>
 
-                                <option value="ScientificArticles">
+                                <option value="ScientificArticles" {{$publication->type == 'ScientificArticles'?'selected':''}}>
 
                                     @if(Lang() == 'ar')
                                     مقالات علمية

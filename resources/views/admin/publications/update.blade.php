@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.project.update')}}" method="POST" id="form_project_update"
+    <form class="form" action="{{route('admin.publication.update')}}" method="POST" id="form_publication_update"
           enctype="multipart/form-data">
     @csrf
     <!--begin::Subheader-->
@@ -18,13 +18,13 @@
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
-                            <a href="{{route('admin.project.index')}}" class="text-muted">
-                                {{trans('menu.projects')}}
+                            <a href="{{route('admin.publication.index')}}" class="text-muted">
+                                {{trans('menu.publications')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('projects.update')}}
+                                {{trans('publications.update')}}
                             </a>
                         </li>
                     </ul>
@@ -78,7 +78,7 @@
                                         <a class="nav-link active" id="article_settings_tab" data-toggle="tab"
                                            href="#article_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{trans('projects.settings_tab')}}</span>
+                                            <span class="nav-text">{{trans('publications.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -86,7 +86,7 @@
                                            href="#article_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('projects.details_ar_tab')}}</span>
+                                            <span class="nav-text">{{trans('publications.details_ar_tab')}}</span>
                                         </a>
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
@@ -95,7 +95,7 @@
                                            href="#article_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
+                                            <span class="nav-text">{{trans('publications.details_en_tab')}}</span>
                                         </a>
                                     </li>
                                     @endif
@@ -103,10 +103,10 @@
 
 
                                 <div class="tab-content mt-5">
-                                    @include('admin.projects.update_tabs.settings')
-                                    @include('admin.projects.update_tabs.details_ar')
+                                    @include('admin.publications.update_tabs.settings')
+                                    @include('admin.publications.update_tabs.details_ar')
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    @include('admin.projects.update_tabs.details_en')
+                                    @include('admin.publications.update_tabs.details_en')
                                     @endif
                                 </div>
 
@@ -142,7 +142,7 @@
     <script type="text/javascript">
 
 
-        $('#form_project_update').on('submit', function (e) {
+        $('#form_publication_update').on('submit', function (e) {
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
@@ -194,7 +194,7 @@
                             customClass: {confirmButton: 'update_article_button'}
                         });
                         $('.update_article_button').click(function () {
-                            window.location.href = "{{route('admin.project.index')}}";
+                            window.location.href = "{{route('admin.publication.index')}}";
                         });
                     }
 

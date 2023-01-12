@@ -72,14 +72,14 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>{!! __('projects.photo') !!} </th>
-                                                        <th>{!! __('projects.title_ar') !!}</th>
+                                                        <th>{!! __('publications.photo') !!} </th>
+                                                        <th>{!! __('publications.title_ar') !!}</th>
                                                         @if($lang_en =setting()->site_lang_en == 'on')
-                                                            <th>{!! __('projects.title_en') !!}</th>
+                                                            <th>{!! __('publications.title_en') !!}</th>
                                                         @endif
-                                                        <th>{!! __('projects.writer') !!}</th>
-                                                        <th>{!! __('projects.date') !!}</th>
-                                                        <th>{!! __('projects.type') !!}</th>
+                                                        <th>{!! __('publications.writer') !!}</th>
+                                                        <th>{!! __('publications.date') !!}</th>
+                                                        <th>{!! __('publications.type') !!}</th>
                                                         <th class="text-center"
                                                             style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
@@ -192,7 +192,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.project.force.delete') !!}',
+                        url: '{!! route('admin.publication.force.delete') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -233,7 +233,7 @@
             var id = $(this).data('id');
 
             $.ajax({
-                url: "{{route('admin.project.restore')}}",
+                url: "{{route('admin.publication.restore')}}",
                 data: {id, id},
                 type: 'post',
                 dataType: 'JSON',

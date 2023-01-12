@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.publication.store')}}" method="POST" id="form_project_store"
+    <form class="form" action="{{route('admin.publication.store')}}" method="POST" id="form_publication_store"
           enctype="multipart/form-data">
     @csrf
     <!--begin::Subheader-->
@@ -78,7 +78,7 @@
                                         <a class="nav-link active" id="settings_tab" data-toggle="tab"
                                            href="#article_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{__('projects.settings_tab')}}</span>
+                                            <span class="nav-text">{{__('publications.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -86,7 +86,7 @@
                                            href="#article_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('projects.details_ar_tab')}}</span>
+                                            <span class="nav-text">{{trans('publications.details_ar_tab')}}</span>
                                         </a>
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
@@ -95,7 +95,7 @@
                                            href="#article_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
+                                            <span class="nav-text">{{trans('publications.details_en_tab')}}</span>
                                         </a>
                                     </li>
                                     @endif
@@ -103,10 +103,10 @@
 
 
                                 <div class="tab-content mt-5">
-                                    @include('admin.projects.create_tabs.settings')
-                                    @include('admin.projects.create_tabs.details_ar')
+                                    @include('admin.publications.create_tabs.settings')
+                                    @include('admin.publications.create_tabs.details_ar')
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    @include('admin.projects.create_tabs.details_en')
+                                    @include('admin.publications.create_tabs.details_en')
                                     @endif
                                 </div>
 
@@ -142,7 +142,7 @@
     <script type="text/javascript">
 
 
-        $('#form_project_store').on('submit', function (e) {
+        $('#form_publication_store').on('submit', function (e) {
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
@@ -198,10 +198,10 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'add_project_button'}
+                            customClass: {confirmButton: 'add_publication_button'}
                         });
-                        $('.add_project_button').click(function () {
-                            window.location.href = "{{route('admin.project.index')}}";
+                        $('.add_publication_button').click(function () {
+                            window.location.href = "{{route('admin.publication.index')}}";
                         });
                     }
                 },//end success

@@ -28,7 +28,7 @@ class PublicationsController extends Controller
 
     public function store(PublicationsRequest $request)
     {
-
+        
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
@@ -58,6 +58,7 @@ class PublicationsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
+            'show' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
