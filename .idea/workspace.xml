@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideosController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/VideosRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2023_01_12_113829_create_videos_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/videos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/videos.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/added_date.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/duration.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/options.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/photo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/status.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_12_09_160238_create_testimonials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PublicationsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PublicationsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1673465631.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673465631.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673516241.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673516697.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/global.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +248,7 @@
       <workItem from="1673444620240" duration="14000" />
       <workItem from="1673447064326" duration="18871000" />
       <workItem from="1673525024377" duration="1716000" />
-      <workItem from="1673533458125" duration="1667000" />
+      <workItem from="1673533458125" duration="1895000" />
     </task>
     <servers />
   </component>
@@ -298,7 +281,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php</url>
-          <line>122</line>
+          <line>129</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\Admin\PublicationsController" />
             <option name="methodName" value="destroy" />

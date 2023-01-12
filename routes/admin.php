@@ -199,7 +199,6 @@ Route::group([
     });
 
 
-
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// Videos routes
     Route::group(['prefix' => 'videos', 'middleware' => 'can:projects'], function () {
@@ -212,8 +211,6 @@ Route::group([
         Route::post('update', 'VideosController@update')->name('admin.video.update');
         Route::post('/change-status', 'VideosController@changeStatus')->name('admin.video.change.status');
     });
-
-
 
 });
 

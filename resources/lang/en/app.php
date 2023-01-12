@@ -12,5 +12,8 @@ return [
     'projects' =>'Projects Management',
     'testimonials' =>'Testimonials Management',
     'publications'=>'Publications Management',
+    'videos'=>'Videos Management',
+    'photos'=>'Photo Albums Management',
+    'yearly-reports'=>'Publications Management',
 
 ];
