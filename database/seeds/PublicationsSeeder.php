@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Projects;
+use App\Models\Publications;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ProjectsSeeder extends Seeder
+class PublicationsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,6 @@ class ProjectsSeeder extends Seeder
      */
     public function run()
     {
-        Projects::factory()->count(20)->create();
+        Publications::factory()->count(20)->create();
     }
 }

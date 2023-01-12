@@ -3,36 +3,36 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ProjectsRequest;
-use App\Models\Projects;
+use App\Http\Requests\PublicationsRequest;
+use App\Models\Publications;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class ProjectsController extends Controller
+class PublicationsController extends Controller
 {
     use GeneralTrait;
 
     public function index()
     {
-        $projects = Projects::paginate(15);
-        $title = __('menu.projects');
-        return view('admin.projects.index', compact('projects', 'title'));
+        $publications = Publications::orderByDesc('created_at')->paginate(15);
+        $title = __('menu.publications');
+        return view('admin.publications.index', compact('publications', 'title'));
     }
 
     public function create()
     {
-        $title = __('menu.add_new_project');
-        return view('admin.projects.create');
+        $title = __('menu.add_new_publications');
+        return view('admin.publications.create');
     }
 
-    public function store(ProjectsRequest $request)
+    public function store(PublicationsRequest $request)
     {
 
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('adminBoard/uploadedImages/projects');
+            $destinationPath = public_path('adminBoard/uploadedImages/publications');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = '';
@@ -40,14 +40,14 @@ class ProjectsController extends Controller
 
         // save File
         if ($request->hasFile('file')) {
-            $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/project');
+            $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/publications');
         } else {
             $file = '';
         }
 
 
         $lang_en = setting()->site_lang_en;
-        Projects::create([
+        Publications::create([
             'photo' => $photo_path,
             'language' =>  $lang_en == 'on' ? 'ar_en' :'ar',
             'details_ar' => $request->details_ar,
@@ -65,35 +65,35 @@ class ProjectsController extends Controller
 
     public function edit($id)
     {
-        $project = Projects::findOrFail($id);
-        return view('admin.projects.update', compact('project'));
+        $publication = Publications::findOrFail($id);
+        return view('admin.publications.update', compact('publication'));
     }
 
-    public function update(ProjectsRequest $request)
+    public function update(PublicationsRequest $request)
     {
         // return $request->all();
-        $project = Projects::findORFail($request->id);
+        $publication = Publications::findORFail($request->id);
 
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('adminBoard/uploadedImages/projects');
+            $destinationPath = public_path('adminBoard/uploadedImages/publications');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
-            $photo_path = $project->photo;
+            $photo_path = $publication->photo;
         }
 
         // save File
 
         if ($request->hasFile('file')) {
 
-            $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/project');
+            $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/publications');
         } else {
-            $file = $project->file;
+            $file = $publication->file;
         }
 
         $lang_en = setting()->site_lang_en;
-        $project->update([
+        $publication->update([
             'photo' => $photo_path,
             'language' =>  $lang_en == 'on' ? 'ar_en' :'ar',
             'details_ar' => $request->details_ar,
@@ -112,8 +112,8 @@ class ProjectsController extends Controller
     public function trashed()
     {
         $title = __('menu.trashed_articles');
-        $projects = Projects::onlyTrashed()->orderByDesc('created_at')->paginate(15);
-        return view('admin.projects.trashed-project', compact('title', 'projects'));
+        $publications = Publications::onlyTrashed()->orderByDesc('created_at')->paginate(15);
+        return view('admin.publications.trashed', compact('title', 'publications'));
     }
 
 
@@ -123,11 +123,11 @@ class ProjectsController extends Controller
     {
         try {
             if ($request->ajax()) {
-                $project = Projects::find($request->id);
-                if (!$project) {
+                $publication = Publications::find($request->id);
+                if (!$publication) {
                     return redirect()->route('admin.not.found');
                 }
-                $project->delete();
+                $publication->delete();
                 return $this->returnSuccessMessage(__('general.move_to_trash'));
             }
         } catch (\Exception $exception) {
@@ -141,11 +141,11 @@ class ProjectsController extends Controller
     {
         try {
             if ($request->ajax()) {
-                $project = Projects::onlyTrashed()->find($request->id);
-                if (!$project) {
+                $publication = Publications::onlyTrashed()->find($request->id);
+                if (!$publication) {
                     return redirect()->route('admin.not.found');
                 }
-                $project->restore();
+                $publication->restore();
                 return $this->returnSuccessMessage(__('general.restore_success_message'));
             }
         } catch (\Exception $exception) {
@@ -160,20 +160,20 @@ class ProjectsController extends Controller
         try {
             if ($request->ajax()) {
 
-                $project = Projects::onlyTrashed()->find($request->id);
+                $publication = Publications::onlyTrashed()->find($request->id);
 
-                if (!$project) {
+                if (!$publication) {
                     return redirect()->route('admin.not.found');
                 }
 
-                if (!empty($project->photo)) {
-                    $image_path = public_path("\adminBoard\uploadedImages\projects\\") . $project->photo;
+                if (!empty($publication->photo)) {
+                    $image_path = public_path("\adminBoard\uploadedImages\publications\\") . $publication->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }
                 }
 
-                $project->forceDelete();
+                $publication->forceDelete();
 
                 return $this->returnSuccessMessage(__('general.delete_success_message'));
             }
@@ -187,14 +187,14 @@ class ProjectsController extends Controller
     public function changeStatus(Request $request)
     {
 
-        $project = Projects::find($request->id);
+        $publication = Publications::find($request->id);
 
         if ($request->switchStatus == 'false') {
-            $project->status = null;
-            $project->save();
+            $publication->status = null;
+            $publication->save();
         } else {
-            $project->status = 'on';
-            $project->save();
+            $publication->status = 'on';
+            $publication->save();
         }
 
         return $this->returnSuccessMessage(__('general.change_status_success_message'));

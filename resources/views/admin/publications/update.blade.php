@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.project.store')}}" method="POST" id="form_project_store"
+    <form class="form" action="{{route('admin.project.update')}}" method="POST" id="form_project_update"
           enctype="multipart/form-data">
     @csrf
     <!--begin::Subheader-->
@@ -24,7 +24,7 @@
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{__('menu.add_new_project')}}
+                                {{trans('projects.update')}}
                             </a>
                         </li>
                     </ul>
@@ -73,16 +73,16 @@
                                     </div>
                                 </div>
 
-                                <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                                <ul class="nav  nav-tabs" id="myTab2" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="settings_tab" data-toggle="tab"
+                                        <a class="nav-link active" id="article_settings_tab" data-toggle="tab"
                                            href="#article_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{__('projects.settings_tab')}}</span>
+                                            <span class="nav-text">{{trans('projects.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="details_ar_tab" data-toggle="tab"
+                                        <a class="nav-link" id="article_details_ar_tab" data-toggle="tab"
                                            href="#article_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
@@ -91,7 +91,7 @@
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
-                                        <a class="nav-link" id="details_en_tab" data-toggle="tab"
+                                        <a class="nav-link" id="article_details_en_tab" data-toggle="tab"
                                            href="#article_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
@@ -103,10 +103,10 @@
 
 
                                 <div class="tab-content mt-5">
-                                    @include('admin.projects.create_tabs.settings')
-                                    @include('admin.projects.create_tabs.details_ar')
+                                    @include('admin.projects.update_tabs.settings')
+                                    @include('admin.projects.update_tabs.details_ar')
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    @include('admin.projects.create_tabs.details_en')
+                                    @include('admin.projects.update_tabs.details_en')
                                     @endif
                                 </div>
 
@@ -142,7 +142,7 @@
     <script type="text/javascript">
 
 
-        $('#form_project_store').on('submit', function (e) {
+        $('#form_project_update').on('submit', function (e) {
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
@@ -191,12 +191,13 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'add_project_button'}
+                            customClass: {confirmButton: 'update_article_button'}
                         });
-                        $('.add_project_button').click(function () {
+                        $('.update_article_button').click(function () {
                             window.location.href = "{{route('admin.project.index')}}";
                         });
                     }
+
                 },//end success
                 error: function (reject) {
                     KTApp.unblockPage();
@@ -226,5 +227,6 @@
                 $('.alert_errors').find('ul').append("<li>" + value + "</li>");
             });
         }
+
     </script>
 @endpush

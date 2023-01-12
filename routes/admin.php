@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ProjectsController;
+use App\Http\Controllers\Admin\PublicationsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -202,6 +203,22 @@ Route::group([
         Route::post('/destroy', 'TestimonialController@destroy')->name('admin.testimonials.destroy');
         Route::post('/change-status', 'TestimonialController@changeStatus')->name('admin.testimonials.change-status');
     });
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /// publication
+    Route::group(['prefix' => 'publication', 'middleware' => 'can:projects'], function () {
+        Route::get('/', [PublicationsController::class, 'index'])->name('admin.publication.index');
+        Route::get('/create', [PublicationsController::class, 'create'])->name('admin.publication.create');
+        Route::post('/store', [PublicationsController::class, 'store'])->name('admin.publication.store');
+        Route::get('/edit/{id}', [PublicationsController::class, 'edit'])->name('admin.publication.edit');
+        Route::post('/update', [PublicationsController::class, 'update'])->name('admin.publication.update');
+        Route::get('/trashed-project', [PublicationsController::class, 'trashed'])->name('admin.publication.trashed');
+        Route::post('/destroy', [PublicationsController::class, 'destroy'])->name('admin.publication.destroy');
+        Route::post('/force-delete', [PublicationsController::class, 'forceDelete'])->name('admin.publication.force.delete');
+        Route::post('/restore', [PublicationsController::class, 'restore'])->name('admin.publication.restore');
+        Route::post('/change-status', [PublicationsController::class, 'changeStatus'])->name('admin.publication.change.status');
+    });
+
 
 });
 

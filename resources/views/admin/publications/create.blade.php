@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.project.store')}}" method="POST" id="form_project_store"
+    <form class="form" action="{{route('admin.publication.store')}}" method="POST" id="form_project_store"
           enctype="multipart/form-data">
     @csrf
     <!--begin::Subheader-->
@@ -18,13 +18,13 @@
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
-                            <a href="{{route('admin.project.index')}}" class="text-muted">
-                                {{trans('menu.projects')}}
+                            <a href="{{route('admin.publication.index')}}" class="text-muted">
+                                {{trans('menu.publications')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{__('menu.add_new_project')}}
+                                {{__('menu.add_new_publication')}}
                             </a>
                         </li>
                     </ul>
@@ -146,21 +146,28 @@
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
-            $('#photo_error').text('');
-            $('#publish_date_error').text('');
-            $('#publisher_name_error').text('');
             $('#title_ar_error').text('');
-            $('#abstract_ar_error').text('');
             $('#title_en_error').text('');
-            $('#abstract_en_error').text('');
+            $('#details_ar_error').text('');
+            $('#details_en_error').text('');
+            $('#photo_error').text('');
+            $('#language_error').text('');
+            $('#file_error').text('');
+            $('#date_error').text('');
+            $('#writer_error').text('');
+            $('#type_error').text('');
 
-            $('#photo').css('border-color', '');
-            $('#publish_date').css('border-color', '');
-            $('#publisher_name').css('border-color', '');
+
             $('#title_ar').css('border-color', '');
-            $('#abstract_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
-            $('#abstract_en').css('border-color', '');
+            $('#details_ar').css('border-color', '');
+            $('#details_en').css('border-color', '');
+            $('#photo').css('border-color', '');
+            $('#language').css('border-color', '');
+            $('#file').css('border-color', '');
+            $('#date').css('border-color', '');
+            $('#writer').css('border-color', '');
+            $('#type').css('border-color', '');
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);

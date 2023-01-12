@@ -1,13 +1,13 @@
 <?php
 
 namespace Database\Factories;
-use Illuminate\Support\Str;
-use Illuminate\Database\Eloquent\Factories\Factory;
 
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Projects>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Publications>
  */
-class ProjectsFactory extends Factory
+class PublicationsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -27,7 +27,7 @@ class ProjectsFactory extends Factory
             'file'       =>null,
             'date'       =>now(),
             'writer'     =>Str::random(15),
-            'type'       =>'current',
+            'type'       =>'ScientificArticles',
         ];
     }
 }
