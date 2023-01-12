@@ -78,21 +78,10 @@ Route::group([
 
         });
 
-//
-//        Route::get('/about-mawhob', 'LandingPageController@aboutMawob')->name('admin.about.mawhob');
-//        Route::post('/about-mawhob', 'LandingPageController@storeAboutMawob')->name('admin.about.mawhob');
-//
-//        Route::get('/index-page', 'LandingPageController@indexPage')->name('admin.index.page');
-//        Route::post('/index-page', 'LandingPageController@storeIndexPage')->name('admin.index.page');
-//
-//        Route::get('/why-choose-us', 'LandingPageController@whyChooseUs')->name('admin.why.choose.us');
-//        Route::post('/why-choose-us', 'LandingPageController@storeWhyChooseUs')->name('admin.why.choose.us');
-//
-//
+
 //        Route::get('/static-strings', 'LandingPageController@staticStrings')->name('admin.static.strings');
 //        Route::post('/static-strings', 'LandingPageController@storeStaticStrings')->name('admin.static.strings');
 
-//
 //        Route::group(['prefix' => 'team'], function () {
 //            Route::get('/', 'LandingPageController@team')->name('admin.team');
 //            Route::get('/get-team', 'LandingPageController@getTeam')->name('get.admin.team');
@@ -110,30 +99,20 @@ Route::group([
     Route::post('/admin-update', 'AdminsController@adminUpdate')->name('admin.update');
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Support Center Route
+    /// support center routes
     Route::group(['prefix' => 'support-center', 'middleware' => 'can:support-center'], function () {
-        Route::get('/', 'SupportCenterController@index')
-            ->name('admin.support.center');
-        Route::get('/get-support-center', 'SupportCenterController@getSupportCenter')
-            ->name('get.admin.support.center');
-        Route::get('/create', 'SupportCenterController@create')
-            ->name('admin.support.center.create');
-        Route::post('/send', 'SupportCenterController@send')
-            ->name('admin.support.center.send');
-
-        Route::post('/destroy', 'SupportCenterController@destroy')
-            ->name('admin.support.center.message.destroy');
-
-        Route::post('/change-status', 'SupportCenterController@changeStatus')
-            ->name('admin.support.center.change.status');
-
-        Route::get('/get-one-message', 'SupportCenterController@getOneMessage')
-            ->name('admin.support.center.get.one.message');
+        Route::get('/', 'SupportCenterController@index')->name('admin.support.center');
+        Route::get('/get-support-center', 'SupportCenterController@getSupportCenter')->name('get.admin.support.center');
+        Route::get('/create', 'SupportCenterController@create')->name('admin.support.center.create');
+        Route::post('/send', 'SupportCenterController@send')->name('admin.support.center.send');
+        Route::post('/destroy', 'SupportCenterController@destroy')->name('admin.support.center.message.destroy');
+        Route::post('/change-status', 'SupportCenterController@changeStatus')->name('admin.support.center.change.status');
+        Route::get('/get-one-message', 'SupportCenterController@getOneMessage')->name('admin.support.center.get.one.message');
 
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// users Routes
+    /// users routes
     Route::group(['prefix' => 'users', 'middleware' => 'can:users'], function () {
         Route::get('/', 'UserController@index')->name('users');
         Route::get('/get-users', 'UserController@getUsers')->name('get.users');
@@ -150,7 +129,7 @@ Route::group([
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Roles Routes
+    /// roles routes
     Route::group(['prefix' => 'roles', 'middleware' => 'can:roles'], function () {
         Route::get('/', 'RolesController@index')->name('admin.roles');
         Route::get('/get-roles', 'RolesController@getRoles')->name('get.admin.roles');
@@ -162,7 +141,7 @@ Route::group([
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Articles  Routes
+    /// articles  routes
     Route::group(['prefix' => 'articles', 'middleware' => 'can:articles'], function () {
         Route::get('/', 'ArticlesController@index')->name('admin.articles');
         Route::get('/get-articles', 'ArticlesController@getArticles')->name('admin.get.articles');
@@ -178,7 +157,7 @@ Route::group([
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// project
+    /// project routes
     Route::group(['prefix' => 'project', 'middleware' => 'can:projects'], function () {
         Route::get('/', [ProjectsController::class, 'index'])->name('admin.project.index');
         Route::get('/create', [ProjectsController::class, 'create'])->name('admin.project.create');
@@ -205,7 +184,7 @@ Route::group([
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// publication
+    /// publication routes
     Route::group(['prefix' => 'publication', 'middleware' => 'can:projects'], function () {
         Route::get('/', [PublicationsController::class, 'index'])->name('admin.publication.index');
         Route::get('/create', [PublicationsController::class, 'create'])->name('admin.publication.create');
@@ -218,6 +197,22 @@ Route::group([
         Route::post('/restore', [PublicationsController::class, 'restore'])->name('admin.publication.restore');
         Route::post('/change-status', [PublicationsController::class, 'changeStatus'])->name('admin.publication.change.status');
     });
+
+
+
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /// Videos routes
+    Route::group(['prefix' => 'videos', 'middleware' => 'can:projects'], function () {
+        Route::get('/', 'VideosController@index')->name('admin.videos');
+        Route::get('/get-videos', 'VideosController@getVideos')->name('get.admin.videos');
+        Route::get('/create', 'VideosController@create')->name('admin.videos.create');
+        Route::post('/store', 'VideosController@store')->name('admin.videos.store');
+        Route::post('/destroy', 'VideosController@destroy')->name('admin.video.destroy');
+        Route::get('edit/{id?}', 'VideosController@edit')->name('admin.video.edit');
+        Route::post('update', 'VideosController@update')->name('admin.video.update');
+        Route::post('/change-status', 'VideosController@changeStatus')->name('admin.video.change.status');
+    });
+
 
 
 });

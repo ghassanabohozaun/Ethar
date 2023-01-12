@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/VideosController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/VideosRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2023_01_12_113829_create_videos_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/videos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/videos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/added_date.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/duration.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/options.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/photo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/parts/status.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/videos/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_10_091319_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_10_091319_create_projects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_12_09_160238_create_testimonials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/PublicationsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PublicationsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1673465631.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673465631.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673516241.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673516697.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +199,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/public/site/assets/images/banner",
+    "last_opened_file_path": "C:/laragon/www/etharps/resources/views/admin",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -195,18 +211,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\resources\views\admin" />
       <recent name="C:\laragon\www\etharps\public\site\assets\images\banner" />
       <recent name="C:\laragon\www\etharps\app\Http\Controllers\Admin" />
       <recent name="C:\laragon\www\etharps\app\Http\Requests" />
       <recent name="C:\laragon\www\etharps\app\Models" />
-      <recent name="C:\laragon\www\etharps\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\etharps\resources\views\admin\testimonials\parts" />
+      <recent name="C:\laragon\www\etharps\app\Http\Requests" />
+      <recent name="C:\laragon\www\etharps\app\Http\Controllers\Admin" />
+      <recent name="C:\laragon\www\etharps\database\migrations" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
       <recent name="C:\laragon\www\etharps\resources\lang\ar" />
-      <recent name="C:\laragon\www\etharps\resources\views\admin\testimonials" />
-      <recent name="C:\laragon\www\etharps\resources\views\admin\support-center" />
     </key>
   </component>
   <component name="RunManager">
@@ -247,7 +263,9 @@
       <workItem from="1673427350945" duration="16000" />
       <workItem from="1673438913058" duration="2369000" />
       <workItem from="1673444620240" duration="14000" />
-      <workItem from="1673447064326" duration="18509000" />
+      <workItem from="1673447064326" duration="18871000" />
+      <workItem from="1673525024377" duration="1716000" />
+      <workItem from="1673533458125" duration="1667000" />
     </task>
     <servers />
   </component>
@@ -277,6 +295,15 @@
             <option name="methodName" value="forceDelete" />
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php</url>
+          <line>122</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\Admin\PublicationsController" />
+            <option name="methodName" value="destroy" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/site.blade.php</url>
