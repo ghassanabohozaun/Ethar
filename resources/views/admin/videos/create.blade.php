@@ -110,35 +110,6 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('videos.language')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-
-                                                            <select
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                name="language" id="language" type="text">
-
-                                                                <option value="ar">
-                                                                    {{__('general.ar')}}
-                                                                </option>
-
-                                                                <option value="en">
-                                                                    {{__('general.en')}}
-                                                                </option>
-                                                                <option value="ar_en">
-                                                                    {{__('general.ar_en')}}
-                                                                </option>
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="language_error"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
                                                             {{__('videos.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
@@ -282,13 +253,11 @@
             //////////////////////////////////////////////////////////////
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
-            $('#language').css('border-color', '');
             $('#link').css('border-color', '');
             $('#photo').css('border-color', '');
 
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
-            $('#language_error').text('');
             $('#link_error').text('');
             $('#photo_error').text('');
             /////////////////////////////////////////////////////////////
