@@ -43,7 +43,12 @@ return [
 
 
     'publications' => 'Publications',
+    'trashed_publications' => 'Trashed Testimonials',
     'add_new_publication' =>  'Add New Publication',
+
+    'reports' => 'Reports',
+    'trashed_reports' => 'Trashed Reports',
+    'add_new_report' =>  'Add New Report',
 
 
 ];

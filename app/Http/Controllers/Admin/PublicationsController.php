@@ -96,6 +96,13 @@ class PublicationsController extends Controller
         if ($request->hasFile('file')) {
 
             $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/publications');
+
+            $file_path = public_path("\adminBoard\uploadedFiles\\publications\\") . $publication->file;
+
+            if (File::exists($file_path))
+            {
+              File::delete($file_path);
+            }
         } else {
             $file = $publication->file;
         }
@@ -180,6 +187,14 @@ class PublicationsController extends Controller
                         File::delete($image_path);
                     }
                 }
+
+                if (!empty($publication->file)) {
+                    $image_path = public_path("\adminBoard\uploadedImages\publications\\") . $publication->photo;
+                    if (File::exists($image_path)) {
+                        File::delete($image_path);
+                    }
+                }
+
 
                 $publication->forceDelete();
 

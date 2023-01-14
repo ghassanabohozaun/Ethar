@@ -95,6 +95,14 @@ class ProjectsController extends Controller
         if ($request->hasFile('file')) {
 
             $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/project');
+
+            $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->file;
+
+            if (File::exists($file_path))
+            {
+              File::delete($file_path);
+
+            }
         } else {
             $file = $project->file;
         }
@@ -177,6 +185,14 @@ class ProjectsController extends Controller
                     $image_path = public_path("\adminBoard\uploadedImages\projects\\") . $project->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
+                    }
+                }
+                if (!empty($project->file)) {
+                    $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->file;
+
+                    if (File::exists($file_path)) {
+                        File::delete($file_path);
+
                     }
                 }
 

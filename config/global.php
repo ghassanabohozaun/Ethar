@@ -14,5 +14,6 @@ return [
         'projects'       => 'app.projects',
         'testimonials'   => 'app.testimonials',
         'publications'   => 'app.publications',
+        'reports'        => 'app.reports',
     ]
 ];

@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\PublicationsController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -206,17 +207,33 @@ Route::group([
 
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// publication
-    Route::group(['prefix' => 'publication', 'middleware' => 'can:projects'], function () {
+    Route::group(['prefix' => 'publication', 'middleware' => 'can:publications'], function () {
         Route::get('/', [PublicationsController::class, 'index'])->name('admin.publication.index');
         Route::get('/create', [PublicationsController::class, 'create'])->name('admin.publication.create');
         Route::post('/store', [PublicationsController::class, 'store'])->name('admin.publication.store');
         Route::get('/edit/{id}', [PublicationsController::class, 'edit'])->name('admin.publication.edit');
         Route::post('/update', [PublicationsController::class, 'update'])->name('admin.publication.update');
-        Route::get('/trashed-project', [PublicationsController::class, 'trashed'])->name('admin.publication.trashed');
+        Route::get('/trashed', [PublicationsController::class, 'trashed'])->name('admin.publication.trashed');
         Route::post('/destroy', [PublicationsController::class, 'destroy'])->name('admin.publication.destroy');
         Route::post('/force-delete', [PublicationsController::class, 'forceDelete'])->name('admin.publication.force.delete');
         Route::post('/restore', [PublicationsController::class, 'restore'])->name('admin.publication.restore');
         Route::post('/change-status', [PublicationsController::class, 'changeStatus'])->name('admin.publication.change.status');
+    });
+
+     /////////////////////////////////////////////////////////////////////////////////////////////
+    /// report
+
+    Route::group(['prefix' => 'report', 'middleware' => 'can:reports'], function () {
+        Route::get('/', [ReportController::class, 'index'])->name('admin.report.index');
+        Route::get('/create', [ReportController::class, 'create'])->name('admin.report.create');
+        Route::post('/store', [ReportController::class, 'store'])->name('admin.report.store');
+        Route::get('/edit/{id}', [ReportController::class, 'edit'])->name('admin.report.edit');
+        Route::post('/update', [ReportController::class, 'update'])->name('admin.report.update');
+        Route::get('/trashed', [ReportController::class, 'trashed'])->name('admin.report.trashed');
+        Route::post('/destroy', [ReportController::class, 'destroy'])->name('admin.report.destroy');
+        Route::post('/force-delete', [ReportController::class, 'forceDelete'])->name('admin.report.force.delete');
+        Route::post('/restore', [ReportController::class, 'restore'])->name('admin.report.restore');
+        Route::post('/change-status', [ReportController::class, 'changeStatus'])->name('admin.report.change.status');
     });
 
 

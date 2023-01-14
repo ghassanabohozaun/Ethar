@@ -40,5 +40,10 @@ return [
     'trashed_publications' => 'المنشورات المحذوفة',
     'add_new_publication' => 'إضافة منشور جديد',
 
+    'reports' => 'التقارير',
+    'trashed_reports' => 'التقارير المحذوفة',
+    'add_new_report' => 'إضافة تقرير جديد',
+
+
 
 ];
