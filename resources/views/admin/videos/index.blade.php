@@ -174,8 +174,7 @@
 
     <script type="text/javascript">
 
-
-        //Show user Delete Notify
+        //delete video
         $(document).on('click', '.delete_video_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -228,8 +227,7 @@
 
         })
 
-
-        // Close  Video show modal By event
+        // close video show modal By event
         $('#model_show_video').on('hidden.bs.modal', function (e) {
             e.preventDefault();
             $("#video_view iframe").attr('src', '');
@@ -252,7 +250,6 @@
                 $('#model_show_video').modal('show');
             });
         });
-
 
         // switch english language
         var switchStatus = false;

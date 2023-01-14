@@ -386,7 +386,7 @@
                                 </span>
                         <span class="menu-text">{{trans('menu.publications')}}</span>
                         <span class="menu-label">
-                        <span class="label label-rounded label-info">
+                        <span class="label label-rounded label-warning">
                             {{App\Models\Publications::count()}}
                         </span>
                     </span>
@@ -415,7 +415,7 @@
                                 </span>
                         <span class="menu-text">{{trans('menu.videos')}}</span>
                         <span class="menu-label">
-                        <span class="label label-rounded label-info">
+                        <span class="label label-rounded label-primary">
                             {{App\Models\Video::count()}}
                         </span>
                     </span>
