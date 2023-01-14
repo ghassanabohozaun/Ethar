@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/global.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,6 +248,7 @@
       <workItem from="1673533458125" duration="7702000" />
       <workItem from="1673676630416" duration="162000" />
       <workItem from="1673677689925" duration="2629000" />
+      <workItem from="1673684938699" duration="975000" />
     </task>
     <servers />
   </component>
@@ -281,7 +281,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php</url>
-          <line>129</line>
+          <line>136</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\Admin\PublicationsController" />
             <option name="methodName" value="destroy" />
