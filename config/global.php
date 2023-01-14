@@ -18,5 +18,6 @@ return [
         'videos' => 'app.videos',
         'photos' => 'app.photos',
         'yearly-reports' => 'app.yearly-reports',
+
     ]
 ];

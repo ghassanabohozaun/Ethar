@@ -202,7 +202,7 @@ Route::group([
      /////////////////////////////////////////////////////////////////////////////////////////////
     /// report routes
 
-    Route::group(['prefix' => 'report', 'middleware' => 'can:reports'], function () {
+    Route::group(['prefix' => 'report', 'middleware' => 'can:yearly-reports'], function () {
         Route::get('/', [ReportController::class, 'index'])->name('admin.report.index');
         Route::get('/create', [ReportController::class, 'create'])->name('admin.report.create');
         Route::post('/store', [ReportController::class, 'store'])->name('admin.report.store');
