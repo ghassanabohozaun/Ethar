@@ -398,7 +398,7 @@
 
 
                   <!------------------------------------ Report  ---------------------------------------------------->
-                  @can('reports')
+                  @can('yearly-reports')
                   <li class="menu-item  menu-item-submenu"
                       aria-haspopup="true" data-menu-toggle="hover">
                       <a href="{{ route('admin.report.index') }}" class="menu-link menu-toggle">
