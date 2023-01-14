@@ -2,9 +2,9 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.slider.store')}}" method="POST" id="form_sliders_add">
-    @csrf
-    <!--begin::Subheader-->
+    <form class="form" action="{{route('admin.video.update')}}" method="POST" id="form_videos_update">
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -17,19 +17,13 @@
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
-                            <a href="#" class="text-muted">
-                                {{__('menu.landing_page')}}
-                            </a>
-                        </li>
-
-                        <li class="breadcrumb-item">
-                            <a href="{{route('admin.sliders')}}" class="text-muted">
-                                {{__('menu.sliders')}}
+                            <a href="{{route('admin.videos')}}" class="text-muted">
+                                {{trans('menu.videos')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{route('admin.sliders.create')}}" class="text-muted">
-                                {{__('menu.add_new_slider')}}
+                            <a href="{{route('admin.video.edit',$video->id)}}" class="text-muted">
+                                {{trans('videos.video_update')}}
                             </a>
                         </li>
                     </ul>
@@ -44,7 +38,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{__('general.save')}}
+                        {{trans('general.save')}}
                     </button>
 
                 </div>
@@ -74,24 +68,37 @@
 
                                                 <!--begin::body-->
                                                 <div class="my-5">
-
+                                                    <!--begin::Group-->
+                                                    <div class="d-none form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            ID
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="id" id="id" type="hidden"
+                                                                value="{{$video->id}}"/>
+                                                            <input type="hidden" name="hidden_photo"
+                                                                   value="hidden_photo">
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('sliders.photo')}}
+                                                            {{trans('videos.photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
                                                                 class="image-input image-input-outline"
-                                                                id="kt_slider_photo">
-                                                            <!--  style="background-image: url({{--asset(Storage::url(setting()->site_icon))--}})"-->
+                                                                id="kt_video_photo_album">
                                                                 <div class="image-input-wrapper"
-                                                                     ></div>
+                                                                     style="background-image: url({{asset('adminBoard/uploadedImages/videos/'.$video->photo)}})"></div>
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{__('general.change_image')}}">
+                                                                    data-original-title="{{trans('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="photo" id="photo"
                                                                            class="table-responsive-sm">
@@ -106,10 +113,7 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
-                                                            </span>
-                                                            <span
-                                                                class="form-text text-info">{{__('sliders.slider_size')}}
+                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
@@ -117,78 +121,17 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('sliders.details_status')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-md-9" style="margin-top: 10px">
-                                                            <div class="form-check pl-0 radio-inline">
-                                                                <label class="radio radio-outline">
-                                                                    <input type="radio" id="details_status"
-                                                                           name="details_status"
-                                                                           value="show"/>
-                                                                    <span></span>
-                                                                    {{__('sliders.show')}}
-                                                                </label>
-                                                                <label class="radio radio-outline">
-                                                                    <input type="radio" id="details_status"
-                                                                           name="details_status" checked
-                                                                           value="hide"/>
-                                                                    <span></span>
-                                                                    {{__('sliders.hide')}}
-                                                                </label>
-
-                                                            </div>
-                                                        </div>
-                                                        <!--begin::body-->
-
-                                                    </div>
-                                                    <!--end::Group-->
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('sliders.button_status')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-md-9" style="margin-top: 10px">
-                                                            <div class="form-check pl-0 radio-inline">
-                                                                <label class="radio radio-outline">
-                                                                    <input type="radio" id="button_status"
-                                                                           name="button_status"
-                                                                           value="show"/>
-                                                                    <span></span>
-                                                                    {{__('sliders.show')}}
-                                                                </label>
-                                                                <label class="radio radio-outline">
-                                                                    <input type="radio" id="button_status"
-                                                                           name="button_status" checked
-                                                                           value="hide"/>
-                                                                    <span></span>
-                                                                    {{__('sliders.hide')}}
-                                                                </label>
-
-                                                            </div>
-                                                        </div>
-                                                        <!--begin::body-->
-
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('sliders.title_ar')}}
+                                                            {{trans('videos.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
-                                                                name="title_ar" id="title_ar" type="text"
-                                                                placeholder=" {{__('sliders.enter_title_ar')}}"
-                                                                autocomplete="off"/>
+                                                                name="title_ar" id="title_ar"
+                                                                placeholder=" {{trans('videos.enter_title_ar')}}"
+                                                                autocomplete="off" value="{{$video->title_ar}}"/>
 
                                                             <span class="form-text text-danger"
                                                                   id="title_ar_error"></span>
@@ -201,15 +144,14 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('sliders.title_en')}}
+                                                            {{trans('videos.title_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
-                                                                name="title_en" id="title_en" type="text"
-                                                                placeholder=" {{__('sliders.enter_title_en')}}"
-                                                                autocomplete="off"/>
-
+                                                                name="title_en" id="title_en" rows="3"
+                                                                placeholder=" {{trans('videos.enter_title_en')}}"
+                                                                autocomplete="off" value="{{$video->title_en}} "/>
                                                             <span class="form-text text-danger"
                                                                   id="title_en_error"></span>
 
@@ -217,44 +159,69 @@
                                                     </div>
                                                     <!--end::Group-->
 
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('videos.duration')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="duration" id="duration" type="text"
+                                                                placeholder=" {{trans('videos.enter_duration')}}"
+                                                                autocomplete="off" value="{{$video->duration}} "/>
+                                                            <span class="form-text text-danger"
+                                                                  id="duration_error"></span>
+                                                        </div>
+
+                                                    </div>
+                                                    <!--end::Group-->
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('sliders.details_ar')}}
+                                                            {{trans('videos.added_date')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <textarea rows="5"
-                                                                      class="form-control form-control-solid form-control-lg"
-                                                                      name="details_ar" id="details_ar" type="text"
-                                                                      placeholder=" {{__('sliders.enter_details_ar')}}"
-                                                                      autocomplete="off"></textarea>
-                                                            <span class="form-text text-danger"
-                                                                  id="details_ar_error"></span>
-
+                                                            <div class="input-group date">
+                                                                <input type="text" class="form-control"
+                                                                       id="added_date" name="added_date"
+                                                                       readonly value="{{$video->added_date}} "
+                                                                       placeholder="{{trans('videos.enter_added_date')}}"/>
+                                                                <div class="input-group-append">
+                                                             <span class="input-group-text">
+                                                                <i class="la la-calendar-check-o"></i>
+                                                             </span>
+                                                                </div>
+                                                            </div>
                                                         </div>
+                                                        <!--end::Group-->
                                                     </div>
                                                     <!--end::Group-->
-
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{__('sliders.details_en')}}
+                                                            {{trans('videos.link')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <textarea rows="5"
-                                                                      class="form-control form-control-solid form-control-lg"
-                                                                      name="details_en" id="details_en" type="text"
-                                                                      placeholder=" {{__('sliders.enter_details_en')}}"
-                                                                      autocomplete="off"></textarea>
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="link" id="link" type="text"
+                                                                value="https://www.youtube.com/watch?v={{$video->link}}"
+                                                                placeholder=" {{trans('videos.enter_link')}}"
+                                                                autocomplete="off"/>
 
-                                                            <span class="form-text text-danger"
-                                                                  id="details_en_error"></span>
-
+                                                            <span class="form-text text-muted">
+                                                                {{trans('general.example')}} :
+                                                                https://www.youtube.com/watch?v=DzwIRzD7da4
+                                                            </span>
+                                                            <span class="form-text text-danger" id="link_error"></span>
                                                         </div>
+
                                                     </div>
                                                     <!--end::Group-->
+
 
                                                 </div>
                                                 <!--begin::body-->
@@ -282,27 +249,34 @@
 @push('js')
     <script type="text/javascript">
 
-        var slider_photo = new KTImageInput('kt_slider_photo');
+        var video_photo_album = new KTImageInput('kt_video_photo_album');
 
-        $('#form_sliders_add').on('submit', function (e) {
+        ////////////////////////////////////////////////
+        ///////// Datepicker
+        $('#added_date').datepicker({
+            format: "yyyy-mm-dd",
+            todayBtn: true,
+            clearBtn: false,
+            orientation: "bottom auto",
+            language: "{{LaravelLocalization::getCurrentLocale()}}",
+            autoclose: true,
+            todayHighlight: true,
+        });
+
+        $('#form_videos_update').on('submit', function (e) {
             e.preventDefault();
             //////////////////////////////////////////////////////////////
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
-            $('#details_ar').css('border-color', '');
-            $('#details_en').css('border-color', '');
-            $('#order').css('border-color', '');
+            $('#language').css('border-color', '');
+            $('#link').css('border-color', '');
             $('#photo').css('border-color', '');
-
-
 
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
-            $('#details_ar_error').text('');
-            $('#details_en_error').text('');
-            $('#order_error').text('');
+            $('#language_error').text('');
+            $('#link_error').text('');
             $('#photo_error').text('');
-
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);
             var type = $(this).attr('method');
@@ -331,10 +305,10 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'add_user_button'}
+                            customClass: {confirmButton: 'update_video_button'}
                         });
-                        $('.add_user_button').click(function () {
-                            window.location.href = "{{route('admin.sliders')}}";
+                        $('.update_video_button').click(function () {
+                            window.location.href = "{{route('admin.videos')}}";
                         });
                     }
                 },//end success
@@ -345,7 +319,6 @@
                         $('#' + key + '_error').text(value[0]);
                         $('#' + key).css('border-color', '#F64E60');
                         $('html, body').animate({scrollTop: 20}, 300);
-
                     });
 
                 },//end error
@@ -357,6 +330,7 @@
             });
 
         });//end submit
+
 
 
     </script>

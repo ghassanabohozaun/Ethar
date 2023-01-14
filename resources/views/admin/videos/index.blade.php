@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('title') @endsection
+@section('css')@endsection
 @section('content')
 
     <!--begin::Subheader-->
@@ -8,24 +9,17 @@
             class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
-
                 <!--begin::Actions-->
                 <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
 
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{__('menu.landing_page')}}
-                        </a>
-                    </li>
-
-                    <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
-                            {{__('menu.sliders')}}
+                            {{__('menu.videos')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="{{route('admin.sliders')}}" class="text-muted">
+                        <a href="{{route('admin.videos')}}" class="text-muted">
                             {{__('menu.show_all')}}
                         </a>
                     </li>
@@ -37,11 +31,10 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-
-                <a href="{{route('admin.sliders.create')}}"
+                <a href="{{route('admin.videos.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{__('menu.add_new_slider')}}
+                    {{__('menu.add_new_video')}}
                 </a>
             </div>
             <!--end::Toolbar-->
@@ -53,6 +46,8 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class=" container-fluid ">
+
+
             <!--begin::Row-->
             <div class="row">
                 <div class="col-lg-12">
@@ -70,91 +65,46 @@
                                                     <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>{!! __('sliders.photo') !!}</th>
-                                                        <th>{!! __('sliders.title_ar') !!}</th>
-                                                        <th>{!! __('sliders.title_en') !!}</th>
-                                                        <th>{!! __('sliders.order') !!}</th>
-                                                        <th>{!! __('sliders.details_status') !!}</th>
-                                                        <th>{!! __('sliders.button_status') !!}</th>
-                                                        <th>{!! __('sliders.status') !!}</th>
-                                                        <th class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
+                                                        <th>{!! __('videos.photo') !!}</th>
+                                                        <th>{!! __('videos.title_ar') !!}</th>
+                                                        <th>{!! __('videos.title_en') !!}</th>
+                                                        <th>{!! __('videos.duration') !!}</th>
+                                                        <th>{!! __('videos.status') !!}</th>
+                                                        <th class="text-center" style="width: 200px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    @forelse($sliders as $slider)
+                                                    @forelse($videos as $video)
                                                         <tr>
                                                             <td>{!! $loop->iteration!!}</td>
-                                                            <td>
-                                                                <img
-                                                                    src="{{asset('adminBoard/uploadedImages/sliders/'.$slider->photo)}}"
-                                                                    class="img-fluid img-thumbnail table-image "/>
-                                                            </td>
-                                                            <td>{{ $slider->title_ar }}</td>
-                                                            <td>{{ $slider->title_en }}</td>
-                                                            <td>{{ $slider->order }}</td>
-                                                            <td>
-                                                                @if( $slider->details_status == trans('sliders.show'))
-                                                                    <span
-                                                                        class="label label-light-info label-inline mr-2">
-                                                                        {!! $slider->details_status !!}
-                                                                    </span>
-                                                                @else
-                                                                    <span
-                                                                        class="label label-light-danger label-inline mr-2">
-                                                                        {!! $slider->details_status !!}
-                                                                    </span>
-                                                                @endif
-                                                            </td>
-                                                            <td>
-                                                                @if( $slider->button_status == trans('sliders.show'))
-                                                                    <span
-                                                                        class="label label-light-info label-inline mr-2">
-                                                                        {!! $slider->button_status !!}
-                                                                    </span>
-                                                                @else
-                                                                    <span
-                                                                        class="label label-light-danger label-inline mr-2">
-                                                                        {!! $slider->button_status !!}
-                                                                        </span>
-                                                                @endif
-                                                            </td>
+                                                            <td>@include('admin.videos.parts.photo') </td>
+                                                            <td>{{ $video->title_ar }}</td>
+                                                            <td>{{ $video->title_en }}</td>
+                                                            <td>{{ $video->duration }}</td>
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
                                                                            id="change_status"
-                                                                           {{$slider->status == 'on' ? 'checked':''}}  data-id="{{$slider->id}}"
+                                                                           {{$video->status == 'on' ? 'checked':''}}  data-id="{{$video->id}}"
                                                                            class="change_status">
                                                                 </div>
                                                             </td>
-                                                            <td>
-                                                                <a href="{{route('admin.slider.edit',$slider->id)}}"
-                                                                   class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{trans('general.edit')}}">
-                                                                    <i class="fa fa-edit fa-1x"></i>
-                                                                </a>
-
-                                                                <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_slider_btn"
-                                                                   data-id="{{$slider->id}}"
-                                                                   title="{{trans('general.delete')}}">
-                                                                    <i class="fa fa-trash fa-1x"></i>
-                                                                </a>
-                                                            </td>
+                                                            <td>@include('admin.videos.parts.options')</td>
 
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="9" class="text-center">
-                                                                {!! __('sliders.no_sliders_found') !!}
+                                                            <td colspan="7" class="text-center">
+                                                                {!! __('videos.no_videos_found') !!}
                                                             </td>
                                                         </tr>
                                                     @endforelse
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="9">
+                                                        <td colspan="7">
                                                             <div class="float-right">
-                                                                {!! $sliders->appends(request()->all())->links() !!}
+                                                                {!! $videos->appends(request()->all())->links() !!}
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -167,28 +117,65 @@
                                 </div>
                             </div>
                             <!--end: Datatable-->
-
                         </div>
 
-                        <form class="d-none" id="form_slider_delete">
-                            <input type="hidden" id="slider_delete_id">
+                        <form class="d-none" id="form_video_delete">
+                            <input type="hidden" id="video_id">
                         </form>
                         <!--end::Form-->
                     </div>
                     <!--end::Card-->
                 </div>
+
             </div>
             <!--end::Row-->
         </div>
         <!--end::Container-->
+
+        <!--begin::Form-->
     </div>
     <!--end::content-->
+
+    <!-- begin Modal-->
+    <div class="modal fade" id="model_show_video" data-backdrop="static" tabindex="-1" role="dialog"
+         aria-labelledby="staticBackdrop" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i aria-hidden="true" class="ki ki-close"></i>
+                    </button>
+                </div>
+
+
+                <!--begin::Card-->
+                <div class="card card-custom card-shadowless rounded-top-0">
+                    <!--begin::Body-->
+                    <div class="card-body p-1">
+
+                        <div class="col-xl-12 col-xxl-12">
+                            <div class="row justify-content-center">
+                                <div id="video_view"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end Modal-->
+
 @endsection
 @push('js')
+
     <script type="text/javascript">
 
-        //Show user Delete Notify
-        $(document).on('click', '.delete_slider_btn', function (e) {
+        //delete video
+        $(document).on('click', '.delete_video_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
@@ -205,7 +192,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.slider.destroy') !!}',
+                        url: '{!! route('admin.video.destroy') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -217,11 +204,10 @@
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_user_button'}
+                                    customClass: {confirmButton: 'delete_video_button'}
                                 });
-                                $('.delete_user_button').click(function () {
-                                    //updateDataTable
-                                    $('#form_slider_delete').find('#slider_delete_id').val();
+                                $('.delete_video_button').click(function () {
+                                    $('#video_id').find('#video_id').val();
                                     $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
@@ -241,6 +227,30 @@
 
         })
 
+        // close video show modal By event
+        $('#model_show_video').on('hidden.bs.modal', function (e) {
+            e.preventDefault();
+            $("#video_view iframe").attr('src', '');
+            $('#model_show_video').modal('hide');
+        });
+
+        // show Video
+        $(document).on('click', '.show_video_btn', function (e) {
+            e.preventDefault();
+
+            var id = $(this).data('id');
+            $('#video_view').empty();
+
+            $.get("{{route('admin.view.video')}}", {id, id}, function (data) {
+                console.log(data);
+                $('#video_view').html('<div class="videoWrapper">' +
+                    '<iframe  width="450" height="315" align="middle"' +
+                    'src="https://www.youtube.com/embed/' + data.data.link + '"></iframe></div>');
+
+                $('#model_show_video').modal('show');
+            });
+        });
+
         // switch english language
         var switchStatus = false;
         $('body').on('change', '.change_status', function (e) {
@@ -254,7 +264,7 @@
             }
 
             $.ajax({
-                url: "{{route('admin.slider.change.status')}}",
+                url: "{{route('admin.video.change.status')}}",
                 data: {switchStatus: switchStatus, id: id},
                 type: 'post',
                 dataType: 'JSON',
@@ -262,7 +272,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {
@@ -283,5 +293,58 @@
             })
         });
 
+        /////////////////////////////////////////////////////////////////////////////////////
+        // copy video link
+        {{--$('body').on('click', '.copy_video_link', function (e) {--}}
+        {{--    e.preventDefault();--}}
+
+        {{--    var id = $(this).data('id');--}}
+        {{--    //////////////////////////////////////////////////////--}}
+        {{--    /// Start clipboard--}}
+        {{--    var copyText = "{{url('/')}}/videos-show/" + id;--}}
+        {{--    var el = document.createElement('textarea');--}}
+        {{--    el.value = copyText;--}}
+        {{--    el.setAttribute('readonly', '');--}}
+        {{--    el.style = {--}}
+        {{--        position: 'absolute',--}}
+        {{--        left: '-9999px'--}}
+        {{--    };--}}
+        {{--    document.body.appendChild(el);--}}
+        {{--    el.select();--}}
+        {{--    document.execCommand('copy');--}}
+        {{--    document.body.removeChild(el);--}}
+        {{--    KTApp.unblockPage();--}}
+
+
+        {{--        Swal.fire({--}}
+        {{--            title: '',--}}
+        {{--            text: "{{__('general.copied')}}",--}}
+        {{--            icon: "success",--}}
+        {{--            allowOutsideClick: false,--}}
+        {{--            customClass: {confirmButton: 'copy_video_button'}--}}
+        {{--        });--}}
+        {{--        $('.copy_video_button').click(function () {--}}
+        {{--            window.location.href = "{{route('admin.videos')}}";--}}
+        {{--        });--}}
+
+        {{--})--}}
     </script>
+
+@endpush
+
+@push('css')
+    <style>
+        iframe {
+            border: none;
+            max-width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            -moz-border-radius: 1px;
+            -webkit-border-radius: 1px;
+            border-radius: 1px;
+            -moz-box-shadow: 4px 4px 5px #ffffff;
+            -webkit-box-shadow: 4px 4px 14px #ffffff;
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=.2);
+        }
+    </style>
 @endpush

@@ -45,5 +45,9 @@ return [
     'add_new_report' => 'إضافة تقرير جديد',
 
 
+    'videos' => 'الفيديوهات',
+    'trashed_videos' => 'الفيديوهات المحذوفة',
+    'add_new_video' => 'إضافة فيديو جديد',
+
 
 ];

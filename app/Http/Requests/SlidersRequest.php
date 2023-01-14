@@ -38,9 +38,6 @@ class SlidersRequest extends FormRequest
                 'details_ar' => 'required',
             ];
         }
-
-
-
     }
 
     public function messages()

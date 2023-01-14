@@ -10,7 +10,6 @@ trait GeneralTrait
     {
         return app()->getLocale();
     }
-
     ////////////////////////////////////////////////////////////////////////
     public function returnError($msg = "", $errNum)
     {
@@ -20,7 +19,6 @@ trait GeneralTrait
             'msg' => $msg
         ]);
     }
-
     ////////////////////////////////////////////////////////////////////////
     public function returnSuccessMessage($msg = "")
     {
@@ -30,7 +28,6 @@ trait GeneralTrait
             'msg' => $msg
         ];
     }
-
     ////////////////////////////////////////////////////////////////////////
     public function returnData($msg = "", $key, $value)
     {
@@ -41,13 +38,11 @@ trait GeneralTrait
             $key => $value
         ]);
     }
-
     ////////////////////////////////////////////////////////////////////////
     public function returnValidationError($code = "", $validator)
     {
         return $this->returnError($code, $validator->errors());
     }
-
     ////////////////////////////////////////////////////////////////////////
     public function returnCodeAccordingToInput($validator)
     {
@@ -55,7 +50,6 @@ trait GeneralTrait
         $code = $this->getErrorCode($inputs[0]);
         return $code;
     }
-
     ////////////////////////////////////////////////////////////////////////
     public function getErrorCode($input)
     {
@@ -64,11 +58,9 @@ trait GeneralTrait
 
         else if ($input == "password")
             return 'E002';
-
         else
             return "";
     }
-
     ////////////////////////////////////////////////////////////////////////
     public function saveImage($name , $path){
         $ImageExtenstion = $name->getClientOriginalExtension();
@@ -76,8 +68,6 @@ trait GeneralTrait
         $name->move($path,$ImageName);
         return $ImageName;
     }
-
-
     ////////////////////////////////////////////////////////////////////////
     public function saveResizeImage($image , $destinationPath,$width,$height){
         $input['photo'] = time().'.'.$image->getClientOriginalExtension();
@@ -87,7 +77,6 @@ trait GeneralTrait
         })->save($destinationPath.'/'.$input['photo']);
         return  $input['photo'];
     }
-
     ///////////////////////////////////////////
     public function saveFile($name , $path){
         $ImageExtenstion = $name->getClientOriginalName();
@@ -95,6 +84,4 @@ trait GeneralTrait
         $name->move($path,$ImageName);
         return $ImageName;
     }
-
-
 }
