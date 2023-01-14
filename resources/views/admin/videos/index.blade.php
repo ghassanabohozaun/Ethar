@@ -70,7 +70,7 @@
                                                         <th>{!! __('videos.title_en') !!}</th>
                                                         <th>{!! __('videos.duration') !!}</th>
                                                         <th>{!! __('videos.status') !!}</th>
-                                                        <th>{!! __('general.actions') !!}</th>
+                                                        <th class="text-center" style="width: 200px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -154,12 +154,9 @@
                     <!--begin::Body-->
                     <div class="card-body p-1">
 
-                        <div class="col-xl-12 col-xxl-10">
-
+                        <div class="col-xl-12 col-xxl-12">
                             <div class="row justify-content-center">
-
                                 <div id="video_view"></div>
-
                             </div>
                         </div>
 
@@ -232,32 +229,29 @@
         })
 
 
-        /////////////////////////////////////////////////////////////////////////////////////
         // Close  Video show modal By event
         $('#model_show_video').on('hidden.bs.modal', function (e) {
             e.preventDefault();
-            $.notifyClose();
             $("#video_view iframe").attr('src', '');
             $('#model_show_video').modal('hide');
         });
-        {{--/////////////////////////////////////////////////////////////////////////////////////--}}
-        {{--// show Video--}}
-        {{--$(document).on('click', '.show_video_btn', function (e) {--}}
-        {{--    e.preventDefault();--}}
 
-        {{--    var id = $(this).data('id');--}}
-        {{--    $('#video_view').empty();--}}
+        // show Video
+        $(document).on('click', '.show_video_btn', function (e) {
+            e.preventDefault();
 
-        {{--    $.get("{{route('admin.video.view')}}", {id, id}, function (data) {--}}
-        {{--        console.log(data);--}}
-        {{--        $('#video_view').html('<div class="videoWrapper">' +--}}
-        {{--            '<iframe  width="420" height="315" align="middle"' +--}}
-        {{--            'src="https://www.youtube.com/embed/' + data.data.link + '"></iframe></div>');--}}
+            var id = $(this).data('id');
+            $('#video_view').empty();
 
-        {{--        $('#model_show_video').modal('show');--}}
-        {{--    });--}}
-        {{--});--}}
+            $.get("{{route('admin.view.video')}}", {id, id}, function (data) {
+                console.log(data);
+                $('#video_view').html('<div class="videoWrapper">' +
+                    '<iframe  width="450" height="315" align="middle"' +
+                    'src="https://www.youtube.com/embed/' + data.data.link + '"></iframe></div>');
 
+                $('#model_show_video').modal('show');
+            });
+        });
 
 
         // switch english language
@@ -304,27 +298,39 @@
 
         /////////////////////////////////////////////////////////////////////////////////////
         // copy video link
-        $('body').on('click', '.copy_video_link', function (e) {
-            e.preventDefault();
-            $.notifyClose();
+        {{--$('body').on('click', '.copy_video_link', function (e) {--}}
+        {{--    e.preventDefault();--}}
 
-            var id = $(this).data('id');
-            //////////////////////////////////////////////////////
-            /// Start clipboard
-            var copyText = "{{url('/')}}/videos-show/" + id;
-            var el = document.createElement('textarea');
-            el.value = copyText;
-            el.setAttribute('readonly', '');
-            el.style = {
-                position: 'absolute',
-                left: '-9999px'
-            };
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            notifySuccessOrError("{{__('general.copied')}}", 'success');
-        })
+        {{--    var id = $(this).data('id');--}}
+        {{--    //////////////////////////////////////////////////////--}}
+        {{--    /// Start clipboard--}}
+        {{--    var copyText = "{{url('/')}}/videos-show/" + id;--}}
+        {{--    var el = document.createElement('textarea');--}}
+        {{--    el.value = copyText;--}}
+        {{--    el.setAttribute('readonly', '');--}}
+        {{--    el.style = {--}}
+        {{--        position: 'absolute',--}}
+        {{--        left: '-9999px'--}}
+        {{--    };--}}
+        {{--    document.body.appendChild(el);--}}
+        {{--    el.select();--}}
+        {{--    document.execCommand('copy');--}}
+        {{--    document.body.removeChild(el);--}}
+        {{--    KTApp.unblockPage();--}}
+
+
+        {{--        Swal.fire({--}}
+        {{--            title: '',--}}
+        {{--            text: "{{__('general.copied')}}",--}}
+        {{--            icon: "success",--}}
+        {{--            allowOutsideClick: false,--}}
+        {{--            customClass: {confirmButton: 'copy_video_button'}--}}
+        {{--        });--}}
+        {{--        $('.copy_video_button').click(function () {--}}
+        {{--            window.location.href = "{{route('admin.videos')}}";--}}
+        {{--        });--}}
+
+        {{--})--}}
     </script>
 
 @endpush

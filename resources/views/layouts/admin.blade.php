@@ -98,7 +98,6 @@
     @endif
 
     <link href="{{asset('adminBoard/assets/css/mystyle.css')}}" rel="stylesheet" type="text/css"/>
-
     <link rel="shortcut icon" href="{{asset('adminBoard/uploadedImages/logos/'.setting()->site_icon)}}"/>
 
 </head>

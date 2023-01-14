@@ -112,7 +112,7 @@ class VideosController extends Controller
         }
 
         if ($request->hasFile('photo')) {
-            $image_path = public_path("\adminBoard\uploadedImages\vvideos\\") . $video->photo;
+            $image_path =public_path('\adminBoard\uploadedImages\videos\\') . $video->photo;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }

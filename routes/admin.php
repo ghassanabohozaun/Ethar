@@ -210,6 +210,9 @@ Route::group([
         Route::get('edit/{id?}', 'VideosController@edit')->name('admin.video.edit');
         Route::post('update', 'VideosController@update')->name('admin.video.update');
         Route::post('/change-status', 'VideosController@changeStatus')->name('admin.video.change.status');
+        Route::get('/view.video', 'VideosController@viewVideo')->name('admin.view.video');
+
+
     });
 
 });
