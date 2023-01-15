@@ -142,7 +142,7 @@
                         type: '{{$file->file_mimes_type}}'
                     };
                     this.emit('addedfile', mock);
-                    //this.options.thumbnail.call(this, mock, '{{asset('adminBoard/uploadedImages/albums_photos/'.$file->full_path_after_upload)}}');
+                    this.options.thumbnail.call(this, mock, '{{asset('adminBoard/uploadedImages/albums_photos/'.$file->full_path_after_upload)}}');
 
                     @endforeach
                         this.on('sending', function (file, xhr, formData) {

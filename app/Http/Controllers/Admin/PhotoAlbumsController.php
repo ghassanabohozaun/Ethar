@@ -194,9 +194,9 @@ class PhotoAlbumsController extends Controller
         if ($request->ajax()) {
             $file = File::find($request->id);
             $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $file->full_path_after_upload;
-            if (File::exists($image_path)) {
-                File::delete($image_path);
-            }
+//            if (File::exists($image_path)) {
+//                File::delete($image_path);
+//            }
             $file->delete();
             return response($file);
         }
