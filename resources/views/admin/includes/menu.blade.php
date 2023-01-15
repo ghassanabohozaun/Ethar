@@ -8,6 +8,7 @@
         <!--begin::Menu Nav-->
 
         <ul class="menu-nav ">
+
             @can('dashboard')
                 <li class="menu-item  menu-item-active" aria-haspopup="true" style="height: 40px;">
                     <a href="{{route('admin.dashboard')}}" class="menu-link ">
@@ -81,7 +82,6 @@
                     </ul>
                 </div>
             </li>
-
 
             <!------------------------------------ Landing Page    ---------------------------------------------------->
             @can('landing-page')
@@ -192,8 +192,6 @@
 
                 </li>
             @endcan
-
-
             <!------------------------------------ Roles  ---------------------------------------------------->
             @can('roles')
                 <li class="menu-item  menu-item-submenu"
@@ -221,7 +219,6 @@
                     </a>
                 </li>
             @endcan
-
             <!------------------------------------ Users    ---------------------------------------------------->
             @can('users')
                 <li class="menu-item  menu-item-submenu
@@ -272,11 +269,8 @@
 
                         </ul>
                     </div>
-
-
                 </li>
             @endcan
-
             <!------------------------------------ Articles  ---------------------------------------------------->
             @can('articles')
                 <li class="menu-item  menu-item-submenu"
@@ -305,7 +299,6 @@
                     </a>
                 </li>
             @endcan
-
             <!------------------------------------ Projects  ---------------------------------------------------->
             @can('projects')
                 <li class="menu-item  menu-item-submenu"
@@ -334,8 +327,6 @@
                     </a>
                 </li>
             @endcan
-
-
             <!------------------------------------ Testimonials  ---------------------------------------------------->
             @can('testimonials')
                 <li class="menu-item  menu-item-submenu"
@@ -358,14 +349,12 @@
                         <span class="menu-text">{{trans('menu.testimonials')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-info">
-{{--                             {{App\Models\Projects::count()}}--}}
+                             {{App\Models\Projects::count()}}
                         </span>
                     </span>
                     </a>
                 </li>
             @endcan
-
-
             <!------------------------------------ Publications  ---------------------------------------------------->
             @can('publications')
                 <li class="menu-item  menu-item-submenu"
@@ -395,8 +384,6 @@
                     </a>
                 </li>
             @endcan
-
-
             <!------------------------------------ Report  ---------------------------------------------------->
             @can('yearly-reports')
                 <li class="menu-item  menu-item-submenu"
@@ -425,9 +412,6 @@
                     </a>
                 </li>
             @endcan
-
-
-
             <!------------------------------------ videos  ---------------------------------------------------->
             @can('videos')
                 <li class="menu-item  menu-item-submenu"
@@ -456,10 +440,8 @@
                     </a>
                 </li>
             @endcan
-
-
-                <!------------------------------------ Abouts  ---------------------------------------------------->
-                @can('abouts')
+            <!------------------------------------ Abouts  ---------------------------------------------------->
+            @can('abouts')
                 <li class="menu-item  menu-item-submenu"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.about.index') }}" class="menu-link menu-toggle">
@@ -483,18 +465,11 @@
                         <span class="menu-label">
                         <span class="label label-rounded label-primary">
                             {{App\Models\About::count()}}
-
-                        <span class="menu-text">{{trans('menu.abouts')}}</span>
-                        <span class="menu-label">
-                        <span class="label label-rounded label-primary">
-                            {{App\Models\About::count()}}
-
                         </span>
                     </span>
                     </a>
                 </li>
             @endcan
-
             <!------------------------------------ photos  ---------------------------------------------------->
             @can('photos')
                 <li class="menu-item  menu-item-submenu"
@@ -515,12 +490,6 @@
                                         </g>
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
-
-                        <span class="menu-text">{{trans('menu.abouts')}}</span>
-                        <span class="menu-label">
-                        <span class="label label-rounded label-primary">
-                            {{App\Models\About::count()}}
-
                         <span class="menu-text">{{trans('menu.photo_albums')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-primary">
@@ -532,7 +501,6 @@
                 </li>
             @endcan
             <!------------------------------------ Support Center ---------------------------------------------------->
-
             @can('support-center')
                 <li class="menu-item  menu-item-submenu"
                     aria-haspopup="true" data-menu-toggle="hover">
