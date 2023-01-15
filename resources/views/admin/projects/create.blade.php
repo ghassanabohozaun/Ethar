@@ -76,14 +76,14 @@
                                 <ul class="nav nav-tabs" id="myTab2" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="settings_tab" data-toggle="tab"
-                                           href="#article_settings">
+                                           href="#project_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
                                             <span class="nav-text">{{__('projects.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="details_ar_tab" data-toggle="tab"
-                                           href="#article_details_ar"
+                                           href="#project_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
                                             <span class="nav-text">{{trans('projects.details_ar_tab')}}</span>
@@ -92,7 +92,7 @@
                                     @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
                                         <a class="nav-link" id="details_en_tab" data-toggle="tab"
-                                           href="#article_details_en"
+                                           href="#project_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
                                             <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
@@ -146,21 +146,28 @@
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
+
             $('#photo_error').text('');
-            $('#publish_date_error').text('');
-            $('#publisher_name_error').text('');
+            $('#file_error').text('');
+            $('#date_error').text('');
+            $('#writer_error').text('');
             $('#title_ar_error').text('');
-            $('#abstract_ar_error').text('');
+            $('#details_ar_error').text('');
             $('#title_en_error').text('');
-            $('#abstract_en_error').text('');
+            $('#details_en_error').text('');
+            $('#type_error').text('');
+
 
             $('#photo').css('border-color', '');
-            $('#publish_date').css('border-color', '');
-            $('#publisher_name').css('border-color', '');
+            $('#file').css('border-color', '');
+            $('#date').css('border-color', '');
+            $('#writer').css('border-color', '');
             $('#title_ar').css('border-color', '');
-            $('#abstract_ar').css('border-color', '');
+            $('#details_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
-            $('#abstract_en').css('border-color', '');
+            $('#details_en').css('border-color', '');
+            $('#type').css('border-color', '');
+
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);

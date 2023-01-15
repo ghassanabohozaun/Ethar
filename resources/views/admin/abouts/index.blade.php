@@ -98,7 +98,13 @@
                                                                 <td>{{ $about->title_en }}</td>
                                                             @endif
 
-                                                            <td>{{ $about->type->name_ar }}</td>
+                                                            <td>
+                                                                @if(Lang() == 'ar')
+                                                                {{$about->type->name_ar }}
+                                                                @elseif(Lang() == 'en')
+                                                                {{$about->type->name_en }}
+                                                                @endif
+                                                            </td>
 
 
                                                             <td>
@@ -152,8 +158,8 @@
 
                         </div>
 
-                        <form class="d-none" id="form_article_delete">
-                            <input type="hidden" id="article_delete_id">
+                        <form class="d-none" id="form_about_delete">
+                            <input type="hidden" id="about_delete_id">
                         </form>
                         <!--end::Form-->
 
@@ -182,7 +188,7 @@
 
     <script type="text/javascript">
         /////////////////////////////////////////////////////////////////
-        ///  article Delete
+        ///  About Delete
         $(document).on('click', '.delete_about_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -212,9 +218,9 @@
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_article_button'}
+                                    customClass: {confirmButton: 'delete_about_button'}
                                 });
-                                $('.delete_article_button').click(function () {
+                                $('.delete_about_button').click(function () {
                                     $('#myTable').load(location.href + (' #myTable'));
                                 });
                             } else if (data.status == false) {
@@ -223,9 +229,9 @@
                                     text: data.msg,
                                     icon: "warning",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_article_button'}
+                                    customClass: {confirmButton: 'delete_about_button'}
                                 });
-                                $('.delete_article_button').click(function () {
+                                $('.delete_about_button').click(function () {
                                 });
                             }
                         },//end success
@@ -237,7 +243,7 @@
                         text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
-                        customClass: {confirmButton: 'cancel_delete_article_button'}
+                        customClass: {confirmButton: 'cancel_delete_about_button'}
                     })
                 }
             });

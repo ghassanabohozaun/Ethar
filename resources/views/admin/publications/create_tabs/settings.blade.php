@@ -1,5 +1,5 @@
-<div class="tab-pane fade  show active" id="article_settings" role="tabpanel"
-     aria-labelledby="article_settings_tab">
+<div class="tab-pane fade  show active" id="publication_settings" role="tabpanel"
+     aria-labelledby="publication_settings_tab">
     <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
         <div class="col-xl-12 col-xxl-10">
 
@@ -154,9 +154,9 @@
                                     </option>
 
                                 </select>
-                                
+
                                 <span class="form-text text-danger"
-                                      id="gender_error"></span>
+                                      id="type_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->

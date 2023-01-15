@@ -1,5 +1,5 @@
-<div class="tab-pane fade  show active" id="article_settings" role="tabpanel"
-     aria-labelledby="article_settings_tab">
+<div class="tab-pane fade  show active" id="publication_settings" role="tabpanel"
+     aria-labelledby="publication_settings_tab">
     <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
         <div class="col-xl-12 col-xxl-10">
 
@@ -74,7 +74,7 @@
                                     placeholder=""/>
                                     <span class="form-text text-muted">{{trans('general.file_format_allow')}}</span>
                                 <span class="form-text text-danger"
-                                      id="course_details_error"></span>
+                                      id="file_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->
@@ -89,7 +89,7 @@
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
-                                           id="publish_date" name="date" value="{{$publication->date}}"
+                                           id="date" name="date" value="{{$publication->date}}"
                                            readonly placeholder="{{trans('publications.date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
                                 <span class="form-text text-danger"
-                                      id="publish_date_error"></span>
+                                      id="date_error"></span>
                             </div>
                             <!--end::Group-->
                         </div>
@@ -116,7 +116,7 @@
                                        placeholder="{{trans('articles.enter_publisher_name')}}"
                                        autocomplete="off">
                                 <span class="form-text text-danger"
-                                      id="publisher_name_error"></span>
+                                      id="writer_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->
@@ -130,7 +130,7 @@
 
                                 <select
                                 class="form-control  form-control-lg"
-                                name="type" id="type" type="text">
+                                name="c" id="type" type="text">
 
                                 <option value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>
                                     @if(Lang() == 'ar')
@@ -170,7 +170,7 @@
 
                             </select>
                                 <span class="form-text text-danger"
-                                      id="gender_error"></span>
+                                      id="writer_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->

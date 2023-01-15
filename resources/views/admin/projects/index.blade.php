@@ -119,7 +119,7 @@
                                                                 </a>
 
                                                                 <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_article_btn"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_project_btn"
                                                                    data-id="{{$project->id}}"
                                                                    title="{{__('general.delete')}}">
                                                                     <i class="fa fa-trash fa-1x"></i>
@@ -154,8 +154,8 @@
 
                         </div>
 
-                        <form class="d-none" id="form_article_delete">
-                            <input type="hidden" id="article_delete_id">
+                        <form class="d-none" id="form_project_delete">
+                            <input type="hidden" id="project_delete_id">
                         </form>
                         <!--end::Form-->
 
@@ -184,8 +184,8 @@
 
     <script type="text/javascript">
         /////////////////////////////////////////////////////////////////
-        ///  article Delete
-        $(document).on('click', '.delete_article_btn', function (e) {
+        ///  project Delete
+        $(document).on('click', '.delete_project_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
@@ -214,9 +214,9 @@
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_article_button'}
+                                    customClass: {confirmButton: 'delete_project_button'}
                                 });
-                                $('.delete_article_button').click(function () {
+                                $('.delete_project_button').click(function () {
                                     $('#myTable').load(location.href + (' #myTable'));
                                 });
                             } else if (data.status == false) {
@@ -225,9 +225,9 @@
                                     text: data.msg,
                                     icon: "warning",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_article_button'}
+                                    customClass: {confirmButton: 'delete_project_button'}
                                 });
-                                $('.delete_article_button').click(function () {
+                                $('.delete_project_button').click(function () {
                                 });
                             }
                         },//end success
@@ -239,7 +239,7 @@
                         text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
-                        customClass: {confirmButton: 'cancel_delete_article_button'}
+                        customClass: {confirmButton: 'cancel_delete_project_button'}
                     })
                 }
             });

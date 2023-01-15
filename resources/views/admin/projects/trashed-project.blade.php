@@ -19,13 +19,13 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="javascript(avoid);" class="text-muted">
+                        <a href="{!! route('admin.project.trashed') !!}" class="text-muted">
                             {{__('menu.trashed_projects')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
-                        <a href="{!! route('admin.articles.trashed') !!}" class="text-muted">
+                        <a href="{!! route('admin.project.trashed') !!}" class="text-muted">
                             {{__('menu.show_all')}}
                         </a>
                     </li>
@@ -101,14 +101,14 @@
                                                             <td>{{ $project->date }}</td>
                                                             <td>{{ $project->type }}</td>
                                                             <td>
-                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_article_btn"
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_project_btn"
                                                                    data-id="{{$project->id}}"
                                                                    title="{{__('general.restore')}}">
                                                                     <i class="fa fa-trash-restore fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_article_btn"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_project_btn"
                                                                    data-id="{{$project->id}}"
                                                                    title="{{__('general.force_delete')}}">
                                                                     <i class="fa fa-trash-alt fa-1x"></i>
@@ -143,8 +143,8 @@
 
                         </div>
 
-                        <form class="d-none" id="form_article_delete">
-                            <input type="hidden" id="article_delete_id">
+                        <form class="d-none" id="form_project_delete">
+                            <input type="hidden" id="project_delete_id">
                         </form>
                         <!--end::Form-->
 
@@ -174,8 +174,8 @@
 
     <script type="text/javascript">
         ///////////////////////////////////////////////////
-        /// delete article
-        $(document).on('click', '.force_delete_article_btn', function (e) {
+        /// delete project
+        $(document).on('click', '.force_delete_project_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
@@ -204,9 +204,9 @@
                                     text: "{!! __('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_article_button'}
+                                    customClass: {confirmButton: 'delete_project_button'}
                                 });
-                                $('.delete_article_button').click(function () {
+                                $('.delete_project_button').click(function () {
                                     $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
@@ -219,7 +219,7 @@
                         text: "{!! __('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
-                        customClass: {confirmButton: 'cancel_delete_article_button'}
+                        customClass: {confirmButton: 'cancel_delete_project_button'}
                     })
                 }
             });
@@ -227,8 +227,8 @@
 
 
         ////////////////////////////////////////////////////
-        // restore article
-        $(document).on('click', '.restore_article_btn', function (e) {
+        // restore project
+        $(document).on('click', '.restore_project_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
@@ -253,9 +253,9 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'restore_article_button'}
+                            customClass: {confirmButton: 'restore_project_button'}
                         });
-                        $('.restore_article_button').click(function () {
+                        $('.restore_project_button').click(function () {
                             $('#myTable').load(location.href + (' #myTable'));
                         });
                     }

@@ -1,5 +1,5 @@
-<div class="tab-pane fade  show active" id="article_settings" role="tabpanel"
-     aria-labelledby="article_settings_tab">
+<div class="tab-pane fade  show active" id="about_settings" role="tabpanel"
+     aria-labelledby="about_settings_tab">
     <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
         <div class="col-xl-12 col-xxl-10">
 
@@ -58,6 +58,24 @@
                                                         </span>
                             <span class="form-text text-danger"
                                   id="photo_error"></span>
+                        </div>
+                    </div>
+                    <!--end::Group-->
+
+                      <!--begin::Group-->
+                      <div class="form-group row">
+                        <label class="col-xl-3 col-lg-3 col-form-label">
+                            {{trans('abouts.file')}}
+                        </label>
+                        <div class="col-lg-9 col-xl-9">
+                            <input
+                                class="form-control  form-control-lg"
+                                type="file" name="file" id="file"
+
+                                placeholder=""/>
+                                <span class="form-text text-muted">{{trans('general.file_format_allow')}}</span>
+                            <span class="form-text text-danger"
+                                  id="file_error"></span>
                         </div>
                     </div>
                     <!--end::Group-->

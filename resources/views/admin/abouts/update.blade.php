@@ -75,15 +75,15 @@
 
                                 <ul class="nav  nav-tabs" id="myTab2" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="article_settings_tab" data-toggle="tab"
-                                           href="#article_settings">
+                                        <a class="nav-link active" id="about_settings_tab" data-toggle="tab"
+                                           href="#about_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
                                             <span class="nav-text">{{trans('abouts.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" id="article_details_ar_tab" data-toggle="tab"
-                                           href="#article_details_ar"
+                                        <a class="nav-link" id="about_details_ar_tab" data-toggle="tab"
+                                           href="#about_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
                                             <span class="nav-text">{{trans('abouts.details_ar_tab')}}</span>
@@ -91,8 +91,8 @@
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
-                                        <a class="nav-link" id="article_details_en_tab" data-toggle="tab"
-                                           href="#article_details_en"
+                                        <a class="nav-link" id="about_details_en_tab" data-toggle="tab"
+                                           href="#about_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
                                             <span class="nav-text">{{trans('abouts.details_en_tab')}}</span>
@@ -147,20 +147,16 @@
 
             ////////////////////////////////////////////////////////////////////
             $('#photo_error').text('');
-            $('#publish_date_error').text('');
-            $('#publisher_name_error').text('');
             $('#title_ar_error').text('');
-            $('#abstract_ar_error').text('');
+            $('#details_ar_error').text('');
             $('#title_en_error').text('');
-            $('#abstract_en_error').text('');
+            $('#details_en_error').text('');
 
             $('#photo').css('border-color', '');
-            $('#publish_date').css('border-color', '');
-            $('#publisher_name').css('border-color', '');
             $('#title_ar').css('border-color', '');
-            $('#abstract_ar').css('border-color', '');
+            $('#details_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
-            $('#abstract_en').css('border-color', '');
+            $('#details_en').css('border-color', '');
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);
@@ -191,9 +187,9 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'update_article_button'}
+                            customClass: {confirmButton: 'update_about_button'}
                         });
-                        $('.update_article_button').click(function () {
+                        $('.update_about_button').click(function () {
                             window.location.href = "{{route('admin.about.index')}}";
                         });
                     }
@@ -207,7 +203,7 @@
                         $('#' + key + '_error').text(value[0])
                         $('#' + key).css('border-color', '#F64E60 ')
                     });
-                    ArticlePrintErrors(response.errors)
+                    AboutPrintErrors(response.errors)
                 },//end error
                 complete: function () {
                     KTApp.unblockPage();
@@ -217,7 +213,7 @@
         });//end submit
         ////////////////////////////////////
         ////// Print Errors Function
-        function ArticlePrintErrors(msg) {
+        function AboutPrintErrors(msg) {
 
             $('.alert_errors').find('ul').empty();
             $('.alert_errors').removeClass('d-none');
