@@ -19,13 +19,13 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="javascript(avoid);" class="text-muted">
+                        <a href="{!! route('admin.about.trashed') !!}" class="text-muted">
                             {{__('menu.trashed_abouts')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
-                        <a href="{!! route('admin.articles.trashed') !!}" class="text-muted">
+                        <a href="#" class="text-muted">
                             {{__('menu.show_all')}}
                         </a>
                     </li>
@@ -97,7 +97,14 @@
                                                                 <td>{{ $about->title_en }}</td>
                                                             @endif
 
-                                                            <td>{{ $about->type->name_ar }}</td>
+                                                            <td>
+                                                                @if(Lang() == 'ar')
+                                                                {{$about->type->name_ar }}
+                                                                @elseif(Lang() == 'en')
+                                                                {{$about->type->name_en }}
+                                                                @endif
+                                                            </td>
+
                                                             <td>
                                                                 <a class="btn btn-hover-warning btn-icon btn-pill restore_about_btn"
                                                                    data-id="{{$about->id}}"
@@ -141,8 +148,8 @@
 
                         </div>
 
-                        <form class="d-none" id="form_article_delete">
-                            <input type="hidden" id="article_delete_id">
+                        <form class="d-none" id="form_about_delete">
+                            <input type="hidden" id="about_delete_id">
                         </form>
                         <!--end::Form-->
 
@@ -172,7 +179,7 @@
 
     <script type="text/javascript">
         ///////////////////////////////////////////////////
-        /// delete article
+        /// delete about
         $(document).on('click', '.force_delete_about_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -217,7 +224,7 @@
                         text: "{!! __('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
-                        customClass: {confirmButton: 'cancel_delete_article_button'}
+                        customClass: {confirmButton: 'cancel_delete_about_button'}
                     })
                 }
             });
@@ -225,7 +232,7 @@
 
 
         ////////////////////////////////////////////////////
-        // restore article
+        // restore about
         $(document).on('click', '.restore_about_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');

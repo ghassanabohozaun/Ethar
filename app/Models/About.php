@@ -12,7 +12,7 @@ class About extends Model
 
     protected $fillable = [
         'id', 'title_ar', 'title_en', 'details_ar', 'details_en', 'status',
-        'photo', 'about_type_id'
+        'photo', 'about_type_id' , 'file'
     ];
 
 

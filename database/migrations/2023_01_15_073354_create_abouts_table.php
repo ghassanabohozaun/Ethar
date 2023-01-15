@@ -22,6 +22,7 @@ return new class extends Migration
             $table->text('details_en')->nullable();
             $table->string('status')->nullable();
             $table->string('photo')->nullable();
+            $table->string('file')->nullable();
             $table->unsignedBigInteger('about_type_id');
             $table->foreign('about_type_id')->references('id')->on('about_types');
             $table->softDeletes();

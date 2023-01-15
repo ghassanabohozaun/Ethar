@@ -30,6 +30,10 @@ class AboutController extends Controller
 
     public function store(AboutsRequest $request)
     {
+        $about = About::where('about_type_id' ,$request->type_id )->first();
+        if( $about){
+           return  $this->returnError('يوجد بالفعل بيانات خاصة في هذا النواع ', 500);
+        }
 
         // save image
         if ($request->hasFile('photo')) {
@@ -39,9 +43,13 @@ class AboutController extends Controller
         } else {
             $photo_path = '';
         }
-        $about = About::where('about_type_id' ,$request->type_id )->first();
-        if( $about){
-           return  $this->returnError('يوجد بالفعل بيانات خاصة في هذا النواع ', 500);
+
+
+          // save File
+          if ($request->hasFile('file')) {
+            $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/abouts');
+        } else {
+            $file = '';
         }
 
         $lang_en = setting()->site_lang_en;
@@ -52,6 +60,7 @@ class AboutController extends Controller
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'about_type_id' => $request->type_id,
+            'file' => $file,
             'status' =>'on',
         ]);
 
@@ -76,7 +85,7 @@ class AboutController extends Controller
             $destinationPath = public_path('adminBoard/uploadedImages/abouts');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
 
-            $image_path = public_path("\adminBoard\uploadedImages\abouts\\") . $project->photo;
+            $image_path = public_path("\adminBoard\uploadedImages\abouts\\") . $about->photo;
 
             if (File::exists($image_path))
             {
@@ -86,6 +95,22 @@ class AboutController extends Controller
             $photo_path = $about->photo;
         }
 
+           // save File
+
+           if ($request->hasFile('file')) {
+
+                $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/abouts');
+
+                $file_path = public_path("\adminBoard\uploadedFiles\\abouts\\") . $about->file;
+
+                if (File::exists($file_path))
+                {
+                    File::delete($file_path);
+                }
+            } else {
+                $file = $about->file;
+            }
+
 
         $lang_en = setting()->site_lang_en;
         $about->update([
@@ -94,6 +119,7 @@ class AboutController extends Controller
             'details_en' => $lang_en == 'on' ? $request->details_en : null,
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'file'   => $file ,
             'about_type_id' => $request->type_id,
         ]);
         return $this->returnSuccessMessage(__('general.update_success_message'));
@@ -160,6 +186,15 @@ class AboutController extends Controller
                     $image_path = public_path("\adminBoard\uploadedImages\abouts\\") . $about->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
+                    }
+                }
+
+                if(!empty($about->file)){
+                    $file_path = public_path("\adminBoard\uploadedFiles\\abouts\\") . $about->file;
+
+                    if (File::exists($file_path))
+                    {
+                    File::delete($file_path);
                     }
                 }
 

@@ -76,14 +76,14 @@
                                 <ul class="nav nav-tabs" id="myTab2" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="settings_tab" data-toggle="tab"
-                                           href="#article_settings">
+                                           href="#publication_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
                                             <span class="nav-text">{{__('publications.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="details_ar_tab" data-toggle="tab"
-                                           href="#article_details_ar"
+                                           href="#publication_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
                                             <span class="nav-text">{{trans('publications.details_ar_tab')}}</span>
@@ -92,7 +92,7 @@
                                     @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
                                         <a class="nav-link" id="details_en_tab" data-toggle="tab"
-                                           href="#article_details_en"
+                                           href="#publication_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
                                             <span class="nav-text">{{trans('publications.details_en_tab')}}</span>
@@ -146,27 +146,25 @@
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
-            $('#title_ar_error').text('');
-            $('#title_en_error').text('');
-            $('#details_ar_error').text('');
-            $('#details_en_error').text('');
             $('#photo_error').text('');
-            $('#language_error').text('');
             $('#file_error').text('');
             $('#date_error').text('');
             $('#writer_error').text('');
+            $('#title_ar_error').text('');
+            $('#details_ar_error').text('');
+            $('#title_en_error').text('');
+            $('#details_en_error').text('');
             $('#type_error').text('');
 
 
-            $('#title_ar').css('border-color', '');
-            $('#title_en').css('border-color', '');
-            $('#details_ar').css('border-color', '');
-            $('#details_en').css('border-color', '');
             $('#photo').css('border-color', '');
-            $('#language').css('border-color', '');
             $('#file').css('border-color', '');
             $('#date').css('border-color', '');
             $('#writer').css('border-color', '');
+            $('#title_ar').css('border-color', '');
+            $('#details_ar').css('border-color', '');
+            $('#title_en').css('border-color', '');
+            $('#details_en').css('border-color', '');
             $('#type').css('border-color', '');
             ///////////////////////////////////////////////////////////////////
 
