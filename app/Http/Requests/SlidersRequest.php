@@ -26,16 +26,18 @@ class SlidersRequest extends FormRequest
         if (setting()->site_lang_en == 'on') {
             return [
                 'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
-                'title_ar' => 'required|unique:articles',
-                'title_en' => 'required|unique:articles',
+                'title_ar' => 'required',
+                'title_en' => 'required',
                 'details_ar' => 'required',
                 'details_en' => 'required',
+                'order' => 'required|numeric',
             ];
         } else {
             return [
                 'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
-                'title_ar' => 'required|unique:articles',
+                'title_ar' => 'required',
                 'details_ar' => 'required',
+                'order' => 'sometimes|numeric',
             ];
         }
     }

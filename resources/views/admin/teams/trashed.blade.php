@@ -150,13 +150,9 @@
 
 @endsection
 @push('js')
-
-
-
-
     <script type="text/javascript">
-        ///////////////////////////////////////////////////
-        /// delete team member
+
+        // delete team member
         $(document).on('click', '.force_delete_team_member_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
@@ -208,7 +204,6 @@
         })
 
 
-        ////////////////////////////////////////////////////
         // restore team member
         $(document).on('click', '.restore_team_member_btn', function (e) {
             e.preventDefault();

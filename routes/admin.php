@@ -56,10 +56,12 @@ Route::group([
         /// Sliders routes
         Route::group(['prefix' => 'sliders'], function () {
             Route::get('/', 'SlidersController@index')->name('admin.sliders');
-            Route::get('/get-sliders', 'SlidersController@getSliders')->name('get.admin.sliders');
             Route::get('/create', 'SlidersController@create')->name('admin.sliders.create');
             Route::post('/store', 'SlidersController@store')->name('admin.slider.store');
+            Route::get('/trashed', 'SlidersController@trashed')->name('admin.slider.trashed');
             Route::post('/destroy', 'SlidersController@destroy')->name('admin.slider.destroy');
+            Route::post('/force-delete', 'SlidersController@forceDelete')->name('admin.slider.force.delete');
+            Route::post('/restore', 'SlidersController@restore')->name('admin.slider.restore');
             Route::get('/edit/{id?}', 'SlidersController@edit')->name('admin.slider.edit');
             Route::post('/update', 'SlidersController@update')->name('admin.slider.update');
             Route::post('/change-status', 'SlidersController@changeStatus')->name('admin.slider.change.status');

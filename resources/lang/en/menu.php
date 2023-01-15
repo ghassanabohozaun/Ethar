@@ -26,7 +26,8 @@ return [
 
     'static_strings' => 'Static Strings',
 
-    'sliders' => 'Slider',
+    'sliders' => 'Sliders',
+    'trashed_sliders' => 'Trashed Sliders',
     'add_new_slider' => 'Add New Slider',
 
     'articles' => 'Articles',

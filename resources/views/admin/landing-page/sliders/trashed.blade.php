@@ -20,12 +20,19 @@
                     </li>
 
                     <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
+                        <a href="{{route('admin.sliders')}}" class="text-muted">
                             {{__('menu.sliders')}}
                         </a>
                     </li>
+
                     <li class="breadcrumb-item">
-                        <a href="{{route('admin.sliders')}}" class="text-muted">
+                        <a href="#" class="text-muted">
+                            {{__('menu.trashed_sliders')}}
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="{{route('admin.slider.trashed')}}" class="text-muted">
                             {{__('menu.show_all')}}
                         </a>
                     </li>
@@ -37,11 +44,6 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-                <a href="{!! route('admin.slider.trashed') !!}"
-                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">
-                    <i class="fa fa-trash"></i>
-                </a>
-                &nbsp;
 
                 <a href="{{route('admin.sliders.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
@@ -81,7 +83,6 @@
                                                         <th>{!! __('sliders.order') !!}</th>
                                                         <th>{!! __('sliders.details_status') !!}</th>
                                                         <th>{!! __('sliders.button_status') !!}</th>
-                                                        <th>{!! __('sliders.status') !!}</th>
                                                         <th class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
@@ -123,33 +124,26 @@
                                                                         </span>
                                                                 @endif
                                                             </td>
+
                                                             <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           id="change_status"
-                                                                           {{$slider->status == 'on' ? 'checked':''}}  data-id="{{$slider->id}}"
-                                                                           class="change_status">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <a href="{{route('admin.slider.edit',$slider->id)}}"
-                                                                   class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{trans('general.edit')}}">
-                                                                    <i class="fa fa-edit fa-1x"></i>
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_slider_btn"
+                                                                   data-id="{{$slider->id}}"
+                                                                   title="{{__('general.restore')}}">
+                                                                    <i class="fa fa-trash-restore fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_slider_btn"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_slider_btn"
                                                                    data-id="{{$slider->id}}"
-                                                                   title="{{trans('general.delete')}}">
-                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                   title="{{__('general.force_delete')}}">
+                                                                    <i class="fa fa-trash-alt fa-1x"></i>
                                                                 </a>
                                                             </td>
 
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="9" class="text-center">
+                                                            <td colspan="8" class="text-center">
                                                                 {!! __('sliders.no_sliders_found') !!}
                                                             </td>
                                                         </tr>
@@ -157,7 +151,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="9">
+                                                        <td colspan="8">
                                                             <div class="float-right">
                                                                 {!! $sliders->appends(request()->all())->links() !!}
                                                             </div>
@@ -189,20 +183,21 @@
     </div>
     <!--end::content-->
 @endsection
+
 @push('js')
     <script type="text/javascript">
 
-        //Show user Delete Notify
-        $(document).on('click', '.delete_slider_btn', function (e) {
+        // delete slider
+        $(document).on('click', '.force_delete_slider_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_permanent_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -210,7 +205,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.slider.destroy') !!}',
+                        url: '{!! route('admin.slider.force.delete') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -218,15 +213,13 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
-                                    text: data.msg,
+                                    title: "{!! __('general.deleted') !!}",
+                                    text: "{!! __('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_user_button'}
+                                    customClass: {confirmButton: 'delete_slider_button'}
                                 });
-                                $('.delete_user_button').click(function () {
-                                    //updateDataTable
-                                    $('#form_slider_delete').find('#slider_delete_id').val();
+                                $('.delete_slider_button').click(function () {
                                     $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
@@ -235,41 +228,33 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
-                        customClass: {confirmButton: 'cancel_delete_user_button'}
+                        customClass: {confirmButton: 'cancel_delete_slider_button'}
                     })
                 }
             });
-
         })
 
-        // switch english language
-        var switchStatus = false;
-        $('body').on('change', '.change_status', function (e) {
+        // restore slider
+        $(document).on('click', '.restore_slider_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
-            if ($(this).is(':checked')) {
-                switchStatus = $(this).is(':checked');
-            } else {
-                switchStatus = $(this).is(':checked');
-            }
-
             $.ajax({
-                url: "{{route('admin.slider.change.status')}}",
-                data: {switchStatus: switchStatus, id: id},
+                url: "{{route('admin.slider.restore')}}",
+                data: {id, id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
-                },//end beforeSend
+                },
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
@@ -279,14 +264,15 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'switch_status_toggle'}
+                            customClass: {confirmButton: 'restore_slider_button'}
                         });
-                        $('.switch_status_toggle').click(function () {
+                        $('.restore_slider_button').click(function () {
+                            $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },//end success
             })
-        });
+        })
 
     </script>
 @endpush

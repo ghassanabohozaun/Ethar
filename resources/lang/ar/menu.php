@@ -20,6 +20,7 @@ return [
     'static_strings' => 'النصوص الثابتة',
 
     'sliders' => 'السلايدر',
+    'trashed_sliders' => 'السلايدرات المحذوفة',
     'add_new_slider' => 'إضافة سلايدر جديد',
 
     'articles' => 'المقالات',
