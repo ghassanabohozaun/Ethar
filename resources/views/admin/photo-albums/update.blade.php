@@ -127,38 +127,6 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('photoAlbums.language')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-
-                                                            <select
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                name="language" id="language" type="text">
-
-                                                                <option
-                                                                    value="ar" {{$photoAlbum->language == trans('general.ar') ? 'selected':''}}>
-                                                                    {{trans('general.ar')}}
-                                                                </option>
-
-                                                                <option
-                                                                    value="en" {{$photoAlbum->language == trans('general.en') ? 'selected':''}}>
-                                                                    {{trans('general.en')}}
-                                                                </option>
-                                                                <option
-                                                                    value="ar_en" {{$photoAlbum->language == trans('general.ar_en') ? 'selected':''}}>
-                                                                    {{trans('general.ar_en')}}
-                                                                </option>
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="language_error"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
                                                             {{trans('photoAlbums.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">

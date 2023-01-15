@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\File;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PhotoAlbumsRequest;
 use App\Http\Requests\PhotoAlbumsUpdateRequest;
@@ -11,6 +10,7 @@ use App\Models\PhotoAlbum;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use File;
 
 class PhotoAlbumsController extends Controller
 {

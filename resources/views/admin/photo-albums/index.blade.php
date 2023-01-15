@@ -202,7 +202,7 @@
     <script type="text/javascript">
 
         //photo album delete
-        $(document).on('click', '#btn_photo_album_delete', function (e) {
+        $(document).on('click', '.delete_photo_album_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
