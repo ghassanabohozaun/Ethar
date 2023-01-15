@@ -15,11 +15,12 @@ class CreateTeamsTable extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
+            $table->string('photo')->nullable();
+            $table->string('status')->nullable();
             $table->string('name_ar')->nullable();
             $table->string('name_en')->nullable();
             $table->string('position_ar')->nullable();
             $table->string('position_en')->nullable();
-            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }

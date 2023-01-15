@@ -125,12 +125,4 @@ return [
     'character_limit'=>'عدد الحروف المسموح بها',
     'remaining'=>'متبقي',
 
-    ///////////////////////////////////////////////////////////////
-    ///  Export File Name
-    'contest_enrolled_list'=>'قائمة المسجلين في المسابقة',
-    'course_enrolled_list'=>'قائمة المسجلين في الدورة',
-    'summer_camp_enrolled_list'=>'قائمة المسجلين في المخيم الصيفي',
-    'program_enrolled_list'=>'قائمة المسجلين في البرنامج',
-
-
 ];

@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teams/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teams/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teams/parts/options.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teams/parts/photo.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/teams/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/global.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TeamRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TeamRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_27_090854_create_teams_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_27_090854_create_teams_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/team.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +195,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/database/migrations",
+    "last_opened_file_path": "C:/laragon/www/etharps/resources/views/admin/teams",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -192,11 +207,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\resources\views\admin\teams" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
       <recent name="C:\laragon\www\etharps\app\Models" />
       <recent name="C:\laragon\www\etharps\app\Http\Requests" />
       <recent name="C:\laragon\www\etharps\resources\views\admin" />
-      <recent name="C:\laragon\www\etharps\public\site\assets\images\banner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\etharps\resources\views\admin" />
@@ -251,7 +266,8 @@
       <workItem from="1673677689925" duration="2629000" />
       <workItem from="1673684938699" duration="3852000" />
       <workItem from="1673770916920" duration="1134000" />
-      <workItem from="1673773136608" duration="13591000" />
+      <workItem from="1673773136608" duration="13695000" />
+      <workItem from="1673790799110" duration="3651000" />
     </task>
     <servers />
   </component>
@@ -299,6 +315,15 @@
             <option name="methodName" value="create" />
           </properties>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/PhotoAlbumsController.php</url>
+          <line>122</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\Admin\PhotoAlbumsController" />
+            <option name="methodName" value="destroy" />
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/site.blade.php</url>

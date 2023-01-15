@@ -128,38 +128,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.language')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-
-                                                            <select
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                name="language" id="language" type="text">
-
-                                                                <option
-                                                                    value="ar" {{$testimonial->language == trans('general.ar') ?'selected':'' }}>
-                                                                    {{trans('general.ar')}}
-                                                                </option>
-
-                                                                <option
-                                                                    value="en" {{$testimonial->language == trans('general.en') ?'selected':'' }}>
-                                                                    {{trans('general.en')}}
-                                                                </option>
-                                                                <option
-                                                                    value="ar_en" {{$testimonial->language == trans('general.ar_en') ?'selected':'' }}>
-                                                                    {{trans('general.ar_en')}}
-                                                                </option>
-
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="language_error"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Group-->
-
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">

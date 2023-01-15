@@ -224,7 +224,6 @@ Route::group([
     /// photo albums routes
     Route::group(['prefix' => 'photo-albums', 'middleware' => 'can:photos'], function () {
         Route::get('/', 'PhotoAlbumsController@index')->name('admin.photo.albums');
-        Route::get('get-photo-albums', 'PhotoAlbumsController@getPhotoAlbums')->name('get.admin.photo.albums');
         Route::get('/create', 'PhotoAlbumsController@create')->name('admin.photo.albums.create');
         Route::post('/store', 'PhotoAlbumsController@store')->name('admin.photo.albums.store');
         Route::post('/destroy', 'PhotoAlbumsController@destroy')->name('admin.photo.albums.destroy');
@@ -239,9 +238,14 @@ Route::group([
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// team routes
     Route::group(['prefix' => 'teams', 'middleware' => 'can:teams'], function () {
-        Route::get('/', 'TeamController@team')->name('admin.teams');
-        Route::post('store', 'TeamController@store')->name('admin.store.team.member');
+        Route::get('/', 'TeamController@index')->name('admin.teams');
+        Route::get('/create', 'TeamController@create')->name('admin.team.member.create');
+        Route::post('store', 'TeamController@store')->name('admin.team.member.store');
+        route::get('/edit/{id?}', 'TeamController@edit')->name('admin.team.member.edit');
+        route::post('/update', 'TeamController@update')->name('admin.team.member.update');
         Route::post('destroy', 'TeamController@destroy')->name('admin.destroy.team.member');
+        Route::post('/change-status', 'TeamController@changeStatus')->name('admin.team.member.change.status');
+
     });
 
 

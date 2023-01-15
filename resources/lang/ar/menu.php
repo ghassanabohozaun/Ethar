@@ -61,6 +61,6 @@ return [
 
     'teams' => 'اعضاء الفريق',
     'trashed_teams' => ' اعضاء الفريق المحذوفة',
-    'add_new_teams' => 'إضافة عضو للفريق',
+    'add_new_team_member' => 'إضافة عضو للفريق',
 
 ];
