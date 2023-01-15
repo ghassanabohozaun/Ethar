@@ -4,13 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PhotoAlbumsRequest;
-use App\Http\Requests\PhotoAlbumsUpdateRequest;
-use App\Http\Resources\PhotoAlbumResource;
 use App\Models\PhotoAlbum;
 use App\Traits\GeneralTrait;
-//use File;
+use App\Upload_Files;
+use File;
 use Illuminate\Http\Request;
-use App\File;
 
 class PhotoAlbumsController extends Controller
 {
@@ -168,19 +166,17 @@ class PhotoAlbumsController extends Controller
     public function uploadOtherAlbumPhotos(Request $request, $paid)
     {
         if ($request->hasFile('file')) {
-
             $image = $request->file('file');
             $destinationPath = public_path('\adminBoard\uploadedImages\albums_photos\\');
             $filePath = $this->saveResizeImage($image, $destinationPath, 500, 500);
-
-            $file = new File();
+            $file = new Upload_Files();
             $file->file_name = $request->file('file')->getClientOriginalName();
             $file->file_size = $request->file('file')->getSize();
-            $file->file_path = 'photo_albums/' . $paid;
+            $file->file_path = 'albums_photos/' . $paid;
             $file->file_after_upload = $request->file('file')->hashName();
             $file->full_path_after_upload = $filePath;
             $file->file_mimes_type = $request->file('file')->getMimeType();
-            $file->file_type = 'photo_albums_photos';
+            $file->file_type = 'albums_photos';
             $file->relation_id = $paid;
             $file->save();
         }
@@ -192,11 +188,11 @@ class PhotoAlbumsController extends Controller
     public function deleteOtherAlbumPhoto(Request $request)
     {
         if ($request->ajax()) {
-            $file = File::find($request->id);
-            $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $file->full_path_after_upload;
-//            if (File::exists($image_path)) {
-//                File::delete($image_path);
-//            }
+            $file = Upload_Files::find($request->id);
+            $image_path = public_path('\adminBoard\uploadedImages\albums_photos\\') . $file->full_path_after_upload;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
             $file->delete();
             return response($file);
         }

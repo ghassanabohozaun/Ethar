@@ -130,7 +130,6 @@
                     return (fmock = file.previewElement) != null ? fmock.parentNode.removeChild(file.previewElement) : void 0;
                 },
 
-
                 ///////////////////////////////// Start Get Images
                 ////// Get Images From Model --> tip: take care there is relation between post and file
                 init: function () {

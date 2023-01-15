@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/File.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PhotoAlbumsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PhotoAlbumsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PhotoAlbum.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PhotoAlbum.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/albums_photos/1673781859.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/photo-albums/other-album-photos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/photo-albums/other-album-photos.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +254,7 @@
       <workItem from="1673677689925" duration="2629000" />
       <workItem from="1673684938699" duration="3852000" />
       <workItem from="1673770916920" duration="1134000" />
-      <workItem from="1673773136608" duration="8425000" />
+      <workItem from="1673773136608" duration="9791000" />
     </task>
     <servers />
   </component>
@@ -293,7 +296,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/PhotoAlbumsController.php</url>
-          <line>27</line>
+          <line>25</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\Admin\PhotoAlbumsController" />
             <option name="methodName" value="create" />
