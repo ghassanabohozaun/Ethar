@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\PublicationsController;
+use App\Http\Controllers\Admin\AboutController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -231,6 +234,23 @@ Route::group([
 
 
     });
+
+     /////////////////////////////////////////////////////////////////////////////////////////////
+    /// About routes
+
+    Route::group(['prefix' => 'about', 'middleware' => 'can:abouts'], function () {
+        Route::get('/', [AboutController::class, 'index'])->name('admin.about.index');
+        Route::get('/create', [AboutController::class, 'create'])->name('admin.about.create');
+        Route::post('/store', [AboutController::class, 'store'])->name('admin.about.store');
+        Route::get('/edit/{id}', [AboutController::class, 'edit'])->name('admin.about.edit');
+        Route::post('/update', [AboutController::class, 'update'])->name('admin.about.update');
+        Route::get('/trashed', [AboutController::class, 'trashed'])->name('admin.about.trashed');
+        Route::post('/destroy', [AboutController::class, 'destroy'])->name('admin.about.destroy');
+        Route::post('/force-delete', [AboutController::class, 'forceDelete'])->name('admin.about.force.delete');
+        Route::post('/restore', [AboutController::class, 'restore'])->name('admin.about.restore');
+        Route::post('/change-status', [AboutController::class, 'changeStatus'])->name('admin.about.change.status');
+    });
+
 
 });
 

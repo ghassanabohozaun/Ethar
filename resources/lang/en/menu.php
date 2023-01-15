@@ -47,9 +47,14 @@ return [
 
     'trashed_publications' => 'Trashed Publications',
     'add_new_publication' =>  'Add New Publication',
+
     'videos' => 'Videos',
     'trashed_videos' => 'Trashed Videos',
     'add_new_video' =>  'Add New Video',
+
+    'abouts' => 'Abouts',
+    'trashed_abouts' => 'Trashed Abouts',
+    'add_new_about' =>  'Add New About',
 
 
 ];

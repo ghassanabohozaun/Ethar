@@ -15,5 +15,6 @@ return [
     'videos'=>'Videos Management',
     'photos'=>'Photo Albums Management',
     'yearly-reports'=>'Publications Management',
+    'abouts' => 'Abouts Management',
 
 ];
