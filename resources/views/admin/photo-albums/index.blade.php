@@ -15,12 +15,6 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.media')}}
-                        </a>
-                    </li>
-
-                    <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
                             {{trans('menu.photo_albums')}}
                         </a>
                     </li>
@@ -37,11 +31,6 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-                <a href="{!! route('photo.albums') !!}" target="_blank"
-                   class="btn btn-secondary btn-sm font-weight-bold font-size-base  mr-1">
-                    <i class="fa fa-eye"></i>
-                    {{trans('general.view')}}
-                </a>
                 <a href="{{route('admin.photo.albums.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
@@ -58,7 +47,6 @@
         <!--begin::Container-->
         <div class=" container-fluid ">
 
-
             <!--begin::Row-->
             <div class="row">
                 <div class="col-lg-12">
@@ -70,28 +58,63 @@
                             <div class="portlet-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="dtable scroll">
-                                            <!--begin: Datatable -->
-                                            <table class="table d-table" id="m_table_1">
-                                                <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>@lang('photoAlbums.main_photo')</th>
-                                                    <th>@lang('photoAlbums.title_ar')</th>
-                                                    <th>@lang('photoAlbums.title_en')</th>
-                                                    <th>@lang('photoAlbums.language')</th>
-                                                    <th>@lang('photoAlbums.status')</th>
-                                                    <th>@lang('general.actions')</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                        <div class="scroll">
+                                            <div class="table-responsive">
+                                                <table class="table myTable table-hover" id="myTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>{!! __('photoAlbums.main_photo') !!}</th>
+                                                        <th>{!! __('photoAlbums.title_ar') !!}</th>
+                                                        <th>{!! __('photoAlbums.title_en') !!}</th>
+                                                        <th>{!! __('photoAlbums.status') !!}</th>
+                                                        <th class="text-center" style="width: 200px;">{!! __('general.actions') !!}</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    @forelse($photoAlbums as $photoAlbum)
+                                                        <tr>
+                                                            <td>{!! $loop->iteration!!}</td>
+                                                            <td>@include('admin.photo-albums.parts.photo') </td>
+                                                            <td>{{ $photoAlbum->title_ar }}</td>
+                                                            <td>{{ $photoAlbum->title_en }}</td>
+                                                            <td>
+                                                                <div class="cst-switch switch-sm">
+                                                                    <input type="checkbox"
+                                                                           id="change_status"
+                                                                           {{$photoAlbum->status == 'on' ? 'checked':''}}  data-id="{{$photoAlbum->id}}"
+                                                                           class="change_status">
+                                                                </div>
+                                                            </td>
+                                                            <td>@include('admin.photo-albums.parts.options')</td>
+
+                                                        </tr>
+                                                    @empty
+                                                        <tr>
+                                                            <td colspan="6" class="text-center">
+                                                                {!! __('photoAlbums.not_photo_albums_found') !!}
+                                                            </td>
+                                                        </tr>
+                                                    @endforelse
+                                                    </tbody>
+                                                    <tfoot>
+                                                    <tr>
+                                                        <td colspan="6">
+                                                            <div class="float-right">
+                                                                {!! $photoAlbums->appends(request()->all())->links() !!}
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
                             <!--end: Datatable-->
+
                         </div>
 
                         <form class="d-none" id="form_photo_album_delete">
@@ -175,20 +198,7 @@
 @endsection
 @push('js')
 
-    <script
-        src="{{asset('adminBoard/assets/plugins/custom/datatables/datatables.bundle.js')}}"
-        type="text/javascript"></script>
-    <script src="{{asset('adminBoard/assets/js/data_table.js')}}" type="text/javascript"></script>
-
-    <script>
-        window.data_url = "{{route('get.admin.photo.albums')}}";
-        window.columns = [{data: "id"}, {data: "main_photo"}, {data: "title_ar"},
-            {data: "title_en"}, {data: "language"}, {data: "status"},
-            {data: "actions"},];
-    </script>
-
     <script type="text/javascript">
-
         /////////////////////////////////////////////////////////////////////////////////////
         /// show photo album delete notify
         $(document).on('click', '.delete_photo_album_btn', function (e) {

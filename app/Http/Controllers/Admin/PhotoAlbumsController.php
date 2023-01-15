@@ -21,34 +21,10 @@ class PhotoAlbumsController extends Controller
     public function index()
     {
         $title = trans('menu.photo_albums');
-        return view('admin.medias.photo-albums.index', compact('title'));
+        $photoAlbums = PhotoAlbum::orderByDesc('created_at')->paginate();
+        return view('admin.photo-albums.index', compact('title','photoAlbums'));
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// get Photo Albums
-    public function getPhotoAlbums(Request $request)
-    {
-        $perPage = 10;
-        if ($request->has('length')) {
-            $perPage = $request->length;
-        }
-
-        $offset = 0;
-        if ($request->has('start')) {
-            $offset = $request->start;
-        }
-
-        $list = PhotoAlbum::orderByDesc('created_at')->offset($offset)->take($perPage)->get();
-        $arr = PhotoAlbumResource::collection($list);
-        $recordsTotal = PhotoAlbum::get()->count();
-        $recordsFiltered = PhotoAlbum::get()->count();
-        return response()->json([
-            'draw' => $request->draw,
-            'recordsTotal' => $recordsTotal,
-            'recordsFiltered' => $recordsFiltered,
-            'data' => $arr
-        ]);
-    }
 
     /////////////////////////////////////////////////////////////////////////////////////////
     /// create

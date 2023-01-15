@@ -3,8 +3,8 @@
 return [
 
     'photo_album_update' => 'Photo Album Update',
-    'add_other_album_photos'=>'Add Other Album Photos',
-    'other_album_photos_upload'=>'Drop other Photos Here To Upload',
+    'add_other_album_photos' => 'Add Other Album Photos',
+    'other_album_photos_upload' => 'Drop other Photos Here To Upload',
 
 
     'title_ar' => 'Photo Album Title | ar',
@@ -22,9 +22,9 @@ return [
     'required' => 'This Field is Required ',
     'image' => 'image with jpeg, jpg, png formats only',
     'in' => 'The entered value incorrect',
-    'mimes'=>'image with jpeg, jpg, png formats only',
+    'mimes' => 'image with jpeg, jpg, png formats only',
     'photo_required' => 'Photo Album Main Photo Required',
-    'image_max'=>'Max allow image size 1 mega',
-
+    'image_max' => 'Max allow image size 1 mega',
+    'not_photo_albums_found' => 'No Photo Albums Found',
 
 ];
