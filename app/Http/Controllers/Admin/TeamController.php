@@ -17,7 +17,7 @@ class TeamController extends Controller
     // teams Index
     public function index()
     {
-        $title = trans('menu.team');
+        $title = trans('menu.teams');
         $teams = Team::orderByDesc('created_at')->paginate();
         return view('admin.teams.index', compact('title', 'teams'));
     }
