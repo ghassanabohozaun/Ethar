@@ -41,7 +41,7 @@
 
                                 </select>
                                 <span class="form-text text-danger"
-                                      id="gender_error"></span>
+                                      id="type_error"></span>
                             </div>
                           </div>
                         <!--end::Group-->
@@ -53,7 +53,7 @@
                              {{trans('reports.year')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
-                                {{-- {{ $planMaster->end_fin_year == $year ? 'selected' : '' }} --}}
+                             
                                 <select
                                     class="form-control  form-control-lg"
                                     name="year" id="year" type="text">
@@ -61,12 +61,13 @@
                                     $firstYear = (int)date('Y') - 2;
                                     $lastYear = $firstYear + 6;
                                     ?>
+                                          <option value="">اختر من القائمة  </option>
                                     @for ($year= $firstYear; $year<= $lastYear; $year++)
-                                        <option value="{{$year}}"  >{{ $year }}</option>
+                                        <option value="{{$year}}">{{ $year }} </option>
                                     @endfor
                                 </select>
                                 <span class="form-text text-danger"
-                                      id="gender_error"></span>
+                                      id="year_error"></span>
                             </div>
                           </div>
                         <!--end::Group-->
@@ -88,7 +89,7 @@
                                     class="form-text text-muted">{{trans('general.file_format_allow')}}
                                                             </span>
                                 <span class="form-text text-danger"
-                                      id="course_details_error"></span>
+                                      id="file_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->

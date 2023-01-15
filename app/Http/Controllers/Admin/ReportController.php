@@ -37,6 +37,11 @@ class ReportController extends Controller
         }
 
 
+        $report = Report::where('year' ,$request->year)->where('type',$request->type)->first();
+        if($report){
+           return   $this->returnError(' لا  يوجد تقريق لهذه السنة ',500);
+        }
+
         $lang_en = setting()->site_lang_en;
         Report::create([
             'file' => $file,

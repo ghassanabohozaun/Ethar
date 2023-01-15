@@ -73,7 +73,7 @@
                                                     <thead>
                                                     <tr>
                                                         <th>{!! __('reports.type') !!}</th>
-                                                        <th>{!! __('reports.date') !!}</th>
+                                                        <th>{!! __('reports.year') !!}</th>
                                                         <th>{!! __('articles.status') !!}</th>
                                                         <th class="text-center"
                                                             style="width: 100px;">{!! __('general.actions') !!}</th>

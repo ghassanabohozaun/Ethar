@@ -73,16 +73,7 @@
                                     </div>
                                 </div>
 
-                                <ul class="nav nav-tabs" id="myTab2" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="settings_tab" data-toggle="tab"
-                                           href="#article_settings">
-                                            <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{__('reports.settings_tab')}}</span>
-                                        </a>
-                                    </li>
 
-                                </ul>
 
 
                                 <div class="tab-content mt-5">
@@ -126,21 +117,15 @@
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
-            $('#photo_error').text('');
-            $('#publish_date_error').text('');
-            $('#publisher_name_error').text('');
-            $('#title_ar_error').text('');
-            $('#abstract_ar_error').text('');
-            $('#title_en_error').text('');
-            $('#abstract_en_error').text('');
+            $('#type_error').text('');
+            $('#year_error').text('');
+            $('#file_error').text('');
 
-            $('#photo').css('border-color', '');
-            $('#publish_date').css('border-color', '');
-            $('#publisher_name').css('border-color', '');
-            $('#title_ar').css('border-color', '');
-            $('#abstract_ar').css('border-color', '');
-            $('#title_en').css('border-color', '');
-            $('#abstract_en').css('border-color', '');
+
+            $('#type').css('border-color', '');
+            $('#year').css('border-color', '');
+            $('#file').css('border-color', '');
+
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);
@@ -176,6 +161,18 @@
                         $('.add_project_button').click(function () {
                             window.location.href = "{{route('admin.report.index')}}";
                         });
+                    }else{
+
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "error",
+                            allowOutsideClick: false,
+                           // customClass: {confirmButton: 'add_project_button'}
+                        });
+                        // $('.add_project_button').click(function () {
+                        //     window.location.href = "";
+                        // });
                     }
                 },//end success
                 error: function (reject) {
