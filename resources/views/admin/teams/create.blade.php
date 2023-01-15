@@ -4,8 +4,8 @@
 @section('content')
 
     <form class="form" action="{{route('admin.team.member.store')}}" method="POST" id="form_team_member_add">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -167,7 +167,6 @@
                                                     <!--end::Group-->
 
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -181,6 +180,41 @@
                                                                       autocomplete="off"></textarea>
                                                             <span class="form-text text-danger"
                                                                   id="position_en_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('teams.type')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+
+                                                            <select
+                                                                class="form-control  form-control-lg"
+                                                                name="type" id="type" type="text">
+                                                                <option value="">
+                                                                    {{__('general.select_from_list')}}
+                                                                </option>
+
+                                                                <option value="founder">
+                                                                    {{__('teams.founder')}}
+                                                                </option>
+
+                                                                <option value="director">
+                                                                    {{__('teams.director')}}
+                                                                </option>
+
+                                                                <option value="member">
+                                                                    {{__('teams.member')}}
+                                                                </option>
+
+                                                            </select>
+
+                                                            <span class="form-text text-danger"
+                                                                  id="type_error"></span>
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
@@ -223,12 +257,15 @@
             $('#position_ar').css('border-color', '');
             $('#position_en').css('border-color', '');
             $('#photo').css('border-color', '');
+            $('#type').css('border-color', '');
+
 
             $('#name_ar_error').text('');
             $('#name_en_error').text('');
             $('#position_ar_error').text('');
             $('#position_en_error').text('');
             $('#photo_error').text('');
+            $('#type_error').text('');
 
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);

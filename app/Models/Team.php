@@ -17,6 +17,21 @@ class Team extends Model
         'name_en',
         'position_ar',
         'position_en',
+        'type',
     ];
+
     protected $hidden = ['updated_at'];
+
+    public function getTypeAttribute($value)
+    {
+        if ($value == 'founder') {
+            return __('teams.founder');
+        } elseif ($value == 'director') {
+            return __('teams.director');
+        } elseif ($value == 'member') {
+            return __('teams.member');
+        }
+    }
+
+
 }

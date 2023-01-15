@@ -208,6 +208,43 @@
                                                     <!--end::Group-->
 
 
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('teams.type')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+
+                                                            <select
+                                                                class="form-control  form-control-lg"
+                                                                name="type" id="type" type="text">
+                                                                <option value="">
+                                                                    {{__('general.select_from_list')}}
+                                                                </option>
+
+                                                                <option
+                                                                    value="founder" {{$team->type ==  __('teams.founder') ? 'selected':''}}>
+                                                                    {{__('teams.founder')}}
+                                                                </option>
+
+                                                                <option
+                                                                    value="director" {{$team->type == __('teams.director') ? 'selected':''}}>
+                                                                    {{__('teams.director')}}
+                                                                </option>
+
+                                                                <option
+                                                                    value="member" {{$team->type == __('teams.member') ? 'selected':''}}>
+                                                                    {{__('teams.member')}}
+                                                                </option>
+
+                                                            </select>
+
+                                                            <span class="form-text text-danger"
+                                                                  id="type_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
                                                 </div>
                                                 <!--begin::body-->
 
@@ -245,13 +282,14 @@
             $('#position_ar').css('border-color', '');
             $('#position_en').css('border-color', '');
             $('#photo').css('border-color', '');
-
+            $('#type').css('border-color', '');
 
             $('#name_ar_error').text('');
             $('#name_en_error').text('');
             $('#position_ar_error').text('');
             $('#position_en_error').text('');
             $('#photo_error').text('');
+            $('type_error').text('');
 
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);

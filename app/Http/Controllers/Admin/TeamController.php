@@ -52,6 +52,7 @@ class TeamController extends Controller
             'name_en' => $request->name_en,
             'position_ar' => $request->position_ar,
             'position_en' => $request->position_en,
+            'type' => $request->type,
         ]);
 
         return $this->returnSuccessMessage(trans('general.add_success_message'));
@@ -117,6 +118,7 @@ class TeamController extends Controller
             'name_en' => $request->name_en,
             'position_ar' => $request->position_ar,
             'position_en' => $request->position_en,
+            'type' => $request->type,
         ]);
 
         return $this->returnSuccessMessage(trans('general.update_success_message'));

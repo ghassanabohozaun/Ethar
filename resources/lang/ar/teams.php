@@ -9,11 +9,16 @@ return [
     'position_ar' => 'المنصب | عربي',
     'position_en' => 'المنصب | انجليزي',
     'status' => 'الحالة',
+    'type'=>'النوع',
     'enter_team_image' => 'ادخل الصورة',
     'enter_name_ar' => 'ادخل الاسم بالعربي',
     'enter_name_en' => 'ادخل الاسم بالانجليزي',
     'enter_position_ar' => 'ادخل المنصب بالعربي',
     'enter_position_en' => 'ادخل المنصب بالانجليزي',
+
+    'founder'=>'مؤسس',
+    'director' => 'مدير',
+    'member' => 'عضو',
 
     'required' => 'هذا الحقل مطلوب',
     'max' => 'الحد الاقصي المسموح به للحروف 100',

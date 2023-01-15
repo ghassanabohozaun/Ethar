@@ -52,12 +52,12 @@ class AdminsController extends Controller
                     }
                     $image = $request->file('photo');
                     $destinationPath = public_path('\adminBoard\uploadedImages\admin\\');
-                    $photo_path = $this->saveResizeImage($image, $destinationPath);
+                    $photo_path = $this->saveResizeImage($image, $destinationPath,250,250);
 
                 } else {
                     $image = $request->file('photo');
                     $destinationPath = public_path('\adminBoard\uploadedImages\admin\\');
-                    $photo_path = $this->saveResizeImage($image, $destinationPath);
+                    $photo_path = $this->saveResizeImage($image, $destinationPath,250,250);
                 }
             } else {
                 if (!empty($admin->photo)) {

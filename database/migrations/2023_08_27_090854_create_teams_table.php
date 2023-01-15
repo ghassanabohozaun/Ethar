@@ -21,6 +21,7 @@ class CreateTeamsTable extends Migration
             $table->string('name_en')->nullable();
             $table->string('position_ar')->nullable();
             $table->string('position_en')->nullable();
+            $table->enum('type',['founder','director','member']);
             $table->softDeletes();
             $table->timestamps();
         });
