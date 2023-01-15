@@ -3,8 +3,8 @@
 @section('content')
 
     <form class="form" action="{{route('admin.photo.albums.update')}}" method="POST" id="form_photo_album_update">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -14,12 +14,6 @@
                     <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
 
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-                        <li class="breadcrumb-item">
-                            <a href="#" class="text-muted">
-                                {{trans('menu.media')}}
-                            </a>
-                        </li>
-
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.photo.albums')}}" class="text-muted">
                                 {{trans('menu.photo_albums')}}
@@ -84,8 +78,9 @@
                                                                 name="id" id="id" type="hidden"
                                                                 value="{{$photoAlbum->id}}"/>
 
-                                                            <span class="form-text text-danger"
-                                                                  id="title_ar_error"></span>
+                                                            <input type="hidden" name="hidden_photo"
+                                                                   value="hidden_photo">
+
 
                                                         </div>
                                                     </div>
@@ -100,14 +95,8 @@
                                                             <div
                                                                 class="image-input image-input-outline"
                                                                 id="kt_main_photo_album">
-                                                            <!--  style="background-image: url({{--asset(Storage::url(setting()->site_icon))--}})"-->
                                                                 <div class="image-input-wrapper"
-                                                                     @if(empty($photoAlbum->main_photo))
-                                                                     style=""
-                                                                     @else
-                                                                     style=";background-image: url({{asset(Storage::url($photoAlbum->main_photo))}}"
-                                                                    @endif
-                                                                ></div>
+                                                                     style=";background-image: url({{asset('adminBoard/uploadedImages/albums/'.$photoAlbum->main_photo)}}"></div>
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
@@ -135,7 +124,6 @@
                                                     <!--end::Group-->
 
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -152,10 +140,12 @@
                                                                     {{trans('general.ar')}}
                                                                 </option>
 
-                                                                <option value="en" {{$photoAlbum->language == trans('general.en') ? 'selected':''}}>
+                                                                <option
+                                                                    value="en" {{$photoAlbum->language == trans('general.en') ? 'selected':''}}>
                                                                     {{trans('general.en')}}
                                                                 </option>
-                                                                <option value="ar_en" {{$photoAlbum->language == trans('general.ar_en') ? 'selected':''}}>
+                                                                <option
+                                                                    value="ar_en" {{$photoAlbum->language == trans('general.ar_en') ? 'selected':''}}>
                                                                     {{trans('general.ar_en')}}
                                                                 </option>
                                                             </select>
@@ -164,8 +154,6 @@
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
-
-
 
 
                                                     <!--begin::Group-->
@@ -208,7 +196,6 @@
                                                     <!--end::Group-->
 
 
-
                                                 </div>
                                                 <!--begin::body-->
 
@@ -238,8 +225,7 @@
 
         $('#form_photo_album_update').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
-            //////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////
             $('#language_error').text('');
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
@@ -249,19 +235,18 @@
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
             $('#main_photo').css('border-color', '');
-            //////////////////////////////////////////////////////////////////
-
-
+            /////////////////////////////////////////////////////////////
             var data = new FormData(this);
-            var url = $(this).attr('action');
             var type = $(this).attr('method');
+            var url = $(this).attr('action');
+
             $.ajax({
                 url: url,
                 data: data,
-                dataType: 'json',
                 type: type,
-                cache: false,
+                dataType: 'json',
                 contentType: false,
+                cache: false,
                 processData: false,
                 beforeSend: function () {
                     KTApp.blockPage({
@@ -269,32 +254,41 @@
                         state: 'danger',
                         message: "{{trans('general.please_wait')}}",
                     });
-                },//end  beforeSend
+                },//end beforeSend
                 success: function (data) {
                     KTApp.unblockPage();
                     if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        setTimeout(function () {
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'add_photo_button'}
+                        });
+                        $('.add_photo_button').click(function () {
                             window.location.href = "{{route('admin.photo.albums')}}";
-                        })
+                        });
                     }
-                    console.log(data);
-                },//end  success
+                },//end success
 
                 error: function (reject) {
-                    $.notifyClose();
                     var response = $.parseJSON(reject.responseText);
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0]);
-                        $('#' + key).css('border-color', '#F64E60')
+                        $('#' + key).css('border-color', '#F64E60');
+                        $('html, body').animate({scrollTop: 20}, 300);
                     });
 
-                },//end  error
+                },//end error
+
                 complete: function () {
                     KTApp.unblockPage();
                 },//end complete
-            });//end ajax
-        })
+
+            });
+
+        });//end submit
+
     </script>
 
 @endpush

@@ -1133,10 +1133,7 @@
 
     <script type="text/javascript">
         ////////////////////////////////////////////////////
-
         var testimonial_photo = new KTImageInput('kt_testimonial_photo');
-
-
 
         $('#form_testimonials_add').on('submit', function (e) {
             e.preventDefault();
@@ -1221,7 +1218,6 @@
             });
 
         });//end submit
-
 
     </script>
 @endpush

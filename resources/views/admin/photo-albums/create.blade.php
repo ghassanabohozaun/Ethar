@@ -75,7 +75,6 @@
                                                 <!--begin::body-->
                                                 <div class="my-5">
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -113,38 +112,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('photoAlbums.language')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-
-                                                            <select
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                name="language" id="language" type="text">
-
-                                                                <option value="ar">
-                                                                    {{trans('general.ar')}}
-                                                                </option>
-
-                                                                <option value="en">
-                                                                    {{trans('general.en')}}
-                                                                </option>
-                                                                <option value="ar_en">
-                                                                    {{trans('general.ar_en')}}
-                                                                </option>
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="language_error"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -163,7 +130,6 @@
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
-
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
@@ -184,12 +150,8 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
-
-
                                                 </div>
                                                 <!--begin::body-->
-
 
                                             </div>
                                         </div>
@@ -216,8 +178,7 @@
 
         $('#form_photo_album_add').on('submit', function (e) {
             e.preventDefault();
-            $.notifyClose();
-            //////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////
             $('#language_error').text('');
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
@@ -227,18 +188,18 @@
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
             $('#main_photo').css('border-color', '');
-            //////////////////////////////////////////////////////////////////
-
+            /////////////////////////////////////////////////////////////
             var data = new FormData(this);
-            var url = $(this).attr('action');
             var type = $(this).attr('method');
+            var url = $(this).attr('action');
+
             $.ajax({
                 url: url,
                 data: data,
-                dataType: 'json',
                 type: type,
-                cache: false,
+                dataType: 'json',
                 contentType: false,
+                cache: false,
                 processData: false,
                 beforeSend: function () {
                     KTApp.blockPage({
@@ -246,32 +207,42 @@
                         state: 'danger',
                         message: "{{trans('general.please_wait')}}",
                     });
-                },//end  beforeSend
+                },//end beforeSend
                 success: function (data) {
                     KTApp.unblockPage();
                     if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        setTimeout(function (){
-                            window.location.href ="{{route('admin.photo.albums')}}";
-                        })
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'add_photo_button'}
+                        });
+                        $('.add_photo_button').click(function () {
+                            window.location.href = "{{route('admin.photo.albums')}}";
+                        });
                     }
-                    console.log(data);
-                },//end  success
+                },//end success
 
                 error: function (reject) {
-                    $.notifyClose();
                     var response = $.parseJSON(reject.responseText);
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0]);
-                        $('#' + key).css('border-color', '#F64E60')
+                        $('#' + key).css('border-color', '#F64E60');
+                        $('html, body').animate({scrollTop: 20}, 300);
                     });
 
-                },//end  error
+                },//end error
+
                 complete: function () {
                     KTApp.unblockPage();
                 },//end complete
-            });//end ajax
-        })
+
+            });
+
+        });//end submit
+
+
     </script>
 
 @endpush

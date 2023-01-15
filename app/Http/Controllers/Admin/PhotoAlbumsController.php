@@ -8,7 +8,6 @@ use App\Http\Requests\PhotoAlbumsRequest;
 use App\Http\Requests\PhotoAlbumsUpdateRequest;
 use App\Http\Resources\PhotoAlbumResource;
 use App\Models\PhotoAlbum;
-use App\Models\Slider;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -22,7 +21,7 @@ class PhotoAlbumsController extends Controller
     {
         $title = trans('menu.photo_albums');
         $photoAlbums = PhotoAlbum::orderByDesc('created_at')->paginate();
-        return view('admin.photo-albums.index', compact('title','photoAlbums'));
+        return view('admin.photo-albums.index', compact('title', 'photoAlbums'));
     }
 
     // create
@@ -40,7 +39,7 @@ class PhotoAlbumsController extends Controller
         if ($request->hasFile('main_photo')) {
             $image = $request->file('main_photo');
             $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
-            $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = '';
         }
@@ -48,7 +47,7 @@ class PhotoAlbumsController extends Controller
         $lang_en = setting()->site_lang_en;
         PhotoAlbum::create([
             'main_photo' => $photo_path,
-            'language' => $lang_en == 'on' ?  'ar_en' : 'ar',
+            'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
         ]);
@@ -57,8 +56,7 @@ class PhotoAlbumsController extends Controller
 
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// edit
+    // edit
     public function edit($id = null)
     {
         $title = trans('photoAlbums.photo_album_update');
@@ -66,104 +64,95 @@ class PhotoAlbumsController extends Controller
         if (!$photoAlbum) {
             return redirect()->route('admin.not.found');
         }
-        return view('admin.medias.photo-albums.update', compact('title', 'photoAlbum'));
+        return view('admin.photo-albums.update', compact('title', 'photoAlbum'));
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// update
-    public function update(PhotoAlbumsUpdateRequest $request)
+    // update
+    public function update(PhotoAlbumsRequest $request)
     {
 
-        try {
+        $photoAlbum = PhotoAlbum::find($request->id);
+        if (!$photoAlbum) {
+            return redirect()->route('admin.not.found');
+        }
+
+        if ($request->hasFile('main_photo')) {
+            if (!empty($photoAlbum->main_photo)) {
+
+                $image_path =  public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                if (\Illuminate\Support\Facades\File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+
+                $image = $request->file('main_photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+
+            } else {
+                $image_path =  public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+
+                $image = $request->file('main_photo');
+                $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
+                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+            }
+        } else {
+            if (!empty($photoAlbum->main_photo)) {
+                $photo_path = $photoAlbum->main_photo;
+            } else {
+                $photo_path = '';
+            }
+        }
+
+
+        $lang_en = setting()->site_lang_en;
+        $photoAlbum->update([
+            'main_photo' => $photo_path,
+            'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+        ]);
+
+        return $this->returnSuccessMessage(trans('general.update_success_message'));
+
+
+    }
+
+
+    // destroy
+    public function destroy(Request $request)
+    {
+
+        if ($request->ajax()) {
             $photoAlbum = PhotoAlbum::find($request->id);
             if (!$photoAlbum) {
                 return redirect()->route('admin.not.found');
             }
-
-            if ($request->has('main_photo')) {
-                if (!empty($photoAlbum->main_photo)) {
-                    Storage::delete($photoAlbum->main_photo);
-                    $main_photo_path = $request->file('main_photo')->store('photo_albums');
-                } else {
-                    $main_photo_path = $request->file('main_photo')->store('photo_albums');
-                }
-            } else {
-                if (!empty($photoAlbum->main_photo)) {
-                    $main_photo_path = $photoAlbum->main_photo;
-                } else {
-                    $main_photo_path = '';
+            ////////////////////  delete Main Album Photo
+            if (!empty($photoAlbum->main_photo)) {
+                $image_path =  public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
                 }
             }
+//            ////////////////////  delete other Album Photos
+//            $files = File::where('relation_id', $request->id)->get();
+//            foreach ($files as $file) {
+//                Storage::delete($file->full_path_after_upload);
+//                $file->delete();
+//                Storage::deleteDirectory($file->file_path);
+//            }
 
-            if ($request->language == 'ar') {
-
-                $photoAlbum->update([
-                    'language' => $request->language,
-                    'title_ar' => $request->title_ar,
-                    'title_en' => null,
-                    'main_photo' => $main_photo_path,
-                ]);
-
-            } elseif ($request->language == 'en') {
-
-                $photoAlbum->update([
-                    'language' => $request->language,
-                    'title_ar' => null,
-                    'title_en' => $request->title_en,
-                    'main_photo' => $main_photo_path,
-                ]);
-
-            } elseif ($request->language == 'ar_en') {
-                $photoAlbum->update([
-                    'language' => $request->language,
-                    'title_ar' => $request->title_ar,
-                    'title_en' => $request->title_en,
-                    'main_photo' => $main_photo_path,
-                ]);
-            }
-            return $this->returnSuccessMessage(trans('general.update_success_message'));
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), '500');
-
-        }
-
-
-    }
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// destroy
-    public function destroy(Request $request)
-    {
-
-        try {
-            if ($request->ajax()) {
-                $photo_album = PhotoAlbum::find($request->id);
-                if (!$photo_album) {
-                    return redirect()->route('admin.not.found');
-                }
-                ////////////////////  delete Main Album Photo
-                if (!empty($photo_album->main_photo)) {
-                    Storage::delete($photo_album->main_photo);
-                }
-                ////////////////////  delete other Album Photos
-                $files = File::where('relation_id', $request->id)->get();
-                foreach ($files as $file) {
-                    Storage::delete($file->full_path_after_upload);
-                    $file->delete();
-                    Storage::deleteDirectory($file->file_path);
-                }
-
-                $photo_album->delete();
-                return $this->returnSuccessMessage(trans('general.delete_success_message'));
-            }
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), '500');
+            $photoAlbum->delete();
+            return $this->returnSuccessMessage(trans('general.delete_success_message'));
         }
 
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// add Other Album Photos
+
+    // add Other Album Photos
     public function addOtherAlbumPhotos($id = null)
     {
 
@@ -176,8 +165,8 @@ class PhotoAlbumsController extends Controller
         return view('admin.medias.photo-albums.other-album-photos', compact('title', 'photoAlbum'));
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// upload Other Albums Photos function
+
+    // upload Other Albums Photos function
     public function uploadOtherAlbumPhotos(Request $request, $paid)
     {
         if ($request->hasFile('file')) {
@@ -197,8 +186,7 @@ class PhotoAlbumsController extends Controller
     }
 
 
-    ////////////////////////////////////////////////
-    /// delete Other Album Photo function
+    // delete Other Album Photo function
     public function deleteOtherAlbumPhoto(Request $request)
     {
         if ($request->ajax()) {
@@ -210,20 +198,20 @@ class PhotoAlbumsController extends Controller
     }
 
 
-    ////////////////////////////////////////////////////////////////////
-    /// change Status
+    // change Status
     public function changeStatus(Request $request)
     {
         $photoAlbum = PhotoAlbum::find($request->id);
 
-        if ($photoAlbum->status == '1') {
-            $photoAlbum->status = '0';
+        if ($request->switchStatus == 'false') {
+            $photoAlbum->status = null;
             $photoAlbum->save();
         } else {
-            $photoAlbum->status = '1';
+            $photoAlbum->status = 'on';
             $photoAlbum->save();
         }
 
-        return $this->returnSuccessMessage(trans('general.change_status_success_message'));
+        return $this->returnSuccessMessage(__('general.change_status_success_message'));
     }
+
 }

@@ -68,7 +68,8 @@
                                                         <th>{!! __('photoAlbums.title_ar') !!}</th>
                                                         <th>{!! __('photoAlbums.title_en') !!}</th>
                                                         <th>{!! __('photoAlbums.status') !!}</th>
-                                                        <th class="text-center" style="width: 200px;">{!! __('general.actions') !!}</th>
+                                                        <th class="text-center"
+                                                            style="width: 200px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -199,80 +200,75 @@
 @push('js')
 
     <script type="text/javascript">
-        /////////////////////////////////////////////////////////////////////////////////////
-        /// show photo album delete notify
-        $(document).on('click', '.delete_photo_album_btn', function (e) {
+
+        //photo album delete
+        $(document).on('click', '#btn_photo_album_delete', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
-            $('#form_photo_album_delete').find('#photo_album_delete_id').val(id);
 
-            $.notifyClose();
-
-            notify_message = " <i class='fa fa-trash' style='color:white'></i> &nbsp; {{trans('general.ask_delete_record')}}<br /><br />" +
-                "<button type='button' id='btn_photo_album_delete'  class=' btn btn-outline-light btn-sm m-btn m-btn--air m-btn--wide '" +
-                ">{{trans('general.yes')}}</button> &nbsp;" +
-                "<button type='button' id='btn_photo_album_close' class=' btn btn-outline-light btn-sm m-btn m-btn--air m-btn--wide '" +
-                ">{{trans('general.no')}}</button>"
-
-            notifyDelete(notify_message, 'danger')
-
-        });
-
-        /////////////////////////////////////////////////////////////////////////////////////
-        /// close photo album delete notify
-        $('body').on('click', '#btn_photo_album_close', function (e) {
-            e.preventDefault();
-            $.notifyClose();
-            $('#form_photo_album_delete').find('#photo_album_delete_id').val('');
-        })
-
-        /////////////////////////////////////////////////////////////////////////////////////
-        /// delete photo album
-        $('body').on('click', '#btn_photo_album_delete', function (e) {
-            e.preventDefault();
-            $.notifyClose();
-
-            var id = $('#form_photo_album_delete').find('#photo_album_delete_id').val();
-
-            $.ajax({
-                url: "{{route('admin.photo.albums.destroy')}}",
-                type: 'POST',
-                data: {id, id},
-                dataType: 'json',
-                beforeSend: function () {
-                    KTApp.blockPage({
-                        overlayColor: '#000000',
-                        state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+            Swal.fire({
+                title: "{{trans('general.ask_delete_record')}}",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "{{trans('general.yes')}}",
+                cancelButtonText: "{{trans('general.no')}}",
+                reverseButtons: false,
+                allowOutsideClick: false,
+            }).then(function (result) {
+                if (result.value) {
+                    //////////////////////////////////////
+                    // Delete User
+                    $.ajax({
+                        url: '{!! route('admin.photo.albums.destroy') !!}',
+                        data: {id, id},
+                        type: 'post',
+                        dataType: 'json',
+                        success: function (data) {
+                            console.log(data);
+                            if (data.status == true) {
+                                Swal.fire({
+                                    title: "{!! trans('general.deleted') !!}",
+                                    text: data.msg,
+                                    icon: "success",
+                                    allowOutsideClick: false,
+                                    customClass: {confirmButton: 'delete_album_button'}
+                                });
+                                $('.delete_album_button').click(function () {
+                                    $('#myTable').load(location.href + (' #myTable'));
+                                });
+                            }
+                        },//end success
                     });
-                },
-                success: function (data) {
-                    KTApp.unblockPage();
-                    if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        $('#form_photo_album_delete').find('#photo_album_delete_id').val('');
-                        updateDataTable();
-                    }
-                },//end  success
-                complete: function () {
-                    KTApp.unblockPage();
-                },//end complete
 
-            })
+                } else if (result.dismiss === "cancel") {
+                    Swal.fire({
+                        title: "{!! trans('general.cancelled') !!}",
+                        text: "{!! trans('general.cancelled_message') !!}",
+                        icon: "error",
+                        allowOutsideClick: false,
+                        customClass: {confirmButton: 'cancel_delete_album_button'}
+                    })
+                }
+            });
 
         })
 
-        /////////////////////////////////////////////////////////////////////////////////////
-        // change photo album status
-        $('body').on('click', '.change_status', function (e) {
-            e.preventDefault();
-            $.notifyClose();
 
+        // switch english language
+        var switchStatus = false;
+        $('body').on('change', '.change_status', function (e) {
+            e.preventDefault();
             var id = $(this).data('id');
+
+            if ($(this).is(':checked')) {
+                switchStatus = $(this).is(':checked');
+            } else {
+                switchStatus = $(this).is(':checked');
+            }
 
             $.ajax({
                 url: "{{route('admin.photo.albums.change.status')}}",
-                data: {id: id},
+                data: {switchStatus: switchStatus, id: id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
@@ -281,20 +277,25 @@
                         state: 'danger',
                         message: "{{trans('general.please_wait')}}",
                     });
-                },
+                },//end beforeSend
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
                     if (data.status == true) {
-                        notifySuccessOrError(data.msg, 'success');
-                        updateDataTable();
+                        Swal.fire({
+                            title: data.msg,
+                            text: "",
+                            icon: "success",
+                            allowOutsideClick: false,
+                            customClass: {confirmButton: 'switch_status_toggle'}
+                        });
+                        $('.switch_status_toggle').click(function () {
+                        });
                     }
                 },//end success
-
             })
-
-
         });
+
 
     </script>
 @endpush

@@ -29,13 +29,14 @@ class PhotoAlbumsRequest extends FormRequest
                 'language' => 'required|in:ar,ar_en',
                 'title_ar' => 'required',
                 'title_en' => 'required',
-                'main_photo' => 'required|image|mimes:jpeg,png,jpg|max:1024',
+                'main_photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
             ];
         } else {
             return [
                 'language' => 'required|in:ar,ar_en',
                 'title_ar' => 'required',
-                'main_photo' => 'required|image|mimes:jpeg,png,jpg|max:1024',
+                'main_photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+
             ];
         }
 
