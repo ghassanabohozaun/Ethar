@@ -8,6 +8,7 @@ use App\Http\Requests\PhotoAlbumsRequest;
 use App\Http\Requests\PhotoAlbumsUpdateRequest;
 use App\Http\Resources\PhotoAlbumResource;
 use App\Models\PhotoAlbum;
+use App\Models\Slider;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -16,8 +17,7 @@ class PhotoAlbumsController extends Controller
 {
     use GeneralTrait;
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// index
+    // index
     public function index()
     {
         $title = trans('menu.photo_albums');
@@ -25,59 +25,35 @@ class PhotoAlbumsController extends Controller
         return view('admin.photo-albums.index', compact('title','photoAlbums'));
     }
 
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// create
+    // create
     public function create()
     {
         $title = trans('menu.add_new_photo_album');
-        return view('admin.medias.photo-albums.create', compact('title'));
+        return view('admin.photo-albums.create', compact('title'));
     }
 
-    /////////////////////////////////////////////////////////////////////////////////////////
-    /// store
+    // store
     public function store(PhotoAlbumsRequest $request)
     {
 
-        try {
-            if ($request->has('main_photo')) {
-                $main_photo_path = $request->file('main_photo')->store('photo_albums');
-            } else {
-                $main_photo_path = '';
-            }
-
-            if ($request->language == 'ar') {
-
-                PhotoAlbum::create([
-                    'language' => $request->language,
-                    'title_ar' => $request->title_ar,
-                    'title_en' => null,
-                    'main_photo' => $main_photo_path,
-                ]);
-
-            } elseif ($request->language == 'en') {
-
-                PhotoAlbum::create([
-                    'language' => $request->language,
-                    'title_ar' => null,
-                    'title_en' => $request->title_en,
-                    'main_photo' => $main_photo_path,
-                ]);
-
-            } elseif ($request->language == 'ar_en') {
-                PhotoAlbum::create([
-                    'language' => $request->language,
-                    'title_ar' => $request->title_ar,
-                    'title_en' => $request->title_en,
-                    'main_photo' => $main_photo_path,
-                ]);
-            }
-            return $this->returnSuccessMessage(trans('general.add_success_message'));
-
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), '500');
+        // save image
+        if ($request->hasFile('main_photo')) {
+            $image = $request->file('main_photo');
+            $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
+            $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+        } else {
+            $photo_path = '';
         }
 
+        $lang_en = setting()->site_lang_en;
+        PhotoAlbum::create([
+            'main_photo' => $photo_path,
+            'language' => $lang_en == 'on' ?  'ar_en' : 'ar',
+            'title_ar' => $request->title_ar,
+            'title_en' => $lang_en == 'on' ? $request->title_en : null,
+        ]);
+
+        return $this->returnSuccessMessage(__('general.add_success_message'));
 
     }
 

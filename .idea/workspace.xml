@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/PhotoAlbumsRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PhotoAlbumsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PhotoAlbumsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PhotoAlbum.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_15_073340_create_about_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_15_073340_create_about_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_15_073354_create_abouts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_15_073354_create_abouts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_27_090804_create_photo_albums_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_27_090804_create_photo_albums_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,11 +205,11 @@
       <recent name="C:\laragon\www\etharps\app\Models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\app\Http\Requests" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\photo-albums\parts" />
       <recent name="C:\laragon\www\etharps\app\Models" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
       <recent name="C:\laragon\www\etharps\resources\lang\ar" />
-      <recent name="C:\laragon\www\etharps\app\Http\Requests" />
     </key>
   </component>
   <component name="RunManager">
@@ -250,7 +257,7 @@
       <workItem from="1673677689925" duration="2629000" />
       <workItem from="1673684938699" duration="3852000" />
       <workItem from="1673770916920" duration="1134000" />
-      <workItem from="1673773136608" duration="3166000" />
+      <workItem from="1673773136608" duration="4436000" />
     </task>
     <servers />
   </component>

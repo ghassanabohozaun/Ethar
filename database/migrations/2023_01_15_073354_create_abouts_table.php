@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
+            $table->enum('language', ['ar', 'ar_en'])->default('ar');
             $table->string('title_ar')->nullable();
             $table->string('title_en')->nullable();
             $table->text('details_ar')->nullable();

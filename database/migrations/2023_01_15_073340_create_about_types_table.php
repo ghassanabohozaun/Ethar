@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('about_types', function (Blueprint $table) {
             $table->id();
             $table->string('name_en')->nullable();
-            $table->string('name_ar');
+            $table->string('name_ar')->nullable();
             $table->timestamps();
         });
     }

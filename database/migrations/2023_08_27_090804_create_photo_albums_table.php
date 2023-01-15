@@ -15,8 +15,8 @@ class CreatePhotoAlbumsTable extends Migration
     {
         Schema::create('photo_albums', function (Blueprint $table) {
             $table->id();
-            $table->enum('language',['ar','en','ar_en'])->default('en');
-            $table->enum('status', ['0', '1'])->default('0');
+            $table->enum('language', ['ar', 'ar_en'])->default('ar');
+            $table->string('status')->nullable();
             $table->text('title_ar')->nullable();
             $table->text('title_en')->nullable();
             $table->string('main_photo')->nullable();
