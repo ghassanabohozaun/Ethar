@@ -170,7 +170,10 @@ class PhotoAlbumsController extends Controller
         if ($request->hasFile('file')) {
 
             $image = $request->file('file');
-            $destinationPath = public_path('\adminBoard\uploadedImages\albums_photos\\');
+            $destinationPath = public_path('/adminBoard\uploadedImages/albums_photos/'. $paid .'/');
+
+            return response(['status' => true, 'id' =>$destinationPath], 200);
+
             $filePath = $this->saveResizeImage($image, $destinationPath, 500, 500);
 
             $file = new File();
