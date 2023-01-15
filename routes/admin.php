@@ -235,6 +235,7 @@ Route::group([
 
     });
 
+
      /////////////////////////////////////////////////////////////////////////////////////////////
     /// About routes
 
@@ -249,6 +250,24 @@ Route::group([
         Route::post('/force-delete', [AboutController::class, 'forceDelete'])->name('admin.about.force.delete');
         Route::post('/restore', [AboutController::class, 'restore'])->name('admin.about.restore');
         Route::post('/change-status', [AboutController::class, 'changeStatus'])->name('admin.about.change.status');
+    });
+
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// Photo Albums routes
+    Route::group(['prefix' => 'photo-albums' ,'middleware' => 'can:photos'], function () {
+        Route::get('/', 'PhotoAlbumsController@index')->name('admin.photo.albums');
+        Route::get('get-photo-albums', 'PhotoAlbumsController@getPhotoAlbums')->name('get.admin.photo.albums');
+        Route::get('/create', 'PhotoAlbumsController@create')->name('admin.photo.albums.create');
+        Route::post('/store', 'PhotoAlbumsController@store')->name('admin.photo.albums.store');
+        Route::post('/destroy', 'PhotoAlbumsController@destroy')->name('admin.photo.albums.destroy');
+        route::get('/edit/{id?}', 'PhotoAlbumsController@edit')->name('admin.photo.albums.edit');
+        route::post('/update', 'PhotoAlbumsController@update')->name('admin.photo.albums.update');
+        Route::get('/add-other-album-photos/{id?}', 'PhotoAlbumsController@addOtherAlbumPhotos')->name('admin.add.other.album.photos');
+        Route::post('/upload/other/album/photos/{paid}', 'PhotoAlbumsController@uploadOtherAlbumPhotos')->name('admin.upload.other.album.photos');
+        Route::post('/delete/other/album/photo', 'PhotoAlbumsController@deleteOtherAlbumPhoto')->name('admin.delete.other.album.photo');
+        Route::post('/change-status', 'PhotoAlbumsController@changeStatus')->name('admin.photo.albums.change.status');
     });
 
 
