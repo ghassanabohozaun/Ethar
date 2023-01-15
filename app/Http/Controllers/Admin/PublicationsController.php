@@ -13,19 +13,22 @@ class PublicationsController extends Controller
 {
     use GeneralTrait;
 
+    //index
     public function index()
     {
-        $publications = Publications::orderByDesc('created_at')->paginate(15);
+        $publications = Publications::withoutTrashed()->orderByDesc('created_at')->paginate(15);
         $title = __('menu.publications');
         return view('admin.publications.index', compact('publications', 'title'));
     }
 
+    // create
     public function create()
     {
         $title = __('menu.add_new_publications');
         return view('admin.publications.create');
     }
 
+    // store
     public function store(PublicationsRequest $request)
     {
 
@@ -64,12 +67,14 @@ class PublicationsController extends Controller
         return $this->returnSuccessMessage(__('general.add_success_message'));
     }
 
+    // edit
     public function edit($id)
     {
         $publication = Publications::findOrFail($id);
         return view('admin.publications.update', compact('publication'));
     }
 
+    // update
     public function update(PublicationsRequest $request)
     {
         // return $request->all();
@@ -124,6 +129,7 @@ class PublicationsController extends Controller
         return $this->returnSuccessMessage(__('general.update_success_message'));
     }
 
+    // trashed
     public function trashed()
     {
         $title = __('menu.trashed_articles');
@@ -132,8 +138,7 @@ class PublicationsController extends Controller
     }
 
 
-    ///////////////////////////////////////////////
-    /// destroy
+    // destroy
     public function destroy(Request $request)
     {
         try {
@@ -150,8 +155,7 @@ class PublicationsController extends Controller
         }//end catch
     }
 
-    /////////////////////////////////////////
-    ///  restore
+    //  restore
     public function restore(Request $request)
     {
         try {
@@ -168,8 +172,7 @@ class PublicationsController extends Controller
         }//end catch
     }
 
-    /////////////////////////////////////////
-    ///  force delete
+    //  force delete
     public function forceDelete(Request $request)
     {
         try {
@@ -207,6 +210,7 @@ class PublicationsController extends Controller
     }
 
 
+    // change status
     public function changeStatus(Request $request)
     {
 

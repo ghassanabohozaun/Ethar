@@ -13,8 +13,14 @@
                 <!--begin::Actions-->
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
+                        <a href="{{route('admin.teams')}}" class="text-muted">
                             {{trans('menu.teams')}}
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="#" class="text-muted">
+                            {{trans('menu.trashed_teams')}}
                         </a>
                     </li>
 
@@ -31,13 +37,6 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-
-                <a href="{!! route('admin.team.member.trashed') !!}"
-                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">
-                    <i class="fa fa-trash"></i>
-                </a>
-                &nbsp;
-
                 <a href="{{route('admin.team.member.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
@@ -76,7 +75,6 @@
                                                         <th>{!! __('teams.name_en') !!}</th>
                                                         <th>{!! __('teams.position_ar') !!}</th>
                                                         <th>{!! __('teams.position_en') !!}</th>
-                                                        <th>{!! __('teams.status') !!}</th>
                                                         <th  class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
@@ -90,17 +88,23 @@
                                                             <td>{{ $team->position_ar }}</td>
                                                             <td>{{ $team->position_en }}</td>
                                                             <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           {{$team->status == 'on' ? 'checked':''}}  data-id="{{$team->id}}"
-                                                                           class="change_status">
-                                                                </div>
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_team_member_btn"
+                                                                   data-id="{{$team->id}}"
+                                                                   title="{{__('general.restore')}}">
+                                                                    <i class="fa fa-trash-restore fa-1x"></i>
+                                                                </a>
+
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_team_member_btn"
+                                                                   data-id="{{$team->id}}"
+                                                                   title="{{__('general.force_delete')}}">
+                                                                    <i class="fa fa-trash-alt fa-1x"></i>
+                                                                </a>
                                                             </td>
-                                                            <td>@include('admin.teams.parts.options')</td>
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="8" class="text-center">
+                                                            <td colspan="7" class="text-center">
                                                                 {!! __('teams.no_team_members_found') !!}
                                                             </td>
                                                         </tr>
@@ -108,7 +112,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="8">
+                                                        <td colspan="7">
                                                             <div class="float-right">
                                                                 {!! $teams->appends(request()->all())->links() !!}
                                                             </div>
@@ -147,18 +151,22 @@
 @endsection
 @push('js')
 
+
+
+
     <script type="text/javascript">
-        //delete team member
-        $(document).on('click', '.delete_team_member_btn', function (e) {
+        ///////////////////////////////////////////////////
+        /// delete team member
+        $(document).on('click', '.force_delete_team_member_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_permanent_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -166,7 +174,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.destroy.team.member') !!}',
+                        url: '{!! route('admin.team.member.force.delete') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -174,14 +182,14 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
-                                    text: data.msg,
+                                    title: "{!! __('general.deleted') !!}",
+                                    text: "{!! __('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
                                     customClass: {confirmButton: 'delete_team_member_button'}
                                 });
                                 $('.delete_team_member_button').click(function () {
-                                    $('#myTable').load(location.href+(' #myTable'));
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
                         },//end success
@@ -189,42 +197,35 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_team_member_button'}
                     })
                 }
             });
-
         })
 
 
-        // switch english language
-        var switchStatus = false;
-        $('body').on('change', '.change_status', function (e) {
+        ////////////////////////////////////////////////////
+        // restore team member
+        $(document).on('click', '.restore_team_member_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
-            if ($(this).is(':checked')) {
-                switchStatus = $(this).is(':checked');
-            } else {
-                switchStatus = $(this).is(':checked');
-            }
-
             $.ajax({
-                url: "{{route('admin.team.member.change.status')}}",
-                data: {switchStatus: switchStatus, id: id},
+                url: "{{route('admin.team.member.restore')}}",
+                data: {id, id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
-                },//end beforeSend
+                },
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
@@ -234,14 +235,16 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'switch_status_toggle'}
+                            customClass: {confirmButton: 'restore_team_member_button'}
                         });
-                        $('.switch_status_toggle').click(function () {
+                        $('.restore_team_member_button').click(function () {
+                            $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },//end success
             })
-        });
+        })
+
 
     </script>
 @endpush

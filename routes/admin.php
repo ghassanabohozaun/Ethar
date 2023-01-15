@@ -243,8 +243,12 @@ Route::group([
         Route::post('store', 'TeamController@store')->name('admin.team.member.store');
         route::get('/edit/{id?}', 'TeamController@edit')->name('admin.team.member.edit');
         route::post('/update', 'TeamController@update')->name('admin.team.member.update');
-        Route::post('destroy', 'TeamController@destroy')->name('admin.destroy.team.member');
+        Route::get('/trashed', 'TeamController@trashed')->name('admin.team.member.trashed');
+        Route::post('/destroy', 'TeamController@destroy')->name('admin.destroy.team.member');
+        Route::post('/force-delete', 'TeamController@forceDelete')->name('admin.team.member.force.delete');
+        Route::post('/restore', 'TeamController@restore')->name('admin.team.member.restore');
         Route::post('/change-status', 'TeamController@changeStatus')->name('admin.team.member.change.status');
+
 
     });
 

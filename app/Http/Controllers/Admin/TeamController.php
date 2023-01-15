@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TeamRequest;
+use App\Models\Publications;
 use App\Models\Team;
 use App\Traits\GeneralTrait;
 use File;
@@ -18,7 +19,7 @@ class TeamController extends Controller
     public function index()
     {
         $title = trans('menu.teams');
-        $teams = Team::orderByDesc('created_at')->paginate();
+        $teams = Team::withoutTrashed()->orderByDesc('created_at')->paginate();
         return view('admin.teams.index', compact('title', 'teams'));
     }
 
@@ -123,26 +124,67 @@ class TeamController extends Controller
     }
 
 
-    //  destroy teams
+    // trashed
+    public function trashed()
+    {
+        $title = __('menu.trashed_teams');
+        $teams = Team::onlyTrashed()->orderByDesc('created_at')->paginate(15);
+        return view('admin.teams.trashed', compact('title', 'teams'));
+    }
+
+
+    // destroy
     public function destroy(Request $request)
     {
-
         if ($request->ajax()) {
             $team = Team::find($request->id);
             if (!$team) {
                 return redirect()->route('admin.not.found');
             }
-            if (!empty($team->photo)) {
-                $image_path = public_path('\adminBoard\uploadedImages\teams\\') . $team->photo;
-                if (File::exists($image_path)) {
-                    File::delete($image_path);
-                }
-            }
             $team->delete();
-            return $this->returnSuccessMessage(trans('general.delete_success_message'));
+            return $this->returnSuccessMessage(__('general.move_to_trash'));
+        }
+    }
+
+    //  restore
+    public function restore(Request $request)
+    {
+
+        if ($request->ajax()) {
+            $team = Team::onlyTrashed()->find($request->id);
+            if (!$team) {
+                return redirect()->route('admin.not.found');
+            }
+            $team->restore();
+            return $this->returnSuccessMessage(__('general.restore_success_message'));
         }
 
     }
+
+    //  force delete
+    public function forceDelete(Request $request)
+    {
+
+            if ($request->ajax()) {
+
+                $team = Team::onlyTrashed()->find($request->id);
+
+                if (!$team) {
+                    return redirect()->route('admin.not.found');
+                }
+
+                if (!empty($team->photo)) {
+                    $image_path = public_path('\adminBoard\uploadedImages\teams\\') . $team->photo;
+                    if (File::exists($image_path)) {
+                        File::delete($image_path);
+                    }
+                }
+                $team->forceDelete();
+                return $this->returnSuccessMessage(__('general.delete_success_message'));
+            }
+
+    }
+
 
 
     // change Status
