@@ -16,5 +16,6 @@ return [
     'photos'=>'Photo Albums Management',
     'yearly-reports'=>'Publications Management',
     'abouts' => 'Abouts Management',
-
+    'reports' => 'Reports Management',
+    'teams' => 'Team Members Management',
 ];

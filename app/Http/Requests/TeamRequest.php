@@ -23,23 +23,25 @@ class TeamRequest extends FormRequest
      */
     public function rules()
     {
-            return [
-                'team_image' => 'required|image|mimes:jpg,jpeg,png|max:1024',
-                'name_ar' => 'required',
-                'name_en' => 'required',
-                'position_ar' => 'required',
-                'position_en' => 'required',
-            ];
+
+        return [
+            'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+            'name_ar' => 'required',
+            'name_en' => 'required',
+            'position_ar' => 'required',
+            'position_en' => 'required',
+        ];
+
     }
 
     public function messages()
     {
         return [
-            'required' => trans('landing.required'),
-            'image' => trans('landing.image'),
-            'mimes' => trans('landing.mimes'),
-            'max' => trans('landing.image_max'),
-            'photo.required' => trans('landing.photo_required'),
+            'required' => trans('team.required'),
+            'image' => trans('team.image'),
+            'mimes' => trans('team.mimes'),
+            'max' => trans('team.image_max'),
+            'photo.required' => trans('team.photo_required'),
         ];
     }
 }

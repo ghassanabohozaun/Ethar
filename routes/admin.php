@@ -1,11 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\ReportController;
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\PublicationsController;
-use App\Http\Controllers\Admin\AboutController;
-
+use App\Http\Controllers\Admin\ReportController;
+use Illuminate\Support\Facades\Route;
 
 
 /*
@@ -31,7 +30,6 @@ Route::group([
     Route::get('/', 'DashboardController@index')->name('admin.dashboard')->middleware('can:dashboard');
     Route::get('/dashboard', 'DashboardController@index')->name('admin.dashboard')->middleware('can:dashboard');
 
-
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// settings
     Route::get('settings', 'DashboardController@getSettings')
@@ -43,20 +41,6 @@ Route::group([
     Route::post('switch-frontend-lang', 'DashboardController@switchFrontendLang')
         ->name('switch.frontend.lang');
 
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Notifications Routes
-//    Route::group(['prefix' => 'notifications', 'middleware' => 'can:notifications'], function () {
-//        Route::get('/', 'NotificationsController@index')->name('admin.notifications');
-//        Route::get('/get-notifications', 'NotificationsController@getNotificationsResource')
-//            ->name('get.admin.notifications.resource');
-//
-//        Route::get('/get/admin/notifications', 'NotificationsController@getNotifications')
-//            ->name('admin.get.notifications');
-//        Route::get('/get/one/admin/notification', 'NotificationsController@getOneNotification')
-//            ->name('admin.get.one.notification');
-//        Route::post('/admin/notification/make/read', 'NotificationsController@makeRead')
-//            ->name('admin.notification.make.read');
-//    });
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// Revenues Routes
     Route::group(['prefix' => 'Revenues', 'middleware' => 'can:revenues'], function () {
@@ -82,17 +66,8 @@ Route::group([
 
         });
 
-
 //        Route::get('/static-strings', 'LandingPageController@staticStrings')->name('admin.static.strings');
 //        Route::post('/static-strings', 'LandingPageController@storeStaticStrings')->name('admin.static.strings');
-
-//        Route::group(['prefix' => 'team'], function () {
-//            Route::get('/', 'LandingPageController@team')->name('admin.team');
-//            Route::get('/get-team', 'LandingPageController@getTeam')->name('get.admin.team');
-//            Route::post('store', 'LandingPageController@storeTeam')->name('admin.store.team');
-//            Route::post('destroy', 'LandingPageController@destroyTeam')->name('admin.destroy.team');
-//        });
-
 
     });
 
@@ -112,7 +87,6 @@ Route::group([
         Route::post('/destroy', 'SupportCenterController@destroy')->name('admin.support.center.message.destroy');
         Route::post('/change-status', 'SupportCenterController@changeStatus')->name('admin.support.center.change.status');
         Route::get('/get-one-message', 'SupportCenterController@getOneMessage')->name('admin.support.center.get.one.message');
-
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -202,9 +176,8 @@ Route::group([
         Route::post('/change-status', [PublicationsController::class, 'changeStatus'])->name('admin.publication.change.status');
     });
 
-     /////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////
     /// report routes
-
     Route::group(['prefix' => 'report', 'middleware' => 'can:yearly-reports'], function () {
         Route::get('/', [ReportController::class, 'index'])->name('admin.report.index');
         Route::get('/create', [ReportController::class, 'create'])->name('admin.report.create');
@@ -218,9 +191,8 @@ Route::group([
         Route::post('/change-status', [ReportController::class, 'changeStatus'])->name('admin.report.change.status');
     });
 
-
     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Videos routes
+    /// videos routes
     Route::group(['prefix' => 'videos', 'middleware' => 'can:videos'], function () {
         Route::get('/', 'VideosController@index')->name('admin.videos');
         Route::get('/get-videos', 'VideosController@getVideos')->name('get.admin.videos');
@@ -231,14 +203,10 @@ Route::group([
         Route::post('update', 'VideosController@update')->name('admin.video.update');
         Route::post('/change-status', 'VideosController@changeStatus')->name('admin.video.change.status');
         Route::get('/view.video', 'VideosController@viewVideo')->name('admin.view.video');
-
-
     });
 
-
-     /////////////////////////////////////////////////////////////////////////////////////////////
-    /// About routes
-
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    /// about routes
     Route::group(['prefix' => 'about', 'middleware' => 'can:abouts'], function () {
         Route::get('/', [AboutController::class, 'index'])->name('admin.about.index');
         Route::get('/create', [AboutController::class, 'create'])->name('admin.about.create');
@@ -252,11 +220,9 @@ Route::group([
         Route::post('/change-status', [AboutController::class, 'changeStatus'])->name('admin.about.change.status');
     });
 
-
-
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// Photo Albums routes
-    Route::group(['prefix' => 'photo-albums' ,'middleware' => 'can:photos'], function () {
+    /// photo albums routes
+    Route::group(['prefix' => 'photo-albums', 'middleware' => 'can:photos'], function () {
         Route::get('/', 'PhotoAlbumsController@index')->name('admin.photo.albums');
         Route::get('get-photo-albums', 'PhotoAlbumsController@getPhotoAlbums')->name('get.admin.photo.albums');
         Route::get('/create', 'PhotoAlbumsController@create')->name('admin.photo.albums.create');
@@ -268,6 +234,14 @@ Route::group([
         Route::post('/upload/other/album/photos/{paid}', 'PhotoAlbumsController@uploadOtherAlbumPhotos')->name('admin.upload.other.album.photos');
         Route::post('/delete/other/album/photo', 'PhotoAlbumsController@deleteOtherAlbumPhoto')->name('admin.delete.other.album.photo');
         Route::post('/change-status', 'PhotoAlbumsController@changeStatus')->name('admin.photo.albums.change.status');
+    });
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// team routes
+    Route::group(['prefix' => 'teams', 'middleware' => 'can:teams'], function () {
+        Route::get('/', 'TeamController@team')->name('admin.teams');
+        Route::post('store', 'TeamController@store')->name('admin.store.team.member');
+        Route::post('destroy', 'TeamController@destroy')->name('admin.destroy.team.member');
     });
 
 

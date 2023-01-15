@@ -46,7 +46,7 @@ return [
 
     'publications' => 'Publications',
     'trashed_publications' => 'Trashed Publications',
-    'add_new_publication' =>  'Add New Publication',
+    'add_new_publication' => 'Add New Publication',
 
 
     'videos' => 'Videos',
@@ -55,12 +55,17 @@ return [
 
     'abouts' => 'Abouts',
     'trashed_abouts' => 'Trashed Abouts',
-    'add_new_about' =>  'Add New About',
+    'add_new_about' => 'Add New About',
 
 
     'photo_albums' => 'Photo Albums',
     'trashed_photo_albums' => 'Trashed Photo Albums',
     'add_new_photo_album' => 'Add New Photo Album',
+
+
+    'teams' => 'Teams',
+    'trashed_teams' => 'Trashed Teams',
+    'add_new_teams' => 'Add New Team Member',
 
 ];
 

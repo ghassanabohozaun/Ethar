@@ -19,12 +19,12 @@ return [
     'index' => 'رئيسية الموقع',
     'footer_images' => 'صور الفوتر',
     'team' => 'الفريق',
-    'static_strings'=>'النصوص الثابتة',
-    'sliders'=>'السلايدر',
-    'add_new_slider'=>'إضافة سلايدر جديد',
-    'why_choose_us'=>'لماذا اخترتنا',
+    'static_strings' => 'النصوص الثابتة',
+    'sliders' => 'السلايدر',
+    'add_new_slider' => 'إضافة سلايدر جديد',
+    'why_choose_us' => 'لماذا اخترتنا',
     'notifications' => 'الإشعارات',
-    'registration_policy'=>'سياسة التسجيل',
+    'registration_policy' => 'سياسة التسجيل',
     'articles' => 'المقالات',
     'trashed_articles' => 'المقالات المحذوفة',
     'add_new_article' => 'اضافة مقال جديد',
@@ -55,10 +55,12 @@ return [
     'add_new_about' => 'إضافة حول الموقع جديد',
 
 
-
     'photo_albums' => 'البومات  الصور',
     'trashed_photo_albums' => 'البومات الصور المحذوفة',
     'add_new_photo_album' => 'إضافة البوم الصور',
 
+    'teams' => 'اعضاء الفريق',
+    'trashed_teams' => ' اعضاء الفريق المحذوفة',
+    'add_new_teams' => 'إضافة عضو للفريق',
 
 ];

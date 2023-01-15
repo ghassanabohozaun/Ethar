@@ -3,190 +3,70 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AboutsRequest;
-use App\Models\About;
-use App\Models\AboutType;
+use App\Models\Team;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 
-class AboutController extends Controller
+class TeamController extends Controller
 {
     use GeneralTrait;
 
-    public function index()
+
+    // teams Index
+    public function team()
     {
-        $abouts = About::paginate(15);
-        $title = __('menu.abouts');
-        return view('admin.abouts.index', compact('abouts', 'title'));
+        $title = trans('menu.team');
+        $teams = Team::orderByDesc('created_at')->get();
+        return view('admin.teams.index', compact('title','teams'));
     }
 
-    public function create()
-    {
-        $about_types = AboutType::get();
-        $title = __('menu.add_new_about');
-        return view('admin.abouts.create', compact('about_types' ,'title'));
-    }
 
-    public function store(AboutsRequest $request)
+    // store team
+    public function store(TeamRequest $request)
     {
 
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('adminBoard/uploadedImages/abouts');
+            $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = '';
         }
-        $about = About::where('about_type_id' ,$request->type_id )->first();
-        if( $about){
-           return  $this->returnError('يوجد بالفعل بيانات خاصة في هذا النواع ', 500);
-        }
 
-        $lang_en = setting()->site_lang_en;
-        About::create([
+
+        Team::create([
             'photo' => $photo_path,
-            'details_ar' => $request->details_ar,
-            'details_en' => $lang_en == 'on' ? $request->details_en : null,
-            'title_ar' => $request->title_ar,
-            'title_en' => $lang_en == 'on' ? $request->title_en : null,
-            'about_type_id' => $request->type_id,
-            'status' =>'on',
+            'name_ar' => $request->name_ar,
+            'name_en' => $request->name_en,
+            'position_ar' => $request->position_ar,
+            'position_en' => $request->position_en,
         ]);
 
-        return $this->returnSuccessMessage(__('general.add_success_message'));
+        return $this->returnSuccessMessage(trans('general.add_success_message'));
+
+
     }
 
-    public function edit($id)
-    {
-        $about = About::findOrFail($id);
-        $about_types = AboutType::get();
-        return view('admin.abouts.update', compact('about' , 'about_types'));
-    }
-
-    public function update(AboutsRequest $request)
-    {
-        // return $request->all();
-        $about = About::findORFail($request->id);
-
-        // save image
-        if ($request->hasFile('photo')) {
-            $image = $request->file('photo');
-            $destinationPath = public_path('adminBoard/uploadedImages/abouts');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
-
-            $image_path = public_path("\adminBoard\uploadedImages\abouts\\") . $project->photo;
-
-            if (File::exists($image_path))
-            {
-              File::delete($image_path);
-            }
-        } else {
-            $photo_path = $about->photo;
-        }
-
-
-        $lang_en = setting()->site_lang_en;
-        $about->update([
-            'photo' => $photo_path,
-            'details_ar' => $request->details_ar,
-            'details_en' => $lang_en == 'on' ? $request->details_en : null,
-            'title_ar' => $request->title_ar,
-            'title_en' => $lang_en == 'on' ? $request->title_en : null,
-            'about_type_id' => $request->type_id,
-        ]);
-        return $this->returnSuccessMessage(__('general.update_success_message'));
-    }
-
-    public function trashed()
-    {
-        $title = __('menu.trashed_articles');
-        $abouts = About::onlyTrashed()->orderByDesc('created_at')->paginate(15);
-        return view('admin.abouts.trashed', compact('title', 'abouts'));
-    }
-
-
-    ///////////////////////////////////////////////
-    /// destroy
+    //  destroy teams
     public function destroy(Request $request)
     {
         try {
             if ($request->ajax()) {
-                $about = About::find($request->id);
-                if (!$about) {
+                $team = Team::find($request->id);
+                if (!$team) {
                     return redirect()->route('admin.not.found');
                 }
-                $about->delete();
-                return $this->returnSuccessMessage(__('general.move_to_trash'));
+                if (!empty($team->team_image)) {
+                    Storage::delete($team->team_image);
+                }
+                $team->delete();
+                return $this->returnSuccessMessage(trans('general.delete_success_message'));
             }
         } catch (\Exception $exception) {
-            return $this->returnError(__('general.try_catch_error_message'), 500);
+            return $this->returnError(trans('general.try_catch_error_message'), 500);
         }//end catch
     }
 
-    /////////////////////////////////////////
-    ///  restore
-    public function restore(Request $request)
-    {
-        try {
-            if ($request->ajax()) {
-                $about = About::onlyTrashed()->find($request->id);
-                if (!$about) {
-                    return redirect()->route('admin.not.found');
-                }
-                $about->restore();
-                return $this->returnSuccessMessage(__('general.restore_success_message'));
-            }
-        } catch (\Exception $exception) {
-            return $this->returnError(__('general.try_catch_error_message'), 500);
-        }//end catch
-    }
 
-    /////////////////////////////////////////
-    ///  force delete
-    public function forceDelete(Request $request)
-    {
-        try {
-            if ($request->ajax()) {
-
-                $about = About::onlyTrashed()->find($request->id);
-
-                if (!$about) {
-                    return redirect()->route('admin.not.found');
-                }
-
-                if (!empty($about->photo)) {
-                    $image_path = public_path("\adminBoard\uploadedImages\abouts\\") . $about->photo;
-                    if (File::exists($image_path)) {
-                        File::delete($image_path);
-                    }
-                }
-
-                $about->forceDelete();
-
-                return $this->returnSuccessMessage(__('general.delete_success_message'));
-            }
-        } catch (\Exception $exception) {
-            return $this->returnError(__('general.try_catch_error_message'), 500);
-        }//end catch
-
-    }
-
-
-    public function changeStatus(Request $request)
-    {
-
-        $about = About::find($request->id);
-
-        if ($request->switchStatus == 'false') {
-            $about->status = null;
-            $about->save();
-        } else {
-            $about->status = 'on';
-            $about->save();
-        }
-
-        return $this->returnSuccessMessage(__('general.change_status_success_message'));
-    }
 }

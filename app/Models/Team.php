@@ -8,11 +8,11 @@ class Team extends Model
 {
     protected $table = 'teams';
     protected $fillable = [
-        'team_image',
         'name_ar',
         'name_en',
         'position_ar',
         'position_en',
+        'photo',
     ];
     protected $hidden = ['updated_at'];
 }
