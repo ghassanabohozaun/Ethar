@@ -90,7 +90,6 @@
                                                                    title="{{__('general.restore')}}">
                                                                     <i class="fa fa-trash-restore fa-1x"></i>
                                                                 </a>
-
                                                                 <a href="#"
                                                                    class="btn btn-hover-danger btn-icon btn-pill force_delete_article_btn"
                                                                    data-id="{{$report->id}}"

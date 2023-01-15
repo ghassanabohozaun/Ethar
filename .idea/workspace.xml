@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/reports.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/reports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/1673686675639239506.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/167368669575893684.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/videos/1673679524.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/trashed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/trashed.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/videos/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/videos/update.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +253,7 @@
       <workItem from="1673533458125" duration="7702000" />
       <workItem from="1673676630416" duration="162000" />
       <workItem from="1673677689925" duration="2629000" />
-      <workItem from="1673684938699" duration="1545000" />
+      <workItem from="1673684938699" duration="2848000" />
     </task>
     <servers />
   </component>

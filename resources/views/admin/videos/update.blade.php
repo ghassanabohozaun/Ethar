@@ -268,13 +268,11 @@
             //////////////////////////////////////////////////////////////
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
-            $('#language').css('border-color', '');
             $('#link').css('border-color', '');
             $('#photo').css('border-color', '');
 
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
-            $('#language_error').text('');
             $('#link_error').text('');
             $('#photo_error').text('');
             /////////////////////////////////////////////////////////////
