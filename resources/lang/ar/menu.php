@@ -49,5 +49,8 @@ return [
     'trashed_videos' => 'الفيديوهات المحذوفة',
     'add_new_video' => 'إضافة فيديو جديد',
 
+    'photo_albums' => 'البومات  الصور',
+    'trashed_photo_albums' => 'البومات الصور المحذوفة',
+    'add_new_photo_album' => 'إضافة البوم الصور',
 
 ];

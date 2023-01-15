@@ -39,18 +39,23 @@ return [
     'testimonials' => 'Testimonials',
     'trashed_testimonials' => 'Trashed Testimonials',
     'add_new_testimonial' => 'Add New Testimonial',
-    'publications' => 'Publications',
 
     'reports' => 'Reports',
     'trashed_reports' => 'Trashed Reports',
-    'add_new_report' =>  'Add New Report',
+    'add_new_report' => 'Add New Report',
 
+    'publications' => 'Publications',
     'trashed_publications' => 'Trashed Publications',
-    'add_new_publication' =>  'Add New Publication',
+    'add_new_publication' => 'Add New Publication',
+
     'videos' => 'Videos',
     'trashed_videos' => 'Trashed Videos',
-    'add_new_video' =>  'Add New Video',
+    'add_new_video' => 'Add New Video',
 
+
+    'photo_albums' => 'Photo Albums',
+    'trashed_photo_albums' => 'Trashed Photo Albums',
+    'add_new_photo_album' => 'Add New Photo Album',
 
 ];
 
