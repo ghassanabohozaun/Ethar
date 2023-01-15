@@ -8,9 +8,9 @@ use App\Http\Requests\PhotoAlbumsUpdateRequest;
 use App\Http\Resources\PhotoAlbumResource;
 use App\Models\PhotoAlbum;
 use App\Traits\GeneralTrait;
+//use File;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use File;
+use App\File;
 
 class PhotoAlbumsController extends Controller
 {
@@ -79,24 +79,24 @@ class PhotoAlbumsController extends Controller
         if ($request->hasFile('main_photo')) {
             if (!empty($photoAlbum->main_photo)) {
 
-                $image_path =  public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
                 if (\Illuminate\Support\Facades\File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('main_photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
 
             } else {
-                $image_path =  public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('main_photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
             }
         } else {
             if (!empty($photoAlbum->main_photo)) {
@@ -132,7 +132,7 @@ class PhotoAlbumsController extends Controller
             }
             ////////////////////  delete Main Album Photo
             if (!empty($photoAlbum->main_photo)) {
-                $image_path =  public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
@@ -155,14 +155,12 @@ class PhotoAlbumsController extends Controller
     // add Other Album Photos
     public function addOtherAlbumPhotos($id = null)
     {
-
         $title = trans('photoAlbums.add_other_album_photos');
-
         $photoAlbum = PhotoAlbum::find($id);
         if (!$photoAlbum) {
             return redirect()->route('admin.not.found');
         }
-        return view('admin.medias.photo-albums.other-album-photos', compact('title', 'photoAlbum'));
+        return view('admin.photo-albums.other-album-photos', compact('title', 'photoAlbum'));
     }
 
 
@@ -170,7 +168,11 @@ class PhotoAlbumsController extends Controller
     public function uploadOtherAlbumPhotos(Request $request, $paid)
     {
         if ($request->hasFile('file')) {
-            $filePath = $request->file('file')->store('photo_albums/' . $paid);
+
+            $image = $request->file('file');
+            $destinationPath = public_path('\adminBoard\uploadedImages\albums_photos\\');
+            $filePath = $this->saveResizeImage($image, $destinationPath, 500, 500);
+
             $file = new File();
             $file->file_name = $request->file('file')->getClientOriginalName();
             $file->file_size = $request->file('file')->getSize();
@@ -191,7 +193,10 @@ class PhotoAlbumsController extends Controller
     {
         if ($request->ajax()) {
             $file = File::find($request->id);
-            Storage::delete($file->full_path_after_upload);
+            $image_path = $file->full_path_after_upload;
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
             $file->delete();
             return response($file);
         }

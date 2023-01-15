@@ -15,12 +15,6 @@
 
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
-                            {{trans('menu.media')}}
-                        </a>
-                    </li>
-
-                    <li class="breadcrumb-item">
                         <a href="{{route('admin.photo.albums')}}" class="text-muted">
                             {{trans('menu.photo_albums')}}
                         </a>
@@ -148,7 +142,7 @@
                         type: '{{$file->file_mimes_type}}'
                     };
                     this.emit('addedfile', mock);
-                    this.options.thumbnail.call(this, mock, '{{url('storage/'.$file->full_path_after_upload)}}');
+                    this.options.thumbnail.call(this, mock, '{{asset('adminBoard/uploadedImages/albums_photos/'.$file->full_path_after_upload)}}');
 
                     @endforeach
                         this.on('sending', function (file, xhr, formData) {

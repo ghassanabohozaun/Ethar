@@ -81,7 +81,6 @@
                                                             <input type="hidden" name="hidden_photo"
                                                                    value="hidden_photo">
 
-
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
