@@ -164,8 +164,6 @@
 @push('js')
     <script type="text/javascript">
 
-        ////////////////////////////////////////////////////
-
 
         $('#form_role_update').on('submit', function (e) {
             e.preventDefault();
@@ -228,11 +226,8 @@
                     KTApp.unblockPage();
                 },
 
-
             });//end ajax
-
         });//end submit
-
 
     </script>
 @endpush

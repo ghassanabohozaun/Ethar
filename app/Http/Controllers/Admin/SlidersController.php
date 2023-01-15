@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SlidersRequest;
 use App\Models\Slider;
 use App\Traits\GeneralTrait;
-use File;
 use Illuminate\Http\Request;
+use File;
 
 class SlidersController extends Controller
 {

@@ -14,69 +14,38 @@ class RolesController extends Controller
 
     use GeneralTrait;
 
-    ///////////////////////////////////////////////////////////
-    /// index
+    // index
     public function index()
     {
         $title = __('menu.permissions');
         $roles = Role::orderByDesc('created_at')->paginate();
-        return view('admin.roles.index', compact('title','roles'));
+        return view('admin.roles.index', compact('title', 'roles'));
     }
 
-    /////////////////////////////////////////////////
-    /// destroy roles
-    public function destroy(Request $request)
-    {
 
-        try {
-            if ($request->ajax()) {
-                $role = Role::find($request->id);
-                if (!$role) {
-                    return redirect()->route('admin.not.found');
-                }
-
-                $admins = Admin::where('role_id', $request->id)->get();
-                if ($admins->isEmpty()) {
-                    $role->delete();
-                    return $this->returnSuccessMessage(__('general.delete_success_message'));
-                } else {
-                    return $this->returnError(__('roles.delete_error_message'),500);
-                }
-
-            }
-        } catch (\Exception $exception) {
-            return $this->returnError(__('general.try_catch_error_message'), 500);
-        }
-
-    }
-
-    /////////////////////////////////////////////////
-    /// create
+    // create
     public function create()
     {
         $title = __('menu.add_new_permission');
         return view('admin.roles.create', compact('title'));
     }
 
-    /////////////////////////////////////////////////
-    /// Store
+
+    // Store
     public function store(RoleRequest $request)
     {
-        try {
-            $permissions = json_encode($request->permissions);
-            Role::create([
-                'role_name_ar' => $request->role_name_ar,
-                'role_name_en' => $request->role_name_en,
-                'permissions' => $permissions,
-            ]);
-            return $this->returnSuccessMessage(__('general.add_success_message'));
-        } catch (\Exception $exception) {
-            return $this->returnError(__('general.try_catch_error_message'), 500);
-        }//end catch
+        $permissions = json_encode($request->permissions);
+        Role::create([
+            'role_name_ar' => $request->role_name_ar,
+            'role_name_en' => $request->role_name_en,
+            'permissions' => $permissions,
+        ]);
+        return $this->returnSuccessMessage(__('general.add_success_message'));
+
     }
 
-    /////////////////////////////////////////////////
-    /// edit
+
+    // edit
     public function edit($id = null)
     {
         $title = __('roles.update_permission');
@@ -92,25 +61,42 @@ class RolesController extends Controller
     }
 
 
-    /////////////////////////////////////////////////
-    /// update
+    // update
     public function update(RoleRequest $request)
     {
-        try {
+
+        $role = Role::find($request->id);
+        if (!$role) {
+            return redirect()->route('admin.not.found');
+        }
+        $permissions = json_encode($request->permissions);
+        $role->update([
+            'role_name_ar' => $request->role_name_ar,
+            'role_name_en' => $request->role_name_en,
+            'permissions' => $permissions,
+        ]);
+        return $this->returnSuccessMessage(__('general.update_success_message'));
+
+    }
+
+
+    // destroy roles
+    public function destroy(Request $request)
+    {
+        if ($request->ajax()) {
             $role = Role::find($request->id);
             if (!$role) {
                 return redirect()->route('admin.not.found');
             }
-            $permissions = json_encode($request->permissions);
-            $role->update([
-                'role_name_ar' => $request->role_name_ar,
-                'role_name_en' => $request->role_name_en,
-                'permissions' => $permissions,
-            ]);
-            return $this->returnSuccessMessage(__('general.update_success_message'));
-        } catch (\Exception $exception) {
-            return $this->returnError(__('general.try_catch_error_message'), 500);
-        }//end catch
+
+            $admins = Admin::where('role_id', $request->id)->get();
+            if ($admins->isEmpty()) {
+                $role->delete();
+                return $this->returnSuccessMessage(__('general.delete_success_message'));
+            } else {
+                return $this->returnError(__('roles.delete_error_message'), 500);
+            }
+        }
     }
 
 
