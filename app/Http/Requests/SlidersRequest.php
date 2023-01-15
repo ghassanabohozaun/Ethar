@@ -50,7 +50,7 @@ class SlidersRequest extends FormRequest
             'unique' => trans('sliders.unique'),
             'mimes' => trans('sliders.mimes'),
             'max' => trans('sliders.image_max'),
-            'photo.required' => trans('sliders.photo_required'),
+            'photo.required_without' => trans('sliders.photo_required'),
         ];
     }
 }
