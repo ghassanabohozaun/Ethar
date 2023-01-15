@@ -9,7 +9,7 @@ return [
         'roles' => 'app.roles',
         'users' => 'app.users',
         'support-center' => 'app.support-center',
-        'reports'        => 'app.reports',
+        'reports' => 'app.reports',
         'articles' => 'app.articles',
         'landing-page' => 'app.landing-page',
         'projects' => 'app.projects',
@@ -18,9 +18,8 @@ return [
         'videos' => 'app.videos',
         'photos' => 'app.photos',
         'yearly-reports' => 'app.yearly-reports',
-        'abouts'  => 'app.abouts',
-        'teams'  => 'app.teams',
-
+        'abouts' => 'app.abouts',
+        'teams' => 'app.teams',
 
 
     ]

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'add_new_team' => 'اضافة عضو فريق جديد',
     'team_image' => 'الصورة',
     'name_ar' => 'الاسم | عربي',
