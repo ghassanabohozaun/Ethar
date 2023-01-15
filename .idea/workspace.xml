@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TeamRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TeamRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_27_090854_create_teams_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_27_090854_create_teams_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/teams.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/teams.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/teams/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/teams/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/teams/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/teams/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/SettingsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SettingsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/assets/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/adminBoard/assets/css/mystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/admin/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +253,7 @@
       <workItem from="1673684938699" duration="3852000" />
       <workItem from="1673770916920" duration="1134000" />
       <workItem from="1673773136608" duration="13695000" />
-      <workItem from="1673790799110" duration="6917000" />
+      <workItem from="1673790799110" duration="7857000" />
     </task>
     <servers />
   </component>

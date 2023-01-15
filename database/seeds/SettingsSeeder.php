@@ -13,9 +13,10 @@ class SettingsSeeder extends Seeder
     public function run()
     {
         Setting::create([
-            'site_name_ar'=>'إيثار',
-            'site_name_en'=>'Ethar',
+            'site_name_ar'=>'فلسطين للتنمية والتطوير المجتمعي',
+            'site_name_en'=>'Palestine for development and community development',
             'site_lang_ar'=>'on',
+            'site_lang_en'=>'on',
         ]);
     }
 }
