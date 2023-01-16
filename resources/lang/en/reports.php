@@ -8,4 +8,10 @@ return [
     'file' => 'File Report ',
     'update' => 'Update Report',
     'no_found' => 'Not Found Reports',
+
+
+
+    'financial'=>'Financial Report',
+    'administrative'=>'Administrative Report',
+
 ];

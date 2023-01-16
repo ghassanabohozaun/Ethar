@@ -4,8 +4,8 @@
 
     <form class="form" action="{{route('admin.report.store')}}" method="POST" id="form_report_store"
           enctype="multipart/form-data">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -68,49 +68,114 @@
                                                  style="padding-top: 20px">
                                                 <ul></ul>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
+                                    <div class="col-xl-12 col-xxl-10">
 
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-9" style="height: 550px">
 
+                                                <!--begin::body-->
+                                                <div class="my-5">
 
-                                <div class="tab-content mt-5">
-                                    @include('admin.reports.create_tabs.settings')
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('reports.type')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
 
+                                                            <select
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="type" id="type" type="text">
+                                                                <option value="Financial">{{trans('reports.financial')}}</option>
+                                                                <option value="Administrative">{{trans('reports.administrative')}}</option>
+                                                            </select>
+                                                            <span class="form-text text-danger"
+                                                                  id="type_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('reports.year')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+
+                                                            <select
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="year" id="year" type="text">
+                                                                <?php
+                                                                $firstYear = (int)date('Y') - 2;
+                                                                $lastYear = $firstYear + 6;
+                                                                ?>
+                                                                <option value="">{{trans('general.select_from_list')}}</option>
+                                                                @for ($year= $firstYear; $year<= $lastYear; $year++)
+                                                                    <option value="{{$year}}">{{ $year }} </option>
+                                                                @endfor
+                                                            </select>
+                                                            <span class="form-text text-danger"
+                                                                  id="year_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('reports.file')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input class="form-control form-control-solid form-control-lg"
+                                                                type="file" name="file" id="file"
+                                                                placeholder=""/>
+                                                            <span
+                                                                class="form-text text-muted">{{trans('general.file_format_allow')}}
+                                                            </span>
+                                                            <span class="form-text text-danger"
+                                                                  id="file_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-
-
                             </div>
-
-
                         </div>
                         <!--end::Card-->
-
-
                     </div>
-
                 </div>
                 <!--end::Row-->
-
-
             </div>
             <!--end::Container-->
-
-            <!--begin::Form-->
-
-
         </div>
-
         <!--end::content-->
-
     </form>
 
 @endsection
 @push('js')
 
     <script type="text/javascript">
+
+
+        //Datepicker
+        $('#date').datepicker({
+            format: "yyyy-mm-dd",
+            todayBtn: true,
+            clearBtn: false,
+            orientation: "bottom auto",
+            language: "{{ LaravelLocalization::getCurrentLocale()}}",
+            autoclose: true,
+            todayHighlight: true,
+        });
 
 
         $('#form_report_store').on('submit', function (e) {
@@ -121,11 +186,9 @@
             $('#year_error').text('');
             $('#file_error').text('');
 
-
             $('#type').css('border-color', '');
             $('#year').css('border-color', '');
             $('#file').css('border-color', '');
-
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);
@@ -156,19 +219,18 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'add_project_button'}
+                            customClass: {confirmButton: 'add_report_button'}
                         });
-                        $('.add_project_button').click(function () {
+                        $('.add_report_button').click(function () {
                             window.location.href = "{{route('admin.report.index')}}";
                         });
-                    }else{
-
+                    } else {
                         Swal.fire({
                             title: data.msg,
                             text: "",
                             icon: "error",
                             allowOutsideClick: false,
-                           // customClass: {confirmButton: 'add_project_button'}
+                            // customClass: {confirmButton: 'add_project_button'}
                         });
                         // $('.add_project_button').click(function () {
                         //     window.location.href = "";
@@ -183,7 +245,7 @@
                         $('#' + key + '_error').text(value[0])
                         $('#' + key).css('border-color', '#F64E60 ')
                     });
-                    ArticlePrintErrors(response.errors)
+
                 },//end error
                 complete: function () {
                     KTApp.unblockPage();
@@ -191,17 +253,6 @@
             });//end ajax
 
         });//end submit
-        ////////////////////////////////////
-        ////// Print Errors Function
-        function ArticlePrintErrors(msg) {
 
-            $('.alert_errors').find('ul').empty();
-            $('.alert_errors').removeClass('d-none');
-            $('.alert_success').addClass('d-none');
-            $('.loading_save_continue').addClass('d-none');
-            $.each(msg, function (key, value) {
-                $('.alert_errors').find('ul').append("<li>" + value + "</li>");
-            });
-        }
     </script>
 @endpush
