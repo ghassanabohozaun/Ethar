@@ -13,8 +13,7 @@ class ArticlesController extends Controller
 {
     use GeneralTrait;
 
-    ///////////////////////////////////////////////
-    /// index
+    // index
     public function index()
     {
         $title = __('menu.articles');
@@ -22,31 +21,31 @@ class ArticlesController extends Controller
         return view('admin.articles.index', compact('title', 'articles'));
     }
 
-    /////////////////////////////////////////
-    /// get trashed articles index
-    public function trashedArticles()
+    //  trashed articles
+    public function trashed()
     {
         $title = __('menu.trashed_articles');
         $trashedArticles = Article::onlyTrashed()->orderByDesc('created_at')->paginate(15);
         return view('admin.articles.trashed-articles', compact('title', 'trashedArticles'));
     }
 
-    ///////////////////////////////////////////////
-    /// create
+
+    // create
     public function create()
     {
         $title = __('menu.add_new_article');
         return view('admin.articles.create', compact('title'));
     }
 
-    /////////////////////////////////////////////////
-    /// store
+
+    // store
     public function store(ArticleRequest $request)
     {
+
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/articles');
-            $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
 
         } else {
             $photo_path = '';
@@ -68,8 +67,8 @@ class ArticlesController extends Controller
 
     }
 
-    /////////////////////////////////////////////////
-    /// edit
+
+    // edit
     public function edit($id = null)
     {
         if (!$id) {
@@ -85,8 +84,7 @@ class ArticlesController extends Controller
 
     }
 
-    /////////////////////////////////////////////////
-    /// update
+    // update
     public function update(ArticleRequest $request)
     {
 
@@ -106,11 +104,11 @@ class ArticlesController extends Controller
             if (!empty($article->photo)) {
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
             } else {
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
             }
         } else {
             if (!empty($article->photo)) {
@@ -136,8 +134,7 @@ class ArticlesController extends Controller
         return $this->returnSuccessMessage(__('general.update_success_message'));
     }
 
-    ///////////////////////////////////////////////
-    /// destroy
+    // destroy
     public function destroy(Request $request)
     {
         try {
@@ -154,8 +151,8 @@ class ArticlesController extends Controller
         }//end catch
     }
 
-    /////////////////////////////////////////
-    ///  restore
+
+    //  restore
     public function restore(Request $request)
     {
         try {
@@ -172,8 +169,7 @@ class ArticlesController extends Controller
         }//end catch
     }
 
-    /////////////////////////////////////////
-    ///  force delete
+    //  force delete
     public function forceDelete(Request $request)
     {
         try {
@@ -203,8 +199,7 @@ class ArticlesController extends Controller
     }
 
 
-    ////////////////////////////////////////////////////////////////////
-    /// change Status
+    // change Status
     public function changeStatus(Request $request)
     {
         $article = Article::find($request->id);

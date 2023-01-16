@@ -39,6 +39,7 @@ return [
     'publisher_name_required'=>'Publisher Name Required',
     'file_required'=>'Article File Required',
     'status_required'=>'status Required',
+
     'no_file'=>'No File',
     'show_file'=>'Show File',
     'required'=>'This Field Required',

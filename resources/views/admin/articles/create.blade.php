@@ -19,12 +19,12 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.articles')}}" class="text-muted">
-                                {{trans('menu.articles')}}
+                                {{__('menu.articles')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('menu.add_new_article')}}
+                                {{__('menu.add_new_article')}}
                             </a>
                         </li>
                     </ul>
@@ -39,7 +39,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
                 </div>
                 <!--end::Toolbar-->
@@ -78,7 +78,7 @@
                                         <a class="nav-link active" id="article_settings_tab" data-toggle="tab"
                                            href="#article_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_settings_tab')}}</span>
+                                            <span class="nav-text">{{__('articles.article_settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -86,7 +86,7 @@
                                            href="#article_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_details_ar_tab')}}</span>
+                                            <span class="nav-text">{{__('articles.article_details_ar_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -94,7 +94,7 @@
                                            href="#article_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('articles.article_details_en_tab')}}</span>
+                                            <span class="nav-text">{{__('articles.article_details_en_tab')}}</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -105,31 +105,16 @@
                                     @include('admin.articles.create_tabs.details_ar')
                                     @include('admin.articles.create_tabs.details_en')
                                 </div>
-
-
                             </div>
-
-
                         </div>
                         <!--end::Card-->
-
-
                     </div>
-
                 </div>
                 <!--end::Row-->
-
-
             </div>
             <!--end::Container-->
-
-            <!--begin::Form-->
-
-
         </div>
-
         <!--end::content-->
-
     </form>
 
 @endsection
@@ -175,7 +160,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

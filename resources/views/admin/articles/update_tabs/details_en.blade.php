@@ -7,14 +7,15 @@
 
                     <!--begin::body-->
                     <div class="my-5">
+
                         <!--begin::Group-->
                         <div class="form-group">
                             <label>
-                                {{trans('articles.title_en')}}
+                                {{__('articles.title_en')}}
                             </label>
                             <input type="text" class="form-control form-control-solid form-control-lg"
                                    name="title_en" id="title_en" value="{{$article->title_en}}"
-                                   placeholder="{{trans('articles.enter_title_en')}}"
+                                   placeholder="{{__('articles.enter_title_en')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
                                   id="title_en_error"></span>
@@ -22,12 +23,11 @@
                         </div>
                         <!--end::Group-->
 
-
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{trans('articles.abstract_en')}}</label>
+                            <label> {{__('articles.abstract_en')}}</label>
                             <textarea class="form-control form-control-solid form-control-lg summernote"
-                                      placeholder="{{trans('articles.enter_abstract_en')}}"
+                                      placeholder="{{__('articles.enter_abstract_en')}}"
                                       name="abstract_en"
                                       id="abstract_en">{{$article->abstract_en}}</textarea>
                             <span class="form-text text-danger"
@@ -43,5 +43,3 @@
     </div>
 </div>
 
-@push('js')
-@endpush

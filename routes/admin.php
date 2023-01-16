@@ -95,7 +95,6 @@ Route::group([
     /// users routes
     Route::group(['prefix' => 'users', 'middleware' => 'can:users'], function () {
         Route::get('/', 'UserController@index')->name('users');
-        Route::get('/get-users', 'UserController@getUsers')->name('get.users');
         Route::post('/destroy', 'UserController@destroy')->name('user.destroy');
         Route::post('/change-status', 'UserController@changeStatus')->name('user.change.status');
         Route::get('/create', 'UserController@create')->name('user.create');
@@ -103,7 +102,6 @@ Route::group([
         Route::get('/edit/{id?}', 'UserController@edit')->name('user.edit');
         Route::post('update', 'UserController@update')->name('user.update');
         Route::get('/trashed', 'UserController@trashed')->name('users.trashed');
-        Route::get('/get-trashed-users', 'UserController@getTrashedUsers')->name('get.trashed.users');
         Route::post('/force-delete', 'UserController@forceDelete')->name('user.force.delete');
         Route::post('/restore', 'UserController@restore')->name('user.restore');
     });
@@ -124,16 +122,15 @@ Route::group([
     /// articles  routes
     Route::group(['prefix' => 'articles', 'middleware' => 'can:articles'], function () {
         Route::get('/', 'ArticlesController@index')->name('admin.articles');
-        Route::get('/get-articles', 'ArticlesController@getArticles')->name('admin.get.articles');
-        Route::post('/destroy', 'ArticlesController@destroy')->name('admin.articles.destroy');
-        Route::post('/change-status', 'ArticlesController@changeStatus')->name('admin.articles.change.status');
         Route::get('/create', 'ArticlesController@create')->name('admin.articles.create');
         Route::post('/store', 'ArticlesController@store')->name('admin.articles.store');
         Route::get('/edit/{id?}', 'ArticlesController@edit')->name('admin.articles.edit');
         Route::post('/update', 'ArticlesController@update')->name('admin.articles.update');
-        Route::get('/trashed-articles', 'ArticlesController@trashedArticles')->name('admin.articles.trashed');
+        Route::post('/destroy', 'ArticlesController@destroy')->name('admin.articles.destroy');
+        Route::get('/trashed-articles', 'ArticlesController@trashed')->name('admin.articles.trashed');
         Route::post('/force-delete', 'ArticlesController@forceDelete')->name('admin.articles.force.delete');
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
+        Route::post('/change-status', 'ArticlesController@changeStatus')->name('admin.articles.change.status');
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
