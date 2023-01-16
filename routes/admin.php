@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\PublicationsController;
 use App\Http\Controllers\Admin\ReportController;
+use App\Http\Controllers\Admin\QAController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -242,6 +243,22 @@ Route::group([
         Route::get('/', 'TeamController@team')->name('admin.teams');
         Route::post('store', 'TeamController@store')->name('admin.store.team.member');
         Route::post('destroy', 'TeamController@destroy')->name('admin.destroy.team.member');
+    });
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// QA routes
+    Route::group(['prefix' => 'QA', 'middleware' => 'can:abouts'], function () {
+        Route::get('/', [QAController::class, 'index'])->name('admin.QA.index');
+        Route::get('/create', [QAController::class, 'create'])->name('admin.QA.create');
+        Route::post('/store', [QAController::class, 'store'])->name('admin.QA.store');
+        Route::get('/edit/{id}', [QAController::class, 'edit'])->name('admin.QA.edit');
+        Route::post('/update', [QAController::class, 'update'])->name('admin.QA.update');
+        Route::get('/trashed', [QAController::class, 'trashed'])->name('admin.QA.trashed');
+        Route::post('/destroy', [QAController::class, 'destroy'])->name('admin.QA.destroy');
+        Route::post('/force-delete', [QAController::class, 'forceDelete'])->name('admin.QA.force.delete');
+        Route::post('/restore', [QAController::class, 'restore'])->name('admin.QA.restore');
+        Route::post('/change-status', [QAController::class, 'changeStatus'])->name('admin.QA.change.status');
     });
 
 

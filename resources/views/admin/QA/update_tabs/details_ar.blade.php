@@ -1,4 +1,4 @@
-<div class="tab-pane fade" id="QA_details_ar" role="tabpanel" aria-labelledby="QA_details_ar_tab">
+<div class="tab-pane fade" id="QA_details_ar" role="tabpanel" aria-labelledby="project_details_ar_tab">
     <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
         <div class="col-xl-12 col-xxl-10">
 
@@ -10,13 +10,28 @@
 
 
                         <!--begin::Group-->
+                        <div class=" form-group row d-none">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                ID
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <input value="{{$QA->id}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="id" id="id" type="hidden"
+                                       autocomplete="off"/>
+
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
+                        <!--begin::Group-->
                         <div class="form-group">
                             <label>
                                 {{trans('QA.title_ar')}}
                             </label>
 
                             <input type="text" class="form-control form-control-solid form-control-lg"
-                                   name="title_ar" id="title_ar"
+                                   name="title_ar" id="title_ar" value="{{$QA->title_ar}}"
                                    placeholder="{{trans('QA.title_ar')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
@@ -30,9 +45,9 @@
                         <div class="form-group">
                             <label> {{trans('QA.des_ar')}}</label>
                             <textarea class="form-control summernote"
-                                      placeholder="{{trans('articles.enter_abstract_ar')}}"
+                                      placeholder="{{trans('QA.des_ar')}}"
                                       name="details_ar"
-                                      id="details_ar"></textarea>
+                                      id="abstract_ar">{{$QA->details_ar}}</textarea>
                             <span class="form-text text-danger"
                                   id="details_ar_error"></span>
                         </div>
@@ -47,5 +62,4 @@
 </div>
 
 @push('js')
-
 @endpush
