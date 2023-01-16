@@ -186,6 +186,7 @@
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0])
                         $('#' + key).css('border-color', '#F64E60 ')
+                        $('.note-editor.note-frame').css('border', '1px solid #c92d51; ')
                     });
                     ArticlePrintErrors(response.errors)
                 },//end error

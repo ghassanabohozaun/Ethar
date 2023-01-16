@@ -6,18 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ArticleRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_ar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/details_en.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/create_tabs/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestimonialController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TestimonialController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TestimonialRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TestimonialRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/articles/1673861951.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_ar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/details_en.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/update_tabs/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +262,7 @@
       <workItem from="1673773136608" duration="13695000" />
       <workItem from="1673790799110" duration="14568000" />
       <workItem from="1673849402302" duration="40000" />
-      <workItem from="1673859155483" duration="3277000" />
+      <workItem from="1673859155483" duration="6615000" />
     </task>
     <servers />
   </component>
@@ -353,6 +351,11 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php</url>
           <line>276</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php</url>
+          <line>950</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

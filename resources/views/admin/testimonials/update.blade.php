@@ -1923,9 +1923,17 @@
     </form>
 @endsection
 
-@push('js')
-    <script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="{{asset('adminBoard/assets/css/msdropdown/dd.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset('adminBoard/assets/css/msdropdown/flags.css')}}"/>
 
+@push('js')
+
+    <script src="{{asset('adminBoard/assets/js/msDropdown/jquery.dd.js')}}"></script>
+    <script type="text/javascript">
+        $("#country").msDropdown();
+    </script>
+
+    <script type="text/javascript">
         ////////////////////////////////////////////////////
         var testimonial_photo = new KTImageInput('kt_testimonial_photo');
 

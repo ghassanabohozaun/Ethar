@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TestimonialRequest;
 use App\Models\testimonial;
 use App\Traits\GeneralTrait;
+use File;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 
 class TestimonialController extends Controller
 {
@@ -36,7 +36,7 @@ class TestimonialController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/testimonials');
-            $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = '';
         }
@@ -59,9 +59,7 @@ class TestimonialController extends Controller
             'rating' => $request->rating,
         ]);
 
-
         return $this->returnSuccessMessage(__('general.add_success_message'));
-
     }
 
     /////////////////////////////////////////////////
@@ -84,7 +82,6 @@ class TestimonialController extends Controller
     public function update(TestimonialRequest $request)
     {
 
-
         $testimonial = testimonial::find($request->id);
         if (!$testimonial) {
             return redirect()->route('admin.not.found');
@@ -94,24 +91,24 @@ class TestimonialController extends Controller
         if ($request->hasFile('photo')) {
             if (!empty($testimonial->photo)) {
 
-                $image_path =  public_path('\adminBoard\uploadedImages\testimonials\\') . $testimonial->photo;
+                $image_path = public_path('\adminBoard\uploadedImages\testimonials\\') . $testimonial->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\testimonials\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
 
             } else {
-                $image_path =  public_path('\adminBoard\uploadedImages\testimonials\\') . $testimonial->photo;
+                $image_path = public_path('\adminBoard\uploadedImages\testimonials\\') . $testimonial->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\testimonials\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath,500,500);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
             }
         } else {
             if (!empty($testimonial->photo)) {
@@ -146,30 +143,26 @@ class TestimonialController extends Controller
     /// destroy
     public function destroy(Request $request)
     {
-        try {
-            if ($request->ajax()) {
+        if ($request->ajax()) {
 
-                $testimonial = testimonial::find($request->id);
+            $testimonial = testimonial::find($request->id);
 
-                if (!$testimonial) {
-                    return redirect()->route('admin.not.found');
-                }
-
-                if (!empty($testimonial->photo)) {
-                    $image_path =  public_path('\adminBoard\uploadedImages\testimonials\\') . $testimonial->photo;
-                    if (File::exists($image_path)) {
-                        File::delete($image_path);
-                    }
-                }
-
-                $testimonial->delete();
-
-                return $this->returnSuccessMessage(__('general.delete_success_message'));
+            if (!$testimonial) {
+                return redirect()->route('admin.not.found');
             }
-        } catch
-        (\Exception $exception) {
-            return $this->returnError(__('general.try_catch_error_message'), '500');
+
+            if (!empty($testimonial->photo)) {
+                $image_path = public_path('\adminBoard\uploadedImages\testimonials\\') . $testimonial->photo;
+                if (File::exists($image_path)) {
+                    File::delete($image_path);
+                }
+            }
+
+            $testimonial->delete();
+
+            return $this->returnSuccessMessage(__('general.delete_success_message'));
         }
+
     }
 
 

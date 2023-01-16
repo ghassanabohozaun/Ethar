@@ -382,7 +382,7 @@
                         <span class="menu-text">{{trans('menu.testimonials')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-info">
-                             {{App\Models\Projects::count()}}
+                             {{App\Models\testimonial::count()}}
                         </span>
                     </span>
                     </a>

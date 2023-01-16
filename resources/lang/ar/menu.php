@@ -31,9 +31,9 @@ return [
     'trashed_projects' => 'المشاريع المحذوفة',
     'add_new_project' => 'اضافة مشروع جديد',
 
-    'testimonials' => 'الشهادات',
-    'trashed_testimonials' => 'الشهادات المحذوفة',
-    'add_new_testimonial' => 'اضافة شهادة جديد',
+    'testimonials' => 'الشهادات والتوصيات',
+    'trashed_testimonials' => 'الشهادات والتوصيات المحذوفة',
+    'add_new_testimonial' => 'اضافة توصية جديدة',
 
     'publications' => 'المنشورات',
     'trashed_publications' => 'المنشورات المحذوفة',

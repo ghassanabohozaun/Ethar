@@ -14,13 +14,13 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.clients_opinions')}}
+                            {{__('menu.testimonials')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
                         <a href="" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -34,7 +34,7 @@
                 <a href="{{route('admin.testimonials.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_testimonial')}}
+                    {{__('menu.add_new_testimonial')}}
                 </a>
                 &nbsp;
             </div>
@@ -149,11 +149,11 @@
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -169,7 +169,7 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
@@ -184,8 +184,8 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_testimonial_button'}
@@ -217,7 +217,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

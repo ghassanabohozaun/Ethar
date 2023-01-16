@@ -58,7 +58,7 @@ class TestimonialRequest extends FormRequest
             'image' => trans('testimonials.image'),
             'mimes' => trans('testimonials.mimes'),
             'max' => trans('testimonials.image_max'),
-            'photo.required' => trans('testimonials.photo_required'),
+            'photo.required_without' => trans('testimonials.photo_required'),
         ];
     }
 }
