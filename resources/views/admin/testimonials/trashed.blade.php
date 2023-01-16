@@ -13,8 +13,14 @@
                 <!--begin::Actions-->
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
-                        <a href="#" class="text-muted">
+                        <a href="{{route('admin.testimonials')}}" class="text-muted">
                             {{__('menu.testimonials')}}
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="#" class="text-muted">
+                            {{trans('menu.trashed_testimonials')}}
                         </a>
                     </li>
 
@@ -31,12 +37,6 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-                <a href="{!! route('admin.testimonial.trashed') !!}"
-                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">
-                    <i class="fa fa-trash"></i>
-                </a>
-                &nbsp;
-
                 <a href="{{route('admin.testimonial.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
@@ -76,7 +76,6 @@
                                                         <th>{!! __('testimonials.name_ar') !!}</th>
                                                         <th>{!! __('testimonials.name_en') !!}</th>
                                                         <th>{!! __('testimonials.rating') !!}</th>
-                                                        <th>{!! __('testimonials.status') !!}</th>
                                                         <th  class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
@@ -91,17 +90,23 @@
                                                             <td>{{ $testimonial->name_en }}</td>
                                                             <td>{{ $testimonial->rating }}</td>
                                                             <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           {{$testimonial->status == 'on' ? 'checked':''}}  data-id="{{$testimonial->id}}"
-                                                                           class="change_status">
-                                                                </div>
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_testimonial_btn"
+                                                                   data-id="{{$testimonial->id}}"
+                                                                   title="{{__('general.restore')}}">
+                                                                    <i class="fa fa-trash-restore fa-1x"></i>
+                                                                </a>
+
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_testimonial_btn"
+                                                                   data-id="{{$testimonial->id}}"
+                                                                   title="{{__('general.force_delete')}}">
+                                                                    <i class="fa fa-trash-alt fa-1x"></i>
+                                                                </a>
                                                             </td>
-                                                            <td>@include('admin.testimonials.parts.options')</td>
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="9" class="text-center">
+                                                            <td colspan="8" class="text-center">
                                                                 {!! __('testimonials.no_testimonials_found') !!}
                                                             </td>
                                                         </tr>
@@ -109,7 +114,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="9">
+                                                        <td colspan="8">
                                                             <div class="float-right">
                                                                 {!! $testimonials->appends(request()->all())->links() !!}
                                                             </div>
@@ -146,16 +151,17 @@
 
 
 @endsection
-@push('js')
 
+@push('js')
     <script type="text/javascript">
-        //Show user Delete Notify
-        $(document).on('click', '.delete_testimonial_btn', function (e) {
+
+        // delete team member
+        $(document).on('click', '.force_delete_testimonial_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{__('general.ask_delete_record')}}",
+                title: "{{__('general.ask_permanent_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonText: "{{__('general.yes')}}",
@@ -167,7 +173,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.testimonial.destroy') !!}',
+                        url: '{!! route('admin.testimonial.force.delete') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -176,13 +182,13 @@
                             if (data.status == true) {
                                 Swal.fire({
                                     title: "{!! __('general.deleted') !!}",
-                                    text: data.msg,
+                                    text: "{!! __('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
                                     customClass: {confirmButton: 'delete_testimonial_button'}
                                 });
                                 $('.delete_testimonial_button').click(function () {
-                                    $('#myTable').load(location.href+(' #myTable'));
+                                    $('#myTable').load(location.href + (' #myTable'));
                                 });
                             }
                         },//end success
@@ -191,32 +197,24 @@
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
                         title: "{!! __('general.cancelled') !!}",
-                        text: "{!! __('general.cancelled_message') !!}",
+                        text: "{!! __('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_testimonial_button'}
                     })
                 }
             });
-
         })
 
 
-        // switch english language
-        var switchStatus = false;
-        $('body').on('change', '.change_status', function (e) {
+        // restore team member
+        $(document).on('click', '.restore_testimonial_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
-            if ($(this).is(':checked')) {
-                switchStatus = $(this).is(':checked');
-            } else {
-                switchStatus = $(this).is(':checked');
-            }
-
             $.ajax({
-                url: "{{route('admin.testimonial.change-status')}}",
-                data: {switchStatus: switchStatus, id: id},
+                url: "{{route('admin.testimonial.restore')}}",
+                data: {id, id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
@@ -225,7 +223,7 @@
                         state: 'danger',
                         message: "{{__('general.please_wait')}}",
                     });
-                },//end beforeSend
+                },
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
@@ -235,15 +233,16 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'switch_status_toggle'}
+                            customClass: {confirmButton: 'restore_testimonial_button'}
                         });
-                        $('.switch_status_toggle').click(function () {
+                        $('.restore_testimonial_button').click(function () {
+                            $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },//end success
             })
-        });
+        })
+
 
     </script>
 @endpush
-

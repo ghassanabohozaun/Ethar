@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.testimonials.update')}}" method="POST" id="form_opinions_update">
+    <form class="form" action="{{route('admin.testimonial.update')}}" method="POST" id="form_opinions_update">
         @csrf
         <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">

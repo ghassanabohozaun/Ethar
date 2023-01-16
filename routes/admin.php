@@ -127,7 +127,7 @@ Route::group([
         Route::get('/edit/{id?}', 'ArticlesController@edit')->name('admin.articles.edit');
         Route::post('/update', 'ArticlesController@update')->name('admin.articles.update');
         Route::post('/destroy', 'ArticlesController@destroy')->name('admin.articles.destroy');
-        Route::get('/trashed-articles', 'ArticlesController@trashed')->name('admin.articles.trashed');
+        Route::get('/trashed', 'ArticlesController@trashed')->name('admin.articles.trashed');
         Route::post('/force-delete', 'ArticlesController@forceDelete')->name('admin.articles.force.delete');
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
         Route::post('/change-status', 'ArticlesController@changeStatus')->name('admin.articles.change.status');
@@ -152,12 +152,15 @@ Route::group([
     /// testimonials routes
     Route::group(['prefix' => 'testimonials', 'middleware' => 'can:testimonials'], function () {
         Route::get('/', 'TestimonialController@index')->name('admin.testimonials');
-        Route::get('/create', 'TestimonialController@create')->name('admin.testimonials.create');
-        Route::post('/store', 'TestimonialController@store')->name('admin.testimonials.store');
-        Route::get('/edit/{id?}', 'TestimonialController@edit')->name('admin.testimonials.edit');
-        Route::post('/update', 'TestimonialController@update')->name('admin.testimonials.update');
-        Route::post('/destroy', 'TestimonialController@destroy')->name('admin.testimonials.destroy');
-        Route::post('/change-status', 'TestimonialController@changeStatus')->name('admin.testimonials.change-status');
+        Route::get('/create', 'TestimonialController@create')->name('admin.testimonial.create');
+        Route::post('/store', 'TestimonialController@store')->name('admin.testimonial.store');
+        Route::get('/edit/{id?}', 'TestimonialController@edit')->name('admin.testimonial.edit');
+        Route::post('/update', 'TestimonialController@update')->name('admin.testimonial.update');
+        Route::post('/destroy', 'TestimonialController@destroy')->name('admin.testimonial.destroy');
+        Route::get('/trashed', 'TestimonialController@trashed')->name('admin.testimonial.trashed');
+        Route::post('/force-delete', 'TestimonialController@forceDelete')->name('admin.testimonial.force.delete');
+        Route::post('/restore', 'TestimonialController@restore')->name('admin.testimonial.restore');
+        Route::post('/change-status', 'TestimonialController@changeStatus')->name('admin.testimonial.change-status');
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -247,10 +250,7 @@ Route::group([
         Route::post('/force-delete', 'TeamController@forceDelete')->name('admin.team.member.force.delete');
         Route::post('/restore', 'TeamController@restore')->name('admin.team.member.restore');
         Route::post('/change-status', 'TeamController@changeStatus')->name('admin.team.member.change.status');
-
-
     });
-
 
 });
 

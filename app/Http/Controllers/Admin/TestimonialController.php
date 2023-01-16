@@ -4,32 +4,33 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TestimonialRequest;
+use App\Models\Team;
 use App\Models\testimonial;
 use App\Traits\GeneralTrait;
-use File;
 use Illuminate\Http\Request;
+use File;
 
 class TestimonialController extends Controller
 {
     use GeneralTrait;
 
-    //////////////////////////////////////////////////
-    /// index
+
+    // index
     public function index()
     {
         $title = __('menu.testimonials');
-        $testimonials = testimonial::orderByDesc('created_at')->paginate();
+        $testimonials = testimonial::withoutTrashed()->orderByDesc('created_at')->paginate();
         return view('admin.testimonials.index', compact('title', 'testimonials'));
     }
-    /////////////////////////////////////////////////
-    /// create
+
+     // create
     public function create()
     {
         $title = __('menu.add_new_testimonial');
         return view('admin.testimonials.create', compact('title'));
     }
-    /////////////////////////////////////////////////
-    /// store
+
+    // store
     public function store(TestimonialRequest $request)
     {
         // save image
@@ -62,8 +63,8 @@ class TestimonialController extends Controller
         return $this->returnSuccessMessage(__('general.add_success_message'));
     }
 
-    /////////////////////////////////////////////////
-    /// edit
+
+    // edit
     public function edit($id = null)
     {
         if (!$id) {
@@ -77,8 +78,8 @@ class TestimonialController extends Controller
         return view('admin.testimonials.update', compact('title', 'testimonial'));
     }
 
-    /////////////////////////////////////////////////
-    /// store
+
+    // store
     public function update(TestimonialRequest $request)
     {
 
@@ -139,13 +140,51 @@ class TestimonialController extends Controller
 
     }
 
-    /////////////////////////////////////////////////
-    /// destroy
+
+    // trashed
+    public function trashed()
+    {
+        $title = __('menu.trashed_testimonials');
+        $testimonials = testimonial::onlyTrashed()->orderByDesc('created_at')->paginate(15);
+        return view('admin.testimonials.trashed', compact('title', 'testimonials'));
+    }
+
+
+    // destroy
     public function destroy(Request $request)
     {
         if ($request->ajax()) {
-
             $testimonial = testimonial::find($request->id);
+            if (!$testimonial) {
+                return redirect()->route('admin.not.found');
+            }
+            $testimonial->delete();
+            return $this->returnSuccessMessage(__('general.move_to_trash'));
+        }
+    }
+
+    //  restore
+    public function restore(Request $request)
+    {
+
+        if ($request->ajax()) {
+            $testimonial = testimonial::onlyTrashed()->find($request->id);
+            if (!$testimonial) {
+                return redirect()->route('admin.not.found');
+            }
+            $testimonial->restore();
+            return $this->returnSuccessMessage(__('general.restore_success_message'));
+        }
+
+    }
+
+    //  force delete
+    public function forceDelete(Request $request)
+    {
+
+        if ($request->ajax()) {
+
+            $testimonial = testimonial::onlyTrashed()->find($request->id);
 
             if (!$testimonial) {
                 return redirect()->route('admin.not.found');
@@ -158,16 +197,13 @@ class TestimonialController extends Controller
                 }
             }
 
-            $testimonial->delete();
-
+            $testimonial->forceDelete();
             return $this->returnSuccessMessage(__('general.delete_success_message'));
         }
 
     }
 
-
-    ////////////////////////////////////////////////////////////////////
-    /// change Status
+    // change Status
     public function changeStatus(Request $request)
     {
         $testimonial = testimonial::find($request->id);
@@ -179,7 +215,6 @@ class TestimonialController extends Controller
             $testimonial->status = 'on';
             $testimonial->save();
         }
-
         return $this->returnSuccessMessage(__('general.change_status_success_message'));
     }
 

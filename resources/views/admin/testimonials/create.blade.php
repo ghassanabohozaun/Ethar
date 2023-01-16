@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <form class="form" action="{{route('admin.testimonials.store')}}" method="POST" id="form_testimonials_add">
+    <form class="form" action="{{route('admin.testimonial.store')}}" method="POST" id="form_testimonials_add">
     @csrf
     <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">

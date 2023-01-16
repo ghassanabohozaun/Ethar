@@ -27,6 +27,7 @@ class CreateTestimonialsTable extends Migration
             $table->string('job_title_en')->nullable();
             $table->integer('rating')->default('0');
             $table->string('status')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
