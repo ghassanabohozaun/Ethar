@@ -39,7 +39,7 @@ class DashboardController extends Controller
             if ($request->hasFile('site_icon')) {
                 $image = $request->file('site_icon');
                 $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
-                $site_icon = $this->saveResizeImage($image, $destinationPath,200,200);
+                $site_icon = $this->saveResizeImage($image, $destinationPath,250,250);
             } else {
                 $site_icon = '';
             }
@@ -48,7 +48,7 @@ class DashboardController extends Controller
             if ($request->hasFile('site_logo')) {
                 $image = $request->file('site_logo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
-                $site_logo = $this->saveResizeImage($image, $destinationPath,200,200);
+                $site_logo = $this->saveResizeImage($image, $destinationPath,250,250);
             } else {
                 $site_logo = '';
             }
@@ -94,11 +94,11 @@ class DashboardController extends Controller
                 if (!empty($settings->site_icon)) {
                     $image = $request->file('site_icon');
                     $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
-                    $site_icon = $this->saveResizeImage($image, $destinationPath,200,200);
+                    $site_icon = $this->saveResizeImage($image, $destinationPath,250,250);
                 } else {
                     $image = $request->file('site_icon');
                     $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
-                    $site_icon = $this->saveResizeImage($image, $destinationPath,200,200);
+                    $site_icon = $this->saveResizeImage($image, $destinationPath,250,250);
                 }
             } else {
                 if (!empty($settings->site_icon)) {
@@ -119,11 +119,11 @@ class DashboardController extends Controller
                 if (!empty($settings->site_logo)) {
                     $image = $request->file('site_logo');
                     $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
-                    $site_logo = $this->saveResizeImage($image, $destinationPath,200,200);
+                    $site_logo = $this->saveResizeImage($image, $destinationPath,250,250);
                 } else {
                     $image = $request->file('site_logo');
                     $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
-                    $site_logo = $this->saveResizeImage($image, $destinationPath,200,200);
+                    $site_logo = $this->saveResizeImage($image, $destinationPath,250,250);
                 }
             } else {
                 if (!empty($settings->site_logo)) {

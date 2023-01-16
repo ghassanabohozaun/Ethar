@@ -9,33 +9,35 @@ return [
     'site_languages' => 'Site Languages',
     'show_all' => 'Show All',
     'users' => 'Users',
+
     'admin' => 'Admin',
     'add_new_user' => 'Add New User',
     'trashed_users' => 'Trashed Users',
+
     'permissions' => 'Permissions',
     'add_new_permission' => 'Add New Permission',
-    'regions' => 'Regions',
-    'teacher' => 'Teacher',
-    'categories' => 'Categories',
-    'add_new_category' => 'Add New category',
+
+
     'support_center' => 'Support Center',
 
     'landing_page' => 'Landing Page',
     'index' => 'Website Index',
-    'team' => 'Team',
-    'footer_images' => 'Footer Images',
+
+
     'static_strings' => 'Static Strings',
-    'sliders' => 'Slider',
+
+    'sliders' => 'Sliders',
+    'trashed_sliders' => 'Trashed Sliders',
     'add_new_slider' => 'Add New Slider',
-    'why_choose_us' => 'Why Choose Us',
-    'notifications' => 'Notifications',
-    'registration_policy' => 'Registration Policy',
+
     'articles' => 'Articles',
     'trashed_articles' => 'Trashed Articles',
     'add_new_article' => 'Add New Article',
+
     'projects' => 'Projects',
     'trashed_projects' => 'Trashed Projects',
     'add_new_project' => 'Add New Project',
+
     'testimonials' => 'Testimonials',
     'trashed_testimonials' => 'Trashed Testimonials',
     'add_new_testimonial' => 'Add New Testimonial',
@@ -48,7 +50,6 @@ return [
     'trashed_publications' => 'Trashed Publications',
     'add_new_publication' => 'Add New Publication',
 
-
     'videos' => 'Videos',
     'trashed_videos' => 'Trashed Videos',
     'add_new_video' => 'Add New Video',
@@ -57,15 +58,13 @@ return [
     'trashed_abouts' => 'Trashed Abouts',
     'add_new_about' => 'Add New About',
 
-
     'photo_albums' => 'Photo Albums',
     'trashed_photo_albums' => 'Trashed Photo Albums',
     'add_new_photo_album' => 'Add New Photo Album',
 
-
     'teams' => 'Teams',
     'trashed_teams' => 'Trashed Teams',
-    'add_new_teams' => 'Add New Team Member',
+    'add_new_team_member' => 'Add New Team Member',
 
 ];
 

@@ -117,6 +117,30 @@
                                                     </div>
                                                     <!--end::Group-->
 
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('sliders.order')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="order" id="order" type="text"
+                                                                placeholder=" {{trans('sliders.enter_order')}}"
+                                                                autocomplete="off"/>
+                                                            <span class="form-text text-muted">
+                                                             {{trans('sliders.exist_number')}}
+                                                                &nbsp;
+                                                                {{App\Models\Slider::select('order')->orderBy('order','desc')->pluck('order')}}
+
+                                                            </span>
+
+                                                            <span class="form-text text-danger" id="order_error"></span>
+                                                        </div>
+
+                                                    </div>
+                                                    <!--end::Group-->
+
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">

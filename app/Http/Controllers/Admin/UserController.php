@@ -24,7 +24,7 @@ class UserController extends Controller
     }
 
     // trashed users
-    public function trashedUser()
+    public function trashed()
     {
         $title = __('menu.trashed_users');
         $trashedUsers = Admin::onlyTrashed()->orderByDesc('created_at')->paginate(15);

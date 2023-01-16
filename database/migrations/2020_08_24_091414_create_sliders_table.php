@@ -19,6 +19,7 @@ class CreateSlidersTable extends Migration
             $table->string('title_en')->nullable();
             $table->text('details_ar')->nullable();
             $table->text('details_en')->nullable();
+            $table->integer('order')->nullable();
             $table->enum('details_status', ['show', 'hide'])->default('hide');
             $table->enum('button_status', ['show', 'hide'])->default('hide');
             $table->string('url_ar')->nullable();
@@ -26,6 +27,7 @@ class CreateSlidersTable extends Migration
             $table->string('photo')->nullable();
             $table->enum('language',['ar','ar_en'])->default('ar');
             $table->string('status')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

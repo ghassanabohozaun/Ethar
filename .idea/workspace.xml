@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/global.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/reports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/reports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/create_tabs/settings.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +183,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/database/migrations",
+    "last_opened_file_path": "C:/laragon/www/etharps/resources/views/admin/testimonials",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -192,11 +195,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\resources\views\admin\testimonials" />
+      <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page\sliders" />
+      <recent name="C:\laragon\www\etharps\resources\views\admin\teams" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
       <recent name="C:\laragon\www\etharps\app\Models" />
-      <recent name="C:\laragon\www\etharps\app\Http\Requests" />
-      <recent name="C:\laragon\www\etharps\resources\views\admin" />
-      <recent name="C:\laragon\www\etharps\public\site\assets\images\banner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\etharps\resources\views\admin" />
@@ -251,12 +254,26 @@
       <workItem from="1673677689925" duration="2629000" />
       <workItem from="1673684938699" duration="3852000" />
       <workItem from="1673770916920" duration="1134000" />
-      <workItem from="1673773136608" duration="13591000" />
+      <workItem from="1673773136608" duration="13695000" />
+      <workItem from="1673790799110" duration="14568000" />
+      <workItem from="1673849402302" duration="40000" />
+      <workItem from="1673859155483" duration="9561000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
@@ -264,15 +281,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php-line-method">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/RolesController.php</url>
-          <line>96</line>
-          <properties>
-            <option name="className" value="\App\Http\Controllers\Admin\RolesController" />
-            <option name="methodName" value="update" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php</url>
           <line>165</line>
@@ -284,7 +292,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php</url>
-          <line>136</line>
+          <line>141</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\Admin\PublicationsController" />
             <option name="methodName" value="destroy" />
@@ -299,6 +307,24 @@
             <option name="methodName" value="create" />
           </properties>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/PhotoAlbumsController.php</url>
+          <line>122</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\Admin\PhotoAlbumsController" />
+            <option name="methodName" value="destroy" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php</url>
+          <line>17</line>
+          <properties>
+            <option name="className" value="\App\Http\Controllers\Admin\TeamController" />
+            <option name="methodName" value="index" />
+          </properties>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/site.blade.php</url>
@@ -319,6 +345,21 @@
           <url>file://$PROJECT_DIR$/resources/lang/ar/videos.php</url>
           <line>32</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/teams/trashed.blade.php</url>
+          <line>155</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php</url>
+          <line>276</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php</url>
+          <line>950</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

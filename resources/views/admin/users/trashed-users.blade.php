@@ -18,7 +18,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item">
-                        <a href="javascript(avoid);" class="text-muted">
+                        <a href="#" class="text-muted">
                             {{__('menu.trashed_users')}}
                         </a>
                     </li>
@@ -34,6 +34,17 @@
             </div>
             <!--end::Info-->
 
+
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <a href="{!! route('user.create') !!}"
+                   class="btn btn-primary btn-sm font-weight-bold font-size-base mr-1">
+                    <i class="fa fa-plus-square"></i>
+                    {{__('menu.add_new_user')}}
+                </a>
+                &nbsp;
+            </div>
+            <!--end::Toolbar-->
 
         </div>
     </div>
@@ -62,6 +73,7 @@
                                                         <th>{!! __('users.photo') !!}</th>
                                                         <th>{!! __('users.name') !!}</th>
                                                         <th>{!! __('users.email') !!}</th>
+                                                        <th>{!! __('users.mobile') !!}</th>
                                                         <th>{!! __('users.role_id') !!}</th>
                                                         <th class="text-center"
                                                             style="width: 100px;">{!! __('general.actions') !!}</th>
@@ -88,6 +100,8 @@
                                                             </td>
 
                                                             <td>{{ $user->name }}</td>
+                                                            <td>{{ $user->email }}</td>
+                                                            <td>{{ $user->mobile }}</td>
 
                                                             <td>
                                                                 @if(Lang()=='ar')
@@ -100,10 +114,6 @@
                                                                     </span>
                                                                 @endif
                                                             </td>
-
-                                                            <td>{{ $user->email }}</td>
-
-                                                            <td>{{ $user->mobile }}</td>
 
                                                             <td>
                                                                 <a class="btn btn-hover-warning btn-icon btn-pill restore_user_btn"

@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <form class="form" action="{{route('admin.testimonials.store')}}" method="POST" id="form_testimonials_add">
+    <form class="form" action="{{route('admin.testimonial.store')}}" method="POST" id="form_testimonials_add">
     @csrf
     <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
@@ -19,13 +19,13 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.testimonials')}}" class="text-muted">
-                                {{trans('menu.testimonials')}}
+                                {{__('menu.testimonials')}}
                             </a>
                         </li>
 
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('menu.add_new_testimonial')}}
+                                {{__('menu.add_new_testimonial')}}
                             </a>
                         </li>
                     </ul>
@@ -40,7 +40,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -74,7 +74,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.photo')}}
+                                                            {{__('testimonials.photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
@@ -86,7 +86,7 @@
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{trans('general.change_image')}}">
+                                                                    data-original-title="{{__('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="photo" id="photo"
                                                                            class="table-responsive-sm">
@@ -101,7 +101,7 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
@@ -113,13 +113,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.name_ar')}}
+                                                            {{__('testimonials.name_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="name_ar" id="name_ar" type="text"
-                                                                placeholder=" {{trans('testimonials.enter_name_ar')}}"
+                                                                placeholder=" {{__('testimonials.enter_name_ar')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -132,13 +132,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.name_en')}}
+                                                            {{__('testimonials.name_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="name_en" id="name_en" type="text"
-                                                                placeholder=" {{trans('testimonials.enter_name_en')}}"
+                                                                placeholder=" {{__('testimonials.enter_name_en')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -152,13 +152,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.age')}}
+                                                            {{__('testimonials.age')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="age" id="age" type="text"
-                                                                placeholder=" {{trans('testimonials.enter_age')}}"
+                                                                placeholder=" {{__('testimonials.enter_age')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -171,7 +171,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.country')}}
+                                                            {{__('testimonials.country')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <select
@@ -950,7 +950,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.gender')}}
+                                                            {{__('testimonials.gender')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
 
@@ -959,19 +959,19 @@
                                                                 name="gender" id="gender" type="text">
 
                                                                 <option value="">
-                                                                    {{trans('general.select_from_list')}}
+                                                                    {{__('general.select_from_list')}}
                                                                 </option>
 
                                                                 <option value="male">
-                                                                    {{trans('testimonials.male')}}
+                                                                    {{__('testimonials.male')}}
                                                                 </option>
 
                                                                 <option value="female">
-                                                                    {{trans('testimonials.female')}}
+                                                                    {{__('testimonials.female')}}
                                                                 </option>
 
                                                                 <option value="others">
-                                                                    {{trans('testimonials.others')}}
+                                                                    {{__('testimonials.others')}}
                                                                 </option>
 
                                                             </select>
@@ -984,13 +984,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.job_title_ar')}}
+                                                            {{__('testimonials.job_title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="job_title_ar" id="job_title_ar" type="text"
-                                                                placeholder=" {{trans('testimonials.enter_job_title_ar')}}"
+                                                                placeholder=" {{__('testimonials.enter_job_title_ar')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-danger"
@@ -1004,13 +1004,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.job_title_en')}}
+                                                            {{__('testimonials.job_title_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="job_title_en" id="job_title_en" type="text"
-                                                                placeholder=" {{trans('testimonials.enter_job_title_en')}}"
+                                                                placeholder=" {{__('testimonials.enter_job_title_en')}}"
                                                                 autocomplete="off"/>
                                                             <span class="form-text text-danger"
                                                                   id="job_title_en_error"></span>
@@ -1022,7 +1022,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.rating')}}
+                                                            {{__('testimonials.rating')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
 
@@ -1031,24 +1031,24 @@
                                                                 name="rating" id="rating" type="text">
 
                                                                 <option value="">
-                                                                    {{trans('general.select_from_list')}}
+                                                                    {{__('general.select_from_list')}}
                                                                 </option>
 
                                                                 <option value="1">
-                                                                    {{trans('testimonials.one_star')}}
+                                                                    {{__('testimonials.one_star')}}
                                                                 </option>
 
                                                                 <option value="2">
-                                                                    {{trans('testimonials.two_star')}}
+                                                                    {{__('testimonials.two_star')}}
                                                                 </option>
                                                                 <option value="3">
-                                                                    {{trans('testimonials.three_star')}}
+                                                                    {{__('testimonials.three_star')}}
                                                                 </option>
                                                                 <option value="4">
-                                                                    {{trans('testimonials.four_star')}}
+                                                                    {{__('testimonials.four_star')}}
                                                                 </option>
                                                                 <option value="5">
-                                                                    {{trans('testimonials.five_star')}}
+                                                                    {{__('testimonials.five_star')}}
                                                                 </option>
 
 
@@ -1063,13 +1063,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.opinion_ar')}}
+                                                            {{__('testimonials.opinion_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="6" dir="rtl"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="opinion_ar" id="opinion_ar" type="text"
-                                                                      placeholder=" {{trans('testimonials.enter_opinion_ar')}}"
+                                                                      placeholder=" {{__('testimonials.enter_opinion_ar')}}"
                                                                       autocomplete="off"></textarea>
                                                             <span class="form-text text-danger"
                                                                   id="opinion_ar_error"></span>
@@ -1081,13 +1081,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.opinion_en')}}
+                                                            {{__('testimonials.opinion_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="6" dir="ltr"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="opinion_en" id="opinion_en" type="text"
-                                                                      placeholder=" {{trans('testimonials.enter_opinion_en')}}"
+                                                                      placeholder=" {{__('testimonials.enter_opinion_en')}}"
                                                                       autocomplete="off"></textarea>
                                                             <span class="form-text text-danger"
                                                                   id="opinion_en_error"></span>
@@ -1118,17 +1118,14 @@
     </form>
 @endsection
 
-
 <link rel="stylesheet" type="text/css" href="{{asset('adminBoard/assets/css/msdropdown/dd.css')}}"/>
 <link rel="stylesheet" type="text/css" href="{{asset('adminBoard/assets/css/msdropdown/flags.css')}}"/>
 
-
 @push('js')
+
     <script src="{{asset('adminBoard/assets/js/msDropdown/jquery.dd.js')}}"></script>
     <script type="text/javascript">
-
             $("#country").msDropdown();
-
     </script>
 
     <script type="text/javascript">
@@ -1182,7 +1179,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

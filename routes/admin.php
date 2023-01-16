@@ -57,10 +57,12 @@ Route::group([
         /// Sliders routes
         Route::group(['prefix' => 'sliders'], function () {
             Route::get('/', 'SlidersController@index')->name('admin.sliders');
-            Route::get('/get-sliders', 'SlidersController@getSliders')->name('get.admin.sliders');
             Route::get('/create', 'SlidersController@create')->name('admin.sliders.create');
             Route::post('/store', 'SlidersController@store')->name('admin.slider.store');
+            Route::get('/trashed', 'SlidersController@trashed')->name('admin.slider.trashed');
             Route::post('/destroy', 'SlidersController@destroy')->name('admin.slider.destroy');
+            Route::post('/force-delete', 'SlidersController@forceDelete')->name('admin.slider.force.delete');
+            Route::post('/restore', 'SlidersController@restore')->name('admin.slider.restore');
             Route::get('/edit/{id?}', 'SlidersController@edit')->name('admin.slider.edit');
             Route::post('/update', 'SlidersController@update')->name('admin.slider.update');
             Route::post('/change-status', 'SlidersController@changeStatus')->name('admin.slider.change.status');
@@ -94,15 +96,13 @@ Route::group([
     /// users routes
     Route::group(['prefix' => 'users', 'middleware' => 'can:users'], function () {
         Route::get('/', 'UserController@index')->name('users');
-        Route::get('/get-users', 'UserController@getUsers')->name('get.users');
         Route::post('/destroy', 'UserController@destroy')->name('user.destroy');
         Route::post('/change-status', 'UserController@changeStatus')->name('user.change.status');
         Route::get('/create', 'UserController@create')->name('user.create');
         Route::post('store', 'UserController@store')->name('user.store');
         Route::get('/edit/{id?}', 'UserController@edit')->name('user.edit');
         Route::post('update', 'UserController@update')->name('user.update');
-        Route::get('/trashed-user', 'UserController@trashedUser')->name('users.trashed');
-        Route::get('/get-trashed-users', 'UserController@getTrashedUsers')->name('get.trashed.users');
+        Route::get('/trashed', 'UserController@trashed')->name('users.trashed');
         Route::post('/force-delete', 'UserController@forceDelete')->name('user.force.delete');
         Route::post('/restore', 'UserController@restore')->name('user.restore');
     });
@@ -123,16 +123,15 @@ Route::group([
     /// articles  routes
     Route::group(['prefix' => 'articles', 'middleware' => 'can:articles'], function () {
         Route::get('/', 'ArticlesController@index')->name('admin.articles');
-        Route::get('/get-articles', 'ArticlesController@getArticles')->name('admin.get.articles');
-        Route::post('/destroy', 'ArticlesController@destroy')->name('admin.articles.destroy');
-        Route::post('/change-status', 'ArticlesController@changeStatus')->name('admin.articles.change.status');
         Route::get('/create', 'ArticlesController@create')->name('admin.articles.create');
         Route::post('/store', 'ArticlesController@store')->name('admin.articles.store');
         Route::get('/edit/{id?}', 'ArticlesController@edit')->name('admin.articles.edit');
         Route::post('/update', 'ArticlesController@update')->name('admin.articles.update');
-        Route::get('/trashed-articles', 'ArticlesController@trashedArticles')->name('admin.articles.trashed');
+        Route::post('/destroy', 'ArticlesController@destroy')->name('admin.articles.destroy');
+        Route::get('/trashed', 'ArticlesController@trashed')->name('admin.articles.trashed');
         Route::post('/force-delete', 'ArticlesController@forceDelete')->name('admin.articles.force.delete');
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
+        Route::post('/change-status', 'ArticlesController@changeStatus')->name('admin.articles.change.status');
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -154,12 +153,15 @@ Route::group([
     /// testimonials routes
     Route::group(['prefix' => 'testimonials', 'middleware' => 'can:testimonials'], function () {
         Route::get('/', 'TestimonialController@index')->name('admin.testimonials');
-        Route::get('/create', 'TestimonialController@create')->name('admin.testimonials.create');
-        Route::post('/store', 'TestimonialController@store')->name('admin.testimonials.store');
-        Route::get('/edit/{id?}', 'TestimonialController@edit')->name('admin.testimonials.edit');
-        Route::post('/update', 'TestimonialController@update')->name('admin.testimonials.update');
-        Route::post('/destroy', 'TestimonialController@destroy')->name('admin.testimonials.destroy');
-        Route::post('/change-status', 'TestimonialController@changeStatus')->name('admin.testimonials.change-status');
+        Route::get('/create', 'TestimonialController@create')->name('admin.testimonial.create');
+        Route::post('/store', 'TestimonialController@store')->name('admin.testimonial.store');
+        Route::get('/edit/{id?}', 'TestimonialController@edit')->name('admin.testimonial.edit');
+        Route::post('/update', 'TestimonialController@update')->name('admin.testimonial.update');
+        Route::post('/destroy', 'TestimonialController@destroy')->name('admin.testimonial.destroy');
+        Route::get('/trashed', 'TestimonialController@trashed')->name('admin.testimonial.trashed');
+        Route::post('/force-delete', 'TestimonialController@forceDelete')->name('admin.testimonial.force.delete');
+        Route::post('/restore', 'TestimonialController@restore')->name('admin.testimonial.restore');
+        Route::post('/change-status', 'TestimonialController@changeStatus')->name('admin.testimonial.change-status');
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -225,7 +227,6 @@ Route::group([
     /// photo albums routes
     Route::group(['prefix' => 'photo-albums', 'middleware' => 'can:photos'], function () {
         Route::get('/', 'PhotoAlbumsController@index')->name('admin.photo.albums');
-        Route::get('get-photo-albums', 'PhotoAlbumsController@getPhotoAlbums')->name('get.admin.photo.albums');
         Route::get('/create', 'PhotoAlbumsController@create')->name('admin.photo.albums.create');
         Route::post('/store', 'PhotoAlbumsController@store')->name('admin.photo.albums.store');
         Route::post('/destroy', 'PhotoAlbumsController@destroy')->name('admin.photo.albums.destroy');
@@ -240,11 +241,19 @@ Route::group([
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// team routes
     Route::group(['prefix' => 'teams', 'middleware' => 'can:teams'], function () {
-        Route::get('/', 'TeamController@team')->name('admin.teams');
-        Route::post('store', 'TeamController@store')->name('admin.store.team.member');
-        Route::post('destroy', 'TeamController@destroy')->name('admin.destroy.team.member');
+        Route::get('/', 'TeamController@index')->name('admin.teams');
+        Route::get('/create', 'TeamController@create')->name('admin.team.member.create');
+        Route::post('store', 'TeamController@store')->name('admin.team.member.store');
+        route::get('/edit/{id?}', 'TeamController@edit')->name('admin.team.member.edit');
+        route::post('/update', 'TeamController@update')->name('admin.team.member.update');
+        Route::get('/trashed', 'TeamController@trashed')->name('admin.team.member.trashed');
+        Route::post('/destroy', 'TeamController@destroy')->name('admin.destroy.team.member');
+        Route::post('/force-delete', 'TeamController@forceDelete')->name('admin.team.member.force.delete');
+        Route::post('/restore', 'TeamController@restore')->name('admin.team.member.restore');
+        Route::post('/change-status', 'TeamController@changeStatus')->name('admin.team.member.change.status');
     });
 
+<<<<<<< HEAD
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// QA routes
@@ -262,6 +271,8 @@ Route::group([
     });
 
 
+=======
+>>>>>>> 2960b461ad2387a971a7b60a4623cc080a61d88b
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////

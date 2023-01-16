@@ -2,7 +2,7 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{{route('admin.testimonials.update')}}" method="POST" id="form_opinions_update">
+    <form class="form" action="{{route('admin.testimonial.update')}}" method="POST" id="form_opinions_update">
         @csrf
         <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
@@ -124,38 +124,6 @@
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Group-->
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('testimonials.language')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-
-                                                            <select
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                name="language" id="language" type="text">
-
-                                                                <option
-                                                                    value="ar" {{$testimonial->language == trans('general.ar') ?'selected':'' }}>
-                                                                    {{trans('general.ar')}}
-                                                                </option>
-
-                                                                <option
-                                                                    value="en" {{$testimonial->language == trans('general.en') ?'selected':'' }}>
-                                                                    {{trans('general.en')}}
-                                                                </option>
-                                                                <option
-                                                                    value="ar_en" {{$testimonial->language == trans('general.ar_en') ?'selected':'' }}>
-                                                                    {{trans('general.ar_en')}}
-                                                                </option>
-
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="language_error"></span>
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
@@ -1955,9 +1923,17 @@
     </form>
 @endsection
 
-@push('js')
-    <script type="text/javascript">
+<link rel="stylesheet" type="text/css" href="{{asset('adminBoard/assets/css/msdropdown/dd.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{asset('adminBoard/assets/css/msdropdown/flags.css')}}"/>
 
+@push('js')
+
+    <script src="{{asset('adminBoard/assets/js/msDropdown/jquery.dd.js')}}"></script>
+    <script type="text/javascript">
+        $("#country").msDropdown();
+    </script>
+
+    <script type="text/javascript">
         ////////////////////////////////////////////////////
         var testimonial_photo = new KTImageInput('kt_testimonial_photo');
 

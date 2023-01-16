@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class testimonial extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'testimonials';
     protected $fillable = [
         'photo', 'language', 'opinion_ar', 'opinion_en', 'name_ar', 'name_en',
@@ -35,7 +38,7 @@ class testimonial extends Model
             return trans('general.male');
         } elseif ($value == 'female') {
             return trans('general.female');
-        }elseif ($value == 'others') {
+        } elseif ($value == 'others') {
             return trans('general.others');
         }
 

@@ -15,26 +15,25 @@ return [
     'permissions' => 'الصلاحيات',
     'add_new_permission' => 'إضافة صلاحية جديدة',
     'support_center' => 'مركز الدعم',
-    'landing_page' => 'الصفحة الرئيسية للموقع',
+    'landing_page' => 'صفحة الهبوط',
     'index' => 'رئيسية الموقع',
-    'footer_images' => 'صور الفوتر',
-    'team' => 'الفريق',
     'static_strings' => 'النصوص الثابتة',
+
     'sliders' => 'السلايدر',
+    'trashed_sliders' => 'السلايدرات المحذوفة',
     'add_new_slider' => 'إضافة سلايدر جديد',
-    'why_choose_us' => 'لماذا اخترتنا',
-    'notifications' => 'الإشعارات',
-    'registration_policy' => 'سياسة التسجيل',
+
     'articles' => 'المقالات',
     'trashed_articles' => 'المقالات المحذوفة',
     'add_new_article' => 'اضافة مقال جديد',
+
     'projects' => 'المشاريع',
     'trashed_projects' => 'المشاريع المحذوفة',
     'add_new_project' => 'اضافة مشروع جديد',
 
-    'testimonials' => 'الشهادات',
-    'trashed_testimonials' => 'الشهادات المحذوفة',
-    'add_new_testimonial' => 'اضافة شهادة جديد',
+    'testimonials' => 'الشهادات والتوصيات',
+    'trashed_testimonials' => 'الشهادات والتوصيات المحذوفة',
+    'add_new_testimonial' => 'اضافة توصية جديدة',
 
     'publications' => 'المنشورات',
     'trashed_publications' => 'المنشورات المحذوفة',
@@ -61,6 +60,6 @@ return [
 
     'teams' => 'اعضاء الفريق',
     'trashed_teams' => ' اعضاء الفريق المحذوفة',
-    'add_new_teams' => 'إضافة عضو للفريق',
+    'add_new_team_member' => 'إضافة عضو للفريق',
 
 ];

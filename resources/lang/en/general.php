@@ -53,11 +53,11 @@ return [
     'change_image' => 'Change image',
     'image_format_allow' => 'Allowed file types jpg,jpeg,png',
     'file_format_allow' => 'Allowed file types pdf',
-    'add_success_message' => ' Added Successfully',
-    'delete_success_message' => ' deleted Successfully',
-    'update_success_message' => ' updated Successfully',
+    'add_success_message' => 'Added Successfully',
+    'delete_success_message' => 'Deleted Successfully',
+    'update_success_message' => 'Updated Successfully',
     'upload_success_message' => ' Upload Successfully',
-    'restore_success_message' => ' Restored Successfully',
+    'restore_success_message' => 'Restored Successfully',
     'send_success_message' => ' Send Successfully',
 
 
@@ -126,11 +126,5 @@ return [
     'character_limit_reached'=>'character limit reached',
     'character_limit'=>'character limit',
     'remaining'=>'remaining',
-    ///////////////////////////////////////////////////////////////
-    ///  Export File Name
-    'contest_enrolled_list'=>'contest enrolled list',
-    'course_enrolled_list'=>'course enrolled list',
-    'summer_camp_enrolled_list'=>'summer camp enrolled list',
-    'program_enrolled_list'=>'program enrolled list',
 
 ];

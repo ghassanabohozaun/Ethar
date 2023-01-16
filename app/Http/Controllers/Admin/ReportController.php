@@ -28,7 +28,6 @@ class ReportController extends Controller
     public function store(ReportRequest $request)
     {
 
-
         // save File
         if ($request->hasFile('file')) {
             $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/reports');
@@ -42,12 +41,10 @@ class ReportController extends Controller
            return   $this->returnError(' لا  يوجد تقريق لهذه السنة ',500);
         }
 
-        $lang_en = setting()->site_lang_en;
         Report::create([
             'file' => $file,
             'year' => $request->year,
             'type' => $request->type,
-            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));

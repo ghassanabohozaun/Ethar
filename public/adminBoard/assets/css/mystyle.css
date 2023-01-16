@@ -5,24 +5,26 @@
 }
 
 ::-webkit-scrollbar {
-    /*width: 1px;*/
+    width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #9a9590;
+    box-shadow: inset 0 0 2px #9a9590;
     border-radius: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #cecac5;
+    background: #C0C0C0;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #e5e5e5;
+    background: #888686;
 }
+
+
 
 /* End Body scroller */
 /* Start switch*/

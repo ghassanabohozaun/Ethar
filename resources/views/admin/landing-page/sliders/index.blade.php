@@ -37,6 +37,11 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
+                <a href="{!! route('admin.slider.trashed') !!}"
+                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">
+                    <i class="fa fa-trash"></i>
+                </a>
+                &nbsp;
 
                 <a href="{{route('admin.sliders.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
