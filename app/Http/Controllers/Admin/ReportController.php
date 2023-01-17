@@ -24,13 +24,23 @@ class ReportController extends Controller
     // create
     public function create()
     {
-        $title = __('menu.add_new_reports');
+        $title = __('menu.add_new_report');
         return view('admin.reports.create',compact('title'));
     }
 
     // store
     public function store(ReportRequest $request)
     {
+
+        $report = Report::where('year' ,$request->year)->where('type',$request->type)->first();
+        if($report){
+           return   $this->returnError(__('reports.this_type_of_report_has_been_added_for_this_year'),500);
+        }
+
+        $report = Report::onlyTrashed()->where('year' ,$request->year)->where('type',$request->type)->first();
+        if($report){
+           return   $this->returnError(__('reports.has_delete'),500);
+        }
 
         // save File
         if ($request->hasFile('file')) {
@@ -39,15 +49,13 @@ class ReportController extends Controller
             $file = '';
         }
 
-        $report = Report::where('year' ,$request->year)->where('type',$request->type)->first();
-        if($report){
-           return   $this->returnError(__('reports.this_type_of_report_has_been_added_for_this_year'),500);
-        }
+
 
         Report::create([
             'file' => $file,
             'year' => $request->year,
             'type' => $request->type,
+            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
