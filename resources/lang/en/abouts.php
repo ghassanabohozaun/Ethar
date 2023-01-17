@@ -24,4 +24,5 @@ return [
 'details_ar_required'=>' details in Arabic is required',
 'details_en_required'=>' details in English is required',
 'type_id_required'=>' publication date is required',
+
 ];
