@@ -144,7 +144,7 @@
 
         $('#form_about_store').on('submit', function (e) {
             e.preventDefault();
-
+ 
             ////////////////////////////////////////////////////////////////////
             $('#photo_error').text('');
             $('#title_ar_error').text('');

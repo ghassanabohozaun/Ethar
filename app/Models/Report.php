@@ -14,17 +14,4 @@ class Report extends Model
         'status' , 'type' , 'file' ,'year'
     ];
 
-    public function getTypeAttribute($value)
-    {
-        if (Lang() == 'ar') {
-            if ($value == 'Financial') {
-                return 'مالي';
-            } elseif($value == 'Administrative') {
-                return 'اداري ';
-            }
-        }
-
-        return $value;
-
-    }
 }

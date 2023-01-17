@@ -19,6 +19,11 @@
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
                                        <input type="hidden" name="hidden_photo" value="hidden_photo">
+                                       
+                                       <input value="{{setting()->site_lang_en}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="english" id="english" type="hidden"
+                                       autocomplete="off"/>
                             </div>
                         </div>
                         <!--end::Group-->

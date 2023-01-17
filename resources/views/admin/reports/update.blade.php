@@ -73,21 +73,11 @@
                                     </div>
                                 </div>
 
-                                <ul class="nav  nav-tabs" id="myTab2" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="article_settings_tab" data-toggle="tab"
-                                           href="#article_settings">
-                                            <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{trans('reports.settings_tab')}}</span>
-                                        </a>
-                                    </li>
 
-                                </ul>
 
 
                                 <div class="tab-content mt-5">
-                                    @include('admin.reports.update_tabs.settings')
-
+                                    {{-- @include('admin.reports.update_tabs.settings') --}}
                                 </div>
 
 

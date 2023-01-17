@@ -83,7 +83,10 @@
                                                     @forelse($reports as $report)
                                                         <tr>
 
-                                                            <td>{{ $report->type }}</td>
+                                                            <td>
+                                                                {{ $report->type == 'Financial'?__('reports.financial'):'' }}
+                                                                {{ $report->type == 'Administrative'?__('reports.administrative'):'' }}
+                                                            </td>
 
                                                             <td>{{ $report->year }}</td>
 

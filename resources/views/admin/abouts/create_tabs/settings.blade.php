@@ -8,6 +8,22 @@
 
                     <!--begin::body-->
                     <div class="my-5">
+                          <!--begin::Group-->
+                          <div class=" form-group row d-none">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <input value="{{setting()->site_lang_en}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="english" id="english" type="hidden"
+                                       autocomplete="off"/>
+
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
+                 
 
                         <!--begin::Group-->
                         <div class="form-group row">
