@@ -1,5 +1,5 @@
 <div class="tab-pane fade  show active" id="project_settings" role="tabpanel"
-     aria-labelledby="project_settings_tab">
+     aria-labelledby="settings_tab">
     <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
         <div class="col-xl-12 col-xxl-10">
 
@@ -8,6 +8,20 @@
 
                     <!--begin::body-->
                     <div class="my-5">
+                         <!--begin::Group-->
+                         <div class=" form-group row d-none">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <input value="{{setting()->site_lang_en}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="english" id="english" type="hidden"
+                                       autocomplete="off"/>
+
+                            </div>
+                        </div>
+                        <!--end::Group-->
 
                         <!--begin::Group-->
                         <div class="form-group row">
@@ -117,23 +131,9 @@
                                     class="form-control  form-control-lg"
                                     name="type" id="type" type="text">
 
-                                    <option value="current">
-                                        @if(Lang() == 'ar')
-                                        الحالي
-                                        @elseif(Lang() == 'en')
-                                        current
-                                        @endif
+                                    <option value="current">{{__('projects.current')}}</option>
 
-                                    </option>
-
-                                    <option value="previous">
-
-                                        @if(Lang() == 'ar')
-                                        السابق
-                                        @elseif(Lang() == 'en')
-                                        previous
-                                        @endif
-                                    </option>
+                                    <option value="previous">{{__('projects.previous')}}</option>
 
                                 </select>
                                 <span class="form-text text-danger"

@@ -100,8 +100,8 @@
                                                             @endif
                                                             <td>{{ $project->writer }}</td>
                                                             <td>{{ $project->date }}</td>
-                                                            <td>{{ $project->type }}</td>
-
+                                                            <td>
+                                                                {{ $project->type == 'current'? __('projects.current') :  __('projects.previous') }}</td>
 
                                                             <td>
                                                                 <div class="cst-switch switch-sm">

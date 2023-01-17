@@ -15,11 +15,18 @@
                                 ID
                             </label>
                             <div class="col-lg-9 col-xl-9">
+
                                 <input value="{{$project->id}}"
                                        class="form-control form-control-solid form-control-lg"
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
+
                                        <input type="hidden" name="hidden_photo" value="hidden_photo">
+
+                                       <input value="{{setting()->site_lang_en}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="english" id="english" type="hidden"
+                                       autocomplete="off"/>
                             </div>
                         </div>
                         <!--end::Group-->
@@ -132,20 +139,12 @@
                                     class="form-control  form-control-lg"
                                     name="type" id="type" type="text">
 
-                                    <option value="current" {{$project->type == 'current'?'selected':''}}>
-                                        @if(Lang() == 'ar')
-                                        الحالي
-                                        @elseif(Lang() == 'en')
-                                        current
-                                        @endif
+                                    <option value="current" {{$project->type == 'current' ? 'selected' : '' }}>
+                                        {{__('projects.current')}}
                                     </option>
 
-                                    <option value="previous" {{$project->type == 'previous'?'selected':''}}>
-                                        @if(Lang() == 'ar')
-                                        السابق
-                                        @elseif(Lang() == 'en')
-                                        previous
-                                        @endif
+                                    <option value="previous" {{$project->type == 'previous' ? 'selected' : '' }}>
+                                        {{__('projects.previous')}}
                                     </option>
 
                                 </select>

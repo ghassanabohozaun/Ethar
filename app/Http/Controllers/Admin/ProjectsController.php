@@ -23,7 +23,7 @@ class ProjectsController extends Controller
     public function create()
     {
         $title = __('menu.add_new_project');
-        return view('admin.projects.create');
+        return view('admin.projects.create' , compact('title'));
     }
 
     public function store(ProjectsRequest $request)
@@ -58,6 +58,7 @@ class ProjectsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
+            'status' =>'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));

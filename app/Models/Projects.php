@@ -15,17 +15,6 @@ class Projects extends Model
         'photo', 'language', 'file', 'date', 'writer', 'type',
     ];
 
-    public function getTypeAttribute($value)
-    {
-        if (Lang() == 'ar') {
-            if ($value == 'previous') {
-                return 'السابق';
-            } else {
-                return 'الحالي ';
-            }
-        } else {
-            return $value;
-        }
-    }
+
 
 }

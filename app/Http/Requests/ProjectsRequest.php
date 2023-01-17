@@ -23,28 +23,29 @@ class ProjectsRequest extends FormRequest
      */
     public function rules()
     {
-
-            if (setting()->site_lang_en == 'on') {
                 return [
                     'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
-                    'title_ar' => 'required|unique:articles',
-                    'title_en' => 'required|unique:articles',
+                    'title_ar' =>  'required',
+                    'title_en' =>['required_if:english,on'],
                     'details_ar' => 'required',
-                    'details_en' => 'required',
+                    'details_en' => ['required_if:english,on'],
                     'date' => 'required',
                     'writer' => 'required',
                     'file'   => ['mimes:pdf']
                 ];
-            } else {
-                return [
-                    'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
-                    'title_ar' => 'required|unique:articles',
-                    'details_ar' => 'required',
-                    'date' => 'required',
-                    'writer' => 'required',
-                    'file'   => ['mimes:pdf']
-                ];
-            }
+    }
 
+    public function messages()
+    {
+        return [
+            'photo.required_without' => __('projects.photo_required') ,
+            'title_ar.required' =>__('projects.title_ar_required'),
+            'title_en.required_if' =>__('projects.title_en_required'),
+            'details_ar.required' =>__('projects.details_ar_required'),
+            'details_en.required_if' =>__('projects.details_en_required'),
+            'date.required' =>__('projects.date_required'),
+            'writer.required' =>__('projects.writer_required'),
+            'file.mimes' =>__('projects.file_mimes'),
+        ];
     }
 }
