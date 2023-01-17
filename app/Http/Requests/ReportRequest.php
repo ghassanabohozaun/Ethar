@@ -29,4 +29,14 @@ class ReportRequest extends FormRequest
             'file'   => ['required_without:hidden_file','mimes:pdf']
         ];
     }
+
+
+    public function messages()
+    {
+        return [
+            'required' => trans('reports.required'),
+            'mimes' => trans('reports.mimes'),
+            'file.required_without' => trans('reports.file_required'),
+        ];
+    }
 }

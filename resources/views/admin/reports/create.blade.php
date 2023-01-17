@@ -91,9 +91,14 @@
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="type" id="type" type="text">
                                                                 <option
-                                                                    value="Financial">{{__('reports.financial')}}</option>
+                                                                    value="">{{__('general.select_from_list')}}
+                                                                </option>
                                                                 <option
-                                                                    value="Administrative">{{__('reports.administrative')}}</option>
+                                                                    value="Financial">{{__('reports.financial')}}
+                                                                </option>
+                                                                <option
+                                                                    value="Administrative">{{__('reports.administrative')}}
+                                                                </option>
                                                             </select>
                                                             <span class="form-text text-danger" id="type_error"></span>
                                                         </div>
@@ -115,7 +120,8 @@
                                                                 $lastYear = $firstYear + 6;
                                                                 ?>
                                                                 <option
-                                                                    value="">{{__('general.select_from_list')}}</option>
+                                                                    value="">{{__('general.select_from_list')}}
+                                                                </option>
                                                                 @for ($year= $firstYear; $year<= $lastYear; $year++)
                                                                     <option value="{{$year}}">{{ $year }} </option>
                                                                 @endfor
@@ -166,19 +172,6 @@
 @push('js')
 
     <script type="text/javascript">
-
-
-        //Datepicker
-        $('#date').datepicker({
-            format: "yyyy-mm-dd",
-            todayBtn: true,
-            clearBtn: false,
-            orientation: "bottom auto",
-            language: "{{ LaravelLocalization::getCurrentLocale()}}",
-            autoclose: true,
-            todayHighlight: true,
-        });
-
 
         $('#form_report_store').on('submit', function (e) {
             e.preventDefault();

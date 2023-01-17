@@ -4,8 +4,8 @@
 
     <form class="form" action="{{route('admin.report.update')}}" method="POST" id="form_report_update"
           enctype="multipart/form-data">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -74,10 +74,127 @@
                                 </div>
 
 
+<<<<<<< HEAD
 
 
                                 <div class="tab-content mt-5">
                                     {{-- @include('admin.reports.update_tabs.settings') --}}
+=======
+                                <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
+                                    <div class="col-xl-12 col-xxl-10">
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-9" style="height: 550px">
+
+                                                <!--begin::body-->
+                                                <div class="my-5">
+
+                                                    <!--begin::Group-->
+                                                    <div class=" form-group row d-none">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            ID
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input value="{{$report->id}}"
+                                                                   class="form-control form-control-solid form-control-lg"
+                                                                   name="id" id="id" type="hidden"
+                                                                   autocomplete="off"/>
+                                                            <input type="hidden" name="hidden_file" value="hidden_file">
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    {{-- Type --}}
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('reports.type')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+
+                                                            <select
+                                                                class="form-control  form-control-lg"
+                                                                name="type" id="type" type="text">
+                                                                <option
+                                                                    value="">{{__('general.select_from_list')}}
+                                                                </option>
+                                                                <option
+                                                                    value="Financial" {{$report->type=='Financial' ? 'selected' : '' }}>
+                                                                    {{__('reports.financial')}}
+                                                                </option>
+
+                                                                <option
+                                                                    value="Administrative" {{$report->type=='Administrative'? 'selected' : '' }}>
+                                                                    {{__('reports.administrative')}}
+                                                                </option>
+
+                                                            </select>
+                                                            <span class="form-text text-danger"
+                                                                  id="gender_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    {{-- Year --}}
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('reports.year')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            {{-- {{ $planMaster->end_fin_year == $year ? 'selected' : '' }} --}}
+                                                            <select
+                                                                class="form-control  form-control-lg"
+                                                                name="year" id="year" type="text">
+                                                                <?php
+                                                                $firstYear = (int)date('Y') - 2;
+                                                                $lastYear = $firstYear + 6;
+                                                                ?>
+                                                                <option value="">{{__('general.select_from_list')}}
+                                                                </option>
+
+                                                                @for ($year= $firstYear; $year<= $lastYear; $year++)
+                                                                    <option
+                                                                        value="{{$year}}" {{ $report->year == $year ? 'selected' : '' }} >{{ $year }}</option>
+                                                                @endfor
+                                                            </select>
+                                                            <span class="form-text text-danger"
+                                                                  id="gender_error"></span>
+                                                        </div>
+
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+                                                    {{-- File --}}
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{trans('reports.file')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+
+                                                            <input
+                                                                class="form-control  form-control-lg"
+                                                                type="file" name="file" id="file"
+                                                                placeholder=""/>
+                                                            <span
+                                                                class="form-text text-muted">{{trans('general.file_format_allow')}}
+                                                          </span>
+                                                            <span class="form-text text-danger"
+                                                                  id="course_details_error"></span>
+                                                        </div>
+
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+>>>>>>> cdcc28370baf394409db2d0c16d26e925ff42d36
                                 </div>
 
 
