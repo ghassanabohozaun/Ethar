@@ -8,6 +8,20 @@
 
                     <!--begin::body-->
                     <div class="my-5">
+                         <!--begin::Group-->
+                         <div class=" form-group row d-none">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <input value="{{setting()->site_lang_en}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="english" id="english" type="hidden"
+                                       autocomplete="off"/>
+
+                            </div>
+                        </div>
+                        <!--end::Group-->
 
                         <!--begin::Group-->
                         <div class="form-group row">
@@ -117,41 +131,13 @@
                                     class="form-control  form-control-lg"
                                     name="type" id="type" type="text">
 
-                                    <option value="Advertisements">
-                                        @if(Lang() == 'ar')
-                                        الإعلانات
-                                        @elseif(Lang() == 'en')
-                                        Advertisements
-                                        @endif
+                                    <option value="Advertisements">{{__('publications.Advertisements')}}</option>
 
-                                    </option>
+                                    <option value="Brochures">{{__('publications.Brochures')}}</option>
 
-                                    <option value="Brochures">
+                                    <option value="CaseStudy"> {{__('publications.CaseStudy')}}</option>
 
-                                        @if(Lang() == 'ar')
-                                        نشرة
-                                        @elseif(Lang() == 'en')
-                                        Brochures
-                                        @endif
-                                    </option>
-
-                                    <option value="CaseStudy">
-                                        @if(Lang() == 'ar')
-                                        دراسة الحالة
-                                        @elseif(Lang() == 'en')
-                                        Case Study
-                                        @endif
-
-                                    </option>
-
-                                    <option value="ScientificArticles">
-
-                                        @if(Lang() == 'ar')
-                                        مقالات علمية
-                                        @elseif(Lang() == 'en')
-                                        Scientific Articles
-                                        @endif
-                                    </option>
+                                    <option value="ScientificArticles">{{__('publications.ScientificArticles')}}</option>
 
                                 </select>
 

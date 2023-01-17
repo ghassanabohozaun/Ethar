@@ -100,7 +100,12 @@
                                                             @endif
                                                             <td>{{ $publication->writer }}</td>
                                                             <td>{{ $publication->date }}</td>
-                                                            <td>{{ $publication->type }}</td>
+                                                            <td>
+                                                                {{$publication->type == 'Advertisements'?__('publications.Advertisements'):''}}
+                                                                {{$publication->type == 'Brochures'?__('publications.Brochures'):''}}
+                                                                {{$publication->type == 'CaseStudy'?__('publications.CaseStudy'):''}}
+                                                                {{$publication->type == 'ScientificArticles'?__('publications.ScientificArticles'):''}}
+                                                            </td>
 
 
                                                             <td>

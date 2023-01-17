@@ -17,6 +17,7 @@ return [
 'no_found' => 'Not Found Projects' ,
 'current' => 'Current' ,
 'previous' => 'Previous' ,
+
 // validate message
 'photo_required' => 'Project image is required' ,
 'title_ar_required'=>'Project title in Arabic is required',

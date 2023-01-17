@@ -24,8 +24,8 @@ class PublicationsController extends Controller
     // create
     public function create()
     {
-        $title = __('menu.add_new_publications');
-        return view('admin.publications.create');
+        $title = __('menu.add_new_publication');
+        return view('admin.publications.create' , compact('title'));
     }
 
     // store
@@ -61,7 +61,7 @@ class PublicationsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
-            'show' => 'on',
+            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));

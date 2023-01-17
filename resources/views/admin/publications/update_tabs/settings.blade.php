@@ -19,7 +19,13 @@
                                        class="form-control form-control-solid form-control-lg"
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
+
                                        <input type="hidden" name="hidden_photo" value="hidden_photo">
+
+                                        <input value="{{setting()->site_lang_en}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="english" id="english" type="hidden"
+                                       autocomplete="off"/>
                             </div>
                         </div>
                         <!--end::Group-->
@@ -130,43 +136,16 @@
 
                                 <select
                                 class="form-control  form-control-lg"
-                                name="c" id="type" type="text">
+                                name="type" id="type" type="text">
 
-                                <option value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>
-                                    @if(Lang() == 'ar')
-                                    الإعلانات
-                                    @elseif(Lang() == 'en')
-                                    Advertisements
-                                    @endif
+                                <option value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>{{__('publications.Advertisements')}}</option>
 
-                                </option>
+                                <option value="Brochures"{{$publication->type == 'Brochures'?'selected':''}}>{{__('publications.Brochures')}}</option>
 
-                                <option value="Brochures" {{$publication->type == 'Brochures'?'selected':''}}>
+                                <option value="CaseStudy"{{$publication->type == 'CaseStudy'?'selected':''}}> {{__('publications.CaseStudy')}}</option>
 
-                                    @if(Lang() == 'ar')
-                                    نشرة
-                                    @elseif(Lang() == 'en')
-                                    Brochures
-                                    @endif
-                                </option>
+                                <option value="ScientificArticles" {{$publication->type == 'ScientificArticles'?'selected':''}}>{{__('publications.ScientificArticles')}}</option>
 
-                                <option value="CaseStudy"  {{$publication->type == 'CaseStudy'?'selected':''}}>
-                                    @if(Lang() == 'ar')
-                                    دراسة الحالة
-                                    @elseif(Lang() == 'en')
-                                    Case Study
-                                    @endif
-
-                                </option>
-
-                                <option value="ScientificArticles" {{$publication->type == 'ScientificArticles'?'selected':''}}>
-
-                                    @if(Lang() == 'ar')
-                                    مقالات علمية
-                                    @elseif(Lang() == 'en')
-                                    Scientific Articles
-                                    @endif
-                                </option>
 
                             </select>
                                 <span class="form-text text-danger"
