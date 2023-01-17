@@ -19,7 +19,7 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.report.index')}}" class="text-muted">
-                                {{trans('menu.reports')}}
+                                {{__('menu.reports')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
@@ -39,7 +39,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
                 </div>
                 <!--end::Toolbar-->
@@ -84,18 +84,18 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('reports.type')}}
+                                                            {{__('reports.type')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-
                                                             <select
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="type" id="type" type="text">
-                                                                <option value="Financial">{{trans('reports.financial')}}</option>
-                                                                <option value="Administrative">{{trans('reports.administrative')}}</option>
+                                                                <option
+                                                                    value="Financial">{{__('reports.financial')}}</option>
+                                                                <option
+                                                                    value="Administrative">{{__('reports.administrative')}}</option>
                                                             </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="type_error"></span>
+                                                            <span class="form-text text-danger" id="type_error"></span>
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
@@ -103,7 +103,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('reports.year')}}
+                                                            {{__('reports.year')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
 
@@ -114,7 +114,8 @@
                                                                 $firstYear = (int)date('Y') - 2;
                                                                 $lastYear = $firstYear + 6;
                                                                 ?>
-                                                                <option value="">{{trans('general.select_from_list')}}</option>
+                                                                <option
+                                                                    value="">{{__('general.select_from_list')}}</option>
                                                                 @for ($year= $firstYear; $year<= $lastYear; $year++)
                                                                     <option value="{{$year}}">{{ $year }} </option>
                                                                 @endfor
@@ -128,14 +129,15 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('reports.file')}}
+                                                            {{__('reports.file')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <input class="form-control form-control-solid form-control-lg"
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
                                                                 type="file" name="file" id="file"
                                                                 placeholder=""/>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.file_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.file_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="file_error"></span>
@@ -207,7 +209,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

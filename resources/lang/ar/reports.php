@@ -13,4 +13,6 @@ return [
     'financial'=>'تقرير مالي',
     'administrative'=>'تقرير اداري',
 
+    'this_type_of_report_has_been_added_for_this_year'=>'هذا النوع من التقرير تم اضافه لهذه  السنة مسبقا',
+
 ];

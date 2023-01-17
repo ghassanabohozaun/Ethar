@@ -3,8 +3,8 @@
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ProjectsController;
 use App\Http\Controllers\Admin\PublicationsController;
-use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\QAController;
+use App\Http\Controllers\Admin\ReportController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -253,11 +253,10 @@ Route::group([
         Route::post('/change-status', 'TeamController@changeStatus')->name('admin.team.member.change.status');
     });
 
-<<<<<<< HEAD
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// QA routes
-    Route::group(['prefix' => 'QA', 'middleware' => 'can:abouts'], function () {
+    Route::group(['prefix' => 'QA', 'middleware' => 'can:qas'], function () {
         Route::get('/', [QAController::class, 'index'])->name('admin.QA.index');
         Route::get('/create', [QAController::class, 'create'])->name('admin.QA.create');
         Route::post('/store', [QAController::class, 'store'])->name('admin.QA.store');
@@ -271,8 +270,6 @@ Route::group([
     });
 
 
-=======
->>>>>>> 2960b461ad2387a971a7b60a4623cc080a61d88b
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////

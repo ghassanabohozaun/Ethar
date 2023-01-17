@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\File;
 class ReportController extends Controller
 {
     use GeneralTrait;
+
+    // create
     public function index()
     {
         $reports = Report::orderByDesc('created_at')->paginate(15);
@@ -19,12 +21,14 @@ class ReportController extends Controller
         return view('admin.reports.index', compact('reports', 'title'));
     }
 
+    // create
     public function create()
     {
         $title = __('menu.add_new_reports');
-        return view('admin.reports.create');
+        return view('admin.reports.create',compact('title'));
     }
 
+    // store
     public function store(ReportRequest $request)
     {
 
@@ -35,10 +39,9 @@ class ReportController extends Controller
             $file = '';
         }
 
-
         $report = Report::where('year' ,$request->year)->where('type',$request->type)->first();
         if($report){
-           return   $this->returnError(' لا  يوجد تقريق لهذه السنة ',500);
+           return   $this->returnError(__('reports.this_type_of_report_has_been_added_for_this_year'),500);
         }
 
         Report::create([
@@ -50,12 +53,14 @@ class ReportController extends Controller
         return $this->returnSuccessMessage(__('general.add_success_message'));
     }
 
+    // edit
     public function edit($id)
     {
         $report = Report::findOrFail($id);
         return view('admin.reports.update', compact('report'));
     }
 
+    // update
     public function update(ReportRequest $request)
     {
 
@@ -64,15 +69,12 @@ class ReportController extends Controller
         // save File
 
         if ($request->hasFile('file')) {
-
             $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/reports');
 
             $file_path = public_path("\adminBoard\uploadedFiles\\reports\\") . $report->file;
-
             if (File::exists($file_path))
             {
               File::delete($file_path);
-
             }
         } else {
             $file = $report->file;
@@ -87,6 +89,7 @@ class ReportController extends Controller
         return $this->returnSuccessMessage(__('general.update_success_message'));
     }
 
+    // trashed
     public function trashed()
     {
         $title = __('menu.trashed_reports');
@@ -95,8 +98,7 @@ class ReportController extends Controller
     }
 
 
-    ///////////////////////////////////////////////
-    /// destroy
+    // destroy
     public function destroy(Request $request)
     {
         try {
@@ -113,8 +115,8 @@ class ReportController extends Controller
         }//end catch
     }
 
-    /////////////////////////////////////////
-    ///  restore
+
+    //  restore
     public function restore(Request $request)
     {
         try {
@@ -131,8 +133,7 @@ class ReportController extends Controller
         }//end catch
     }
 
-    /////////////////////////////////////////
-    ///  force delete
+    //  force delete
     public function forceDelete(Request $request)
     {
         try {

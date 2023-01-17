@@ -14,4 +14,6 @@ return [
     'financial'=>'Financial Report',
     'administrative'=>'Administrative Report',
 
+    'this_type_of_report_has_been_added_for_this_year'=>'This type of report has been added for this year',
+
 ];

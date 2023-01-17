@@ -20,7 +20,7 @@ return [
         'yearly-reports' => 'app.yearly-reports',
         'abouts' => 'app.abouts',
         'teams' => 'app.teams',
-
+        'qas' => 'app.qas',
 
     ]
 ];

@@ -74,32 +74,55 @@
                                 </div>
 
                                 <ul class="nav nav-tabs" id="myTab2" role="tablist">
-
                                     <li class="nav-item">
-                                        <a class="active nav-link" id="details_ar_tab" data-toggle="tab"
+                                        <a class="nav-link active" id="details_ar_tab" data-toggle="tab"
                                            href="#QA_details_ar">
-                                            <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('QA.details_ar_tab')}}</span>
+                                            <span class="nav-icon"><i class="flaticon2-settings"></i></span>
+                                            <span class="nav-text">{{__('articles.article_settings_tab')}}</span>
                                         </a>
                                     </li>
-                                    @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
                                         <a class="nav-link" id="details_en_tab" data-toggle="tab"
                                            href="#QA_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('QA.details_en_tab')}}</span>
+                                            <span class="nav-text">{{__('articles.article_details_ar_tab')}}</span>
                                         </a>
                                     </li>
-                                    @endif
+
                                 </ul>
+
+
+
+{{--                                <ul class="nav nav-tabs" id="myTab2" role="tablist">--}}
+
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="active nav-link" id="details_ar_tab" data-toggle="tab"--}}
+{{--                                           href="#QA_details_ar">--}}
+{{--                                            <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>--}}
+{{--                                            <span class="nav-text">{{trans('QA.details_ar_tab')}}</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+
+{{--                                    @if($lang_en =setting()->site_lang_en == 'on')--}}
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" id="details_en_tab" data-toggle="tab"--}}
+{{--                                           href="#QA_details_en"--}}
+{{--                                           aria-controls="profile">--}}
+{{--                                            <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>--}}
+{{--                                            <span class="nav-text">{{trans('QA.details_en_tab')}}</span>--}}
+{{--                                        </a>--}}
+{{--                                    </li>--}}
+{{--                                    @endif--}}
+
+{{--                                </ul>--}}
 
 
                                 <div class="tab-content mt-5">
 
-                                    @include('admin.projects.create_tabs.details_ar')
+                                    @include('admin.QA.create_tabs.details_ar')
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    @include('admin.projects.create_tabs.details_en')
+                                    @include('admin.QA.create_tabs.details_en')
                                     @endif
                                 </div>
 

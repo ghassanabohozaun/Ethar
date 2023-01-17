@@ -18,4 +18,5 @@ return [
     'abouts' => 'Abouts Management',
     'reports' => 'Reports Management',
     'teams' => 'Team Members Management',
+    'qas' => 'QAS',
 ];

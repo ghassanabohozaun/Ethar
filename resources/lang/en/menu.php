@@ -66,6 +66,12 @@ return [
     'trashed_teams' => 'Trashed Teams',
     'add_new_team_member' => 'Add New Team Member',
 
+
+
+    'qas' => 'QAS',
+    'trashed_qas' => 'QAS Teams',
+    'add_new_qa' => 'Add New QAS',
+
 ];
 
 
