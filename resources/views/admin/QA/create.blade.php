@@ -19,12 +19,12 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.QA.index')}}" class="text-muted">
-                                {{trans('menu.QA')}}
+                                {{trans('menu.qas')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{__('menu.add_new_QA')}}
+                                {{__('menu.add_new_qa')}}
                             </a>
                         </li>
                     </ul>
@@ -78,44 +78,22 @@
                                         <a class="nav-link active" id="details_ar_tab" data-toggle="tab"
                                            href="#QA_details_ar">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{__('articles.article_settings_tab')}}</span>
+                                            <span class="nav-text">{{__('QA.details_ar_tab')}}</span>
                                         </a>
                                     </li>
+                                    @if($lang_en =setting()->site_lang_en == 'on')
                                     <li class="nav-item">
                                         <a class="nav-link" id="details_en_tab" data-toggle="tab"
                                            href="#QA_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{__('articles.article_details_ar_tab')}}</span>
+                                            <span class="nav-text">{{__('QA.details_en_tab')}}</span>
                                         </a>
                                     </li>
-
+                                    @endif
                                 </ul>
 
 
-
-{{--                                <ul class="nav nav-tabs" id="myTab2" role="tablist">--}}
-
-{{--                                    <li class="nav-item">--}}
-{{--                                        <a class="active nav-link" id="details_ar_tab" data-toggle="tab"--}}
-{{--                                           href="#QA_details_ar">--}}
-{{--                                            <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>--}}
-{{--                                            <span class="nav-text">{{trans('QA.details_ar_tab')}}</span>--}}
-{{--                                        </a>--}}
-{{--                                    </li>--}}
-
-{{--                                    @if($lang_en =setting()->site_lang_en == 'on')--}}
-{{--                                    <li class="nav-item">--}}
-{{--                                        <a class="nav-link" id="details_en_tab" data-toggle="tab"--}}
-{{--                                           href="#QA_details_en"--}}
-{{--                                           aria-controls="profile">--}}
-{{--                                            <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>--}}
-{{--                                            <span class="nav-text">{{trans('QA.details_en_tab')}}</span>--}}
-{{--                                        </a>--}}
-{{--                                    </li>--}}
-{{--                                    @endif--}}
-
-{{--                                </ul>--}}
 
 
                                 <div class="tab-content mt-5">
@@ -163,26 +141,16 @@
 
             ////////////////////////////////////////////////////////////////////
 
-            $('#photo_error').text('');
-            $('#file_error').text('');
-            $('#date_error').text('');
-            $('#writer_error').text('');
+
             $('#title_ar_error').text('');
             $('#details_ar_error').text('');
             $('#title_en_error').text('');
             $('#details_en_error').text('');
-            $('#type_error').text('');
 
-
-            $('#photo').css('border-color', '');
-            $('#file').css('border-color', '');
-            $('#date').css('border-color', '');
-            $('#writer').css('border-color', '');
             $('#title_ar').css('border-color', '');
             $('#details_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
             $('#details_en').css('border-color', '');
-            $('#type').css('border-color', '');
 
             ///////////////////////////////////////////////////////////////////
 

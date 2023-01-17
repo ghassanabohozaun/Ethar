@@ -1,4 +1,4 @@
-<div class="tab-pane fade" id="QA_details_ar" role="tabpanel" aria-labelledby="project_details_ar_tab">
+<div class="tab-pane fade  show active" id="QA_details_ar" role="tabpanel" aria-labelledby="QA_details_ar_tab">
     <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
         <div class="col-xl-12 col-xxl-10">
 
@@ -19,6 +19,10 @@
                                        class="form-control form-control-solid form-control-lg"
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
+                                <input value="{{setting()->site_lang_en}}"
+                                    class="form-control form-control-solid form-control-lg"
+                                    name="english" id="english" type="hidden"
+                                    autocomplete="off"/>
 
                             </div>
                         </div>
@@ -43,7 +47,7 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{trans('QA.des_ar')}}</label>
+                            <label> {{trans('QA.details_ar')}}</label>
                             <textarea class="form-control summernote"
                                       placeholder="{{trans('QA.des_ar')}}"
                                       name="details_ar"

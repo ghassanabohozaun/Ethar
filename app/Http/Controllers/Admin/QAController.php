@@ -15,14 +15,14 @@ class QAController extends Controller
     public function index()
     {
         $QAs = QA::paginate(15);
-        $title = __('menu.QAs');
+        $title = __('menu.qas');
         return view('admin.QA.index', compact('QAs', 'title'));
     }
 
     public function create()
     {
-        $title = __('menu.add_new_QA');
-        return view('admin.QA.create');
+        $title = __('menu.add_new_qa');
+        return view('admin.QA.create' , compact('title'));
     }
 
     public function store(QARequest $request)
@@ -70,7 +70,7 @@ class QAController extends Controller
 
     public function trashed()
     {
-        $title = __('menu.trashed_articles');
+        $title = __('menu.trashed_qas');
         $QAs = QA::onlyTrashed()->orderByDesc('created_at')->paginate(15);
         return view('admin.QA.trashed', compact('title', 'QAs'));
     }

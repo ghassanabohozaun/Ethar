@@ -8,16 +8,31 @@
                     <!--begin::body-->
                     <div class="my-5">
 
+                          <!--begin::Group-->
+                          <div class=" form-group row d-none">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                ID
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <input value="{{setting()->site_lang_en}}"
+                                       class="form-control form-control-solid form-control-lg"
+                                       name="english" id="english" type="hidden"
+                                       autocomplete="off"/>
+
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
 
                         <!--begin::Group-->
                         <div class="form-group">
                             <label>
-                                {{trans('projects.title_ar')}}
+                                {{trans('QA.title_ar')}}
                             </label>
 
                             <input type="text" class="form-control form-control-solid form-control-lg"
                                    name="title_ar" id="title_ar"
-                                   placeholder="{{trans('projects.title_ar')}}"
+                                   placeholder="{{trans('QA.title_ar')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
                                   id="title_ar_error"></span>
@@ -28,9 +43,8 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{trans('projects.des_ar')}}</label>
+                            <label> {{trans('QA.details_ar')}}</label>
                             <textarea class="form-control summernote"
-                                      placeholder="{{trans('articles.enter_abstract_ar')}}"
                                       name="details_ar"
                                       id="details_ar"></textarea>
                             <span class="form-text text-danger"

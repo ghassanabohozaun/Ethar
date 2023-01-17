@@ -19,7 +19,7 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.QA.index')}}" class="text-muted">
-                                {{trans('menu.QAs')}}
+                                {{trans('menu.qas')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
@@ -76,7 +76,7 @@
                                 <ul class="nav  nav-tabs" id="myTab2" role="tablist">
 
                                     <li class="nav-item">
-                                        <a class="nav-link" id="QA_details_ar_tab" data-toggle="tab"
+                                        <a class="nav-link active" id="" data-toggle="tab"
                                            href="#QA_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
@@ -140,26 +140,16 @@
             e.preventDefault();
 
             ////////////////////////////////////////////////////////////////////
-            $('#photo_error').text('');
-            $('#file_error').text('');
-            $('#date_error').text('');
-            $('#writer_error').text('');
+
             $('#title_ar_error').text('');
             $('#details_ar_error').text('');
             $('#title_en_error').text('');
             $('#details_en_error').text('');
-            $('#type_error').text('');
 
-
-            $('#photo').css('border-color', '');
-            $('#file').css('border-color', '');
-            $('#date').css('border-color', '');
-            $('#writer').css('border-color', '');
             $('#title_ar').css('border-color', '');
             $('#details_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
             $('#details_en').css('border-color', '');
-            $('#type').css('border-color', '');
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);

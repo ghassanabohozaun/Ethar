@@ -23,20 +23,23 @@ class QARequest extends FormRequest
      */
     public function rules()
     {
-        if (setting()->site_lang_en == 'on') {
-            return [
 
-                'title_ar' => 'required|unique:articles',
-                'title_en' => 'required|unique:articles',
-                'details_ar' => 'required',
-                'details_en' => 'required',
-            ];
-        } else {
             return [
-
-                'title_ar' => 'required|unique:articles',
+                'title_ar' => 'required',
+                'title_en' => ['required_if:english,on'],
                 'details_ar' => 'required',
+                'details_en' => ['required_if:english,on'],
             ];
-        }
+
+    }
+
+    public function messages()
+    {
+        return [
+            'title_ar.required' => __('QA.title_ar_required') ,
+            'title_en.required_if' => __('QA.title_en_required') ,
+            'details_ar.required' =>  __('QA.details_ar_required'),
+            'details_en.required_if' =>  __('QA.details_en_required'),
+        ];
     }
 }

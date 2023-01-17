@@ -25,7 +25,7 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{trans('QA.des_en')}}</label>
+                            <label> {{trans('QA.details_en')}}</label>
                             <textarea class="form-control summernote"
                                       placeholder="{{trans('QA.des_en')}}"
                                       name="details_en"

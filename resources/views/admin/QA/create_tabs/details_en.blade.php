@@ -11,12 +11,12 @@
                         <!--begin::Group-->
                         <div class="form-group">
                             <label>
-                                {{trans('projects.title_en')}}
+                                {{trans('QA.title_en')}}
                             </label>
 
                             <input type="text" class="form-control form-control-solid form-control-lg"
                                    name="title_en" id="title_en"
-                                   placeholder="{{trans('projects.title_en')}}"
+                                   placeholder="{{trans('QA.title_en')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
                                   id="title_en_error"></span>
@@ -27,13 +27,12 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{trans('projects.des_en')}}</label>
+                            <label> {{trans('QA.details_en')}}</label>
                             <textarea class="form-control summernote"
-                                      placeholder="{{trans('articles.enter_abstract_en')}}"
                                       name="details_en"
                                       id="details_en"></textarea>
                             <span class="form-text text-danger"
-                                  id="abstract_en_error"></span>
+                                  id="details_en_error"></span>
                         </div>
                         <!--end::Group-->
 

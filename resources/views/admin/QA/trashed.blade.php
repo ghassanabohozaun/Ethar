@@ -15,12 +15,12 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="{!! route('admin.QA.index') !!}" class="text-muted">
-                            {{__('menu.QAs')}}
+                            {{__('menu.qas')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="{!! route('admin.QA.trashed') !!}" class="text-muted">
-                            {{__('menu.trashed_QAs')}}
+                            {{__('menu.trashed_qas')}}
                         </a>
                     </li>
 
@@ -40,7 +40,7 @@
                 <a href="{{route('admin.QA.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{__('menu.add_new_QA')}}
+                    {{__('menu.add_new_qa')}}
                 </a>
                 &nbsp;
             </div>
@@ -73,11 +73,11 @@
                                                     <thead>
                                                     <tr>
                                                         <th>{!! __('QA.title_ar') !!}</th>
-                                                        <th>{!! __('QA.details_ar') !!}</th>
+
 
                                                         @if($lang_en =setting()->site_lang_en == 'on')
                                                             <th>{!! __('QA.title_en') !!}</th>
-                                                            <th>{!! __('QA.details_en') !!}</th>
+
 
                                                         @endif
 
@@ -89,11 +89,11 @@
                                                     @forelse($QAs as $QA)
                                                         <tr>
                                                             <td>{{ $QA->title_ar }}</td>
-                                                            <td>{!! $QA->details_ar !!}</td>
+
 
                                                             @if($lang_en =setting()->site_lang_en == 'on')
                                                                 <td>{{ $QA->title_en }}</td>
-                                                                <td>{!! $QA->details_en !!}</td>
+
 
                                                             @endif
 
@@ -115,7 +115,7 @@
                                                     @empty
                                                         <tr>
                                                             <td colspan="6" class="text-center">
-                                                                {!! __('QAs.no_found') !!}
+                                                                {!! __('QA.no_found') !!}
                                                             </td>
                                                         </tr>
                                                     @endforelse
