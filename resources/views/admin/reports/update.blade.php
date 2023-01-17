@@ -80,7 +80,7 @@
                                     <div class="col-xl-12 col-xxl-10">
 
                                         <div class="row justify-content-center">
-                                            <div class="col-xl-9" style="height: 400px">
+                                            <div class="col-xl-9" style="height: 550px">
 
                                                 <!--begin::body-->
                                                 <div class="my-5">
