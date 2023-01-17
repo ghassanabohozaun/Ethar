@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'dashboard' => 'لوحة التحكم',
     'home' => 'الرئيسية',
     'settings' => 'الإعدادات',
@@ -43,16 +42,13 @@ return [
     'trashed_reports' => 'التقارير المحذوفة',
     'add_new_report' => 'إضافة تقرير جديد',
 
-
     'videos' => 'الفيديوهات',
     'trashed_videos' => 'الفيديوهات المحذوفة',
     'add_new_video' => 'إضافة فيديو جديد',
 
-
     'abouts' => 'حول الموقع',
     'trashed_abouts' => 'المحذوفات',
     'add_new_about' => 'إضافة حول الموقع جديد',
-
 
     'photo_albums' => 'البومات  الصور',
     'trashed_photo_albums' => 'البومات الصور المحذوفة',

@@ -167,19 +167,6 @@
 
     <script type="text/javascript">
 
-
-        //Datepicker
-        $('#date').datepicker({
-            format: "yyyy-mm-dd",
-            todayBtn: true,
-            clearBtn: false,
-            orientation: "bottom auto",
-            language: "{{ LaravelLocalization::getCurrentLocale()}}",
-            autoclose: true,
-            todayHighlight: true,
-        });
-
-
         $('#form_report_store').on('submit', function (e) {
             e.preventDefault();
 
