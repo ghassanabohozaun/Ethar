@@ -4,8 +4,8 @@
 
     <form class="form" action="{{route('admin.report.update')}}" method="POST" id="form_report_update"
           enctype="multipart/form-data">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -74,8 +74,6 @@
                                 </div>
 
 
-
-
                                 <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
                                     <div class="col-xl-12 col-xxl-10">
 
@@ -111,23 +109,17 @@
                                                             <select
                                                                 class="form-control  form-control-lg"
                                                                 name="type" id="type" type="text">
-
-                                                                <option value="Financial" {{$report->type=='Financial' ? 'selected' : '' }}>
-                                                                    @if(Lang() == 'ar')
-                                                                        مالي
-                                                                    @elseif(Lang() == 'en')
-                                                                        Financial
-                                                                    @endif
-
+                                                                <option
+                                                                    value="">{{__('general.select_from_list')}}
+                                                                </option>
+                                                                <option
+                                                                    value="Financial" {{$report->type=='Financial' ? 'selected' : '' }}>
+                                                                    {{__('reports.financial')}}
                                                                 </option>
 
-                                                                <option value="Administrative" {{$report->type=='Administrative'? 'selected' : '' }}>
-
-                                                                    @if(Lang() == 'ar')
-                                                                        اداري
-                                                                    @elseif(Lang() == 'en')
-                                                                        Administrative
-                                                                    @endif
+                                                                <option
+                                                                    value="Administrative" {{$report->type=='Administrative'? 'selected' : '' }}>
+                                                                    {{__('reports.administrative')}}
                                                                 </option>
 
                                                             </select>
@@ -152,8 +144,12 @@
                                                                 $firstYear = (int)date('Y') - 2;
                                                                 $lastYear = $firstYear + 6;
                                                                 ?>
+                                                                <option value="">{{__('general.select_from_list')}}
+                                                                </option>
+
                                                                 @for ($year= $firstYear; $year<= $lastYear; $year++)
-                                                                    <option value="{{$year}}" {{ $report->year == $year ? 'selected' : '' }} >{{ $year }}</option>
+                                                                    <option
+                                                                        value="{{$year}}" {{ $report->year == $year ? 'selected' : '' }} >{{ $year }}</option>
                                                                 @endfor
                                                             </select>
                                                             <span class="form-text text-danger"
@@ -162,7 +158,6 @@
 
                                                     </div>
                                                     <!--end::Group-->
-
 
 
                                                     {{-- File --}}
@@ -186,9 +181,6 @@
 
                                                     </div>
                                                     <!--end::Group-->
-
-
-
 
 
                                                 </div>
