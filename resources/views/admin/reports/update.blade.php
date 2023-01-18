@@ -52,7 +52,6 @@
             <!--begin::Container-->
             <div class=" container-fluid ">
 
-
                 <!--begin::Row-->
                 <div class="row">
                     <div class="col-lg-12">
@@ -60,167 +59,132 @@
                         <div class="card card-custom" id="card_languages">
                             <div class="card-body">
 
-                                <div class="row justify-content-center ">
-                                    <div class="col-xl-12">
-                                        <!--begin::body-->
-                                        <div class="my-5">
-                                            <div class="alert alert-danger alert_errors d-none"
-                                                 style="padding-top: 20px">
-                                                <ul></ul>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-<<<<<<< HEAD
-
-
                                 <div class="tab-content mt-5">
-                                    {{-- @include('admin.reports.update_tabs.settings') --}}
-=======
-                                <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
-                                    <div class="col-xl-12 col-xxl-10">
+                                    <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
+                                        <div class="col-xl-12 col-xxl-10">
 
-                                        <div class="row justify-content-center">
-                                            <div class="col-xl-9" style="height: 550px">
+                                            <div class="row justify-content-center">
+                                                <div class="col-xl-9" style="height: 550px">
 
-                                                <!--begin::body-->
-                                                <div class="my-5">
+                                                    <!--begin::body-->
+                                                    <div class="my-5">
 
-                                                    <!--begin::Group-->
-                                                    <div class=" form-group row d-none">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            ID
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-                                                            <input value="{{$report->id}}"
-                                                                   class="form-control form-control-solid form-control-lg"
-                                                                   name="id" id="id" type="hidden"
-                                                                   autocomplete="off"/>
-                                                            <input type="hidden" name="hidden_file" value="hidden_file">
+                                                        <!--begin::Group-->
+                                                        <div class=" form-group row d-none">
+                                                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                                                ID
+                                                            </label>
+                                                            <div class="col-lg-9 col-xl-9">
+                                                                <input value="{{$report->id}}"
+                                                                       class="form-control form-control-solid form-control-lg"
+                                                                       name="id" id="id" type="hidden"
+                                                                       autocomplete="off"/>
+                                                                <input type="hidden" name="hidden_file"
+                                                                       value="hidden_file">
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <!--end::Group-->
+                                                        <!--end::Group-->
 
-                                                    {{-- Type --}}
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('reports.type')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
+                                                        <!--begin::Group-->
+                                                        <div class="form-group row">
+                                                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                                                {{trans('reports.type')}}
+                                                            </label>
+                                                            <div class="col-lg-9 col-xl-9">
 
-                                                            <select
-                                                                class="form-control  form-control-lg"
-                                                                name="type" id="type" type="text">
-                                                                <option
-                                                                    value="">{{__('general.select_from_list')}}
-                                                                </option>
-                                                                <option
-                                                                    value="Financial" {{$report->type=='Financial' ? 'selected' : '' }}>
-                                                                    {{__('reports.financial')}}
-                                                                </option>
-
-                                                                <option
-                                                                    value="Administrative" {{$report->type=='Administrative'? 'selected' : '' }}>
-                                                                    {{__('reports.administrative')}}
-                                                                </option>
-
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="gender_error"></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--end::Group-->
-
-                                                    {{-- Year --}}
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('reports.year')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-                                                            {{-- {{ $planMaster->end_fin_year == $year ? 'selected' : '' }} --}}
-                                                            <select
-                                                                class="form-control  form-control-lg"
-                                                                name="year" id="year" type="text">
-                                                                <?php
-                                                                $firstYear = (int)date('Y') - 2;
-                                                                $lastYear = $firstYear + 6;
-                                                                ?>
-                                                                <option value="">{{__('general.select_from_list')}}
-                                                                </option>
-
-                                                                @for ($year= $firstYear; $year<= $lastYear; $year++)
+                                                                <select
+                                                                    class="form-control  form-control-lg"
+                                                                    name="type" id="type" type="text">
                                                                     <option
-                                                                        value="{{$year}}" {{ $report->year == $year ? 'selected' : '' }} >{{ $year }}</option>
-                                                                @endfor
-                                                            </select>
-                                                            <span class="form-text text-danger"
-                                                                  id="gender_error"></span>
+                                                                        value="">{{__('general.select_from_list')}}
+                                                                    </option>
+                                                                    <option
+                                                                        value="Financial" {{$report->type=='Financial' ? 'selected' : '' }}>
+                                                                        {{__('reports.financial')}}
+                                                                    </option>
+
+                                                                    <option
+                                                                        value="Administrative" {{$report->type=='Administrative'? 'selected' : '' }}>
+                                                                        {{__('reports.administrative')}}
+                                                                    </option>
+
+                                                                </select>
+                                                                <span class="form-text text-danger"
+                                                                      id="gender_error"></span>
+                                                            </div>
+                                                        </div>
+                                                        <!--end::Group-->
+
+                                                        <!--begin::Group-->
+                                                        <div class="form-group row">
+                                                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                                                {{trans('reports.year')}}
+                                                            </label>
+                                                            <div class="col-lg-9 col-xl-9">
+                                                                {{-- {{ $planMaster->end_fin_year == $year ? 'selected' : '' }} --}}
+                                                                <select
+                                                                    class="form-control  form-control-lg"
+                                                                    name="year" id="year" type="text">
+                                                                    <?php
+                                                                    $firstYear = (int)date('Y') - 2;
+                                                                    $lastYear = $firstYear + 6;
+                                                                    ?>
+                                                                    <option value="">{{__('general.select_from_list')}}
+                                                                    </option>
+
+                                                                    @for ($year= $firstYear; $year<= $lastYear; $year++)
+                                                                        <option
+                                                                            value="{{$year}}" {{ $report->year == $year ? 'selected' : '' }} >{{ $year }}</option>
+                                                                    @endfor
+                                                                </select>
+                                                                <span class="form-text text-danger"
+                                                                      id="gender_error"></span>
+                                                            </div>
+
+                                                        </div>
+                                                        <!--end::Group-->
+
+                                                        <div class="form-group row">
+                                                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                                                {{__('reports.file')}}
+                                                            </label>
+                                                            <div class="col-lg-9 col-xl-9">
+
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input"
+                                                                           id="file" name="file">
+                                                                    <label class="custom-file-label" choose="" file="">
+                                                                    </label>
+                                                                </div>
+                                                                <span class="form-text text-muted">
+                                                                {{trans('general.file_format_allow')}}
+                                                                </span>
+                                                                <span class="form-text text-danger"
+                                                                      id="file_error">
+                                                                </span>
+                                                                <a class="font-weight-bold"
+                                                                   href="{{asset('adminBoard/uploadedFiles/reports/'. $report->file)}}"
+                                                                   target="_blank">{!! __('general.download') !!}</a>
+                                                            </div>
                                                         </div>
 
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    {{-- File --}}
-                                                    <!--begin::Group-->
-                                                    <div class="form-group row">
-                                                        <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('reports.file')}}
-                                                        </label>
-                                                        <div class="col-lg-9 col-xl-9">
-
-                                                            <input
-                                                                class="form-control  form-control-lg"
-                                                                type="file" name="file" id="file"
-                                                                placeholder=""/>
-                                                            <span
-                                                                class="form-text text-muted">{{trans('general.file_format_allow')}}
-                                                          </span>
-                                                            <span class="form-text text-danger"
-                                                                  id="course_details_error"></span>
-                                                        </div>
 
                                                     </div>
-                                                    <!--end::Group-->
-
-
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
->>>>>>> cdcc28370baf394409db2d0c16d26e925ff42d36
                                 </div>
-
-
+                                <!--end::Card-->
                             </div>
-
-
                         </div>
-                        <!--end::Card-->
-
-
+                        <!--end::Row-->
                     </div>
-
+                    <!--end::Container-->
                 </div>
                 <!--end::Row-->
-
-
             </div>
-            <!--end::Container-->
-
-            <!--begin::Form-->
-
-
         </div>
-
-        <!--end::content-->
-
     </form>
 
 @endsection
@@ -231,23 +195,15 @@
 
         $('#form_report_update').on('submit', function (e) {
             e.preventDefault();
-
             ////////////////////////////////////////////////////////////////////
-            $('#photo_error').text('');
-            $('#publish_date_error').text('');
-            $('#publisher_name_error').text('');
-            $('#title_ar_error').text('');
-            $('#abstract_ar_error').text('');
-            $('#title_en_error').text('');
-            $('#abstract_en_error').text('');
+            $('#type_error').text('');
+            $('#year_error').text('');
+            $('#file_error').text('');
 
-            $('#photo').css('border-color', '');
-            $('#publish_date').css('border-color', '');
-            $('#publisher_name').css('border-color', '');
-            $('#title_ar').css('border-color', '');
-            $('#abstract_ar').css('border-color', '');
-            $('#title_en').css('border-color', '');
-            $('#abstract_en').css('border-color', '');
+            $('#type').css('border-color', '');
+            $('#year').css('border-color', '');
+            $('#file').css('border-color', '');
+            $('.custom-file-label').css('border', '')
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);
@@ -293,6 +249,7 @@
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0])
                         $('#' + key).css('border-color', '#F64E60 ')
+                        $('.custom-file-label').css('border', '1px solid #F64E60 ')
                     });
                     ArticlePrintErrors(response.errors)
                 },//end error

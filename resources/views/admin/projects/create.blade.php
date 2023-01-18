@@ -4,8 +4,8 @@
 
     <form class="form" action="{{route('admin.project.store')}}" method="POST" id="form_project_store"
           enctype="multipart/form-data">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -90,14 +90,14 @@
                                         </a>
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="details_en_tab" data-toggle="tab"
-                                           href="#project_details_en"
-                                           aria-controls="profile">
-                                            <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
-                                        </a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="details_en_tab" data-toggle="tab"
+                                               href="#project_details_en"
+                                               aria-controls="profile">
+                                                <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
+                                                <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
+                                            </a>
+                                        </li>
                                     @endif
                                 </ul>
 
@@ -106,7 +106,7 @@
                                     @include('admin.projects.create_tabs.settings')
                                     @include('admin.projects.create_tabs.details_ar')
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    @include('admin.projects.create_tabs.details_en')
+                                        @include('admin.projects.create_tabs.details_en')
                                     @endif
                                 </div>
 
@@ -141,12 +141,9 @@
 
     <script type="text/javascript">
 
-
         $('#form_project_store').on('submit', function (e) {
             e.preventDefault();
-
             ////////////////////////////////////////////////////////////////////
-
             $('#photo_error').text('');
             $('#file_error').text('');
             $('#date_error').text('');
@@ -157,7 +154,6 @@
             $('#details_en_error').text('');
             $('#type_error').text('');
 
-
             $('#photo').css('border-color', '');
             $('#file').css('border-color', '');
             $('#date').css('border-color', '');
@@ -167,7 +163,6 @@
             $('#title_en').css('border-color', '');
             $('#details_en').css('border-color', '');
             $('#type').css('border-color', '');
-
             ///////////////////////////////////////////////////////////////////
 
             var data = new FormData(this);
@@ -213,7 +208,7 @@
                         $('#' + key + '_error').text(value[0])
                         $('#' + key).css('border-color', '#F64E60 ')
                     });
-                    ArticlePrintErrors(response.errors)
+                    articlePrintErrors(response.errors)
                 },//end error
                 complete: function () {
                     KTApp.unblockPage();
@@ -221,10 +216,10 @@
             });//end ajax
 
         });//end submit
-        ////////////////////////////////////
-        ////// Print Errors Function
-        function ArticlePrintErrors(msg) {
 
+
+        // Print Errors Function
+        function articlePrintErrors(msg) {
             $('.alert_errors').find('ul').empty();
             $('.alert_errors').removeClass('d-none');
             $('.alert_success').addClass('d-none');
@@ -233,5 +228,6 @@
                 $('.alert_errors').find('ul').append("<li>" + value + "</li>");
             });
         }
+
     </script>
 @endpush

@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ReportRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ReportRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/reports.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/reports.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/reports.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/QA.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/QA.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_15_132700_create_q_a_s_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_01_15_132700_create_qas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/16738728991440642935.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/16738729271739007677.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/1673953693903418517.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/update.blade.php" afterDir="false" />
     </list>
@@ -259,7 +267,8 @@
       <workItem from="1673849402302" duration="40000" />
       <workItem from="1673859155483" duration="12691000" />
       <workItem from="1673938715617" duration="37000" />
-      <workItem from="1673940502852" duration="4036000" />
+      <workItem from="1673940502852" duration="5207000" />
+      <workItem from="1674030779636" duration="3474000" />
     </task>
     <servers />
   </component>
@@ -362,6 +371,11 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php</url>
           <line>950</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php</url>
+          <line>81</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

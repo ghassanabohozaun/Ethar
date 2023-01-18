@@ -54,7 +54,7 @@ return [
     'force_delete' => 'حذف نهائي',
     'restore' => 'استرجاع',
     'submit' => 'إرسال',
-
+    'download' => 'التحميل',
 
     'change_image' => 'تغير الصورة',
     'image_format_allow' => 'صيغ الصور المسموح بها هي jpg ,jpeg, png فقط',

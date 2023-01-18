@@ -52,26 +52,12 @@
             <!--begin::Container-->
             <div class=" container-fluid ">
 
-
                 <!--begin::Row-->
                 <div class="row">
                     <div class="col-lg-12">
                         <!--begin::Card-->
                         <div class="card card-custom" id="card_languages">
                             <div class="card-body">
-
-                                <div class="row justify-content-center ">
-                                    <div class="col-xl-12">
-                                        <!--begin::body-->
-                                        <div class="my-5">
-                                            <div class="alert alert-danger alert_errors d-none"
-                                                 style="padding-top: 20px">
-                                                <ul></ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
                                     <div class="col-xl-12 col-xxl-10">
 
@@ -132,24 +118,28 @@
                                                     </div>
                                                     <!--end::Group-->
 
-                                                    <!--begin::Group-->
+
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
                                                             {{__('reports.file')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <input
-                                                                class="form-control form-control-solid form-control-lg"
-                                                                type="file" name="file" id="file"
-                                                                placeholder=""/>
-                                                            <span
-                                                                class="form-text text-muted">{{__('general.file_format_allow')}}
+
+                                                            <div class="custom-file">
+                                                                <input type="file" class="custom-file-input"
+                                                                       id="file" name="file">
+                                                                <label class="custom-file-label" choose="" file="">
+                                                                </label>
+                                                            </div>
+                                                            <span class="form-text text-muted">
+                                                                {{__('general.file_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="file_error"></span>
+
                                                         </div>
                                                     </div>
-                                                    <!--end::Group-->
+
 
                                                 </div>
                                             </div>
@@ -169,13 +159,13 @@
     </form>
 
 @endsection
+
 @push('js')
 
     <script type="text/javascript">
 
         $('#form_report_store').on('submit', function (e) {
             e.preventDefault();
-
             ////////////////////////////////////////////////////////////////////
             $('#type_error').text('');
             $('#year_error').text('');
@@ -184,8 +174,8 @@
             $('#type').css('border-color', '');
             $('#year').css('border-color', '');
             $('#file').css('border-color', '');
+            $('.custom-file-label').css('border', '')
             ///////////////////////////////////////////////////////////////////
-
             var data = new FormData(this);
             var type = $(this).attr('method');
             var url = $(this).attr('action');
@@ -239,6 +229,7 @@
                     $.each(response.errors, function (key, value) {
                         $('#' + key + '_error').text(value[0])
                         $('#' + key).css('border-color', '#F64E60 ')
+                        $('.custom-file-label').css('border', '1px solid #F64E60 ')
                     });
 
                 },//end error

@@ -50,6 +50,8 @@ return [
     'force_delete' => 'Force Delete',
     'restore' => 'Restore',
     'submit' => 'Submit',
+    'download' => 'Download',
+
     'change_image' => 'Change image',
     'image_format_allow' => 'Allowed file types jpg,jpeg,png',
     'file_format_allow' => 'Allowed file types pdf',
