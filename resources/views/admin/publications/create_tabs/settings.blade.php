@@ -63,22 +63,21 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('publications.file')}}
+                                {{__('publications.file')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
-                                <input
-                                    class="form-control  form-control-lg"
-                                    type="file" name="file" id="file"
-                                    placeholder=""/>
-                                    <span
-                                    class="form-text text-muted">{{trans('general.file_format_allow')}}
-                                                            </span>
-                                <span class="form-text text-danger"
-                                      id="course_details_error"></span>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input"
+                                           id="file" name="file">
+                                    <label class="custom-file-label" choose="" file=""></label>
+                                </div>
+                                <span class="form-text text-muted">
+                                    {{__('general.file_format_allow')}}
+                                </span>
+                                <span class="form-text text-danger" id="file_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->
-
 
                         <!--begin::Group-->
                         <div class="form-group row">

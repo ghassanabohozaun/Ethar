@@ -118,7 +118,7 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
+                                                    <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
                                                             {{__('reports.file')}}
@@ -139,7 +139,7 @@
 
                                                         </div>
                                                     </div>
-
+                                                    <!--end::Group-->
 
                                                 </div>
                                             </div>

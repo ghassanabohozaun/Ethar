@@ -20,9 +20,9 @@
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
 
-                                       <input type="hidden" name="hidden_photo" value="hidden_photo">
+                                <input type="hidden" name="hidden_photo" value="hidden_photo">
 
-                                        <input value="{{setting()->site_lang_en}}"
+                                <input value="{{setting()->site_lang_en}}"
                                        class="form-control form-control-solid form-control-lg"
                                        name="english" id="english" type="hidden"
                                        autocomplete="off"/>
@@ -67,24 +67,27 @@
                         </div>
                         <!--end::Group-->
 
-                          <!--begin::Group-->
-                          <div class="form-group row">
+                        <!--begin::Group-->
+                        <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('publications.file')}}
+                                {{__('projects.file')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
-                                <input
-                                    class="form-control  form-control-lg"
-                                    type="file" name="file" id="file"
-
-                                    placeholder=""/>
-                                    <span class="form-text text-muted">{{trans('general.file_format_allow')}}</span>
-                                <span class="form-text text-danger"
-                                      id="file_error"></span>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input"
+                                           id="file" name="file">
+                                    <label class="custom-file-label" choose="" file=""></label>
+                                </div>
+                                <span class="form-text text-muted">
+                                    {{__('general.file_format_allow')}}
+                                </span>
+                                <span class="form-text text-danger" id="file_error"></span>
+                                <a class="font-weight-bold"
+                                   href="{{asset('adminBoard/uploadedFiles/publications/'. $publication->file)}}"
+                                   target="_blank">{!! __('general.download') !!}</a>
                             </div>
                         </div>
                         <!--end::Group-->
-
 
 
                         <!--begin::Group-->
@@ -127,33 +130,36 @@
                         </div>
                         <!--end::Group-->
 
-                          <!--begin::Group-->
-                          <div class="form-group row">
+                        <!--begin::Group-->
+                        <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
                                 {{trans('publications.type')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 
                                 <select
-                                class="form-control  form-control-lg"
-                                name="type" id="type" type="text">
+                                    class="form-control  form-control-lg"
+                                    name="type" id="type" type="text">
 
-                                <option value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>{{__('publications.Advertisements')}}</option>
+                                    <option
+                                        value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>{{__('publications.Advertisements')}}</option>
 
-                                <option value="Brochures"{{$publication->type == 'Brochures'?'selected':''}}>{{__('publications.Brochures')}}</option>
+                                    <option
+                                        value="Brochures"{{$publication->type == 'Brochures'?'selected':''}}>{{__('publications.Brochures')}}</option>
 
-                                <option value="CaseStudy"{{$publication->type == 'CaseStudy'?'selected':''}}> {{__('publications.CaseStudy')}}</option>
+                                    <option
+                                        value="CaseStudy"{{$publication->type == 'CaseStudy'?'selected':''}}> {{__('publications.CaseStudy')}}</option>
 
-                                <option value="ScientificArticles" {{$publication->type == 'ScientificArticles'?'selected':''}}>{{__('publications.ScientificArticles')}}</option>
+                                    <option
+                                        value="ScientificArticles" {{$publication->type == 'ScientificArticles'?'selected':''}}>{{__('publications.ScientificArticles')}}</option>
 
 
-                            </select>
+                                </select>
                                 <span class="form-text text-danger"
                                       id="writer_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->
-
 
 
                     </div>
@@ -166,7 +172,6 @@
 
 
 @push('js')
-
 
     <script type="text/javascript">
 
