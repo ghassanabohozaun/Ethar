@@ -34,9 +34,9 @@ class ReportRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('reports.required'),
-            'mimes' => trans('reports.mimes'),
-            'file.required_without' => trans('reports.file_required'),
+            'required' => __('reports.required'),
+            'mimes' => __('reports.mimes'),
+            'file.required_without' => __('reports.file_required'),
         ];
     }
 }

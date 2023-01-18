@@ -19,7 +19,7 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.QA.index')}}" class="text-muted">
-                                {{trans('menu.qas')}}
+                                {{__('menu.qas')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
@@ -39,7 +39,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
                 </div>
                 <!--end::Toolbar-->
@@ -170,7 +170,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

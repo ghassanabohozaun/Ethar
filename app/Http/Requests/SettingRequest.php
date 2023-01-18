@@ -34,13 +34,13 @@ class SettingRequest extends FormRequest
     public function messages()
     {
         return [
-            'required'=>trans('settings.required'),
-            'max'=>trans('settings.max'),
-            'in'=>trans('settings.in'),
-            'image'=>trans('settings.image'),
-            'image_max'=>trans('settings.image_max'),
-            'site_icon.mimes'=>trans('settings.site_icon_mimes'),
-            'site_logo.mimes'=>trans('settings.site_logo_mimes'),
+            'required'=>__('settings.required'),
+            'max'=>__('settings.max'),
+            'in'=>__('settings.in'),
+            'image'=>__('settings.image'),
+            'image_max'=>__('settings.image_max'),
+            'site_icon.mimes'=>__('settings.site_icon_mimes'),
+            'site_logo.mimes'=>__('settings.site_logo_mimes'),
         ];
     }
 }

@@ -35,9 +35,9 @@ class SupportCenterRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('supportCenter.required'),
-            'customer_email.email' => trans('supportCenter.email_email'),
-            'captcha'=>trans('supportCenter.captcha')
+            'required' => __('supportCenter.required'),
+            'customer_email.email' => __('supportCenter.email_email'),
+            'captcha'=>__('supportCenter.captcha')
         ];
     }
 }

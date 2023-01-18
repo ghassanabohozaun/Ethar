@@ -17,7 +17,7 @@ class PhotoAlbumsController extends Controller
     // index
     public function index()
     {
-        $title = trans('menu.photo_albums');
+        $title = __('menu.photo_albums');
         $photoAlbums = PhotoAlbum::orderByDesc('created_at')->paginate();
         return view('admin.photo-albums.index', compact('title', 'photoAlbums'));
     }
@@ -25,7 +25,7 @@ class PhotoAlbumsController extends Controller
     // create
     public function create()
     {
-        $title = trans('menu.add_new_photo_album');
+        $title = __('menu.add_new_photo_album');
         return view('admin.photo-albums.create', compact('title'));
     }
 
@@ -57,7 +57,7 @@ class PhotoAlbumsController extends Controller
     // edit
     public function edit($id = null)
     {
-        $title = trans('photoAlbums.photo_album_update');
+        $title = __('photoAlbums.photo_album_update');
         $photoAlbum = PhotoAlbum::find($id);
         if (!$photoAlbum) {
             return redirect()->route('admin.not.found');
@@ -113,7 +113,7 @@ class PhotoAlbumsController extends Controller
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.update_success_message'));
+        return $this->returnSuccessMessage(__('general.update_success_message'));
 
 
     }
@@ -144,7 +144,7 @@ class PhotoAlbumsController extends Controller
 //            }
 
             $photoAlbum->delete();
-            return $this->returnSuccessMessage(trans('general.delete_success_message'));
+            return $this->returnSuccessMessage(__('general.delete_success_message'));
         }
 
     }
@@ -153,7 +153,7 @@ class PhotoAlbumsController extends Controller
     // add Other Album Photos
     public function addOtherAlbumPhotos($id = null)
     {
-        $title = trans('photoAlbums.add_other_album_photos');
+        $title = __('photoAlbums.add_other_album_photos');
         $photoAlbum = PhotoAlbum::find($id);
         if (!$photoAlbum) {
             return redirect()->route('admin.not.found');

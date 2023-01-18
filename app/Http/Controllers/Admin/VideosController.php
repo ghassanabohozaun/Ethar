@@ -16,7 +16,7 @@ class VideosController extends Controller
     // index
     public function index()
     {
-        $title = trans('menu.videos');
+        $title = __('menu.videos');
         $videos = Video::orderByDesc('created_at')->paginate();
         return view('admin.videos.index', compact('title', 'videos'));
     }
@@ -24,7 +24,7 @@ class VideosController extends Controller
     // create
     public function create()
     {
-        $title = trans('menu.add_new_video');
+        $title = __('menu.add_new_video');
         return view('admin.videos.create', compact('title'));
     }
 
@@ -36,7 +36,7 @@ class VideosController extends Controller
             if (preg_match('@^(?:https://(?:www\\.)?youtube.com/)(watch\\?v=|v/)([a-zA-Z0-9_]*)@', $request->link, $match)) {
                 $VideoLink = $this->getVideoLink($request->link);
             } else {
-                return $this->returnError(trans('videos.url_invalid'), '500');
+                return $this->returnError(__('videos.url_invalid'), '500');
             }
         }
 
@@ -62,7 +62,7 @@ class VideosController extends Controller
             'added_date' => $request->added_date,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.add_success_message'));
+        return $this->returnSuccessMessage(__('general.add_success_message'));
 
     }
 
@@ -84,7 +84,7 @@ class VideosController extends Controller
     // edit
     public function edit($id = null)
     {
-        $title = trans('videos.video_update');
+        $title = __('videos.video_update');
         $video = Video::find($id);
         if (!$video) {
             return redirect()->route('admin.not.found');
@@ -107,7 +107,7 @@ class VideosController extends Controller
             if (preg_match('@^(?:https://(?:www\\.)?youtube.com/)(watch\\?v=|v/)([a-zA-Z0-9_]*)@', $request->link, $match)) {
                 $VideoLink = $this->getVideoLink($request->link);
             } else {
-                return $this->returnError(trans('videos.url_invalid'), '500');
+                return $this->returnError(__('videos.url_invalid'), '500');
             }
         }
 
@@ -147,7 +147,7 @@ class VideosController extends Controller
         ]);
 
 
-        return $this->returnSuccessMessage(trans('general.update_success_message'));
+        return $this->returnSuccessMessage(__('general.update_success_message'));
 
 
     }
@@ -168,7 +168,7 @@ class VideosController extends Controller
                 }
             }
             $video->delete();
-            return $this->returnSuccessMessage(trans('general.delete_success_message'));
+            return $this->returnSuccessMessage(__('general.delete_success_message'));
         }
     }
 

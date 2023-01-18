@@ -16,7 +16,7 @@
 
                 <!--begin::Page Title-->
                 <span class="text-dark font-weight-bold mt-2 mb-2 mr-5">
-                    {{trans('menu.dashboard')}}
+                    {{__('menu.dashboard')}}
                 </span>
                 <!--end::Page Title-->
 
@@ -228,7 +228,7 @@
                 {{--                @if($courses->isEmpty())--}}
                 {{--                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"--}}
                 {{--                         class="img-fluid" id="no_data_img"--}}
-                {{--                         title="{!! trans('site.no_date') !!}">--}}
+                {{--                         title="{!! __('site.no_date') !!}">--}}
                 {{--                @else--}}
                 {{--                <!--begin::Body-->--}}
                 {{--                    <div class="card-body py-2" style="overflow:auto; height: 350px">--}}
@@ -239,11 +239,11 @@
                 {{--                                        <thead>--}}
                 {{--                                        <tr>--}}
                 {{--                                            <th scope="col">#</th>--}}
-                {{--                                            <th scope="col">{!! trans('courses.title_ar') !!}</th>--}}
-                {{--                                            <th scope="col">{!! trans('courses.title_en') !!}</th>--}}
-                {{--                                            <th scope="col">{!! trans('courses.teacher_id') !!}</th>--}}
-                {{--                                            <th scope="col">{!! trans('courses.hours') !!}</th>--}}
-                {{--                                            <th scope="col">{!! trans('courses.cost') !!}</th>--}}
+                {{--                                            <th scope="col">{!! __('courses.title_ar') !!}</th>--}}
+                {{--                                            <th scope="col">{!! __('courses.title_en') !!}</th>--}}
+                {{--                                            <th scope="col">{!! __('courses.teacher_id') !!}</th>--}}
+                {{--                                            <th scope="col">{!! __('courses.hours') !!}</th>--}}
+                {{--                                            <th scope="col">{!! __('courses.cost') !!}</th>--}}
 
 
                 {{--                                        </tr>--}}
@@ -322,7 +322,7 @@
 {{--                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],--}}
 {{--                    datasets: [--}}
 {{--                        {--}}
-{{--                            label: '{!! trans('dashboard.new_mawobs_growth') !!}',--}}
+{{--                            label: '{!! __('dashboard.new_mawobs_growth') !!}',--}}
 {{--                            data: datas,--}}
 {{--                            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'purple', 'pink', 'indigo', 'silver', 'gold', 'brown']--}}
 {{--                        }--}}
@@ -350,7 +350,7 @@
 {{--                    labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],--}}
 {{--                    datasets: [--}}
 {{--                        {--}}
-{{--                            label: '{!! trans('dashboard.new_revenues_growth') !!}',--}}
+{{--                            label: '{!! __('dashboard.new_revenues_growth') !!}',--}}
 {{--                            data: RevenueData,--}}
 {{--                            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'purple', 'pink', 'indigo', 'silver', 'gold', 'brown']--}}
 {{--                        }--}}

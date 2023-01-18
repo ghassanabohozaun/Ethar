@@ -43,11 +43,11 @@ class VideosRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('videos.required'),
-            'in' => trans('videos.in'),
-            'image' => trans('videos.image'),
-            'mimes' => trans('videos.mimes'),
-            'max' => trans('videos.image_max'),
+            'required' => __('videos.required'),
+            'in' => __('videos.in'),
+            'image' => __('videos.image'),
+            'mimes' => __('videos.mimes'),
+            'max' => __('videos.image_max'),
         ];
     }
 }

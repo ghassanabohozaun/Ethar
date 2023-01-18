@@ -17,7 +17,7 @@ class TeamController extends Controller
     // teams Index
     public function index()
     {
-        $title = trans('menu.teams');
+        $title = __('menu.teams');
         $teams = Team::withoutTrashed()->orderByDesc('created_at')->paginate();
         return view('admin.teams.index', compact('title', 'teams'));
     }
@@ -26,7 +26,7 @@ class TeamController extends Controller
     // create
     public function create()
     {
-        $title = trans('menu.add_new_team_member');
+        $title = __('menu.add_new_team_member');
         return view('admin.teams.create', compact('title'));
     }
 
@@ -54,7 +54,7 @@ class TeamController extends Controller
             'type' => $request->type,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.add_success_message'));
+        return $this->returnSuccessMessage(__('general.add_success_message'));
 
 
     }
@@ -63,7 +63,7 @@ class TeamController extends Controller
     // edit
     public function edit($id = null)
     {
-        $title = trans('teams.update_team_member');
+        $title = __('teams.update_team_member');
         $team = Team::find($id);
         if (!$team) {
             return redirect()->route('admin.not.found');
@@ -120,7 +120,7 @@ class TeamController extends Controller
             'type' => $request->type,
         ]);
 
-        return $this->returnSuccessMessage(trans('general.update_success_message'));
+        return $this->returnSuccessMessage(__('general.update_success_message'));
 
     }
 

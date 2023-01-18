@@ -16,12 +16,12 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="{{route('admin.photo.albums')}}" class="text-muted">
-                            {{trans('menu.photo_albums')}}
+                            {{__('menu.photo_albums')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="" class="text-muted">
-                            {{trans('photoAlbums.add_other_album_photos')}}
+                            {{__('photoAlbums.add_other_album_photos')}}
                         </a>
                     </li>
 
@@ -67,7 +67,7 @@
 
 
                                                 <label
-                                                    style="font-weight:bold">{{trans('photoAlbums.add_other_album_photos')}}</label>
+                                                    style="font-weight:bold">{{__('photoAlbums.add_other_album_photos')}}</label>
 
                                                 <div class="dropzone dropzone-default dz-clickable"
                                                      id="dropzoneFileUpload"></div>
@@ -113,14 +113,14 @@
                 acceptedFiles: 'image/*',  // File Type
                 resizeWidth: 700,
                 //// Default Message
-                dictDefaultMessage: "{{trans('photoAlbums.other_album_photos_upload')}}",
+                dictDefaultMessage: "{{__('photoAlbums.other_album_photos_upload')}}",
                 ///// Remove Image
                 params: {
                     _token: "{{csrf_token()}}"
                 },
                 ///////////////////////////////////////////////////
                 ////////// Delete File
-                dictRemoveFile: "{{trans('general.delete')}}",
+                dictRemoveFile: "{{__('general.delete')}}",
                 addRemoveLinks: true,
                 removedfile: function (file) {
                     $.post("{{route('admin.delete.other.album.photo')}}", {id: file.fid}, function (data) {

@@ -36,11 +36,11 @@ class TeamRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('teams.required'),
-            'image' => trans('teams.image'),
-            'mimes' => trans('teams.mimes'),
-            'max' => trans('teams.image_max'),
-            'photo.required_without' => trans('teams.photo_required'),
+            'required' => __('teams.required'),
+            'image' => __('teams.image'),
+            'mimes' => __('teams.mimes'),
+            'max' => __('teams.image_max'),
+            'photo.required_without' => __('teams.photo_required'),
         ];
     }
 }

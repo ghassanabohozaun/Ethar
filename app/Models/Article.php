@@ -19,9 +19,9 @@ class Article extends Model
     public function getLanguageAttribute($value)
     {
         if ($value == 'ar') {
-            return trans('general.ar');
+            return __('general.ar');
         } elseif ($value == 'ar_en') {
-            return trans('general.ar_en');
+            return __('general.ar_en');
         }
     }
 }

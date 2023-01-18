@@ -19,7 +19,7 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.about.index')}}" class="text-muted">
-                                {{trans('menu.abouts')}}
+                                {{__('menu.abouts')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
@@ -39,7 +39,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
                 </div>
                 <!--end::Toolbar-->
@@ -86,7 +86,7 @@
                                            href="#about_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('abouts.details_ar_tab')}}</span>
+                                            <span class="nav-text">{{__('abouts.details_ar_tab')}}</span>
                                         </a>
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
@@ -95,7 +95,7 @@
                                            href="#about_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('abouts.details_en_tab')}}</span>
+                                            <span class="nav-text">{{__('abouts.details_en_tab')}}</span>
                                         </a>
                                     </li>
                                     @endif
@@ -144,7 +144,7 @@
 
         $('#form_about_store').on('submit', function (e) {
             e.preventDefault();
- 
+
             ////////////////////////////////////////////////////////////////////
             $('#photo_error').text('');
             $('#title_ar_error').text('');
@@ -175,7 +175,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

@@ -98,7 +98,7 @@
                                                             <td>{{ $slider->title_en }}</td>
                                                             <td>{{ $slider->order }}</td>
                                                             <td>
-                                                                @if( $slider->details_status == trans('sliders.show'))
+                                                                @if( $slider->details_status == __('sliders.show'))
                                                                     <span
                                                                         class="label label-light-info label-inline mr-2">
                                                                         {!! $slider->details_status !!}
@@ -111,7 +111,7 @@
                                                                 @endif
                                                             </td>
                                                             <td>
-                                                                @if( $slider->button_status == trans('sliders.show'))
+                                                                @if( $slider->button_status == __('sliders.show'))
                                                                     <span
                                                                         class="label label-light-info label-inline mr-2">
                                                                         {!! $slider->button_status !!}
@@ -134,14 +134,14 @@
                                                             <td>
                                                                 <a href="{{route('admin.slider.edit',$slider->id)}}"
                                                                    class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{trans('general.edit')}}">
+                                                                   title="{{__('general.edit')}}">
                                                                     <i class="fa fa-edit fa-1x"></i>
                                                                 </a>
 
                                                                 <a href="#"
                                                                    class="btn btn-hover-danger btn-icon btn-pill delete_slider_btn"
                                                                    data-id="{{$slider->id}}"
-                                                                   title="{{trans('general.delete')}}">
+                                                                   title="{{__('general.delete')}}">
                                                                     <i class="fa fa-trash fa-1x"></i>
                                                                 </a>
                                                             </td>
@@ -198,11 +198,11 @@
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -218,7 +218,7 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
@@ -235,8 +235,8 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_user_button'}
@@ -267,7 +267,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

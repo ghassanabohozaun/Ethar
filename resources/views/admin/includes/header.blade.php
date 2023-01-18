@@ -9,7 +9,7 @@
                     <li class="menu-item  menu-item-open menu-item-here
                      menu-item-submenu menu-item-rel menu-item-open menu-item-here menu-item-active">
                         <a href="{!! route('index') !!}" class="menu-link ">
-                            <span class="menu-text">{{trans('dashboard.website')}}</span><i class="menu-arrow"></i></a>
+                            <span class="menu-text">{{__('dashboard.website')}}</span><i class="menu-arrow"></i></a>
                     </li>
 
                 </ul>
@@ -43,7 +43,7 @@
 {{--                            role="tablist">--}}
 {{--                            <li class="nav-item">--}}
 {{--                                <a class="nav-link" data-toggle="tab" href="#kt_quick_panel_notifications">--}}
-{{--                                    {!! trans('notifications.notifications') !!}--}}
+{{--                                    {!! __('notifications.notifications') !!}--}}
 {{--                                </a>--}}
 {{--                            </li>--}}
 {{--                        </ul>--}}

@@ -99,7 +99,7 @@
                                                             <td>{{ $slider->title_en }}</td>
                                                             <td>{{ $slider->order }}</td>
                                                             <td>
-                                                                @if( $slider->details_status == trans('sliders.show'))
+                                                                @if( $slider->details_status == __('sliders.show'))
                                                                     <span
                                                                         class="label label-light-info label-inline mr-2">
                                                                         {!! $slider->details_status !!}
@@ -112,7 +112,7 @@
                                                                 @endif
                                                             </td>
                                                             <td>
-                                                                @if( $slider->button_status == trans('sliders.show'))
+                                                                @if( $slider->button_status == __('sliders.show'))
                                                                     <span
                                                                         class="label label-light-info label-inline mr-2">
                                                                         {!! $slider->button_status !!}

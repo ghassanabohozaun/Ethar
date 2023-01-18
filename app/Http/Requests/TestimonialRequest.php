@@ -53,12 +53,12 @@ class TestimonialRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('testimonials.required'),
-            'in' => trans('testimonials.in'),
-            'image' => trans('testimonials.image'),
-            'mimes' => trans('testimonials.mimes'),
-            'max' => trans('testimonials.image_max'),
-            'photo.required_without' => trans('testimonials.photo_required'),
+            'required' => __('testimonials.required'),
+            'in' => __('testimonials.in'),
+            'image' => __('testimonials.image'),
+            'mimes' => __('testimonials.mimes'),
+            'max' => __('testimonials.image_max'),
+            'photo.required_without' => __('testimonials.photo_required'),
         ];
     }
 }

@@ -20,7 +20,7 @@
 
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.trashed_testimonials')}}
+                            {{__('menu.trashed_testimonials')}}
                         </a>
                     </li>
 

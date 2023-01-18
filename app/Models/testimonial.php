@@ -20,13 +20,13 @@ class testimonial extends Model
     public function getLanguageAttribute($value)
     {
         if ($value == 'ar') {
-            return trans('general.ar');
+            return __('general.ar');
 
         } elseif ($value == 'en') {
-            return trans('general.en');
+            return __('general.en');
 
         } elseif ($value == 'ar_en') {
-            return trans('general.ar_en');
+            return __('general.ar_en');
 
         }
     }
@@ -35,11 +35,11 @@ class testimonial extends Model
     public function getGenderAttribute($value)
     {
         if ($value == 'male') {
-            return trans('general.male');
+            return __('general.male');
         } elseif ($value == 'female') {
-            return trans('general.female');
+            return __('general.female');
         } elseif ($value == 'others') {
-            return trans('general.others');
+            return __('general.others');
         }
 
     }

@@ -37,15 +37,15 @@ class UserRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('users.required'),
-            'in' => trans('users.in'),
-            'email.unique' => trans('users.email_unique'),
-            'email.email' => trans('users.email_email'),
-            'password.min' => trans('users.min'),
-            'photo.image' => trans('users.image'),
-            'photo.required' => trans('users.image_required'),
-            'photo.mimes' => trans('users.mimes'),
-            'photo.max' => trans('users.image_max'),
+            'required' => __('users.required'),
+            'in' => __('users.in'),
+            'email.unique' => __('users.email_unique'),
+            'email.email' => __('users.email_email'),
+            'password.min' => __('users.min'),
+            'photo.image' => __('users.image'),
+            'photo.required' => __('users.image_required'),
+            'photo.mimes' => __('users.mimes'),
+            'photo.max' => __('users.image_max'),
 
         ];
     }

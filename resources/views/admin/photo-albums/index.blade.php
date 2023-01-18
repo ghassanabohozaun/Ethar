@@ -15,12 +15,12 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.photo_albums')}}
+                            {{__('menu.photo_albums')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="{{route('admin.photo.albums')}}" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -34,7 +34,7 @@
                 <a href="{{route('admin.photo.albums.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_photo_album')}}
+                    {{__('menu.add_new_photo_album')}}
                 </a>
             </div>
             <!--end::Toolbar-->
@@ -148,7 +148,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{trans('general.update')}}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{__('general.update')}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i aria-hidden="true" class="ki ki-close"></i>
                     </button>
@@ -176,7 +176,7 @@
                                         <input type="text" id="photo_album_id_for_dropZone">
 
 
-                                        <label style="font-weight:bold">{{trans('posts.other_photos')}}</label>
+                                        <label style="font-weight:bold">{{__('posts.other_photos')}}</label>
                                         <div class="dropzone dropzone-default dz-clickable"
                                              id="dropzoneFileUpload"></div>
 
@@ -207,11 +207,11 @@
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{trans('general.ask_delete_record')}}",
+                title: "{{__('general.ask_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonText: "{{trans('general.yes')}}",
-                cancelButtonText: "{{trans('general.no')}}",
+                confirmButtonText: "{{__('general.yes')}}",
+                cancelButtonText: "{{__('general.no')}}",
                 reverseButtons: false,
                 allowOutsideClick: false,
             }).then(function (result) {
@@ -227,7 +227,7 @@
                             console.log(data);
                             if (data.status == true) {
                                 Swal.fire({
-                                    title: "{!! trans('general.deleted') !!}",
+                                    title: "{!! __('general.deleted') !!}",
                                     text: data.msg,
                                     icon: "success",
                                     allowOutsideClick: false,
@@ -242,8 +242,8 @@
 
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
-                        title: "{!! trans('general.cancelled') !!}",
-                        text: "{!! trans('general.cancelled_message') !!}",
+                        title: "{!! __('general.cancelled') !!}",
+                        text: "{!! __('general.cancelled_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_album_button'}
@@ -275,7 +275,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

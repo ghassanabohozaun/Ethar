@@ -23,9 +23,9 @@ class Slider extends Model
     public function getLanguageAttribute($value)
     {
         if ($value == 'ar') {
-            return trans('general.ar');
+            return __('general.ar');
         } elseif ($value == 'ar_en') {
-            return trans('general.ar_en');
+            return __('general.ar_en');
 
         }
     }
@@ -34,9 +34,9 @@ class Slider extends Model
     public function getDetailsStatusAttribute($value)
     {
         if ($value == 'show') {
-            return trans('sliders.show');
+            return __('sliders.show');
         } elseif ($value == 'hide') {
-            return trans('sliders.hide');
+            return __('sliders.hide');
         }
     }
 
@@ -44,9 +44,9 @@ class Slider extends Model
     public function getButtonStatusAttribute($value)
     {
         if ($value == 'show') {
-            return trans('sliders.show');
+            return __('sliders.show');
         } elseif ($value == 'hide') {
-            return trans('sliders.hide');
+            return __('sliders.hide');
         }
     }
 

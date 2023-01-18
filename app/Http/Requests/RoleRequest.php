@@ -33,10 +33,10 @@ class RoleRequest extends FormRequest
     public function messages()
     {
         return [
-            'role_name_ar.required' => trans('roles.role_name_ar_required'),
-            'role_name_en.required' => trans('roles.role_name_en_required'),
-            'permissions.required' => trans('roles.permission_required'),
-            'min' => trans('roles.min')
+            'role_name_ar.required' => __('roles.role_name_ar_required'),
+            'role_name_en.required' => __('roles.role_name_en_required'),
+            'permissions.required' => __('roles.permission_required'),
+            'min' => __('roles.min')
         ];
     }
 }

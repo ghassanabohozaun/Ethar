@@ -43,12 +43,12 @@ class PhotoAlbumsRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('photoAlbums.required'),
-            'in' => trans('photoAlbums.in'),
-            'image' => trans('photoAlbums.image'),
-            'mimes' => trans('photoAlbums.mimes'),
-            'max' => trans('photoAlbums.image_max'),
-            'photo.required' => trans('photoAlbums.photo_required'),
+            'required' => __('photoAlbums.required'),
+            'in' => __('photoAlbums.in'),
+            'image' => __('photoAlbums.image'),
+            'mimes' => __('photoAlbums.mimes'),
+            'max' => __('photoAlbums.image_max'),
+            'photo.required' => __('photoAlbums.photo_required'),
         ];
     }
 }

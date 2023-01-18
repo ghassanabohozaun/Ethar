@@ -35,7 +35,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.photo')}}
+                                {{__('projects.photo')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div
@@ -47,7 +47,7 @@
                                     <label
                                         class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                         data-action="change" data-toggle="tooltip" title=""
-                                        data-original-title="{{trans('general.change_image')}}">
+                                        data-original-title="{{__('general.change_image')}}">
                                         <i class="fa fa-pen icon-sm text-muted"></i>
                                         <input type="file" name="photo" id="photo"
                                                class="table-responsive-sm">
@@ -59,7 +59,7 @@
                                         title="Cancel avatar"><i class="ki ki-bold-close icon-xs text-muted"></i>
                                      </span>
                                 </div>
-                                <span class="form-text text-muted">{{trans('general.image_format_allow')}}</span>
+                                <span class="form-text text-muted">{{__('general.image_format_allow')}}</span>
                                 <span class="form-text text-danger"
                                       id="photo_error"></span>
                             </div>
@@ -91,13 +91,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.date')}}
+                                {{__('projects.date')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
                                            id="publish_date" name="date" value="{{$project->date}}"
-                                           readonly placeholder="{{trans('projects.date')}}"/>
+                                           readonly placeholder="{{__('projects.date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
 								        <i class="la la-calendar-check-o"></i>
@@ -114,13 +114,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.writer')}}
+                                {{__('projects.writer')}}
                             </label>
 
                             <div class="col-lg-9 col-xl-9">
                                 <input type="text" class="form-control form-control-solid form-control-lg"
                                        name="writer" id="writer" value="{{$project->writer}}"
-                                       placeholder="{{trans('articles.enter_publisher_name')}}"
+                                       placeholder="{{__('articles.enter_publisher_name')}}"
                                        autocomplete="off">
                                 <span class="form-text text-danger"
                                       id="publisher_name_error"></span>
@@ -131,7 +131,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{trans('projects.type')}}
+                                {{__('projects.type')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 

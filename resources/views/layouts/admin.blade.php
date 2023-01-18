@@ -10,7 +10,7 @@
 <head>
     <base href="">
     <meta charset="utf-8"/>
-    <title>{{ !empty($title) ? $title: trans('dashboard.admin_panel') }}</title>
+    <title>{{ !empty($title) ? $title: __('dashboard.admin_panel') }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="Updates and statistics"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -188,7 +188,7 @@
     <!--begin::Header-->
     <div class="offcanvas-header d-flex align-items-center justify-content-between pb-5">
         <h3 class="font-weight-bold m-0">
-            {{trans('dashboard.profile')}}
+            {{__('dashboard.profile')}}
         </h3>
         <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_user_close">
             <i class="ki ki-close icon-xs text-muted"></i>
@@ -228,7 +228,7 @@
                         </span>
                     </a>
                     <a href="{{route('admin.logout')}}"
-                       class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">{{trans('dashboard.sign_out')}}</a>
+                       class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">{{__('dashboard.sign_out')}}</a>
                 </div>
             </div>
         </div>
@@ -373,17 +373,17 @@
 
         if ("{!! Lang()=='ar' !!}") {
             if (remaining <= 0) {
-                cc.innerHTML = '{!! trans('general.character_limit_reached') !!} ' + ml + ' . ';
+                cc.innerHTML = '{!! __('general.character_limit_reached') !!} ' + ml + ' . ';
             } else if (remaining <= 50) {
-                cc.innerHTML = ' {!! trans('general.character_limit') !!}  ' + ml + ' , ' + ' {!! trans('general.remaining') !!} ' + remaining + ' . ';
+                cc.innerHTML = ' {!! __('general.character_limit') !!}  ' + ml + ' , ' + ' {!! __('general.remaining') !!} ' + remaining + ' . ';
             } else {
                 cc.innerHTML = '';
             }
         } else {
             if (remaining <= 0) {
-                cc.innerHTML = ml + '{!! trans('general.character_limit_reached') !!}.';
+                cc.innerHTML = ml + '{!! __('general.character_limit_reached') !!}.';
             } else if (remaining <= 50) {
-                cc.innerHTML = ml + ' {!! trans('general.character_limit') !!} , ' + remaining + ' {!! trans('general.remaining') !!}.';
+                cc.innerHTML = ml + ' {!! __('general.character_limit') !!} , ' + remaining + ' {!! __('general.remaining') !!}.';
             } else {
                 cc.innerHTML = '';
             }

@@ -16,12 +16,12 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.photo.albums')}}" class="text-muted">
-                                {{trans('menu.photo_albums')}}
+                                {{__('menu.photo_albums')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.photo.albums.edit',$photoAlbum->id)}}" class="text-muted">
-                                {{trans('photoAlbums.photo_album_update')}}
+                                {{__('photoAlbums.photo_album_update')}}
                             </a>
                         </li>
                     </ul>
@@ -36,7 +36,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -88,7 +88,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('photoAlbums.main_photo')}}
+                                                            {{__('photoAlbums.main_photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
@@ -99,7 +99,7 @@
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{trans('general.change_image')}}">
+                                                                    data-original-title="{{__('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="main_photo" id="main_photo"
                                                                            class="table-responsive-sm">
@@ -114,7 +114,7 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="main_photo_error"></span>
@@ -126,13 +126,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('photoAlbums.title_ar')}}
+                                                            {{__('photoAlbums.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="3"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="title_ar" id="title_ar" type="text"
-                                                                      placeholder=" {{trans('photoAlbums.enter_title_ar')}}"
+                                                                      placeholder=" {{__('photoAlbums.enter_title_ar')}}"
                                                                       autocomplete="off">{{$photoAlbum->title_ar}}</textarea>
 
                                                             <span class="form-text text-danger"
@@ -146,13 +146,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('photoAlbums.title_en')}}
+                                                            {{__('photoAlbums.title_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <textarea rows="3"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="title_en" id="title_en" type="text"
-                                                                      placeholder=" {{trans('photoAlbums.enter_title_en')}}"
+                                                                      placeholder=" {{__('photoAlbums.enter_title_en')}}"
                                                                       autocomplete="off">{{$photoAlbum->title_en}}</textarea>
 
                                                             <span class="form-text text-danger"
@@ -219,7 +219,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },//end beforeSend
                 success: function (data) {

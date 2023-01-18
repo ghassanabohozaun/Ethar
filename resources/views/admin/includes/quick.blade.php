@@ -6,7 +6,7 @@
             role="tablist">
             <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#kt_quick_panel_notifications">
-                    {!! trans('notifications.notifications') !!}
+                    {!! __('notifications.notifications') !!}
                 </a>
             </li>
         </ul>

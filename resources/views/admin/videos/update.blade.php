@@ -18,12 +18,12 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.videos')}}" class="text-muted">
-                                {{trans('menu.videos')}}
+                                {{__('menu.videos')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.video.edit',$video->id)}}" class="text-muted">
-                                {{trans('videos.video_update')}}
+                                {{__('videos.video_update')}}
                             </a>
                         </li>
                     </ul>
@@ -38,7 +38,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
 
                 </div>
@@ -87,7 +87,7 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.photo')}}
+                                                            {{__('videos.photo')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div
@@ -98,7 +98,7 @@
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                                                     data-action="change" data-toggle="tooltip" title=""
-                                                                    data-original-title="{{trans('general.change_image')}}">
+                                                                    data-original-title="{{__('general.change_image')}}">
                                                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                                                     <input type="file" name="photo" id="photo"
                                                                            class="table-responsive-sm">
@@ -113,7 +113,7 @@
                                                                  </span>
                                                             </div>
                                                             <span
-                                                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                             </span>
                                                             <span class="form-text text-danger"
                                                                   id="photo_error"></span>
@@ -124,13 +124,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.title_ar')}}
+                                                            {{__('videos.title_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="title_ar" id="title_ar"
-                                                                placeholder=" {{trans('videos.enter_title_ar')}}"
+                                                                placeholder=" {{__('videos.enter_title_ar')}}"
                                                                 autocomplete="off" value="{{$video->title_ar}}"/>
 
                                                             <span class="form-text text-danger"
@@ -144,13 +144,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.title_en')}}
+                                                            {{__('videos.title_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="title_en" id="title_en" rows="3"
-                                                                placeholder=" {{trans('videos.enter_title_en')}}"
+                                                                placeholder=" {{__('videos.enter_title_en')}}"
                                                                 autocomplete="off" value="{{$video->title_en}} "/>
                                                             <span class="form-text text-danger"
                                                                   id="title_en_error"></span>
@@ -162,13 +162,13 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.duration')}}
+                                                            {{__('videos.duration')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="duration" id="duration" type="text"
-                                                                placeholder=" {{trans('videos.enter_duration')}}"
+                                                                placeholder=" {{__('videos.enter_duration')}}"
                                                                 autocomplete="off" value="{{$video->duration}} "/>
                                                             <span class="form-text text-danger"
                                                                   id="duration_error"></span>
@@ -180,14 +180,14 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.added_date')}}
+                                                            {{__('videos.added_date')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <div class="input-group date">
                                                                 <input type="text" class="form-control"
                                                                        id="added_date" name="added_date"
                                                                        readonly value="{{$video->added_date}} "
-                                                                       placeholder="{{trans('videos.enter_added_date')}}"/>
+                                                                       placeholder="{{__('videos.enter_added_date')}}"/>
                                                                 <div class="input-group-append">
                                                              <span class="input-group-text">
                                                                 <i class="la la-calendar-check-o"></i>
@@ -202,18 +202,18 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
-                                                            {{trans('videos.link')}}
+                                                            {{__('videos.link')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
                                                             <input
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="link" id="link" type="text"
                                                                 value="https://www.youtube.com/watch?v={{$video->link}}"
-                                                                placeholder=" {{trans('videos.enter_link')}}"
+                                                                placeholder=" {{__('videos.enter_link')}}"
                                                                 autocomplete="off"/>
 
                                                             <span class="form-text text-muted">
-                                                                {{trans('general.example')}} :
+                                                                {{__('general.example')}} :
                                                                 https://www.youtube.com/watch?v=DzwIRzD7da4
                                                             </span>
                                                             <span class="form-text text-danger" id="link_error"></span>

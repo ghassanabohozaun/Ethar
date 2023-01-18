@@ -65,14 +65,14 @@ class SlidersUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'required' => trans('sliders.required'),
-            'in' => trans('sliders.in'),
-            'numeric' => trans('sliders.numeric'),
-            'image' => trans('sliders.image'),
-            'unique'=>trans('sliders.unique'),
-            'mimes'=>trans('sliders.mimes'),
-            'max'=>trans('sliders.image_max'),
-            'photo.required' => trans('sliders.photo_required'),
+            'required' => __('sliders.required'),
+            'in' => __('sliders.in'),
+            'numeric' => __('sliders.numeric'),
+            'image' => __('sliders.image'),
+            'unique'=>__('sliders.unique'),
+            'mimes'=>__('sliders.mimes'),
+            'max'=>__('sliders.image_max'),
+            'photo.required' => __('sliders.photo_required'),
         ];
     }
 }

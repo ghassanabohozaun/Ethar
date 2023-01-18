@@ -33,11 +33,11 @@ class AdminUpdateRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required'=>trans('login.name_requires'),
-            'email.required'=>trans('login.email_required'),
-            'email.email'=>trans('login.email_email'),
-            'password.min'=>trans('login.password_min'),
-            'confirm_password.same' => trans('login.same'),
+            'name.required'=>__('login.name_requires'),
+            'email.required'=>__('login.email_required'),
+            'email.email'=>__('login.email_email'),
+            'password.min'=>__('login.password_min'),
+            'confirm_password.same' => __('login.same'),
         ];
     }
 }

@@ -19,12 +19,12 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="{{route('admin.project.index')}}" class="text-muted">
-                                {{trans('menu.projects')}}
+                                {{__('menu.projects')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('projects.update')}}
+                                {{__('projects.update')}}
                             </a>
                         </li>
                     </ul>
@@ -39,7 +39,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
                 </div>
                 <!--end::Toolbar-->
@@ -78,7 +78,7 @@
                                         <a class="nav-link active" id="project_settings_tab" data-toggle="tab"
                                            href="#project_settings">
                                             <span class="nav-icon"><i class="flaticon2-settings"></i></span>
-                                            <span class="nav-text">{{trans('projects.settings_tab')}}</span>
+                                            <span class="nav-text">{{__('projects.settings_tab')}}</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
@@ -86,7 +86,7 @@
                                            href="#project_details_ar"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('projects.details_ar_tab')}}</span>
+                                            <span class="nav-text">{{__('projects.details_ar_tab')}}</span>
                                         </a>
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
@@ -95,7 +95,7 @@
                                            href="#project_details_en"
                                            aria-controls="profile">
                                             <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{trans('projects.details_en_tab')}}</span>
+                                            <span class="nav-text">{{__('projects.details_en_tab')}}</span>
                                         </a>
                                     </li>
                                     @endif
@@ -184,7 +184,7 @@
                     KTApp.blockPage({
                         overlayColor: '#000000',
                         state: 'danger',
-                        message: "{{trans('general.please_wait')}}",
+                        message: "{{__('general.please_wait')}}",
                     });
                 },
                 success: function (data) {

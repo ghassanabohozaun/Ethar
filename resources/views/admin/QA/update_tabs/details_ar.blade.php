@@ -31,12 +31,12 @@
                         <!--begin::Group-->
                         <div class="form-group">
                             <label>
-                                {{trans('QA.title_ar')}}
+                                {{__('QA.title_ar')}}
                             </label>
 
                             <input type="text" class="form-control form-control-solid form-control-lg"
                                    name="title_ar" id="title_ar" value="{{$QA->title_ar}}"
-                                   placeholder="{{trans('QA.title_ar')}}"
+                                   placeholder="{{__('QA.title_ar')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
                                   id="title_ar_error"></span>
@@ -47,9 +47,9 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{trans('QA.details_ar')}}</label>
+                            <label> {{__('QA.details_ar')}}</label>
                             <textarea class="form-control summernote"
-                                      placeholder="{{trans('QA.des_ar')}}"
+                                      placeholder="{{__('QA.des_ar')}}"
                                       name="details_ar"
                                       id="abstract_ar">{{$QA->details_ar}}</textarea>
                             <span class="form-text text-danger"

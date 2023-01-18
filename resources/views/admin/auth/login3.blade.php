@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{!! trans('login.sign_in') !!}</title>
+    <title>{!! __('login.sign_in') !!}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -89,7 +89,7 @@
                 <div class="wrap-input100">
                     <input class="input100" type="text" name="email" autocomplete="off">
                     <span class="focus-input100"></span>
-                    <span class="label-input100">{!! trans('login.email') !!}</span>
+                    <span class="label-input100">{!! __('login.email') !!}</span>
                 </div>
 
                 @error('email')
@@ -99,7 +99,7 @@
                 <div class="wrap-input100">
                     <input class="input100" type="password" name="password" autocomplete="off">
                     <span class="focus-input100"></span>
-                    <span class="label-input100">{!! trans('login.password') !!}</span>
+                    <span class="label-input100">{!! __('login.password') !!}</span>
                 </div>
 
                 @error('password')
@@ -111,7 +111,7 @@
                     <div class="contact100-form-checkbox">
                         <label>
                             <input type="checkbox" name="rememberMe" id="rememberMe">
-                            <span style="margin-top: 10px;color: #999999">&nbsp; {{trans('login.remember_me')}}</span>
+                            <span style="margin-top: 10px;color: #999999">&nbsp; {{__('login.remember_me')}}</span>
                         </label>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
 
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
-                        {!! trans('login.sign_in') !!}
+                        {!! __('login.sign_in') !!}
                     </button>
                 </div>
 

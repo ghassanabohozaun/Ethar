@@ -27,7 +27,7 @@
                             </svg><!--end::Svg Icon-->
                             </span>
                     </span>
-                        <span class="menu-text">{{trans('menu.dashboard')}}</span>
+                        <span class="menu-text">{{__('menu.dashboard')}}</span>
                     </a>
                 </li>
                 <li class="menu-section" style="margin-bottom: -10px"></li>
@@ -50,7 +50,7 @@
                             </g>
                             </svg><!--end::Svg Icon--></span>
                     </span>
-                    <span class="menu-text">{{trans('menu.home')}}</span>
+                    <span class="menu-text">{{__('menu.home')}}</span>
                     <i class="menu-arrow"></i>
                     <span class="menu-label">
                     </span>
@@ -65,7 +65,7 @@
                             <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="{{route('get.admin.settings')}}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot"><span></span></i>
-                                    <span class="menu-text">{{trans('menu.settings')}}</span>
+                                    <span class="menu-text">{{__('menu.settings')}}</span>
                                 </a>
                             </li>
                         @endcan
@@ -74,7 +74,7 @@
                             <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="{{route('get.admin')}}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot"><span></span></i>
-                                    <span class="menu-text">{{trans('menu.admin')}}</span>
+                                    <span class="menu-text">{{__('menu.admin')}}</span>
                                 </a>
                             </li>
                         @endcan
@@ -106,7 +106,7 @@
                             </g>
                             </svg><!--end::Svg Icon--></span>
                     </span>
-                        <span class="menu-text">{{trans('menu.landing_page')}}</span>
+                        <span class="menu-text">{{__('menu.landing_page')}}</span>
                         <i class="menu-arrow"></i>
                         <span class="menu-label">
                     </span>
@@ -117,7 +117,7 @@
                         <ul class="menu-subnav">
                             <li class="menu-item  menu-item-parent" aria-haspopup="true">
                             <span class="menu-link">
-                                <span class="menu-text">{{trans('menu.landing_page')}}</span>
+                                <span class="menu-text">{{__('menu.landing_page')}}</span>
                             </span>
                             </li>
 
@@ -125,7 +125,7 @@
                             <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="{!! route('admin.sliders') !!}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot"><span></span></i>
-                                    <span class="menu-text">{{trans('menu.sliders')}}</span>
+                                    <span class="menu-text">{{__('menu.sliders')}}</span>
                                     <span class="menu-label">
                                 </span>
                                 </a>
@@ -134,7 +134,7 @@
                             {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
                             {{--                                    <a href="{!! route('admin.why.choose.us') !!}" class="menu-link menu-toggle">--}}
                             {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{trans('menu.why_choose_us')}}</span>--}}
+                            {{--                                        <span class="menu-text">{{__('menu.why_choose_us')}}</span>--}}
                             {{--                                        <span class="menu-label">--}}
                             {{--                                </span>--}}
                             {{--                                    </a>--}}
@@ -143,7 +143,7 @@
                             {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
                             {{--                                    <a href="{!! route('admin.about.mawhob') !!}" class="menu-link menu-toggle">--}}
                             {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{trans('menu.about_mawhob')}}</span>--}}
+                            {{--                                        <span class="menu-text">{{__('menu.about_mawhob')}}</span>--}}
                             {{--                                        <span class="menu-label">--}}
                             {{--                                </span>--}}
                             {{--                                    </a>--}}
@@ -153,7 +153,7 @@
                             {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
                             {{--                                    <a href="{!! route('admin.team') !!}" class="menu-link menu-toggle">--}}
                             {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{trans('menu.team')}}</span>--}}
+                            {{--                                        <span class="menu-text">{{__('menu.team')}}</span>--}}
                             {{--                                        <span class="menu-label">--}}
                             {{--                                </span>--}}
                             {{--                                    </a>--}}
@@ -161,7 +161,7 @@
                             {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
                             {{--                                    <a href="{!! route('admin.static.strings') !!}" class="menu-link menu-toggle">--}}
                             {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{trans('menu.static_strings')}}</span>--}}
+                            {{--                                        <span class="menu-text">{{__('menu.static_strings')}}</span>--}}
                             {{--                                        <span class="menu-label">--}}
                             {{--                                </span>--}}
                             {{--                                    </a>--}}
@@ -171,7 +171,7 @@
                             {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
                             {{--                                    <a href="{!! route('admin.footer.images') !!}" class="menu-link menu-toggle">--}}
                             {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{trans('menu.footer_images')}}</span>--}}
+                            {{--                                        <span class="menu-text">{{__('menu.footer_images')}}</span>--}}
                             {{--                                        <span class="menu-label">--}}
                             {{--                                </span>--}}
                             {{--                                    </a>--}}
@@ -180,7 +180,7 @@
                             {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
                             {{--                                    <a href="{!! route('admin.registration.policy') !!}" class="menu-link menu-toggle">--}}
                             {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{trans('menu.registration_policy')}}</span>--}}
+                            {{--                                        <span class="menu-text">{{__('menu.registration_policy')}}</span>--}}
                             {{--                                        <span class="menu-label">--}}
                             {{--                                </span>--}}
                             {{--                                    </a>--}}
@@ -210,7 +210,7 @@
                             </g>
                             </svg><!--end::Svg Icon--></span>
                     </span>
-                        <span class="menu-text">{{trans('menu.permissions')}}</span>
+                        <span class="menu-text">{{__('menu.permissions')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-success">
                              {{App\Models\Role::count()}}
@@ -240,7 +240,7 @@
                         </g>
                         </svg><!--end::Svg Icon--></span>
                     </span>
-                        <span class="menu-text">{{trans('menu.users')}}</span>
+                        <span class="menu-text">{{__('menu.users')}}</span>
                         <i class="menu-arrow"></i>
                         <span class="menu-label">
                     </span>
@@ -251,14 +251,14 @@
                         <ul class="menu-subnav">
                             <li class="menu-item  menu-item-parent" aria-haspopup="true">
                             <span class="menu-link">
-                                <span class="menu-text">{{trans('menu.users')}}</span>
+                                <span class="menu-text">{{__('menu.users')}}</span>
                             </span>
                             </li>
 
                             <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="{{route('users')}}" class="menu-link menu-toggle">
                                     <i class="menu-bullet menu-bullet-dot"><span></span></i>
-                                    <span class="menu-text">{{trans('menu.users')}}</span>
+                                    <span class="menu-text">{{__('menu.users')}}</span>
                                     <span class="menu-label">
                                     <span class="label label-rounded label-info">
                                         {{App\Models\Admin::withoutTrashed()->where('id', '!=', \auth('admin')->user()->id)->count()}}
@@ -292,7 +292,7 @@
                                         </g>
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
-                        <span class="menu-text">{{trans('menu.projects')}}</span>
+                        <span class="menu-text">{{__('menu.projects')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-danger">
                              {{App\Models\Projects::count()}}
@@ -322,7 +322,7 @@
                                         </g>
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
-                        <span class="menu-text">{{trans('menu.publications')}}</span>
+                        <span class="menu-text">{{__('menu.publications')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-warning">
                             {{App\Models\Publications::count()}}
@@ -351,7 +351,7 @@
                                         </g>
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
-                        <span class="menu-text">{{trans('menu.articles')}}</span>
+                        <span class="menu-text">{{__('menu.articles')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-light-warning">
                              {{App\Models\Article::count()}}
@@ -379,7 +379,7 @@
                                         </g>
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
-                        <span class="menu-text">{{trans('menu.testimonials')}}</span>
+                        <span class="menu-text">{{__('menu.testimonials')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-info">
                              {{App\Models\testimonial::count()}}
@@ -408,7 +408,7 @@
                                       </g>
                                   </svg><!--end::Svg Icon--></span>
                               </span>
-                        <span class="menu-text">{{trans('menu.reports')}}</span>
+                        <span class="menu-text">{{__('menu.reports')}}</span>
                         <span class="menu-label">
                       <span class="label label-rounded label-info">
                           {{App\Models\Report::count()}}
@@ -437,7 +437,7 @@
                                         </g>
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
-                        <span class="menu-text">{{trans('menu.videos')}}</span>
+                        <span class="menu-text">{{__('menu.videos')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-primary">
                             {{App\Models\Video::count()}}
@@ -468,7 +468,7 @@
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
 
-                        <span class="menu-text">{{trans('menu.abouts')}}</span>
+                        <span class="menu-text">{{__('menu.abouts')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-primary">
                             {{App\Models\About::count()}}
@@ -497,7 +497,7 @@
                                         </g>
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
-                        <span class="menu-text">{{trans('menu.photo_albums')}}</span>
+                        <span class="menu-text">{{__('menu.photo_albums')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-primary">
                             {{App\Models\PhotoAlbum::count()}}
@@ -529,7 +529,7 @@
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
 
-                        <span class="menu-text">{{trans('menu.teams')}}</span>
+                        <span class="menu-text">{{__('menu.teams')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-white">
                              {{\App\Models\Team::count()}}
@@ -562,7 +562,7 @@
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
 
-                        <span class="menu-text">{{trans('menu.qas')}}</span>
+                        <span class="menu-text">{{__('menu.qas')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-white">
                              {{\App\Models\QA::count()}}
@@ -591,7 +591,7 @@
                                 </g>
                                 </svg><!--end::Svg Icon--></span>
                     </span>
-                        <span class="menu-text">{{trans('menu.support_center')}}</span>
+                        <span class="menu-text">{{__('menu.support_center')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-white">
                              {{App\Models\SupportCenter::count()}}

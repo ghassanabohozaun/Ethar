@@ -28,9 +28,9 @@ class Admin extends Authenticatable
     public function getGenderAttribute($value)
     {
         if ($value == 'male') {
-            return trans('general.male');
+            return __('general.male');
         } elseif ($value == 'female') {
-            return trans('general.female');
+            return __('general.female');
         }
     }
 

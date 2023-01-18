@@ -19,7 +19,7 @@
                                        name="id" id="id" type="hidden"
                                        autocomplete="off"/>
                                        <input type="hidden" name="hidden_photo" value="hidden_photo">
-                                       
+
                                        <input value="{{setting()->site_lang_en}}"
                                        class="form-control form-control-solid form-control-lg"
                                        name="english" id="english" type="hidden"
@@ -32,7 +32,7 @@
                     <!--begin::Group-->
                     <div class="form-group row">
                         <label class="col-xl-3 col-lg-3 col-form-label">
-                        {{trans('abouts.photo')}}
+                        {{__('abouts.photo')}}
                         </label>
                         <div class="col-lg-9 col-xl-9">
                             <div
@@ -45,7 +45,7 @@
                                 <label
                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
                                     data-action="change" data-toggle="tooltip" title=""
-                                    data-original-title="{{trans('general.change_image')}}">
+                                    data-original-title="{{__('general.change_image')}}">
                                     <i class="fa fa-pen icon-sm text-muted"></i>
                                     <input type="file" name="photo" id="photo"
                                            class="table-responsive-sm">
@@ -59,7 +59,7 @@
                                  </span>
                             </div>
                             <span
-                                class="form-text text-muted">{{trans('general.image_format_allow')}}
+                                class="form-text text-muted">{{__('general.image_format_allow')}}
                                                         </span>
                             <span class="form-text text-danger"
                                   id="photo_error"></span>
@@ -70,7 +70,7 @@
                       <!--begin::Group-->
                       <div class="form-group row">
                         <label class="col-xl-3 col-lg-3 col-form-label">
-                            {{trans('abouts.file')}}
+                            {{__('abouts.file')}}
                         </label>
                         <div class="col-lg-9 col-xl-9">
                             <input
@@ -78,7 +78,7 @@
                                 type="file" name="file" id="file"
 
                                 placeholder=""/>
-                                <span class="form-text text-muted">{{trans('general.file_format_allow')}}</span>
+                                <span class="form-text text-muted">{{__('general.file_format_allow')}}</span>
                             <span class="form-text text-danger"
                                   id="file_error"></span>
                         </div>
@@ -88,7 +88,7 @@
                      <!--begin::Group-->
                      <div class="form-group row">
                         <label class="col-xl-3 col-lg-3 col-form-label">
-                         {{trans('about.type')}}
+                         {{__('about.type')}}
                         </label>
                         <div class="col-lg-9 col-xl-9">
 

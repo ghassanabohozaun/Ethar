@@ -88,10 +88,10 @@ xmlns="http://www.w3.org/1999/xhtml">
 
                                 <div class="form-group  mt-4">
                                     <label for="email">
-                                        {!! trans('login.email') !!}
+                                        {!! __('login.email') !!}
                                     </label>
                                     <input type="email" class="form-control" id="email" name="email"
-                                           autocomplete="off" placeholder="{!! trans('login.enter_email') !!}">
+                                           autocomplete="off" placeholder="{!! __('login.enter_email') !!}">
                                     @error('email')
                                     <span class="text-danger font-weight-bold">
                                         {{$message}}
@@ -101,11 +101,11 @@ xmlns="http://www.w3.org/1999/xhtml">
 
                                 <div class="form-group mt-4">
                                     <label for="password">
-                                        {!! trans('login.password') !!}
+                                        {!! __('login.password') !!}
                                     </label>
                                     <input type="password" class="form-control" id="password" name="password"
                                            autocomplete="off"
-                                           placeholder="{!! trans('login.enter_password') !!}">
+                                           placeholder="{!! __('login.enter_password') !!}">
 
                                     @error('password')
                                     <span class="text-danger font-weight-bold">
@@ -120,7 +120,7 @@ xmlns="http://www.w3.org/1999/xhtml">
                                         <label>
                                             <input type="checkbox" name="rememberMe" id="rememberMe">
                                             <span style="margin-top: 10px;color: #999999">&nbsp;
-                                                {{trans('login.remember_me')}}
+                                                {{__('login.remember_me')}}
                                             </span>
                                         </label>
                                     </div>
@@ -128,7 +128,7 @@ xmlns="http://www.w3.org/1999/xhtml">
 
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary px-5 br-20">
-                                        {!! trans('login.login') !!}
+                                        {!! __('login.login') !!}
                                     </button>
                                 </div>
 

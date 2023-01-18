@@ -1,7 +1,7 @@
 @if($notifications->isEmpty())
     <img src="{!! asset('site/images/noRecordFound.svg') !!}"
          class="img-fluid" id="no_data_img"
-         title="{!! trans('site.no_date') !!}">
+         title="{!! __('site.no_date') !!}">
 @else
     @foreach($notifications as $notification)
         <!--begin: Item-->

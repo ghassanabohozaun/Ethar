@@ -4,7 +4,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{trans('aboutSite.brochure')}}</h5>
+                <h5 class="modal-title" id="exampleModalLabel">{{__('aboutSite.brochure')}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
@@ -29,7 +29,7 @@
                                         <div>
                                             <div class="form-group row">
                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                    {{trans('aboutSite.brochure')}}
+                                                    {{__('aboutSite.brochure')}}
                                                 </label>
                                                 <div class="col-lg-9 col-xl-9">
                                                     <input
@@ -65,11 +65,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="" id="cancel_brochure_btn" class="btn btn-light-primary font-weight-bold">
-                        {{trans('general.cancel')}}
+                        {{__('general.cancel')}}
                     </button>
 
                     <button type="submit" id="save_brochure_btn" class="btn btn-primary font-weight-bold">
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
                 </div>
             </form>

@@ -11,7 +11,7 @@
 
                 <!--begin::Page Title-->
                 <span class="text-dark font-weight-bold mt-2 mb-2 mr-5">
-                    {{trans('menu.dashboard')}}
+                    {{__('menu.dashboard')}}
                 </span>
                 <!--end::Page Title-->
 
@@ -41,7 +41,7 @@
                             <div class="row justify-content-center px-2   px-lg-10">
                                 <div class="col-xl-12 col-xxl-10">
 
-                                    <h2 style="font-weight: 600"> {!! trans('dashboard.welcome_message_title') !!}
+                                    <h2 style="font-weight: 600"> {!! __('dashboard.welcome_message_title') !!}
                                         @if(LaravelLocalization::getCurrentLocale() =='ar')
                                             {{setting()->site_name_ar}}
                                         @else
@@ -56,11 +56,11 @@
                                             <!--begin::body-->
                                             <div class="my-5">
                                                 <h5 style="line-height: 2rem">
-                                                    {{trans('dashboard.dear_user')}}
+                                                    {{__('dashboard.dear_user')}}
                                                     &nbsp;
                                                     <span class="text-warning">{{admin()->user()->name}}</span>&nbsp;,
                                                     &nbsp;
-                                                    {!! trans('dashboard.welcome_message_details') !!}
+                                                    {!! __('dashboard.welcome_message_details') !!}
                                                 </h5>
 
 
@@ -86,11 +86,11 @@
 
                                         </div>
                                         <div class="col-lg-6 " style=" margin-top: 10px; font-weight: bolder;font-size: 15px">
-                                            <p style="">{{trans('dashboard.name')}}
+                                            <p style="">{{__('dashboard.name')}}
                                                 : {{admin()->user()->name}}</p>
-                                            <p>{{trans('dashboard.email')}} : {{admin()->user()->email}}</p>
-                                            <p>{{trans('users.last_login_at')}} : {{admin()->user()->last_login_at}}</p>
-                                            <p>{{trans('users.last_login_ip')}} : {{admin()->user()->last_login_ip}}</p>
+                                            <p>{{__('dashboard.email')}} : {{admin()->user()->email}}</p>
+                                            <p>{{__('users.last_login_at')}} : {{admin()->user()->last_login_at}}</p>
+                                            <p>{{__('users.last_login_ip')}} : {{admin()->user()->last_login_ip}}</p>
 
                                         </div>
                                     </div>

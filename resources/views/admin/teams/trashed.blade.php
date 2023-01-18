@@ -14,19 +14,19 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="{{route('admin.teams')}}" class="text-muted">
-                            {{trans('menu.teams')}}
+                            {{__('menu.teams')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{trans('menu.trashed_teams')}}
+                            {{__('menu.trashed_teams')}}
                         </a>
                     </li>
 
                     <li class="breadcrumb-item">
                         <a href="" class="text-muted">
-                            {{trans('menu.show_all')}}
+                            {{__('menu.show_all')}}
                         </a>
                     </li>
                 </ul>
@@ -40,7 +40,7 @@
                 <a href="{{route('admin.team.member.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{trans('menu.add_new_team_member')}}
+                    {{__('menu.add_new_team_member')}}
                 </a>
                 &nbsp;
             </div>
