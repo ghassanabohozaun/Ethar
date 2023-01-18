@@ -39,7 +39,7 @@
                             <div class="col-lg-9 col-xl-9">
                                 <div
                                     class="image-input image-input-outline"
-                                    id="kt_article_photo">
+                                    id="kt_publication_photo">
 
                                     <div class="image-input-wrapper"
                                          style="background-image: url({{asset('adminBoard/uploadedImages/publications/'.$publication->photo)}})"></div>
@@ -175,11 +175,11 @@
 
     <script type="text/javascript">
 
-        /////////////////////////////////////////////////////////////
-        var article_photo = new KTImageInput('kt_article_photo');
+
+        var publication_photo = new KTImageInput('kt_publication_photo');
         ////////////////////////////////////////////////////////////
         ///////// Datepicker
-        $('#publish_date').datepicker({
+        $('#date').datepicker({
             format: "yyyy-mm-dd",
             todayBtn: true,
             clearBtn: false,
@@ -189,14 +189,6 @@
             todayHighlight: true,
         });
 
-        $("input:file").change(function () {
-            if ($(this).val() != "") {
-                $(".file_section").addClass('d-none');
-            } else {
-                $(".file_section").removeClass('d-none');
-
-            }
-        });
     </script>
 @endpush
 
