@@ -194,7 +194,7 @@
             @endcan
             <!------------------------------------ Roles  ---------------------------------------------------->
             @can('roles')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu @if(str_contains(url()->current(), 'roles')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{!! route('admin.roles') !!}" class="menu-link menu-toggle">
                     <span class="svg-icon menu-icon">
@@ -275,7 +275,8 @@
 
             <!------------------------------------ Projects  ---------------------------------------------------->
             @can('projects')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                @if(str_contains(url()->current(), '/project')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.project.index') }}" class="menu-link menu-toggle">
                                 <span class="svg-icon menu-icon">
@@ -304,7 +305,8 @@
 
             <!------------------------------------ Publications  ---------------------------------------------------->
             @can('publications')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                 @if(str_contains(url()->current(), '/publication')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.publication.index') }}" class="menu-link menu-toggle">
 
@@ -334,7 +336,8 @@
 
             <!------------------------------------ Articles  ---------------------------------------------------->
             @can('articles')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                 @if(str_contains(url()->current(), '/articles')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{!! route('admin.articles') !!}" class="menu-link menu-toggle">
                                 <span class="svg-icon menu-icon">
@@ -362,7 +365,8 @@
             @endcan
             <!------------------------------------ Testimonials  ---------------------------------------------------->
             @can('testimonials')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                 @if(str_contains(url()->current(), '/testimonials')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.testimonials') }}" class="menu-link menu-toggle">
                                 <span class="svg-icon menu-icon">
@@ -391,7 +395,8 @@
 
             <!------------------------------------ Report  ---------------------------------------------------->
             @can('yearly-reports')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                 @if(str_contains(url()->current(), '/report')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.report.index') }}" class="menu-link menu-toggle">
                               <span class="svg-icon menu-icon">
@@ -420,7 +425,8 @@
 
             <!------------------------------------ videos  ---------------------------------------------------->
             @can('videos')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                @if(str_contains(url()->current(), '/videos')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.videos') }}" class="menu-link menu-toggle">
                                 <span class="svg-icon menu-icon">
@@ -449,7 +455,8 @@
 
             <!------------------------------------ Abouts  ---------------------------------------------------->
             @can('abouts')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                  @if(str_contains(url()->current(), '/about')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.about.index') }}" class="menu-link menu-toggle">
 
@@ -479,7 +486,8 @@
             @endcan
             <!------------------------------------ photos  ---------------------------------------------------->
             @can('photos')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                   @if(str_contains(url()->current(), '/photo-albums')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{{ route('admin.photo.albums') }}" class="menu-link menu-toggle">
 
@@ -510,7 +518,8 @@
 
             <!------------------------------------ teams ---------------------------------------------------->
             @can('teams')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                   @if(str_contains(url()->current(), '/teams')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{!! route('admin.teams') !!}" class="menu-link menu-toggle">
 
@@ -543,7 +552,8 @@
 
             <!------------------------------------ teams ---------------------------------------------------->
             @can('qas')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                  @if(str_contains(url()->current(), '/QA')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{!! route('admin.QA.index') !!}" class="menu-link menu-toggle">
 
@@ -573,7 +583,8 @@
             @endcan
             <!------------------------------------ Support Center ---------------------------------------------------->
             @can('support-center')
-                <li class="menu-item  menu-item-submenu"
+                <li class="menu-item  menu-item-submenu
+                  @if(str_contains(url()->current(), '/support-center')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
                     <a href="{!! route('admin.support.center') !!}" class="menu-link menu-toggle">
                                 <span class="svg-icon menu-icon">

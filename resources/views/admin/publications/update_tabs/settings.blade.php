@@ -140,28 +140,28 @@
                                 <select
                                     class="form-control  form-control-lg"
                                     name="type" id="type" type="text">
-
                                     <option
-                                        value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>{{__('publications.Advertisements')}}</option>
-
+                                        value="Advertisements" {{$publication->type == 'Advertisements'?'selected':''}}>
+                                        {{__('publications.Advertisements')}}
+                                    </option>
                                     <option
-                                        value="Brochures"{{$publication->type == 'Brochures'?'selected':''}}>{{__('publications.Brochures')}}</option>
-
+                                        value="Brochures"{{$publication->type == 'Brochures'?'selected':''}}>
+                                        {{__('publications.Brochures')}}
+                                    </option>
                                     <option
-                                        value="CaseStudy"{{$publication->type == 'CaseStudy'?'selected':''}}> {{__('publications.CaseStudy')}}</option>
-
-                                    <option
-                                        value="ScientificArticles" {{$publication->type == 'ScientificArticles'?'selected':''}}>{{__('publications.ScientificArticles')}}</option>
-
-
+                                        value="CaseStudy"{{$publication->type == 'CaseStudy'?'selected':''}}>
+                                        {{__('publications.CaseStudy')}}
+                                    </option>
+                                    <option value="ScientificArticles"
+                                        {{$publication->type == 'ScientificArticles'?'selected':''}}>
+                                        {{__('publications.ScientificArticles')}}
+                                    </option>
                                 </select>
                                 <span class="form-text text-danger"
                                       id="writer_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->
-
-
                     </div>
                 </div>
             </div>
@@ -175,10 +175,9 @@
 
     <script type="text/javascript">
 
-
         var publication_photo = new KTImageInput('kt_publication_photo');
-        ////////////////////////////////////////////////////////////
-        ///////// Datepicker
+
+        // Datepicker
         $('#date').datepicker({
             format: "yyyy-mm-dd",
             todayBtn: true,
