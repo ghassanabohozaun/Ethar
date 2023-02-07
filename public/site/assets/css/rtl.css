@@ -90,8 +90,13 @@
 
 .rtl .header-style-one .logo-box{
   left: inherit;
-  right: 20px;
+  right: 0px;
 }
+
+.header-style-one .logo-box .logo img {
+    border-bottom-left-radius: 20px;
+}
+
 
 .rtl .header-top .donate-btn{
   right: inherit;
@@ -442,3 +447,5 @@
   margin-right: 0px;
   margin-left: 25px;
 }
+
+

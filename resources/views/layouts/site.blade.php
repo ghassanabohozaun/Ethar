@@ -26,6 +26,9 @@
 
     @if(Lang()=='ar')
         <link href="{!! asset('site/assets/css/rtl.css') !!}" rel="stylesheet">
+    @else
+        <link href="{!! asset('site/assets/css/ltr.css') !!}" rel="stylesheet">
+
     @endif
 
     <!-- Stylesheets -->

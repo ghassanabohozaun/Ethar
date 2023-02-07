@@ -668,10 +668,11 @@ img {
 
 .header-style-one .logo-box {
     position: absolute;
-    left: 20px;
+    left: 0px;
     top: 0px;
-    max-width: 180px;
+    max-width: 220px;
     z-index: 1;
+
 }
 
 .main-header .logo-box .shape {
@@ -681,6 +682,7 @@ img {
     width: 101px;
     height: 51px;
     background-repeat: no-repeat;
+    border-radius:2px
 }
 
 
@@ -695,7 +697,7 @@ img {
 .header-top .top-inner {
     position: relative;
     width: 100%;
-    background-color: #232323;
+    background-color: #ffffff;
     padding: 12px 20px;
     border-radius: 30px;
 }
@@ -1732,38 +1734,44 @@ div#mCSB_1_container {
 .main-header .search-box-btn {
     position: relative;
     display: inline-block;
-    font-size: 24px;
-    color: #232323;
+    font-size: 30px;
+    color: #f08635;
     cursor: pointer;
     margin-left: 40px;
     margin-right: 34px;
-    top: 4px;
     transition: all 500ms ease;
+}
+
+.main-header .search-box-btn a{
+    font-size: 30px;
+    font-weight:bold;
+    color: #f08635;
+    cursor: pointer;
 }
 
 .main-header .search-box-btn:hover {
 
 }
 
-.main-header .search-box-btn:before {
-    position: absolute;
-    content: '';
-    background-color: #eae8e6;
-    width: 1px;
-    height: 44px;
-    left: -20px;
-    top: -11px;
-}
+/*.main-header .search-box-btn:before {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    background-color: #eae8e6;*/
+/*    width: 1px;*/
+/*    height: 44px;*/
+/*    left:  40px;*/
+/*    top: -11px;*/
+/*}*/
 
-.main-header .search-box-btn:after {
-    position: absolute;
-    content: '';
-    background-color: #eae8e6;
-    width: 1px;
-    height: 24px;
-    right: -19px;
-    top: -1px;
-}
+/*.main-header .search-box-btn:after {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    background-color: #eae8e6;*/
+/*    width: 1px;*/
+/*    height: 24px;*/
+/*    right: -19px;*/
+/*    top: -1px;*/
+/*}*/
 
 .main-header .search-box-outer .dropdown-menu {
     top: 55px !important;
@@ -5969,7 +5977,7 @@ div#mCSB_1_container {
 .header-top-two {
     position: relative;
     width: 100%;
-    background-color: #232323;
+    background-color: #ffffff;
     padding-left: 160px;
     padding-right: 40px;
 }
@@ -6096,7 +6104,7 @@ div#mCSB_1_container {
 .header-top-two .right-column .social-links li a:before {
     position: absolute;
     content: '';
-    background-color: rgba(255, 255, 255, 0.1);
+
     width: 1px;
     height: 16px;
     top: 6px;
