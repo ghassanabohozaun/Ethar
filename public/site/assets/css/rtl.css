@@ -419,7 +419,7 @@
 
 .rtl .footer-top .title-box{
   padding-left: 0px;
-  padding-right: 65px;
+  /*padding-right: 65px;*/
 }
 
 .rtl .footer-top .title-box .icon-box{

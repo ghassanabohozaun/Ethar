@@ -25,7 +25,7 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!}); margin-top: 80px">
+                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
@@ -113,6 +113,8 @@
                                     </ul>
                                 </div>
                             </div>
+
+
                             <div class="sidebar-widget post-widget">
                                 <div class="widget-title">
                                     <h3>Latest Post</h3>
@@ -130,112 +132,31 @@
                                         <span class="post-date">03.03.2021</span>
                                     </div>
 
+                                    <div class="post">
+                                        <figure class="post-thumb">
+                                            <a href="#">
+                                                <img src="{!! asset('site/assets/images/news/post-4.jpg') !!}" alt="">
+                                            </a>
+                                        </figure>
+                                        <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.</a></h5>
+                                        <span class="post-date">03.03.2021</span>
+                                    </div>
+
+                                    <div class="post">
+                                        <figure class="post-thumb">
+                                            <a href="#">
+                                                <img src="{!! asset('site/assets/images/news/post-4.jpg') !!}" alt="">
+                                            </a>
+                                        </figure>
+                                        <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.</a></h5>
+                                        <span class="post-date">03.03.2021</span>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            {{--                            <div class="sidebar-widget tags-widget">--}}
-                            {{--                                <div class="widget-title">--}}
-                            {{--                                    <h3>Tag Cloud</h3>--}}
-                            {{--                                </div>--}}
-                            {{--                                <div class="widget-content">--}}
-                            {{--                                    <ul class="tags-list clearfix">--}}
-                            {{--                                        <li><a href="blog-details.html">activities</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">awareness</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">benefits</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">education</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">environment</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">gift card</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">heath</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">protection</a></li>--}}
-                            {{--                                        <li><a href="blog-details.html">women care</a></li>--}}
-                            {{--                                    </ul>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
-
-
-                            <div class="sidebar-widget gallery-widget">
-                                <div class="widget-title">
-                                    <h3>Gallery</h3>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="image-list clearfix">
-                                        <li>
-                                            <figure class="image">
-                                                <img src="{!! asset('site/assets/images/case/gallery-1.jpg') !!}"
-                                                     alt="">
-                                                <a href="{!! asset('site/assets/images/case/gallery-1.jpg') !!}"
-                                                   class="lightbox-image" data-fancybox="gallery">
-                                                    <i class="fas fa-expand-alt"></i>
-                                                </a>
-                                            </figure>
-                                        </li>
-                                        <li>
-                                            <figure class="image">
-                                                <img src="{!! asset('site/assets/images/case/gallery-2.jpg') !!}"
-                                                     alt="">
-                                                <a href="{!! asset('site/assets/images/case/gallery-2.jpg') !!}"
-                                                   class="lightbox-image" data-fancybox="gallery"><i
-                                                        class="fas fa-expand-alt"></i></a>
-                                            </figure>
-                                        </li>
-                                        <li>
-                                            <figure class="image">
-                                                <img src="{!! asset('site/assets/images/case/gallery-3.jpg') !!}"
-                                                     alt="">
-                                                <a href="{!! asset('site/assets/images/case/gallery-3.jpg') !!}"
-                                                   class="lightbox-image" data-fancybox="gallery"><i
-                                                        class="fas fa-expand-alt"></i></a>
-                                            </figure>
-                                        </li>
-                                        <li>
-                                            <figure class="image">
-                                                <img src="{!! asset('site/assets/images/case/gallery-4.jpg') !!}"
-                                                     alt="">
-                                                <a href="{!! asset('site/assets/images/case/gallery-4.jpg') !!}"
-                                                   class="lightbox-image" data-fancybox="gallery"><i
-                                                        class="fas fa-expand-alt"></i></a>
-                                            </figure>
-                                        </li>
-                                        <li>
-                                            <figure class="image">
-                                                <img src="{!! asset('site/assets/images/case/gallery-5.jpg') !!}"
-                                                     alt="">
-                                                <a href="{!! asset('site/assets/images/case/gallery-5.jpg') !!}"
-                                                   class="lightbox-image" data-fancybox="gallery"><i
-                                                        class="fas fa-expand-alt"></i></a>
-                                            </figure>
-                                        </li>
-                                        <li>
-                                            <figure class="image">
-                                                <img src="{!! asset('site/assets/images/case/gallery-6.jpg') !!}"
-                                                     alt="">
-                                                <a href="{!! asset('site/assets/images/case/gallery-6.jpg') !!}"
-                                                   class="lightbox-image" data-fancybox="gallery"><i
-                                                        class="fas fa-expand-alt"></i></a>
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {{--                            <div class="sidebar-widget subscribe-widget centred">--}}
-                            {{--                                <div class="widget-content">--}}
-                            {{--                                    <div class="upper-content" style="background-image: url(assets/images/case/case-30.jpg);">--}}
-                            {{--                                        <div class="icon-box"><i class="icon-email-open-sketched-envelope"></i></div>--}}
-                            {{--                                        <h3>Subscribe Us</h3>--}}
-                            {{--                                        <p>Subscribe us and get latest news and upcoming events.</p>--}}
-                            {{--                                    </div>--}}
-                            {{--                                    <div class="lower-content">--}}
-                            {{--                                        <form action="contact.html" method="post" class="subscribe-form">--}}
-                            {{--                                            <div class="form-group">--}}
-                            {{--                                                <input type="email" name="email" placeholder="Enter email address" required="">--}}
-                            {{--                                                <button type="submit" class="theme-btn btn-one">Subscribe</button>--}}
-                            {{--                                            </div>--}}
-                            {{--                                        </form>--}}
-                            {{--                                        <p><span>*</span>Never share your email with others.</p>--}}
-                            {{--                                    </div>--}}
-                            {{--                                </div>--}}
-                            {{--                            </div>--}}
                         </div>
                     </div>
                     <!-- right end -->

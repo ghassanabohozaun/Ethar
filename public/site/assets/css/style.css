@@ -5761,7 +5761,7 @@ div#mCSB_1_container {
 
 .footer-top .title-box {
     position: relative;
-    padding-left: 65px;
+    /*padding-left: 65px;*/
     margin-bottom: 25px;
 }
 
@@ -15583,7 +15583,7 @@ div#mCSB_1_container {
 }
 
 .contact-section .default-form .form-group textarea {
-    height: 80px;
+    height: 220px;
     resize: none;
 }
 

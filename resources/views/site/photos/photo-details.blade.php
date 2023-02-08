@@ -25,7 +25,7 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!}); margin-top: 80px">
+                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
@@ -48,7 +48,7 @@
                 <div class="sortable-masonry">
 
                     <div class="items-container row clearfix">
-                        <div class="col-lg-4 col-md-4 col-sm-6 masonry-item small-column">
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
                             <figure class="image-box">
                                 <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
                                    class="lightbox-image"
@@ -57,7 +57,7 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 masonry-item small-column">
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
                             <figure class="image-box">
                                 <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
                                    class="lightbox-image"
@@ -66,7 +66,7 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 masonry-item small-column">
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
                             <figure class="image-box">
                                 <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
                                    class="lightbox-image"
@@ -75,7 +75,7 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 masonry-item small-column">
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
                             <figure class="image-box">
                                 <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
                                    class="lightbox-image"
@@ -84,7 +84,7 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 masonry-item small-column">
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
                             <figure class="image-box">
                                 <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
                                    class="lightbox-image"
@@ -93,7 +93,25 @@
                                 </a>
                             </figure>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 masonry-item small-column">
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
+                            <figure class="image-box">
+                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
+                                   class="lightbox-image"
+                                   data-fancybox="gallery">
+                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
+                            <figure class="image-box">
+                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
+                                   class="lightbox-image"
+                                   data-fancybox="gallery">
+                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
+                                </a>
+                            </figure>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
                             <figure class="image-box">
                                 <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
                                    class="lightbox-image"

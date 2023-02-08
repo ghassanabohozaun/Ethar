@@ -25,7 +25,7 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!}); margin-top: 80px">
+                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">

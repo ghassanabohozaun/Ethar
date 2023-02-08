@@ -25,7 +25,7 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!}); margin-top: 80px">
+                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
@@ -60,8 +60,8 @@
                     </div>
 
                     <div class="items-container row clearfix">
-                        <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020 2019">
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020 2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
                                     <figure class="image"><img
@@ -80,9 +80,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all  2021 2020 ">
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022 2021  2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
                                     <figure class="image"><img
@@ -101,9 +99,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021  2019">
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020 2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
                                     <figure class="image"><img
@@ -122,9 +118,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022  2020 2019 2018">
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022  2020 2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
                                     <figure class="image"><img
@@ -143,9 +137,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020">
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020 2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
                                     <figure class="image"><img
@@ -164,9 +156,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all 2022 2021 2020 2019">
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022 2021  2019">
                             <div class="portfolio-block-one">
                                 <div class="inner-box">
                                     <figure class="image"><img
@@ -185,7 +175,44 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022  2020 2019">
+                            <div class="portfolio-block-one">
+                                <div class="inner-box">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    </figure>
+                                    <div class="content-box">
+                                        <ul class="links-list clearfix">
+                                            <li><a href="#"><i class="fas fa-expand-alt"></i></a></li>
+                                            <li><a href="#"><i class="far fa-file-alt"></i></a></li>
+                                        </ul>
+                                        <div class="text">
+                                            <span>2022</span>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all 2022  2020 2019">
+                            <div class="portfolio-block-one">
+                                <div class="inner-box">
+                                    <figure class="image"><img
+                                            src="{!! asset('site/assets/images/gallery/portfolio-7.jpg') !!}" alt="">
+                                    </figure>
+                                    <div class="content-box">
+                                        <ul class="links-list clearfix">
+                                            <li><a href="#"><i class="fas fa-expand-alt"></i></a></li>
+                                            <li><a href="#"><i class="far fa-file-alt"></i></a></li>
+                                        </ul>
+                                        <div class="text">
+                                            <span>2022</span>
+                                            <h3><a href="{!! route('photo-details') !!}">Album Name</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -25,7 +25,7 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!}); margin-top: 80px">
+                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
@@ -53,13 +53,24 @@
                                 <h2>Hear by our association</h2>
                             </div>
                             <div class="info-box">
+
                                 <div class="single-item">
                                     <h4>Quick Contact</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
-                                        <p>Main Office<br /><a href="tel:23345678901">(+233) 456-789-01</a></p>
+                                        <p>Phone<br /><a href="tel:00972592404940">00972592404940</a></p>
                                     </div>
                                 </div>
+
+                                <div class="single-item">
+                                    <h4>Emergency contact</h4>
+                                    <div class="text">
+                                        <div class="icon-box"><i class="icon-phone-call"></i></div>
+                                        <p>Phone<br /><a href="tel:00972592404940">00972592404940</a></p>
+                                    </div>
+                                </div>
+
+
                                 <div class="single-item">
                                     <h4>Email Address</h4>
                                     <div class="text">
@@ -85,7 +96,7 @@
                                 <h2>Leave us Message</h2>
                             </div>
                             <div class="form-inner">
-                                <form method="post" action="sendemail.php" id="contact-form" class="default-form">
+                                <form method="post" action="#" id="contact-form" class="default-form">
                                     <div class="form-group">
                                         <i class="far fa-user"></i>
                                         <input type="text" name="username" placeholder="Your Name" required="">
@@ -104,7 +115,7 @@
                                     </div>
                                     <div class="form-group">
                                         <i class="far fa-text-height"></i>
-                                        <textarea name="message" placeholder="Massage"></textarea>
+                                        <textarea name="message" placeholder="Massage" rows="30"></textarea>
                                     </div>
                                     <div class="form-group message-btn">
                                         <button class="theme-btn btn-one" type="submit" name="submit-form">Send Message</button>

@@ -25,7 +25,7 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!}); margin-top: 80px">
+                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
@@ -64,66 +64,18 @@
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                             <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
+                                <li class="share">
+                                    <i class="far fa-file-word"></i>
+                                    <h5>download</h5>
                                 </li>
                                 <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
-                                </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                            <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
+                                    <i class="fas fa-file-pdf"></i>
+                                    <h5>download</h5>
                                 </li>
                                 <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
+                                    <i class="fas fa-book"></i>
+                                    <h5>visit case studies</h5>
+
                                 </li>
                             </ul>
                         </div>
@@ -147,24 +99,18 @@
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                             <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
+                                <li class="share">
+                                    <i class="far fa-file-word"></i>
+                                    <h5>download</h5>
                                 </li>
                                 <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
+                                    <i class="fas fa-file-pdf"></i>
+                                    <h5>download</h5>
+                                </li>
+                                <li class="share">
+                                    <i class="fas fa-book"></i>
+                                    <h5>visit case studies</h5>
+
                                 </li>
                             </ul>
                         </div>
@@ -188,24 +134,18 @@
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
                             </div>
                             <ul class="info-box clearfix">
-                                <li>
-                                    <i class="far fa-calendar-alt"></i>
-                                    <h5>Days</h5>
-                                    <p>28 Days</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-users"></i>
-                                    <h5>40+</h5>
-                                    <p>Suppoters</p>
+                                <li class="share">
+                                    <i class="far fa-file-word"></i>
+                                    <h5>download</h5>
                                 </li>
                                 <li class="share">
-                                    <i class="fas fa-share-alt"></i>
-                                    <h5><a href="index.html">Share</a></h5>
-                                    <ul class="social-links clearfix">
-                                        <li><a href="donations.html"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="donations.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
+                                    <i class="fas fa-file-pdf"></i>
+                                    <h5>download</h5>
+                                </li>
+                                <li class="share">
+                                    <i class="fas fa-book"></i>
+                                    <h5>visit case studies</h5>
+
                                 </li>
                             </ul>
                         </div>
@@ -214,11 +154,11 @@
 
                 <div class="pagination-wrapper centred">
                     <ul class="pagination clearfix">
-                        <li><a href="donations.html"><i class="fas fa-arrow-left"></i></a></li>
-                        <li><a href="donations.html" class="current">1</a></li>
-                        <li><a href="donations.html">2</a></li>
-                        <li><a href="donations.html">3</a></li>
-                        <li><a href="donations.html"><i class="fas fa-arrow-right"></i></a></li>
+                        <li><a href="#"><i class="fas fa-arrow-left"></i></a></li>
+                        <li><a href="#" class="current">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#"><i class="fas fa-arrow-right"></i></a></li>
                     </ul>
                 </div>
             </div>
