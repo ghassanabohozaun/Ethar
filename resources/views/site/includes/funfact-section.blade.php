@@ -1,5 +1,4 @@
-<section class="funfact-section centred"
-         style="background-image: url({!! asset('site/assets/images/background/14.jpg') !!});">
+<section class="funfact-section centred">
     <div class="auto-container">
 
         <div class="row clearfix">

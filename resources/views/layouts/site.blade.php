@@ -24,12 +24,7 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    @if(Lang()=='ar')
-        <link href="{!! asset('site/assets/css/rtl.css') !!}" rel="stylesheet">
-    @else
-        <link href="{!! asset('site/assets/css/ltr.css') !!}" rel="stylesheet">
 
-    @endif
 
     <!-- Stylesheets -->
     <link href="{!! asset('site/assets/css/font-awesome-all.css') !!}" rel="stylesheet">
@@ -41,6 +36,12 @@
     <link href="{!! asset('site/assets/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/jquery.bootstrap-touchspin.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/color.css') !!}" rel="stylesheet">
+    @if(Lang()=='ar')
+        <link href="{!! asset('site/assets/css/rtl.css') !!}" rel="stylesheet">
+    @else
+        <link href="{!! asset('site/assets/css/ltr.css') !!}" rel="stylesheet">
+
+    @endif
     <link href="{!! asset('site/assets/css/style.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/responsive.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/site-style.css') !!}" rel="stylesheet">

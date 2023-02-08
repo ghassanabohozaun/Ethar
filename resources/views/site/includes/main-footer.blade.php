@@ -2,7 +2,8 @@
     <div class="footer-top-two">
         <div class="auto-container">
             <div class="row clearfix">
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget about-widget">
                         <div class="widget-title">
                             <h3>About Charity</h3>
@@ -20,10 +21,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+
+                <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget links-widget">
                         <div class="widget-title">
-                            <h3>Useful Links</h3>
+                            <h3>Related Links</h3>
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
@@ -32,16 +34,15 @@
                                 <li><a href="#">Link 3</a></li>
                                 <li><a href="#">Link 4</a></li>
                                 <li><a href="#">Link 5</a></li>
-                                <li><a href="#">Link 6</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget links-widget">
                         <div class="widget-title">
-                            <h3>Useful Links</h3>
+                            <h3>&nbsp;</h3>
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
@@ -50,71 +51,55 @@
                                 <li><a href="#">Link 3</a></li>
                                 <li><a href="#">Link 4</a></li>
                                 <li><a href="#">Link 5</a></li>
-                                <li><a href="#">Link 6</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-widget gallery-widget">
-                        <div class="widget-title">
-                            <h3>Our Gallery</h3>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget contact-widget ml-30">
+                        <div class="title-box">
+                            <h3>Contact us</h3>
                         </div>
+
                         <div class="widget-content">
-                            <ul class="image-list clearfix">
-                                <li>
-                                    <figure class="image">
-                                        <img src="{!! asset('site/assets/images/resource/footer-gallery-1.jpg') !!}"
-                                             alt="">
-                                        <a href="#"><i class="fas fa-expand-alt"></i></a>
-                                    </figure>
-                                </li>
-                                <li>
-                                    <figure class="image">
-                                        <img src="{!! asset('site/assets/images/resource/footer-gallery-1.jpg') !!}"
-                                             alt="">
-                                        <a href="#"><i class="fas fa-expand-alt"></i></a>
-                                    </figure>
-                                </li>
-                                <li>
-                                    <figure class="image">
-                                        <img src="{!! asset('site/assets/images/resource/footer-gallery-1.jpg') !!}"
-                                             alt="">
-                                        <a href="#"><i class="fas fa-expand-alt"></i></a>
-                                    </figure>
-                                </li>
-                                <li>
-                                    <figure class="image">
-                                        <img src="{!! asset('site/assets/images/resource/footer-gallery-1.jpg') !!}"
-                                             alt="">
-                                        <a href="#"><i class="fas fa-expand-alt"></i></a>
-                                    </figure>
-                                </li>
-                                <li>
-                                    <figure class="image">
-                                        <img src="{!! asset('site/assets/images/resource/footer-gallery-1.jpg') !!}"
-                                             alt="">
-                                        <a href="#"><i class="fas fa-expand-alt"></i></a>
-                                    </figure>
-                                </li>
-                                <li>
-                                    <figure class="image">
-                                        <img src="{!! asset('site/assets/images/resource/footer-gallery-1.jpg') !!}"
-                                             alt="">
-                                        <a href="#"><i class="fas fa-expand-alt"></i></a>
-                                    </figure>
-                                </li>
-
-
-                            </ul>
-                            <div class="more-links">
-                                <a href="#"><i class="far fa-angle-right"></i>View More</a>
+                            <div class="single-item">
+                                <h3>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Address :
+                                    <a href="#">Gaza , Palestine</a>
+                                </h3>
                             </div>
+
+                            <div class="single-item">
+                                <h3>
+                                    <i class="fas fa-mobile-alt"></i>
+                                    Phone :
+                                    <a href="tel:1234567897979">1234567897979</a>
+                                </h3>
+                            </div>
+
+                            <div class="single-item">
+                                <h3>
+                                    <i class="fas fa-envelope"></i>
+                                    Email :
+                                    <a href="#">email@email.com</a>
+                                </h3>
+                            </div>
+
+                            <div class="single-item">
+                                <h3>
+                                    <img style="border-radius: 5px" width="17" height="17" src="{!! asset('/site/assets/images/counter.png') !!}">
+                                    Counter :
+                                    <a href="#">124545</a>
+                                </h3>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>

@@ -37,6 +37,10 @@
         @include('site.includes.about-section')
         <!-- about-section end -->
 
+        <!-- welcome-section -->
+        @include('site.includes.founders')
+        <!-- welcome-section end -->
+
         <!-- news-section -->
         @include('site.includes.news-section')
         <!-- news-section end -->

@@ -2,7 +2,7 @@
 <header class="main-header header-style-one">
     <!-- logo-box -->
     <div class="logo-box">
-        <figure class="logo"><a href="index.html"><img src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt=""></a></figure>
+        <figure class="logo"><a href="{!! route('index') !!}"><img src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt=""></a></figure>
     </div>
     <!-- header-top -->
     <div class="header-top">
@@ -153,10 +153,10 @@
                 </div>
                 <div class="nav-right-content clearfix">
                     <ul class="social-style-one clearfix">
-                        <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                     <div class="search-box-outer">
                         <div class="dropdown">
@@ -176,6 +176,7 @@
 
             </div>
         </div>
+    </div>
     </div>
 </header>
 <!-- main-header end -->

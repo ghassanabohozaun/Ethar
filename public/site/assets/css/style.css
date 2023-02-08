@@ -98,7 +98,7 @@ body {
 
 .auto-container {
     position: static;
-    max-width: 1200px;
+    max-width: 1600px;
     padding: 0px 15px;
     margin: 0 auto;
 }
@@ -5868,6 +5868,7 @@ div#mCSB_1_container {
     position: relative;
     display: block;
     margin-bottom: 16px;
+
 }
 
 .footer-top .contact-widget .widget-content .single-item:last-child {

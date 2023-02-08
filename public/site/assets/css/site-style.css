@@ -26,6 +26,15 @@
 
 
 
+.main-footer .footer-widget .widget-content .single-item h3 {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    line-height: 50px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
 
 
 
