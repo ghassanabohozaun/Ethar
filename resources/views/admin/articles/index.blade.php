@@ -93,7 +93,6 @@
                                                             <td>{{ $article->title_en }}</td>
                                                             <td>{{ $article->publisher_name }}</td>
                                                             <td>{{ $article->publish_date }}</td>
-
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
@@ -101,8 +100,13 @@
                                                                            class="change_status">
                                                                 </div>
                                                             </td>
-
                                                             <td>
+                                                                <a href="#"
+                                                                   class="btn btn-hover-primary btn-icon btn-pill "
+                                                                   title="{{__('general.comments')}}">
+                                                                    <i class="fa fa-comment fa-1x"></i>
+                                                                </a>
+
                                                                 <a href="{{route('admin.articles.edit',$article->id)}}"
                                                                    class="btn btn-hover-primary btn-icon btn-pill "
                                                                    title="{{__('general.edit')}}">
