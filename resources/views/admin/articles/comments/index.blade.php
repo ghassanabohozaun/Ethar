@@ -15,7 +15,7 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{__('menu.articles')}}
+                            {{__('menu.comments')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
@@ -31,16 +31,16 @@
 
             <!--begin::Toolbar-->
             <div class="d-flex align-items-center">
-                <a href="{!! route('admin.articles.trashed') !!}"
-                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">
-                    <i class="fa fa-trash"></i>
-                </a>
-                &nbsp;
+{{--                <a href="{!! route('admin.articles.trashed') !!}"--}}
+{{--                   class="btn btn-light-danger trash_btn" title="{{__('general.trash')}}">--}}
+{{--                    <i class="fa fa-trash"></i>--}}
+{{--                </a>--}}
+{{--                &nbsp;--}}
 
                 <a href="{{route('admin.articles.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{__('menu.add_new_article')}}
+                    {{__('menu.add_new_comment')}}
                 </a>
                 &nbsp;
             </div>
@@ -72,64 +72,64 @@
                                                 <table class="table myTable table-hover" id="myTable">
                                                     <thead>
                                                     <tr>
-                                                        <th>{{__('articles.photo')}}</th>
-                                                        <th>{{__('articles.title_ar')}}</th>
-                                                        <th>{{__('articles.title_en')}}</th>
-                                                        <th>{{__('articles.publisher_name')}}</th>
+                                                        <th>{{__('articles.person_ip')}}</th>
+                                                        <th>{{__('articles.person_name')}}</th>
+                                                        <th>{{__('articles.person_email')}}</th>
+                                                        <th>{{__('articles.commentary')}}</th>
                                                         <th>{{__('articles.publish_date')}}</th>
                                                         <th>{{__('articles.status')}}</th>
                                                         <th class="text-center" style="width: 150px;">{{__('general.actions')}}</th>
                                                     </tr>
                                                     </thead>
-                                                    <tbody>
-                                                    @forelse($articles as $article)
-                                                        <tr>
-                                                            <td>
-                                                                <img
-                                                                    src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
-                                                                    class="img-fluid img-thumbnail table-image "/>
-                                                            </td>
-                                                            <td>{{ $article->title_ar }}</td>
-                                                            <td>{{ $article->title_en }}</td>
-                                                            <td>{{ $article->publisher_name }}</td>
-                                                            <td>{{ $article->publish_date }}</td>
-                                                            <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           {{$article->status == 'on' ? 'checked':''}}  data-id="{{$article->id}}"
-                                                                           class="change_status">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <a href="{!! route('admin.comments') !!}"
-                                                                   class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{__('general.comments')}}">
-                                                                    <i class="fa fa-comment fa-1x"></i>
-                                                                </a>
+{{--                                                    <tbody>--}}
+{{--                                                    @forelse($articles as $article)--}}
+{{--                                                        <tr>--}}
+{{--                                                            <td>--}}
+{{--                                                                <img--}}
+{{--                                                                    src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"--}}
+{{--                                                                    class="img-fluid img-thumbnail table-image "/>--}}
+{{--                                                            </td>--}}
+{{--                                                            <td>{{ $article->title_ar }}</td>--}}
+{{--                                                            <td>{{ $article->title_en }}</td>--}}
+{{--                                                            <td>{{ $article->publisher_name }}</td>--}}
+{{--                                                            <td>{{ $article->publish_date }}</td>--}}
+{{--                                                            <td>--}}
+{{--                                                                <div class="cst-switch switch-sm">--}}
+{{--                                                                    <input type="checkbox"--}}
+{{--                                                                           {{$article->status == 'on' ? 'checked':''}}  data-id="{{$article->id}}"--}}
+{{--                                                                           class="change_status">--}}
+{{--                                                                </div>--}}
+{{--                                                            </td>--}}
+{{--                                                            <td>--}}
+{{--                                                                <a href="#"--}}
+{{--                                                                   class="btn btn-hover-primary btn-icon btn-pill "--}}
+{{--                                                                   title="{{__('general.comments')}}">--}}
+{{--                                                                    <i class="fa fa-comment fa-1x"></i>--}}
+{{--                                                                </a>--}}
 
-                                                                <a href="{{route('admin.articles.edit',$article->id)}}"
-                                                                   class="btn btn-hover-primary btn-icon btn-pill "
-                                                                   title="{{__('general.edit')}}">
-                                                                    <i class="fa fa-edit fa-1x"></i>
-                                                                </a>
+{{--                                                                <a href="{{route('admin.articles.edit',$article->id)}}"--}}
+{{--                                                                   class="btn btn-hover-primary btn-icon btn-pill "--}}
+{{--                                                                   title="{{__('general.edit')}}">--}}
+{{--                                                                    <i class="fa fa-edit fa-1x"></i>--}}
+{{--                                                                </a>--}}
 
-                                                                <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_article_btn"
-                                                                   data-id="{{$article->id}}"
-                                                                   title="{{__('general.delete')}}">
-                                                                    <i class="fa fa-trash fa-1x"></i>
-                                                                </a>
-                                                            </td>
-                                                        </tr>
-                                                    @empty
-                                                        <tr>
-                                                            <td colspan="7" class="text-center">
-                                                                {{__('articles.no_articles_found')}}
-                                                            </td>
-                                                        </tr>
-                                                    @endforelse
-                                                    </tbody>
-                                                    <tfoot>
+{{--                                                                <a href="#"--}}
+{{--                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_article_btn"--}}
+{{--                                                                   data-id="{{$article->id}}"--}}
+{{--                                                                   title="{{__('general.delete')}}">--}}
+{{--                                                                    <i class="fa fa-trash fa-1x"></i>--}}
+{{--                                                                </a>--}}
+{{--                                                            </td>--}}
+{{--                                                        </tr>--}}
+{{--                                                    @empty--}}
+{{--                                                        <tr>--}}
+{{--                                                            <td colspan="7" class="text-center">--}}
+{{--                                                                {{__('articles.no_articles_found')}}--}}
+{{--                                                            </td>--}}
+{{--                                                        </tr>--}}
+{{--                                                    @endforelse--}}
+{{--                                                    </tbody>--}}
+{{--                                                    <tfoot>--}}
                                                     <tr>
                                                         <td colspan="7">
                                                             <div class="float-right">
@@ -240,7 +240,6 @@
             });
 
         })
-
 
         /////////////////////////////////////////////////////////////////
         // switch status

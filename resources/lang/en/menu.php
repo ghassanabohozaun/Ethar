@@ -69,8 +69,12 @@ return [
 
 
     'qas' => 'QAS',
-    'trashed_qas' => 'QAS Teams',
-    'add_new_qa' => 'Add New QAS',
+    'trashed_qas' => 'Trashed FAQs',
+    'add_new_qa' => 'Add New FAQ',
+
+    'comments' => 'Comments',
+    'trashed_comments' => 'Trashed Comments',
+    'add_new_comment' => 'Add New Comment',
 
 ];
 

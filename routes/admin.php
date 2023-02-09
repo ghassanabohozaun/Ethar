@@ -132,6 +132,9 @@ Route::group([
         Route::post('/force-delete', 'ArticlesController@forceDelete')->name('admin.articles.force.delete');
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
         Route::post('/change-status', 'ArticlesController@changeStatus')->name('admin.articles.change.status');
+
+        Route::get('/comments','CommentsController@index')->name('admin.comments');
+
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////

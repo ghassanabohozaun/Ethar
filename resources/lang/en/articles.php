@@ -52,7 +52,33 @@ return [
     'unique'=>'Article Title must be unique',
     'unique_ar'=>'Arabic Title must be unique',
     'unique_en'=>'English Title must be unique',
-
     'no_articles_found'=>'No Articles Found',
+
+    //////////////////////////////////////////////////////////////////////
+    /// Comments
+
+    'person_ip'=>'Person IP',
+    'person_name'=>'Person Name',
+    'person_email'=>'Person Email',
+    'commentary'=>'Commentary',
+    'status'=>'Status',
+    'post_id'=>'Post ID',
+
+    'enter_person_ip'=>'Person IP',
+    'enter_person_name'=>'Person Name',
+    'enter_person_email'=>'Person Email',
+    'enter_commentary'=>'Commentary',
+    'enter_status'=>'Status',
+    'enter_post_id'=>'Post ID',
+
+    'person_name_required'=>'Person Name Required',
+    'person_email_required'=>'Person Email Required',
+    'commentary_required'=>'Commentary Required',
+
+    'required' => 'This Field is Required ',
+    'numeric' => 'The entered value must be numeric',
+    'unique' => 'The entered value is Duplicate',
+    'person_email_email'=>'Email Must be in this format admin@admin.com',
+
 
 ];

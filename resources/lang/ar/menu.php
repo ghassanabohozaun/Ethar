@@ -62,4 +62,8 @@ return [
     'trashed_qas' => ' الأسئلة الشائعة المحذوفة',
     'add_new_qa' => 'إضافة سؤال شائع',
 
+    'comments' => 'التعليقات',
+    'trashed_comments' => 'التعليقات المحذوفة',
+    'add_new_comment' => 'اضافة تعليق جديد',
+
 ];
