@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
 use App\Models\Article;
+use App\Models\Comment;
 use App\Traits\GeneralTrait;
 use File;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class CommentsController extends Controller
     public function index()
     {
         $title = __('menu.comments');
-        // $articles = Article::withoutTrashed()->orderByDesc('created_at')->paginate(15);
+         $articles = Comment::withoutTrashed()->orderByDesc('created_at')->paginate(15);
         return view('admin.articles.comments.index', compact('title',));
     }
 

@@ -23,6 +23,7 @@ class CreateCommentsTable extends Migration
             $table->string('photo')->nullable();
             $table->enum('gender',['male','female','other']);
             $table->integer('post_id');
+            $table->softDeletes();
             $table->timestamps();
         });
 

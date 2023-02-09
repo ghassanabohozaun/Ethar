@@ -129,11 +129,11 @@
 {{--                                                        </tr>--}}
 {{--                                                    @endforelse--}}
 {{--                                                    </tbody>--}}
-{{--                                                    <tfoot>--}}
+                                                    <tfoot>
                                                     <tr>
                                                         <td colspan="7">
                                                             <div class="float-right">
-                                                                {!! $articles->appends(request()->all())->links() !!}
+{{--                                                                {!! $articles->appends(request()->all())->links() !!}--}}
                                                             </div>
                                                         </td>
                                                     </tr>
