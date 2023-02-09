@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('qas', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('title_ar')->nullable();
-            $table->string('title_en')->nullable();
-            $table->text('details_ar')->nullable();
-            $table->text('details_en')->nullable();
+            $table->string('person_ip');
+            $table->string('person_name');
+            $table->string('person_email');
+            $table->longText('commentary');
             $table->string('status')->nullable();
-            $table->softDeletes();
+            $table->string('photo')->nullable();
+            $table->enum('gender',['male','female','other']);
+            $table->integer('post_id');
             $table->timestamps();
         });
+
+
     }
 
     /**
@@ -32,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('qas');
+        Schema::dropIfExists('comments');
     }
-};
+}

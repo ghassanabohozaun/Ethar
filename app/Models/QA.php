@@ -10,7 +10,7 @@ class QA extends Model
 {
     use HasFactory , SoftDeletes;
 
-    protected $table = "qas";
+    protected $table = "faq";
 
     protected $fillable = [
        'title_ar', 'title_en', 'details_ar', 'details_en', 'status',
