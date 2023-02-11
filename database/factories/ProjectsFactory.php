@@ -26,7 +26,6 @@ class ProjectsFactory extends Factory
             'language'   =>'ar',
             'file'       =>null,
             'date'       =>now(),
-            'writer'     =>Str::random(15),
             'type'       =>'current',
         ];
     }

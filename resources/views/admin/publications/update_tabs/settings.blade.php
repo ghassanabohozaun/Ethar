@@ -70,7 +70,7 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{__('projects.file')}}
+                                {{__('publications.file')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="custom-file">
@@ -159,6 +159,35 @@
                                 </select>
                                 <span class="form-text text-danger"
                                       id="writer_error"></span>
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
+
+                          <!--begin::Group-->
+                          <div class="form-group row">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                             {{__('publications.type')}}
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+
+                                <select
+                                    class="form-control  form-control-lg"
+                                    name="project_id" id="project_id" type="text">
+
+                                        <option value="" {{$publication->projects_id == null ? 'selected':'' }}>{{__('general.select_from_list')}}</option>
+
+                                        @foreach ($projects as $project)
+
+                                                <option value="{{$project->id}}" {{$publication->projects_id ==$project->id ?'selected':''}}>{{$project->title}}</option>
+
+                                        @endforeach
+
+
+                                </select>
+
+                                <span class="form-text text-danger"
+                                      id="project_id_error"></span>
                             </div>
                         </div>
                         <!--end::Group-->

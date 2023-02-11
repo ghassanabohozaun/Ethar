@@ -77,7 +77,7 @@
                                                         @if($lang_en =setting()->site_lang_en == 'on')
                                                             <th>{!! __('projects.title_en') !!}</th>
                                                         @endif
-                                                        <th>{!! __('projects.writer') !!}</th>
+                                                        <th>{!! __('projects.views') !!}</th>
                                                         <th>{!! __('projects.date') !!}</th>
                                                         <th>{!! __('projects.type') !!}</th>
                                                         <th>{!! __('articles.status') !!}</th>
@@ -98,7 +98,7 @@
                                                             @if($lang_en =setting()->site_lang_en == 'on')
                                                                 <td>{{ $project->title_en }}</td>
                                                             @endif
-                                                            <td>{{ $project->writer }}</td>
+                                                            <td>{{ $project->views }}</td>
                                                             <td>{{ $project->date }}</td>
                                                             <td>
                                                                 {{ $project->type == 'current'? __('projects.current') :  __('projects.previous') }}</td>

@@ -23,8 +23,9 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->enum('language',['ar','ar_en'])->default('ar');
             $table->text('file')->nullable();
+            $table->text('word')->nullable();
             $table->date('date')->nullable();
-            $table->string('writer');
+            $table->integer('views')->default(1);
             $table->enum('type', ['current','previous'])->default('current');
             $table->softDeletes();
             $table->timestamps();

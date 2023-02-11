@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PublicationsRequest;
+use App\Models\Projects;
 use App\Models\Publications;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
@@ -25,7 +26,8 @@ class PublicationsController extends Controller
     public function create()
     {
         $title = __('menu.add_new_publication');
-        return view('admin.publications.create' , compact('title'));
+        $projects = Projects::all();
+        return view('admin.publications.create' , compact('title' , 'projects'));
     }
 
     // store
@@ -61,6 +63,7 @@ class PublicationsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
+            'projects_id' => $request->project_id,
             'status' => 'on',
         ]);
 
@@ -71,7 +74,8 @@ class PublicationsController extends Controller
     public function edit($id)
     {
         $publication = Publications::findOrFail($id);
-        return view('admin.publications.update', compact('publication'));
+        $projects = Projects::all();
+        return view('admin.publications.update', compact('publication' , 'projects'));
     }
 
     // update
@@ -124,6 +128,8 @@ class PublicationsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
+            'projects_id' => $request->project_id ,
+
         ]);
 
         return $this->returnSuccessMessage(__('general.update_success_message'));

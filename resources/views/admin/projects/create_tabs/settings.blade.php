@@ -59,7 +59,7 @@
                         </div>
                         <!--end::Group-->
 
-
+                        <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
                                 {{__('projects.file')}}
@@ -76,6 +76,28 @@
                                 <span class="form-text text-danger" id="file_error"></span>
                             </div>
                         </div>
+                        <!--end::Group-->
+
+                        <!--begin::Group-->
+                        <div class="form-group row">
+                            <label class="col-xl-3 col-lg-3 col-form-label">
+                                {{__('projects.word')}}
+                            </label>
+                            <div class="col-lg-9 col-xl-9">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input"
+                                           id="word" name="word">
+                                    <label class="custom-file-label" choose="" file=""></label>
+                                </div>
+                                <span class="form-text text-muted">
+                                    {{__('general.word_format_allow')}}
+                                </span>
+                                <span class="form-text text-danger" id="word_error"></span>
+                            </div>
+                        </div>
+                        <!--end::Group-->
+
+
 
 
                         <!--begin::Group-->
@@ -101,22 +123,7 @@
                         </div>
                         <!--end::Group-->
 
-                        <!--begin::Group-->
-                        <div class="form-group row">
-                            <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{__('projects.writer')}}
-                            </label>
 
-                            <div class="col-lg-9 col-xl-9">
-                                <input type="text" class="form-control form-control-solid form-control-lg"
-                                       name="writer" id="writer"
-                                       placeholder="{{__('projects.writer')}}"
-                                       autocomplete="off">
-                                <span class="form-text text-danger"
-                                      id="writer_error"></span>
-                            </div>
-                        </div>
-                        <!--end::Group-->
 
                         <!--begin::Group-->
                         <div class="form-group row">

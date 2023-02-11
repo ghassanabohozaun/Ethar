@@ -45,6 +45,13 @@ class ProjectsController extends Controller
             $file = '';
         }
 
+        // save word
+        if ($request->hasFile('word')) {
+            $word = $this->saveFile($request->file('word'), 'adminBoard/uploadedFiles/project');
+        } else {
+            $word = '';
+        }
+
 
         $lang_en = setting()->site_lang_en;
         Projects::create([
@@ -55,6 +62,7 @@ class ProjectsController extends Controller
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'file' => $file,
+            'word' =>$word,
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
@@ -108,6 +116,20 @@ class ProjectsController extends Controller
             $file = $project->file;
         }
 
+        if ($request->hasFile('word')) {
+
+            $word = $this->saveFile($request->file('word'), 'adminBoard/uploadedFiles/project');
+
+            $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->word;
+
+            if (File::exists($file_path))
+            {
+              File::delete($file_path);
+            }
+        } else {
+            $word = $project->word;
+        }
+
         $lang_en = setting()->site_lang_en;
         $project->update([
             'photo' => $photo_path,
@@ -117,6 +139,7 @@ class ProjectsController extends Controller
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'file' => $file,
+            'word' => $word,
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
@@ -194,6 +217,14 @@ class ProjectsController extends Controller
                     if (File::exists($file_path)) {
                         File::delete($file_path);
 
+                    }
+                }
+
+                if (!empty($project->word)) {
+                    $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->word;
+
+                    if (File::exists($file_path)) {
+                        File::delete($file_path);
                     }
                 }
 

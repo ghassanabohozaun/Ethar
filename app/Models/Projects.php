@@ -12,9 +12,18 @@ class Projects extends Model
 
     protected $fillable = [
         'id', 'title_ar', 'title_en', 'details_ar', 'details_en', 'status',
-        'photo', 'language', 'file', 'date', 'writer', 'type',
+        'photo', 'language', 'file', 'date',  'type','views','word'
     ];
 
+    protected $appends = [ 'title'];
 
+    public function getTitleAttribute(){
+        if(config('app.locale') == 'ar'){
+            return $this->attributes['title_ar'];
+        }else{
+            return $this->attributes['title_en'];
+
+        }
+    }
 
 }

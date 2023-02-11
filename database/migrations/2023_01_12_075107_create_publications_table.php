@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Projects;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -26,7 +27,8 @@ return new class extends Migration
             $table->date('date')->nullable();
             $table->string('writer');
             $table->enum('type', ['Advertisements','Brochures','CaseStudy','ScientificArticles'])->default('Advertisements');
-            $table->integer('views')->nullable();
+            $table->integer('views')->default(1);
+            $table->foreignIdFor(Projects::class)->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

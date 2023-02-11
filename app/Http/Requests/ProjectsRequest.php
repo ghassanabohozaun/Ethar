@@ -30,8 +30,8 @@ class ProjectsRequest extends FormRequest
                     'details_ar' => 'required',
                     'details_en' => ['required_if:english,on'],
                     'date' => 'required',
-                    'writer' => 'required',
-                    'file'   => ['mimes:pdf']
+                    'file'   => ['mimes:pdf'],
+                    'word'   => ['mimes:doc,docx']
                 ];
     }
 
