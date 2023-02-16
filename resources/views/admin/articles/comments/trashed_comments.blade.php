@@ -14,14 +14,13 @@
 
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
-                        <a href="{!! route('admin.articles') !!}" class="text-muted">
-                            {{__('menu.articles')}}
+                        <a href="{!! route('admin.comments',$id) !!}" class="text-muted">
+                            {{__('menu.comments')}}
                         </a>
                     </li>
-
                     <li class="breadcrumb-item">
                         <a href="#" class="text-muted">
-                            {{__('menu.comments')}}
+                            {{__('menu.trashed_comments')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
@@ -42,7 +41,6 @@
                     <i class="fa fa-trash"></i>
                 </a>
                 &nbsp;
-
                 <a href="{{route('admin.comments.create',$id)}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
@@ -83,13 +81,11 @@
                                                         <th>{{__('articles.person_email')}}</th>
                                                         <th>{{__('articles.commentary')}}</th>
                                                         <th>{{__('articles.publish_date')}}</th>
-                                                        <th>{{__('articles.status')}}</th>
-                                                        <th class="text-center"
-                                                            style="width: 150px;">{{__('general.actions')}}</th>
+                                                        <th class="text-center" style="width: 150px;">{{__('general.actions')}}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    @forelse($comments as $comment)
+                                                    @forelse($trashedComments as $comment)
                                                         <tr>
                                                             <td>
                                                                 <img
@@ -99,37 +95,37 @@
                                                             <td>{{ $comment->person_ip }}</td>
                                                             <td>{{ $comment->person_name }}</td>
                                                             <td>{{ $comment->person_email }}</td>
-                                                            <td>{{ $comment->commentary }}</td>
+                                                            <td style=" text-align: justify-all">{{ $comment->commentary }}</td>
                                                             <td>{{ $comment->created_at }}</td>
+
                                                             <td>
-                                                                <div class="cst-switch switch-sm">
-                                                                    <input type="checkbox"
-                                                                           {{$comment->status == 'on' ? 'checked':''}}  data-id="{{$comment->id}}"
-                                                                           class="change_status">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <a href="#"
-                                                                   class="btn btn-hover-danger btn-icon btn-pill delete_comment_btn"
+                                                                <a class="btn btn-hover-warning btn-icon btn-pill restore_comment_btn"
                                                                    data-id="{{$comment->id}}"
-                                                                   title="{{__('general.delete')}}">
-                                                                    <i class="fa fa-trash fa-1x"></i>
+                                                                   title="{{__('general.restore')}}">
+                                                                    <i class="fa fa-trash-restore fa-1x"></i>
+                                                                </a>
+
+                                                                <a href="#"
+                                                                   class="btn btn-hover-danger btn-icon btn-pill force_delete_comment_btn"
+                                                                   data-id="{{$comment->id}}"
+                                                                   title="{{__('general.force_delete')}}">
+                                                                    <i class="fa fa-trash-alt fa-1x"></i>
                                                                 </a>
                                                             </td>
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="7" class="text-center">
+                                                            <td colspan="6" class="text-center">
                                                                 {{__('articles.no_comments_found')}}
                                                             </td>
                                                         </tr>
                                                     @endforelse
-                                                    {{--                                                    </tbody>--}}
+                                                    </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="7">
+                                                        <td colspan="6">
                                                             <div class="float-right">
-                                                                {!! $comments->appends(request()->all())->links() !!}
+                                                                {!! $trashedComments->appends(request()->all())->links() !!}
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -173,14 +169,14 @@
 @push('js')
 
     <script type="text/javascript">
-        /////////////////////////////////////////////////////////////////
-        ///  article Delete
-        $(document).on('click', '.delete_comment_btn', function (e) {
+        ///////////////////////////////////////////////////
+        /// delete comment
+        $(document).on('click', '.force_delete_comment_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
             Swal.fire({
-                title: "{{__('general.ask_delete_record')}}",
+                title: "{{__('general.ask_permanent_delete_record')}}",
                 icon: "warning",
                 showCancelButton: true,
                 confirmButtonText: "{{__('general.yes')}}",
@@ -192,7 +188,7 @@
                     //////////////////////////////////////
                     // Delete User
                     $.ajax({
-                        url: '{!! route('admin.comments.destroy') !!}',
+                        url: '{!! route('admin.comments.force.delete') !!}',
                         data: {id, id},
                         type: 'post',
                         dataType: 'json',
@@ -201,23 +197,13 @@
                             if (data.status == true) {
                                 Swal.fire({
                                     title: "{!! __('general.deleted') !!}",
-                                    text: data.msg,
+                                    text: "{!! __('general.delete_success_message') !!}",
                                     icon: "success",
                                     allowOutsideClick: false,
                                     customClass: {confirmButton: 'delete_comment_button'}
                                 });
                                 $('.delete_comment_button').click(function () {
                                     $('#myTable').load(location.href + (' #myTable'));
-                                });
-                            } else if (data.status == false) {
-                                Swal.fire({
-                                    title: "{!! __('general.deleted') !!}",
-                                    text: data.msg,
-                                    icon: "warning",
-                                    allowOutsideClick: false,
-                                    customClass: {confirmButton: 'delete_comment_button'}
-                                });
-                                $('.delete_comment_button').click(function () {
                                 });
                             }
                         },//end success
@@ -226,32 +212,25 @@
                 } else if (result.dismiss === "cancel") {
                     Swal.fire({
                         title: "{!! __('general.cancelled') !!}",
-                        text: "{!! __('general.cancelled_message') !!}",
+                        text: "{!! __('general.error_message') !!}",
                         icon: "error",
                         allowOutsideClick: false,
                         customClass: {confirmButton: 'cancel_delete_comment_button'}
                     })
                 }
             });
-
         })
 
-        /////////////////////////////////////////////////////////////////
-        // switch status
-        var switchStatus = false;
-        $('body').on('change', '.change_status', function (e) {
+
+        ////////////////////////////////////////////////////
+        // restore comment
+        $(document).on('click', '.restore_comment_btn', function (e) {
             e.preventDefault();
             var id = $(this).data('id');
 
-            if ($(this).is(':checked')) {
-                switchStatus = $(this).is(':checked');
-            } else {
-                switchStatus = $(this).is(':checked');
-            }
-
             $.ajax({
-                url: "{{route('admin.comments.change.status')}}",
-                data: {switchStatus: switchStatus, id: id},
+                url: "{{route('admin.comments.restore')}}",
+                data: {id, id},
                 type: 'post',
                 dataType: 'JSON',
                 beforeSend: function () {
@@ -260,7 +239,7 @@
                         state: 'danger',
                         message: "{{__('general.please_wait')}}",
                     });
-                },//end beforeSend
+                },
                 success: function (data) {
                     KTApp.unblockPage();
                     console.log(data);
@@ -270,15 +249,15 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'switch_status_toggle'}
+                            customClass: {confirmButton: 'restore_comment_button'}
                         });
-                        $('.switch_status_toggle').click(function () {
+                        $('.restore_comment_button').click(function () {
                             $('#myTable').load(location.href + (' #myTable'));
                         });
                     }
                 },//end success
             })
-        });
+        })
 
 
     </script>

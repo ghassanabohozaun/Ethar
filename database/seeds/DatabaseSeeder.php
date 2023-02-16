@@ -3,7 +3,6 @@
 use App\Models\Role;
 use App\Models\AboutType;
 use Illuminate\Database\Seeder;
-use Database\Seeders\ProjectsSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -29,7 +28,6 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SettingsSeeder::class,
             AdminSeeder::class,
-            ProjectsSeeder::class,
         ]);
 
 

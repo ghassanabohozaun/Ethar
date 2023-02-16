@@ -101,7 +101,7 @@
                                                                 </div>
                                                             </td>
                                                             <td>
-                                                                <a href="{!! route('admin.comments') !!}"
+                                                                <a href="{!! route('admin.comments',$article->id) !!}"
                                                                    class="btn btn-hover-primary btn-icon btn-pill "
                                                                    title="{{__('general.comments')}}">
                                                                     <i class="fa fa-comment fa-1x"></i>

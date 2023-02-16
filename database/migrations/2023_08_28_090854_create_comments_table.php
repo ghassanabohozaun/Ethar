@@ -21,7 +21,7 @@ class CreateCommentsTable extends Migration
             $table->longText('commentary');
             $table->string('status')->nullable();
             $table->string('photo')->nullable();
-            $table->enum('gender',['male','female','other']);
+            $table->enum('gender',['male','female','others']);
             $table->integer('post_id');
             $table->softDeletes();
             $table->timestamps();

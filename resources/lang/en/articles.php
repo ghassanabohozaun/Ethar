@@ -57,6 +57,7 @@ return [
     //////////////////////////////////////////////////////////////////////
     /// Comments
 
+    'person_photo' => 'Person Photo',
     'person_ip'=>'Person IP',
     'person_name'=>'Person Name',
     'person_email'=>'Person Email',
@@ -68,6 +69,7 @@ return [
     'enter_person_name'=>'Person Name',
     'enter_person_email'=>'Person Email',
     'enter_commentary'=>'Commentary',
+    'gender' => 'Gender',
     'enter_status'=>'Status',
     'enter_post_id'=>'Post ID',
 
@@ -79,6 +81,8 @@ return [
     'numeric' => 'The entered value must be numeric',
     'unique' => 'The entered value is Duplicate',
     'person_email_email'=>'Email Must be in this format admin@admin.com',
+
+    'no_comments_found'=>'No Comments Found',
 
 
 ];

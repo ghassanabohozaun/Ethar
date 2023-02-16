@@ -68,8 +68,16 @@
                             </div>
 
                             <div class="single-item my-social-style">
+                                <ul class="my-social-style-one clearfix  my-2">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
                             </div>
-
+                            <div class="single-item">
+                               &nbsp;
+                            </div>
 
                         </div>
                     </div>

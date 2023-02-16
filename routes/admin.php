@@ -133,7 +133,15 @@ Route::group([
         Route::post('/restore', 'ArticlesController@restore')->name('admin.articles.restore');
         Route::post('/change-status', 'ArticlesController@changeStatus')->name('admin.articles.change.status');
 
-        Route::get('/comments','CommentsController@index')->name('admin.comments');
+        // comments
+        Route::get('/comments/{id}','CommentsController@index')->name('admin.comments');
+        Route::get('/create-comment/{id}', 'CommentsController@create')->name('admin.comments.create');
+        Route::post('/comment-store', 'CommentsController@store')->name('admin.comments.store');
+        Route::post('/comment-destroy', 'CommentsController@destroy')->name('admin.comments.destroy');
+        Route::get('/comment-trashed/{id}', 'CommentsController@trashed')->name('admin.comments.trashed');
+        Route::post('/comment-force-delete', 'CommentsController@forceDelete')->name('admin.comments.force.delete');
+        Route::post('/comment-restore', 'CommentsController@restore')->name('admin.comments.restore');
+        Route::post('/comment-change-status', 'CommentsController@changeStatus')->name('admin.comments.change.status');
 
     });
 
