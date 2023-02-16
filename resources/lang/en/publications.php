@@ -13,6 +13,8 @@ return [
     'file' => 'File Publication ',
     'des_ar' => 'Publication Abstract | Arabic',
     'des_en' => 'Publication Abstract | English',
+    'project_id' => 'Project',
+
     'update' => 'Update Publication',
     'no_found' => 'Not Found Publications',
 

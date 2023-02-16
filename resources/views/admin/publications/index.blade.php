@@ -77,7 +77,7 @@
                                                         @if($lang_en =setting()->site_lang_en == 'on')
                                                             <th>{!! __('publications.title_en') !!}</th>
                                                         @endif
-                                                        <th>{!! __('publications.writer') !!}</th>
+                                                        <th>{!! __('publications.project_id') !!}</th>
                                                         <th>{!! __('publications.date') !!}</th>
                                                         <th>{!! __('publications.type') !!}</th>
                                                         <th>{!! __('articles.status') !!}</th>
@@ -98,7 +98,9 @@
                                                             @if($lang_en =setting()->site_lang_en == 'on')
                                                                 <td>{{ $publication->title_en }}</td>
                                                             @endif
-                                                            <td>{{ $publication->writer }}</td>
+
+                                                            <td>{{ $publication->project_id }}</td>
+
                                                             <td>{{ $publication->date }}</td>
                                                             <td>
                                                                 {{$publication->type == 'Advertisements'?__('publications.Advertisements'):''}}
@@ -106,7 +108,6 @@
                                                                 {{$publication->type == 'CaseStudy'?__('publications.CaseStudy'):''}}
                                                                 {{$publication->type == 'ScientificArticles'?__('publications.ScientificArticles'):''}}
                                                             </td>
-
 
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
@@ -133,7 +134,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="7" class="text-center">
+                                                            <td colspan="8" class="text-center">
                                                                 {!! __('publications.no_found') !!}
                                                             </td>
                                                         </tr>
@@ -141,7 +142,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="7">
+                                                        <td colspan="8">
                                                             <div class="float-right">
                                                                 {!! $publications->appends(request()->all())->links() !!}
                                                             </div>

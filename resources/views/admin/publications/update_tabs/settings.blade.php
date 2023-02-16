@@ -164,26 +164,26 @@
                         <!--end::Group-->
 
 
-                          <!--begin::Group-->
-                          <div class="form-group row">
+                        <!--begin::Group-->
+                        <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                             {{__('publications.type')}}
+                                {{__('publications.project_id')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 
                                 <select
                                     class="form-control  form-control-lg"
                                     name="project_id" id="project_id" type="text">
+                                    <option value="" {{$publication->projects_id == null ? 'selected':'' }}>
+                                        {{__('general.select_from_list')}}
+                                    </option>
+                                    @foreach ($projects as $project)
+                                        <option
+                                            value="{{$project->id}}" {{$publication->projects_id ==$project->id ?'selected':''}}>
+                                            {{$project->title}}
+                                        </option>
 
-                                        <option value="" {{$publication->projects_id == null ? 'selected':'' }}>{{__('general.select_from_list')}}</option>
-
-                                        @foreach ($projects as $project)
-
-                                                <option value="{{$project->id}}" {{$publication->projects_id ==$project->id ?'selected':''}}>{{$project->title}}</option>
-
-                                        @endforeach
-
-
+                                    @endforeach
                                 </select>
 
                                 <span class="form-text text-danger"

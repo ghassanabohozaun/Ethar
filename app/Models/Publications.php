@@ -12,7 +12,7 @@ class Publications extends Model
 
     protected $fillable = [
         'id', 'title_ar', 'title_en', 'details_ar', 'details_en', 'status',
-        'photo', 'language', 'file', 'date', 'writer', 'type','views' ,'projects_id'
+        'photo', 'language', 'file', 'date', 'writer', 'type','views' ,'project_id'
     ];
 
 

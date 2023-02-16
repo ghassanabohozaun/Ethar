@@ -63,7 +63,7 @@ class PublicationsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
-            'projects_id' => $request->project_id,
+            'project_id' => $request->project_id,
             'status' => 'on',
         ]);
 
@@ -128,8 +128,7 @@ class PublicationsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
-            'projects_id' => $request->project_id ,
-
+            'project_id' => $request->project_id ,
         ]);
 
         return $this->returnSuccessMessage(__('general.update_success_message'));

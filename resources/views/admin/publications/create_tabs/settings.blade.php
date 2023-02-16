@@ -149,7 +149,7 @@
                            <!--begin::Group-->
                            <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                             {{__('publications.type')}}
+                             {{__('publications.project_id')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
 
