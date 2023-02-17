@@ -286,8 +286,8 @@ Route::group([
 /////////////////////////////////////////////////////////////////////////////////////////////
 /// Guest => that mean:must not be admin => because any one must be able to access login page
 Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin'], function () {
-    Route::get('login', 'LoginController@getLogin')->name('get.admin.login');
-    Route::post('login', 'LoginController@doLogin')->name('admin.login');
+    Route::get('/', 'LoginController@getLogin')->name('get.admin.login');
+    Route::post('/', 'LoginController@doLogin')->name('admin.login');
     Route::get('/login2', function () {
         return view('admin.auth.login2');
     });

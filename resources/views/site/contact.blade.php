@@ -55,7 +55,7 @@
                             <div class="info-box">
 
                                 <div class="single-item">
-                                    <h4>Quick Contact</h4>
+                                    <h4>Contact</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
                                         <p>Phone<br /><a href="tel:00972592404940">00972592404940</a></p>

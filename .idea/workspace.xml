@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/publications.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/publications.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/publications.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/publications.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/publications/create_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/publications/create_tabs/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/publications/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/publications/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/publications/update_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/publications/update_tabs/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,6 +274,9 @@
       <workItem from="1676105497125" duration="4309000" />
       <workItem from="1676290282362" duration="1272000" />
       <workItem from="1676537970269" duration="3558000" />
+      <workItem from="1676545022304" duration="212000" />
+      <workItem from="1676559760936" duration="639000" />
+      <workItem from="1676649198319" duration="12000" />
     </task>
     <servers />
   </component>
