@@ -946,7 +946,7 @@ img {
     height: 44px;
     line-height: 44px;
     background: transparent;
-    font-size: 14px;
+    font-size: 20px;
     color: #232323;
     text-align: center;
     border-radius: 50%;
@@ -1051,7 +1051,7 @@ img {
     position: relative;
     display: block;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 30px;
     font-weight: 700;
     opacity: 1;

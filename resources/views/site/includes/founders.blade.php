@@ -1,6 +1,6 @@
 <!-- team-section -->
-<section class="team-section centred">
-    <div class="pattern-layer" style="background-image: url({!! asset('site/assets/images/shape/shape-23.png') !!});"></div>
+<section class="team-section my-team-section centred"  style="background-image: url(http://127.0.0.1:8000/site/assets/images/shape/shape-24.png);">
+    <div class="pattern-layer "></div>
     <div class="fluid-container">
         <div class="sec-title centred">
             <span class="top-text">Meet Our Founders</span>

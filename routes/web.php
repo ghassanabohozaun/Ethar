@@ -26,21 +26,13 @@ Route::group(
         return view('site.rationale');
     })->name('rationale');
 
-    Route::get('/what-we-do', function (){
-        return view('site.what-we-do');
-    })->name('what-we-do');
+    Route::get('/who-we-are', function (){
+        return view('site.who-we-are');
+    })->name('who-we-are');
 
     Route::get('/faq', function (){
         return view('site.faq');
     })->name('faq');
-
-    Route::get('/mission', function (){
-        return view('site.mission');
-    })->name('mission');
-
-    Route::get('/construction', function (){
-        return view('site.construction');
-    })->name('construction');
 
     Route::get('/work-ethics', function (){
         return view('site.work-ethics');

@@ -25,7 +25,6 @@
 }
 
 
-
 .main-footer .footer-widget .widget-content .single-item h3 {
     position: relative;
     display: block;
@@ -34,8 +33,6 @@
     font-weight: 500;
     margin-bottom: 3px;
 }
-
-
 
 
 .shop-details .discription-inner .tabs-content .customer-review .single-item {
@@ -57,7 +54,7 @@
     margin-bottom: 280px;
 }
 
-.essentials-section .single-column{
+.essentials-section .single-column {
     margin-bottom: 20px;
     margin-top: 20px;
 }
@@ -77,8 +74,6 @@
     font-weight: 700;
     padding: 10px 0px;
 }
-
-
 
 
 .my-social-style-one li {
@@ -132,3 +127,35 @@
     background-repeat: no-repeat;
 }
 
+#social-facebook-icon {
+    color: #0571e6;
+}
+
+#social-facebook-icon:hover {
+    color: #165aa2;
+}
+
+#social-twitter-icon {
+    color: #1da1f2;
+}
+
+#social-facebook-icon:hover {
+    color: #286b93;
+}
+#social-instagram-icon {
+    color: #b64c9f ;
+}
+
+#social-instagram-icon:hover {
+    color: #83366f;
+}
+#social-youtube-icon {
+    color: #f70000 ;
+}
+
+#social-youtube-icon:hover {
+    color: #ab1616;
+}
+.my-team-section{
+    margin: 101px 0px 110px 0px;
+}

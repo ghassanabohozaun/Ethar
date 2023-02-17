@@ -29,12 +29,12 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Construction</h1>
+                        <h1>Who We Are</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         <li><a href="{!! route('index') !!}">Home</a></li>
                         <li>Pages</li>
-                        <li>Construction</li>
+                        <li>Who We Are</li>
                     </ul>
                 </div>
             </div>

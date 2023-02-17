@@ -78,11 +78,15 @@
                                         recently with desktop publishing software like Aldus PageMaker including
                                         versions of Lorem Ipsum</p>
                                 </div>
+
+                                <div class="font-weight-bold mt-5"><h5> <a href="#"> Download PDF</a></h5></div>
+                                <div class="font-weight-bold mt-1"> <h5><a href="#"> Download WORD</a></h5></div>
+
                             </div>
+
                         </div>
                     </div>
                     <!-- left end -->
-
 
                     <!-- right  -->
                     <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">

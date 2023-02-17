@@ -27,23 +27,19 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="current dropdown">
+                                <li class="current"><a href="{!! route('index') !!}">Home</a></li>
+
+                                <li class=" dropdown">
                                     <a href="#">About</a>
                                     <ul>
                                         <li>
                                             <a href="{!! route('rationale') !!}">Rationale</a>
                                         </li>
                                         <li>
-                                            <a href="{!! route('what-we-do') !!}">What We Do</a>
+                                            <a href="{!! route('who-we-are') !!}">Who We Are</a>
                                         </li>
                                         <li>
                                             <a href="{!! route('faq') !!}">FAQ's</a>
-                                        </li>
-                                        <li>
-                                            <a href="{!! route('mission') !!}">Mission</a>
-                                        </li>
-                                        <li>
-                                            <a href="{!! route('construction') !!}">Construction</a>
                                         </li>
                                         <li>
                                             <a href="{!! route('work-ethics') !!}">Work Ethics</a>
@@ -115,11 +111,11 @@
                     </nav>
                 </div>
                 <div class="nav-right-content clearfix">
-                    <ul class="social-style-one clearfix">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <ul class="social-style-one clearfix social-facebook-icon">
+                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
                     </ul>
 
                     <div class="search-box-outer">
@@ -153,10 +149,10 @@
                 </div>
                 <div class="nav-right-content clearfix">
                     <ul class="social-style-one clearfix">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                     <div class="search-box-outer">
                         <div class="dropdown">
@@ -190,11 +186,10 @@
 
             <div class="social-links">
                 <ul class="clearfix">
-                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
-                    <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                    <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                    <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
                 </ul>#
             </div>
         </nav>
