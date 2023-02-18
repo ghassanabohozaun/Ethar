@@ -88,8 +88,8 @@
                         </div>
 
 
-                          <!--begin::Group-->
-                          <div class="form-group row">
+                        <!--begin::Group-->
+                        <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
                                 {{__('projects.word')}}
                             </label>
@@ -103,8 +103,8 @@
                                     {{__('general.word_format_allow')}}
                                 </span>
                                 <a class="font-weight-bold"
-                                href="{{asset('adminBoard/uploadedFiles/project/'. $project->word)}}"
-                                target="_blank">{!! __('general.download') !!}</a>
+                                   href="{{asset('adminBoard/uploadedFiles/project/'. $project->word)}}"
+                                   target="_blank">{!! __('general.download') !!}</a>
                                 <span class="form-text text-danger" id="word_error"></span>
 
                             </div>
@@ -134,7 +134,6 @@
                             <!--end::Group-->
                         </div>
                         <!--end::Group-->
-
 
 
                         <!--begin::Group-->

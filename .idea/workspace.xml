@@ -6,23 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/site-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/site-style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/construction.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/main-footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/main-footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/welcome-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/welcome-section.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/mission.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/news/new.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/news/new.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/projects/project-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/projects/project-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/publications/advertisements-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/publications/advertisements-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/publications/advertisements.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/publications/advertisements.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/publications/new-details.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/publications/new.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/what-we-do.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/who-we-are.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/update_tabs/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/update_tabs/settings.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,6 +278,9 @@
       <workItem from="1676559760936" duration="639000" />
       <workItem from="1676649198319" duration="12000" />
       <workItem from="1676650984819" duration="6123000" />
+      <workItem from="1676699767422" duration="20000" />
+      <workItem from="1676711010931" duration="628000" />
+      <workItem from="1676717634611" duration="1434000" />
     </task>
     <servers />
   </component>
