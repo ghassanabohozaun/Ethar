@@ -38,7 +38,7 @@ class DashboardController extends Controller
             // save logo
             if ($request->hasFile('site_icon')) {
                 $image = $request->file('site_icon');
-                $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/logos//');
                 $site_icon = $this->saveResizeImage($image, $destinationPath,250,250);
             } else {
                 $site_icon = '';
@@ -47,7 +47,7 @@ class DashboardController extends Controller
             // save icon
             if ($request->hasFile('site_logo')) {
                 $image = $request->file('site_logo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/logos//');
                 $site_logo = $this->saveResizeImage($image, $destinationPath,250,250);
             } else {
                 $site_logo = '';
@@ -86,18 +86,18 @@ class DashboardController extends Controller
 
 
             if ($request->hasFile('site_icon')) {
-                $image_path = public_path("\adminBoard\uploadedImages\logos\\") . $settings->site_icon;
+                $image_path = public_path("/adminBoard/uploadedImages/logos//") . $settings->site_icon;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 if (!empty($settings->site_icon)) {
                     $image = $request->file('site_icon');
-                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $destinationPath = public_path('/adminBoard/uploadedImages/logos//');
                     $site_icon = $this->saveResizeImage($image, $destinationPath,250,250);
                 } else {
                     $image = $request->file('site_icon');
-                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $destinationPath = public_path('/adminBoard/uploadedImages/logos//');
                     $site_icon = $this->saveResizeImage($image, $destinationPath,250,250);
                 }
             } else {
@@ -111,18 +111,18 @@ class DashboardController extends Controller
 
 
             if ($request->hasFile('site_logo')) {
-                $image_path = public_path("\adminBoard\uploadedImages\logos\\") . $settings->site_logo;
+                $image_path = public_path("/adminBoard/uploadedImages/logos//") . $settings->site_logo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 if (!empty($settings->site_logo)) {
                     $image = $request->file('site_logo');
-                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $destinationPath = public_path('/adminBoard/uploadedImages/logos//');
                     $site_logo = $this->saveResizeImage($image, $destinationPath,250,250);
                 } else {
                     $image = $request->file('site_logo');
-                    $destinationPath = public_path('\adminBoard\uploadedImages\logos\\');
+                    $destinationPath = public_path('/adminBoard/uploadedImages/logos//');
                     $site_logo = $this->saveResizeImage($image, $destinationPath,250,250);
                 }
             } else {
