@@ -198,7 +198,7 @@ class SlidersController extends Controller
                 return redirect()->route('admin.not.found');
             }
             if (!empty($slider->photo)) {
-                $image_path = public_path('/adminBoard/uploadedImages/sliders//') . $slider->photo;
+                $image_path = public_path("/adminBoard/uploadedImages/sliders//") . $slider->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
