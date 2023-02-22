@@ -48,7 +48,7 @@ class SlidersController extends Controller
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('\adminBoard\uploadedImages\sliders\\');
+            $destinationPath = public_path('/adminBoard/uploadedImages/sliders/');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 1920, 908);
         } else {
             $photo_path = '';
