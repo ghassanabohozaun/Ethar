@@ -40,6 +40,9 @@ class SiteController extends Controller
 
 
 
+
+
+
         return view('site.index', compact('title', 'sliders'));
     }
 
