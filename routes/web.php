@@ -17,9 +17,8 @@ Route::group(
         return view('site.index');
     })->where(['any' => '.*']);
 
-    Route::get('/', function (){
-        return view('site.index');
-    })->name('index');
+    Route::get('/', 'SiteController@index')->name('index');
+
 
 
     Route::get('/rationale', function (){

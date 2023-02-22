@@ -12,13 +12,7 @@ class SiteController extends Controller
 {
     use GeneralTrait;
 
-    //////////////////////////////////////////////////////////////////////////////////////////
-    /////reloadCaptcha
-    public function reloadCaptcha()
-    {
-        return response()->json(['captcha' => captcha_img()]);
-    }
-    //////////////////////////////////////////////////////////////////////////////////////////
+
     ///index
     public function index()
     {
