@@ -48,7 +48,7 @@ class SlidersController extends Controller
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('/adminBoard/uploadedImages/sliders/');
+            $destinationPath = public_path('/adminBoard/uploadedImages/sliders//');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 1920, 908);
         } else {
             $photo_path = '';
@@ -110,18 +110,18 @@ class SlidersController extends Controller
         }
 
         if ($request->hasFile('photo')) {
-            $image_path = public_path("\adminBoard\uploadedImages\sliders\\") . $slider->photo;
+            $image_path = public_path("/adminBoard/uploadedImages/sliders//") . $slider->photo;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
 
             if (!empty($slider->photo)) {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\sliders\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/sliders//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 1920, 908);
             } else {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\sliders\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/sliders//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 1920, 908);
             }
         } else {
@@ -198,7 +198,7 @@ class SlidersController extends Controller
                 return redirect()->route('admin.not.found');
             }
             if (!empty($slider->photo)) {
-                $image_path = public_path('\adminBoard\uploadedImages\sliders\\') . $slider->photo;
+                $image_path = public_path('/adminBoard/uploadedImages/sliders//') . $slider->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
