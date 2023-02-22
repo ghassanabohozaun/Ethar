@@ -16,7 +16,7 @@
 @section('content')
 
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
- <h1>Hello</h1>
+
 
         <!-- main header -->
         @include('site.includes.header')
