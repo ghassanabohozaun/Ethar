@@ -1,10 +1,10 @@
 @extends('layouts.site')
 @section('title')
-<<<<<<< HEAD
-{{--    {!! $title !!}--}}
-=======
+    <<<<<<< HEAD
+    {{--    {!! $title !!}--}}
+    =======
     {!! Lang()=='ar' ? setting()->site_title_ar : setting()->site_title_en !!}
->>>>>>> ef546bf9b77b7623e05688a8162f001c3ab649e1
+    >>>>>>> ef546bf9b77b7623e05688a8162f001c3ab649e1
 @endsection
 @section('metaTags')
     <meta name="description"
@@ -30,25 +30,25 @@
         @include('site.includes.mobile-menu')
         <!-- mobile-menu end-->
 
-        <!-- banner-section -->
+        <!-- sliders -->
         @include('site.includes.sliders')
-        <!-- banner-section end -->
+        <!-- sliders end -->
 
-        <!-- welcome-section -->
+        <!-- projects -->
         @include('site.includes.projects')
-        <!-- welcome-section end -->
+        <!-- projects end -->
 
         <!-- about-section -->
         @include('site.includes.about-section')
         <!-- about-section end -->
 
-        <!-- welcome-section -->
+        <!-- founders -->
         @include('site.includes.founders')
-        <!-- welcome-section end -->
+        <!-- founders end -->
 
-        <!-- news-section -->
-        @include('site.includes.news-section')
-        <!-- news-section end -->
+        <!-- last-articles -->
+        @include('site.includes.last-articles')
+        <!-- last-articles end -->
 
         <!-- testimonial-section -->
         @include('site.includes.testimonial-section')

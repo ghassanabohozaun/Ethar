@@ -115,7 +115,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="6" class="text-center">
+                                                            <td colspan="7" class="text-center">
                                                                 {{__('articles.no_comments_found')}}
                                                             </td>
                                                         </tr>
@@ -123,7 +123,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="6">
+                                                        <td colspan="7">
                                                             <div class="float-right">
                                                                 {!! $trashedComments->appends(request()->all())->links() !!}
                                                             </div>

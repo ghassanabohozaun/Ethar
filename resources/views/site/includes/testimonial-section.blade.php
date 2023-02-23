@@ -25,73 +25,26 @@
                     <div class="testimonial-inner">
                         <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
 
-                            <div class="testimonial-block-one">
-                                <div class="text">
-                                    <div class="icon-box">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <h3>Lorem Ipsum is simply dummy text.</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                    <h4>Isaac Samuel</h4>
-                                    <span class="designation">Gaza ,Palestine</span>
-                                </div>
-                                <figure class="testimonial-thumb">
-                                    <img src="{!! asset('site/assets/images/resource/testimonial-thumb-1.png') !!}"
-                                         alt="">
-                                </figure>
-                            </div>
+                            @forelse($testimonials as $testimonial)
+                                <div class="testimonial-block-one">
+                                    <div class="text">
+                                        <div class="icon-box">
+                                            <i class="fas fa-quote-left"></i>
+                                        </div>
 
-                            <div class="testimonial-block-one">
-                                <div class="text">
-                                    <div class="icon-box">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <h3>Lorem Ipsum is simply dummy text.</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                    <h4>Isaac Samuel</h4>
-                                    <span class="designation">Gaza ,Palestine</span>
-                                </div>
-                                <figure class="testimonial-thumb">
-                                    <img src="{!! asset('site/assets/images/resource/testimonial-thumb-1.png') !!}"
-                                         alt="">
-                                </figure>
-                            </div>
 
-                            <div class="testimonial-block-one">
-                                <div class="text">
-                                    <div class="icon-box">
-                                        <i class="fas fa-quote-left"></i>
+                                        <p>{!! Lang()=='ar'? $testimonial->opinion_ar:$testimonial->opinion_en !!}</p>
+                                        <h4>{!! Lang()=='ar'? $testimonial->name_ar:$testimonial->name_en !!}</h4>
+                                        <span class="designation">{!! $testimonial->country !!}</span>
                                     </div>
-                                    <h3>Lorem Ipsum is simply dummy text.</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                    <h4>Isaac Samuel</h4>
-                                    <span class="designation">Gaza ,Palestine</span>
+                                    <figure class="testimonial-thumb">
+                                        <img src="{{asset('adminBoard/uploadedImages/testimonials/'.$testimonial->photo)}}" alt="">
+                                    </figure>
                                 </div>
-                                <figure class="testimonial-thumb">
-                                    <img src="{!! asset('site/assets/images/resource/testimonial-thumb-1.png') !!}"
-                                         alt="">
-                                </figure>
-                            </div>
+                            @empty
 
-                            <div class="testimonial-block-one">
-                                <div class="text">
-                                    <div class="icon-box">
-                                        <i class="fas fa-quote-left"></i>
-                                    </div>
-                                    <h3>Lorem Ipsum is simply dummy text.</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-                                    <h4>Isaac Samuel</h4>
-                                    <span class="designation">Gaza ,Palestine</span>
-                                </div>
-                                <figure class="testimonial-thumb">
-                                    <img src="{!! asset('site/assets/images/resource/testimonial-thumb-1.png') !!}"
-                                         alt="">
-                                </figure>
-                            </div>
+                            @endforelse
+
 
                         </div>
                     </div>

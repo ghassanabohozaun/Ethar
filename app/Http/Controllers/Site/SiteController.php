@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Site;
 
 use App\File;
 use App\Http\Controllers\Controller;
+use App\Models\Article;
 use App\Models\Projects;
 use App\Models\Slider;
 use App\Models\Team;
+use App\Models\testimonial;
 use App\Traits\GeneralTrait;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -41,6 +43,15 @@ class SiteController extends Controller
                         ->orWhere('language', 'ar_en');
                 })->take(4)->get();
 
+            // last articles
+            $lastArticles = Article::orderByDesc('id')->where('status', 'on')
+                ->where(function ($q) {
+                    $q->where('language', 'ar')
+                        ->orWhere('language', 'ar_en');
+                })->take(4)->get();
+
+
+
 
         } else {
             // Slider
@@ -55,14 +66,20 @@ class SiteController extends Controller
                     $q->where('language', 'ar_en');
                 })->take(4)->get();
 
+            // last articles
+            $lastArticles = Article::orderByDesc('id')->where('status', 'on')
+                ->where(function ($q) {
+                    $q->where('language', 'ar_en');
+                })->take(4)->get();
+
         }
 
 
         //founders
-        $founders = Team::orderByDesc('id')->where('status', 'on')->where('type','founder')->get();
+        $founders = Team::orderByDesc('id')->where('status', 'on')->where('type', 'founder')->get();
+        $testimonials = testimonial::orderByDesc('id')->where('status', 'on')->get();
 
-
-        return view('site.index', compact('title', 'sliders','projects','founders'));
+        return view('site.index', compact('title', 'sliders', 'projects', 'founders', 'lastArticles','testimonials'));
     }
 
 }

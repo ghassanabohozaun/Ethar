@@ -39,7 +39,7 @@ class TeamController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 270, 300);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
         } else {
             $photo_path = '';
         }
@@ -90,7 +90,7 @@ class TeamController extends Controller
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath, 270, 300);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
 
             } else {
                 $image_path = public_path('\adminBoard\uploadedImages\teams\\') . $team->photo;
@@ -100,7 +100,7 @@ class TeamController extends Controller
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath, 270, 300);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
             }
         } else {
             if (!empty($team->photo)) {
