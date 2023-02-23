@@ -10,7 +10,8 @@
                         <div class="auto-container">
                             <div class="content-box">
                                 <figure class="icon-layer">
-                                    <img src="{!! asset('site/assets/images/icons/heart-5.png') !!}" alt="">
+                                    <img src="{!! asset('site/assets/images/icons/heart-5.png') !!}"
+                                         alt="{!!  $slider->{'title_'.Lang()} !!}">
                                 </figure>
                                 <div class="shape"
                                      style="background-image: url({{asset('site/assets/images/shape/shape-31.png')}});">
@@ -29,9 +30,7 @@
                                     {{--  <a href="#" class="banner-btn">Read More</a>--}}
                                     {{-- </div>--}}
                                 @else
-                                      <div class="btn-box">
-                                       &nbsp;
-                                     </div>
+                                    <div class="btn-box">&nbsp;</div>
                                 @endif
                             </div>
                         </div>

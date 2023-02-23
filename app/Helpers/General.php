@@ -51,3 +51,11 @@ function returnSpaceBetweenString($string)
 function abouts_type(){
     return AboutType::get();
 }
+
+
+
+function fixedTexts()
+{
+    return App\Models\FixedText::orderBy('id', 'desc')->first();
+}
+

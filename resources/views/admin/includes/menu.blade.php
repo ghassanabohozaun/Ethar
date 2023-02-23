@@ -131,60 +131,15 @@
                                 </a>
                             </li>
 
-                            {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
-                            {{--                                    <a href="{!! route('admin.why.choose.us') !!}" class="menu-link menu-toggle">--}}
-                            {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{__('menu.why_choose_us')}}</span>--}}
-                            {{--                                        <span class="menu-label">--}}
-                            {{--                                </span>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
 
-                            {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
-                            {{--                                    <a href="{!! route('admin.about.mawhob') !!}" class="menu-link menu-toggle">--}}
-                            {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{__('menu.about_mawhob')}}</span>--}}
-                            {{--                                        <span class="menu-label">--}}
-                            {{--                                </span>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-
-
-                            {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
-                            {{--                                    <a href="{!! route('admin.team') !!}" class="menu-link menu-toggle">--}}
-                            {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{__('menu.team')}}</span>--}}
-                            {{--                                        <span class="menu-label">--}}
-                            {{--                                </span>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-                            {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
-                            {{--                                    <a href="{!! route('admin.static.strings') !!}" class="menu-link menu-toggle">--}}
-                            {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{__('menu.static_strings')}}</span>--}}
-                            {{--                                        <span class="menu-label">--}}
-                            {{--                                </span>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-
-
-                            {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
-                            {{--                                    <a href="{!! route('admin.footer.images') !!}" class="menu-link menu-toggle">--}}
-                            {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{__('menu.footer_images')}}</span>--}}
-                            {{--                                        <span class="menu-label">--}}
-                            {{--                                </span>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
-
-                            {{--                                <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">--}}
-                            {{--                                    <a href="{!! route('admin.registration.policy') !!}" class="menu-link menu-toggle">--}}
-                            {{--                                        <i class="menu-bullet menu-bullet-dot"><span></span></i>--}}
-                            {{--                                        <span class="menu-text">{{__('menu.registration_policy')}}</span>--}}
-                            {{--                                        <span class="menu-label">--}}
-                            {{--                                </span>--}}
-                            {{--                                    </a>--}}
-                            {{--                                </li>--}}
+                            <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="{!! route('admin.fixed.texts') !!}" class="menu-link menu-toggle">
+                                    <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                                    <span class="menu-text">{{__('menu.fixed_texts')}}</span>
+                                    <span class="menu-label">
+                                    </span>
+                                </a>
+                            </li>
 
 
                         </ul>

@@ -67,7 +67,6 @@ return [
     'add_new_team_member' => 'Add New Team Member',
 
 
-
     'qas' => 'QAS',
     'trashed_qas' => 'Trashed FAQs',
     'add_new_qa' => 'Add New FAQ',
@@ -75,6 +74,8 @@ return [
     'comments' => 'Comments',
     'trashed_comments' => 'Trashed Comments',
     'add_new_comment' => 'Add New Comment',
+
+    'fixed_texts' => 'Fixed Texts',
 
 ];
 

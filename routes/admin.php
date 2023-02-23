@@ -52,7 +52,6 @@ Route::group([
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// Landing Page Routes
     Route::group(['prefix' => 'landing-page', 'middleware' => 'can:landing-page'], function () {
-
         /////////////////////////////////////////////////////////////////////////////////////////////
         /// Sliders routes
         Route::group(['prefix' => 'sliders'], function () {
@@ -69,8 +68,9 @@ Route::group([
 
         });
 
-//        Route::get('/static-strings', 'LandingPageController@staticStrings')->name('admin.static.strings');
-//        Route::post('/static-strings', 'LandingPageController@storeStaticStrings')->name('admin.static.strings');
+        /// fixed texts routes
+        Route::get('/', 'FixedTextsController@index')->name('admin.fixed.texts');
+        Route::post('/update', 'FixedTextsController@update')->name('admin.fixed.texts.update');
 
     });
 

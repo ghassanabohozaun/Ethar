@@ -66,4 +66,6 @@ return [
     'trashed_comments' => 'التعليقات المحذوفة',
     'add_new_comment' => 'اضافة تعليق جديد',
 
+
+    'fixed_texts' => 'النصوص الثابتة',
 ];

@@ -2,11 +2,11 @@
 @section('title') @endsection
 @section('content')
 
-    <form class="form" action="{!! route('admin.static.strings') !!}" method="POST"
-          id="form_static_string_store"
+    <form class="form" action="{!! route('admin.fixed.texts.update') !!}" method="POST"
+          id="form_fixed_texts_store"
           enctype="multipart/form-data">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -19,15 +19,14 @@
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                         <li class="breadcrumb-item">
                             <a href="javascript:void(0);" class="text-muted">
-                                {{trans('menu.landing_page')}}
+                                {{__('menu.landing_page')}}
                             </a>
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{trans('menu.static_strings')}}
+                                {{__('menu.fixed_texts')}}
                             </a>
                         </li>
-
                     </ul>
 
                     <!--end::Actions-->
@@ -39,7 +38,7 @@
                     <button type="submit"
                             class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                         <i class="fa fa-save"></i>
-                        {{trans('general.save')}}
+                        {{__('general.save')}}
                     </button>
                 </div>
                 <!--end::Toolbar-->
@@ -56,7 +55,6 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <!--begin::Card-->
-                        <!--begin::Card-->
                         <div class="card card-custom card-shadowless rounded-top-0" id="card_settings_store">
                             <!--begin::Body-->
                             <div class="card-body p-0">
@@ -72,372 +70,33 @@
                                                     <!--begin::Group-->
                                                     <div class="form-group">
                                                         <label>
-                                                            {{trans('landing.talents_description_ar')}}
+                                                            {{__('fixedTexts.project_details_ar')}}
                                                         </label>
-                                                        <textarea rows="4" dir="rtl"
+                                                        <textarea rows="4"
                                                                   class="form-control  form-control-lg"
-                                                                  name="talents_description_ar"
-                                                                  id="talents_description_ar"
-                                                                  placeholder=" {{trans('landing.enter_talents_description_ar')}}"
-                                                                  autocomplete="off">{!!  staticStrings()->talents_description_ar !!}</textarea>
+                                                                  name="project_details_ar"
+                                                                  id="project_details_ar"
+                                                                  placeholder=" {{__('fixedTexts.enter_project_details_ar')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->project_details_ar ?? '' !!}</textarea>
                                                         <span class="form-text text-danger"
-                                                              id="talents_description_ar_error"></span>
+                                                              id="project_details_ar_error"></span>
                                                     </div>
                                                     <!--end::Group-->
+
 
                                                     <!--begin::Group-->
                                                     <div class="form-group">
                                                         <label>
-                                                            {{trans('landing.talents_description_en')}}
+                                                            {{__('fixedTexts.project_details_en')}}
                                                         </label>
-                                                        <textarea rows="4" dir="ltr"
+                                                        <textarea rows="4"
                                                                   class="form-control  form-control-lg"
-                                                                  name="talents_description_en"
-                                                                  id="talents_description_en"
-                                                                  placeholder=" {{trans('landing.enter_talents_description_en')}}"
-                                                                  autocomplete="off">{!!  staticStrings()->talents_description_en !!}</textarea>
+                                                                  name="project_details_en"
+                                                                  id="project_details_en"
+                                                                  placeholder=" {{__('fixedTexts.enter_project_details_en')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->project_details_en ?? '' !!}</textarea>
                                                         <span class="form-text text-danger"
-                                                              id="talents_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.soundtrack_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_soundtrack_description_ar')}}"
-                                                                  name="soundtrack_description_ar" dir="rtl"
-                                                                  id="soundtrack_description_ar">{!!  staticStrings()->soundtrack_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="soundtrack_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.soundtrack_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_soundtrack_description_en')}}"
-                                                                  name="soundtrack_description_en" dir="ltr"
-                                                                  id="soundtrack_description_en">{!!  staticStrings()->soundtrack_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="soundtrack_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.videos_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_videos_description_ar')}}"
-                                                                  name="videos_description_ar" dir="rtl"
-                                                                  id="videos_description_ar">{!!  staticStrings()->videos_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="videos_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.videos_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_videos_description_en')}}"
-                                                                  name="videos_description_en" dir="ltr"
-                                                                  id="videos_description_en">{!!  staticStrings()->videos_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="videos_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_stories_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_stories_description_ar')}}"
-                                                                  name="success_stories_description_ar" dir="rtl"
-                                                                  id="success_stories_description_ar">{!!  staticStrings()->success_stories_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_stories_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_stories_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_stories_description_en')}}"
-                                                                  name="success_stories_description_en" dir="ltr"
-                                                                  id="success_stories_description_en">{!!  staticStrings()->success_stories_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_stories_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_story_categories_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_story_categories_description_ar')}}"
-                                                                  name="success_story_categories_description_ar"
-                                                                  dir="rtl"
-                                                                  id="success_story_categories_description_ar">{!!  staticStrings()->success_story_categories_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_story_categories_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_story_categories_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_story_categories_description_en')}}"
-                                                                  name="success_story_categories_description_en"
-                                                                  dir="ltr"
-                                                                  id="success_story_categories_description_en">{!!  staticStrings()->success_story_categories_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_story_categories_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_story_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_story_description_ar')}}"
-                                                                  name="success_story_description_ar" dir="rtl"
-                                                                  id="success_story_description_ar">{!!  staticStrings()->success_story_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_story_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_story_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_story_description_en')}}"
-                                                                  name="success_story_description_en" dir="ltr"
-                                                                  id="success_story_description_en">{!!  staticStrings()->success_story_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_story_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_story_person_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_story_person_description_ar')}}"
-                                                                  name="success_story_person_description_ar" dir="rtl"
-                                                                  id="success_story_person_description_ar">{!!  staticStrings()->success_story_person_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_story_person_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.success_story_person_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_success_story_person_description_en')}}"
-                                                                  name="success_story_person_description_en" dir="ltr"
-                                                                  id="success_story_person_description_en">{!!  staticStrings()->success_story_person_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="success_story_person_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.programs_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_programs_description_ar')}}"
-                                                                  name="programs_description_ar" dir="rtl"
-                                                                  id="programs_description_ar">{!!  staticStrings()->programs_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="programs_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.programs_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_programs_description_en')}}"
-                                                                  name="programs_description_en" dir="ltr"
-                                                                  id="programs_description_en">{!!  staticStrings()->programs_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="programs_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.courses_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_courses_description_ar')}}"
-                                                                  name="courses_description_ar" dir="rtl"
-                                                                  id="courses_description_ar">{!!  staticStrings()->courses_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="courses_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.courses_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_courses_description_en')}}"
-                                                                  name="courses_description_en" dir="ltr"
-                                                                  id="courses_description_en">{!!  staticStrings()->courses_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="courses_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.contests_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_contests_description_ar')}}"
-                                                                  name="contests_description_ar" dir="rtl"
-                                                                  id="contests_description_ar">{!!  staticStrings()->contests_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="contests_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.contests_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_contests_description_en')}}"
-                                                                  name="contests_description_en" dir="ltr"
-                                                                  id="contests_description_en">{!!  staticStrings()->contests_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="contests_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.terms_of_registration_for_the_contest_ar')}}</label>
-                                                        <textarea rows="10" dir="rtl"
-                                                                  class="form-control summernote"
-                                                                  placeholder="{{trans('landing.enter_terms_of_registration_for_the_contest_ar')}}"
-                                                                  name="terms_of_registration_for_the_contest_ar"
-                                                                  id="terms_of_registration_for_the_contest_ar">{!!  staticStrings()->terms_of_registration_for_the_contest_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="terms_of_registration_for_the_contest_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.terms_of_registration_for_the_contest_en')}}</label>
-                                                        <textarea  rows="10" dir="ltr"
-                                                                  class="form-control summernote "
-                                                                  placeholder="{{trans('landing.enter_terms_of_registration_for_the_contest_en')}}"
-                                                                  name="terms_of_registration_for_the_contest_en"
-                                                                  id="terms_of_registration_for_the_contest_en">{!!  staticStrings()->terms_of_registration_for_the_contest_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="terms_of_registration_for_the_contest_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.latest_winners_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_latest_winners_description_ar')}}"
-                                                                  name="latest_winners_description_ar" dir="rtl"
-                                                                  id="latest_winners_description_ar">{!!  staticStrings()->latest_winners_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="latest_winners_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.latest_winners_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_latest_winners_description_en')}}"
-                                                                  name="latest_winners_description_en" dir="ltr"
-                                                                  id="latest_winners_description_en">{!!  staticStrings()->latest_winners_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="latest_winners_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.summer_camps_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_summer_camps_description_ar')}}"
-                                                                  name="summer_camps_description_ar" dir="rtl"
-                                                                  id="summer_camps_description_ar">{!!  staticStrings()->summer_camps_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="summer_camps_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.summer_camps_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_summer_camps_description_en')}}"
-                                                                  name="summer_camps_description_en" dir="ltr"
-                                                                  id="summer_camps_description_en">{!!  staticStrings()->summer_camps_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="summer_camps_description_en_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.magazine_description_ar')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_magazine_description_ar')}}"
-                                                                  name="magazine_description_ar" dir="rtl"
-                                                                  id="magazine_description_ar">{!!  staticStrings()->magazine_description_ar !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="magazine_description_ar_error"></span>
-                                                    </div>
-                                                    <!--end::Group-->
-
-
-                                                    <!--begin::Group-->
-                                                    <div class="form-group">
-                                                        <label> {{trans('landing.magazine_description_en')}}</label>
-                                                        <textarea class="form-control" rows="4"
-                                                                  placeholder="{{trans('landing.enter_magazine_description_en')}}"
-                                                                  name="magazine_description_en" dir="ltr"
-                                                                  id="magazine_description_en">{!!  staticStrings()->magazine_description_en !!}</textarea>
-                                                        <span class="form-text text-danger"
-                                                              id="magazine_description_en_error"></span>
+                                                              id="project_details_en_error"></span>
                                                     </div>
                                                     <!--end::Group-->
 
@@ -467,71 +126,16 @@
 
 @push('js')
 
-
     <script type="text/javascript">
         //////////////////////////////////////////////////////
-        $('#form_static_string_store').on('submit', function (e) {
+        $('#form_fixed_texts_store').on('submit', function (e) {
             e.preventDefault();
             //////////////////////////////////////////////////////////////
-            $('#talents_description_ar').css('border-color', '');
-            $('#talents_description_en').css('border-color', '');
-            $('#soundtrack_description_ar').css('border-color', '');
-            $('#soundtrack_description_en').css('border-color', '');
-            $('#videos_description_ar').css('border-color', '');
-            $('#videos_description_en').css('border-color', '');
-            $('#success_stories_description_ar').css('border-color', '');
-            $('#success_stories_description_en').css('border-color', '');
-            $('#success_story_categories_description_ar').css('border-color', '');
-            $('#success_story_categories_description_en').css('border-color', '');
-            $('#success_story_description_ar').css('border-color', '');
-            $('#success_story_description_en').css('border-color', '');
-            $('#success_story_person_description_ar').css('border-color', '');
-            $('#success_story_person_description_en').css('border-color', '');
-            $('#programs_description_ar').css('border-color', '');
-            $('#programs_description_en').css('border-color', '');
-            $('#courses_description_ar').css('border-color', '');
-            $('#courses_description_en').css('border-color', '');
-            $('#contests_description_ar').css('border-color', '');
-            $('#contests_description_en').css('border-color', '');
-            $('#summer_camps_description_ar').css('border-color', '');
-            $('#summer_camps_description_en').css('border-color', '');
-            $('#magazine_description_ar').css('border-color', '');
-            $('#magazine_description_en').css('border-color', '');
-            $('#latest_winners_description_ar').css('border-color', '');
-            $('#latest_winners_description_en').css('border-color', '');
-            $('#terms_of_registration_for_the_contest_ar').css('border-color', '');
-            $('#terms_of_registration_for_the_contest_en').css('border-color', '');
+            $('#project_details_ar').css('border-color', '');
+            $('#project_details_en').css('border-color', '');
 
-
-            $('#talents_description_ar_error').text('');
-            $('#talents_description_en_error').text('');
-            $('#soundtrack_description_ar_error').text('');
-            $('#soundtrack_description_en_error').text('');
-            $('#videos_description_ar_error').text('');
-            $('#videos_description_en_error').text('');
-            $('#success_stories_description_ar_error').text('');
-            $('#success_stories_description_en_error').text('');
-            $('#success_story_categories_description_ar_error').text('');
-            $('#success_story_categories_description_en_error').text('');
-            $('#success_story_description_ar_error').text('');
-            $('#success_story_description_en_error').text('');
-            $('#success_story_person_description_ar_error').text('');
-            $('#success_story_person_description_en_error').text('');
-            $('#programs_description_ar_error').text('');
-            $('#programs_description_en_error').text('');
-            $('#courses_description_ar_error').text('');
-            $('#courses_description_en_error').text('');
-            $('#contests_description_ar_error').text('');
-            $('#contests_description_en_error').text('');
-            $('#summer_camps_description_ar_error').text('');
-            $('#summer_camps_description_en_error').text('');
-            $('#magazine_description_ar_error').text('');
-            $('#magazine_description_en_error').text('');
-            $('#latest_winners_description_ar_error').text('');
-            $('#latest_winners_description_en_error').text('');
-            $('#terms_of_registration_for_the_contest_ar_error').text('');
-            $('#terms_of_registration_for_the_contest_en_error').text('');
-
+            $('#project_details_ar_error').text('');
+            $('#project_details_en_error').text('');
             /////////////////////////////////////////////////////////////
 
             var data = new FormData(this);
@@ -562,9 +166,9 @@
                             text: "",
                             icon: "success",
                             allowOutsideClick: false,
-                            customClass: {confirmButton: 'update_static_strings_button'}
+                            customClass: {confirmButton: 'update_fixed_texts_button'}
                         });
-                        $('.update_static_strings_button').click(function () {
+                        $('.update_fixed_texts_button').click(function () {
                             $('html, body').animate({scrollTop: 5}, 300);
                         });
                     }

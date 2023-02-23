@@ -2,27 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class About extends Model
+
+class FixedText extends Model
 {
-    use HasFactory , SoftDeletes;
 
+    protected $table = 'fixed_texts';
     protected $fillable = [
-        'id', 'title_ar', 'title_en', 'details_ar', 'details_en', 'status',
-        'photo', 'about_type_id' , 'file'
+        'project_details_ar', 'project_details_en',
     ];
-
-
-    public function type(){
-        return $this->belongsTo(AboutType::class , 'about_type_id');
-    }
-
-    public function scopeActive($query)
-    {
-        return $query->where('status', 'on');
-    }
-
+    protected $hidden = ['created_at', 'updated_at'];
 }

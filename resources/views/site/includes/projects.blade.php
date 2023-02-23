@@ -2,11 +2,10 @@
 <section class="case-page-section">
     <div class="auto-container">
         <div class="sec-title style-two centred">
-            <span class="top-text">About Our Projects</span>
-            <h2>Our Projects</h2>
+            <span class="top-text">{!! __('index.about_our_projects') !!}</span>
+            <h2>{!! __('index.our_projects') !!}</h2>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                {!! fixedTexts()->{'project_details_'.Lang()} !!}
             </p>
         </div>
         <div class="row clearfix">
@@ -17,19 +16,21 @@
                         <div class="inner-box">
                             <figure class="image-box">
                                 <img src="{{asset('adminBoard/uploadedImages/projects/'.$project->photo)}}"
-                                     alt=""></figure>
+                                     alt="{!!  $project->{'title_'.Lang()} !!}">
+                            </figure>
                             <div class="lower-content">
                                 <div class="shape"
-                                     style="background-image: url('{!! asset('/site/assets/images/shape/shape-11.png') !!}');"></div>
+                                     style="background-image: url('{!! asset('/site/assets/images/shape/shape-11.png') !!}');">
+                                </div>
                                 <div class="inner">
                                     <div class="text">
                                         <div class="category">
-                                            <a href="#">#
-                                                {!! $project->type =='current'  ? __('index.current_project'):  __('index.previous_project')!!}
+                                            <a href="#">
+                                                # {!! $project->type =='current'  ? __('index.current_project'):  __('index.previous_project')!!}
                                             </a>
                                         </div>
                                         <h3>
-                                            <a href="#">{!! Lang()=='ar'? $project->title_ar:$project->title_en !!}</a>
+                                            <a href="#">{!!  $project->{'title_'.Lang()} !!}</a>
                                         </h3>
                                     </div>
                                 </div>
