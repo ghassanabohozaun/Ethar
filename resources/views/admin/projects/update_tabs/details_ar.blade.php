@@ -12,10 +12,9 @@
                             <label>
                                 {{__('projects.title_ar')}}
                             </label>
-
                             <input type="text" class="form-control form-control-solid form-control-lg"
                                    name="title_ar" id="title_ar" value="{{$project->title_ar}}"
-                                   placeholder="{{__('projects.title_ar')}}"
+                                   placeholder="{{__('projects.enter_title_ar')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
                                   id="title_ar_error"></span>
@@ -26,13 +25,13 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{__('projects.des_ar')}}</label>
+                            <label> {{__('projects.details_ar')}}</label>
                             <textarea class="form-control summernote"
-                                      placeholder="{{__('projects.des_ar')}}"
+                                      placeholder="{{__('projects.enter_details_ar')}}"
                                       name="details_ar"
-                                      id="abstract_ar">{{$project->details_ar}}</textarea>
+                                      id="details_ar"> {{$project->details_ar}}</textarea>
                             <span class="form-text text-danger"
-                                  id="abstract_ar_error"></span>
+                                  id="details_ar_error"></span>
                         </div>
                         <!--end::Group-->
 

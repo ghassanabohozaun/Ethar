@@ -6,8 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\SlidersRequest;
 use App\Models\Slider;
 use App\Traits\GeneralTrait;
-use Illuminate\Http\Request;
 use File;
+use Illuminate\Http\Request;
 
 class SlidersController extends Controller
 {
@@ -28,8 +28,7 @@ class SlidersController extends Controller
         return view('admin.landing-page.sliders.create', compact('title'));
     }
 
-    ////////////////////////////////////////////
-    /// store
+    // store
     public function store(SlidersRequest $request)
     {
         $sliderOrderExist = Slider::where('order', $request->order)->get();
@@ -55,6 +54,7 @@ class SlidersController extends Controller
         }
 
         $lang_en = setting()->site_lang_en;
+
         Slider::create([
             'photo' => $photo_path,
             'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
@@ -70,7 +70,6 @@ class SlidersController extends Controller
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
-
     }
 
     // edit
@@ -85,13 +84,12 @@ class SlidersController extends Controller
     }
 
 
-    /// update
+    // update
     public function update(SlidersRequest $request)
     {
         $sliderOrderExist = Slider::where('order', $request->order)->get();
         if ($sliderOrderExist->isEmpty()) {
             return $this->updateSlider($request);
-
         } else {
             $maxSliderOrder = Slider::max('order');
             Slider::where('order', $request->order)->update(['order' => $maxSliderOrder + 1]);
@@ -99,7 +97,7 @@ class SlidersController extends Controller
         }
     }
 
-    /// update
+    // update
     protected function updateSlider(SlidersRequest $request)
     {
 
@@ -114,7 +112,6 @@ class SlidersController extends Controller
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
-
             if (!empty($slider->photo)) {
                 $image = $request->file('photo');
                 $destinationPath = public_path('/adminBoard/uploadedImages/sliders//');
@@ -189,11 +186,8 @@ class SlidersController extends Controller
     //  force delete
     public function forceDelete(Request $request)
     {
-
         if ($request->ajax()) {
-
             $slider = Slider::onlyTrashed()->find($request->id);
-
             if (!$slider) {
                 return redirect()->route('admin.not.found');
             }

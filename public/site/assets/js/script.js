@@ -204,7 +204,7 @@
     if ($('.banner-carousel').length) {
         var totalSlides = $(".swiper-container").length;
         var testimonialContent = new Swiper('.banner-content', {
-            preloadImages: false,
+            preloadImages: true,
             loop: true,
             speed: 2400,
             spaceBetween: 0,

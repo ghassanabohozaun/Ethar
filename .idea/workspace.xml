@@ -6,22 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SlidersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SlidersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/sliders/1677144772.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/sliders/1677145735.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/teams/1677156235.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/teams/1677156298.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/comments/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/comments/trashed_comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/comments/trashed_comments.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/news-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/sliders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/sliders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/testimonial-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/testimonial-section.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_ar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/create_tabs/details_en.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/update_tabs/details_ar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/update_tabs/details_ar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/update_tabs/details_en.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/update_tabs/details_en.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +294,7 @@
       <workItem from="1677073581625" duration="4987000" />
       <workItem from="1677133417918" duration="11000" />
       <workItem from="1677144345810" duration="11708000" />
-      <workItem from="1677158180061" duration="4218000" />
+      <workItem from="1677158180061" duration="7552000" />
     </task>
     <servers />
   </component>
@@ -372,7 +365,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/site.blade.php</url>
-          <line>57</line>
+          <line>59</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

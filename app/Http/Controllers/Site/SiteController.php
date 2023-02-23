@@ -4,13 +4,9 @@ namespace App\Http\Controllers\Site;
 
 use App\File;
 use App\Http\Controllers\Controller;
-<<<<<<< HEAD
 use App\Models\Article;
-=======
 use App\Models\About;
 use App\Models\AboutType;
-
->>>>>>> 1c7e9cc4d3f409afc2c31ece264e71363e8579e4
 use App\Models\Projects;
 use App\Models\Slider;
 use App\Models\Team;
@@ -40,7 +36,7 @@ class SiteController extends Controller
                 ->where(function ($q) {
                     $q->where('language', 'ar')
                         ->orWhere('language', 'ar_en');
-                })->take(2)->get();
+                })->get();
 
             // projects
             $projects = Projects::orderByDesc('id')->where('status', 'on')
@@ -57,14 +53,12 @@ class SiteController extends Controller
                 })->take(4)->get();
 
 
-
-
         } else {
             // Slider
             $sliders = Slider::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
                     $q->where('language', 'ar_en');
-                })->take(2)->get();
+                })->get();
 
             //  projects
             $projects = Projects::orderByDesc('id')->where('status', 'on')
