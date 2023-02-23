@@ -1,6 +1,10 @@
 @extends('layouts.site')
 @section('title')
+<<<<<<< HEAD
 {{--    {!! $title !!}--}}
+=======
+    {!! Lang()=='ar' ? setting()->site_title_ar : setting()->site_title_en !!}
+>>>>>>> ef546bf9b77b7623e05688a8162f001c3ab649e1
 @endsection
 @section('metaTags')
     <meta name="description"
