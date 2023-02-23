@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html @if( Lang() =='ar') lang="ar" dir="rtl" @else lang="en" dir="ltr" @endif>
 <head>
-<<<<<<< HEAD
+
     <title>{!!'Home'  !!}</title>
-=======
-    <title></title>
->>>>>>> 9e0b06751611274a77a2c542a14b649cea2bd487
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

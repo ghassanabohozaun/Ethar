@@ -4,13 +4,10 @@ namespace App\Http\Controllers\Site;
 
 use App\File;
 use App\Http\Controllers\Controller;
-<<<<<<< HEAD
 use App\Models\About;
 use App\Models\AboutType;
-use App\Models\Scopes\StatusScope;
-=======
+
 use App\Models\Projects;
->>>>>>> 9e0b06751611274a77a2c542a14b649cea2bd487
 use App\Models\Slider;
 use App\Models\Team;
 use App\Traits\GeneralTrait;
