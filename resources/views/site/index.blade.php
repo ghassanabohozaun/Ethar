@@ -1,6 +1,7 @@
 @extends('layouts.site')
 @section('title')
-    {!! $title !!}
+    {{-- {!! $title  !!} --}}
+    {{ $title != null ?$title:'' }}
 @endsection
 @section('metaTags')
     <meta name="description"
