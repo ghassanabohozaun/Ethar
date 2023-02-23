@@ -4,7 +4,13 @@ namespace App\Http\Controllers\Site;
 
 use App\File;
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Models\Article;
+=======
+use App\Models\About;
+use App\Models\AboutType;
+
+>>>>>>> 1c7e9cc4d3f409afc2c31ece264e71363e8579e4
 use App\Models\Projects;
 use App\Models\Slider;
 use App\Models\Team;
@@ -80,6 +86,17 @@ class SiteController extends Controller
         $testimonials = testimonial::orderByDesc('id')->where('status', 'on')->get();
 
         return view('site.index', compact('title', 'sliders', 'projects', 'founders', 'lastArticles','testimonials'));
+    }
+
+    // About
+    public function about( $id){
+         $about = AboutType::find($id)->about()->where('status', 'on')->first();
+        if($about){
+            return view('site.about', compact('about'));
+        }else{
+            return redirect()->back();
+        }
+
     }
 
 }

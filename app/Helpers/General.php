@@ -1,4 +1,5 @@
 <?php
+use App\Models\AboutType;
 
 
 //  setting Helper Function
@@ -47,4 +48,6 @@ function returnSpaceBetweenString($string)
     return $string = str_replace('-', ' ', $string); // Replaces all spaces with hyphens.
 }
 
-
+function abouts_type(){
+    return AboutType::get();
+}

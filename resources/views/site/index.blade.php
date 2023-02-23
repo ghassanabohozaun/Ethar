@@ -4,7 +4,15 @@
     {{--    {!! $title !!}--}}
     =======
     {!! Lang()=='ar' ? setting()->site_title_ar : setting()->site_title_en !!}
+<<<<<<< HEAD
     >>>>>>> ef546bf9b77b7623e05688a8162f001c3ab649e1
+=======
+<<<<<<< HEAD
+    {{ setting()->site_title_.Lang() }}
+=======
+>>>>>>> ef546bf9b77b7623e05688a8162f001c3ab649e1
+>>>>>>> 9e0b06751611274a77a2c542a14b649cea2bd487
+>>>>>>> 1c7e9cc4d3f409afc2c31ece264e71363e8579e4
 @endsection
 @section('metaTags')
     <meta name="description"

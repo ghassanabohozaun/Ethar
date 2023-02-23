@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Site\SiteController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +19,9 @@ Route::group(
     })->where(['any' => '.*']);
 
     Route::get('/', 'SiteController@index')->name('index');
+
+    Route::get('About/{id}' , [SiteController::class , 'about'])->name('about') ;
+
 
     Route::get('/rationale', function (){
         return view('site.rationale');
