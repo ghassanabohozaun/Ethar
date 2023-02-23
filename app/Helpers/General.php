@@ -10,6 +10,7 @@ if (!function_exists('setting')) {
     }
 }
 
+
 //  get active languages Helper Function
 if (!function_exists('getActiveLanguages')) {
     function Lang()

@@ -20,8 +20,11 @@ Route::group(
 
     Route::get('/', 'SiteController@index')->name('index');
 
+<<<<<<< HEAD
     Route::get('About/{id}' , [SiteController::class , 'about'])->name('about') ;
 
+=======
+>>>>>>> 9e0b06751611274a77a2c542a14b649cea2bd487
     Route::get('/rationale', function (){
         return view('site.rationale');
     })->name('rationale');

@@ -1,7 +1,14 @@
 @extends('layouts.site')
 @section('title')
+<<<<<<< HEAD
+{{--    {!! $title !!}--}}
+=======
     {!! Lang()=='ar' ? setting()->site_title_ar : setting()->site_title_en !!}
+<<<<<<< HEAD
     {{ setting()->site_title_.Lang() }}
+=======
+>>>>>>> ef546bf9b77b7623e05688a8162f001c3ab649e1
+>>>>>>> 9e0b06751611274a77a2c542a14b649cea2bd487
 @endsection
 @section('metaTags')
     <meta name="description"
@@ -28,11 +35,11 @@
         <!-- mobile-menu end-->
 
         <!-- banner-section -->
-        @include('site.includes.banner-section')
+        @include('site.includes.sliders')
         <!-- banner-section end -->
 
         <!-- welcome-section -->
-        @include('site.includes.welcome-section')
+        @include('site.includes.projects')
         <!-- welcome-section end -->
 
         <!-- about-section -->
