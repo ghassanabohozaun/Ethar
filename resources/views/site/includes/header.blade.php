@@ -32,20 +32,15 @@
                                 <li class=" dropdown">
                                     <a href="#">About</a>
                                     <ul>
+                                        @foreach (abouts_type() as $type )
+
                                         <li>
-                                            <a href="{!! route('rationale') !!}">Rationale</a>
+                                            <a href="{!! route('about',$type->id) !!}">{{ $type->{'name_'.Lang()} }}</a>
                                         </li>
-                                        <li>
-                                            <a href="{!! route('who-we-are') !!}">Who We Are</a>
-                                        </li>
+                                        @endforeach
+
                                         <li>
                                             <a href="{!! route('faq') !!}">FAQ's</a>
-                                        </li>
-                                        <li>
-                                            <a href="{!! route('work-ethics') !!}">Work Ethics</a>
-                                        </li>
-                                        <li>
-                                            <a href="{!! route('constitution') !!}">Constitution</a>
                                         </li>
 
                                         <li class="dropdown">

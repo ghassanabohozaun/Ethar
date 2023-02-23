@@ -20,4 +20,9 @@ class About extends Model
         return $this->belongsTo(AboutType::class , 'about_type_id');
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('status', 'on');
+    }
+
 }

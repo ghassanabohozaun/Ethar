@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Site;
 
 use App\File;
 use App\Http\Controllers\Controller;
+use App\Models\About;
+use App\Models\AboutType;
+use App\Models\Scopes\StatusScope;
 use App\Models\Slider;
 use App\Traits\GeneralTrait;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -44,6 +47,17 @@ class SiteController extends Controller
 
 
         return view('site.index', compact('title', 'sliders'));
+    }
+
+    // About
+    public function about( $id){
+         $about = AboutType::find($id)->about()->where('status', 'on')->first();
+        if($about){
+            return view('site.about', compact('about'));
+        }else{
+            return redirect()->back();
+        }
+
     }
 
 }
