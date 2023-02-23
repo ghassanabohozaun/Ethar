@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/teams/1677151150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/teams/1677152741.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/trashed-project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/trashed-project.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/banner-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/sliders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/welcome-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/projects.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +292,7 @@
       <workItem from="1677069518463" duration="1082000" />
       <workItem from="1677073581625" duration="4987000" />
       <workItem from="1677133417918" duration="11000" />
-      <workItem from="1677144345810" duration="8514000" />
+      <workItem from="1677144345810" duration="11079000" />
     </task>
     <servers />
   </component>

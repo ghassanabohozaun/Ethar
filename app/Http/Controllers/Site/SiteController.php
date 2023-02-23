@@ -58,8 +58,8 @@ class SiteController extends Controller
         }
 
 
-        //  founders
-        $founders = Team::orderByDesc('id')->where('status', 'on')->take(4)->get();
+        //founders
+        $founders = Team::orderByDesc('id')->where('status', 'on')->where('type','founder')->get();
 
 
         return view('site.index', compact('title', 'sliders','projects','founders'));
