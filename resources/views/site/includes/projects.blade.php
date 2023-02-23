@@ -11,7 +11,7 @@
         </div>
         <div class="row clearfix">
 
-            @forelse($projects as $project)
+            @forelse($lastProjects as $project)
                 <div class="col-lg-3 col-md-6 col-sm-12 case-block">
                     <div class="case-block-one">
                         <div class="inner-box">

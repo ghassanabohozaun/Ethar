@@ -22,7 +22,6 @@
                         </div>
                         <!--end::Group-->
 
-
                         <!--begin::Group-->
                         <div class="form-group">
                             <label> {{__('projects.details_ar')}}</label>

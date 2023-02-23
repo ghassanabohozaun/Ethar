@@ -39,7 +39,7 @@ class SiteController extends Controller
                 })->get();
 
             // projects
-            $projects = Projects::orderByDesc('id')->where('status', 'on')
+            $lastProjects = Projects::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
                     $q->where('language', 'ar')
                         ->orWhere('language', 'ar_en');
@@ -61,7 +61,7 @@ class SiteController extends Controller
                 })->get();
 
             //  projects
-            $projects = Projects::orderByDesc('id')->where('status', 'on')
+            $lastProjects = Projects::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
                     $q->where('language', 'ar_en');
                 })->take(4)->get();
@@ -79,7 +79,7 @@ class SiteController extends Controller
         $founders = Team::orderByDesc('id')->where('status', 'on')->where('type', 'founder')->get();
         $testimonials = testimonial::orderByDesc('id')->where('status', 'on')->get();
 
-        return view('site.index', compact('title', 'sliders', 'projects', 'founders', 'lastArticles','testimonials'));
+        return view('site.index', compact('title', 'sliders', 'lastProjects', 'founders', 'lastArticles','testimonials'));
     }
 
     // About

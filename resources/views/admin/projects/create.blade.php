@@ -146,6 +146,7 @@
             ////////////////////////////////////////////////////////////////////
             $('#photo_error').text('');
             $('#file_error').text('');
+            $('#word_error').text('');
             $('#date_error').text('');
             $('#writer_error').text('');
             $('#title_ar_error').text('');
@@ -156,6 +157,7 @@
 
             $('#photo').css('border-color', '');
             $('#file').css('border-color', '');
+            $('#word').css('border-color', '');
             $('#date').css('border-color', '');
             $('#writer').css('border-color', '');
             $('#title_ar').css('border-color', '');
