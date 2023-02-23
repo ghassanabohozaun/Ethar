@@ -6,8 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/sliders/1677078466.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/General.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/General.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Traits/GeneralTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Traits/GeneralTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1673466150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1673466164.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1673945123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1673945214.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1674036160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1674400052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1676112582.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1676112736.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1676290554.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1676290565.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1676290695.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/banner-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/banner-section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/welcome-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/welcome-section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,23 +191,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/app/Http/Controllers/Site",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/etharps/app/Http/Controllers/Site&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\etharps\app\Http\Controllers\Site" />
@@ -284,7 +302,9 @@
       <workItem from="1676994444725" duration="2534000" />
       <workItem from="1677056732026" duration="3363000" />
       <workItem from="1677069518463" duration="1082000" />
-      <workItem from="1677073581625" duration="4229000" />
+      <workItem from="1677073581625" duration="4987000" />
+      <workItem from="1677133417918" duration="11000" />
+      <workItem from="1677144345810" duration="4860000" />
     </task>
     <servers />
   </component>

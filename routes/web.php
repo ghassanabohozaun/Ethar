@@ -19,8 +19,6 @@ Route::group(
 
     Route::get('/', 'SiteController@index')->name('index');
 
-
-
     Route::get('/rationale', function (){
         return view('site.rationale');
     })->name('rationale');

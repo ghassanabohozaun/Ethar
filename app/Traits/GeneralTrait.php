@@ -72,7 +72,7 @@ trait GeneralTrait
     public function saveResizeImage($image , $destinationPath,$width,$height){
         $input['photo'] = time().'.'.$image->getClientOriginalExtension();
         $imgFile = Image::make($image->getRealPath());
-        $imgFile->resize($width, $height, function ($constraint) {
+        $imgFile->fit($width, $height, function ($constraint) {
             $constraint->aspectRatio();
         })->save($destinationPath.'/'.$input['photo']);
         return  $input['photo'];

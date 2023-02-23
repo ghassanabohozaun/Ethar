@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html @if( Lang() =='ar') lang="ar" dir="rtl" @else lang="en" dir="ltr" @endif>
 <head>
-    <title>{!! $title !!}</title>
+    <title></title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

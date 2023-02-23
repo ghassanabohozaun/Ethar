@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectsRequest;
 use App\Models\Projects;
+use App\Models\Slider;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -15,7 +16,7 @@ class ProjectsController extends Controller
 
     public function index()
     {
-        $projects = Projects::paginate(15);
+        $projects = Projects::withoutTrashed()->orderByDesc('created_at')->paginate(15);
         $title = __('menu.projects');
         return view('admin.projects.index', compact('projects', 'title'));
     }
@@ -33,7 +34,7 @@ class ProjectsController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/projects');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 240);
         } else {
             $photo_path = '';
         }
@@ -66,7 +67,7 @@ class ProjectsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
-            'status' =>'on',
+            'status' =>'',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
@@ -87,7 +88,7 @@ class ProjectsController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/projects');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 240);
 
             $image_path = public_path("\adminBoard\uploadedImages\projects\\") . $project->photo;
 

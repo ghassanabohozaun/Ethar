@@ -19,8 +19,8 @@
 {{--                                     style="background-image: url({{asset('site/assets/images/shape/shape-31.png')}});">--}}
 {{--                                </div>--}}
                                 <span></span>
-                                <h2> {!! Lang()=='ar'? $slider->title_ar:$slider->title_en !!}</h2>
-                                <p>  {!! Lang()=='ar'? $slider->details_ar:$slider->details_en !!}</p>
+                                <h2>{!! Lang()=='ar'? $slider->title_ar:$slider->title_en !!}</h2>
+                                <p>{!! Lang()=='ar'? $slider->details_ar:$slider->details_en !!}</p>
                                 {{--                                <div class="btn-box">--}}
                                 {{--                                    <a href="#" class="banner-btn">Read More</a>--}}
                                 {{--                                </div>--}}
