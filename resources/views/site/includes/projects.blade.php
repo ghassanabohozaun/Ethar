@@ -11,12 +11,12 @@
         </div>
         <div class="row clearfix">
 
-            @forelse($currentProjects as $currentProject)
+            @forelse($projects as $project)
                 <div class="col-lg-3 col-md-6 col-sm-12 case-block">
                     <div class="case-block-one">
                         <div class="inner-box">
                             <figure class="image-box">
-                                <img src="{{asset('adminBoard/uploadedImages/projects/'.$currentProject->photo)}}"
+                                <img src="{{asset('adminBoard/uploadedImages/projects/'.$project->photo)}}"
                                      alt=""></figure>
                             <div class="lower-content">
                                 <div class="shape"
@@ -25,11 +25,11 @@
                                     <div class="text">
                                         <div class="category">
                                             <a href="#">#
-                                                {!! $currentProject->type =='current'  ? __('index.current_project'):  __('index.previous_project')!!}
+                                                {!! $project->type =='current'  ? __('index.current_project'):  __('index.previous_project')!!}
                                             </a>
                                         </div>
                                         <h3>
-                                            <a href="#">{!! Lang()=='ar'? $currentProject->title_ar:$currentProject->title_en !!}</a>
+                                            <a href="#">{!! Lang()=='ar'? $project->title_ar:$project->title_en !!}</a>
                                         </h3>
                                     </div>
                                 </div>

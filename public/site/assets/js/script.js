@@ -375,28 +375,22 @@
 	// Five Item Carousel
 	if ($('.five-item-carousel').length) {
 		$('.five-item-carousel').owlCarousel({
-			loop:true,
-			margin:30,
-			nav:true,
-			smartSpeed: 500,
-			autoplay: 1000,
+            rtl: true,
+            loop: true,
+            responsiveClass: true,
+            margin: 15,
+            autoplay: true,
+            smartSpeed: 3000,
+            slideSpeed: 60,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            items:1,
 			navText: [ '<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>' ],
 			responsive:{
 				0:{
 					items:1
 				},
-				600:{
-					items:2
-				},
-				800:{
-					items:3
-				},
-				1024:{
-					items:4
-				},
-				1200:{
-					items:5
-				}
+
 			}
 		});
 	}

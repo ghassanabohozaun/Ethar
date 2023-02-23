@@ -6,6 +6,7 @@ use App\File;
 use App\Http\Controllers\Controller;
 use App\Models\Projects;
 use App\Models\Slider;
+use App\Models\Team;
 use App\Traits\GeneralTrait;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -33,13 +34,13 @@ class SiteController extends Controller
                         ->orWhere('language', 'ar_en');
                 })->take(2)->get();
 
-
-            // current projects
-            $currentProjects = Projects::orderByDesc('id')->where('status', 'on')
+            // projects
+            $projects = Projects::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
                     $q->where('language', 'ar')
                         ->orWhere('language', 'ar_en');
                 })->take(4)->get();
+
 
         } else {
             // Slider
@@ -48,8 +49,8 @@ class SiteController extends Controller
                     $q->where('language', 'ar_en');
                 })->take(2)->get();
 
-            // current projects
-            $currentProjects = Projects::orderByDesc('id')->where('status', 'on')
+            //  projects
+            $projects = Projects::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
                     $q->where('language', 'ar_en');
                 })->take(4)->get();
@@ -57,9 +58,11 @@ class SiteController extends Controller
         }
 
 
+        //  founders
+        $founders = Team::orderByDesc('id')->where('status', 'on')->take(4)->get();
 
 
-        return view('site.index', compact('title', 'sliders','currentProjects'));
+        return view('site.index', compact('title', 'sliders','projects','founders'));
     }
 
 }

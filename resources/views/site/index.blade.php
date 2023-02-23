@@ -31,11 +31,11 @@
         <!-- mobile-menu end-->
 
         <!-- banner-section -->
-        @include('site.includes.banner-section')
+        @include('site.includes.sliders')
         <!-- banner-section end -->
 
         <!-- welcome-section -->
-        @include('site.includes.welcome-section')
+        @include('site.includes.projects')
         <!-- welcome-section end -->
 
         <!-- about-section -->

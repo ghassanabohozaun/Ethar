@@ -117,7 +117,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="6" class="text-center">
+                                                            <td colspan="7" class="text-center">
                                                                 {!! __('projects.no_found') !!}
                                                             </td>
                                                         </tr>
@@ -125,7 +125,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="6">
+                                                        <td colspan="7">
                                                             <div class="float-right">
                                                                 {!! $projects->appends(request()->all())->links() !!}
                                                             </div>
