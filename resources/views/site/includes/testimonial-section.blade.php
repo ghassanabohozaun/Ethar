@@ -7,12 +7,12 @@
                 <div class="content_block_3">
                     <div class="content-box">
                         <div class="sec-title">
-                            <span class="top-text">Testimonials</span>
-                            <h2>Lorem Ipsum is simply dummy text</h2>
+                            <span class="top-text">{!! __('index.testimonials') !!}</span>
+                            <h2>{!! fixedTexts()->{'testimonials_title_'.Lang()} !!}</h2>
                         </div>
                         <div class="text">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                            <a href="#" class="theme-btn btn-one">All Reviews</a>
+                            <p>{!! fixedTexts()->{'testimonials_details_'.Lang()} !!}</p>
+                            <a href="#" class="theme-btn btn-one">{!! __('index.all_reviews') !!}</a>
                         </div>
                     </div>
                 </div>
@@ -31,14 +31,14 @@
                                         <div class="icon-box">
                                             <i class="fas fa-quote-left"></i>
                                         </div>
-
-
-                                        <p>{!! Lang()=='ar'? $testimonial->opinion_ar:$testimonial->opinion_en !!}</p>
-                                        <h4>{!! Lang()=='ar'? $testimonial->name_ar:$testimonial->name_en !!}</h4>
+                                        <p>{!! $testimonial->{'opinion_'.Lang()} !!}</p>
+                                        <h4>{!! $testimonial->{'name_'.Lang()} !!}</h4>
                                         <span class="designation">{!! $testimonial->country !!}</span>
                                     </div>
                                     <figure class="testimonial-thumb">
-                                        <img src="{{asset('adminBoard/uploadedImages/testimonials/'.$testimonial->photo)}}" alt="">
+                                        <img
+                                            src="{{asset('adminBoard/uploadedImages/testimonials/'.$testimonial->photo)}}"
+                                            alt="{!! $testimonial->{'opinion_'.Lang()} !!}">
                                     </figure>
                                 </div>
                             @empty

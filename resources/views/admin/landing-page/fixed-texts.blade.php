@@ -61,12 +61,11 @@
                                 <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
                                     <div class="col-xl-12 col-xxl-10">
 
+                                        <!--begin::row-->
                                         <div class="row justify-content-center">
                                             <div class="col-xl-9">
-
-                                                <!--begin::body-->
+                                                <h2>{!! __('fixedTexts.projects') !!}</h2>
                                                 <div class="my-5">
-
                                                     <!--begin::Group-->
                                                     <div class="form-group">
                                                         <label>
@@ -83,7 +82,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group">
                                                         <label>
@@ -99,13 +97,528 @@
                                                               id="project_details_en_error"></span>
                                                     </div>
                                                     <!--end::Group-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::row-->
+                                        <hr>
+
+                                        <!--begin::row-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-9">
+                                                <h2>{!! __('fixedTexts.about_association') !!}</h2>
+                                                <div class="my-5">
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.about_association_title_ar')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="about_association_title_ar"
+                                                                  id="about_association_title_ar"
+                                                                  placeholder=" {{__('fixedTexts.enter_about_association_title_ar')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->about_association_title_ar ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="about_association_title_ar_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.about_association_title_en')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="about_association_title_en"
+                                                                  id="about_association_title_en"
+                                                                  placeholder=" {{__('fixedTexts.enter_about_association_title_en')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->about_association_title_en ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="about_association_title_en_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.about_association_details_ar')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="about_association_details_ar"
+                                                                  id="about_association_details_ar"
+                                                                  placeholder=" {{__('fixedTexts.enter_about_association_details_ar')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->about_association_details_ar ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="about_association_details_ar_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.about_association_details_en')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control form-control-lg"
+                                                                  name="about_association_details_en"
+                                                                  id="about_association_details_en"
+                                                                  placeholder=" {{__('fixedTexts.enter_about_association_details_en')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->about_association_details_en ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="about_association_details_en_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.about_association_founders_count')}}
+                                                        </label>
+                                                        <input type="text"
+                                                               class="form-control  form-control-lg"
+                                                               name="about_association_founders_count"
+                                                               id="about_association_founders_count"
+                                                               placeholder=" {{__('fixedTexts.enter_about_association_founders_count')}}"
+                                                               autocomplete="off"
+                                                               value="{!! fixedTexts()->about_association_founders_count ?? '' !!}">
+                                                        <span class="form-text text-danger"
+                                                              id="about_association_founders_count_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.about_association_beneficiaries_count')}}
+                                                        </label>
+                                                        <input type="text" class="form-control  form-control-lg"
+                                                               name="about_association_beneficiaries_count"
+                                                               id="about_association_beneficiaries_count"
+                                                               placeholder=" {{__('fixedTexts.enter_about_association_beneficiaries_count')}}"
+                                                               autocomplete="off"
+                                                               value="{!! fixedTexts()->about_association_beneficiaries_count ?? '' !!}">
+                                                        <span class="form-text text-danger"
+                                                              id="about_association_beneficiaries_count_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
 
 
                                                 </div>
-                                                <!--begin::body-->
-
                                             </div>
                                         </div>
+                                        <!--end::row-->
+                                        <hr>
+
+
+                                        <!--begin::row-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-9">
+                                                <h2>{!! __('fixedTexts.founders') !!}</h2>
+                                                <div class="my-5">
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.founders_title_ar')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="founders_title_ar"
+                                                                  id="founders_title_ar"
+                                                                  placeholder=" {{__('fixedTexts.enter_founders_title_ar')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->founders_title_ar ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="founders_title_ar_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.founders_title_en')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="founders_title_en"
+                                                                  id="founders_title_en"
+                                                                  placeholder=" {{__('fixedTexts.enter_founders_title_en')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->founders_title_en ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="founders_title_en_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::row-->
+                                        <hr>
+
+                                        <!--begin::row-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-9">
+                                                <h2>{!! __('fixedTexts.blog') !!}</h2>
+                                                <div class="my-5">
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.blog_title_ar')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="blog_title_ar"
+                                                                  id="blog_title_ar"
+                                                                  placeholder=" {{__('fixedTexts.enter_blog_title_ar')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->blog_title_ar ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="blog_title_ar_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.blog_title_en')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="blog_title_en"
+                                                                  id="blog_title_en"
+                                                                  placeholder=" {{__('fixedTexts.enter_blog_title_en')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->blog_title_en ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="blog_title_en_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::row-->
+                                        <hr>
+
+                                        <!--begin::row-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-9">
+                                                <h2>{!! __('fixedTexts.testimonials') !!}</h2>
+                                                <div class="my-5">
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.testimonials_title_ar')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="testimonials_title_ar"
+                                                                  id="testimonials_title_ar"
+                                                                  placeholder=" {{__('fixedTexts.enter_testimonials_title_ar')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->testimonials_title_ar ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="testimonials_title_ar_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.testimonials_title_en')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="testimonials_title_en"
+                                                                  id="testimonials_title_en"
+                                                                  placeholder=" {{__('fixedTexts.enter_testimonials_title_en')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->testimonials_title_en ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="testimonials_title_en_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.testimonials_details_ar')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="testimonials_details_ar"
+                                                                  id="testimonials_details_ar"
+                                                                  placeholder=" {{__('fixedTexts.enter_testimonials_details_ar')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->testimonials_details_ar ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="testimonials_details_ar_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group">
+                                                        <label>
+                                                            {{__('fixedTexts.testimonials_details_en')}}
+                                                        </label>
+                                                        <textarea rows="4"
+                                                                  class="form-control  form-control-lg"
+                                                                  name="testimonials_details_en"
+                                                                  id="testimonials_details_en"
+                                                                  placeholder=" {{__('fixedTexts.enter_testimonials_details_en')}}"
+                                                                  autocomplete="off">{!! fixedTexts()->testimonials_details_en ?? '' !!}</textarea>
+                                                        <span class="form-text text-danger"
+                                                              id="testimonials_details_en_error"></span>
+                                                    </div>
+                                                    <!--end::Group-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::row-->
+                                        <hr>
+
+
+                                        <!--begin::row-->
+                                        <div class="row justify-content-center">
+                                            <div class="col-xl-12">
+                                                <h2>{!! __('fixedTexts.counters') !!}</h2>
+
+                                                <div class="my-5">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_icon_1')}}
+                                                                </label>
+
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input"
+                                                                           id="counter_icon_1" name="counter_icon_1">
+                                                                    <label class="custom-file-label" choose="" file="">
+                                                                    </label>
+                                                                </div>
+                                                                <span class="form-text text-danger" id="counter_icon_1_error">
+                                                                </span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_number_1')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_number_1"
+                                                                    id="counter_number_1"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_number_1')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_number_1 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_number_1_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_1')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_1"
+                                                                    id="counter_name_1"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_1')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_1 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_1_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_icon_2')}}
+                                                                </label>
+
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input"
+                                                                           id="counter_icon_2" name="counter_icon_2">
+                                                                    <label class="custom-file-label" choose="" file="">
+                                                                    </label>
+                                                                </div>
+                                                                <span class="form-text text-danger" id="counter_icon_2_error">
+                                                                </span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_number_2')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_number_2"
+                                                                    id="counter_number_2"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_number_2')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_number_2 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_number_2_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_2')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_2"
+                                                                    id="counter_name_2"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_2')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_2 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_2_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_icon_3')}}
+                                                                </label>
+
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input"
+                                                                           id="counter_icon_3" name="counter_icon_3">
+                                                                    <label class="custom-file-label" choose="" file="">
+                                                                    </label>
+                                                                </div>
+                                                                <span class="form-text text-danger" id="counter_icon_3_error">
+                                                                </span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_number_3')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_number_3"
+                                                                    id="counter_number_3"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_number_3')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_number_3 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_number_3_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_3')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_3"
+                                                                    id="counter_name_3"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_3')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_3 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_3_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_icon_4')}}
+                                                                </label>
+
+                                                                <div class="custom-file">
+                                                                    <input type="file" class="custom-file-input"
+                                                                           id="counter_icon_4" name="counter_icon_4">
+                                                                    <label class="custom-file-label" choose="" file="">
+                                                                    </label>
+                                                                </div>
+                                                                <span class="form-text text-danger" id="counter_icon_4_error">
+                                                                </span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_number_4')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_number_4"
+                                                                    id="counter_number_4"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_number_4')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_number_4 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_number_4_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_4')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_4"
+                                                                    id="counter_name_4"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_4')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_4 ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_4_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::row-->
+                                        <hr>
 
                                     </div>
                                 </div>
@@ -133,9 +646,63 @@
             //////////////////////////////////////////////////////////////
             $('#project_details_ar').css('border-color', '');
             $('#project_details_en').css('border-color', '');
+            $('#about_association_title_ar').css('border-color', '');
+            $('#about_association_title_en').css('border-color', '');
+            $('#about_association_details_ar').css('border-color', '');
+            $('#about_association_details_en').css('border-color', '');
+            $('#about_association_founders_count').css('border-color', '');
+            $('#about_association_beneficiaries_count').css('border-color', '');
+            $('#founders_title_ar').css('border-color', '');
+            $('#founders_title_en').css('border-color', '');
+            $('#blog_title_ar').css('border-color', '');
+            $('#blog_title_en').css('border-color', '');
+            $('#testimonials_title_ar').css('border-color', '');
+            $('#testimonials_title_en').css('border-color', '');
+            $('#testimonials_details_ar').css('border-color', '');
+            $('#testimonials_details_en').css('border-color', '');
+            $('#counter_icon_1').css('border-color', '');
+            $('#counter_number_1').css('border-color', '');
+            $('#counter_name_1').css('border-color', '');
+            $('#counter_icon_2').css('border-color', '');
+            $('#counter_number_2').css('border-color', '');
+            $('#counter_name_2').css('border-color', '');
+            $('#counter_icon_3').css('border-color', '');
+            $('#counter_number_3').css('border-color', '');
+            $('#counter_name_3').css('border-color', '');
+            $('#counter_icon_4').css('border-color', '');
+            $('#counter_number_4').css('border-color', '');
+            $('#counter_name_4').css('border-color', '');
+
 
             $('#project_details_ar_error').text('');
             $('#project_details_en_error').text('');
+            $('#about_association_title_ar_error').text('');
+            $('#about_association_title_en_error').text('');
+            $('#about_association_details_ar_error').text('');
+            $('#about_association_details_en_error').text('');
+            $('#about_association_founders_count_error').text('');
+            $('#about_association_beneficiaries_count_error').text('');
+            $('#founders_title_ar_error').text('');
+            $('#founders_title_en_error').text('');
+            $('#blog_title_ar_error').text('');
+            $('#blog_title_en_error').text('');
+            $('#testimonials_title_ar_error').text('');
+            $('#testimonials_title_en_error').text('');
+            $('#testimonials_details_ar_error').text('');
+            $('#testimonials_details_en_error').text('');
+            $('#counter_icon_1_error').text('');
+            $('#counter_number_1_error').text('');
+            $('#counter_name_1_error').text('');
+            $('#counter_icon_2_error').text('');
+            $('#counter_number_2_error').text('');
+            $('#counter_name_2_error').text('');
+            $('#counter_icon_3_error').text('');
+            $('#counter_number_3_error').text('');
+            $('#counter_name_3_error').text('');
+            $('#counter_icon_4_error').text('');
+            $('#counter_number_4_error').text('');
+            $('#counter_name_4_error').text('');
+
             /////////////////////////////////////////////////////////////
 
             var data = new FormData(this);

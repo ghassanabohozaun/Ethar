@@ -17,6 +17,40 @@ class CreateFixedTextsTable extends Migration
             $table->id();
             $table->text('project_details_ar')->nullable();
             $table->text('project_details_en')->nullable();
+            $table->text('about_association_title_ar')->nullable();
+            $table->text('about_association_title_en')->nullable();
+            $table->text('about_association_details_ar')->nullable();
+            $table->text('about_association_details_en')->nullable();
+            $table->string('about_association_founders_count')->nullable();
+            $table->string('about_association_beneficiaries_count')->nullable();
+
+
+            $table->text('founders_title_ar')->nullable();
+            $table->text('founders_title_en')->nullable();
+            $table->text('blog_title_ar')->nullable();
+            $table->text('blog_title_en')->nullable();
+            $table->text('testimonials_title_ar')->nullable();
+            $table->text('testimonials_title_en')->nullable();
+            $table->text('testimonials_details_ar')->nullable();
+            $table->text('testimonials_details_en')->nullable();
+
+
+            $table->string('counter_icon_1')->nullable();
+            $table->string('counter_number_1')->nullable();
+            $table->string('counter_name_1')->nullable();
+
+            $table->string('counter_icon_2')->nullable();
+            $table->string('counter_number_2')->nullable();
+            $table->string('counter_name_2')->nullable();
+
+            $table->string('counter_icon_3')->nullable();
+            $table->string('counter_number_3')->nullable();
+            $table->string('counter_name_3')->nullable();
+
+            $table->string('counter_icon_4')->nullable();
+            $table->string('counter_number_4')->nullable();
+            $table->string('counter_name_4')->nullable();
+
             $table->timestamps();
         });
     }

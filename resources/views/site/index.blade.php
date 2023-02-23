@@ -47,7 +47,7 @@
         <!-- projects end -->
 
         <!-- about-section -->
-        @include('site.includes.about-section')
+        @include('site.includes.about-association')
         <!-- about-section end -->
 
         <!-- founders -->

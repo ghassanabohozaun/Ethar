@@ -6,23 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/General.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/General.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FixedTextsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FixedTextsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/FixedTextsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/FixedTextsRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/FixedText.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/FixedText.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2023_02_23_162527_create_fixed_texts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_02_23_162527_create_fixed_texts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/fixedTexts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/fixedTexts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/fixedTexts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/fixedTexts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/projects.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/projects.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/sliders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/sliders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/about-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/about-association.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/testimonial-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/testimonial-section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +299,7 @@
       <workItem from="1677073581625" duration="4987000" />
       <workItem from="1677133417918" duration="11000" />
       <workItem from="1677144345810" duration="11708000" />
-      <workItem from="1677158180061" duration="13130000" />
+      <workItem from="1677158180061" duration="21193000" />
     </task>
     <servers />
   </component>
@@ -423,7 +420,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php</url>
-          <line>103</line>
+          <line>99</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>

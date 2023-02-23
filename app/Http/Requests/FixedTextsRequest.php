@@ -21,6 +21,34 @@ class FixedTextsRequest extends FormRequest
         $rules = [
             'project_details_ar' => 'required',
             'project_details_en' => 'required',
+            'about_association_title_ar' => 'required',
+            'about_association_title_en' => 'required',
+            'about_association_details_ar' => 'required',
+            'about_association_details_en' => 'required',
+            'about_association_founders_count' => 'required',
+            'about_association_beneficiaries_count' => 'required',
+            'founders_title_ar' => 'required',
+            'founders_title_en' => 'required',
+            'blog_title_ar' => 'required',
+            'blog_title_en' => 'required',
+            'testimonials_title_ar' => 'required',
+            'testimonials_title_en' => 'required',
+            'testimonials_details_ar' => 'required',
+            'testimonials_details_en' => 'required',
+//            'counter_icon_1' => 'required',
+            'counter_number_1' => 'required',
+            'counter_name_1' => 'required',
+//            'counter_icon_2' => 'required',
+            'counter_number_2' => 'required',
+            'counter_name_2' => 'required',
+//            'counter_icon_3' => 'required',
+            'counter_number_3' => 'required',
+            'counter_name_3' => 'required',
+//            'counter_icon_4' => 'required',
+            'counter_number_4' => 'required',
+            'counter_name_4' => 'required',
+
+
         ];
 
         return $rules;
