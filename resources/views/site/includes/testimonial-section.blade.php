@@ -19,8 +19,9 @@
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
                 <div class="inner-box">
-                    <figure class="image-box"><img
-                            src="{!! asset('site/assets/images/resource/testimonial-1.jpg') !!}" alt="">
+                    <figure class="image-box">
+                        <img src="{!! asset('site/assets/images/resource/testimonial-1.jpg') !!}"
+                             alt="{!! __('index.testimonials') !!}">
                     </figure>
                     <div class="testimonial-inner">
                         <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
@@ -44,7 +45,6 @@
                             @empty
 
                             @endforelse
-
 
                         </div>
                     </div>

@@ -62,10 +62,9 @@
         @include('site.includes.testimonial-section')
         <!-- testimonial-section -->
 
-        <!-- funfact-section -->
-        @include('site.includes.funfact-section')
-        <!-- funfact-section end -->
-
+        <!-- counters-section -->
+        @include('site.includes.counters-section')
+        <!-- counters-section end -->
 
         <!-- clients-section -->
         @include('site.includes.clients-section')

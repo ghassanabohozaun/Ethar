@@ -63,7 +63,7 @@
 
                                         <!--begin::row-->
                                         <div class="row justify-content-center">
-                                            <div class="col-xl-9">
+                                            <div class="col-xl-12">
                                                 <h2>{!! __('fixedTexts.projects') !!}</h2>
                                                 <div class="my-5">
                                                     <!--begin::Group-->
@@ -71,7 +71,7 @@
                                                         <label>
                                                             {{__('fixedTexts.project_details_ar')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="project_details_ar"
                                                                   id="project_details_ar"
@@ -87,7 +87,7 @@
                                                         <label>
                                                             {{__('fixedTexts.project_details_en')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="project_details_en"
                                                                   id="project_details_en"
@@ -105,7 +105,7 @@
 
                                         <!--begin::row-->
                                         <div class="row justify-content-center">
-                                            <div class="col-xl-9">
+                                            <div class="col-xl-12">
                                                 <h2>{!! __('fixedTexts.about_association') !!}</h2>
                                                 <div class="my-5">
                                                     <!--begin::Group-->
@@ -113,7 +113,7 @@
                                                         <label>
                                                             {{__('fixedTexts.about_association_title_ar')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="about_association_title_ar"
                                                                   id="about_association_title_ar"
@@ -129,7 +129,7 @@
                                                         <label>
                                                             {{__('fixedTexts.about_association_title_en')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="about_association_title_en"
                                                                   id="about_association_title_en"
@@ -218,7 +218,7 @@
 
                                         <!--begin::row-->
                                         <div class="row justify-content-center">
-                                            <div class="col-xl-9">
+                                            <div class="col-xl-12">
                                                 <h2>{!! __('fixedTexts.founders') !!}</h2>
                                                 <div class="my-5">
                                                     <!--begin::Group-->
@@ -226,7 +226,7 @@
                                                         <label>
                                                             {{__('fixedTexts.founders_title_ar')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="founders_title_ar"
                                                                   id="founders_title_ar"
@@ -242,7 +242,7 @@
                                                         <label>
                                                             {{__('fixedTexts.founders_title_en')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="founders_title_en"
                                                                   id="founders_title_en"
@@ -260,7 +260,7 @@
 
                                         <!--begin::row-->
                                         <div class="row justify-content-center">
-                                            <div class="col-xl-9">
+                                            <div class="col-xl-12">
                                                 <h2>{!! __('fixedTexts.blog') !!}</h2>
                                                 <div class="my-5">
                                                     <!--begin::Group-->
@@ -268,7 +268,7 @@
                                                         <label>
                                                             {{__('fixedTexts.blog_title_ar')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="blog_title_ar"
                                                                   id="blog_title_ar"
@@ -284,7 +284,7 @@
                                                         <label>
                                                             {{__('fixedTexts.blog_title_en')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="blog_title_en"
                                                                   id="blog_title_en"
@@ -302,7 +302,7 @@
 
                                         <!--begin::row-->
                                         <div class="row justify-content-center">
-                                            <div class="col-xl-9">
+                                            <div class="col-xl-12">
                                                 <h2>{!! __('fixedTexts.testimonials') !!}</h2>
                                                 <div class="my-5">
                                                     <!--begin::Group-->
@@ -310,7 +310,7 @@
                                                         <label>
                                                             {{__('fixedTexts.testimonials_title_ar')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="testimonials_title_ar"
                                                                   id="testimonials_title_ar"
@@ -326,7 +326,7 @@
                                                         <label>
                                                             {{__('fixedTexts.testimonials_title_en')}}
                                                         </label>
-                                                        <textarea rows="4"
+                                                        <textarea rows="2"
                                                                   class="form-control  form-control-lg"
                                                                   name="testimonials_title_en"
                                                                   id="testimonials_title_en"
@@ -382,7 +382,7 @@
 
                                                 <div class="my-5">
                                                     <div class="row justify-content-center">
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -395,12 +395,24 @@
                                                                     <label class="custom-file-label" choose="" file="">
                                                                     </label>
                                                                 </div>
-                                                                <span class="form-text text-danger" id="counter_icon_1_error">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_icon_1_error">
                                                                 </span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-1">
+                                                            <div class="form-group">
+                                                                <div class="custom-file">
+                                                                    @if(!empty(fixedTexts()->counter_icon_1))
+                                                                        <img
+                                                                            src="{{asset('adminBoard/uploadedImages/counters/'.fixedTexts()->counter_icon_1)}}"
+                                                                            class="img-fluid img-thumbnail table-image "/>
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -418,21 +430,39 @@
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
-                                                                    {{__('fixedTexts.counter_name_1')}}
+                                                                    {{__('fixedTexts.counter_name_1_ar')}}
                                                                 </label>
                                                                 <input
                                                                     class="form-control  form-control-lg"
-                                                                    name="counter_name_1"
-                                                                    id="counter_name_1"
-                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_1')}}"
+                                                                    name="counter_name_1_ar"
+                                                                    id="counter_name_1_ar"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_1_ar')}}"
                                                                     autocomplete="off"
-                                                                    value="{!! fixedTexts()->counter_name_1 ?? '' !!}">
+                                                                    value="{!! fixedTexts()->counter_name_1_ar ?? '' !!}">
                                                                 <span class="form-text text-danger"
-                                                                      id="counter_name_1_error"></span>
+                                                                      id="counter_name_1_ar_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_1_en')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_1_en"
+                                                                    id="counter_name_1_en"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_1_en')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_1_en ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_1_en_error"></span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
@@ -440,7 +470,7 @@
 
 
                                                     <div class="row justify-content-center">
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -453,12 +483,24 @@
                                                                     <label class="custom-file-label" choose="" file="">
                                                                     </label>
                                                                 </div>
-                                                                <span class="form-text text-danger" id="counter_icon_2_error">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_icon_2_error">
                                                                 </span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-1">
+                                                            <div class="form-group">
+                                                                <div class="custom-file">
+                                                                    @if(!empty(fixedTexts()->counter_icon_2))
+                                                                        <img
+                                                                            src="{{asset('adminBoard/uploadedImages/counters/'.fixedTexts()->counter_icon_2)}}"
+                                                                            class="img-fluid img-thumbnail table-image "/>
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -476,30 +518,47 @@
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
-                                                                    {{__('fixedTexts.counter_name_2')}}
+                                                                    {{__('fixedTexts.counter_name_2_ar')}}
                                                                 </label>
                                                                 <input
                                                                     class="form-control  form-control-lg"
-                                                                    name="counter_name_2"
-                                                                    id="counter_name_2"
-                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_2')}}"
+                                                                    name="counter_name_2_ar"
+                                                                    id="counter_name_2_ar"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_2_ar')}}"
                                                                     autocomplete="off"
-                                                                    value="{!! fixedTexts()->counter_name_2 ?? '' !!}">
+                                                                    value="{!! fixedTexts()->counter_name_2_ar ?? '' !!}">
                                                                 <span class="form-text text-danger"
-                                                                      id="counter_name_2_error"></span>
+                                                                      id="counter_name_2_ar_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_2_en')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_2_en"
+                                                                    id="counter_name_2_en"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_2_en')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_2_en ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_2_en_error"></span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
                                                     </div>
 
 
-
                                                     <div class="row justify-content-center">
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -512,12 +571,24 @@
                                                                     <label class="custom-file-label" choose="" file="">
                                                                     </label>
                                                                 </div>
-                                                                <span class="form-text text-danger" id="counter_icon_3_error">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_icon_3_error">
                                                                 </span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-1">
+                                                            <div class="form-group">
+                                                                <div class="custom-file">
+                                                                    @if(!empty(fixedTexts()->counter_icon_3))
+                                                                        <img
+                                                                            src="{{asset('adminBoard/uploadedImages/counters/'.fixedTexts()->counter_icon_3)}}"
+                                                                            class="img-fluid img-thumbnail table-image "/>
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -535,21 +606,39 @@
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
-                                                                    {{__('fixedTexts.counter_name_3')}}
+                                                                    {{__('fixedTexts.counter_name_3_ar')}}
                                                                 </label>
                                                                 <input
                                                                     class="form-control  form-control-lg"
-                                                                    name="counter_name_3"
-                                                                    id="counter_name_3"
-                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_3')}}"
+                                                                    name="counter_name_3_ar"
+                                                                    id="counter_name_3_ar"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_3_ar')}}"
                                                                     autocomplete="off"
-                                                                    value="{!! fixedTexts()->counter_name_3 ?? '' !!}">
+                                                                    value="{!! fixedTexts()->counter_name_3_ar ?? '' !!}">
                                                                 <span class="form-text text-danger"
-                                                                      id="counter_name_3_error"></span>
+                                                                      id="counter_name_3_ar_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_3_en')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_3_en"
+                                                                    id="counter_name_3_en"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_3_en')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_3_en ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_3_en_error"></span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
@@ -557,7 +646,7 @@
 
 
                                                     <div class="row justify-content-center">
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -570,12 +659,24 @@
                                                                     <label class="custom-file-label" choose="" file="">
                                                                     </label>
                                                                 </div>
-                                                                <span class="form-text text-danger" id="counter_icon_4_error">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_icon_4_error">
                                                                 </span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-1">
+                                                            <div class="form-group">
+                                                                <div class="custom-file">
+                                                                    @if(!empty(fixedTexts()->counter_icon_4))
+                                                                        <img
+                                                                            src="{{asset('adminBoard/uploadedImages/counters/'.fixedTexts()->counter_icon_4)}}"
+                                                                            class="img-fluid img-thumbnail table-image "/>
+                                                                    @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-2">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
@@ -593,21 +694,39 @@
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-3">
                                                             <!--begin::Group-->
                                                             <div class="form-group">
                                                                 <label>
-                                                                    {{__('fixedTexts.counter_name_4')}}
+                                                                    {{__('fixedTexts.counter_name_4_ar')}}
                                                                 </label>
                                                                 <input
                                                                     class="form-control  form-control-lg"
-                                                                    name="counter_name_4"
+                                                                    name="counter_name_4_ar"
                                                                     id="counter_name_4"
-                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_4')}}"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_4_ar')}}"
                                                                     autocomplete="off"
-                                                                    value="{!! fixedTexts()->counter_name_4 ?? '' !!}">
+                                                                    value="{!! fixedTexts()->counter_name_4_ar ?? '' !!}">
                                                                 <span class="form-text text-danger"
-                                                                      id="counter_name_4_error"></span>
+                                                                      id="counter_name_4_ar_error"></span>
+                                                            </div>
+                                                            <!--end::Group-->
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <!--begin::Group-->
+                                                            <div class="form-group">
+                                                                <label>
+                                                                    {{__('fixedTexts.counter_name_4_en')}}
+                                                                </label>
+                                                                <input
+                                                                    class="form-control  form-control-lg"
+                                                                    name="counter_name_4_en"
+                                                                    id="counter_name_4_en"
+                                                                    placeholder=" {{__('fixedTexts.enter_counter_name_4_en')}}"
+                                                                    autocomplete="off"
+                                                                    value="{!! fixedTexts()->counter_name_4_en ?? '' !!}">
+                                                                <span class="form-text text-danger"
+                                                                      id="counter_name_4_en_error"></span>
                                                             </div>
                                                             <!--end::Group-->
                                                         </div>
@@ -662,17 +781,20 @@
             $('#testimonials_details_en').css('border-color', '');
             $('#counter_icon_1').css('border-color', '');
             $('#counter_number_1').css('border-color', '');
-            $('#counter_name_1').css('border-color', '');
+            $('#counter_name_1_ar').css('border-color', '');
+            $('#counter_name_1_en').css('border-color', '');
             $('#counter_icon_2').css('border-color', '');
             $('#counter_number_2').css('border-color', '');
-            $('#counter_name_2').css('border-color', '');
+            $('#counter_name_2_ar').css('border-color', '');
+            $('#counter_name_2_en').css('border-color', '');
             $('#counter_icon_3').css('border-color', '');
             $('#counter_number_3').css('border-color', '');
-            $('#counter_name_3').css('border-color', '');
+            $('#counter_name_3_ar').css('border-color', '');
+            $('#counter_name_3_en').css('border-color', '');
             $('#counter_icon_4').css('border-color', '');
             $('#counter_number_4').css('border-color', '');
-            $('#counter_name_4').css('border-color', '');
-
+            $('#counter_name_4_ar').css('border-color', '');
+            $('#counter_name_4_en').css('border-color', '');
 
             $('#project_details_ar_error').text('');
             $('#project_details_en_error').text('');
@@ -692,17 +814,20 @@
             $('#testimonials_details_en_error').text('');
             $('#counter_icon_1_error').text('');
             $('#counter_number_1_error').text('');
-            $('#counter_name_1_error').text('');
+            $('#counter_name_1_ar_error').text('');
+            $('#counter_name_1_en_error').text('');
             $('#counter_icon_2_error').text('');
             $('#counter_number_2_error').text('');
-            $('#counter_name_2_error').text('');
+            $('#counter_name_2_ar_error').text('');
+            $('#counter_name_2_en_error').text('');
             $('#counter_icon_3_error').text('');
             $('#counter_number_3_error').text('');
-            $('#counter_name_3_error').text('');
+            $('#counter_name_3_ar_error').text('');
+            $('#counter_name_3_en_error').text('');
             $('#counter_icon_4_error').text('');
             $('#counter_number_4_error').text('');
-            $('#counter_name_4_error').text('');
-
+            $('#counter_name_4_ar_error').text('');
+            $('#counter_name_4_en_error').text('');
             /////////////////////////////////////////////////////////////
 
             var data = new FormData(this);

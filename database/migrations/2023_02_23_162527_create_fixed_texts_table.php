@@ -37,19 +37,23 @@ class CreateFixedTextsTable extends Migration
 
             $table->string('counter_icon_1')->nullable();
             $table->string('counter_number_1')->nullable();
-            $table->string('counter_name_1')->nullable();
+            $table->string('counter_name_1_ar')->nullable();
+            $table->string('counter_name_1_en')->nullable();
 
             $table->string('counter_icon_2')->nullable();
             $table->string('counter_number_2')->nullable();
-            $table->string('counter_name_2')->nullable();
+            $table->string('counter_name_2_ar')->nullable();
+            $table->string('counter_name_2_en')->nullable();
 
             $table->string('counter_icon_3')->nullable();
             $table->string('counter_number_3')->nullable();
-            $table->string('counter_name_3')->nullable();
+            $table->string('counter_name_3_ar')->nullable();
+            $table->string('counter_name_3_en')->nullable();
 
             $table->string('counter_icon_4')->nullable();
             $table->string('counter_number_4')->nullable();
-            $table->string('counter_name_4')->nullable();
+            $table->string('counter_name_4_ar')->nullable();
+            $table->string('counter_name_4_en')->nullable();
 
             $table->timestamps();
         });

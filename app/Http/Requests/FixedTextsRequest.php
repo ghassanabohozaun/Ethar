@@ -37,17 +37,20 @@ class FixedTextsRequest extends FormRequest
             'testimonials_details_en' => 'required',
 //            'counter_icon_1' => 'required',
             'counter_number_1' => 'required',
-            'counter_name_1' => 'required',
+            'counter_name_1_ar' => 'required',
+            'counter_name_1_en' => 'required',
 //            'counter_icon_2' => 'required',
             'counter_number_2' => 'required',
-            'counter_name_2' => 'required',
+            'counter_name_2_ar' => 'required',
+            'counter_name_2_en' => 'required',
 //            'counter_icon_3' => 'required',
             'counter_number_3' => 'required',
-            'counter_name_3' => 'required',
+            'counter_name_3_ar' => 'required',
+            'counter_name_3_en' => 'required',
 //            'counter_icon_4' => 'required',
             'counter_number_4' => 'required',
-            'counter_name_4' => 'required',
-
+            'counter_name_4_ar' => 'required',
+            'counter_name_4_en' => 'required',
 
         ];
 
