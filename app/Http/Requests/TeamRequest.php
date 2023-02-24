@@ -29,6 +29,8 @@ class TeamRequest extends FormRequest
             'name_en' => 'required',
             'position_ar' => 'required',
             'position_en' => 'required',
+            'description_ar' => 'required',
+            'description_en' => 'required',
             'type' => 'required',
         ];
     }

@@ -21,13 +21,10 @@ class testimonial extends Model
     {
         if ($value == 'ar') {
             return __('general.ar');
-
         } elseif ($value == 'en') {
             return __('general.en');
-
         } elseif ($value == 'ar_en') {
             return __('general.ar_en');
-
         }
     }
 
@@ -38,9 +35,6 @@ class testimonial extends Model
             return __('general.male');
         } elseif ($value == 'female') {
             return __('general.female');
-        } elseif ($value == 'others') {
-            return __('general.others');
         }
-
     }
 }

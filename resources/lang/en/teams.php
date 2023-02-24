@@ -10,14 +10,25 @@ return [
     'name_en' => 'Name | English',
     'position_ar' => 'Position | Arabic',
     'position_en' => 'Position | English',
-    'type'=>'Type',
+    'description_ar' => 'Description | Arabic',
+    'description_en' => 'Description | English',
+    'facebook' => 'Facebook',
+    'twitter' => 'Twitter',
+    'linkedIn' => 'LinkedIn',
+    'type' => 'Type',
+
     'enter_team_image' => 'Enter Image',
     'enter_name_ar' => 'Enter Arabic Name',
     'enter_name_en' => 'Enter English Name',
     'enter_position_ar' => 'Enter Arabic Position',
-    'enter_position_en' => 'Enter English  Position',
+    'enter_position_en' => 'Enter English Position',
+    'enter_description_ar' => 'Enter Arabic Description ',
+    'enter_description_en' => 'Enter English Description ',
+    'enter_facebook' => 'Enter Facebook',
+    'enter_twitter' => 'Enter Twitter',
+    'enter_linkedIn' => 'Enter LinkedIn',
 
-    'founder'=>'Founder',
+    'founder' => 'Founder',
     'director' => 'Director',
     'member' => 'Member',
 
@@ -29,6 +40,7 @@ return [
     'mimes' => 'image with png format only',
     'photo_required' => 'Photo Required',
 
-    'no_team_members_found'=>'No Team Members Found',
+
+    'no_team_members_found' => 'No Team Members Found',
 
 ];

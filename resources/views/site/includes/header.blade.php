@@ -1,5 +1,5 @@
 <!-- main header -->
-<header class="main-header header-style-one">
+<header class="main-header header-style-one" >
     <!-- logo-box -->
     <div class="logo-box">
         <figure class="logo"><a href="{!! route('index') !!}"><img src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt=""></a></figure>

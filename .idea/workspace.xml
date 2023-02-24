@@ -5,25 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/database/seeds/FixedTextsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/adminBoard/uploadedImages/counters/charity-icon.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FixedTextsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FixedTextsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/FixedTextsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/FixedTextsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/FixedText.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/FixedText.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_02_23_162527_create_fixed_texts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_02_23_162527_create_fixed_texts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TeamRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TeamRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TestimonialRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TestimonialRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/testimonial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_27_090854_create_teams_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_08_27_090854_create_teams_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/fixedTexts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/fixedTexts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/fixedTexts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/fixedTexts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/constitution.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/funfact-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/counters-section.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/teams/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/teams/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/teams/parts/photo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/teams/parts/photo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/teams/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/teams/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/parts/photo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/parts/photo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/includes/testimonial-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/testimonial-section.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/rationale.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/who-we-are.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/work-ethics.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +230,11 @@
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="{!! $testimonial-&gt;rating !!} {!! __('index.stars') !!}" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -304,7 +317,7 @@
       <workItem from="1677133417918" duration="11000" />
       <workItem from="1677144345810" duration="11708000" />
       <workItem from="1677158180061" duration="22052000" />
-      <workItem from="1677242806948" duration="7293000" />
+      <workItem from="1677242806948" duration="14122000" />
     </task>
     <servers />
   </component>
@@ -375,7 +388,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/site.blade.php</url>
-          <line>59</line>
+          <line>62</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -400,7 +413,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php</url>
-          <line>231</line>
+          <line>326</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -432,6 +445,11 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php</url>
           <line>678</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/teams/create.blade.php</url>
+          <line>221</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

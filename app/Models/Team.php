@@ -10,7 +10,9 @@ class Team extends Model
     use SoftDeletes;
 
     protected $table = 'teams';
-    protected $fillable = ['photo', 'status', 'name_ar', 'name_en', 'position_ar', 'position_en', 'type',];
+    protected $fillable = ['photo', 'status', 'name_ar', 'name_en',
+        'position_ar', 'position_en', 'description_ar',
+        'description_en', 'facebook', 'twitter', 'linkedIn', 'type',];
 
     protected $hidden = ['updated_at'];
 

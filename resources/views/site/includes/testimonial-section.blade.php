@@ -3,6 +3,7 @@
          style="background-image: url({{asset('site/assets/images/shape/shape-24.png')}});"></div>
     <div class="auto-container">
         <div class="row clearfix">
+
             <div class="col-lg-4 col-md-12 col-sm-12 content-column">
                 <div class="content_block_3">
                     <div class="content-box">
@@ -17,7 +18,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
+
+
                 <div class="inner-box">
                     <figure class="image-box">
                         <img src="{!! asset('site/assets/images/resource/testimonial-1.jpg') !!}"
@@ -26,30 +30,57 @@
                     <div class="testimonial-inner">
                         <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
 
-                            @forelse($testimonials as $testimonial)
+                            @foreach($testimonials as $testimonial)
                                 <div class="testimonial-block-one">
                                     <div class="text">
                                         <div class="icon-box">
                                             <i class="fas fa-quote-left"></i>
                                         </div>
                                         <p>{!! $testimonial->{'opinion_'.Lang()} !!}</p>
-                                        <h4>{!! $testimonial->{'name_'.Lang()} !!}</h4>
-                                        <span class="designation">{!! $testimonial->country !!}</span>
+
+                                        <h4>
+                                            {!! $testimonial->{'name_'.Lang()} !!}
+                                            , {!! $testimonial->age !!}
+                                            , {!! $testimonial->gender !!}
+                                        </h4>
+
+                                        <span class="designation">{!! $testimonial->country !!} </span>
+                                        <p>
+                                            @if($testimonial->rating != null)
+                                                <span>
+                                                     @for ($i = 1; $i <= $testimonial->rating; $i++)
+                                                        <i class="fa fa-star" style="color:#FFA400"></i>
+                                                    @endfor
+                                                 </span>
+                                            @endif
+                                        </p>
                                     </div>
                                     <figure class="testimonial-thumb">
-                                        <img
-                                            src="{{asset('adminBoard/uploadedImages/testimonials/'.$testimonial->photo)}}"
-                                            alt="{!! $testimonial->{'opinion_'.Lang()} !!}">
+
+                                        @if($testimonial->photo == null)
+                                            @if($testimonial->gender == __('general.male'))
+                                                <img src="{{asset('adminBoard/images/male.jpeg')}}"
+                                                     alt="{!! $testimonial->{'opinion_'.Lang()} !!}">
+                                            @elseif($testimonial->gender == __('general.female'))
+                                                <img src="{{asset('adminBoard/images/female.jpeg')}}"
+                                                     alt="{!! $testimonial->{'opinion_'.Lang()} !!}">
+                                            @endif
+                                        @else
+                                            <img
+                                                src="{{asset('adminBoard/uploadedImages/testimonials/'.$testimonial->photo)}}"
+                                                alt="{!! $testimonial->{'opinion_'.Lang()} !!}">
+                                        @endif
+
                                     </figure>
                                 </div>
-                            @empty
-
-                            @endforelse
+                            @endforeach
 
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 </section>

@@ -15,6 +15,7 @@ return [
     'testimonials' => 'Testimonials',
     'all_reviews'=>'All Reviews',
 
+    'stars'=>'Stars',
     'beneficiaries' => 'Beneficiaries',
     'founder'=>'Founder',
     'articles'=>'Articles',

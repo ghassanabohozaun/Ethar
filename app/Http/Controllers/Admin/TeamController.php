@@ -51,6 +51,11 @@ class TeamController extends Controller
             'name_en' => $request->name_en,
             'position_ar' => $request->position_ar,
             'position_en' => $request->position_en,
+            'description_ar' => $request->description_ar,
+            'description_en' => $request->description_en,
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'linkedIn' => $request->linkedIn,
             'type' => $request->type,
         ]);
 
@@ -117,6 +122,11 @@ class TeamController extends Controller
             'name_en' => $request->name_en,
             'position_ar' => $request->position_ar,
             'position_en' => $request->position_en,
+            'description_ar' => $request->description_ar,
+            'description_en' => $request->description_en,
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'linkedIn' => $request->linkedIn,
             'type' => $request->type,
         ]);
 

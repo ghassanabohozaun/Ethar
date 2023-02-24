@@ -5116,15 +5116,15 @@ div#mCSB_1_container {
     color: #ffffff;
 }
 
-.team-block-one .inner-box .social-links li:before {
-    position: absolute;
-    content: '';
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 1px;
-    height: 16px;
-    top: 5px;
-    right: -13px;
-}
+/*.team-block-one .inner-box .social-links li:before {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    background-color: rgba(0, 0, 0, 0.2);*/
+/*    width: 1px;*/
+/*    height: 16px;*/
+/*    top: 5px;*/
+/*    right:  13px;*/
+/*}*/
 
 .team-block-one .inner-box .social-links li:last-child:before {
     display: none;

@@ -10,13 +10,13 @@ return [
     'read_more' => 'قراة المزيد',
     'funders' => 'الممولين',
     'beneficiaries' => 'الممولين',
-    'meet_our_founders'=>'مؤسسي الجمعية',
-    'blog_and_article'=>'المدونة والمقالات',
+    'meet_our_founders' => 'مؤسسي الجمعية',
+    'blog_and_article' => 'المدونة والمقالات',
     'more_details' => 'مزيد من التفاصيل',
     'comments' => 'تعليق',
     'testimonials' => 'التوصيات والشهادات',
-    'all_reviews'=>'كل المراجعات',
-
+    'all_reviews' => 'كل المراجعات',
+    'stars' => 'نجوم',
     'founder' => 'مؤسس',
     'articles' => 'المقالات',
 

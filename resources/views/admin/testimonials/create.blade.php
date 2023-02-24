@@ -957,23 +957,15 @@
                                                             <select
                                                                 class="form-control form-control-solid form-control-lg"
                                                                 name="gender" id="gender" type="text">
-
                                                                 <option value="">
                                                                     {{__('general.select_from_list')}}
                                                                 </option>
-
                                                                 <option value="male">
                                                                     {{__('testimonials.male')}}
                                                                 </option>
-
                                                                 <option value="female">
                                                                     {{__('testimonials.female')}}
                                                                 </option>
-
-                                                                <option value="others">
-                                                                    {{__('testimonials.others')}}
-                                                                </option>
-
                                                             </select>
                                                             <span class="form-text text-danger"
                                                                   id="gender_error"></span>
@@ -1051,7 +1043,6 @@
                                                                     {{__('testimonials.five_star')}}
                                                                 </option>
 
-
                                                             </select>
                                                             <span class="form-text text-danger"
                                                                   id="rating_error"></span>
@@ -1066,7 +1057,7 @@
                                                             {{__('testimonials.opinion_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <textarea rows="6" dir="rtl"
+                                                            <textarea rows="10"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="opinion_ar" id="opinion_ar" type="text"
                                                                       placeholder=" {{__('testimonials.enter_opinion_ar')}}"
@@ -1084,7 +1075,7 @@
                                                             {{__('testimonials.opinion_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <textarea rows="6" dir="ltr"
+                                                            <textarea rows="10"
                                                                       class="form-control form-control-solid form-control-lg"
                                                                       name="opinion_en" id="opinion_en" type="text"
                                                                       placeholder=" {{__('testimonials.enter_opinion_en')}}"

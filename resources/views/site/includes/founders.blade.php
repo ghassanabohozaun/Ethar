@@ -22,16 +22,28 @@
                                 <h3>{!! $founder->{'name_'.Lang()} !!}</h3>
                             </div>
                             <figure class="thumb-box">
-                                <img src="{!! asset('site/assets/images/team/team-1.png') !!}" alt="">
+                                <img src="{{asset('adminBoard/uploadedImages/teams/'.$founder->photo)}}"
+                                     alt="{!! $founder->{'name_'.Lang()} !!}">
                             </figure>
                             <div class="text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                <p>{!! $founder->{'description_'.Lang()} !!}</p>
                             </div>
                         </div>
                         <ul class="social-links clearfix">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li>
+                                <a href="{!! $founder->facebook  ??  'javascript:void(0)' !!}">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li><a href="{!! $founder->twitter  ??  'javascript:void(0)' !!}">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{!! $founder->linkedIn  ??  'javascript:void(0)' !!}">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
