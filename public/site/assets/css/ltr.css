@@ -1,3 +1,9 @@
 .header-style-one .logo-box .logo img {
     border-bottom-right-radius: 20px;
 }
+.my-social-style-one li {
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}

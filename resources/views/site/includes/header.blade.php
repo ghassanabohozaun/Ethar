@@ -1,8 +1,9 @@
 <!-- main header -->
-<header class="main-header header-style-one" >
+<header class="main-header header-style-one">
     <!-- logo-box -->
     <div class="logo-box">
-        <figure class="logo"><a href="{!! route('index') !!}"><img src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt=""></a></figure>
+        <figure class="logo"><a href="{!! route('index') !!}"><img
+                    src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt=""></a></figure>
     </div>
     <!-- header-top -->
     <div class="header-top">
@@ -34,9 +35,9 @@
                                     <ul>
                                         @foreach (abouts_type() as $type )
 
-                                        <li>
-                                            <a href="{!! route('about',$type->id) !!}">{{ $type->{'name_'.Lang()} }}</a>
-                                        </li>
+                                            <li>
+                                                <a href="{!! route('about',$type->id) !!}">{{ $type->{'name_'.Lang()} }}</a>
+                                            </li>
                                         @endforeach
 
                                         <li>
@@ -111,23 +112,16 @@
                         <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
                         <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+
+                        @if(Lang()=='ar')
+                            <li><a href="/en">EN</a></li>
+                        @else
+                            <li><a href="/ar"> ع</a></li>
+                        @endif
+
                     </ul>
 
-                    <div class="search-box-outer">
-                        <div class="dropdown">
-                            <button class="search-box-btn" type="button">
-                                @if(Lang()=='ar')
-                                    <a href="/en">
-                                        EN
-                                    </a>
-                                @else
-                                    <a href="/ar">
-                                        ع
-                                    </a>
-                                @endif
-                            </button>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -165,9 +159,9 @@
                         </div>
                     </div>
 
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- Mobile Menu  -->
@@ -176,8 +170,10 @@
         <div class="close-btn"><i class="fas fa-times"></i></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{!! route('index') !!}"><img src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt="" title=""></a></div>
-            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            <div class="nav-logo"><a href="{!! route('index') !!}"><img
+                        src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt="" title=""></a></div>
+            <div class="menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 
             <div class="social-links">
                 <ul class="clearfix">
@@ -185,7 +181,8 @@
                     <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                </ul>#
+                </ul>
+                #
             </div>
         </nav>
     </div><!-- End Mobile Menu -->

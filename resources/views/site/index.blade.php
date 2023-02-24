@@ -22,10 +22,6 @@
         @include('site.includes.header')
         <!-- main-header end -->
 
-        <!-- mobile-menu -->
-        @include('site.includes.mobile-menu')
-        <!-- mobile-menu end-->
-
         <!-- sliders -->
         @include('site.includes.sliders')
         <!-- sliders end -->

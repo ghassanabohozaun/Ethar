@@ -449,3 +449,10 @@
 }
 
 
+.my-social-style-one li {
+    position: relative;
+    display: inline-block;
+    float: none;
+    margin-left: 5px;
+}
+
