@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\FixedTextsRequest;
 use App\Models\fixedText;
 use App\Traits\GeneralTrait;
-
+use File;
 class FixedTextsController extends Controller
 {
 
@@ -78,6 +78,49 @@ class FixedTextsController extends Controller
             }
 
 
+            // save image
+            if ($request->hasFile('counter_icon_2')) {
+                $image = $request->file('counter_icon_2');
+                $destinationPath = public_path('adminBoard/uploadedImages/counters//');
+                $counter_icon_2_path = $this->saveResizeImage($image, $destinationPath, 100, 100);
+                $counter_icon_2_image_path = public_path("/adminBoard/uploadedImages/counters//") . $fixedTextUpdate->counter_icon_2;
+                if (File::exists($counter_icon_2_image_path))
+                {
+                    File::delete($counter_icon_2_image_path);
+                }
+            } else {
+                $counter_icon_2_path = $fixedTextUpdate->counter_icon_2;
+            }
+
+            // save image
+            if ($request->hasFile('counter_icon_3')) {
+                $image = $request->file('counter_icon_3');
+                $destinationPath = public_path('adminBoard/uploadedImages/counters//');
+                $counter_icon_3_path = $this->saveResizeImage($image, $destinationPath, 100, 100);
+                $counter_icon_3_image_path = public_path("/adminBoard/uploadedImages/counters//") . $fixedTextUpdate->counter_icon_3;
+                if (File::exists($counter_icon_3_image_path))
+                {
+                    File::delete($counter_icon_3_image_path);
+                }
+            } else {
+                $counter_icon_3_path = $fixedTextUpdate->counter_icon_3;
+            }
+
+            // save image
+            if ($request->hasFile('counter_icon_4')) {
+                $image = $request->file('counter_icon_4');
+                $destinationPath = public_path('adminBoard/uploadedImages/counters//');
+                $counter_icon_4_path = $this->saveResizeImage($image, $destinationPath, 100, 100);
+                $counter_icon_4_image_path = public_path("/adminBoard/uploadedImages/counters//") . $fixedTextUpdate->counter_icon_4;
+                if (File::exists($counter_icon_4_image_path))
+                {
+                    File::delete($counter_icon_4_image_path);
+                }
+            } else {
+                $counter_icon_4_path = $fixedTextUpdate->counter_icon_4;
+            }
+
+
             $fixedTextUpdate->update([
                 'project_details_ar' => $request->project_details_ar,
                 'project_details_en' => $request->project_details_en,
@@ -98,13 +141,13 @@ class FixedTextsController extends Controller
                 'counter_icon_1' => $counter_icon_1_path,
                 'counter_number_1' => $request->counter_number_1,
                 'counter_name_1' => $request->counter_name_1,
-                'counter_icon_2' => $request->counter_icon_2,
+                'counter_icon_2' => $counter_icon_2_path,
                 'counter_number_2' => $request->counter_number_2,
                 'counter_name_2' => $request->counter_name_2,
-                'counter_icon_3' => $request->counter_icon_3,
+                'counter_icon_3' => $counter_icon_3_path,
                 'counter_number_3' => $request->counter_number_3,
                 'counter_name_3' => $request->counter_name_3,
-                'counter_icon_4' => $request->counter_icon_4,
+                'counter_icon_4' => $counter_icon_4_path,
                 'counter_number_4' => $request->counter_number_4,
                 'counter_name_4' => $request->counter_name_4,
             ]);
