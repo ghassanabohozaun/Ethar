@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PartnersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/PartnersRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Partner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2023_02_24_090854_create_partners_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/ltr.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/ltr.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/site-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/site-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/QAController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/QAController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/global.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/QA/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/QA/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/QA/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/QA/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/QA/trashed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/QA/trashed.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +196,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/public/adminBoard/images",
+    "last_opened_file_path": "C:/laragon/www/etharps/database/migrations",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -195,8 +208,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\etharps\public\adminBoard\images" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
+      <recent name="C:\laragon\www\etharps\public\adminBoard\images" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
       <recent name="C:\laragon\www\etharps\resources\lang\ar" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page" />
@@ -296,7 +309,7 @@
       <workItem from="1677133417918" duration="11000" />
       <workItem from="1677144345810" duration="11708000" />
       <workItem from="1677158180061" duration="22052000" />
-      <workItem from="1677242806948" duration="14977000" />
+      <workItem from="1677242806948" duration="18011000" />
     </task>
     <servers />
   </component>
@@ -392,7 +405,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php</url>
-          <line>326</line>
+          <line>335</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

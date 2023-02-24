@@ -24,7 +24,7 @@
                         </li>
                         <li class="breadcrumb-item">
                             <a href="" class="text-muted">
-                                {{__('menu.add_new_qa')}}
+                                {{__('menu.add_new_faq')}}
                             </a>
                         </li>
                     </ul>

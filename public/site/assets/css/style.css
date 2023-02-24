@@ -1472,9 +1472,14 @@ img {
 
 .mobile-menu .nav-logo {
     position: relative;
-    padding: 50px 25px;
-    text-align: left;
+    padding: 20px 20px;
     padding-bottom: 100px;
+}
+
+
+.mobile-menu .nav-logo img{
+    margin-top:20px;
+    border-radius: 15px;
 }
 
 .mobile-menu-visible {

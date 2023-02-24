@@ -72,6 +72,21 @@ Route::group([
         Route::get('/', 'FixedTextsController@index')->name('admin.fixed.texts');
         Route::post('/update', 'FixedTextsController@update')->name('admin.fixed.texts.update');
 
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        /// Partners routes
+        Route::group(['prefix' => 'partners'], function () {
+            Route::get('/', 'PartnersController@index')->name('admin.partners');
+            Route::get('/create', 'PartnersController@create')->name('admin.partners.create');
+            Route::post('/store', 'PartnersController@store')->name('admin.partner.store');
+            Route::get('/trashed', 'PartnersController@trashed')->name('admin.partner.trashed');
+            Route::post('/destroy', 'PartnersController@destroy')->name('admin.partner.destroy');
+            Route::post('/force-delete', 'PartnersController@forceDelete')->name('admin.partner.force.delete');
+            Route::post('/restore', 'PartnersController@restore')->name('admin.partner.restore');
+            Route::get('/edit/{id?}', 'PartnersController@edit')->name('admin.partner.edit');
+            Route::post('/update', 'PartnersController@update')->name('admin.partner.update');
+            Route::post('/change-status', 'PartnersController@changeStatus')->name('admin.partner.change.status');
+        });
+
     });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
@@ -267,7 +282,7 @@ Route::group([
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// QA routes
-    Route::group(['prefix' => 'QA', 'middleware' => 'can:qas'], function () {
+    Route::group(['prefix' => 'QA', 'middleware' => 'can:faq'], function () {
         Route::get('/', [QAController::class, 'index'])->name('admin.QA.index');
         Route::get('/create', [QAController::class, 'create'])->name('admin.QA.create');
         Route::post('/store', [QAController::class, 'store'])->name('admin.QA.store');

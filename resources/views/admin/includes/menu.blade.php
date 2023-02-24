@@ -222,6 +222,15 @@
                                 </a>
                             </li>
 
+                            <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="{!! route('admin.partners') !!}" class="menu-link menu-toggle">
+                                    <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                                    <span class="menu-text">{{__('menu.partners')}}</span>
+                                    <span class="menu-label">
+                                    </span>
+                                </a>
+                            </li>
+
 
                         </ul>
                     </div>
@@ -260,8 +269,8 @@
                     </a>
                 </li>
             @endcan
-            <!------------------------------------ teams ---------------------------------------------------->
-            @can('qas')
+            <!------------------------------------ faq ---------------------------------------------------->
+            @can('faq')
                 <li class="menu-item  menu-item-submenu
                   @if(str_contains(url()->current(), '/QA')) menu-item-open @endif"
                     aria-haspopup="true" data-menu-toggle="hover">
@@ -282,7 +291,7 @@
                                     </svg><!--end::Svg Icon--></span>
                                 </span>
 
-                        <span class="menu-text">{{__('menu.qas')}}</span>
+                        <span class="menu-text">{{__('menu.faq')}}</span>
                         <span class="menu-label">
                         <span class="label label-rounded label-white">
                              {{\App\Models\QA::count()}}

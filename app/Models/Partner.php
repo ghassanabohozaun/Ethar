@@ -5,20 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Comment extends Model
+class Partner extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'partners';
+    protected $table = 'comments';
     protected $fillable = [
-        'person_ip',
-        'person_name',
-        'person_email',
-        'commentary',
-        'status',
-        'post_id',
         'photo',
-        'gender'
+        'name_ar',
+        'name_en',
     ];
     protected $hidden = ['updated_at'];
 

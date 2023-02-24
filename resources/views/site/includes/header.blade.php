@@ -107,21 +107,23 @@
                     </nav>
                 </div>
                 <div class="nav-right-content clearfix">
-                    <ul class="social-style-one clearfix social-facebook-icon">
-                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-
-                        @if(Lang()=='ar')
-                            <li><a href="/en">EN</a></li>
-                        @else
-                            <li><a href="/ar"> ع</a></li>
-                        @endif
-
-                    </ul>
-
-
+                    @if(Lang()=='ar')
+                        <ul class="social-style-one clearfix social-facebook-icon">
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/en">EN</a></li>
+                            <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                        </ul>
+                    @else
+                        <ul class="social-style-one clearfix social-facebook-icon">
+                            <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                            <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
+                        </ul>
+                    @endif
                 </div>
             </div>
         </div>
@@ -137,28 +139,23 @@
                     </nav>
                 </div>
                 <div class="nav-right-content clearfix">
-                    <ul class="social-style-one clearfix">
-                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                    <div class="search-box-outer">
-                        <div class="dropdown">
-                            <button class="search-box-btn" type="button">
-                                @if(Lang()=='ar')
-                                    <a href="/en">
-                                        EN
-                                    </a>
-                                @else
-                                    <a href="/ar">
-                                        ع
-                                    </a>
-                                @endif
-                            </button>
-                        </div>
-                    </div>
-
+                    @if(Lang()=='ar')
+                        <ul class="social-style-one clearfix social-facebook-icon">
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/en">EN</a></li>
+                            <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                        </ul>
+                    @else
+                        <ul class="social-style-one clearfix social-facebook-icon">
+                            <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                            <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
+                        </ul>
+                    @endif
                 </div>
             </div>
         </div>
@@ -170,19 +167,33 @@
         <div class="close-btn"><i class="fas fa-times"></i></div>
 
         <nav class="menu-box">
-            <div class="nav-logo"><a href="{!! route('index') !!}"><img
-                        src="{!! asset('site/assets/images/etharLogo.jpg') !!}" alt="" title=""></a></div>
+            <div class="nav-logo {!! Lang() == 'ar' ? 'rtl' : 'ltr' !!}">
+                <a href="{!! route('index') !!}">
+                    <img src="{!! asset('site/assets/images/etharLogo.jpg') !!}"  width="150" alt="" title="">
+                </a>
+            </div>
             <div class="menu-outer">
                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 
             <div class="social-links">
-                <ul class="clearfix">
-                    <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                    <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                </ul>
-                #
+                @if(Lang()=='ar')
+                    <ul class="clearfix">
+                        <li style="color: #0c0e1a ; font-weight: bolder"><a href="/en">EN</a></li>
+                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                    </ul>
+                @else
+                    <ul class="clearfix">
+                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                        <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
+                    </ul>
+                @endif
+
             </div>
         </nav>
     </div><!-- End Mobile Menu -->

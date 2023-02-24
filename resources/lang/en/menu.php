@@ -66,14 +66,17 @@ return [
     'trashed_teams' => 'Trashed Teams',
     'add_new_team_member' => 'Add New Team Member',
 
-
-    'qas' => 'QAS',
-    'trashed_qas' => 'Trashed FAQs',
-    'add_new_qa' => 'Add New FAQ',
+    'faq' => 'FAQ',
+    'trashed_faq' => 'Trashed FAQ',
+    'add_new_faq' => 'Add New FAQ',
 
     'comments' => 'Comments',
     'trashed_comments' => 'Trashed Comments',
     'add_new_comment' => 'Add New Comment',
+
+    'partners' => 'Partners',
+    'trashed_partners' => 'Trashed Partners',
+    'add_new_partner' => 'Add New Partner',
 
     'fixed_texts' => 'Fixed Texts',
 
