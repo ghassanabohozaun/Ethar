@@ -77,16 +77,16 @@
                                 <li class="dropdown"><a href="#">Publications</a>
                                     <ul>
                                         <li>
-                                            <a href="{!! route('advertisements') !!}">ِAdvertisements</a>
+                                            <a href="{!! route('advertisements','Advertisements') !!}">ِAdvertisements</a>
                                         </li>
                                         <li>
-                                            <a href="#">Brochures</a>
+                                            <a href="{!! route('advertisements','Brochures') !!}">Brochures</a>
                                         </li>
                                         <li>
-                                            <a href="#">Case Study</a>
+                                            <a href="{!! route('advertisements','CaseStudy') !!}">Case Study</a>
                                         </li>
                                         <li>
-                                            <a href="#">Scientific Articles</a>
+                                            <a href="{!! route('advertisements','ScientificArticles') !!}">Scientific Articles</a>
                                         </li>
 
                                     </ul>

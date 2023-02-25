@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Site\ProjectController;
+use App\Http\Controllers\Site\PublicationController;
 use App\Http\Controllers\Site\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,13 +56,8 @@ Route::group(
     })->name('new-details');
 
 
-    Route::get('/advertisements', function (){
-        return view('site.publications.advertisements');
-    })->name('advertisements');
-
-    Route::get('/advertisement-details', function (){
-        return view('site.publications.advertisements-details');
-    })->name('advertisement-details');
+    Route::get('/publications/{type}',[PublicationController::class , 'getPublications'])->name('advertisements');
+    Route::get('/publication-details/{title}', [PublicationController::class , 'detailPublication'])->name('advertisement-details');
 
 
     Route::get('/reports', function (){

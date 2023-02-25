@@ -52,7 +52,7 @@ class PublicationsController extends Controller
 
 
         $lang_en = setting()->site_lang_en;
-        Publications::create([
+            Publications::create([
             'photo' => $photo_path,
             'language' =>  $lang_en == 'on' ? 'ar_en' :'ar',
             'details_ar' => $request->details_ar,
@@ -63,7 +63,7 @@ class PublicationsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
-            'project_id' => $request->project_id,
+            'projects_id' => $request->project_id,
             'status' => 'on',
         ]);
 
