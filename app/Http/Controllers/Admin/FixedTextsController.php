@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FixedTextsRequest;
-use App\Models\fixedText;
+use App\Models\FixedText;
 use App\Traits\GeneralTrait;
 use File;
 

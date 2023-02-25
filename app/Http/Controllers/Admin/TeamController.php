@@ -38,7 +38,7 @@ class TeamController extends Controller
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
+            $destinationPath = public_path('/adminBoard/uploadedImages/teams//');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
         } else {
             $photo_path = '';
@@ -88,23 +88,23 @@ class TeamController extends Controller
         if ($request->hasFile('photo')) {
             if (!empty($team->photo)) {
 
-                $image_path = public_path('\adminBoard\uploadedImages\teams\\') . $team->photo;
+                $image_path = public_path('/adminBoard/uploadedImages/teams//') . $team->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/teams//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
 
             } else {
-                $image_path = public_path('\adminBoard\uploadedImages\teams\\') . $team->photo;
+                $image_path = public_path('/adminBoard/uploadedImages/teams//') . $team->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/teams//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
             }
         } else {
@@ -185,7 +185,7 @@ class TeamController extends Controller
                 }
 
                 if (!empty($team->photo)) {
-                    $image_path = public_path('\adminBoard\uploadedImages\teams\\') . $team->photo;
+                    $image_path = public_path('/adminBoard/uploadedImages/teams//') . $team->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }
