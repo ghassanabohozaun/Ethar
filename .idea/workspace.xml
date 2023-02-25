@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ReportsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/1673872907978144090.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/1673954682804090401.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/16739547291258455754.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/reports/1674034352541439443.JSON API response format.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/reports/report-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/reports/report-details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/reports/report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/reports/report.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +303,8 @@
       <workItem from="1677144345810" duration="11708000" />
       <workItem from="1677158180061" duration="22052000" />
       <workItem from="1677242806948" duration="21086000" />
-      <workItem from="1677310612687" duration="771000" />
+      <workItem from="1677310612687" duration="3244000" />
+      <workItem from="1677326706649" duration="3802000" />
     </task>
     <servers />
   </component>
@@ -364,18 +375,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/site.blade.php</url>
-          <line>62</line>
+          <line>60</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php</url>
           <line>70</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/site/reports/report-details.blade.php</url>
-          <line>51</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/lang/ar/videos.php</url>

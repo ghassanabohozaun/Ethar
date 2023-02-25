@@ -114,6 +114,7 @@ body {
     overflow: hidden !important;
     width: 100%;
     min-width: 300px;
+
 }
 
 .boxed_wrapper:before {

@@ -28,7 +28,6 @@
         rel="stylesheet">
 
 
-
     <!-- Stylesheets -->
     <link href="{!! asset('site/assets/css/font-awesome-all.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/flaticon.css') !!}" rel="stylesheet">
@@ -39,7 +38,6 @@
     <link href="{!! asset('site/assets/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/jquery.bootstrap-touchspin.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/color.css') !!}" rel="stylesheet">
-
 
 
     @if(Lang()=='ar')

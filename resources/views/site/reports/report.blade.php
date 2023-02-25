@@ -48,78 +48,18 @@
                 <div class="discription-inner">
                     <div class="row clearfix reports-section">
 
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                    <h3>2022</h3>
-                                </button>
-                            </a>
-                        </div>
+                        @foreach ($reports as $report)
 
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                    <h3>2021</h3>
-                                </button>
-                            </a>
-                        </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                                <a href="{!! route('report-details',$report->year) !!}">
+                                    <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                        <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="{!! $report->year !!}" width="100">
+                                        <h3>  {!! $report->year !!} </h3>
+                                    </button>
+                                </a>
+                            </div>
+                        @endforeach
 
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                    <h3>2020</h3>
-                                </button>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                    <h3>2019</h3>
-                                </button>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                            <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                <h3>2018</h3>
-                            </button>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                            <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                <h3>2017</h3>
-                            </button>
-                            </a>
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                    <h3>2016</h3>
-                                </button>
-                            </a>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                            <a href="{!! route('report-details') !!}">
-                                <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                    <h3>2015</h3>
-                                </button>
-                            </a>
-                        </div>
 
                     </div>
                 </div>

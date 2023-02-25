@@ -182,17 +182,17 @@
                 @if(Lang()=='ar')
                     <ul class="clearfix">
                         <li style="color: #0c0e1a ; font-weight: bolder"><a href="/en">EN</a></li>
-                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f "></i></a></li>
                     </ul>
                 @else
                     <ul class="clearfix">
-                        <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                        <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#" ><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#" ><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" ><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" ><i class="fab fa-youtube"></i></a></li>
                         <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
                     </ul>
                 @endif
