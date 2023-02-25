@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/trashed.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PartnersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PartnersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Partner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_02_24_090854_create_partners_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_02_24_090854_create_partners_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/partners.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/partners.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/partners.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/partners.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/clients-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/partners-section.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/FixedTextsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FixedTextsController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,23 +172,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/resources/views/admin/landing-page/partners",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/etharps/resources/views/admin/landing-page/partners&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page\partners" />
@@ -306,7 +292,8 @@
       <workItem from="1677133417918" duration="11000" />
       <workItem from="1677144345810" duration="11708000" />
       <workItem from="1677158180061" duration="22052000" />
-      <workItem from="1677242806948" duration="20984000" />
+      <workItem from="1677242806948" duration="21086000" />
+      <workItem from="1677310612687" duration="27000" />
     </task>
     <servers />
   </component>
