@@ -54,18 +54,10 @@ Route::group(
     })->name('new-details');
 
 
-<<<<<<< HEAD
+
     Route::get('/publications/{type}',[PublicationController::class , 'getPublications'])->name('advertisements');
     Route::get('/publication-details/{title}', [PublicationController::class , 'detailPublication'])->name('advertisement-details');
-=======
-    Route::get('/advertisements', function () {
-        return view('site.publications.advertisements');
-    })->name('advertisements');
 
-    Route::get('/advertisement-details', function () {
-        return view('site.publications.advertisements-details');
-    })->name('advertisement-details');
->>>>>>> 0f42064573e273c9ad39c0b0326304b1645b9665
 
 
     // reports
