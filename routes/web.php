@@ -20,7 +20,7 @@ Route::group(
 
     Route::get('/', 'SiteController@index')->name('index');
 
-    Route::get('About/{id}' , [SiteController::class , 'about'])->name('about') ;
+    Route::get('About/{name}' , [SiteController::class , 'about'])->name('about') ;
 
 
     Route::get('/rationale', function (){
@@ -31,9 +31,7 @@ Route::group(
         return view('site.who-we-are');
     })->name('who-we-are');
 
-    Route::get('/faq', function (){
-        return view('site.faq');
-    })->name('faq');
+    Route::get('/faq', [SiteController::class , 'qa'])->name('faq');
 
     Route::get('/work-ethics', function (){
         return view('site.work-ethics');

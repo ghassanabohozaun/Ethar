@@ -60,6 +60,21 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
                         <ul class="accordion-box">
+                        @foreach ($qas as $qa)
+                        <li class="accordion block active-block">
+                            <div class="acc-btn active">
+                                <div class="icon-outer"><i class="icon-right-arrow"></i></div>
+                                <h5><i class="icon-question"></i>{{ $qa->{'title_'.Lang()} }}</h5>
+                            </div>
+                            <div class="acc-content current">
+                                <div class="text">
+                                    <p>{!!$qa->{'details_'.Lang()} !!}</p>
+                                </div>
+                            </div>
+                        </li>
+                        @endforeach
+                            
+
                             <li class="accordion block active-block">
                                 <div class="acc-btn active">
                                     <div class="icon-outer"><i class="icon-right-arrow"></i></div>
@@ -71,6 +86,7 @@
                                     </div>
                                 </div>
                             </li>
+
                             <li class="accordion block">
                                 <div class="acc-btn">
                                     <div class="icon-outer"><i class="icon-right-arrow"></i></div>
