@@ -92,11 +92,14 @@ class SiteController extends Controller
         $name = returnSpaceBetweenString($name);
 
          $about_type = AboutType::where('name_'.Lang(),$name)->first();
-         $about = About::status()->where('about_type_id' , $about_type->id) ->first();
+         if(!$about_type){
+            return redirect(route('index'));
+         }
+          $about = About::status()->where('about_type_id' , $about_type->id) ->first();
         if($about){
             return view('site.about', compact('about'));
-        // }else{
-        //     return redirect()->back();
+        }else{
+            return view('site.about' , compact('about_type'));
         }
     }
 

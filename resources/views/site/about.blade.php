@@ -21,7 +21,9 @@
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
-
+        @if (isset($about))
+        
+      
 
         <!-- Page Title -->
         <section class="page-title"
@@ -66,6 +68,34 @@
             </div>
         </section>
         <!-- about-style-three end -->
+
+        @elseif (!isset($about))
+         <!-- Page Title -->
+         <section class="page-title"
+         style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="title">
+                        <h1>{{$about_type->{'name_'.Lang()} }}</h1>
+                    </div>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{!! route('index') !!}">Home</a></li>
+                        {{-- <li>Pages</li> --}}
+                        <li>{{$about_type->{'name_'.Lang()} }}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+<!-- End Page Title -->
+             <!-- Not Found  -->
+             <section class="about-style-three">
+                <div class="sec-title  text-center">
+                                     
+                    <h2>{{__('site.about_not_found')}}    </h2>
+                </div>
+            </section>
+            <!-- End  Not Foun -->
+        @endif
 
 
         <!-- main-footer -->
