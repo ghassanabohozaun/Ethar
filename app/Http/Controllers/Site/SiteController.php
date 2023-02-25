@@ -95,8 +95,8 @@ class SiteController extends Controller
          $about = About::status()->where('about_type_id' , $about_type->id) ->first();
         if($about){
             return view('site.about', compact('about'));
-        }else{
-            return redirect()->back();
+        // }else{
+        //     return redirect()->back();
         }
     }
 

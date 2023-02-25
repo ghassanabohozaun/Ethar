@@ -34,16 +34,10 @@
                                     <a href="#">About</a>
                                     <ul>
                                         @foreach (abouts_type() as $type )
-<<<<<<< HEAD
                                         <li>
                                             <a href="{!! route('about',slug($type->{'name_'.Lang()})) !!}">{{ $type->{'name_'.Lang()} }}</a>
                                         </li>
-=======
 
-                                            <li>
-                                                <a href="{!! route('about',$type->id) !!}">{{ $type->{'name_'.Lang()} }}</a>
-                                            </li>
->>>>>>> 03122a9a3ce89841800232efeb7eb637a436d913
                                         @endforeach
 
                                         <li>
