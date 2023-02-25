@@ -175,15 +175,11 @@ class TeamController extends Controller
     //  force delete
     public function forceDelete(Request $request)
     {
-
             if ($request->ajax()) {
-
                 $team = Team::onlyTrashed()->find($request->id);
-
                 if (!$team) {
                     return redirect()->route('admin.not.found');
                 }
-
                 if (!empty($team->photo)) {
                     $image_path = public_path('/adminBoard/uploadedImages/teams//') . $team->photo;
                     if (File::exists($image_path)) {
