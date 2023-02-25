@@ -451,12 +451,11 @@
     if ($('.clients-carousel').length) {
         $('.clients-carousel').owlCarousel({
             rtl: true,
-            loop: true,
+            loop: false,
             margin: 30,
             nav: true,
             smartSpeed: 500,
             autoplay: 1000,
-
             navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
         });
     }
