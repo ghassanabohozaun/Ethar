@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectsRequest;
 use App\Models\Projects;
-use App\Models\Slider;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -29,11 +28,10 @@ class ProjectsController extends Controller
 
     public function store(ProjectsRequest $request)
     {
-
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('adminBoard/uploadedImages/projects');
+            $destinationPath = public_path('adminBoard/uploadedImages/projects//');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 240);
         } else {
             $photo_path = '';
@@ -87,11 +85,9 @@ class ProjectsController extends Controller
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('adminBoard/uploadedImages/projects');
+            $destinationPath = public_path('adminBoard/uploadedImages/projects//');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 240);
-
-            $image_path = public_path("\adminBoard\uploadedImages\projects\\") . $project->photo;
-
+            $image_path = public_path("/adminBoard/uploadedImages/projects//") . $project->photo;
             if (File::exists($image_path))
             {
               File::delete($image_path);
@@ -106,7 +102,7 @@ class ProjectsController extends Controller
 
             $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/project');
 
-            $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->file;
+            $file_path = public_path("/adminBoard/uploadedFiles/project//") . $project->file;
 
             if (File::exists($file_path))
             {
@@ -118,11 +114,8 @@ class ProjectsController extends Controller
         }
 
         if ($request->hasFile('word')) {
-
             $word = $this->saveFile($request->file('word'), 'adminBoard/uploadedFiles/project');
-
-            $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->word;
-
+            $file_path = public_path("/adminBoard/uploadedFiles/project//") . $project->word;
             if (File::exists($file_path))
             {
               File::delete($file_path);
@@ -207,23 +200,22 @@ class ProjectsController extends Controller
                 }
 
                 if (!empty($project->photo)) {
-                    $image_path = public_path("\adminBoard\uploadedImages\projects\\") . $project->photo;
+                    $image_path = public_path("/adminBoard/uploadedImages/projects//") . $project->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }
                 }
+
                 if (!empty($project->file)) {
-                    $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->file;
+                    $file_path = public_path("/adminBoard/uploadedFiles/project//") . $project->file;
 
                     if (File::exists($file_path)) {
                         File::delete($file_path);
-
                     }
                 }
 
                 if (!empty($project->word)) {
-                    $file_path = public_path("\adminBoard\uploadedFiles\\project\\") . $project->word;
-
+                    $file_path = public_path("/adminBoard/uploadedFiles/project//") . $project->word;
                     if (File::exists($file_path)) {
                         File::delete($file_path);
                     }

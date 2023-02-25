@@ -50,9 +50,7 @@
                                         title="Cancel avatar"><i class="ki ki-bold-close icon-xs text-muted"></i>
                                      </span>
                                 </div>
-                                <span
-                                    class="form-text text-muted">{{__('general.image_format_allow')}}
-                                                            </span>
+                                <span class="form-text text-muted">{{__('general.image_format_allow')}}</span>
                                 <span class="form-text text-danger"
                                       id="photo_error"></span>
                             </div>
@@ -98,31 +96,27 @@
                         <!--end::Group-->
 
 
-
-
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{__('projects.date')}}
+                                {{__('projects.publish_date')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
                                            id="date" name="date"
-                                           readonly placeholder="{{__('articles.enter_publish_date')}}"/>
+                                           readonly placeholder="{{__('projects.enter_publish_date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
 								        <i class="la la-calendar-check-o"></i>
 							         </span>
                                     </div>
                                 </div>
-                                <span class="form-text text-danger"
-                                      id="date_error"></span>
+                                <span class="form-text text-danger" id="date_error"></span>
                             </div>
                             <!--end::Group-->
                         </div>
                         <!--end::Group-->
-
 
 
                         <!--begin::Group-->

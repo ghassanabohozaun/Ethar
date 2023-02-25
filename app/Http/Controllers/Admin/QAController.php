@@ -21,7 +21,7 @@ class QAController extends Controller
 
     public function create()
     {
-        $title = __('menu.add_new_qa');
+        $title = __('menu.add_new_faq');
         return view('admin.QA.create' , compact('title'));
     }
 

@@ -1,14 +1,6 @@
 @extends('layouts.site')
 @section('title')
-<<<<<<< HEAD
-{{--    {!! $title !!}--}}
-=======
     {!! Lang()=='ar' ? setting()->site_title_ar : setting()->site_title_en !!}
-<<<<<<< HEAD
-    {{ setting()->site_title_.Lang() }}
-=======
->>>>>>> ef546bf9b77b7623e05688a8162f001c3ab649e1
->>>>>>> 9e0b06751611274a77a2c542a14b649cea2bd487
 @endsection
 @section('metaTags')
     <meta name="description"
@@ -23,49 +15,44 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
-
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
         <!-- main header -->
         @include('site.includes.header')
         <!-- main-header end -->
 
-        <!-- mobile-menu -->
-        @include('site.includes.mobile-menu')
-        <!-- mobile-menu end-->
-
-        <!-- banner-section -->
+        <!-- sliders -->
         @include('site.includes.sliders')
-        <!-- banner-section end -->
+        <!-- sliders end -->
 
-        <!-- welcome-section -->
+        <!-- projects -->
         @include('site.includes.projects')
-        <!-- welcome-section end -->
+        <!-- projects end -->
 
         <!-- about-section -->
-        @include('site.includes.about-section')
+        @include('site.includes.about-association')
         <!-- about-section end -->
 
-        <!-- welcome-section -->
+        <!-- founders -->
         @include('site.includes.founders')
-        <!-- welcome-section end -->
+        <!-- founders end -->
 
-        <!-- news-section -->
-        @include('site.includes.news-section')
-        <!-- news-section end -->
+        <!-- last-articles -->
+        @include('site.includes.last-articles')
+        <!-- last-articles end -->
 
         <!-- testimonial-section -->
         @include('site.includes.testimonial-section')
         <!-- testimonial-section -->
 
-        <!-- funfact-section -->
-        @include('site.includes.funfact-section')
-        <!-- funfact-section end -->
+        <!-- counters-section -->
+        @include('site.includes.counters-section')
+        <!-- counters-section end -->
 
-
-        <!-- clients-section -->
-        @include('site.includes.clients-section')
-        <!-- clients-section end -->
+        <!-- partners-section -->
+        @include('site.includes.partners-section')
+        <!-- partners-section end -->
 
         <!-- footer -->
         @include('site.includes.footer')

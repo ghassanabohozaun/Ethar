@@ -204,7 +204,7 @@
     if ($('.banner-carousel').length) {
         var totalSlides = $(".swiper-container").length;
         var testimonialContent = new Swiper('.banner-content', {
-            preloadImages: false,
+            preloadImages: true,
             loop: true,
             speed: 2400,
             spaceBetween: 0,
@@ -375,12 +375,12 @@
     if ($('.five-item-carousel').length) {
         $('.five-item-carousel').owlCarousel({
             rtl: true,
-            loop: true,
+            loop: false,
             margin: 30,
             nav: true,
             smartSpeed: 500,
             autoplay: 1000,
-            items:4,
+            items:5,
             navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
 
         });
@@ -456,24 +456,8 @@
             nav: true,
             smartSpeed: 500,
             autoplay: 1000,
+            items:5,
             navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                800: {
-                    items: 3
-                },
-                1024: {
-                    items: 4
-                },
-                1200: {
-                    items: 6
-                }
-            }
         });
     }
 

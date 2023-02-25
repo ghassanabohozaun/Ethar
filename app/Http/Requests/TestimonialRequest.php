@@ -26,7 +26,7 @@ class TestimonialRequest extends FormRequest
 
         if (setting()->site_lang_en == 'on') {
             return [
-                'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                'photo' => 'sometimes|image|mimes:jpeg,jpg,png|max:1024',
                 'opinion_ar' => 'required',
                 'opinion_en' => 'required',
                 'name_ar' => 'required',
@@ -38,7 +38,7 @@ class TestimonialRequest extends FormRequest
             ];
         } else {
             return [
-                'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                'photo' => 'sometimes|image|mimes:jpeg,jpg,png|max:1024',
                 'opinion_ar' => 'required',
                 'name_ar' => 'required',
                 'age' => 'required',

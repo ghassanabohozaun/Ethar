@@ -119,7 +119,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="7" class="text-center">
+                                                            <td colspan="8" class="text-center">
                                                                 {{__('articles.no_comments_found')}}
                                                             </td>
                                                         </tr>
@@ -127,7 +127,7 @@
                                                     {{--                                                    </tbody>--}}
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="7">
+                                                        <td colspan="8">
                                                             <div class="float-right">
                                                                 {!! $comments->appends(request()->all())->links() !!}
                                                             </div>

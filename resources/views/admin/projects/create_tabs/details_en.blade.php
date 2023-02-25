@@ -16,7 +16,7 @@
 
                             <input type="text" class="form-control form-control-solid form-control-lg"
                                    name="title_en" id="title_en"
-                                   placeholder="{{__('projects.title_en')}}"
+                                   placeholder="{{__('projects.enter_title_en')}}"
                                    autocomplete="off">
                             <span class="form-text text-danger"
                                   id="title_en_error"></span>
@@ -27,9 +27,9 @@
 
                         <!--begin::Group-->
                         <div class="form-group">
-                            <label> {{__('projects.des_en')}}</label>
+                            <label> {{__('projects.details_en')}}</label>
                             <textarea class="form-control summernote"
-                                      placeholder="{{__('articles.enter_abstract_en')}}"
+                                      placeholder="{{__('articles.enter_details_en')}}"
                                       name="details_en"
                                       id="details_en"></textarea>
                             <span class="form-text text-danger"

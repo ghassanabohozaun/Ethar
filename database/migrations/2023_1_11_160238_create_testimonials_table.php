@@ -22,7 +22,7 @@ class CreateTestimonialsTable extends Migration
             $table->string('name_en')->nullable();
             $table->string('age')->nullable();
             $table->string('country')->nullable();
-            $table->enum('gender', ['male', 'female','others']);
+            $table->enum('gender', ['male', 'female']);
             $table->string('job_title_ar')->nullable();
             $table->string('job_title_en')->nullable();
             $table->integer('rating')->default('0');

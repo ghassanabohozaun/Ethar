@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html @if( Lang() =='ar') lang="ar" dir="rtl" @else lang="en" dir="ltr" @endif>
+{{--@if( Lang() =='ar') lang="ar" dir="rtl" @else lang="en" dir="ltr" @endif--}}
+<html>
 <head>
 
-    <title>{!!'Home'  !!}</title>
+    <title> Home </title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
@@ -38,11 +39,13 @@
     <link href="{!! asset('site/assets/css/animate.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/jquery.bootstrap-touchspin.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/color.css') !!}" rel="stylesheet">
+
+
+
     @if(Lang()=='ar')
         <link href="{!! asset('site/assets/css/rtl.css') !!}" rel="stylesheet">
     @else
         <link href="{!! asset('site/assets/css/ltr.css') !!}" rel="stylesheet">
-
     @endif
     <link href="{!! asset('site/assets/css/style.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/responsive.css') !!}" rel="stylesheet">

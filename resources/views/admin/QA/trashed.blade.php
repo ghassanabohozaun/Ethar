@@ -15,12 +15,12 @@
                 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                     <li class="breadcrumb-item">
                         <a href="{!! route('admin.QA.index') !!}" class="text-muted">
-                            {{__('menu.qas')}}
+                            {{__('menu.faq')}}
                         </a>
                     </li>
                     <li class="breadcrumb-item">
                         <a href="{!! route('admin.QA.trashed') !!}" class="text-muted">
-                            {{__('menu.trashed_qas')}}
+                            {{__('menu.trashed_faq')}}
                         </a>
                     </li>
 
@@ -40,7 +40,7 @@
                 <a href="{{route('admin.QA.create')}}"
                    class="btn btn-primary btn-sm font-weight-bold font-size-base  mr-1">
                     <i class="fa fa-plus-square"></i>
-                    {{__('menu.add_new_qa')}}
+                    {{__('menu.add_new_faq')}}
                 </a>
                 &nbsp;
             </div>

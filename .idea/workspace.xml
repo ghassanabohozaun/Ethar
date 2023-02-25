@@ -5,15 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/trashed.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/landing-page/partners/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PartnersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PartnersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/teams/1677151150.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/teams/1677152741.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Partner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_02_24_090854_create_partners_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_02_24_090854_create_partners_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/partners.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/partners.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/partners.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/partners.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/clients-section.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/partners-section.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +193,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/resources/lang/en",
+    "last_opened_file_path": "C:/laragon/www/etharps/resources/views/admin/landing-page/partners",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -198,19 +205,24 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page\partners" />
+      <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
-      <recent name="C:\laragon\www\etharps\app\Http\Controllers\Site" />
-      <recent name="C:\laragon\www\etharps\resources\views\admin\articles\comments" />
-      <recent name="C:\laragon\www\etharps\app\Models" />
-      <recent name="C:\laragon\www\etharps\public\site\assets\images" />
+      <recent name="C:\laragon\www\etharps\resources\lang\ar" />
+      <recent name="C:\laragon\www\etharps\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\public\adminBoard\uploadedImages\counters" />
+      <recent name="C:\laragon\www\etharps\database\seeds" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
       <recent name="C:\laragon\www\etharps\resources\views\admin" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
-      <recent name="C:\laragon\www\etharps\resources\lang\ar" />
-      <recent name="C:\laragon\www\etharps\app\Http\Requests" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="{!! $testimonial-&gt;rating !!} {!! __('index.stars') !!}" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -292,7 +304,9 @@
       <workItem from="1677069518463" duration="1082000" />
       <workItem from="1677073581625" duration="4987000" />
       <workItem from="1677133417918" duration="11000" />
-      <workItem from="1677144345810" duration="11079000" />
+      <workItem from="1677144345810" duration="11708000" />
+      <workItem from="1677158180061" duration="22052000" />
+      <workItem from="1677242806948" duration="20984000" />
     </task>
     <servers />
   </component>
@@ -363,7 +377,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/layouts/site.blade.php</url>
-          <line>57</line>
+          <line>62</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -388,7 +402,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/includes/menu.blade.php</url>
-          <line>276</line>
+          <line>335</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -398,7 +412,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/projects/create_tabs/settings.blade.php</url>
-          <line>103</line>
+          <line>99</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -410,6 +424,21 @@
           <url>file://$PROJECT_DIR$/resources/views/site/news/new.blade.php</url>
           <line>34</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php</url>
+          <line>99</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/landing-page/fixed-texts.blade.php</url>
+          <line>678</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/teams/create.blade.php</url>
+          <line>221</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

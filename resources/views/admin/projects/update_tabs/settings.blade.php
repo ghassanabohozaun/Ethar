@@ -115,13 +115,13 @@
                         <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
-                                {{__('projects.date')}}
+                                {{__('projects.publish_date')}}
                             </label>
                             <div class="col-lg-9 col-xl-9">
                                 <div class="input-group date">
                                     <input type="text" class="form-control"
                                            id="publish_date" name="date" value="{{$project->date}}"
-                                           readonly placeholder="{{__('projects.date')}}"/>
+                                           readonly placeholder="{{__('projects.enter_publish_date')}}"/>
                                     <div class="input-group-append">
 							         <span class="input-group-text">
 								        <i class="la la-calendar-check-o"></i>

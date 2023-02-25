@@ -4,62 +4,46 @@
     <div class="pattern-layer "></div>
     <div class="fluid-container">
         <div class="sec-title centred">
-            <span class="top-text">Meet Our Founders</span>
-            <h2>Most Passionate Team Founders</h2>
+            <span class="top-text">{!! __('index.meet_our_founders') !!}</span>
+            <h2>{!! fixedTexts()->{'founders_title_'.Lang()} !!}</h2>
         </div>
         <div class="five-item-carousel owl-carousel owl-theme owl-nav-none">
-
-            {{--            @forelse($founders as $founder)--}}
-            {{--                <div class="team-block-one">--}}
-            {{--                    <div class="inner-box">--}}
-            {{--                        <figure class="image-box"><img--}}
-            {{--                                src="{{asset('adminBoard/uploadedImages/teams/'.$founder->photo)}}" alt="">--}}
-            {{--                        </figure>--}}
-            {{--                        <div class="content-box">--}}
-            {{--                            <div class="info">--}}
-            {{--                                <span class="designation">Founder</span>--}}
-            {{--                                <h3>Founder Name</h3>--}}
-            {{--                            </div>--}}
-            {{--                            <figure class="thumb-box"><img--}}
-            {{--                                    src="{{asset('adminBoard/uploadedImages/teams/'.$founder->photo)}}" alt="">--}}
-            {{--                            </figure>--}}
-            {{--                            <div class="text">--}}
-            {{--                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>--}}
-            {{--                            </div>--}}
-            {{--                        </div>--}}
-            {{--                        <ul class="social-links clearfix">--}}
-            {{--                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>--}}
-            {{--                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>--}}
-            {{--                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>--}}
-            {{--                        </ul>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--            @empty--}}
-            {{--            @endforelse--}}
-
 
             @forelse($founders as $founder)
                 <div class="team-block-one">
                     <div class="inner-box">
                         <figure class="image-box">
-                            <img src="{{asset('adminBoard/uploadedImages/teams/'.$founder->photo)}}" alt="">
+                            <img src="{{asset('adminBoard/uploadedImages/teams/'.$founder->photo)}}"
+                                 alt="{!! $founder->{'name_'.Lang()} !!}">
                         </figure>
                         <div class="content-box">
                             <div class="info">
                                 <span class="designation">{!! __('index.founder') !!}</span>
-                                <h3>{!! Lang()=='ar'? $founder->name_ar:$founder->name_en !!}</h3>
+                                <h3>{!! $founder->{'name_'.Lang()} !!}</h3>
                             </div>
                             <figure class="thumb-box">
-                                <img src="{!! asset('site/assets/images/team/team-1.png') !!}" alt="">
+                                <img src="{{asset('adminBoard/uploadedImages/teams/'.$founder->photo)}}"
+                                     alt="{!! $founder->{'name_'.Lang()} !!}">
                             </figure>
                             <div class="text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                <p>{!! $founder->{'description_'.Lang()} !!}</p>
                             </div>
                         </div>
                         <ul class="social-links clearfix">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li>
+                                <a href="{!! $founder->facebook  ??  'javascript:void(0)' !!}">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li><a href="{!! $founder->twitter  ??  'javascript:void(0)' !!}">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{!! $founder->linkedIn  ??  'javascript:void(0)' !!}">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

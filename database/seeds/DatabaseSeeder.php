@@ -1,7 +1,7 @@
 <?php
 
-use App\Models\Role;
 use App\Models\AboutType;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -28,12 +28,13 @@ class DatabaseSeeder extends Seeder
         $this->call([
             SettingsSeeder::class,
             AdminSeeder::class,
+            FixedTextsSeeder::class,
         ]);
 
 
         // create about types
-        $abouts_en = ['Rationale', 'What We Do', 'Mission', 'Construction', 'Work Ethics', 'Constitution'];
-        $abouts_ar = ['عرض الاسباب', 'ماذا نفعل ', 'التعليمات', 'المهام', 'اخلاق العمل', 'دستور'];
+        $abouts_en = ['Rationale', 'Who We Are', 'Work Ethics', 'Constitution'];
+        $abouts_ar = ['المنطق', 'من نحن', 'اخلاقيات العمل', 'الدستور'];
 
         for ($i = 0; $i < count($abouts_en); $i++) {
             AboutType::create([

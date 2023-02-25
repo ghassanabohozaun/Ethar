@@ -23,29 +23,30 @@ class ProjectsRequest extends FormRequest
      */
     public function rules()
     {
-                return [
-                    'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
-                    'title_ar' =>  'required',
-                    'title_en' =>['required_if:english,on'],
-                    'details_ar' => 'required',
-                    'details_en' => ['required_if:english,on'],
-                    'date' => 'required',
-                    'file'   => ['mimes:pdf'],
-                    'word'   => ['mimes:doc,docx']
-                ];
+        return [
+            'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+            'title_ar' => 'required',
+            'title_en' => ['required_if:english,on'],
+            'details_ar' => 'required',
+            'details_en' => ['required_if:english,on'],
+            'date' => 'required',
+            'file' => ['mimes:pdf'],
+            'word' => ['mimes:doc,docx']
+        ];
     }
 
     public function messages()
     {
         return [
-            'photo.required_without' => __('projects.photo_required') ,
-            'title_ar.required' =>__('projects.title_ar_required'),
-            'title_en.required_if' =>__('projects.title_en_required'),
-            'details_ar.required' =>__('projects.details_ar_required'),
-            'details_en.required_if' =>__('projects.details_en_required'),
-            'date.required' =>__('projects.date_required'),
-            'writer.required' =>__('projects.writer_required'),
-            'file.mimes' =>__('projects.file_mimes'),
+            'photo.required_without' => __('projects.photo_required'),
+            'title_ar.required' => __('projects.title_ar_required'),
+            'title_en.required_if' => __('projects.title_en_required'),
+            'details_ar.required' => __('projects.details_ar_required'),
+            'details_en.required_if' => __('projects.details_en_required'),
+            'date.required' => __('projects.date_required'),
+            'writer.required' => __('projects.writer_required'),
+            'file.mimes' => __('projects.file_pdf'),
+            'word.mimes' => __('projects.file_word'),
         ];
     }
 }

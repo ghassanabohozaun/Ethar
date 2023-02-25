@@ -163,7 +163,6 @@
                                                                 placeholder=" {{__('teams.enter_name_en')}}"
                                                                 autocomplete="off"
                                                                 value="{{$team->name_en}}"/>
-
                                                             <span class="form-text text-danger"
                                                                   id="name_en_error"></span>
 
@@ -178,11 +177,12 @@
                                                             {{__('teams.position_ar')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <textarea rows="6"
-                                                                      class="form-control form-control-solid form-control-lg"
-                                                                      name="position_ar" id="position_ar" type="text"
-                                                                      placeholder=" {{__('teams.enter_position_ar')}}"
-                                                                      autocomplete="off">{{$team->position_ar}}</textarea>
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="position_ar" id="position_ar" type="text"
+                                                                placeholder=" {{__('teams.enter_position_ar')}}"
+                                                                autocomplete="off"
+                                                                value="{{$team->position_ar}}">
                                                             <span class="form-text text-danger"
                                                                   id="position_ar_error"></span>
                                                         </div>
@@ -196,13 +196,105 @@
                                                             {{__('teams.position_en')}}
                                                         </label>
                                                         <div class="col-lg-9 col-xl-9">
-                                                            <textarea rows="6"
-                                                                      class="form-control form-control-solid form-control-lg"
-                                                                      name="position_en" id="position_en" type="text"
-                                                                      placeholder=" {{__('teams.enter_position_en')}}"
-                                                                      autocomplete="off">{{$team->position_en}}</textarea>
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="position_en" id="position_en" type="text"
+                                                                placeholder=" {{__('teams.enter_position_en')}}"
+                                                                autocomplete="off"
+                                                                value="{{$team->position_en}}">
                                                             <span class="form-text text-danger"
                                                                   id="position_en_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('teams.description_ar')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="description_ar" id="description_ar" type="text"
+                                                                placeholder=" {{__('teams.enter_description_ar')}}"
+                                                                autocomplete="off"
+                                                                value="{{$team->description_ar}}">
+                                                            <span class="form-text text-danger"
+                                                                  id="description_ar_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('teams.description_en')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="description_en" id="description_en" type="text"
+                                                                placeholder=" {{__('teams.enter_description_en')}}"
+                                                                autocomplete="off"
+                                                                value="{{$team->description_en}}">
+                                                            <span class="form-text text-danger"
+                                                                  id="description_en_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('teams.facebook')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="facebook" id="facebook" type="text"
+                                                                placeholder=" {{__('teams.enter_facebook')}}"
+                                                                autocomplete="off"
+                                                                value="{{$team->facebook}}">
+                                                            <span class="form-text text-danger"
+                                                                  id="facebook_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('teams.twitter')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="twitter" id="twitter" type="text"
+                                                                placeholder=" {{__('teams.enter_twitter')}}"
+                                                                autocomplete="off"
+                                                                value="{{$team->twitter}}">
+                                                            <span class="form-text text-danger"
+                                                                  id="twitter_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('teams.linkedIn')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="linkedIn" id="linkedIn" type="text"
+                                                                placeholder=" {{__('teams.enter_linkedIn')}}"
+                                                                autocomplete="off"
+                                                                value="{{$team->linkedIn}}">
+                                                            <span class="form-text text-danger"
+                                                                  id="linkedIn_error"></span>
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
@@ -277,20 +369,30 @@
         $('#form_team_member_update').on('submit', function (e) {
             e.preventDefault();
             //////////////////////////////////////////////////////////////
+            $('#photo').css('border-color', '');
             $('#name_ar').css('border-color', '');
             $('#name_en').css('border-color', '');
             $('#position_ar').css('border-color', '');
             $('#position_en').css('border-color', '');
-            $('#photo').css('border-color', '');
+            $('#description_ar').css('border-color', '');
+            $('#description_en').css('border-color', '');
+            $('#facebook').css('border-color', '');
+            $('#twitter').css('border-color', '');
+            $('#linkedIn').css('border-color', '');
             $('#type').css('border-color', '');
 
+
+            $('#photo_error').text('');
             $('#name_ar_error').text('');
             $('#name_en_error').text('');
             $('#position_ar_error').text('');
             $('#position_en_error').text('');
-            $('#photo_error').text('');
-            $('type_error').text('');
-
+            $('#description_ar_error').text('');
+            $('#description_en_error').text('');
+            $('#facebook_error').text('');
+            $('#twitter_error').text('');
+            $('#linkedIn_error').text('');
+            $('#type_error').text('');
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);
             var type = $(this).attr('method');

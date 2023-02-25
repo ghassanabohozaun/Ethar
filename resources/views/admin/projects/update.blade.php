@@ -4,8 +4,8 @@
 
     <form class="form" action="{{route('admin.project.update')}}" method="POST" id="form_project_update"
           enctype="multipart/form-data">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -90,14 +90,14 @@
                                         </a>
                                     </li>
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="project_details_en_tab" data-toggle="tab"
-                                           href="#project_details_en"
-                                           aria-controls="profile">
-                                            <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
-                                            <span class="nav-text">{{__('projects.details_en_tab')}}</span>
-                                        </a>
-                                    </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="project_details_en_tab" data-toggle="tab"
+                                               href="#project_details_en"
+                                               aria-controls="profile">
+                                                <span class="nav-icon"><i class="flaticon2-layers-1"></i></span>
+                                                <span class="nav-text">{{__('projects.details_en_tab')}}</span>
+                                            </a>
+                                        </li>
                                     @endif
                                 </ul>
 
@@ -106,7 +106,7 @@
                                     @include('admin.projects.update_tabs.settings')
                                     @include('admin.projects.update_tabs.details_ar')
                                     @if($lang_en =setting()->site_lang_en == 'on')
-                                    @include('admin.projects.update_tabs.details_en')
+                                        @include('admin.projects.update_tabs.details_en')
                                     @endif
                                 </div>
 
@@ -148,6 +148,7 @@
             ////////////////////////////////////////////////////////////////////
             $('#photo_error').text('');
             $('#file_error').text('');
+            $('#word_error').text('');
             $('#date_error').text('');
             $('#writer_error').text('');
             $('#title_ar_error').text('');
@@ -156,9 +157,9 @@
             $('#details_en_error').text('');
             $('#type_error').text('');
 
-
             $('#photo').css('border-color', '');
             $('#file').css('border-color', '');
+            $('#word').css('border-color', '');
             $('#date').css('border-color', '');
             $('#writer').css('border-color', '');
             $('#title_ar').css('border-color', '');

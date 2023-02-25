@@ -39,7 +39,7 @@ class TeamController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 270, 300);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
         } else {
             $photo_path = '';
         }
@@ -51,6 +51,11 @@ class TeamController extends Controller
             'name_en' => $request->name_en,
             'position_ar' => $request->position_ar,
             'position_en' => $request->position_en,
+            'description_ar' => $request->description_ar,
+            'description_en' => $request->description_en,
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'linkedIn' => $request->linkedIn,
             'type' => $request->type,
         ]);
 
@@ -90,7 +95,7 @@ class TeamController extends Controller
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath, 270, 300);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
 
             } else {
                 $image_path = public_path('\adminBoard\uploadedImages\teams\\') . $team->photo;
@@ -100,7 +105,7 @@ class TeamController extends Controller
 
                 $image = $request->file('photo');
                 $destinationPath = public_path('\adminBoard\uploadedImages\teams\\');
-                $photo_path = $this->saveResizeImage($image, $destinationPath, 270, 300);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 348, 400);
             }
         } else {
             if (!empty($team->photo)) {
@@ -117,6 +122,11 @@ class TeamController extends Controller
             'name_en' => $request->name_en,
             'position_ar' => $request->position_ar,
             'position_en' => $request->position_en,
+            'description_ar' => $request->description_ar,
+            'description_en' => $request->description_en,
+            'facebook' => $request->facebook,
+            'twitter' => $request->twitter,
+            'linkedIn' => $request->linkedIn,
             'type' => $request->type,
         ]);
 
