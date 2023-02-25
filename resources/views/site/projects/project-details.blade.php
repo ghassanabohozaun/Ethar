@@ -52,36 +52,35 @@
                             <div class="content-one">
                                 <div class="upper-box">
                                     <span># project #</span>
-                                    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                                    <h2>{{ $project->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                        <li><i class="far fa-user"></i>By Name of writer</li>
-                                        <li><i class="far fa-eye"></i>25 Views</li>
+                                   
+                                        <li><i class="far fa-eye"></i>{{$project->views}}</li>
                                     </ul>
                                 </div>
                                 <figure class="image-box">
-                                    <img src="{!! asset('site/assets/images/news/news-14.jpg') !!}" alt="">
-                                    <span class="post-date">03.03.2021</span>
+                                    <img src="{{ asset('adminBoard\\uploadedImages\\projects\\'. $project->photo) }}" alt="">
+                                    <span class="post-date">{{ $project->date}}</span>
                                 </figure>
                                 <div class="text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen
-                                        book. It has survived not only five centuries, but also the leap into electronic
-                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum</p>
+                                    <p>{!! $project->{'details_'.Lang()} !!}</p>
                                 </div>
+                                @if($project->file != null)
+                                <div class="font-weight-bold mt-5"><h5> <a class="font-weight-bold"
+                                    href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->file)}}"
+                                    target="_blank">{!! __('general.download') !!} PDF</a></h5>
+                                </div>
+                                @endif
 
-                                <div class="font-weight-bold mt-5"><h5> <a href="#"> Download PDF</a></h5></div>
-                                <div class="font-weight-bold mt-1"> <h5><a href="#"> Download WORD</a></h5></div>
+                                @if($project->word != null)
 
+                                <div class="font-weight-bold mt-1"> <h5> <a class="font-weight-bold"
+                                    href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->word)}}"
+                                    target="_blank">{!! __('general.download') !!}  WORD</a></h5>
+                                </div>
+                                @endif
+                                
+                                    
                             </div>
 
                         </div>
@@ -91,29 +90,20 @@
                     <!-- right  -->
                     <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
                         <div class="blog-sidebar default-sidebar">
-                            <div class="sidebar-widget search-widget">
-                                <form action="#" method="post" class="search-form">
-                                    <div class="form-group">
-                                        <input type="search" name="search-field" placeholder="Your Keyword . . ."
-                                               required="">
-                                        <button type="submit"><i class="icon-search"></i></button>
-                                    </div>
-                                </form>
-                            </div>
+                        
 
 
                             <div class="sidebar-widget category-widget">
                                 <div class="widget-title">
-                                    <h3>Categories</h3>
+                                    <h3>Counters</h3>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="category-list clearfix">
-                                        <li><a href="#">Projects<span>06</span></a></li>
-                                        <li><a href="#">News<span>08</span></a></li>
-                                        <li><a href="#">ِAdvertisements<span>03</span></a></li>
-                                        <li><a href="#">Brochures<span>14</span></a></li>
-                                        <li><a href="#">Case Study<span>12</span></a></li>
-                                        <li><a href="#">Scientific Articles<span>12</span></a></li>
+                                        <li><a href="#">{{__('site.projects')}}<span>{{App\Models\Projects::count()}}</span></a></li>
+                                        <li><a href="#">{{__('site.News')}}<span>{{App\Models\Article::count()}}</span></a></li>
+                                        <li><a href="#">{{__('site.Publications')}}<span>{{App\Models\Publications::count()}}</span></a></li>
+                                        <li><a href="#">{{__('site.Reports')}}<span>{{App\Models\Report::count()}}</span></a></li>
+                                     
                                     </ul>
                                 </div>
                             </div>
@@ -121,42 +111,24 @@
 
                             <div class="sidebar-widget post-widget">
                                 <div class="widget-title">
-                                    <h3>Latest Post</h3>
+                                    <h3>{{__('site.Latest_News')}}</h3>
                                 </div>
                                 <div class="post-inner">
-
+                                    @foreach ($news as $new)
+                                        
                                     <div class="post">
                                         <figure class="post-thumb">
                                             <a href="#">
-                                                <img src="{!! asset('site/assets/images/news/post-4.jpg') !!}" alt="">
+                                                <img src="{{asset('adminBoard\\uploadedImages\\articles\\'. $new->photo	)}}" alt="">
                                             </a>
                                         </figure>
-                                        <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                industry.</a></h5>
-                                        <span class="post-date">03.03.2021</span>
+                                        <h5><a href="#">{{$new->{'title_'.Lang()} }}</a></h5>
+                                        <span class="post-date">{{$new->created_at->format('d.m.Y')}}</span>
                                     </div>
+                                    @endforeach
 
-                                    <div class="post">
-                                        <figure class="post-thumb">
-                                            <a href="#">
-                                                <img src="{!! asset('site/assets/images/news/post-4.jpg') !!}" alt="">
-                                            </a>
-                                        </figure>
-                                        <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                industry.</a></h5>
-                                        <span class="post-date">03.03.2021</span>
-                                    </div>
 
-                                    <div class="post">
-                                        <figure class="post-thumb">
-                                            <a href="#">
-                                                <img src="{!! asset('site/assets/images/news/post-4.jpg') !!}" alt="">
-                                            </a>
-                                        </figure>
-                                        <h5><a href="#">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                                industry.</a></h5>
-                                        <span class="post-date">03.03.2021</span>
-                                    </div>
+                                 
 
                                 </div>
                             </div>

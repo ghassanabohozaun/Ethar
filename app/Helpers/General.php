@@ -1,5 +1,6 @@
 <?php
 use App\Models\AboutType;
+use App\Models\Projects;
 
 
 //  setting Helper Function
@@ -57,5 +58,9 @@ function abouts_type(){
 function fixedTexts()
 {
     return App\Models\FixedText::orderBy('id', 'desc')->first();
+}
+
+function projects(){
+   return   Projects::orderByDesc('id')->where('status' ,'on')->where('type' ,'current')->limit(4)->get() ;
 }
 

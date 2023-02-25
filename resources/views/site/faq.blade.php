@@ -60,13 +60,13 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
                         <ul class="accordion-box">
-                        @foreach ($qas as $qa)
-                        <li class="accordion block active-block">
-                            <div class="acc-btn active">
+                        @foreach ($qas as $index => $qa)
+                        <li class="accordion block  {{$index == 0 ?'active-block' :''}}">
+                            <div class="acc-btn {{$index == 0 ?'active' :''}}">
                                 <div class="icon-outer"><i class="icon-right-arrow"></i></div>
                                 <h5><i class="icon-question"></i>{{ $qa->{'title_'.Lang()} }}</h5>
                             </div>
-                            <div class="acc-content current">
+                            <div class="acc-content {{$index == 0 ?'current' :''}}">
                                 <div class="text">
                                     <p>{!!$qa->{'details_'.Lang()} !!}</p>
                                 </div>
@@ -75,73 +75,7 @@
                         @endforeach
                             
 
-                            <li class="accordion block active-block">
-                                <div class="acc-btn active">
-                                    <div class="icon-outer"><i class="icon-right-arrow"></i></div>
-                                    <h5><i class="icon-question"></i>What is Save the Pure Hearts?</h5>
-                                </div>
-                                <div class="acc-content current">
-                                    <div class="text">
-                                        <p>There are many variations of passages of lorem ipsum available, but the majority have suffered alterationform injected humours randomises don't look even slightly.</p>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="accordion block">
-                                <div class="acc-btn">
-                                    <div class="icon-outer"><i class="icon-right-arrow"></i></div>
-                                    <h5><i class="icon-question"></i>How do I make a matching gift?</h5>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="text">
-                                        <p>There are many variations of passages of lorem ipsum available, but the majority have suffered alterationform injected humours randomises don't look even slightly.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="accordion block">
-                                <div class="acc-btn">
-                                    <div class="icon-outer"><i class="icon-right-arrow"></i></div>
-                                    <h5><i class="icon-question"></i>What is Save the Tax ID Number?</h5>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="text">
-                                        <p>There are many variations of passages of lorem ipsum available, but the majority have suffered alterationform injected humours randomises don't look even slightly.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="accordion block">
-                                <div class="acc-btn">
-                                    <div class="icon-outer"><i class="icon-right-arrow"></i></div>
-                                    <h5><i class="icon-question"></i>What is an Anti-Charity?</h5>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="text">
-                                        <p>There are many variations of passages of lorem ipsum available, but the majority have suffered alterationform injected humours randomises don't look even slightly.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="accordion block">
-                                <div class="acc-btn">
-                                    <div class="icon-outer"><i class="icon-right-arrow"></i></div>
-                                    <h5><i class="icon-question"></i>Who can access Pure Hearts's research?</h5>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="text">
-                                        <p>There are many variations of passages of lorem ipsum available, but the majority have suffered alterationform injected humours randomises don't look even slightly.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="accordion block">
-                                <div class="acc-btn">
-                                    <div class="icon-outer"><i class="icon-right-arrow"></i></div>
-                                    <h5><i class="icon-question"></i>How is Pure Hearts different from others?</h5>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="text">
-                                        <p>There are many variations of passages of lorem ipsum available, but the majority have suffered alterationform injected humours randomises don't look even slightly.</p>
-                                    </div>
-                                </div>
-                            </li>
+                          
                         </ul>
                     </div>
                 </div>

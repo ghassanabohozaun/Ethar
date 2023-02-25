@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Site\ProjectController;
 use App\Http\Controllers\Site\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,23 +24,10 @@ Route::group(
     Route::get('About/{name}' , [SiteController::class , 'about'])->name('about') ;
 
 
-    Route::get('/rationale', function (){
-        return view('site.rationale');
-    })->name('rationale');
 
-    Route::get('/who-we-are', function (){
-        return view('site.who-we-are');
-    })->name('who-we-are');
 
     Route::get('/faq', [SiteController::class , 'qa'])->name('faq');
 
-    Route::get('/work-ethics', function (){
-        return view('site.work-ethics');
-    })->name('work-ethics');
-
-    Route::get('/constitution', function (){
-        return view('site.constitution');
-    })->name('constitution');
 
     Route::get('/founders', function (){
         return view('site.founders');
@@ -53,13 +41,9 @@ Route::group(
         return view('site.team');
     })->name('team');
 
-    Route::get('/projects', function (){
-        return view('site.projects.project');
-    })->name('projects');
+    Route::get('/projects/{type}',[ProjectController::class , 'getProjects'])->name('projects');
 
-    Route::get('/project-details', function (){
-        return view('site.projects.project-details');
-    })->name('project-details');
+    Route::get('/project-details/{title}', [ProjectController::class , 'detailProject'])->name('project-details');
 
 
     Route::get('/news', function (){

@@ -65,7 +65,7 @@ class ProjectsController extends Controller
             'date' => $request->date,
             'writer' => $request->writer,
             'type' => $request->type,
-            'status' =>'',
+            'status' =>'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));

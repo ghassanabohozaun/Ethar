@@ -104,7 +104,7 @@ class SiteController extends Controller
     }
 
     function qa(){
-        $qas = QA::get();
+        $qas = QA::orderByDesc('id')->get();
         if($qas){
             return view('site.faq', compact('qas'));
         }else{
