@@ -9,6 +9,7 @@ use App\Models\About;
 use App\Models\AboutType;
 use App\Models\Partner;
 use App\Models\Projects;
+use App\Models\QA;
 use App\Models\Slider;
 use App\Models\Team;
 use App\Models\testimonial;
@@ -86,10 +87,23 @@ class SiteController extends Controller
     }
 
     // About
-    public function about( $id){
-         $about = AboutType::find($id)->about()->where('status', 'on')->first();
+    public function about( $name){
+        // return current name 
+        $name = returnSpaceBetweenString($name);
+
+         $about_type = AboutType::where('name_'.Lang(),$name)->first();
+         $about = About::status()->where('about_type_id' , $about_type->id) ->first();
         if($about){
             return view('site.about', compact('about'));
+        // }else{
+        //     return redirect()->back();
+        }
+    }
+
+    function qa(){
+        $qas = QA::get();
+        if($qas){
+            return view('site.faq', compact('qas'));
         }else{
             return redirect()->back();
         }
