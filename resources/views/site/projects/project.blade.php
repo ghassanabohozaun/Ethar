@@ -46,12 +46,13 @@
         <section class="case-page-section list-view">
             <div class="auto-container">
 
-
+                @foreach ($projects as $project)
+                    
                 <div class="case-block-four">
                     <div class="inner-box">
                         <div class="image-box">
                             <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
+                                <img src="{{asset('adminBoard\\uploadedImages\\projects\\'. $project->photo)}}" alt="">
                             </figure>
                         </div>
                         <div class="content-box">
@@ -59,19 +60,32 @@
                                 <div class="category">
                                     <a href="#"># project </a>
                                 </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
+                                <h3><a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">{{ $project->{'title_'.Lang()} }}</a>
                                 </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <p>{!! $project->{'details_'.Lang()} !!}</p>
                             </div>
                             <ul class="info-box clearfix">
-                                <li class="share">
-                                    <i class="far fa-file-word"></i>
-                                    <h5>download</h5>
-                                </li>
+                                @if($project->word != null)
+
+                                    <li class="share">
+                                        <i class="far fa-file-word"></i>
+                                        <a class="font-weight-bold"
+                                            href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->word)}}"
+                                            target="_blank"><h5>{!! __('general.download') !!}</h5></a>
+                                        
+                                    </li>
+                                @endif
+
+                                @if($project->file != null)
+                                    
                                 <li class="share">
                                     <i class="fas fa-file-pdf"></i>
-                                    <h5>download</h5>
+                                    <a class="font-weight-bold"
+                                            href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->file)}}"
+                                            target="_blank"><h5>{!! __('general.download') !!}</h5></a>
+                                    
                                 </li>
+                                @endif
                                 <li class="share">
                                     <i class="fas fa-book"></i>
                                     <h5>visit case studies</h5>
@@ -81,86 +95,28 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
 
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
-                                </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                            <ul class="info-box clearfix">
-                                <li class="share">
-                                    <i class="far fa-file-word"></i>
-                                    <h5>download</h5>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-file-pdf"></i>
-                                    <h5>download</h5>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-book"></i>
-                                    <h5>visit case studies</h5>
 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            
 
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{!! asset('site/assets/images/case/case-16.jpg') !!}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="#">Lorem Ipsum is simply dummy text of the printing</a>
-                                </h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                            </div>
-                            <ul class="info-box clearfix">
-                                <li class="share">
-                                    <i class="far fa-file-word"></i>
-                                    <h5>download</h5>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-file-pdf"></i>
-                                    <h5>download</h5>
-                                </li>
-                                <li class="share">
-                                    <i class="fas fa-book"></i>
-                                    <h5>visit case studies</h5>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pagination-wrapper centred">
+                {{-- <div class="pagination-wrapper centred">
                     <ul class="pagination clearfix">
-                        <li><a href="#"><i class="fas fa-arrow-left"></i></a></li>
-                        <li><a href="#" class="current">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#"><i class="fas fa-arrow-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-arrow-left"></i></a></li>
+                        <li><a href="" class="current">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href=""><i class="fas fa-arrow-right"></i></a></li>
+                       
                     </ul>
+                   
+                </div> --}}
+                <div class="centred">
+                    {{ $projects->links() }}
                 </div>
+               
+
+
             </div>
         </section>
         <!-- case-page-section end -->
