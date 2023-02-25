@@ -98,7 +98,7 @@ class SiteController extends Controller
             return view('site.about', compact('about'));
         }else{
           
-            return view('site.about');
+            return view('site.about' , compact('about_type'));
         }
     }
 

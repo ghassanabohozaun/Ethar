@@ -1,4 +1,4 @@
 <?php 
 return [
-'about_not_found' => 'There is currently no data' ,
+'about_not_found' => 'There is no data currently' ,
 ];
