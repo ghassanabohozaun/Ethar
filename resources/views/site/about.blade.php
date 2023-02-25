@@ -21,7 +21,9 @@
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
-
+        @if (isset($about))
+        
+      
 
         <!-- Page Title -->
         <section class="page-title"
@@ -66,6 +68,17 @@
             </div>
         </section>
         <!-- about-style-three end -->
+
+        @elseif (!isset($about))
+             <!-- Not Found  -->
+             <section class="about-style-three">
+                <div class="sec-title  text-center">
+                                     
+                    <h2>{{__('site.about_not_found')}}    </h2>
+                </div>
+            </section>
+            <!-- End  Not Foun -->
+        @endif
 
 
         <!-- main-footer -->
