@@ -7,6 +7,7 @@ return [
     'name_ar' => 'Partner Name | ar',
     'name_en' => 'Partner Name | en',
     'photo' => 'Partner Photo ',
+    'status' => 'Status',
 
     'enter_name_ar' => 'Enter Partner Name  in Arabic',
     'enter_name_en' => 'Enter Partner Name  in English',

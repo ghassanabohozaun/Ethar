@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\About;
 use App\Models\AboutType;
+use App\Models\Partner;
 use App\Models\Projects;
 use App\Models\Slider;
 use App\Models\Team;
@@ -79,7 +80,9 @@ class SiteController extends Controller
         $founders = Team::orderByDesc('id')->where('status', 'on')->where('type', 'founder')->get();
         $testimonials = testimonial::orderByDesc('id')->where('status', 'on')->get();
 
-        return view('site.index', compact('title', 'sliders', 'lastProjects', 'founders', 'lastArticles','testimonials'));
+        $partners = Partner::orderByDesc('id')->where('status', 'on')->get();
+
+        return view('site.index', compact('title', 'sliders', 'lastProjects', 'founders', 'lastArticles','testimonials','partners'));
     }
 
     // About

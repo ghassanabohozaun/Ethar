@@ -50,9 +50,9 @@
         @include('site.includes.counters-section')
         <!-- counters-section end -->
 
-        <!-- clients-section -->
-        @include('site.includes.clients-section')
-        <!-- clients-section end -->
+        <!-- partners-section -->
+        @include('site.includes.partners-section')
+        <!-- partners-section end -->
 
         <!-- footer -->
         @include('site.includes.footer')

@@ -9,11 +9,12 @@ class Partner extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'comments';
+    protected $table = 'partners';
     protected $fillable = [
         'photo',
         'name_ar',
         'name_en',
+        'status',
     ];
     protected $hidden = ['updated_at'];
 

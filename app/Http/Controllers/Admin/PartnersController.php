@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PartnersRequest;
-use App\Http\Requests\SlidersRequest;
 use App\Models\Partner;
 use App\Models\Slider;
 use App\Traits\GeneralTrait;
@@ -43,10 +42,10 @@ class PartnersController extends Controller
             $photo_path = '';
         }
 
-        Slider::create([
+        Partner::create([
             'photo' => $photo_path,
             'name_ar' => $request->name_ar,
-            'title_en' => $request->name_ar,
+            'name_en' => $request->name_en,
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));

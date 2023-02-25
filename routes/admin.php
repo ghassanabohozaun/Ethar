@@ -76,7 +76,7 @@ Route::group([
         /// Partners routes
         Route::group(['prefix' => 'partners'], function () {
             Route::get('/', 'PartnersController@index')->name('admin.partners');
-            Route::get('/create', 'PartnersController@create')->name('admin.partners.create');
+            Route::get('/create', 'PartnersController@create')->name('admin.partner.create');
             Route::post('/store', 'PartnersController@store')->name('admin.partner.store');
             Route::get('/trashed', 'PartnersController@trashed')->name('admin.partner.trashed');
             Route::post('/destroy', 'PartnersController@destroy')->name('admin.partner.destroy');

@@ -9,7 +9,7 @@ class Comment extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'partners';
+    protected $table = 'comments';
     protected $fillable = [
         'person_ip',
         'person_name',
