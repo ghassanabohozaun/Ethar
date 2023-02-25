@@ -32,7 +32,7 @@ class ProjectsController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/projects//');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 240);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 252);
         } else {
             $photo_path = '';
         }
@@ -86,7 +86,7 @@ class ProjectsController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/projects//');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 240);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 252);
             $image_path = public_path("/adminBoard/uploadedImages/projects//") . $project->photo;
             if (File::exists($image_path))
             {
