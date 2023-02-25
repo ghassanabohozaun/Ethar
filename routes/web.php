@@ -21,73 +21,69 @@ Route::group(
 
     Route::get('/', 'SiteController@index')->name('index');
 
-    Route::get('About/{name}' , [SiteController::class , 'about'])->name('about') ;
+    Route::get('About/{name}', [SiteController::class, 'about'])->name('about');
 
 
+    Route::get('/faq', [SiteController::class, 'qa'])->name('faq');
 
 
-    Route::get('/faq', [SiteController::class , 'qa'])->name('faq');
-
-
-    Route::get('/founders', function (){
+    Route::get('/founders', function () {
         return view('site.founders');
     })->name('founders');
 
-    Route::get('/directors', function (){
+    Route::get('/directors', function () {
         return view('site.directors');
     })->name('directors');
 
-    Route::get('/team', function (){
+    Route::get('/team', function () {
         return view('site.team');
     })->name('team');
 
-    Route::get('/projects/{type}',[ProjectController::class , 'getProjects'])->name('projects');
+    Route::get('/projects/{type}', [ProjectController::class, 'getProjects'])->name('projects');
 
-    Route::get('/project-details/{title}', [ProjectController::class , 'detailProject'])->name('project-details');
+    Route::get('/project-details/{title}', [ProjectController::class, 'detailProject'])->name('project-details');
 
 
-    Route::get('/news', function (){
+    Route::get('/news', function () {
         return view('site.news.new');
     })->name('news');
 
-    Route::get('/new-details', function (){
+    Route::get('/new-details', function () {
         return view('site.news.new-details');
     })->name('new-details');
 
 
-    Route::get('/advertisements', function (){
+    Route::get('/advertisements', function () {
         return view('site.publications.advertisements');
     })->name('advertisements');
 
-    Route::get('/advertisement-details', function (){
+    Route::get('/advertisement-details', function () {
         return view('site.publications.advertisements-details');
     })->name('advertisement-details');
 
 
-    Route::get('/reports', function (){
-        return view('site.reports.report');
-    })->name('reports');
+    // reports
+    Route::get('/reports', 'ReportsController@index')->name('reports');
+    Route::get('/report-details/{year?}', 'ReportsController@details')->name('report-details');
 
 
-    Route::get('/report-details', function (){
-        return view('site.reports.report-details');
-    })->name('report-details');
 
 
-    Route::get('/our-photos', function (){
+
+    Route::get('/our-photos', function () {
         return view('site.photos.our-photos');
     })->name('our-photos');
 
 
-    Route::get('/photo-details', function (){
+    Route::get('/photo-details', function () {
         return view('site.photos.photo-details');
     })->name('photo-details');
 
-    Route::get('/videos', function (){
+    Route::get('/videos', function () {
         return view('site.videos');
     })->name('videos');
 
-    Route::get('/contact', function (){
+    Route::get('/contact', function () {
         return view('site.contact');
     })->name('contact');
 

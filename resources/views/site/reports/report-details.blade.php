@@ -29,12 +29,11 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Report Details</h1>
+                        <h1>{!! __('index.reports') !!} {!! $year !!}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Report Details</li>
+                        <li><a href="{!! route('index') !!}">{!! __('index.home') !!}</a></li>
+                        <li>{!! __('index.reports') !!} {!! $year !!}</li>
                     </ul>
                 </div>
             </div>
@@ -42,35 +41,27 @@
         <!-- End Page Title -->
 
 
-
         <!-- shop-details -->
         <section class="shop-details">
             <div class="auto-container">
                 <div class="discription-inner">
                     <div class="row clearfix reports-section">
+                        @foreach($reports as $report)
+                            <div class="col-lg-6 col-md-6 col-sm-6 single-column">
+                                <a href="{{asset('adminBoard/uploadedFiles/reports/'.$report->file)}}"
+                                   class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                    <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
+                                    <h3>{!! $report->type =='Administrative' ? __('index.administrative') : __('index.financial')  !!}</h3>
+                                </a>
+                            </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-6 single-column" >
-                            <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                <h3>Administrative Report 2022</h3>
-                            </button>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 single-column" >
-                            <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="" width="100">
-                                <h3>Financial Report 2022</h3>
-                            </button>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
 
             </div>
         </section>
         <!-- shop-details end -->
-
-
-
 
 
         <!-- main-footer -->

@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'home'=>'home',
+
     'about_our_projects'=>'About Our Projects',
     'our_projects'=>'Our Projects',
     'previous_project' => 'Previous project',
@@ -19,4 +21,8 @@ return [
     'beneficiaries' => 'Beneficiaries',
     'founder'=>'Founder',
     'articles'=>'Articles',
+
+    'reports'=>'Reports',
+    'administrative'=>'Administrative Report',
+    'financial'=>'Financial Report',
 ];

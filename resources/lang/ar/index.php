@@ -2,6 +2,8 @@
 
 return [
 
+    'home'=>'الرئيسية',
+
     'about_our_projects' => 'عن مشاريعنا',
     'our_projects' => 'مشاريعنا',
     'previous_project' => 'مشروع سابق',
@@ -19,6 +21,10 @@ return [
     'stars' => 'نجوم',
     'founder' => 'مؤسس',
     'articles' => 'المقالات',
+
+    'reports'=>'تقارير',
+    'administrative'=>'التقرير الاداري',
+    'financial'=>'التقرير المالي',
 
 
 ];

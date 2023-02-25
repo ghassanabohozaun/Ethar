@@ -11,7 +11,7 @@ class Report extends Model
     use HasFactory , SoftDeletes;
 
     protected $fillable = [
-        'status' , 'type' , 'file' ,'year'
+        'id', 'status' , 'type' , 'file' ,'year'
     ];
 
 }
