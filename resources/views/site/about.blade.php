@@ -16,8 +16,6 @@
 @section('content')
 
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
-
-
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
@@ -28,7 +26,8 @@
         <!-- Page Title -->
         <section class="page-title"
                  style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
-            <div class="auto-container">
+                
+            <div class="auto-container{!! Lang()=='ar' ? 'rtl':'' !!}">
                 <div class="content-box">
                     <div class="title">
                         <h1>{{$about->type->{'name_'.Lang()} }}</h1>
@@ -58,6 +57,22 @@
 
                                 <div class="text">
                                     <p>{!!$about->{'details_'.Lang()} !!}</p>
+                                    <br/>
+                                    @isset($about->file)
+                                        
+                                    <ul class="info-box clearfix">
+                                        <li class="share">
+                                            <i class="fas fa-file-pdf">
+                                                </i> 
+                                            <a class="font-weight-bold"
+                                            href="{{asset('adminBoard\\uploadedFiles\\abouts\\'. $about->file)}}"
+                                            target="_blank">{!! __('general.download') !!}</a>
+                                           
+                                        </li>
+                                    </ul>
+                                    @endisset
+
+
                                 </div>
 
                             </div>
@@ -70,23 +85,23 @@
         <!-- about-style-three end -->
 
         @elseif (!isset($about))
-         <!-- Page Title -->
-         <section class="page-title"
-         style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
-            <div class="auto-container">
-                <div class="content-box">
-                    <div class="title">
-                        <h1>{{$about_type->{'name_'.Lang()} }}</h1>
+            <!-- Page Title -->
+            <section class="page-title"
+            style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
+                <div class="auto-container">
+                    <div class="content-box">
+                        <div class="title">
+                            <h1>{{$about_type->{'name_'.Lang()} }}</h1>
+                        </div>
+                        <ul class="bread-crumb clearfix">
+                            <li><a href="{!! route('index') !!}">Home</a></li>
+                            {{-- <li>Pages</li> --}}
+                            <li>{{$about_type->{'name_'.Lang()} }}</li>
+                        </ul>
                     </div>
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        {{-- <li>Pages</li> --}}
-                        <li>{{$about_type->{'name_'.Lang()} }}</li>
-                    </ul>
                 </div>
-            </div>
-        </section>
-<!-- End Page Title -->
+            </section>
+            <!-- End Page Title -->
              <!-- Not Found  -->
              <section class="about-style-three">
                 <div class="sec-title  text-center">
