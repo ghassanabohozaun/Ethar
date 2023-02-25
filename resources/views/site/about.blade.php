@@ -15,23 +15,19 @@
 @endpush
 @section('content')
 
-<<<<<<< HEAD
-    <div class="boxed_wrapper ltr"  >
-
-
-=======
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
->>>>>>> 3eb2909414ad0b2e57a34472aed9a244b8f089bf
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
         @if (isset($about))
 
-<<<<<<< HEAD
+
+
             <!-- Page Title -->
-            <section class="page-title "
+            <section class="page-title"
                      style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
-                <div class="auto-container">
+
+                <div class="auto-container{!! Lang()=='ar' ? 'rtl':'' !!}">
                     <div class="content-box">
                         <div class="title">
                             <h1>{{$about->type->{'name_'.Lang()} }}</h1>
@@ -41,23 +37,13 @@
                             {{-- <li>Pages</li> --}}
                             <li>{{$about->type->{'name_'.Lang()} }}</li>
                         </ul>
-=======
-        <!-- Page Title -->
-        <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
-
-            <div class="auto-container{!! Lang()=='ar' ? 'rtl':'' !!}">
-                <div class="content-box">
-                    <div class="title">
-                        <h1>{{$about->type->{'name_'.Lang()} }}</h1>
->>>>>>> 3eb2909414ad0b2e57a34472aed9a244b8f089bf
                     </div>
                 </div>
             </section>
             <!-- End Page Title -->
 
             <!-- about-style-three -->
-            <section class="about-style-three ">
+            <section class="about-style-three">
                 <div class="auto-container">
                     <div class="row clearfix">
 
@@ -71,33 +57,25 @@
 
                                     <div class="text">
                                         <p>{!!$about->{'details_'.Lang()} !!}</p>
+                                        <br/>
+                                        @isset($about->file)
+
+                                            <ul class="info-box clearfix">
+                                                <li class="share">
+                                                    <i class="fas fa-file-pdf">
+                                                    </i>
+                                                    <a class="font-weight-bold"
+                                                       href="{{asset('adminBoard\\uploadedFiles\\abouts\\'. $about->file)}}"
+                                                       target="_blank">{!! __('general.download') !!}</a>
+
+                                                </li>
+                                            </ul>
+                                        @endisset
+
+
                                     </div>
 
                                 </div>
-<<<<<<< HEAD
-=======
-
-                                <div class="text">
-                                    <p>{!!$about->{'details_'.Lang()} !!}</p>
-                                    <br/>
-                                    @isset($about->file)
-
-                                    <ul class="info-box clearfix">
-                                        <li class="share">
-                                            <i class="fas fa-file-pdf">
-                                                </i>
-                                            <a class="font-weight-bold"
-                                            href="{{asset('adminBoard\\uploadedFiles\\abouts\\'. $about->file)}}"
-                                            target="_blank">{!! __('general.download') !!}</a>
-
-                                        </li>
-                                    </ul>
-                                    @endisset
-
-
-                                </div>
-
->>>>>>> 3eb2909414ad0b2e57a34472aed9a244b8f089bf
                             </div>
                         </div>
 
@@ -109,11 +87,7 @@
         @elseif (!isset($about))
             <!-- Page Title -->
             <section class="page-title"
-<<<<<<< HEAD
                      style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
-=======
-            style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
->>>>>>> 3eb2909414ad0b2e57a34472aed9a244b8f089bf
                 <div class="auto-container">
                     <div class="content-box">
                         <div class="title">
@@ -128,19 +102,14 @@
                 </div>
             </section>
             <!-- End Page Title -->
-<<<<<<< HEAD
             <!-- Not Found  -->
             <section class="about-style-three">
-=======
-             <!-- Not Found  -->
-             <section class="about-style-three">
->>>>>>> 3eb2909414ad0b2e57a34472aed9a244b8f089bf
                 <div class="sec-title  text-center">
 
                     <h2>{{__('site.about_not_found')}}    </h2>
                 </div>
             </section>
-            <!-- End  Not Found -->
+            <!-- End  Not Foun -->
         @endif
 
 
