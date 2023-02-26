@@ -11173,41 +11173,41 @@ div#mCSB_1_container {
 
 }
 
-.case-block-four .inner-box .content-box .info-box li {
-    position: relative;
-    display: inline-block;
-    float: left;
-    padding-left: 50px;
-    min-height: 49px;
-    padding-right: 55px;
-}
+/*.case-block-four .inner-box .content-box .info-box li {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*    float: left;*/
+/*    padding-left: 50px;*/
+/*    min-height: 49px;*/
+/*    padding-right: 55px;*/
+/*}*/
 
 .case-block-four .inner-box .content-box .info-box li:last-child {
     padding-right: 0px;
 }
 
-.case-block-four .inner-box .content-box .info-box li i {
-    position: absolute;
-    left: 0px;
-    top: 3px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border: 1px solid #cecac9;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 20px;
-}
+/*.case-block-four .inner-box .content-box .info-box li i {*/
+/*    position: absolute;*/
+/*    left: 0px;*/
+/*    top: 3px;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    line-height: 40px;*/
+/*    border: 1px solid #cecac9;*/
+/*    border-radius: 50%;*/
+/*    text-align: center;*/
+/*    font-size: 20px;*/
+/*}*/
 
-.case-block-four .inner-box .content-box .info-box li h5 {
-    position: relative;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    margin-bottom: 0px;
-}
+/*.case-block-four .inner-box .content-box .info-box li h5 {*/
+/*    position: relative;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    font-size: 16px;*/
+/*    line-height: 24px;*/
+/*    font-weight: 700;*/
+/*    margin-bottom: 0px;*/
+/*}*/
 
 .case-block-four .inner-box .content-box .info-box li h5 a {
     color: #232323;

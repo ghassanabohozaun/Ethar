@@ -18,7 +18,7 @@
                                 </a>
                             </figure>
                             <div class="content-box">
-                                <div class="text">
+                                <div class="text ">
                                     <span class="post-date">{!! $lastArticle->publish_date !!}</span>
                                     <div class="category"><a href="#"># {!! __('index.articles') !!}</a></div>
                                     <h3>

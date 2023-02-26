@@ -38,52 +38,54 @@
         </section>
         <!-- End Page Title -->
 
-
-        <!-- team-section -->
-        <section class="team-section centred">
-            <div class="pattern-layer"
-                 style="background-image: url({!! asset('site/assets/images/shape/shape-23.png') !!});"></div>
-            <div class="fluid-container">
-                <div class="sec-title centred">
-                    <span class="top-text">{!! __('index.meet_our_team') !!}</span>
-                </div>
-                <div class="five-item-carousel owl-carousel owl-theme owl-nav-none">
-
-                    @forelse($teams as $team)
-                        <div class="team-block-one">
-                            <div class="inner-box">
-                                <figure class="image-box">
-                                    <img src="{{asset('adminBoard/uploadedImages/teams/'.$team->photo)}}"
-                                         alt="{!! $team->{'name_'.Lang()} !!}">
-                                </figure>
-                                <div class="content-box">
-                                    <div class="info">
-                                        <span class="designation">{!! __('index.founder') !!}</span>
-                                        <h3>{!! $team->{'name_'.Lang()} !!}</h3>
-                                    </div>
-                                    <figure class="thumb-box">
+        @if($teams->isEmpty())
+            <!-- team-section -->
+            <section class="team-section centred">
+                <h1  class="my-h1">{!! __('index.no_data_found') !!}</h1>
+            </section>
+        @else
+            <!-- team-section -->
+            <section class="team-section centred">
+                <div class="pattern-layer"
+                     style="background-image: url({!! asset('site/assets/images/shape/shape-23.png') !!});"></div>
+                <div class="fluid-container">
+                    <div class="sec-title centred">
+                        <span class="top-text">{!! __('index.meet_our_team') !!}</span>
+                    </div>
+                    <div class="five-item-carousel owl-carousel owl-theme owl-nav-none">
+                        @foreach($teams as $team)
+                            <div class="team-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
                                         <img src="{{asset('adminBoard/uploadedImages/teams/'.$team->photo)}}"
                                              alt="{!! $team->{'name_'.Lang()} !!}">
                                     </figure>
-                                    <div class="text">
-                                        <p>{!! $team->{'description_'.Lang()} !!}</p>
+                                    <div class="content-box">
+                                        <div class="info">
+                                            <span class="designation">{!! __('index.founder') !!}</span>
+                                            <h3>{!! $team->{'name_'.Lang()} !!}</h3>
+                                        </div>
+                                        <figure class="thumb-box">
+                                            <img src="{{asset('adminBoard/uploadedImages/teams/'.$team->photo)}}"
+                                                 alt="{!! $team->{'name_'.Lang()} !!}">
+                                        </figure>
+                                        <div class="text">
+                                            <p>{!! $team->{'description_'.Lang()} !!}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    @empty
-                    @endforelse
-
+                        @endforeach
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- team-section end -->
+            </section>
+            <!-- team-section end -->
+        @endif
 
 
         <!-- main-footer -->
         @include('site.includes.footer')
         <!-- main-footer end -->
-
 
     </div>
 

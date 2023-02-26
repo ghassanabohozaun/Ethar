@@ -76,9 +76,6 @@
 }
 
 
-
-
-
 .my-social-style-one li:last-child {
     margin: 0px !important;
 }
@@ -130,20 +127,32 @@
 #social-facebook-icon:hover {
     color: #286b93;
 }
+
 #social-instagram-icon {
-    color: #b64c9f ;
+    color: #b64c9f;
 }
 
 #social-instagram-icon:hover {
     color: #83366f;
 }
+
 #social-youtube-icon {
-    color: #f70000 ;
+    color: #f70000;
 }
 
 #social-youtube-icon:hover {
     color: #ab1616;
 }
-.my-team-section{
+
+.my-team-section {
     margin: 101px 0px 110px 0px;
+}
+
+.my-h1 {
+    color: #f65024;
+    font-weight: bolder;
+}
+
+.my-word-break {
+    word-break: break-word;
 }

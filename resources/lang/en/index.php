@@ -11,6 +11,8 @@ return [
     'directors' => 'Directors',
     'team' => 'Team',
     'projects' => 'Projects',
+    'project'=>'Project',
+
     'previous_projects' => 'Previous Projects',
     'current_projects' => 'Current Projects',
     'news' => 'News',

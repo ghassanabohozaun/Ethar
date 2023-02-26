@@ -15,8 +15,8 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
-
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
         <!-- header -->
         @include('site.includes.header')
@@ -29,10 +29,10 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Projects</h1>
+                        <h1>{!! __('index.projects') !!}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                    
+                        &nbsp;
                     </ul>
                 </div>
             </div>
@@ -46,54 +46,64 @@
 
                 @foreach ($projects as $project)
 
-                <div class="case-block-four">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image">
-                                <img src="{{asset('adminBoard\\uploadedImages\\projects\\'. $project->photo)}}" alt="">
-                            </figure>
-                        </div>
-                        <div class="content-box">
-                            <div class="text">
-                                <div class="category">
-                                    <a href="#"># project </a>
-                                </div>
-                                <h3><a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">{{ $project->{'title_'.Lang()} }}</a>
-                                </h3>
-                                <p>{!! $project->{'details_'.Lang()} !!}</p>
+                    <div class="case-block-four">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <figure class="image">
+                                    <img src="{{asset('adminBoard/uploadedImages/projects/'. $project->photo)}}"
+                                         alt="{{ $project->{'title_'.Lang()} }}">
+                                </figure>
                             </div>
-                            <ul class="info-box clearfix">
-                                @if($project->word != null)
-                                    <li class="share">
-                                        <i class="far fa-file-word"></i>
-                                        <a class="font-weight-bold"
-                                            href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->word)}}"
-                                            target="_blank"><h5>{!! __('general.download') !!}</h5></a>
+                            <div class="content-box">
+                                <div class="text my-word-break">
+                                    <div class="category">
+                                        <a href="#"># {!! $project->type !!} {!! __('index.project') !!}</a>
+                                    </div>
+                                    <h3>
+                                        <a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">{{ $project->{'title_'.Lang()} }}</a>
+                                    </h3>
+                                    <p>
+                                        {!! \Illuminate\Support\Str::limit(strip_tags($project->{'details_'.Lang()}),$limit = 300, $end = ' ...')!!}
+                                    </p>
+                                </div>
+                                <ul class="info-box clearfix">
+                                    @if($project->word != null)
+                                        <li class="share">
+                                            <i class="far fa-file-word"></i>
+                                            <a class="font-weight-bold"
+                                               href="{{asset('adminBoard/uploadedFiles/project/'. $project->word)}}"
+                                               target="_blank">
+                                                {!! __('general.download') !!}</h5>
+                                            </a>
+                                        </li>
+                                    @endif
 
-                                    </li>
-                                @endif
+                                    @if($project->file != null)
+                                        <li class="share">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <a class="font-weight-bold"
+                                               href="{{asset('adminBoard/uploadedFiles/project/'. $project->file)}}"
+                                               target="_blank">
+                                                <h5>{!! __('general.download') !!}</h5>
+                                            </a>
+                                        </li>
+                                    @endif
 
-                                @if($project->file != null)
-                                <li class="share">
-                                    <i class="fas fa-file-pdf"></i>
-                                    <a class="font-weight-bold"
-                                            href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->file)}}"
-                                            target="_blank"><h5>{!! __('general.download') !!}</h5></a>
+                                    @if ( $project->publications()->first() !=null  )
+                                        <li class="share">
+                                            <i class="fas fa-book"></i>
+                                            <h5>
+                                                <a href="{!! route('project-publi',slug($project->{'title_'.Lang()}) )!!}">
+                                                    visit case studies
+                                                </a>
+                                            </h5>
+                                        </li>
+                                    @endif
 
-                                </li>
-                                @endif
-
-                                @if ( $project->publications()->first() !=null  )
-                                    <li class="share">
-                                        <i class="fas fa-book"></i>
-                                        <h5><a href="{!! route('project-publi',slug($project->{'title_'.Lang()}) )!!}">visit case studies</a></h5>
-                                    </li>
-                                @endif
-
-                            </ul>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
 
 
@@ -110,10 +120,9 @@
                     </ul>
 
                 </div> --}}
-                <div class="centred">
+                <div class=" pagination-wrapper centred">
                     {{ $projects->links() }}
                 </div>
-
 
 
             </div>

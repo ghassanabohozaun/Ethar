@@ -10,6 +10,7 @@ return array(
     'directors' => 'الإداريين',
     'team' => 'الفريق',
     'projects' => 'المشاريع',
+    'project'=>'مشروع',
     'previous_projects' => 'المشاريع السابقة',
     'current_projects' => 'المشاريع الحالية',
     'news' => 'الأخبار',
@@ -46,6 +47,7 @@ return array(
     'stars' => 'نجوم',
     'founder' => 'مؤسس',
     'articles' => 'المقالات',
+
 
 
     'administrative' => 'التقرير الاداري',
