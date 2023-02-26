@@ -1,7 +1,27 @@
 <?php
 
 return [
-    'home'=>'home',
+    'home'=>'Home',
+    'about'=>'About',
+    'faq'=>'FAQ\'s',
+    'our_team'=>'Our Team',
+    'founders'=>'Founders',
+    'directors'=>'Directors',
+    'team'=>'Team',
+    'projects' => 'Projects',
+    'previous_projects' => 'Previous Projects',
+    'current_projects' => 'Current Projects',
+    'news' => 'News',
+    'publications' => 'Publications',
+    'advertisements' => 'Advertisements',
+    'brochures' => 'Brochures',
+    'case_study' => 'Case Study',
+    'scientific_articles' => 'Scientific Articles',
+    'reports'=>'Reports',
+    'media'=>'Media',
+    'our_photos'=>'Our Photos',
+    'our_videos'=>'Our Videos',
+    'contact'=>'Contact',
 
     'about_our_projects'=>'About Our Projects',
     'our_projects'=>'Our Projects',
@@ -22,7 +42,9 @@ return [
     'founder'=>'Founder',
     'articles'=>'Articles',
 
-    'reports'=>'Reports',
+
     'administrative'=>'Administrative Report',
     'financial'=>'Financial Report',
+
+    'no_data_found'=>'Sorry, There are no data currently',
 ];

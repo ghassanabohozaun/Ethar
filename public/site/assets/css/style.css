@@ -1052,9 +1052,9 @@ img {
     position: relative;
     display: block;
     text-align: center;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 30px;
-    font-weight: 700;
+    font-weight: 600;
     opacity: 1;
     color: #232323;
     padding-left: 17px;
@@ -1066,17 +1066,17 @@ img {
     transition: all 500ms ease;
 }
 
-.main-menu .navigation > li > a:before {
-    position: absolute;
-    content: "";
-    background-color: #dddad8;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    left: 0px;
-    top: 12px;
-    transition: all 500ms ease;
-}
+/*.main-menu .navigation > li > a:before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    background-color: #dddad8;*/
+/*    width: 8px;*/
+/*    height: 8px;*/
+/*    border-radius: 50%;*/
+/*    left: 0px;*/
+/*    top: 12px;*/
+/*    transition: all 500ms ease;*/
+/*}*/
 
 .main-menu .navigation > li.current > a,
 .main-menu .navigation > li:hover > a {
@@ -1187,8 +1187,8 @@ img {
     padding: 14px 0px 13px 0px;
     line-height: 24px;
     font-family: 'Nunito Sans', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 15px;
     color: #232323;
     text-align: left;
     transition: all 500ms ease;
@@ -1316,8 +1316,8 @@ img {
     padding: 14px 0px 13px 0px;
     line-height: 24px;
     font-family: 'Nunito Sans', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 15px;
     color: #232323;
     text-align: left;
     transition: all 500ms ease;
@@ -9800,10 +9800,17 @@ div#mCSB_1_container {
     padding-right: 100px;
 }
 
+<<<<<<< HEAD
 .content_block_10 .content-box .image {
     position: relative;
     /* margin-left: -217px; */
 }
+=======
+/*.content_block_10 .content-box .image {*/
+/*    position: relative;*/
+/*    margin-left: -217px;*/
+/*}*/
+>>>>>>> 9044e767b6c2603dd898e8ee4e60a7b6f530e335
 
 .content_block_10 .content-box .image img {
     width: 100%;

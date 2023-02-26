@@ -28,77 +28,125 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="current"><a href="{!! route('index') !!}">Home</a></li>
+                                <li class="current"><a href="{!! route('index') !!}">{!! __('index.home') !!}</a></li>
 
                                 <li class=" dropdown">
-                                    <a href="#">About</a>
+                                    <a href="#">{!! __('index.about') !!}</a>
                                     <ul>
                                         @foreach (abouts_type() as $type )
-                                        <li>
-                                            <a href="{!! route('about',slug($type->{'name_'.Lang()})) !!}">{{ $type->{'name_'.Lang()} }}</a>
-                                        </li>
+                                            <li>
+                                                <a href="{!! route('about',slug($type->{'name_'.Lang()})) !!}">
+                                                    {{ $type->{'name_'.Lang()} }}
+                                                </a>
+                                            </li>
 
                                         @endforeach
 
                                         <li>
-                                            <a href="{!! route('faq') !!}">FAQ's</a>
+                                            <a href="{!! route('faq') !!}">
+                                                {!! __('index.faq') !!}
+                                            </a>
                                         </li>
 
                                         <li class="dropdown">
-                                            <a href="#">Our Team</a>
+                                            <a href="#">{!! __('index.our_team') !!}</a>
                                             <ul>
-                                                <li><a href="{!! route('founders') !!}">Founders</a></li>
-                                                <li><a href="{!! route('directors') !!}">Directors</a></li>
-                                                <li><a href="{!! route('team') !!}">Team</a></li>
+                                                <li>
+                                                    <a href="{!! route('founders') !!}">
+                                                        {!! __('index.founders') !!}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{!! route('directors') !!}">
+                                                        {!! __('index.directors') !!}
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{!! route('team') !!}">
+                                                        {!! __('index.team') !!}
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="dropdown">
-                                    <a href="#">Projects</a>
+                                    <a href="#">{!! __('index.projects') !!}</a>
                                     <ul>
-                                        <li><a href="{!! route('projects','previous') !!}">Previous Projects</a></li>
-                                        <li><a href="{!! route('projects','current') !!}">Current Projects</a></li>
+                                        <li>
+                                            <a href="{!! route('projects','previous') !!}">
+                                                {!! __('index.previous_projects') !!}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{!! route('projects','current') !!}">
+                                                {!! __('index.current_projects') !!}
+                                            </a>
+                                        </li>
                                         @foreach (projects() as $project)
-                                        <li><a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">{{$project->{'title_'.Lang()} }}</a></li>
+                                            <li>
+                                                <a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">
+                                                    {{$project->{'title_'.Lang()} }}
+                                                </a>
+                                            </li>
                                         @endforeach
 
                                     </ul>
                                 </li>
 
-                                <li class="dropdown"><a href="{!! route('news') !!}">News</a></li>
+                                <li class="dropdown">
+                                    <a href="{!! route('news') !!}">
+                                        {!! __('index.news') !!}
+                                    </a>
+                                </li>
 
-                                <li class="dropdown"><a href="#">Publications</a>
+                                <li class="dropdown"><a href="#">{!! __('index.publications') !!}</a>
                                     <ul>
                                         <li>
-                                            <a href="{!! route('advertisements','Advertisements') !!}">ِAdvertisements</a>
+                                            <a href="{!! route('advertisements','Advertisements') !!}">{!! __('index.advertisements') !!}</a>
                                         </li>
                                         <li>
-                                            <a href="{!! route('advertisements','Brochures') !!}">Brochures</a>
+                                            <a href="{!! route('advertisements','Brochures') !!}">{!! __('index.brochures') !!}</a>
                                         </li>
                                         <li>
-                                            <a href="{!! route('advertisements','CaseStudy') !!}">Case Study</a>
+                                            <a href="{!! route('advertisements','CaseStudy') !!}">{!! __('index.case_study') !!}</a>
                                         </li>
                                         <li>
-                                            <a href="{!! route('advertisements','ScientificArticles') !!}">Scientific Articles</a>
+                                            <a href="{!! route('advertisements','ScientificArticles') !!}">{!! __('index.scientific_articles') !!}</a>
+
                                         </li>
 
                                     </ul>
                                 </li>
 
                                 <li class="dropdown">
-                                    <a href="{!! route('reports') !!}">Reports</a>
+                                    <a href="{!! route('reports') !!}">{!! __('index.reports') !!}</a>
                                 </li>
 
-                                <li class="dropdown"><a href="#">Media</a>
+                                <li class="dropdown">
+                                    <a href="#">
+                                        {!! __('index.media') !!}
+                                    </a>
                                     <ul>
-                                        <li><a href="{!! route('our-photos') !!}">Our Photos</a></li>
-                                        <li><a href="{!! route('videos') !!}">Our Videos</a></li>
+                                        <li>
+                                            <a href="{!! route('our-photos') !!}">
+                                                {!! __('index.our_photos') !!}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{!! route('videos') !!}">
+                                                {!! __('index.our_videos') !!}
+                                            </a>
+                                        </li>
                                     </ul>
                                 </li>
 
-                                <li><a href="{!! route('contact') !!}">Contact</a></li>
+                                <li>
+                                    <a href="{!! route('contact') !!}">
+                                        {!! __('index.contact') !!}
+                                    </a>
+                                </li>
 
                             </ul>
                         </div>
@@ -167,7 +215,7 @@
         <nav class="menu-box">
             <div class="nav-logo {!! Lang() == 'ar' ? 'rtl' : 'ltr' !!}">
                 <a href="{!! route('index') !!}">
-                    <img src="{!! asset('site/assets/images/etharLogo.jpg') !!}"  width="150" alt="" title="">
+                    <img src="{!! asset('site/assets/images/etharLogo.jpg') !!}" width="150" alt="" title="">
                 </a>
             </div>
             <div class="menu-outer">
@@ -184,10 +232,10 @@
                     </ul>
                 @else
                     <ul class="clearfix">
-                        <li><a href="#" ><i class="fab fa-facebook-f "></i></a></li>
-                        <li><a href="#" ><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" ><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" ><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f "></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                         <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
                     </ul>
                 @endif

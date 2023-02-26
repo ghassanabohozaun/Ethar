@@ -15,29 +15,25 @@ class QAController extends Controller
     public function index()
     {
         $QAs = QA::paginate(15);
-        $title = __('menu.qas');
+        $title = __('menu.faq');
         return view('admin.QA.index', compact('QAs', 'title'));
     }
 
     public function create()
     {
         $title = __('menu.add_new_faq');
-        return view('admin.QA.create' , compact('title'));
+        return view('admin.QA.create', compact('title'));
     }
 
     public function store(QARequest $request)
     {
-
-
-
         $lang_en = setting()->site_lang_en;
         QA::create([
-
             'details_ar' => $request->details_ar,
             'details_en' => $lang_en == 'on' ? $request->details_en : null,
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
-            'status'   => 'on',
+            'status' => 'on',
 
         ]);
 
@@ -54,8 +50,6 @@ class QAController extends Controller
     {
         // return $request->all();
         $QA = QA::findORFail($request->id);
-
-
 
         $lang_en = setting()->site_lang_en;
         $QA->update([
