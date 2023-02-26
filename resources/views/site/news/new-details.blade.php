@@ -29,7 +29,7 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>new</h1>
+                        <h1>{{__('index.news')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         

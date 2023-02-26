@@ -29,7 +29,7 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>News</h1>
+                        <h1>{{__('index.news')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         
@@ -58,9 +58,9 @@
                                 <div class="content-box">
                                     <div class="text">
                                         <span class="post-date">{{$new->publish_date}}</span>
-                                        <h3><a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">{{$new->{'title_'.Lang()} }}</a>
+                                        <h3><a  href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">{{$new->{'title_'.Lang()} }}</a>
                                         </h3>
-                                        <p > {!! $new->{'abstract_'.Lang()} !!} </p>
+                                        <p class="fifty-chars"> {!! $new->{'abstract_'.Lang()} !!} </p>
                                     </div>
                                     <div class="info clearfix">
                                         <div class="link-box pull-left"><a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">More Details</a>

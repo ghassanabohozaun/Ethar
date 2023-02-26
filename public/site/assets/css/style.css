@@ -9800,7 +9800,12 @@ div#mCSB_1_container {
     padding-right: 100px;
 }
 
-
+.fifty-chars {
+    width: 20ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .content_block_10 .content-box .image {
     position: relative;
     /* margin-left: -217px; */
