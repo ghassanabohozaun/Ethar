@@ -58,7 +58,7 @@
                                     <h4>Contact</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
-                                        <p>Phone<br /><a href="tel:00972592404940">00972592404940</a></p>
+                                        <p>Phone<br/><a href="tel:00972592404940">00972592404940</a></p>
                                     </div>
                                 </div>
 
@@ -66,7 +66,7 @@
                                     <h4>Emergency contact</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
-                                        <p>Phone<br /><a href="tel:00972592404940">00972592404940</a></p>
+                                        <p>Phone<br/><a href="tel:00972592404940">00972592404940</a></p>
                                     </div>
                                 </div>
 
@@ -75,14 +75,14 @@
                                     <h4>Email Address</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-letter"></i></div>
-                                        <p>Mail to<br /><a href="mailto:info@example.com">info@example.com</a></p>
+                                        <p>Mail to<br/><a href="mailto:info@example.com">info@example.com</a></p>
                                     </div>
                                 </div>
                                 <div class="single-item">
                                     <h4>Mailing Address</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-location"></i></div>
-                                        <p>palestine , Gaza <br />Gaza</p>
+                                        <p>palestine , Gaza <br/>Gaza</p>
                                     </div>
                                 </div>
                             </div>
@@ -96,29 +96,44 @@
                                 <h2>Leave us Message</h2>
                             </div>
                             <div class="form-inner">
-                                <form method="post" action="#" id="contact-form" class="default-form">
+
+                                <form method="POST" enctype="multipart/form-data" action="{!! route('send.contact.message') !!}"
+                                      id="form_contact_message_send" class="default-form">
+                                    @csrf
+
                                     <div class="form-group">
                                         <i class="far fa-user"></i>
-                                        <input type="text" name="username" placeholder="Your Name" required="">
+                                        <input type="text"  id="customer_name"
+                                               autocomplete="off" placeholder="Your Name">
+                                        <span id="customer_name_error" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="form-group">
                                         <i class="far fa-envelope"></i>
-                                        <input type="email" name="email" placeholder="Email Address" required="">
+                                        <input type="email"  id="customer_email"
+                                               autocomplete="off" placeholder="Email Address">
+                                        <span id="customer_email_error" class="form-text text-danger"></span>
                                     </div>
-                                    <div class="form-group">
-                                        <i class="far fa-phone"></i>
-                                        <input type="text" name="phone" required="" placeholder="Phone">
-                                    </div>
+
+
                                     <div class="form-group">
                                         <i class="far fa-sticky-note"></i>
-                                        <input type="text" name="subject" required="" placeholder="Subject">
+                                        <input type="text"  id="title" autocomplete="off"
+                                               placeholder="title">
+                                        <span id="title_error" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="form-group">
                                         <i class="far fa-text-height"></i>
-                                        <textarea name="message" placeholder="Massage" rows="30"></textarea>
+                                        <textarea id="message" autocomplete="off"
+                                                  placeholder="Massage" rows="50"></textarea>
+                                        <span id="message_error" class="form-text text-danger"></span>
                                     </div>
                                     <div class="form-group message-btn">
-                                        <button class="theme-btn btn-one" type="submit" name="submit-form">Send Message</button>
+
+                                        <button class="theme-btn btn-one" type="submit">
+                                            Send Message
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -137,3 +152,132 @@
     </div>
 
 @endsection
+@push('scripts')
+
+    <script src="{{asset('adminBoard/assets/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        // $('#reload').click(function () {
+        //     $.ajax({
+        //         type: 'GET',
+        //         url: 'reload-captcha',
+        //         success: function (data) {
+        //             $(".captcha span").html(data.captcha);
+        //         }
+        //     });
+        // });
+
+
+        /////////////////////////////////////////////////////////////////////
+        // Validation
+        $('#form_contact_message_send').validate({
+            rules: {
+                customer_name: {
+                    required: true,
+                },
+                customer_email: {
+                    required: true,
+                    email: true
+                },
+                title: {
+                    required: true,
+                },
+                message: {
+                    required: true,
+                },
+                captcha: {
+                    required: true,
+                },
+            },
+            messages: {
+                customer_name: {
+                    required: '{{trans('site.it_is_required')}}',
+                },
+                customer_email: {
+                    required: '{{trans('site.it_is_required')}}',
+                    email: '{{trans('site.email_email')}}',
+                },
+                title: {
+                    required: '{{trans('site.it_is_required')}}',
+                },
+                message: {
+                    required: '{{trans('site.it_is_required')}}',
+                },
+                captcha: {
+                    required: '{{trans('site.it_is_required')}}',
+                },
+            },
+        });
+
+        ////////////////////////////////////////////////////
+        $(document).on('submit', 'form', function (e) {
+            e.preventDefault();
+            //////////////////////////////////////////////////////////////
+            $('#customer_name').css('border-color', '');
+            $('#customer_email').css('border-color', '');
+            $('#title').css('border-color', '');
+            $('#message').css('border-color', '');
+            $('#captcha').css('border-color', '');
+            $('#captcha').css('border-color', '');
+            $('#captcha').css('border-color', '');
+
+
+            $('#customer_name_error').text('');
+            $('#customer_email_error').text('');
+            $('#title_error').text('');
+            $('#message_error').text('');
+            $('#captcha_error').text('');
+            /////////////////////////////////////////////////////////////
+            var data = new FormData(this);
+            var type = $(this).attr('method');
+            var url = $(this).attr('action');
+
+            $.ajax({
+                url: url,
+                type: type,
+                data: data,
+                dataType: false,
+                contentType: false,
+                cache: false,
+                processData: false,
+                beforeSend: function () {
+
+                },
+
+                success: function (data) {
+                    console.log(data);
+                    if (data.status == true) {
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top',
+                            showConfirmButton: false,
+                            timer: 2000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
+                        Toast.fire({
+                            icon: 'success',
+                            title: data.msg
+                        })
+                    }
+                    $('#form_contact_message_send')[0].reset();
+                },
+
+                error: function (reject) {
+                    var response = $.parseJSON(reject.responseText);
+                    $.each(response.errors, function (key, value) {
+                        $('#' + key + '_error').text(value[0]);
+                        $('#' + key).css('border-color', 'red');
+                    });
+                },
+                complete: function () {
+                },
+            })
+
+        });//end submit
+    </script>
+@endpush

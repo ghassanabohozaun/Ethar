@@ -73,5 +73,7 @@ Route::group(
     })->name('contact');
 
 
+    Route::post('/send-contact-message', 'SiteController@sendContactMessage')->name('send.contact.message');
+
 });
 

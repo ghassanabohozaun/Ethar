@@ -83,8 +83,14 @@
 <script src="{!! asset('site/assets/js/text_animation.js') !!}"></script>
 <script src="{!! asset('site/assets/js/jquery.nice-select.min.js') !!}"></script>
 
+
+
 <!-- main-js -->
 <script src="{!! asset('site/assets/js/script.js') !!}"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="{!! asset('site/assets/css/my-sweet-alert-style.css') !!}" rel="stylesheet">
+
 
 @stack('scripts')
 

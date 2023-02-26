@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/public/site/assets/css/my-sweet-alert-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/site/assets/js/sweetalert.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/projects/project-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/projects/project-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/projects/project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/projects/project.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/projects/publication.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/projects/case-study.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SupportCenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/SupportCenter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/contact.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +185,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/resources/views/site/projects",
+    "last_opened_file_path": "C:/laragon/www/etharps/public/site/assets/css",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -196,18 +197,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\public\site\assets\css" />
       <recent name="C:\laragon\www\etharps\resources\views\site\projects" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page\partners" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page" />
       <recent name="C:\laragon\www\etharps\resources\lang\en" />
-      <recent name="C:\laragon\www\etharps\resources\lang\ar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\public\site\assets\js" />
       <recent name="C:\laragon\www\etharps\resources\views\vendor\pagination" />
       <recent name="C:\laragon\www\etharps\public\adminBoard\uploadedImages\counters" />
       <recent name="C:\laragon\www\etharps\database\seeds" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
-      <recent name="C:\laragon\www\etharps\resources\views\admin" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -302,7 +303,7 @@
       <workItem from="1677326706649" duration="11065000" />
       <workItem from="1677405387380" duration="235000" />
       <workItem from="1677410070777" duration="1203000" />
-      <workItem from="1677421810297" duration="12183000" />
+      <workItem from="1677421810297" duration="14373000" />
     </task>
     <servers />
   </component>

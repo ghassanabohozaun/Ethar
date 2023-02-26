@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\File;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SupportCenterRequest;
 use App\Models\Article;
 use App\Models\About;
 use App\Models\AboutType;
@@ -11,6 +12,7 @@ use App\Models\Partner;
 use App\Models\Projects;
 use App\Models\QA;
 use App\Models\Slider;
+use App\Models\SupportCenter;
 use App\Models\Team;
 use App\Models\testimonial;
 use App\Traits\GeneralTrait;
@@ -88,7 +90,7 @@ class SiteController extends Controller
 
     // About
     public function about( $name){
-        // return current name 
+        // return current name
         $name = returnSpaceBetweenString($name);
 
          $about_type = AboutType::where('name_'.Lang(),$name)->first();
@@ -111,6 +113,24 @@ class SiteController extends Controller
             return redirect()->back();
         }
 
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    /// Send Contact Message
+    public function sendContactMessage(SupportCenterRequest $request)
+    {
+        try {
+            SupportCenter::create([
+                'customer_name' => $request->customer_name,
+                'customer_email' => $request->customer_email,
+                'title' => $request->title,
+                'message' => $request->message,
+            ]);
+            return $this->returnSuccessMessage(trans('site.send_success_message'));
+        } catch (\Exception $exception) {
+            return $this->returnError(trans('general.try_catch_error_message'), 500);
+        }//end catch
     }
 
 }
