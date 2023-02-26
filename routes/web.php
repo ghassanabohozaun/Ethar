@@ -45,6 +45,8 @@ Route::group(
     // news
     Route::get('/news', [NewsController::class, 'getNews'])->name('news');
     Route::get('/new-details/{title}', [NewsController::class, 'detailNew'])->name('new-details');
+    Route::post('/send-comment', [NewsController::class, 'sendComment'])->name('send-comment');
+
 
     // publication
     Route::get('/publications/{type}', [PublicationController::class, 'getPublications'])->name('advertisements');
@@ -74,6 +76,7 @@ Route::group(
 
 
     Route::post('/send-contact-message', 'SiteController@sendContactMessage')->name('send.contact.message');
+
 
 });
 

@@ -65,10 +65,12 @@ return array(
     'title' => 'عنوان الرسالة',
     'message' => 'الرسالة',
     'send_message' => 'ارسل الرسالة',
+    'views_count' => 'عدد المشاهدات',
+    'comments_count' => 'عدد التعليقات',
 
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
 
-    'send_success_message' => 'تم ارسال الرسالة بنجاح',
-
+    'send_success_message' => 'تم ارسال رسالتك بنجاح',
+    'add_success_comment' => 'تم اضافة تعليقك بنجاح',
 
 );

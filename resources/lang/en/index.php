@@ -66,10 +66,11 @@ return [
     'title' => 'Title',
     'message' => 'Message',
     'send_message' => 'Send Message',
-
+    'views_count' => 'Views',
+    'comments_count' => 'Comments',
 
 
     'no_data_found' => 'Sorry, There are no data currently',
-    'send_success_message' => 'Message Send Successfully'
-
+    'send_success_message' => 'Your Message Sent Successfully',
+    'add_success_comment' => 'Your Comment Added Successfully',
 ];

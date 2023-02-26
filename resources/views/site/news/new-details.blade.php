@@ -15,7 +15,8 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
 
         <!-- header -->
@@ -32,7 +33,7 @@
                         <h1>{{__('index.news')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-
+                        &nbsp;
                     </ul>
                 </div>
             </div>
@@ -50,11 +51,13 @@
                             <div class="content-one">
                                 <div class="upper-box">
 
-                                    <h2>{{$new->{'title_'.Lang()} }}</h2>
+                                    <h2>{!! $new->{'title_'.Lang()} !!}</h2>
                                     <ul class="post-info clearfix">
-
-                                        <li><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</li>
-                                        <li><i class="far fa-eye"></i>{{$new->views}} Views</li>
+                                        <li>
+                                            <i class="far fa-comment"></i>{{$new->comments()->count()}} {!! __('index.comments_count') !!}
+                                        </li>
+                                        <li><i class="far fa-eye"></i>{{$new->views}} {!! __('index.views_count') !!}
+                                        </li>
                                     </ul>
                                 </div>
                                 <figure class="image-box">
@@ -73,22 +76,25 @@
                                 </div>
                                 @foreach ($new->comments as $comment)
 
-                                <div class="comment">
-                                    <figure class="thumb-box">
-                                        @if ($comment->photo)
-                                        <img src="{{asset('adminBoard\\uploadedImages\\articles\\comments\\'. $comment->photo)}}" alt="">
-                                        @else
-                                        <img src="{!! asset('/site/assets/images/news/comment-1.jpg') !!}" alt="">
-                                        @endif
-                                    </figure>
-                                    <div class="comment-inner">
-                                        <div class="comment-info clearfix">
-                                            <h3>{{$comment->person_name}}</h3>
-                                            <span class="post-date"> {{$comment->created_at->format('d.m.Y')}} [{{$comment->created_at->format('H.i A')}} ]</span>
+                                    <div class="comment">
+                                        <figure class="thumb-box">
+                                            @if ($comment->photo)
+                                                <img
+                                                    src="{{asset('adminBoard\\uploadedImages\\articles\\comments\\'. $comment->photo)}}"
+                                                    alt="">
+                                            @else
+                                                <img src="{!! asset('/site/assets/images/news/comment-1.jpg') !!}"
+                                                     alt="">
+                                            @endif
+                                        </figure>
+                                        <div class="comment-inner">
+                                            <div class="comment-info clearfix">
+                                                <h3>{{$comment->person_name}}</h3>
+                                                <span class="post-date"> {{$comment->created_at->format('d.m.Y')}} [{{$comment->created_at->format('H.i A')}} ]</span>
+                                            </div>
+                                            <p>{!! $comment->commentary !!}</p>
                                         </div>
-                                        <p>{!! $comment->commentary !!}</p>
                                     </div>
-                                </div>
                                 @endforeach
 
 
@@ -100,16 +106,25 @@
                                     <p>Your email address will not be published. Required fields are marked *</p>
                                 </div>
                                 <div class="form-inner">
-                                    <form method="post" action="#" class="comment-form">
+
+
+                                    <form method="POST" enctype="multipart/form-data"
+                                          action="{!! route('send-comment') !!}"
+                                          id="form_comment_send" class="comment-form">
+                                        @csrf
+
                                         <div class="row clearfix">
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                                <textarea name="message" placeholder="Your Comment *"></textarea>
+                                                <textarea name="commentary" id="commentary"
+                                                          placeholder="Your Comment *"></textarea>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                                <input type="text" name="name" placeholder="Your Name *" required="">
+                                                <input type="text" id="person_name" name="person_name"
+                                                       placeholder="Your Name *">
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                                <input type="email" name="email" placeholder="Email *" required="">
+                                                <input type="email" id='person_email' name="person_email"
+                                                       placeholder="Email *">
                                             </div>
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                                 <button type="submit" class="theme-btn btn-one">Submit</button>
@@ -135,3 +150,97 @@
     </div>
 
 @endsection
+@push('scripts')
+
+    <script src="{{asset('adminBoard/assets/js/jquery.validate.min.js')}}" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        // $('#reload').click(function () {
+        //     $.ajax({
+        //         type: 'GET',
+        //         url: 'reload-captcha',
+        //         success: function (data) {
+        //             $(".captcha span").html(data.captcha);
+        //         }
+        //     });
+        // });
+
+
+        /////////////////////////////////////////////////////////////////////
+        // Validation
+        $('#form_comment_send').validate({
+            rules: {
+                commentary: {
+                    required: true,
+                },
+                person_email: {
+                    required: true,
+                    email: true
+                },
+                person_name: {
+                    required: true,
+                },
+                captcha: {
+                    required: true,
+                },
+            },
+
+        });
+
+        ////////////////////////////////////////////////////
+        $(document).on('submit', 'form', function (e) {
+            e.preventDefault();
+
+            var data = new FormData(this);
+            var type = $(this).attr('method');
+            var url = $(this).attr('action');
+
+            $.ajax({
+                url: url,
+                type: type,
+                data: data,
+                dataType: false,
+                contentType: false,
+                cache: false,
+                processData: false,
+                beforeSend: function () {
+
+                },
+
+                success: function (data) {
+                    console.log(data);
+                    if (data.status == true) {
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top',
+                            showConfirmButton: false,
+                            timer: 2000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
+                        Toast.fire({
+                            icon: 'success',
+                            title: data.msg
+                        })
+                    }
+                    $('#form_comment_send')[0].reset();
+                },
+
+                error: function (reject) {
+                    var response = $.parseJSON(reject.responseText);
+                    $.each(response.errors, function (key, value) {
+                        $('#' + key + '_error').text(value[0]);
+                        $('#' + key).css('border-color', 'red');
+                    });
+                },
+                complete: function () {
+                },
+            })
+
+        });//end submit
+    </script>
+@endpush

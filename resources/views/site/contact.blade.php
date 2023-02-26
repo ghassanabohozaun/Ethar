@@ -70,7 +70,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="single-item">
                                     <h4>{!! __('index.email_address') !!}</h4>
                                     <div class="text">
@@ -79,6 +78,7 @@
                                         </p>
                                     </div>
                                 </div>
+
                                 <div class="single-item">
                                     <h4>{!! __('index.address') !!}</h4>
                                     <div class="text">
@@ -86,6 +86,7 @@
                                         <p>{!! __('index.palestine') !!} <br/>{!! __('index.khan_younes') !!}</p>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -99,7 +100,7 @@
                             <div class="form-inner">
 
                                 <form method="POST" enctype="multipart/form-data"
-                                      action="{!! route('send.contact.message') !!}"
+                                      action="{!! route('send-contact-message') !!}"
                                       id="form_contact_message_send" class="default-form">
                                     @csrf
 
@@ -192,24 +193,24 @@
                     required: true,
                 },
             },
-            messages: {
-                customer_name: {
-                    required: '{{trans('site.it_is_required')}}',
-                },
-                customer_email: {
-                    required: '{{trans('site.it_is_required')}}',
-                    email: '{{trans('site.email_email')}}',
-                },
-                title: {
-                    required: '{{trans('site.it_is_required')}}',
-                },
-                message: {
-                    required: '{{trans('site.it_is_required')}}',
-                },
-                captcha: {
-                    required: '{{trans('site.it_is_required')}}',
-                },
-            },
+            {{--messages: {--}}
+            {{--    customer_name: {--}}
+            {{--        required: '{{trans('site.it_is_required')}}',--}}
+            {{--    },--}}
+            {{--    customer_email: {--}}
+            {{--        required: '{{trans('site.it_is_required')}}',--}}
+            {{--        email: '{{trans('site.email_email')}}',--}}
+            {{--    },--}}
+            {{--    title: {--}}
+            {{--        required: '{{trans('site.it_is_required')}}',--}}
+            {{--    },--}}
+            {{--    message: {--}}
+            {{--        required: '{{trans('site.it_is_required')}}',--}}
+            {{--    },--}}
+            {{--    captcha: {--}}
+            {{--        required: '{{trans('site.it_is_required')}}',--}}
+            {{--    },--}}
+            {{--},--}}
         });
 
         ////////////////////////////////////////////////////
