@@ -63,12 +63,7 @@
                                         @foreach (projects() as $project)
                                         <li><a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">{{$project->{'title_'.Lang()} }}</a></li>
                                         @endforeach
-                                        {{-- <li><a href="{!! route('project-details') !!}">Current Project 1</a></li>
-                                        <li><a href="{!! route('project-details') !!}">Current Project 2</a></li>
-                                        <li><a href="{!! route('project-details') !!}">Current Project 3</a></li>
-                                        <li><a href="{!! route('project-details') !!}">Current Project 4</a></li>
-                                        <li><a href="{!! route('project-details') !!}">Current Project 4</a></li>
-                                        <li><a href="{!! route('project-details') !!}">Current Project 5</a></li> --}}
+
                                     </ul>
                                 </li>
 

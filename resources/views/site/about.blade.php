@@ -27,7 +27,7 @@
             <section class="page-title"
                      style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
 
-                <div class="auto-container{!! Lang()=='ar' ? 'rtl':'' !!}">
+                <div class="auto-container">
                     <div class="content-box">
                         <div class="title">
                             <h1>{{$about->type->{'name_'.Lang()} }}</h1>
