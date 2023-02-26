@@ -29,10 +29,15 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>News</h1>
+                        <h1>{{$project->{'title_'.Lang()} .' '. __('site.CaseStudy')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        
+                        {{-- <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
+                       
+                        <li>{{ __('site.'.$type)}}</li> --}}
+                        &nbsp;‏
+
+
                     </ul>
                 </div>
             </div>
@@ -40,42 +45,45 @@
         <!-- End Page Title -->
 
 
+
         <section class="blog-grid">
             <div class="auto-container">
                 <div class="row clearfix">
-                    @foreach ($news as $new )
-                        
+                    @foreach ($publications as $publication)
+
                     <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                         <div class="news-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms"
                              data-wow-duration="1500ms"
                              style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                            <div class="inner-box">
+                                
+                             <div class="inner-box">
                                 <figure class="image-box">
-                                    <a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">
-                                        <img src="{{asset('adminBoard\\uploadedImages\\articles\\'. $new->photo)}}" alt="">
+                                    <a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">
+                                        <img src="{!! asset('adminBoard\\uploadedImages\\publications\\'. $publication->photo) !!}" alt="">
                                     </a>
                                 </figure>
                                 <div class="content-box">
                                     <div class="text">
-                                        <span class="post-date">{{$new->publish_date}}</span>
-                                        <h3><a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">{{$new->{'title_'.Lang()} }}</a>
+                                        <span class="post-date">{{$publication->date}}</span>
+                                        <div class="category"><a href="#"># National Day</a></div>
+                                        <h3><a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">{{$publication->{'title_'.Lang()} }}</a>
                                         </h3>
-                                        <p > {!! $new->{'abstract_'.Lang()} !!} </p>
+                                        <p>{!!$publication->{'details_'.Lang()} !!}</p>
                                     </div>
                                     <div class="info clearfix">
-                                        <div class="link-box pull-left"><a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">More Details</a>
+                                        <div class="link-box pull-left"><a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">More Details</a>
                                         </div>
-                                        <div class="comment-box pull-right">
-                                            <a href="#l"><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</a>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     @endforeach
 
-                 
+              
+
                 </div>
                 <div class="more-btn centred"><a href="#" class="theme-btn btn-one">Load More</a></div>
             </div>

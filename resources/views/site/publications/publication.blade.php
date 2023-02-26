@@ -32,9 +32,12 @@
                         <h1>{{ __('site.'.$type)}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
+                        {{-- <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
                        
-                        <li>{{ __('site.'.$type)}}</li>
+                        <li>{{ __('site.'.$type)}}</li> --}}
+                        &nbsp;‏
+
+
                     </ul>
                 </div>
             </div>

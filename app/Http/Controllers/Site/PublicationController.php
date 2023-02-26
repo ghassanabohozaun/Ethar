@@ -11,11 +11,11 @@ class PublicationController extends Controller
     function getPublications($type){
         $publications = Publications::orderByDesc('id')->where('status' ,'on')->where('type' ,$type)->paginate(8) ;
         if($publications){
-            return view('site.publications.advertisements' , compact('publications' , 'type'));
+            return view('site.publications.publication' , compact('publications' , 'type'));
         }else{
             return redirect(route('index'));
         }
-      
+
     }
 
     function detailPublication($title){
@@ -25,7 +25,7 @@ class PublicationController extends Controller
 
         if($publication){
             $publication->increment('views', 1);
-            return view('site.publications.advertisements-details' , compact('publication' ));
+            return view('site.publications.publication-details' , compact('publication' ));
         }else{
             return redirect(route('index'));
         }

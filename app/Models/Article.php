@@ -26,4 +26,8 @@ class Article extends Model
             return __('general.ar_en');
         }
     }
+
+    public function comments(){
+        return $this->hasMany(Comment::class , 'post_id')->where('status' , 'on');
+    }
 }

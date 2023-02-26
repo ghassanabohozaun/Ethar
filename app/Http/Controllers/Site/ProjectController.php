@@ -39,7 +39,7 @@ class ProjectController extends Controller
         if($project){
              $publications =  $project->publications;
             if($publications){
-                return view('site.publications.advertisements' , compact('publications'));
+                return view('site.projects.publication' , compact('publications' , 'project'));
             }else{
                 return redirect(route('index'));
             }

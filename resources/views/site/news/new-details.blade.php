@@ -32,9 +32,7 @@
                         <h1>new</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>new</li>
+                        
                     </ul>
                 </div>
             </div>
@@ -51,54 +49,49 @@
 
                             <div class="content-one">
                                 <div class="upper-box">
-                                    <span># National Day</span>
-                                    <h2>Aid for Country: The Charity for Orphans</h2>
+                                   
+                                    <h2>{{$new->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                        <li><i class="far fa-user"></i>By Richardson</li>
-                                        <li><i class="far fa-comment"></i>08 Cmts</li>
-                                        <li><i class="far fa-eye"></i>25 Views</li>
+                                      
+                                        <li><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</li>
+                                        <li><i class="far fa-eye"></i>{{$new->views}} Views</li>
                                     </ul>
                                 </div>
                                 <figure class="image-box">
-                                    <img src="{!! asset('/site/assets/images/news/news-14.jpg') !!}" alt="">
-                                    <span class="post-date">03.03.2021</span>
+                                    <img src="{{asset('adminBoard\\uploadedImages\\articles\\'. $new->photo)}}" alt="">
+                                    <span class="post-date">{{$new->publish_date}}</span>
                                 </figure>
                                 <div class="text">
-                                    <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure but because those who do not know how to pursue pleasure on the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain these cases are perfectly.</p>
-                                    <p>When our power of choice is untrammelled and when nothing prevents our being able to dowhat we like best every pleasures  to be welcomed every pain avoided but in certain circumstances and owing to the claims of duty or the obligation.</p>
-                                    <p>Indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the all moment, so blinded by desire, that they cannot foresee the pain and trouble.</p>
-                                    <p>Untrammelled and when nothing prevents work being able to do what we like best every pleasure is to be  but in certain duty one who avoids a pain that produces.</p>
+                                    <p>{!! $new->{'abstract_'.Lang()} !!}</p>
+
                                 </div>
                             </div>
 
                             <div class="comment-box">
                                 <div class="group-title">
-                                    <h3>Comments (02)</h3>
+                                    <h3>Comments ({{$new->comments()->count()}} )</h3>
                                 </div>
+                                @foreach ($new->comments as $comment)
+                                    
                                 <div class="comment">
                                     <figure class="thumb-box">
+                                        @if ($comment->photo)
+                                        <img src="{{asset('adminBoard\\uploadedImages\\articles\\comments\\'. $comment->photo)}}" alt="">
+                                        @else
                                         <img src="{!! asset('/site/assets/images/news/comment-1.jpg') !!}" alt="">
+                                        @endif
                                     </figure>
                                     <div class="comment-inner">
                                         <div class="comment-info clearfix">
-                                            <h3>Isaac Herman</h3>
-                                            <span class="post-date">05.03.2021 [11.00am]</span>
+                                            <h3>{{$comment->person_name}}</h3>
+                                            <span class="post-date"> {{$comment->created_at->format('d.m.Y')}} [{{$comment->created_at->format('H.i A')}} ]</span>
                                         </div>
-                                        <p>How all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                                        <p>{!! $comment->commentary !!}</p>
                                     </div>
                                 </div>
-                                <div class="comment">
-                                    <figure class="thumb-box">
-                                        <img src="{!! asset('site/assets/images/news/comment-2.jpg') !!}" alt="">
-                                    </figure>
-                                    <div class="comment-inner">
-                                        <div class="comment-info clearfix">
-                                            <h3>William Cobus</h3>
-                                            <span class="post-date">04.03.2021 [10.00am]</span>
-                                        </div>
-                                        <p>Undertakes laborious physical exercise, except to obtain some advantage from it but who has any right to find fault.</p>
-                                    </div>
-                                </div>
+                                @endforeach
+
+                             
                             </div>
 
                             <div class="comments-form-area">

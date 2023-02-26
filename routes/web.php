@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Site\NewsController;
 use App\Http\Controllers\Site\ProjectController;
 use App\Http\Controllers\Site\PublicationController;
 use App\Http\Controllers\Site\SiteController;
@@ -42,18 +43,12 @@ Route::group(
 
     Route::get('/projects/{type}', [ProjectController::class, 'getProjects'])->name('projects');
     Route::get('/project-details/{title}', [ProjectController::class, 'detailProject'])->name('project-details');
-    Route::get('/projects/{name}/publications', [ProjectController::class, 'getProjectPublications'])->name('project-publications');
+    Route::get('/projects/{name}/case-study', [ProjectController::class, 'getProjectPublications'])->name('project-publications');
 
+   
     
-    Route::get('/news', function () {
-        return view('site.news.new');
-    })->name('news');
-
-    Route::get('/new-details', function () {
-        return view('site.news.new-details');
-    })->name('new-details');
-
-
+    Route::get('/news',[NewsController::class , 'getNews'])->name('news');
+    Route::get('/new-details/{title}',[NewsController::class , 'detailNew'])->name('new-details');
 
     Route::get('/publications/{type}',[PublicationController::class , 'getPublications'])->name('advertisements');
     Route::get('/publication-details/{title}', [PublicationController::class , 'detailPublication'])->name('advertisement-details');
