@@ -21,17 +21,18 @@ Route::group(
         return view('site.index');
     })->where(['any' => '.*']);
 
+    // index
     Route::get('/', 'SiteController@index')->name('index');
 
+    // about
     Route::get('About/{name}', [SiteController::class, 'about'])->name('about');
 
-
+    // faq
     Route::get('/faq', [SiteController::class, 'qa'])->name('faq');
 
 
-    Route::get('/founders', function () {
-        return view('site.founders');
-    })->name('founders');
+    // founders
+    Route::get('/founders', 'TeamsController@founders')->name('founders');
 
     Route::get('/directors', function () {
         return view('site.directors');
@@ -41,26 +42,22 @@ Route::group(
         return view('site.team');
     })->name('team');
 
+    // projects
     Route::get('/projects/{type}', [ProjectController::class, 'getProjects'])->name('projects');
     Route::get('/project-details/{title}', [ProjectController::class, 'detailProject'])->name('project-details');
     Route::get('/projects/{name}/case-study', [ProjectController::class, 'getProjectPublications'])->name('project-publications');
 
-   
-    
-    Route::get('/news',[NewsController::class , 'getNews'])->name('news');
-    Route::get('/new-details/{title}',[NewsController::class , 'detailNew'])->name('new-details');
+    // news
+    Route::get('/news', [NewsController::class, 'getNews'])->name('news');
+    Route::get('/new-details/{title}', [NewsController::class, 'detailNew'])->name('new-details');
 
-    Route::get('/publications/{type}',[PublicationController::class , 'getPublications'])->name('advertisements');
-    Route::get('/publication-details/{title}', [PublicationController::class , 'detailPublication'])->name('advertisement-details');
-
-
+    // publication
+    Route::get('/publications/{type}', [PublicationController::class, 'getPublications'])->name('advertisements');
+    Route::get('/publication-details/{title}', [PublicationController::class, 'detailPublication'])->name('advertisement-details');
 
     // reports
     Route::get('/reports', 'ReportsController@index')->name('reports');
     Route::get('/report-details/{year?}', 'ReportsController@details')->name('report-details');
-
-
-
 
 
     Route::get('/our-photos', function () {

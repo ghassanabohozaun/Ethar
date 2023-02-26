@@ -75,6 +75,7 @@
                                                         <th>{!! __('teams.name_en') !!}</th>
                                                         <th>{!! __('teams.position_ar') !!}</th>
                                                         <th>{!! __('teams.position_en') !!}</th>
+                                                        <th>{!! __('teams.type') !!}</th>
                                                         <th  class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
                                                     </thead>
@@ -87,6 +88,7 @@
                                                             <td>{{ $team->name_en }}</td>
                                                             <td>{{ $team->position_ar }}</td>
                                                             <td>{{ $team->position_en }}</td>
+                                                            <td>{{ $team->type }}</td>
                                                             <td>
                                                                 <a class="btn btn-hover-warning btn-icon btn-pill restore_team_member_btn"
                                                                    data-id="{{$team->id}}"
@@ -104,7 +106,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="7" class="text-center">
+                                                            <td colspan="8" class="text-center">
                                                                 {!! __('teams.no_team_members_found') !!}
                                                             </td>
                                                         </tr>
@@ -112,7 +114,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="7">
+                                                        <td colspan="8">
                                                             <div class="float-right">
                                                                 {!! $teams->appends(request()->all())->links() !!}
                                                             </div>

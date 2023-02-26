@@ -76,6 +76,7 @@
                                                         <th>{!! __('teams.name_en') !!}</th>
                                                         <th>{!! __('teams.position_ar') !!}</th>
                                                         <th>{!! __('teams.position_en') !!}</th>
+                                                        <th>{!! __('teams.type') !!}</th>
                                                         <th>{!! __('teams.status') !!}</th>
                                                         <th  class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
@@ -89,6 +90,7 @@
                                                             <td>{{ $team->name_en }}</td>
                                                             <td>{{ $team->position_ar }}</td>
                                                             <td>{{ $team->position_en }}</td>
+                                                            <td>{{ $team->type }}</td>
                                                             <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
@@ -100,7 +102,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="8" class="text-center">
+                                                            <td colspan="9" class="text-center">
                                                                 {!! __('teams.no_team_members_found') !!}
                                                             </td>
                                                         </tr>
@@ -108,7 +110,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="8">
+                                                        <td colspan="9">
                                                             <div class="float-right">
                                                                 {!! $teams->appends(request()->all())->links() !!}
                                                             </div>

@@ -41,7 +41,6 @@
                                             </li>
 
                                         @endforeach
-
                                         <li>
                                             <a href="{!! route('faq') !!}">
                                                 {!! __('index.faq') !!}

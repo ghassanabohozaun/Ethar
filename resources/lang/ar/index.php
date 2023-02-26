@@ -1,6 +1,6 @@
 <?php
 
-return [
+return array(
 
     'home' => 'الرئيسية',
     'about' => 'عن الجمعية',
@@ -23,6 +23,7 @@ return [
     'our_photos'=>'صورنا',
     'our_videos'=>'فيديوهاتنا',
     'contact'=>'اتصل بنا',
+
 
 
     'about_our_projects' => 'عن مشاريعنا',
@@ -50,4 +51,4 @@ return [
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
 
 
-];
+);
