@@ -20,7 +20,12 @@
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
-        @if (isset($about))
+        @if( !isset($about))
+            <!-- team-section -->
+            <section class="team-section centred">
+                <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
+            </section>
+        @else
             <!-- Page Title -->
             <section class="page-title"
                      style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
@@ -79,29 +84,7 @@
             </section>
             <!-- about-style-three end -->
 
-        @elseif (!isset($about))
-            <!-- Page Title -->
-            <section class="page-title"
-                     style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
-                <div class="auto-container">
-                    <div class="content-box">
-                        <div class="title">
-                            <h1>{{$about_type->{'name_'.Lang()} }}</h1>
-                        </div>
-                        <ul class="bread-crumb clearfix">
-                          &nbsp;
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- End Page Title -->
-            <!-- Not Found  -->
-            <section class="about-style-three">
-                <div class="sec-title text-center">
-                    <h2>{{__('index.no_data_found')}}</h2>
-                </div>
-            </section>
-            <!-- End  Not Found -->
+
         @endif
 
 

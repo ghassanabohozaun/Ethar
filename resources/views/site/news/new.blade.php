@@ -32,7 +32,7 @@
                         <h1>{{__('index.news')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        
+
                     </ul>
                 </div>
             </div>
@@ -44,26 +44,26 @@
             <div class="auto-container">
                 <div class="row clearfix">
                     @foreach ($news as $new )
-                        
+
                     <div class="col-lg-4 col-md-6 col-sm-12 news-block">
                         <div class="news-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms"
                              data-wow-duration="1500ms"
                              style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
                             <div class="inner-box">
                                 <figure class="image-box">
-                                    <a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">
+                                    <a href="{!! route('new-details',slug($new->{'title_'.Lang()}) ) !!}">
                                         <img src="{{asset('adminBoard\\uploadedImages\\articles\\'. $new->photo)}}" alt="">
                                     </a>
                                 </figure>
                                 <div class="content-box">
-                                    <div class="text">
+                                    <div class="text my-word-break">
                                         <span class="post-date">{{$new->publish_date}}</span>
-                                        <h3><a  href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">{{$new->{'title_'.Lang()} }}</a>
+                                        <h3><a  href="{!! route('new-details',slug($new->{'title_'.Lang()}) ) !!}">{{$new->{'title_'.Lang()} }}</a>
                                         </h3>
-                                        <p > {!! $new->{'abstract_'.Lang()} !!} </p>
+                                        <p > {!! \Illuminate\Support\Str::limit(strip_tags($new->{'abstract_'.Lang()}),$limit = 50, $end = ' ...')!!} </p>
                                     </div>
                                     <div class="info clearfix">
-                                        <div class="link-box pull-left"><a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">More Details</a>
+                                        <div class="link-box pull-left"><a href="{!! route('new-details',slug($new->{'title_'.Lang()}) ) !!}">More Details</a>
                                         </div>
                                         <div class="comment-box pull-right">
                                             <a href="#l"><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</a>
@@ -75,11 +75,11 @@
                     </div>
                     @endforeach
 
-                 
+
                 </div>
              {{-- /   <div class="more-btn centred"><a href="#" class="theme-btn btn-one">Load More</a></div> --}}
                 <div class="centred" >
-                    {{ $news->links() }}
+                    {{  $news->links('vendor.pagination.my-bootstrap') }}
                 </div>
             </div>
         </section>
