@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/QAController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/QAController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/ltr.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/ltr.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/site.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/faq.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/PublicationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PublicationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedFiles/publications/16744004958142794.Ahmed CV.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673526377.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1673948475.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1674036435.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1674400494.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1674403015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1676114859.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1676114927.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1676116473.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1676290779.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1676541972.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1676541982.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/publications/1676542007.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/publications/advertisements-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/publications/advertisements-details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/publications/advertisements.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/publications/advertisements.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +313,7 @@
       <workItem from="1677158180061" duration="22052000" />
       <workItem from="1677242806948" duration="21086000" />
       <workItem from="1677310612687" duration="3244000" />
-      <workItem from="1677326706649" duration="8545000" />
+      <workItem from="1677326706649" duration="8799000" />
     </task>
     <servers />
   </component>

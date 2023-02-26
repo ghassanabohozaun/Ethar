@@ -103,6 +103,7 @@
                                 <li class="dropdown"><a href="#">{!! __('index.publications') !!}</a>
                                     <ul>
                                         <li>
+<<<<<<< HEAD
                                             <a href="{!! route('advertisements') !!}">{!! __('index.advertisements') !!}</a>
                                         </li>
                                         <li>
@@ -113,6 +114,18 @@
                                         </li>
                                         <li>
                                             <a href="#">{!! __('index.scientific_articles') !!}</a>
+=======
+                                            <a href="{!! route('advertisements','Advertisements') !!}">ِAdvertisements</a>
+                                        </li>
+                                        <li>
+                                            <a href="{!! route('advertisements','Brochures') !!}">Brochures</a>
+                                        </li>
+                                        <li>
+                                            <a href="{!! route('advertisements','CaseStudy') !!}">Case Study</a>
+                                        </li>
+                                        <li>
+                                            <a href="{!! route('advertisements','ScientificArticles') !!}">Scientific Articles</a>
+>>>>>>> 3d3eb08677b46684e2cdb9db647f0d3863a58729
                                         </li>
 
                                     </ul>

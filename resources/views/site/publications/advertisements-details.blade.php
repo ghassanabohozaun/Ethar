@@ -51,31 +51,18 @@
                             <div class="content-one">
                                 <div class="upper-box">
                                     <span># Advertisements #</span>
-                                    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                                    <h2>{{$publication->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                        <li><i class="far fa-user"></i>By Name of writer</li>
-                                        <li><i class="far fa-eye"></i>25 Views</li>
+                                        <li><i class="far fa-user"></i>{{$publication->writer}}</li>
+                                        <li><i class="far fa-eye"></i>{{$publication->views}}</li>
                                     </ul>
                                 </div>
                                 <figure class="image-box">
-                                    <img src="{!! asset('site/assets/images/news/news-14.jpg') !!}" alt="">
-                                    <span class="post-date">03.03.2021</span>
+                                    <img src="{!! asset('adminBoard\\uploadedImages\\publications\\'. $publication->photo) !!}" alt="">
+                                    <span class="post-date">{{$publication->date}}</span>
                                 </figure>
                                 <div class="text">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen
-                                        book. It has survived not only five centuries, but also the leap into electronic
-                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum remaining essentially unchanged. It was popularised in the 1960s
-                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                        recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum</p>
+                                    <p>{!! $publication->{'details_'.Lang()} !!}</p>
                                 </div>
                             </div>
                         </div>

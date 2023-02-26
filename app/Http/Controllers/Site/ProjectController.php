@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     function getProjects($type){
-        $projects = Projects::orderByDesc('id')->where('status' ,'on')->where('type' ,$type)->paginate(8) ;
+        $projects = Projects::orderByDesc('id')->where('status' ,'on')->where('type' ,$type)->paginate(1) ;
         if($projects){
             return view('site.projects.project' , compact('projects'));
         }else{
