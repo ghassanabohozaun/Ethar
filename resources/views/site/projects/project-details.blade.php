@@ -54,7 +54,7 @@
                                     <span># project #</span>
                                     <h2>{{ $project->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                   
+
                                         <li><i class="far fa-eye"></i>{{$project->views}}</li>
                                     </ul>
                                 </div>
@@ -65,12 +65,15 @@
                                 <div class="text">
                                     <p>{!! $project->{'details_'.Lang()} !!}</p>
                                 </div>
+                                <br/>
                                 @if($project->file != null)
                                 <div class="font-weight-bold mt-5"><h5> <a class="font-weight-bold"
                                     href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->file)}}"
                                     target="_blank">{!! __('general.download') !!} PDF</a></h5>
                                 </div>
                                 @endif
+                                <br/>
+
 
                                 @if($project->word != null)
 
@@ -79,8 +82,17 @@
                                     target="_blank">{!! __('general.download') !!}  WORD</a></h5>
                                 </div>
                                 @endif
+                                <br/>
+
                                 
-                                    
+                                @if ( $project->publications()->first() !=null  )
+                                    <li class="share">
+                                        {{-- <i class="fas fa-book"></i> --}}
+                                        <h5><a class="font-weight-bold" href="{!! route('project-publications',slug($project->{'title_'.Lang()}) )!!}">visit case studies</a></h5>
+                                    </li>
+                                @endif
+
+
                             </div>
 
                         </div>
@@ -90,7 +102,7 @@
                     <!-- right  -->
                     <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
                         <div class="blog-sidebar default-sidebar">
-                        
+
 
 
                             <div class="sidebar-widget category-widget">
@@ -103,7 +115,7 @@
                                         <li><a href="#">{{__('site.News')}}<span>{{App\Models\Article::count()}}</span></a></li>
                                         <li><a href="#">{{__('site.Publications')}}<span>{{App\Models\Publications::count()}}</span></a></li>
                                         <li><a href="#">{{__('site.Reports')}}<span>{{App\Models\Report::count()}}</span></a></li>
-                                     
+
                                     </ul>
                                 </div>
                             </div>
@@ -115,7 +127,7 @@
                                 </div>
                                 <div class="post-inner">
                                     @foreach ($news as $new)
-                                        
+
                                     <div class="post">
                                         <figure class="post-thumb">
                                             <a href="#">
@@ -128,7 +140,7 @@
                                     @endforeach
 
 
-                                 
+
 
                                 </div>
                             </div>

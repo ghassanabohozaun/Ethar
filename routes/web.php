@@ -41,10 +41,10 @@ Route::group(
     })->name('team');
 
     Route::get('/projects/{type}', [ProjectController::class, 'getProjects'])->name('projects');
-
     Route::get('/project-details/{title}', [ProjectController::class, 'detailProject'])->name('project-details');
+    Route::get('/projects/{name}/publications', [ProjectController::class, 'getProjectPublications'])->name('project-publications');
 
-
+    
     Route::get('/news', function () {
         return view('site.news.new');
     })->name('news');

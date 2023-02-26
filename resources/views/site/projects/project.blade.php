@@ -85,11 +85,10 @@
                                 </li>
                                 @endif
 
-                                @if ($project->publications() != null)
+                                @if ( $project->publications()->first() !=null  )
                                     <li class="share">
                                         <i class="fas fa-book"></i>
-                                        <h5>visit case studies</h5>
-
+                                        <h5><a href="{!! route('project-publications',slug($project->{'title_'.Lang()}) )!!}">visit case studies</a></h5>
                                     </li>
                                 @endif
 
