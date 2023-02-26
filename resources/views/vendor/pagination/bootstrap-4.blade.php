@@ -55,7 +55,7 @@
                     </span>
                 </li>
             @endif
-            
+
         </ul>
     </nav>
 @endif

@@ -11232,15 +11232,15 @@ div#mCSB_1_container {
     padding-top: 14px;
 }
 
-.case-block-four .inner-box .content-box .info-box li:before {
-    position: absolute;
-    content: '';
-    background-color: #dddad8;
-    width: 1px;
-    height: 40px;
-    top: 3px;
-    right: 27px;
-}
+/*.case-block-four .inner-box .content-box .info-box li:before {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    background-color: #dddad8;*/
+/*    width: 1px;*/
+/*    height: 40px;*/
+/*    top: 3px;*/
+/*    right: 27px;*/
+/*}*/
 
 .case-block-four .inner-box .content-box .info-box li:last-child:before {
     display: none;

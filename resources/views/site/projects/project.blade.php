@@ -93,7 +93,7 @@
                                         <li class="share">
                                             <i class="fas fa-book"></i>
                                             <h5>
-                                                <a href="{!! route('project-publi',slug($project->{'title_'.Lang()}) )!!}">
+                                                <a href="{!! route('project-publications',slug($project->{'title_'.Lang()}) )!!}">
                                                     visit case studies
                                                 </a>
                                             </h5>
@@ -107,21 +107,8 @@
                 @endforeach
 
 
-
-
-                {{-- <div class="pagination-wrapper centred">
-                    <ul class="pagination clearfix">
-                        <li><a href=""><i class="fas fa-arrow-left"></i></a></li>
-                        <li><a href="" class="current">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href=""><i class="fas fa-arrow-right"></i></a></li>
-
-                    </ul>
-
-                </div> --}}
-                <div class=" pagination-wrapper centred">
-                    {{ $projects->links() }}
+                <div class="pagination-wrapper centred">
+                    {{ $projects->links('vendor.pagination.my-bootstrap') }}
                 </div>
 
 

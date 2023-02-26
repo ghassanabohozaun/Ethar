@@ -48,6 +48,10 @@ return [
     'founder' => 'Founder',
     'articles' => 'Articles',
 
+    'word'=>'Words',
+    'pdf'=>'PDF',
+    'visit_case_studies'=>'Visit Case Studies',
+
 
     'administrative' => 'Administrative Report',
     'financial' => 'Financial Report',

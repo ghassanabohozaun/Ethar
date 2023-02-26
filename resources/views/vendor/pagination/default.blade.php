@@ -1,4 +1,43 @@
 @if ($paginator->hasPages())
+
+
+    <style>
+        .pagination {
+            position: relative;
+            display: block;
+        }
+
+        .pagination li {
+            position: relative;
+            display: inline-block;
+            margin: 0px 3.5px;
+        }
+
+        .pagination li a {
+            position: relative;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Quicksand', sans-serif;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            background: transparent;
+            text-align: center;
+            color: #232323;
+            border: 1px solid #dedbd9;
+            border-radius: 50%;
+            z-index: 1;
+            transition: all 500ms ease;
+        }
+
+        .pagination li a:hover,
+        .pagination li a.current {
+            color: #ffffff;
+        }
+
+    </style>
+
     <nav>
         <ul class="pagination">
             {{-- Previous Page Link --}}
@@ -44,3 +83,4 @@
         </ul>
     </nav>
 @endif
+

@@ -48,6 +48,9 @@ return array(
     'founder' => 'مؤسس',
     'articles' => 'المقالات',
 
+    'word'=>'ملف الورد',
+    'pdf'=>'ملف pdf',
+    'visit_case_studies'=>'زيارة دراسات الحالة',
 
 
     'administrative' => 'التقرير الاداري',

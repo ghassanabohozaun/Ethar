@@ -490,7 +490,7 @@
     float: right;
     padding-left: 55px;
     min-height: 49px;
-    padding-right: 50px;
+    /*padding-right: 50px;*/
 }
 
 .case-block-four .inner-box .content-box .info-box li i {
@@ -508,7 +508,7 @@
 
 
 .case-block-four .inner-box .content-box .info-box li h5 {
-    margin-right: 55px;
+    margin-right: 50px;
     position: relative;
     display: block;
     width: 100%;

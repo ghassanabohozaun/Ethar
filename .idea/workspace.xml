@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/my-bootstrap.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/adminBoard/uploadedImages/projects/1677252270.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/ltr.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/ltr.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/site-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/site-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/directors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/directors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/founders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/founders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/projects/project-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/projects/project-details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/projects/project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/projects/project.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/team.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/team.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/projects/publication.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/bootstrap-4.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,11 +207,11 @@
       <recent name="C:\laragon\www\etharps\database\migrations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\etharps\resources\views\vendor\pagination" />
       <recent name="C:\laragon\www\etharps\public\adminBoard\uploadedImages\counters" />
       <recent name="C:\laragon\www\etharps\database\seeds" />
       <recent name="C:\laragon\www\etharps\database\migrations" />
       <recent name="C:\laragon\www\etharps\resources\views\admin" />
-      <recent name="C:\laragon\www\etharps\resources\lang\en" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -310,7 +306,7 @@
       <workItem from="1677326706649" duration="11065000" />
       <workItem from="1677405387380" duration="235000" />
       <workItem from="1677410070777" duration="1203000" />
-      <workItem from="1677421810297" duration="7021000" />
+      <workItem from="1677421810297" duration="11338000" />
     </task>
     <servers />
   </component>
