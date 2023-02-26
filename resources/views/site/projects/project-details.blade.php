@@ -104,7 +104,7 @@
                                         {{-- <i class="fas fa-book"></i> --}}
                                         <h5>
                                             <a class="font-weight-bold"
-                                               href="{!! route('project-publications',slug($project->{'title_'.Lang()}) )!!}">
+                                               href="{!! route('project-case-study',slug($project->{'title_'.Lang()}) )!!}">
                                                 {!! __('index.visit_case_studies') !!}
                                             </a>
                                         </h5>

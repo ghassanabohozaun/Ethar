@@ -33,13 +33,13 @@ class ProjectController extends Controller
         }
     }
 
-    function getProjectPublications($name){
+    function getCaseStudies($name){
         $title = returnSpaceBetweenString($name);
         $project = Projects::orderByDesc('id')->where('title_'.Lang() ,$title)->where('status' ,'on')->first();
         if($project){
              $publications =  $project->publications;
             if($publications){
-                return view('site.projects.publication' , compact('publications' , 'project'));
+                return view('site.projects.case-study' , compact('publications' , 'project'));
             }else{
                 return redirect(route('index'));
             }

@@ -32,7 +32,7 @@
                         <h1>{{__('index.news')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        
+
                     </ul>
                 </div>
             </div>
@@ -44,15 +44,15 @@
             <div class="auto-container">
                 <div class="row clearfix">
                     <!-- left  -->
-                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                    <div class="col-lg-8 col-md-8 col-sm-8 content-side">
                         <div class="blog-details-content">
 
                             <div class="content-one">
                                 <div class="upper-box">
-                                   
+
                                     <h2>{{$new->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                      
+
                                         <li><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</li>
                                         <li><i class="far fa-eye"></i>{{$new->views}} Views</li>
                                     </ul>
@@ -72,7 +72,7 @@
                                     <h3>Comments ({{$new->comments()->count()}} )</h3>
                                 </div>
                                 @foreach ($new->comments as $comment)
-                                    
+
                                 <div class="comment">
                                     <figure class="thumb-box">
                                         @if ($comment->photo)
@@ -91,7 +91,7 @@
                                 </div>
                                 @endforeach
 
-                             
+
                             </div>
 
                             <div class="comments-form-area">

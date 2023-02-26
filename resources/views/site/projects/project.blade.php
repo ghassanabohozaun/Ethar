@@ -93,7 +93,7 @@
                                         <li class="share">
                                             <i class="fas fa-book"></i>
                                             <h5>
-                                                <a href="{!! route('project-publications',slug($project->{'title_'.Lang()}) )!!}">
+                                                <a href="{!! route('project-case-study',slug($project->{'title_'.Lang()}) )!!}">
                                                     visit case studies
                                                 </a>
                                             </h5>

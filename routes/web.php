@@ -40,7 +40,7 @@ Route::group(
     // projects
     Route::get('/projects/{type}', [ProjectController::class, 'getProjects'])->name('projects');
     Route::get('/project-details/{title}', [ProjectController::class, 'detailProject'])->name('project-details');
-    Route::get('/projects/{name}/case-study', [ProjectController::class, 'getProjectPublications'])->name('project-publications');
+    Route::get('/projects/{name}/case-study', [ProjectController::class, 'getCaseStudies'])->name('project-case-study');
 
     // news
     Route::get('/news', [NewsController::class, 'getNews'])->name('news');
