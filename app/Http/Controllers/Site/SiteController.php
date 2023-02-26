@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Site;
 use App\File;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SupportCenterRequest;
-use App\Models\Article;
 use App\Models\About;
 use App\Models\AboutType;
+use App\Models\Article;
 use App\Models\Partner;
 use App\Models\Projects;
 use App\Models\QA;
@@ -85,52 +85,50 @@ class SiteController extends Controller
 
         $partners = Partner::orderByDesc('id')->where('status', 'on')->get();
 
-        return view('site.index', compact('title', 'sliders', 'lastProjects', 'founders', 'lastArticles','testimonials','partners'));
+        return view('site.index', compact('title', 'sliders', 'lastProjects', 'founders', 'lastArticles', 'testimonials', 'partners'));
     }
 
     // About
-    public function about( $name){
+    public function about($name)
+    {
         // return current name
         $name = returnSpaceBetweenString($name);
 
-         $about_type = AboutType::where('name_'.Lang(),$name)->first();
-         if(!$about_type){
+        $about_type = AboutType::where('name_' . Lang(), $name)->first();
+        if (!$about_type) {
             return redirect(route('index'));
-         }
-          $about = About::status()->where('about_type_id' , $about_type->id) ->first();
-        if($about){
+        }
+        $about = About::status()->where('about_type_id', $about_type->id)->first();
+        if ($about) {
             return view('site.about', compact('about'));
-        }else{
-            return view('site.about' , compact('about_type'));
+        } else {
+            return view('site.about', compact('about_type'));
         }
     }
 
-    function qa(){
+    //FAQ
+    function qa()
+    {
         $qas = QA::orderByDesc('id')->get();
-        if($qas){
+        if ($qas) {
             return view('site.faq', compact('qas'));
-        }else{
+        } else {
             return redirect()->back();
         }
 
     }
 
 
-    //////////////////////////////////////////////////////////////////////////////////////////
-    /// Send Contact Message
+    // Send Contact Message
     public function sendContactMessage(SupportCenterRequest $request)
     {
-        try {
-            SupportCenter::create([
-                'customer_name' => $request->customer_name,
-                'customer_email' => $request->customer_email,
-                'title' => $request->title,
-                'message' => $request->message,
-            ]);
-            return $this->returnSuccessMessage(trans('site.send_success_message'));
-        } catch (\Exception $exception) {
-            return $this->returnError(trans('general.try_catch_error_message'), 500);
-        }//end catch
+        SupportCenter::create([
+            'customer_name' => $request->customer_name,
+            'customer_email' => $request->customer_email,
+            'title' => $request->title,
+            'message' => $request->message,
+        ]);
+        return $this->returnSuccessMessage(trans('index.send_success_message'));
     }
 
 }

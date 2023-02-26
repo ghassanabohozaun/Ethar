@@ -103,29 +103,29 @@
 
                                     <div class="form-group">
                                         <i class="far fa-user"></i>
-                                        <input type="text"  id="customer_name"
+                                        <input type="text" name="customer_name" id="customer_name"
                                                autocomplete="off" placeholder="Your Name">
                                         <span id="customer_name_error" class="form-text text-danger"></span>
                                     </div>
 
                                     <div class="form-group">
                                         <i class="far fa-envelope"></i>
-                                        <input type="email"  id="customer_email"
+                                        <input type="email" name="customer_email" id="customer_email"
                                                autocomplete="off" placeholder="Email Address">
-                                        <span id="customer_email_error" class="form-text text-danger"></span>
+                                        <span  class="form-text text-danger font-size-14">{!! __('index.email') !!} someone@someone.com</span>
                                     </div>
 
 
                                     <div class="form-group">
                                         <i class="far fa-sticky-note"></i>
-                                        <input type="text"  id="title" autocomplete="off"
+                                        <input type="text" name="title" id="title" autocomplete="off"
                                                placeholder="title">
                                         <span id="title_error" class="form-text text-danger"></span>
                                     </div>
 
                                     <div class="form-group">
                                         <i class="far fa-text-height"></i>
-                                        <textarea id="message" autocomplete="off"
+                                        <textarea name="message" id="message" autocomplete="off"
                                                   placeholder="Massage" rows="50"></textarea>
                                         <span id="message_error" class="form-text text-danger"></span>
                                     </div>

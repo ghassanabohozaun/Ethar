@@ -51,10 +51,12 @@ return [
     'word'=>'Words',
     'pdf'=>'PDF',
     'visit_case_studies'=>'Visit Case Studies',
-
+    'email' => 'Email must be :',
 
     'administrative' => 'Administrative Report',
     'financial' => 'Financial Report',
 
     'no_data_found' => 'Sorry, There are no data currently',
+    'send_success_message'=>'Message Send Successfully'
+
 ];

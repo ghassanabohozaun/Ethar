@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'ethar'=>'إيثار',
+    'ethar' => 'إيثار',
     'home' => 'الرئيسية',
     'about' => 'عن الجمعية',
     'faq' => 'الاسئلة الشائعة',
@@ -10,7 +10,7 @@ return array(
     'directors' => 'الإداريين',
     'team' => 'الفريق',
     'projects' => 'المشاريع',
-    'project'=>'مشروع',
+    'project' => 'مشروع',
     'previous_projects' => 'المشاريع السابقة',
     'current_projects' => 'المشاريع الحالية',
     'news' => 'الأخبار',
@@ -20,11 +20,10 @@ return array(
     'case_study' => 'دراسة الحالة',
     'scientific_articles' => 'المقالات العلمية',
     'reports' => 'التقارير',
-    'media'=>'ميديا',
-    'our_photos'=>'صورنا',
-    'our_videos'=>'فيديوهاتنا',
-    'contact'=>'اتصل بنا',
-
+    'media' => 'ميديا',
+    'our_photos' => 'صورنا',
+    'our_videos' => 'فيديوهاتنا',
+    'contact' => 'اتصل بنا',
 
 
     'about_our_projects' => 'عن مشاريعنا',
@@ -47,16 +46,17 @@ return array(
     'stars' => 'نجوم',
     'founder' => 'مؤسس',
     'articles' => 'المقالات',
-
-    'word'=>'ملف الورد',
-    'pdf'=>'ملف pdf',
-    'visit_case_studies'=>'زيارة دراسات الحالة',
-
+    'word' => 'ملف الورد',
+    'pdf' => 'ملف pdf',
+    'visit_case_studies' => 'زيارة دراسات الحالة',
+    'email'=>'الايميل يجب ان يكون :',
 
     'administrative' => 'التقرير الاداري',
     'financial' => 'التقرير المالي',
 
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
+
+    'send_success_message' => 'تم ارسال الرسالة بنجاح',
 
 
 );
