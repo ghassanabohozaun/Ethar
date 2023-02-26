@@ -26,4 +26,8 @@ class Projects extends Model
         }
     }
 
+    function publications(){
+        return $this->hasMany(Publications::class);
+    }
+
 }

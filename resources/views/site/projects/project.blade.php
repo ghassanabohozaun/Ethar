@@ -47,7 +47,7 @@
             <div class="auto-container">
 
                 @foreach ($projects as $project)
-                    
+
                 <div class="case-block-four">
                     <div class="inner-box">
                         <div class="image-box">
@@ -66,31 +66,33 @@
                             </div>
                             <ul class="info-box clearfix">
                                 @if($project->word != null)
-
                                     <li class="share">
                                         <i class="far fa-file-word"></i>
                                         <a class="font-weight-bold"
                                             href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->word)}}"
                                             target="_blank"><h5>{!! __('general.download') !!}</h5></a>
-                                        
+
                                     </li>
                                 @endif
 
                                 @if($project->file != null)
-                                    
                                 <li class="share">
                                     <i class="fas fa-file-pdf"></i>
                                     <a class="font-weight-bold"
                                             href="{{asset('adminBoard\\uploadedFiles\\project\\'. $project->file)}}"
                                             target="_blank"><h5>{!! __('general.download') !!}</h5></a>
-                                    
-                                </li>
-                                @endif
-                                <li class="share">
-                                    <i class="fas fa-book"></i>
-                                    <h5>visit case studies</h5>
 
                                 </li>
+                                @endif
+
+                                @if ($project->publications() != null)
+                                    <li class="share">
+                                        <i class="fas fa-book"></i>
+                                        <h5>visit case studies</h5>
+
+                                    </li>
+                                @endif
+
                             </ul>
                         </div>
                     </div>
@@ -98,7 +100,7 @@
                 @endforeach
 
 
-            
+
 
                 {{-- <div class="pagination-wrapper centred">
                     <ul class="pagination clearfix">
@@ -107,14 +109,14 @@
                         <li><a href="">2</a></li>
                         <li><a href="">3</a></li>
                         <li><a href=""><i class="fas fa-arrow-right"></i></a></li>
-                       
+
                     </ul>
-                   
+
                 </div> --}}
                 <div class="centred">
                     {{ $projects->links() }}
                 </div>
-               
+
 
 
             </div>
