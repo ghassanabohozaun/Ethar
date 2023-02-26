@@ -29,12 +29,26 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Advertisements details</h1>
+                        @if (Lang() == 'ar')
+                        <h1>{{ __('site.details') .' ' . __('site.'.$publication->type)  }} </h1>
+                            
+                        @else
+                        <h1>{{ __('site.'.$publication->type) .' '. __('site.details')}} </h1>
+                            
+                        @endif
+                       
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Advertisements details</li>
+                        <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
+                        <li>
+                            @if (Lang() == 'ar')
+                           {{ __('site.details') .' ' . __('site.'.$publication->type)  }} 
+                                
+                            @else
+                            {{ __('site.'.$publication->type) .' '. __('site.details')}} 
+                                
+                            @endif
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -64,6 +78,14 @@
                                 <div class="text">
                                     <p>{!! $publication->{'details_'.Lang()} !!}</p>
                                 </div>
+
+                                <br/>
+                                @if($publication->file != null)
+                                <div class="font-weight-bold mt-5"><h5> <a class="font-weight-bold"
+                                    href="{{asset('adminBoard\\uploadedFiles\\publications\\'. $publication->file)}}"
+                                    target="_blank">{!! __('general.download') !!} PDF</a></h5>
+                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>

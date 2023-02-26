@@ -7,4 +7,12 @@ return [
 'Reports' => 'Reports',
 'Latest_News' => 'Latest News',
 
+'Advertisements' => 'Advertisements',
+'Brochures' => 'Brochures',
+'CaseStudy' => 'Case Study',
+'ScientificArticles' => 'Scientific Articles',
+
+'details'   => 'Details ' ,
+
+
 ];

@@ -29,12 +29,12 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Advertisements</h1>
+                        <h1>{{ __('site.'.$type)}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Advertisements</li>
+                        <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
+                       
+                        <li>{{ __('site.'.$type)}}</li>
                     </ul>
                 </div>
             </div>

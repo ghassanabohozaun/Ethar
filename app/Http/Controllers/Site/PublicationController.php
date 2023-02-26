@@ -11,7 +11,7 @@ class PublicationController extends Controller
     function getPublications($type){
         $publications = Publications::orderByDesc('id')->where('status' ,'on')->where('type' ,$type)->paginate(8) ;
         if($publications){
-            return view('site.publications.advertisements' , compact('publications'));
+            return view('site.publications.advertisements' , compact('publications' , 'type'));
         }else{
             return redirect(route('index'));
         }

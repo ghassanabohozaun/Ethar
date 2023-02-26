@@ -113,7 +113,11 @@
                                     <ul class="category-list clearfix">
                                         <li><a href="#">{{__('site.projects')}}<span>{{App\Models\Projects::count()}}</span></a></li>
                                         <li><a href="#">{{__('site.News')}}<span>{{App\Models\Article::count()}}</span></a></li>
-                                        <li><a href="#">{{__('site.Publications')}}<span>{{App\Models\Publications::count()}}</span></a></li>
+                                        <li><a href="#">{{__('site.Advertisements')}}<span>{{App\Models\Publications::where('type','Advertisements')->count()}}</span></a></li>
+                                        <li><a href="#">{{__('site.Brochures')}}<span>{{App\Models\Publications::where('type','Brochures')->count()}}</span></a></li>
+                                        <li><a href="#">{{__('site.CaseStudy')}}<span>{{App\Models\Publications::where('type','CaseStudy')->count()}}</span></a></li>
+                                        <li><a href="#">{{__('site.ScientificArticles')}}<span>{{App\Models\Publications::where('type','ScientificArticles')->count()}}</span></a></li>
+
                                         <li><a href="#">{{__('site.Reports')}}<span>{{App\Models\Report::count()}}</span></a></li>
 
                                     </ul>
