@@ -32,9 +32,7 @@
                         <h1>Projects</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Projects</li>
+                    
                     </ul>
                 </div>
             </div>
@@ -88,7 +86,7 @@
                                 @if ( $project->publications()->first() !=null  )
                                     <li class="share">
                                         <i class="fas fa-book"></i>
-                                        <h5><a href="{!! route('project-publications',slug($project->{'title_'.Lang()}) )!!}">visit case studies</a></h5>
+                                        <h5><a href="{!! route('project-publi',slug($project->{'title_'.Lang()}) )!!}">visit case studies</a></h5>
                                     </li>
                                 @endif
 

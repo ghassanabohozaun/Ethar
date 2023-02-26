@@ -60,7 +60,7 @@
                                         <span class="post-date">{{$new->publish_date}}</span>
                                         <h3><a  href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">{{$new->{'title_'.Lang()} }}</a>
                                         </h3>
-                                        <p class="fifty-chars"> {!! $new->{'abstract_'.Lang()} !!} </p>
+                                        <p > {!! $new->{'abstract_'.Lang()} !!} </p>
                                     </div>
                                     <div class="info clearfix">
                                         <div class="link-box pull-left"><a href="{!! route('new-details',$new->{'title_'.Lang()} ) !!}">More Details</a>
@@ -77,7 +77,10 @@
 
                  
                 </div>
-                <div class="more-btn centred"><a href="#" class="theme-btn btn-one">Load More</a></div>
+             {{-- /   <div class="more-btn centred"><a href="#" class="theme-btn btn-one">Load More</a></div> --}}
+                <div class="centred" >
+                    {{ $news->links() }}
+                </div>
             </div>
         </section>
 

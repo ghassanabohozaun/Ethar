@@ -32,9 +32,7 @@
                         <h1>Project Detail</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Project Detail</li>
+                       
                     </ul>
                 </div>
             </div>

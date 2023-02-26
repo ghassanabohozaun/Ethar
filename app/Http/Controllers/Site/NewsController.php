@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     function getNews(){
-        $news = Article::orderByDesc('id')->where('status' ,'on')->paginate(8) ;
+        $news = Article::orderByDesc('id')->where('status' ,'on')->paginate(1) ;
         if($news){
             return view('site.news.new' , compact('news'));
         }else{
