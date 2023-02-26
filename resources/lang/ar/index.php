@@ -35,6 +35,9 @@ return array(
     'funders' => 'الممولين',
     'beneficiaries' => 'الممولين',
     'meet_our_founders' => 'مؤسسي الجمعية',
+    'meet_our_directors' => 'اداريي الجمعية',
+    'meet_our_team' => 'فريق عمل الجمعية',
+
     'blog_and_article' => 'المدونة والمقالات',
     'more_details' => 'مزيد من التفاصيل',
     'comments' => 'تعليق',

@@ -12,13 +12,32 @@ class TeamsController extends Controller
     use GeneralTrait;
 
 
-    ///index
+    // founders
     public function founders()
     {
         $title = __('index.founders');
-        //founders
+
         $founders = Team::orderByDesc('id')->where('status', 'on')->where('type', 'founder')->get();
         return view('site.founders', compact('title', 'founders'));
+    }
+
+    // directors
+    public function directors()
+    {
+        $title = __('index.directors');
+
+        $directors = Team::orderByDesc('id')->where('status', 'on')->where('type', 'director')->get();
+        return view('site.directors', compact('title', 'directors'));
+    }
+
+
+    // team
+    public function team()
+    {
+        $title = __('index.team');
+
+        $teams = Team::orderByDesc('id')->where('status', 'on')->where('type', 'member')->get();
+        return view('site.team', compact('title', 'teams'));
     }
 
 

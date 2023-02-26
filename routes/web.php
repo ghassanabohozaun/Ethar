@@ -30,17 +30,12 @@ Route::group(
     // faq
     Route::get('/faq', [SiteController::class, 'qa'])->name('faq');
 
-
     // founders
     Route::get('/founders', 'TeamsController@founders')->name('founders');
-
-    Route::get('/directors', function () {
-        return view('site.directors');
-    })->name('directors');
-
-    Route::get('/team', function () {
-        return view('site.team');
-    })->name('team');
+    // directors
+    Route::get('/directors', 'TeamsController@directors')->name('directors');
+    // team
+    Route::get('/team', 'TeamsController@team')->name('team');
 
     // projects
     Route::get('/projects/{type}', [ProjectController::class, 'getProjects'])->name('projects');

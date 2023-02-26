@@ -47,7 +47,6 @@
             <div class="fluid-container">
                 <div class="sec-title centred">
                     <span class="top-text">{!! __('index.meet_our_founders') !!}</span>
-                    <h2>{!! fixedTexts()->{'founders_title_'.Lang()} !!}</h2>
                 </div>
                 <div class="five-item-carousel owl-carousel owl-theme owl-nav-none">
 
