@@ -24,8 +24,6 @@ return array(
     'our_photos' => 'صورنا',
     'our_videos' => 'فيديوهاتنا',
     'contact' => 'اتصل بنا',
-
-
     'about_our_projects' => 'عن مشاريعنا',
     'our_projects' => 'مشاريعنا',
     'previous_project' => 'مشروع سابق',
@@ -37,7 +35,6 @@ return array(
     'meet_our_founders' => 'مؤسسي الجمعية',
     'meet_our_directors' => 'اداريي الجمعية',
     'meet_our_team' => 'فريق عمل الجمعية',
-
     'blog_and_article' => 'المدونة والمقالات',
     'more_details' => 'مزيد من التفاصيل',
     'comments' => 'تعليق',
@@ -49,10 +46,25 @@ return array(
     'word' => 'ملف الورد',
     'pdf' => 'ملف pdf',
     'visit_case_studies' => 'زيارة دراسات الحالة',
-    'email'=>'الايميل يجب ان يكون :',
-
     'administrative' => 'التقرير الاداري',
     'financial' => 'التقرير المالي',
+
+    'email' => 'الايميل يجب ان يكون :',
+    'drop_Line' => 'اكتب الرسالة',
+    'leave_us_message' => 'اترك لنا رسالة',
+    'connecting_always' => 'الاتصال الدائم',
+    'hear_by_our_association' => 'اسمع من قبل جمعيتنا',
+    'phone' => 'تلفون',
+    'emergency_contact' => 'اتصال الطوارئ',
+    'mail_to' => 'بريد الي',
+    'address' => 'العنوان',
+    'palestine' => 'فلسطين ,  قطاع غزة',
+    'khan_younes' => 'خانيونس',
+    'your_name' => 'اسمك',
+    'email_address' => 'البريد الكتروني',
+    'title' => 'عنوان الرسالة',
+    'message' => 'الرسالة',
+    'send_message' => 'ارسل الرسالة',
 
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
 

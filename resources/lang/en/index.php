@@ -2,7 +2,6 @@
 
 return [
     'ethar' => 'Ethar',
-
     'home' => 'Home',
     'about' => 'About',
     'faq' => 'FAQ\'s',
@@ -11,8 +10,7 @@ return [
     'directors' => 'Directors',
     'team' => 'Team',
     'projects' => 'Projects',
-    'project'=>'Project',
-
+    'project' => 'Project',
     'previous_projects' => 'Previous Projects',
     'current_projects' => 'Current Projects',
     'news' => 'News',
@@ -26,7 +24,6 @@ return [
     'our_photos' => 'Our Photos',
     'our_videos' => 'Our Videos',
     'contact' => 'Contact',
-
     'about_our_projects' => 'About Our Projects',
     'our_projects' => 'Our Projects',
     'previous_project' => 'Previous project',
@@ -42,21 +39,37 @@ return [
     'comments' => 'Cmts',
     'testimonials' => 'Testimonials',
     'all_reviews' => 'All Reviews',
-
     'stars' => 'Stars',
     'beneficiaries' => 'Beneficiaries',
     'founder' => 'Founder',
     'articles' => 'Articles',
-
-    'word'=>'Words',
-    'pdf'=>'PDF',
-    'visit_case_studies'=>'Visit Case Studies',
-    'email' => 'Email must be :',
-
+    'word' => 'Words',
+    'pdf' => 'PDF',
+    'visit_case_studies' => 'Visit Case Studies',
     'administrative' => 'Administrative Report',
     'financial' => 'Financial Report',
 
+    'email' => 'Email must be :',
+    'drop_Line' => 'Drop a Line',
+    'leave_us_message' => 'Leave us Message',
+    'connecting_always' => 'Connecting Always',
+    'hear_by_our_association' => 'Hear by our association',
+    'phone' => 'Phone',
+    'emergency_contact' => 'Emergency contact',
+    'email_address' => 'Email Address',
+    'mail_to' => 'Mail to',
+    'address' => 'Address',
+    'palestine' => 'palestine , Gaza strip',
+    'khan_younes' => 'Khan Younes',
+    'your_name' => 'Your Name',
+    'email_address' => 'Email Address',
+    'title' => 'Title',
+    'message' => 'Message',
+    'send_message' => 'Send Message',
+
+
+
     'no_data_found' => 'Sorry, There are no data currently',
-    'send_success_message'=>'Message Send Successfully'
+    'send_success_message' => 'Message Send Successfully'
 
 ];

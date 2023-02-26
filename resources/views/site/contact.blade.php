@@ -29,12 +29,10 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Contact</h1>
+                        <h1>{!! __('index.contact') !!}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Contact</li>
+                     &nbsp;
                     </ul>
                 </div>
             </div>
@@ -49,40 +47,43 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
                         <div class="contact-info-inner">
                             <div class="sec-title">
-                                <span class="top-text">Connecting Always</span>
-                                <h2>Hear by our association</h2>
+                                <span class="top-text">{!! __('index.connecting_always') !!}</span>
+                                <h2>{!! __('index.hear_by_our_association') !!}</h2>
                             </div>
                             <div class="info-box">
 
                                 <div class="single-item">
-                                    <h4>Contact</h4>
+                                    <h4>{!! __('index.contact') !!}</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
-                                        <p>Phone<br/><a href="tel:00972592404940">00972592404940</a></p>
+                                        <p>{!! __('index.phone') !!}<br/><a href="tel:00972592404940">00972592404940</a>
+                                        </p>
                                     </div>
                                 </div>
 
                                 <div class="single-item">
-                                    <h4>Emergency contact</h4>
+                                    <h4>{!! __('index.emergency_contact') !!}</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
-                                        <p>Phone<br/><a href="tel:00972592404940">00972592404940</a></p>
+                                        <p>{!! __('index.phone') !!}<br/><a href="tel:00972592404940">00972592404940</a>
+                                        </p>
                                     </div>
                                 </div>
 
 
                                 <div class="single-item">
-                                    <h4>Email Address</h4>
+                                    <h4>{!! __('index.email_address') !!}</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-letter"></i></div>
-                                        <p>Mail to<br/><a href="mailto:info@example.com">info@example.com</a></p>
+                                        <p>{!! __('index.mail_to') !!}<br/><a href="mailto:info@example.com">info@example.com</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="single-item">
-                                    <h4>Mailing Address</h4>
+                                    <h4>{!! __('index.address') !!}</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-location"></i></div>
-                                        <p>palestine , Gaza <br/>Gaza</p>
+                                        <p>{!! __('index.palestine') !!} <br/>{!! __('index.khan_younes') !!}</p>
                                     </div>
                                 </div>
                             </div>
@@ -92,47 +93,48 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 inner-column">
                         <div class="contact-form-inner">
                             <div class="sec-title">
-                                <span class="top-text">Drop a Line</span>
-                                <h2>Leave us Message</h2>
+                                <span class="top-text">{!! __('index.drop_Line') !!}</span>
+                                <h2>{!! __('index.leave_us_message') !!}</h2>
                             </div>
                             <div class="form-inner">
 
-                                <form method="POST" enctype="multipart/form-data" action="{!! route('send.contact.message') !!}"
+                                <form method="POST" enctype="multipart/form-data"
+                                      action="{!! route('send.contact.message') !!}"
                                       id="form_contact_message_send" class="default-form">
                                     @csrf
 
                                     <div class="form-group">
                                         <i class="far fa-user"></i>
                                         <input type="text" name="customer_name" id="customer_name"
-                                               autocomplete="off" placeholder="Your Name">
+                                               autocomplete="off" placeholder="{!! __('index.your_name') !!}">
                                         <span id="customer_name_error" class="form-text text-danger"></span>
                                     </div>
 
                                     <div class="form-group">
                                         <i class="far fa-envelope"></i>
                                         <input type="email" name="customer_email" id="customer_email"
-                                               autocomplete="off" placeholder="Email Address">
-                                        <span  class="form-text text-danger font-size-14">{!! __('index.email') !!} someone@someone.com</span>
+                                               autocomplete="off" placeholder="{!! __('index.email_address') !!}">
+                                        <span class="form-text text-danger font-size-14">{!! __('index.email') !!} someone@someone.com</span>
                                     </div>
 
 
                                     <div class="form-group">
                                         <i class="far fa-sticky-note"></i>
                                         <input type="text" name="title" id="title" autocomplete="off"
-                                               placeholder="title">
+                                               placeholder="{!! __('index.title') !!}">
                                         <span id="title_error" class="form-text text-danger"></span>
                                     </div>
 
                                     <div class="form-group">
                                         <i class="far fa-text-height"></i>
                                         <textarea name="message" id="message" autocomplete="off"
-                                                  placeholder="Massage" rows="50"></textarea>
+                                                  placeholder="{!! __('index.message') !!}" rows="50"></textarea>
                                         <span id="message_error" class="form-text text-danger"></span>
                                     </div>
                                     <div class="form-group message-btn">
 
                                         <button class="theme-btn btn-one" type="submit">
-                                            Send Message
+                                           {!! __('index.send_message') !!}
                                         </button>
                                     </div>
                                 </form>
