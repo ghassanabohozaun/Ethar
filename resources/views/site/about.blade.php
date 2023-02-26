@@ -15,27 +15,23 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
         @if (isset($about))
-
-
-
             <!-- Page Title -->
             <section class="page-title"
                      style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
 
-                <div class="auto-container{!! Lang()=='ar' ? 'rtl':'' !!}">
+                <div class="auto-container">
                     <div class="content-box">
                         <div class="title">
                             <h1>{{$about->type->{'name_'.Lang()} }}</h1>
                         </div>
                         <ul class="bread-crumb clearfix">
-                            <li><a href="{!! route('index') !!}">Home</a></li>
-                            {{-- <li>Pages</li> --}}
-                            <li>{{$about->type->{'name_'.Lang()} }}</li>
+                            &nbsp;
                         </ul>
                     </div>
                 </div>
@@ -62,12 +58,11 @@
 
                                             <ul class="info-box clearfix">
                                                 <li class="share">
-                                                    <i class="fas fa-file-pdf">
+                                                    <i class="fas fa-file-pdf" style="color: rgba(217,70,70,0.9)">
                                                     </i>
                                                     <a class="font-weight-bold"
                                                        href="{{asset('adminBoard\\uploadedFiles\\abouts\\'. $about->file)}}"
                                                        target="_blank">{!! __('general.download') !!}</a>
-
                                                 </li>
                                             </ul>
                                         @endisset
@@ -94,9 +89,7 @@
                             <h1>{{$about_type->{'name_'.Lang()} }}</h1>
                         </div>
                         <ul class="bread-crumb clearfix">
-                            <li><a href="{!! route('index') !!}">Home</a></li>
-                            {{-- <li>Pages</li> --}}
-                            <li>{{$about_type->{'name_'.Lang()} }}</li>
+                          &nbsp;
                         </ul>
                     </div>
                 </div>
@@ -104,12 +97,11 @@
             <!-- End Page Title -->
             <!-- Not Found  -->
             <section class="about-style-three">
-                <div class="sec-title  text-center">
-
-                    <h2>{{__('site.about_not_found')}}    </h2>
+                <div class="sec-title text-center">
+                    <h2>{{__('index.no_data_found')}}</h2>
                 </div>
             </section>
-            <!-- End  Not Foun -->
+            <!-- End  Not Found -->
         @endif
 
 

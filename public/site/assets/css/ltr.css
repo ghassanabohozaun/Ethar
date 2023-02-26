@@ -7,3 +7,20 @@
     float: left;
     margin-right: 10px;
 }
+
+.content_block_10 .content-box .image {
+    position: relative;
+     margin-left: -120px;
+}
+
+.main-menu .navigation > li > a:before {
+    position: absolute;
+    content: "";
+    background-color: #dddad8;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 0px;
+    top: 12px;
+    transition: all 500ms ease;
+}

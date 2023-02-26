@@ -15,13 +15,12 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
-
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
-
 
         <!-- Page Title -->
         <section class="page-title"
@@ -29,12 +28,10 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>FAQ's</h1>
+                        <h1>{!! __('index.faq') !!}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>FAQ's</li>
+                      &nbsp;
                     </ul>
                 </div>
             </div>
@@ -49,12 +46,7 @@
                         <div class="content_block_10">
                             <div class="content-box">
                                 <figure class="image"><img src="{!! asset('site/assets/images/resource/faq-11.png') !!}" alt=""></figure>
-                                <div class="text wow fadeInLeft animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                    <div class="icon-box"><i class="icon-search-1"></i></div>
-                                    <h3>Don't See Your Question?</h3>
-                                    <p>Send your question to our team, they’ll help you.</p>
-                                    <a href="faq.html">Send Now</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -73,9 +65,9 @@
                             </div>
                         </li>
                         @endforeach
-                            
 
-                          
+
+
                         </ul>
                     </div>
                 </div>

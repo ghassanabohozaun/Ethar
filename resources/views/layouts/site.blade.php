@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-{{--@if( Lang() =='ar') lang="ar" dir="rtl" @else lang="en" dir="ltr" @endif--}}
-<html>
+
+<html
+    @if( Lang() =='ar') lang="ar" dir="rtl" @else lang="en" dir="ltr" @endif
+>
 <head>
 
     <title> Home </title>
@@ -41,7 +43,10 @@
 
 
     @if(Lang()=='ar')
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.5.3/css/bootstrap.min.css"
+              integrity="sha384-JvExCACAZcHNJEc7156QaHXTnQL3hQBixvj5RV5buE7vgnNEzzskDtx9NQ4p6BJe" crossorigin="anonymous">
         <link href="{!! asset('site/assets/css/rtl.css') !!}" rel="stylesheet">
+
     @else
         <link href="{!! asset('site/assets/css/ltr.css') !!}" rel="stylesheet">
     @endif
