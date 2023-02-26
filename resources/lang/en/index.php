@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'ethar'=>'Ethar',
+
     'home'=>'Home',
     'about'=>'About',
     'faq'=>'FAQ\'s',
