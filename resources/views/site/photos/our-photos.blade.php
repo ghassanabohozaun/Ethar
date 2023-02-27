@@ -42,56 +42,61 @@
 
         <!-- portfolio-section -->
         <section class="portfolio-section centred">
-            <div class="auto-container">
-                <div class="sortable-masonry">
-                    <div class="filters">
-                        <ul class="filter-tabs filter-btns clearfix">
-                            <li class="active filter" data-role="button"
-                                data-filter=".all">{!! __('index.view_all') !!}</li>
-                            @foreach($photosAlbumsYears as $photosAlbumsYear)
-                                <li class="filter" data-role="button"
-                                    data-filter=".{!! $photosAlbumsYear->year !!}">{!! $photosAlbumsYear->year !!}</li>
-                            @endforeach
-                        </ul>
-                    </div>
 
-                    <div class="items-container row clearfix">
+            @if($photosAlbums->isEmpty())
+                <h1 class="my-h1 text-center">{!! __('index.no_data_found') !!}</h1>
+            @else
+                <div class="auto-container">
+                    <div class="sortable-masonry">
+                        <div class="filters">
+                            <ul class="filter-tabs filter-btns clearfix">
+                                <li class="active filter" data-role="button"
+                                    data-filter=".all">{!! __('index.view_all') !!}</li>
+                                @foreach($photosAlbumsYears as $photosAlbumsYear)
+                                    <li class="filter" data-role="button"
+                                        data-filter=".{!! $photosAlbumsYear->year !!}">{!! $photosAlbumsYear->year !!}</li>
+                                @endforeach
+                            </ul>
+                        </div>
 
-                        @foreach($photosAlbums as $photosAlbum)
+                        <div class="items-container row clearfix">
 
-                            <div
-                                class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all {!! $photosAlbum->year !!}">
-                                <div class="portfolio-block-one">
-                                    <div class="inner-box">
-                                        <figure class="image">
-                                            <a href="{{asset('adminBoard/uploadedImages/albums/'.$photosAlbum->main_photo)}}"
-                                               class="lightbox-image" data-fancybox="gallery">
-                                                <img
-                                                    src="{{asset('adminBoard/uploadedImages/albums/'.$photosAlbum->main_photo)}}"
-                                                    alt="{!! $photosAlbum->{'title_'.Lang()} !!}">
-                                            </a>
-                                        </figure>
-                                        <div class="content-box">
-                                            <div class="text">
-                                                <span>{!! $photosAlbum->year !!}</span>
-                                                <h3>
-                                                    <a href="{!! route('photo-albums-details',slug($photosAlbum->{'title_'.Lang()}) ) !!}">
-                                                        {!! $photosAlbum->{'title_'.Lang()} !!}
-                                                    </a>
-                                                </h3>
+                            @foreach($photosAlbums as $photosAlbum)
+
+                                <div
+                                    class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all {!! $photosAlbum->year !!}">
+                                    <div class="portfolio-block-one">
+                                        <div class="inner-box">
+                                            <figure class="image">
+                                                <a href="{{asset('adminBoard/uploadedImages/albums/'.$photosAlbum->main_photo)}}"
+                                                   class="lightbox-image" data-fancybox="gallery">
+                                                    <img
+                                                        src="{{asset('adminBoard/uploadedImages/albums/'.$photosAlbum->main_photo)}}"
+                                                        alt="{!! $photosAlbum->{'title_'.Lang()} !!}">
+                                                </a>
+                                            </figure>
+                                            <div class="content-box">
+                                                <div class="text">
+                                                    <span>{!! $photosAlbum->year !!}</span>
+                                                    <h3>
+                                                        <a href="{!! route('photo-albums-details',slug($photosAlbum->{'title_'.Lang()}) ) !!}">
+                                                            {!! $photosAlbum->{'title_'.Lang()} !!}
+                                                        </a>
+                                                    </h3>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                        @endforeach
+                            @endforeach
 
 
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
+            @endif
         </section>
         <!-- portfolio-section end -->
 
