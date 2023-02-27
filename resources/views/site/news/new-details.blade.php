@@ -72,7 +72,7 @@
 
                             <div class="comment-box">
                                 <div class="group-title">
-                                    <h3>Comments ({{$new->comments()->count()}} )</h3>
+                                    <h3>{!! __('index.my_comments') !!} ( {{$new->comments()->count()}} )</h3>
                                 </div>
                                 @foreach ($new->comments as $comment)
 
@@ -80,11 +80,15 @@
                                         <figure class="thumb-box">
                                             @if ($comment->photo)
                                                 <img
-                                                    src="{{asset('adminBoard\\uploadedImages\\articles\\comments\\'. $comment->photo)}}"
+                                                    src="{{asset('adminBoard/uploadedImages/articles/comments/'.$comment->photo)}}"
                                                     alt="">
+
                                             @else
-                                                <img src="{!! asset('/site/assets/images/news/comment-1.jpg') !!}"
-                                                     alt="">
+                                                @if($comment->gender == __('general.male'))
+                                                    <img src="{{asset('adminBoard/images/male.jpeg')}}">
+                                                @elseif($comment->gender == __('general.female'))
+                                                    <img src="{{asset('adminBoard/images/female.jpeg')}}"/>
+                                                @endif
                                             @endif
                                         </figure>
                                         <div class="comment-inner">
@@ -102,8 +106,8 @@
 
                             <div class="comments-form-area">
                                 <div class="group-title">
-                                    <h3>Leave a Reply</h3>
-                                    <p>Your email address will not be published. Required fields are marked *</p>
+                                    <h3>{!! __('index.leave_Reply') !!}</h3>
+                                    <p>{!! __('index.required_fields_are_marked') !!} *</p>
                                 </div>
                                 <div class="form-inner">
 
@@ -113,21 +117,28 @@
                                           id="form_comment_send" class="comment-form">
                                         @csrf
 
+                                        <input type="hidden" name="post_id" id="post_id" value="{!! $new->id !!}">
+
                                         <div class="row clearfix">
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                                <textarea name="commentary" id="commentary"
-                                                          placeholder="Your Comment *"></textarea>
+                                                <textarea name="commentary" id="commentary" autocomplete="off"
+                                                          placeholder="{!! __('index.you_comment') !!} *"></textarea>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                                 <input type="text" id="person_name" name="person_name"
-                                                       placeholder="Your Name *">
+                                                       autocomplete="off"
+                                                       placeholder="{!! __('index.you_name') !!} *">
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                                 <input type="email" id='person_email' name="person_email"
-                                                       placeholder="Email *">
+                                                       autocomplete="off"
+                                                       placeholder="{!! __('index.your_email') !!} *">
                                             </div>
+
+
                                             <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                                                <button type="submit" class="theme-btn btn-one">Submit</button>
+                                                <button type="submit"
+                                                        class="theme-btn btn-one">{!! __('index.submit') !!}</button>
                                             </div>
                                         </div>
                                     </form>
@@ -183,6 +194,22 @@
                 },
                 captcha: {
                     required: true,
+                },
+            },
+            messages: {
+                commentary: {
+                    required: '{!!  __('index.you_comment_required') !!} ',
+                },
+                person_email: {
+                    required: '{!!__('index.you_name_required')!!}',
+                    email: '{!!__('index.email_email')!!}',
+                },
+                person_name: {
+                    required: '{!!__('index.your_email_required')!!}',
+                },
+
+                captcha: {
+                    required: '{!!__('index.it_is_required')!!}',
                 },
             },
 

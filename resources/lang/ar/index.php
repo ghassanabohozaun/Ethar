@@ -68,6 +68,21 @@ return array(
     'views_count' => 'عدد المشاهدات',
     'comments_count' => 'عدد التعليقات',
 
+
+
+    'leave_Reply'=>'اترك لنا ردك',
+    'required_fields_are_marked'=>'لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة محددة',
+    'you_comment' => 'تعليقك',
+    'you_name' => 'اسمك',
+    'your_email' => 'ايميلك',
+    'submit' => 'أرسل',
+
+    'my_comments'=>'التعليقات',
+    'you_comment_required' => 'تعليقك مطلوب',
+    'you_name_required' => 'اسمك مطلوب',
+    'your_email_required' => 'ايميلك مطلوب',
+    'email_email' => 'الايميل يجب ان يكون : someone@someone.com',
+
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
 
     'send_success_message' => 'تم ارسال رسالتك بنجاح',

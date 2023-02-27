@@ -36,7 +36,7 @@ class NewsController extends Controller
     }
 
 
-    // Send Contact Message
+    // send comment
     public function sendComment(CommentRequest $request)
     {
         Comment::create([
@@ -45,9 +45,8 @@ class NewsController extends Controller
             'person_name' => $request->person_name,
             'person_email' => $request->person_email,
             'commentary' => $request->commentary,
-            'post_id' => 1,
+            'post_id' => $request->post_id,
             'gender' => 'male',
-
         ]);
 
         return $this->returnSuccessMessage(trans('index.add_success_comment'));
