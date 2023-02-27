@@ -15,5 +15,9 @@ class Publications extends Model
         'photo', 'language', 'file', 'date', 'writer', 'type','views' ,'projects_id'
     ];
 
+    function project(){
+        return $this->belongsTo(Projects::class ,'projects_id');
+    }
+
 
 }

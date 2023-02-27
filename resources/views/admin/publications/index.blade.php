@@ -99,7 +99,7 @@
                                                                 <td>{{ $publication->title_en }}</td>
                                                             @endif
 
-                                                            <td>{{ $publication->project_id }}</td>
+                                                            <td>{{ $publication->project !== null ? $publication->project->{'title_'.Lang()} : ''}}</td>
 
                                                             <td>{{ $publication->date }}</td>
                                                             <td>
