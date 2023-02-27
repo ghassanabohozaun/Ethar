@@ -1,7 +1,6 @@
 <!-- project-section -->
-
-<section class="case-page-section">
-    @if(!$lastProjects->isEmpty())
+@if(!$lastProjects->isEmpty())
+    <section class="case-page-section">
         <div class="auto-container">
 
             <div class="sec-title style-two centred">
@@ -47,7 +46,6 @@
 
             </div>
         </div>
-    @endif
-</section>
-
+    </section>
+@endif
 <!-- project-section end -->
