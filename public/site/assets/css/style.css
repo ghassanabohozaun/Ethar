@@ -7900,15 +7900,15 @@ div#mCSB_1_container {
     padding: 0px 30px;
 }
 
-.funfact-block-one .inner-box:before {
-    position: absolute;
-    content: '';
-    background-color: #dddad8;
-    width: 1px;
-    height: 100%;
-    top: 0px;
-    right: -15px;
-}
+/*.funfact-block-one .inner-box:before {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    background-color: #dddad8;*/
+/*    width: 1px;*/
+/*    height: 100%;*/
+/*    top: 0px;*/
+/*    right: -15px;*/
+/*}*/
 
 .funfact-block:last-child .funfact-block-one .inner-box:before {
     display: none;

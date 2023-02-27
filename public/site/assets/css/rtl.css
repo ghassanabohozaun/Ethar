@@ -648,3 +648,14 @@
     border-left: 1px solid #dddad8;
     transition: all 500ms ease;
 }
+
+
+.funfact-block-one .inner-box:before {
+    position: absolute;
+    content: '';
+    background-color: #dddad8;
+    width: 1px;
+    height: 100%;
+    top: 0px;
+    left: -15px;
+}
