@@ -65,10 +65,10 @@
                                             @if($video->photo == null)
                                                 <img src="http://img.youtube.com/vi/{{$video->link}}/0.jpg"
                                                      class="my-video-photo"
-                                                     alt=""/>
+                                                     alt="{!! $video->{'title_'.Lang()} !!}"/>
                                             @else
                                                 <img src="{{asset('adminBoard/uploadedImages/videos/'.$video->photo)}}"
-                                                     alt="">
+                                                     alt="{!! $video->{'title_'.Lang()} !!}">
                                             @endif
                                         </figure>
 
@@ -80,7 +80,7 @@
                                                 </li>
                                             </ul>
 
-                                            <h3><a href="#"> {!! $video->{'title_'.Lang()} !!}</a></h3>
+                                            <h3><a href="#">{!! $video->{'title_'.Lang()} !!}</a></h3>
 
                                             <div class="links">
                                                 <a href="https://www.youtube.com/watch?v={!! $video->link !!}"

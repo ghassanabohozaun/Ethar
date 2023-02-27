@@ -29,12 +29,10 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>Photo Details</h1>
+                        <h1>{!! $photoAlbum->{'title_'.Lang()} !!}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Photo Details</li>
+                        &nbsp;
                     </ul>
                 </div>
             </div>
@@ -47,84 +45,30 @@
             <div class="auto-container">
                 <div class="sortable-masonry">
 
-                    <div class="items-container row clearfix">
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
-                            <figure class="image-box">
-                                <a href="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}"
-                                   class="lightbox-image"
-                                   data-fancybox="gallery">
-                                    <img src="{!! asset('site/assets/images/gallery/portfolio-1.jpg') !!}" alt="">
-                                </a>
-                            </figure>
+                    @if($photos->isEmpty())
+                        <h1 class="my-h1 text-center">{!! __('index.no_data_found') !!}</h1>
+                    @else
+
+                        <div class="items-container row clearfix">
+                            @foreach($photos as $photo)
+
+                                <div class="col-lg-3 col-md-3 col-sm-6 masonry-item small-column">
+                                    <figure class="image-box">
+                                        <a href="{{asset('adminBoard/uploadedImages/albums_photos/'.$photo->full_path_after_upload)}}"
+                                           class="lightbox-image"
+                                           data-fancybox="gallery">
+                                            <img
+                                                src="{{asset('adminBoard/uploadedImages/albums_photos/'.$photo->full_path_after_upload)}}"
+                                                alt="">
+                                        </a>
+                                    </figure>
+                                </div>
+                            @endforeach
                         </div>
 
-
-                    </div>
+                    @endif
                 </div>
-                <div class="more-btn"><a href="#" class="theme-btn btn-one">Load More</a></div>
+
             </div>
         </section>
         <!-- portfolio-section end -->

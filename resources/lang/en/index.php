@@ -22,6 +22,7 @@ return [
     'reports' => 'Reports',
     'media' => 'Media',
     'our_photos' => 'Our Photos',
+    'our_photos_albums' => 'Our Photos Albums',
     'our_videos' => 'Our Videos',
     'contact' => 'Contact',
     'about_our_projects' => 'About Our Projects',
@@ -83,7 +84,7 @@ return [
     'email_email' => 'Your email must be in : someone@someone.com',
 
     'play_video' => 'Play Video',
-
+    'view_all'=>'View All',
 
     'no_data_found' => 'Sorry, There are no data currently',
     'send_success_message' => 'Message Sent Successfully',

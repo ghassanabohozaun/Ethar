@@ -20,6 +20,7 @@ class CreatePhotoAlbumsTable extends Migration
             $table->text('title_ar')->nullable();
             $table->text('title_en')->nullable();
             $table->string('main_photo')->nullable();
+            $table->string('year');
             $table->timestamps();
         });
     }

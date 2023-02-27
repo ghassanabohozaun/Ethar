@@ -13,6 +13,7 @@ class PhotoAlbum extends Model
         'title_ar',
         'title_en',
         'main_photo',
+        'year',
     ];
     protected $hidden = ['updated_at',];
 

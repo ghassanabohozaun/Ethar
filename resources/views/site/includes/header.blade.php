@@ -129,7 +129,7 @@
                                     </a>
                                     <ul>
                                         <li>
-                                            <a href="{!! route('our-photos') !!}">
+                                            <a href="{!! route('photos-albums') !!}">
                                                 {!! __('index.our_photos') !!}
                                             </a>
                                         </li>

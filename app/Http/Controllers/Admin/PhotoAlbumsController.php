@@ -48,6 +48,7 @@ class PhotoAlbumsController extends Controller
             'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'year' => $request->year,
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
@@ -111,6 +112,7 @@ class PhotoAlbumsController extends Controller
             'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
+            'year' => $request->year,
         ]);
 
         return $this->returnSuccessMessage(__('general.update_success_message'));

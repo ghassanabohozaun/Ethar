@@ -3,8 +3,8 @@
 @section('content')
 
     <form class="form" action="{{route('admin.photo.albums.store')}}" method="POST" id="form_photo_album_add">
-    @csrf
-    <!--begin::Subheader-->
+        @csrf
+        <!--begin::Subheader-->
         <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
             <div
                 class=" container-fluid  d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
@@ -84,7 +84,7 @@
                                                             <div
                                                                 class="image-input image-input-outline"
                                                                 id="kt_main_photo_album">
-                                                            <!--  style="background-image: url({{--asset(Storage::url(setting()->site_icon))--}})"-->
+                                                                <!--  style="background-image: url({{--asset(Storage::url(setting()->site_icon))--}})"-->
                                                                 <div class="image-input-wrapper"></div>
                                                                 <label
                                                                     class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow"
@@ -111,6 +111,34 @@
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
+
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('photoAlbums.year')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+
+                                                            <select
+                                                                class="form-control form-control-solid form-control-lg"
+                                                                name="year" id="year" type="text">
+                                                                <?php
+                                                                $firstYear = (int)date('Y') - 2;
+                                                                $lastYear = $firstYear + 6;
+                                                                ?>
+                                                                <option
+                                                                    value="">{{__('general.select_from_list')}}
+                                                                </option>
+                                                                @for ($year= $firstYear; $year<= $lastYear; $year++)
+                                                                    <option value="{{$year}}">{{ $year }} </option>
+                                                                @endfor
+                                                            </select>
+                                                            <span class="form-text text-danger"
+                                                                  id="year_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::Group-->
+
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
@@ -183,11 +211,13 @@
             $('#title_ar_error').text('');
             $('#title_en_error').text('');
             $('#main_photo_error').text('');
+            $('#year_error').text('');
 
             $('#language').css('border-color', '');
             $('#title_ar').css('border-color', '');
             $('#title_en').css('border-color', '');
             $('#main_photo').css('border-color', '');
+            $('#year').css('border-color', '');
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);
             var type = $(this).attr('method');

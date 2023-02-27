@@ -12,6 +12,7 @@ return [
     'language' => 'Photo Album Language ',
     'status' => 'Photo Album Status ',
     'main_photo' => 'Photo Album Main Photo ',
+    'year' => 'Photo Album Year',
 
     'enter_title_ar' => 'Enter Photo Album Title  in Arabic',
     'enter_title_en' => 'Enter Photo Album Title  in English',

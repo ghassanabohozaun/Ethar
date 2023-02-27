@@ -29,11 +29,13 @@ class PhotoAlbumsRequest extends FormRequest
                 'title_ar' => 'required',
                 'title_en' => 'required',
                 'main_photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                'year' => 'required',
             ];
         } else {
             return [
                 'title_ar' => 'required',
                 'main_photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+                'year' => 'required',
 
             ];
         }

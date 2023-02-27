@@ -57,13 +57,9 @@ Route::group(
     Route::get('/report-details/{year?}', 'ReportsController@details')->name('report-details');
 
 
-    Route::get('/our-photos', function () {
-        return view('site.photos.our-photos');
-    })->name('our-photos');
+    Route::get('/photos-albums', [MediaController::class, 'photosAlbums'])->name('photos-albums');
 
-    Route::get('/photo-details', function () {
-        return view('site.photos.photo-details');
-    })->name('photo-details');
+    Route::get('/photo-albums-details/{title}',  [MediaController::class, 'photosAlbumsDetails'])->name('photo-albums-details');
 
     Route::get('/videos', [MediaController::class, 'videos'])->name('videos');
 

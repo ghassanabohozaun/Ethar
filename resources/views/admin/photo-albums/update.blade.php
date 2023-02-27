@@ -122,6 +122,34 @@
                                                     </div>
                                                     <!--end::Group-->
 
+                                                    <!--begin::Group-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('photoAlbums.year')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <select
+                                                                class="form-control  form-control-lg"
+                                                                name="year" id="year" type="text">
+                                                                <?php
+                                                                $firstYear = (int)date('Y') - 2;
+                                                                $lastYear = $firstYear + 6;
+                                                                ?>
+                                                                <option value="">{{__('general.select_from_list')}}
+                                                                </option>
+
+                                                                @for ($year= $firstYear; $year<= $lastYear; $year++)
+                                                                    <option
+                                                                        value="{{$year}}" {{ $photoAlbum->year == $year ? 'selected' : '' }} >{{ $year }}</option>
+                                                                @endfor
+                                                            </select>
+                                                            <span class="form-text text-danger"
+                                                                  id="gender_error"></span>
+                                                        </div>
+
+                                                    </div>
+                                                    <!--end::Group-->
+
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">

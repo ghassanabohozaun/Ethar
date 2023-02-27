@@ -1,6 +1,7 @@
 .header-style-one .logo-box .logo img {
     border-bottom-right-radius: 20px;
 }
+
 .my-social-style-one li {
     position: relative;
     display: inline-block;
@@ -10,7 +11,7 @@
 
 .content_block_10 .content-box .image {
     position: relative;
-     margin-left: -120px;
+    margin-left: -120px;
 }
 
 .main-menu .navigation > li > a:before {
@@ -108,7 +109,7 @@
     right: -15px;
 }
 
-<<<<<<< HEAD
+
 .events-block-two .inner-box .content-box .links a:before {
     position: absolute;
     content: '';
@@ -131,6 +132,7 @@
     opacity: 0;
     transition: all 500ms ease;
 }
+
 .events-block-two .inner-box .content-box .info li {
     position: relative;
     display: inline-block;
@@ -148,8 +150,41 @@
     left: 0px;
     top: 6px;
     font-size: 18px;
-=======
+}
+
 .blog-details-content .content-one .upper-box .post-info li:last-child {
     margin: 0px !important;
->>>>>>> af0b65e3b8d6d9bc36f1004545548f17fe43de4c
+
+}
+
+
+.portfolio-block-one .inner-box .content-box .text {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: calc(100% - 20px);
+    background-color: #f4f1f0;
+    border-top-left-radius: 15px;
+    padding: 16px 20px 21px 20px;
+    text-align: left;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+
+.sortable-masonry .filter-tabs li {
+    position: relative;
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Quicksand', sans-serif;
+    color: #232323;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 38px;
+    cursor: pointer;
+    border-right: 1px solid #dddad8;
+    transition: all 500ms ease;
 }

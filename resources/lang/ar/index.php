@@ -22,6 +22,7 @@ return array(
     'reports' => 'التقارير',
     'media' => 'ميديا',
     'our_photos' => 'صورنا',
+    'our_photos_albums' => 'البومات الصور',
     'our_videos' => 'فيديوهاتنا',
     'contact' => 'اتصل بنا',
     'about_our_projects' => 'عن مشاريعنا',
@@ -86,6 +87,7 @@ return array(
 
     'play_video'=>'تشغيل الفيديو',
 
+    'view_all'=>'عرض الكل',
 
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
 

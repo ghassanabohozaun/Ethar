@@ -571,7 +571,6 @@
     width: 1px;
     height: 20px;
     top: 3px;
-<<<<<<< HEAD
     left: 20px;
 }
 
@@ -616,11 +615,36 @@
     top: 6px;
     font-size: 18px;
     margin-left: 10px;
-=======
     left:  20px;
-
-
->>>>>>> af0b65e3b8d6d9bc36f1004545548f17fe43de4c
 }
 
 
+.portfolio-block-one .inner-box .content-box .text {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: calc(100% - 20px);
+    background-color: #f4f1f0;
+    border-top-left-radius: 15px;
+    padding: 16px 20px 21px 20px;
+    text-align: right;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.sortable-masonry .filter-tabs li {
+    position: relative;
+    display: inline-block;
+    float: right;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Quicksand', sans-serif;
+    color: #232323;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 38px;
+    cursor: pointer;
+    border-left: 1px solid #dddad8;
+    transition: all 500ms ease;
+}
