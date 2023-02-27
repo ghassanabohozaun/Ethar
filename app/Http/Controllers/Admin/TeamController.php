@@ -44,7 +44,6 @@ class TeamController extends Controller
             $photo_path = '';
         }
 
-
         Team::create([
             'photo' => $photo_path,
             'name_ar' => $request->name_ar,
@@ -57,6 +56,7 @@ class TeamController extends Controller
             'twitter' => $request->twitter,
             'linkedIn' => $request->linkedIn,
             'type' => $request->type,
+            'status' =>'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
