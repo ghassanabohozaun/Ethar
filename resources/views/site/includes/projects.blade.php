@@ -1,4 +1,3 @@
-<!-- project-section -->
 @if(!$lastProjects->isEmpty())
     <section class="case-page-section">
         <div class="auto-container">
@@ -48,4 +47,4 @@
         </div>
     </section>
 @endif
-<!-- project-section end -->
+
