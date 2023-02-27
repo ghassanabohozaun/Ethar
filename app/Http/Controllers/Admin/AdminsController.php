@@ -46,17 +46,17 @@ class AdminsController extends Controller
 
             if ($request->hasFile('photo')) {
                 if (!empty($admin->photo)) {
-                    $image_path = public_path("\adminBoard\uploadedImages\admin\\") . $admin->photo;
+                    $image_path = public_path("/adminBoard/uploadedImages/admin//") . $admin->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }
                     $image = $request->file('photo');
-                    $destinationPath = public_path('\adminBoard\uploadedImages\admin\\');
+                    $destinationPath = public_path('/adminBoard/uploadedImages/admin//');
                     $photo_path = $this->saveResizeImage($image, $destinationPath,250,250);
 
                 } else {
                     $image = $request->file('photo');
-                    $destinationPath = public_path('\adminBoard\uploadedImages\admin\\');
+                    $destinationPath = public_path('/adminBoard/uploadedImages/admin//');
                     $photo_path = $this->saveResizeImage($image, $destinationPath,250,250);
                 }
             } else {
