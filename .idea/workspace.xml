@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/MediaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/css/ltr.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/ltr.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/rtl.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/css/site-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/site-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/videos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/videos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +307,7 @@
       <workItem from="1677405387380" duration="235000" />
       <workItem from="1677410070777" duration="1203000" />
       <workItem from="1677421810297" duration="21879000" />
-      <workItem from="1677483083680" duration="3158000" />
+      <workItem from="1677483083680" duration="9214000" />
     </task>
     <servers />
   </component>

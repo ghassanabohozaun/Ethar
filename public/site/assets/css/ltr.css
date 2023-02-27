@@ -107,3 +107,44 @@
     top: 3px;
     right: -15px;
 }
+
+.events-block-two .inner-box .content-box .links a:before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 1px;
+    left: 0px;
+    top: 0px;
+    transition: all 500ms ease;
+}
+
+
+.events-block-two .inner-box .content-box .links a:after {
+    position: absolute;
+    content: "\f105";
+    font-size: 18px;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 400;
+    top: -12px;
+    right: 0px;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+.events-block-two .inner-box .content-box .info li {
+    position: relative;
+    display: inline-block;
+    float: left;
+    font-size: 22px;
+    line-height: 26px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    padding-left: 25px;
+    margin-right: 30px;
+}
+
+.events-block-two .inner-box .content-box .info li i {
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    font-size: 18px;
+}
