@@ -18,14 +18,14 @@
                                 </a>
                             </figure>
                             <div class="content-box">
-                                <div class="text ">
+                                <div class="text my-word-break">
                                     <span class="post-date">{!! $lastArticle->publish_date !!}</span>
-                                    <div class="category"><a href="#"># {!! __('index.articles') !!}</a></div>
+                                    <div class="category"><a href="{!! route('news') !!}"># {!! __('index.articles') !!}</a></div>
                                     <h3>
-                                        <a href="#">{!! $lastArticle->{'title_'.Lang()} !!}</a>
+                                        <a href="{!! route('new-details',slug($lastArticle->{'title_'.Lang()}) ) !!}">{!! $lastArticle->{'title_'.Lang()} !!}</a>
                                     </h3>
                                     <p>
-                                        {!! \Illuminate\Support\Str::limit(strip_tags($lastArticle->{'abstract_'.Lang()}),$limit = 70, $end = ' ...')!!}
+                                        {!! \Illuminate\Support\Str::limit(strip_tags($lastArticle->{'abstract_'.Lang()}),$limit = 50, $end = ' ...')!!}
                                     </p>
                                 </div>
                                 <div class="info clearfix">
@@ -35,7 +35,8 @@
                                     <div class="comment-box pull-right">
                                         <a href="javascript:void(0)">
                                             <i class="far fa-comment"></i>
-                                            {!! \App\Models\Comment::where('status','on')->where('post_id',$lastArticle->id)->count() !!}
+                                            {{-- {!! \App\Models\Comment::where('status','on')->where('post_id',$lastArticle->id)->count() !!} --}}
+                                            {{$lastArticle->comments()->count()}}
                                             {!! __('index.comments') !!}
                                         </a>
                                     </div>
