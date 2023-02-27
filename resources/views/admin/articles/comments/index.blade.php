@@ -81,6 +81,7 @@
                                                         <th>{{__('articles.person_ip')}}</th>
                                                         <th>{{__('articles.person_name')}}</th>
                                                         <th>{{__('articles.person_email')}}</th>
+                                                        <th>{{__('articles.gender')}}</th>
                                                         <th>{{__('articles.commentary')}}</th>
                                                         <th>{{__('articles.publish_date')}}</th>
                                                         <th>{{__('articles.status')}}</th>
@@ -91,14 +92,11 @@
                                                     <tbody>
                                                     @forelse($comments as $comment)
                                                         <tr>
-                                                            <td>
-                                                                <img
-                                                                    src="{{ asset('adminBoard/uploadedImages/articles/comments/'.$comment->photo) }}"
-                                                                    class="img-fluid img-thumbnail table-image "/>
-                                                            </td>
+                                                            <td>@include('admin.articles.comments.parts.photo')</td>
                                                             <td>{{ $comment->person_ip }}</td>
                                                             <td>{{ $comment->person_name }}</td>
                                                             <td>{{ $comment->person_email }}</td>
+                                                            <td>{{ $comment->gender }}</td>
                                                             <td>{{ $comment->commentary }}</td>
                                                             <td>{{ $comment->created_at }}</td>
                                                             <td>
@@ -119,7 +117,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="8" class="text-center">
+                                                            <td colspan="9" class="text-center">
                                                                 {{__('articles.no_comments_found')}}
                                                             </td>
                                                         </tr>
@@ -127,7 +125,7 @@
                                                     {{--                                                    </tbody>--}}
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="8">
+                                                        <td colspan="9">
                                                             <div class="float-right">
                                                                 {!! $comments->appends(request()->all())->links() !!}
                                                             </div>

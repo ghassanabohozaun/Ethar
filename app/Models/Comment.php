@@ -22,4 +22,15 @@ class Comment extends Model
     ];
     protected $hidden = ['updated_at'];
 
+
+    /// language accessors
+    public function getGenderAttribute($value)
+    {
+        if ($value == 'male') {
+            return __('general.male');
+        } elseif ($value == 'female') {
+            return __('general.female');
+        }
+    }
+
 }

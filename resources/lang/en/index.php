@@ -62,15 +62,28 @@ return [
     'palestine' => 'palestine , Gaza strip',
     'khan_younes' => 'Khan Younes',
     'your_name' => 'Your Name',
-    'email_address' => 'Email Address',
     'title' => 'Title',
     'message' => 'Message',
     'send_message' => 'Send Message',
     'views_count' => 'Views',
     'comments_count' => 'Comments',
 
+    'leave_Reply' => 'Leave a Reply',
+    'required_fields_are_marked' => 'Your email address will not be published. Required fields are marked',
+    'you_comment' => 'Your Comment',
+    'you_name' => 'Your Name',
+    'your_email' => 'Your Email',
+    'submit' => 'Submit',
+
+
+    'my_comments'=>'Comments',
+    'you_comment_required' => 'Your comment is required',
+    'you_name_required' => 'Your name is required',
+    'your_email_required' => 'Your email is required',
+    'email_email' => 'Your email must be in : someone@someone.com',
+
 
     'no_data_found' => 'Sorry, There are no data currently',
-    'send_success_message' => 'Your Message Sent Successfully',
-    'add_success_comment' => 'Your Comment Added Successfully',
+    'send_success_message' => 'Message Sent Successfully',
+    'add_success_comment' => 'Comment Added Successfully',
 ];
