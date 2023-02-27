@@ -163,13 +163,13 @@
 
                                         <div class="post">
                                             <figure class="post-thumb">
-                                                <a href="#">
+                                                <a href="{{route('new-details',slug($new->{'title_'.Lang()})) }}">
                                                     <img
                                                         src="{{asset('adminBoard\\uploadedImages\\articles\\'. $new->photo	)}}"
                                                         alt="">
                                                 </a>
                                             </figure>
-                                            <h5><a href="#">{{$new->{'title_'.Lang()} }}</a></h5>
+                                            <h5><a href="{{route('new-details',slug($new->{'title_'.Lang()})) }}">{{$new->{'title_'.Lang()} }}</a></h5>
                                             <span class="post-date">{{$new->created_at->format('d.m.Y')}}</span>
                                         </div>
                                     @endforeach
