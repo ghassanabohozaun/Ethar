@@ -67,8 +67,11 @@
                                     <span># {{ __('site.'.$publication->type)}} #</span>
                                     <h2>{{$publication->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                        {{-- <li><i class="far fa-user"></i>{{$publication->writer}}</li> --}}
-                                        <li><i class="far fa-eye"></i>{{$publication->views}}</li>
+                                        
+                                        <li style="">
+                                            <i class="far fa-eye"></i>
+                                            {{$publication->views}}
+                                        </li>
                                     </ul>
                                 </div>
                                 <figure class="image-box">
