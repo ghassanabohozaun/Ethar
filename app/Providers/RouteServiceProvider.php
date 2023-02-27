@@ -65,7 +65,8 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::middleware('web')
+        Route::prefix(LaravelLocalization::setLocale())
+            ->middleware('web')
             ->namespace($this->namespace)
             ->group(base_path('routes/web.php'));
     }

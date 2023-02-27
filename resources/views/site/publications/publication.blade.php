@@ -45,16 +45,16 @@
         <!-- End Page Title -->
 
 
-        <div class="auto-container">
             @if($publications->isEmpty())
             <!-- team-section -->
             <section class="team-section centred">
                 <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
             </section>
              @else
-
+            
         <section class="blog-grid">
           
+            <div class="auto-container">
         
                
                 <div class="row clearfix">
@@ -97,17 +97,18 @@
 
 
                 </div>
-                {{-- <div class="more-btn centred"><a href="#" class="theme-btn btn-one">Load More</a></div> --}}
                 {{ $publications->links('vendor.pagination.my-bootstrap') }}
 
+           
             </div>
 
         </section>
         @endif
-    </div>
-</div>
+            
+       
+   
 
-    </div>
+  
 
 
 

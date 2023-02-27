@@ -108,6 +108,7 @@
     right: -15px;
 }
 
+<<<<<<< HEAD
 .events-block-two .inner-box .content-box .links a:before {
     position: absolute;
     content: '';
@@ -147,4 +148,8 @@
     left: 0px;
     top: 6px;
     font-size: 18px;
+=======
+.blog-details-content .content-one .upper-box .post-info li:last-child {
+    margin: 0px !important;
+>>>>>>> af0b65e3b8d6d9bc36f1004545548f17fe43de4c
 }

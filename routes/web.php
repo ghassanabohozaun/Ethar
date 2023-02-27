@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(
     [
         'namespace' => 'Site',
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
+        'middleware' => ['localize', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
     ], function () {
 
 
