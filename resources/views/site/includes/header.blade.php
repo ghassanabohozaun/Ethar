@@ -149,12 +149,12 @@
 
                             </ul>
                         </div>
-                    </nav>
+                    </nav> 
                 </div>
                 <div class="nav-right-content clearfix">
                     @if(Lang()=='ar')
                         <ul class="social-style-one clearfix social-facebook-icon">
-                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/en">EN</a></li>
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="{{LaravelLocalization::getLocalizedURL('en')}}">en</a></li>
                             <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
                             <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
@@ -166,7 +166,7 @@
                             <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع</a></li>
                         </ul>
                     @endif
                 </div>

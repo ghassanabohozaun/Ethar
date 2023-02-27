@@ -25,7 +25,7 @@ return new class extends Migration
             $table->enum('language',['ar','ar_en'])->default('ar');
             $table->text('file')->nullable();
             $table->date('date')->nullable();
-            $table->string('writer');
+            $table->string('writer')->nullable();
             $table->enum('type', ['Advertisements','Brochures','CaseStudy','ScientificArticles'])->default('Advertisements');
             $table->integer('views')->default(1);
             $table->foreignIdFor(Projects::class)->nullable();
