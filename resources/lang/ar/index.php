@@ -32,7 +32,7 @@ return array(
     'about_association' => 'عن الجمعية',
     'read_more' => 'قراة المزيد',
     'funders' => 'الممولين',
-    'beneficiaries' => 'الممولين',
+    'beneficiaries' => 'المستفيدين',
     'meet_our_founders' => 'مؤسسي الجمعية',
     'meet_our_directors' => 'اداريي الجمعية',
     'meet_our_team' => 'فريق عمل الجمعية',
