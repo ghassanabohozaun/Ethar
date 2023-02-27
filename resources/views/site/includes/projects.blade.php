@@ -32,7 +32,7 @@
                                                 </a>
                                             </div>
                                             <h3>
-                                                <a href="#">{!!  $project->{'title_'.Lang()} !!}</a>
+                                                <a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">{!!  $project->{'title_'.Lang()} !!}</a>
                                             </h3>
                                         </div>
                                     </div>
