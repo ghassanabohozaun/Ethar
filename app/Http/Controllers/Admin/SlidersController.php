@@ -67,6 +67,7 @@ class SlidersController extends Controller
             'url_ar' => null,
             'url_en' => null,
             'order' => $request->order,
+            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
