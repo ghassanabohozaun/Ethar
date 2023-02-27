@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/articles/comments/parts/photo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/my-sweet-alert-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/my-sweet-alert-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/css/ltr.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/ltr.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/css/site-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/site-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/articles/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/articles/comments/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/parts/photo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/parts/photo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/news/new-details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,23 +177,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/etharps/resources/views/admin/articles/comments",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/etharps/resources/views/admin/articles/comments&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\etharps\resources\views\admin\articles\comments" />
@@ -308,6 +303,7 @@
       <workItem from="1677405387380" duration="235000" />
       <workItem from="1677410070777" duration="1203000" />
       <workItem from="1677421810297" duration="21879000" />
+      <workItem from="1677483083680" duration="3158000" />
     </task>
     <servers />
   </component>

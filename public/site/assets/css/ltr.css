@@ -58,3 +58,52 @@
     font-weight: 700;
     margin-bottom: 0px;
 }
+
+
+.blog-details-content .comment-box .comment .comment-info span {
+    position: absolute;
+    display: block;
+    top: 3px;
+    right: 0px;
+    font-size: 15px;
+}
+
+
+.blog-details-content .comment-box .comment .thumb-box {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+
+.blog-details-content .content-one .upper-box .post-info li {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Quicksand', sans-serif;
+    color: #5f5e5e;
+    font-weight: 500;
+    padding-left: 27px;
+    margin-right: 25px;
+}
+
+.blog-details-content .content-one .upper-box .post-info li i {
+    position: absolute;
+    left: 0px;
+    top: 5px;
+}
+
+
+.blog-details-content .content-one .upper-box .post-info li:before {
+    position: absolute;
+    content: '';
+    background-color: #c4bfbd;
+    width: 1px;
+    height: 20px;
+    top: 3px;
+    right: -15px;
+}

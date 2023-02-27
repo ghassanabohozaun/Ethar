@@ -65,8 +65,8 @@ return array(
     'title' => 'عنوان الرسالة',
     'message' => 'الرسالة',
     'send_message' => 'ارسل الرسالة',
-    'views_count' => 'عدد المشاهدات',
-    'comments_count' => 'عدد التعليقات',
+    'views_count' => 'مشاهدة',
+    'comments_count' => 'تعليق',
 
 
 
