@@ -33,7 +33,7 @@ class SiteController extends Controller
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////
         /// Arabic
-        if (LaravelLocalization::getCurrentLocale() == 'ar') {
+        if (LaravelLocalization::getCurrentLocale() == 'en') {
 
             // Slider
             $sliders = Slider::orderByDesc('id')->where('status', 'on')
@@ -61,19 +61,19 @@ class SiteController extends Controller
             // Slider
             $sliders = Slider::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
-                    $q->where('language', 'ar_en');
+                    $q->where('language', 'ar');
                 })->get();
 
             //  projects
             $lastProjects = Projects::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
-                    $q->where('language', 'ar_en');
+                    $q->where('language', 'ar');
                 })->take(4)->get();
 
             // last articles
             $lastArticles = Article::orderByDesc('id')->where('status', 'on')
                 ->where(function ($q) {
-                    $q->where('language', 'ar_en');
+                    $q->where('language', 'ar');
                 })->take(4)->get();
 
         }
