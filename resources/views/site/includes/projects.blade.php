@@ -1,7 +1,9 @@
 <!-- project-section -->
-@if(!$lastProjects->isEmpty())
-    <section class="case-page-section">
+
+<section class="case-page-section">
+    @if(!$lastProjects->isEmpty())
         <div class="auto-container">
+
             <div class="sec-title style-two centred">
                 <span class="top-text">{!! __('index.about_our_projects') !!}</span>
                 <h2>{!! __('index.our_projects') !!}</h2>
@@ -9,6 +11,7 @@
                     {!! fixedTexts()->{'project_details_'.Lang()} !!}
                 </p>
             </div>
+
             <div class="row clearfix">
 
                 @foreach($lastProjects as $project)
@@ -44,6 +47,7 @@
 
             </div>
         </div>
-    </section>
-@endif
+    @endif
+</section>
+
 <!-- project-section end -->
