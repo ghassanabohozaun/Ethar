@@ -76,11 +76,13 @@ return [
     'submit' => 'Submit',
 
 
-    'my_comments'=>'Comments',
+    'my_comments' => 'Comments',
     'you_comment_required' => 'Your comment is required',
     'you_name_required' => 'Your name is required',
     'your_email_required' => 'Your email is required',
     'email_email' => 'Your email must be in : someone@someone.com',
+
+    'play_video' => 'Play Video',
 
 
     'no_data_found' => 'Sorry, There are no data currently',

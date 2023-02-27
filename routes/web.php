@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Site\MediaController;
 use App\Http\Controllers\Site\NewsController;
 use App\Http\Controllers\Site\ProjectController;
 use App\Http\Controllers\Site\PublicationController;
@@ -60,14 +61,12 @@ Route::group(
         return view('site.photos.our-photos');
     })->name('our-photos');
 
-
     Route::get('/photo-details', function () {
         return view('site.photos.photo-details');
     })->name('photo-details');
 
-    Route::get('/videos', function () {
-        return view('site.videos');
-    })->name('videos');
+    Route::get('/videos', [MediaController::class, 'videos'])->name('videos');
+
 
     Route::get('/contact', function () {
         return view('site.contact');

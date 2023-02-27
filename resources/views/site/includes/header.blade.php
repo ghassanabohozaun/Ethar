@@ -149,7 +149,7 @@
 
                             </ul>
                         </div>
-                    </nav> 
+                    </nav>
                 </div>
                 <div class="nav-right-content clearfix">
                     @if(Lang()=='ar')

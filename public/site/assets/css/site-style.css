@@ -148,11 +148,12 @@
     margin: 101px 0px 110px 0px;
 }
 
-.my-p{
+.my-p {
     color: #f65024;
     font-size: 14px;
     font-weight: bolder;
 }
+
 .my-h1 {
     color: #f65024;
     font-weight: bolder;
@@ -162,6 +163,17 @@
     word-break: break-word;
 }
 
-.font-size-14{
+.font-size-14 {
     font-size: 14px;
+}
+
+.my-fa-caret {
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+
+.my-video-photo {
+    width: 500px;
+    height: 370px
 }

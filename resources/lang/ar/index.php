@@ -83,6 +83,10 @@ return array(
     'your_email_required' => 'ايميلك مطلوب',
     'email_email' => 'الايميل يجب ان يكون : someone@someone.com',
 
+
+    'play_video'=>'تشغيل الفيديو',
+
+
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
 
     'send_success_message' => 'تم ارسال رسالتك بنجاح',
