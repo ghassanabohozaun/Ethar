@@ -46,6 +46,7 @@ class PartnersController extends Controller
             'photo' => $photo_path,
             'name_ar' => $request->name_ar,
             'name_en' => $request->name_en,
+            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
