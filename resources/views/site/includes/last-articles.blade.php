@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="info clearfix">
                                     <div class="link-box pull-left">
-                                        <a href="javascript:void(0)">{!! __('index.more_details') !!}</a>
+                                        <a href="{!! route('new-details',slug($lastArticle->{'title_'.Lang()}) ) !!}">{!! __('index.more_details') !!}</a>
                                     </div>
                                     <div class="comment-box pull-right">
                                         <a href="javascript:void(0)">
