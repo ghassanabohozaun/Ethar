@@ -46,7 +46,7 @@ class UserController extends Controller
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('\adminBoard\uploadedImages\users\\');
+            $destinationPath = public_path('/adminBoard/uploadedImages/users//');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 250);
         } else {
             $photo_path = '';
@@ -90,18 +90,18 @@ class UserController extends Controller
         $user = Admin::find($request->id);
 
         if ($request->hasFile('photo')) {
-            $image_path = public_path("\adminBoard\uploadedImages\users\\") . $user->photo;
+            $image_path = public_path("/adminBoard/uploadedImages/users//") . $user->photo;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
 
             if (!empty($user->photo)) {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\users\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/users//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 250);
             } else {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\users\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/users//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 250);
             }
         } else {
@@ -172,7 +172,7 @@ class UserController extends Controller
             }
 
             if (!empty($user->photo)) {
-                $image_path = public_path("\adminBoard\uploadedImages\users\\") . $user->photo;
+                $image_path = public_path("/adminBoard/uploadedImages/users//") . $user->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
