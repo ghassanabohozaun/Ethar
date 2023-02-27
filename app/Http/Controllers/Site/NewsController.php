@@ -7,14 +7,26 @@ use App\Http\Requests\CommentRequest;
 use App\Models\Article;
 use App\Models\Comment;
 use App\Traits\GeneralTrait;
-
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 class NewsController extends Controller
 {
     use GeneralTrait;
 
     function getNews()
     {
-        $news = Article::orderByDesc('id')->where('status', 'on')->paginate(6);
+       if( LaravelLocalization::getCurrentLocale() == 'ar'){
+        $news = Article::orderByDesc('id')->where('status', 'on')
+         ->where(function ($q) {
+            $q->where('language', 'ar')
+                ->orWhere('language', 'ar_en');
+        })->paginate(6);
+
+       }else{
+        $news = Article::orderByDesc('id')->where('status', 'on')
+        ->where(function ($q) {
+            $q->orWhere('language', 'ar_en');
+        })->paginate(6);
+       }
         if ($news) {
             return view('site.news.new', compact('news'));
         } else {
