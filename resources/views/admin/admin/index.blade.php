@@ -56,7 +56,7 @@
                                                      src="{{asset('adminBoard/uploadedImages/admin/'.$admin->photo)}}"/>
                                             @else
                                                 <img alt="Pic"
-                                                     src="{!! asset('adminBoard/images/male.png') !!}"/>
+                                                     src="{!! asset('adminBoard/images/male.jpeg') !!}"/>
                                             @endif
                                         </div>
                                     </div>
