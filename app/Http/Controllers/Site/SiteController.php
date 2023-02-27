@@ -37,6 +37,7 @@ class SiteController extends Controller
 
             // Slider
             $sliders = Slider::orderByDesc('id')->where('status', 'on')
+                ->orderBy('order', 'desc')
                 ->where(function ($q) {
                     $q->where('language', 'ar')
                         ->orWhere('language', 'ar_en');
@@ -60,6 +61,7 @@ class SiteController extends Controller
         } else {
             // Slider
             $sliders = Slider::orderByDesc('id')->where('status', 'on')
+                ->orderBy('order', 'desc')
                 ->where(function ($q) {
                     $q->where('language', 'ar_en');
                 })->get();
@@ -100,7 +102,7 @@ class SiteController extends Controller
         }
         $about = About::status()->where('about_type_id', $about_type->id)->first();
         if ($about) {
-            return view('site.about', compact('about' ,'about_type'));
+            return view('site.about', compact('about', 'about_type'));
         } else {
             return view('site.about', compact('about_type'));
         }

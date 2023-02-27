@@ -80,7 +80,6 @@
                                                         <th>{!! __('sliders.title_en') !!}</th>
                                                         <th>{!! __('sliders.order') !!}</th>
                                                         <th>{!! __('sliders.details_status') !!}</th>
-                                                        <th>{!! __('sliders.button_status') !!}</th>
                                                         <th>{!! __('sliders.status') !!}</th>
                                                         <th class="text-center" style="width: 100px;">{!! __('general.actions') !!}</th>
                                                     </tr>
@@ -111,19 +110,6 @@
                                                                 @endif
                                                             </td>
                                                             <td>
-                                                                @if( $slider->button_status == __('sliders.show'))
-                                                                    <span
-                                                                        class="label label-light-info label-inline mr-2">
-                                                                        {!! $slider->button_status !!}
-                                                                    </span>
-                                                                @else
-                                                                    <span
-                                                                        class="label label-light-danger label-inline mr-2">
-                                                                        {!! $slider->button_status !!}
-                                                                        </span>
-                                                                @endif
-                                                            </td>
-                                                            <td>
                                                                 <div class="cst-switch switch-sm">
                                                                     <input type="checkbox"
                                                                            id="change_status"
@@ -149,7 +135,7 @@
                                                         </tr>
                                                     @empty
                                                         <tr>
-                                                            <td colspan="9" class="text-center">
+                                                            <td colspan="8" class="text-center">
                                                                 {!! __('sliders.no_sliders_found') !!}
                                                             </td>
                                                         </tr>
@@ -157,7 +143,7 @@
                                                     </tbody>
                                                     <tfoot>
                                                     <tr>
-                                                        <td colspan="9">
+                                                        <td colspan="8">
                                                             <div class="float-right">
                                                                 {!! $sliders->appends(request()->all())->links() !!}
                                                             </div>
