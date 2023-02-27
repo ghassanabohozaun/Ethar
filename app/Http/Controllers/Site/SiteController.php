@@ -81,10 +81,8 @@ class SiteController extends Controller
         }
 
 
-        //founders
         $founders = Team::orderByDesc('id')->where('status', 'on')->where('type', 'founder')->get();
         $testimonials = testimonial::orderByDesc('id')->where('status', 'on')->get();
-
         $partners = Partner::orderByDesc('id')->where('status', 'on')->get();
 
         return view('site.index', compact('title', 'sliders', 'lastProjects', 'founders', 'lastArticles', 'testimonials', 'partners'));

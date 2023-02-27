@@ -451,7 +451,7 @@
     if ($('.clients-carousel').length) {
         $('.clients-carousel').owlCarousel({
             rtl: true,
-            loop: false,
+            loop: true,
             margin: 30,
             nav: true,
             smartSpeed: 500,
@@ -492,7 +492,7 @@
     }
 
 
-    //Add One Page nav
+    //Add nav
     if ($('.scroll-nav').length) {
         $('.scroll-nav').onePageNav();
     }
