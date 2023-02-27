@@ -1,4 +1,4 @@
-<section class="about-section sec-pad m-3">
+<section class="about-section sec-pad my-8">
     <div class="pattern-layer"
          style="background-image: url({!! asset('/site/assets/images/shape/shape-5.png') !!});"></div>
     <div class="auto-container">
