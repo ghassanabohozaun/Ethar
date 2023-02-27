@@ -31,16 +31,16 @@
                         </div>
                         <ul class="social-links clearfix">
                             <li>
-                                <a href="{!! $founder->facebook  ??  'javascript:void(0)' !!}">
+                                <a href="{!! $founder->facebook  ??  'javascript:void(0)' !!}" target="_blank">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </li>
-                            <li><a href="{!! $founder->twitter  ??  'javascript:void(0)' !!}">
+                            <li><a href="{!! $founder->twitter  ??  'javascript:void(0)' !!}" target="_blank">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="{!! $founder->linkedIn  ??  'javascript:void(0)' !!}">
+                                <a href="{!! $founder->linkedIn  ??  'javascript:void(0)' !!}" target="_blank">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
                             </li>
