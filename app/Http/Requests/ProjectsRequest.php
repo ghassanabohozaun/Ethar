@@ -26,7 +26,7 @@ class ProjectsRequest extends FormRequest
         return [
             'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
             'file' => ['mimes:pdf'],
-            'word' => ['mimes:doc,docx'],
+            'word' => 'mimetypes:application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document',
             'date' => 'required',
             'title_ar' => 'required',
             'title_en' => ['required_if:english,on'],
