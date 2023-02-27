@@ -13,6 +13,7 @@ return [
 'ScientificArticles' => 'Scientific Articles',
 
 'details'   => 'Details ' ,
+'counter'   =>'Counters',
 
 
 ];

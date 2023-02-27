@@ -102,7 +102,7 @@ class SiteController extends Controller
         }
         $about = About::status()->where('about_type_id', $about_type->id)->first();
         if ($about) {
-            return view('site.about', compact('about'));
+            return view('site.about', compact('about' ,'about_type'));
         } else {
             return view('site.about', compact('about_type'));
         }

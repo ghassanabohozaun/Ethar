@@ -20,12 +20,7 @@
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
-        @if( !isset($about))
-            <!-- team-section -->
-            <section class="team-section centred">
-                <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
-            </section>
-        @else
+
             <!-- Page Title -->
             <section class="page-title"
                      style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
@@ -33,7 +28,7 @@
                 <div class="auto-container">
                     <div class="content-box">
                         <div class="title">
-                            <h1>{{$about->type->{'name_'.Lang()} }}</h1>
+                            <h1>{{$about_type->{'name_'.Lang()} }}</h1>
                         </div>
                         <ul class="bread-crumb clearfix">
                             &nbsp;
@@ -42,6 +37,13 @@
                 </div>
             </section>
             <!-- End Page Title -->
+
+            @if( !isset($about))
+            <!-- team-section -->
+            <section class="team-section centred">
+                <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
+            </section>
+            @else
 
             <!-- about-style-three -->
             <section class="about-style-three">
@@ -59,7 +61,8 @@
                                     <div class="text">
                                         <p>{!!$about->{'details_'.Lang()} !!}</p>
                                         <br/>
-                                        @isset($about->file)
+                                     
+                                        @if($about->file != null)
 
                                             <ul class="info-box clearfix">
                                                 <li class="share">
@@ -70,7 +73,8 @@
                                                        target="_blank">{!! __('general.download') !!}</a>
                                                 </li>
                                             </ul>
-                                        @endisset
+
+                                        @endif
 
 
                                     </div>

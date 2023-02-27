@@ -63,12 +63,14 @@
                                     </a>
                                 </figure>
                                 <div class="content-box">
-                                    <div class="text">
+                                    <div class="text  my-word-break">
                                         <span class="post-date">{{$publication->date}}</span>
-                                        <div class="category"><a href="#"># National Day</a></div>
+                                        
                                         <h3><a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">{{$publication->{'title_'.Lang()} }}</a>
                                         </h3>
-                                        <p>{!!$publication->{'details_'.Lang()} !!}</p>
+                                        <p>
+                                            {!! \Illuminate\Support\Str::limit(strip_tags($publication->{'details_'.Lang()} ),$limit = 50, $end = ' ...')!!}
+                                        </p>
                                     </div>
                                     <div class="info clearfix">
                                         <div class="link-box pull-left"><a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">More Details</a>

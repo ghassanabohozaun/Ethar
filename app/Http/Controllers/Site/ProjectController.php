@@ -11,9 +11,9 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     function getProjects($type){
-        $projects = Projects::orderByDesc('id')->where('status' ,'on')->where('type' ,$type)->paginate(1) ;
+        $projects = Projects::orderByDesc('id')->where('status' ,'on')->where('type' ,$type)->paginate(5) ;
         if($projects){
-            return view('site.projects.project' , compact('projects'));
+            return view('site.projects.project' , compact('projects' , 'type'));
         }else{
             return redirect(route('index'));
         }

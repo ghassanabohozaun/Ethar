@@ -82,9 +82,12 @@
                                     {{__('general.file_format_allow')}}
                                 </span>
                                 <span class="form-text text-danger" id="file_error"></span>
+                                @if($publication->file != null)
                                 <a class="font-weight-bold"
                                    href="{{asset('adminBoard/uploadedFiles/publications/'. $publication->file)}}"
-                                   target="_blank">{!! __('general.download') !!}</a>
+                                   target="_blank">{!! __('general.download') !!}
+                                </a>
+                                @endif
                             </div>
                         </div>
                         <!--end::Group-->
@@ -114,7 +117,7 @@
                         <!--end::Group-->
 
                         <!--begin::Group-->
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
                                 {{__('publications.writer')}}
                             </label>
@@ -127,7 +130,7 @@
                                 <span class="form-text text-danger"
                                       id="writer_error"></span>
                             </div>
-                        </div>
+                        </div> --}}
                         <!--end::Group-->
 
                         <!--begin::Group-->

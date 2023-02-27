@@ -125,7 +125,7 @@
 
                             <div class="sidebar-widget category-widget">
                                 <div class="widget-title">
-                                    <h3>Counters</h3>
+                                    <h3>{{__('site.counter')}}</h3>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="category-list clearfix">

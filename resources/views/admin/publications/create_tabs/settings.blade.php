@@ -102,7 +102,7 @@
                         </div>
                         <!--end::Group-->
 
-                        <!--begin::Group-->
+                        {{-- <!--begin::Group-->
                         <div class="form-group row">
                             <label class="col-xl-3 col-lg-3 col-form-label">
                                 {{__('publications.writer')}}
@@ -117,7 +117,7 @@
                                       id="writer_error"></span>
                             </div>
                         </div>
-                        <!--end::Group-->
+                        <!--end::Group--> --}}
 
                          <!--begin::Group-->
                          <div class="form-group row">

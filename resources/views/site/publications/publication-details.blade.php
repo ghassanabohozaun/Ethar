@@ -39,7 +39,7 @@
                        
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
+                        {{-- <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
                         <li>
                             @if (Lang() == 'ar')
                            {{ __('site.details') .' ' . __('site.'.$publication->type)  }} 
@@ -48,7 +48,7 @@
                             {{ __('site.'.$publication->type) .' '. __('site.details')}} 
                                 
                             @endif
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -64,10 +64,10 @@
                         <div class="blog-details-content">
                             <div class="content-one">
                                 <div class="upper-box">
-                                    <span># Advertisements #</span>
+                                    <span># {{ __('site.'.$publication->type)}} #</span>
                                     <h2>{{$publication->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                        <li><i class="far fa-user"></i>{{$publication->writer}}</li>
+                                        {{-- <li><i class="far fa-user"></i>{{$publication->writer}}</li> --}}
                                         <li><i class="far fa-eye"></i>{{$publication->views}}</li>
                                     </ul>
                                 </div>

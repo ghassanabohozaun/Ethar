@@ -13,4 +13,5 @@ return [
 'CaseStudy' => 'دراسة الحالة',
 'ScientificArticles' => 'المقالات العلمية',
 'details'   => 'تفاصيل ' ,
+'counter'   =>'عداد',
 ];

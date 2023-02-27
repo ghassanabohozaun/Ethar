@@ -29,7 +29,7 @@
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
-                        <h1>{!! __('index.projects') !!}</h1>
+                        <h1>{!! $type == 'previous' ? __('index.previous_project') : __('index.current_project')  !!}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
                         &nbsp;
@@ -57,7 +57,7 @@
                             <div class="content-box">
                                 <div class="text my-word-break">
                                     <div class="category">
-                                        <a href="#"># {!! $project->type !!} {!! __('index.project') !!}</a>
+                                        <a href="#"># {!! $project->type == 'previous' ? __('index.previous_project') : __('index.current_project')  !!} </a>
                                     </div>
                                     <h3>
                                         <a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">{{ $project->{'title_'.Lang()} }}</a>
@@ -73,7 +73,7 @@
                                             <a class="font-weight-bold"
                                                href="{{asset('adminBoard/uploadedFiles/project/'. $project->word)}}"
                                                target="_blank">
-                                                {!! __('general.download') !!}</h5>
+                                                {!! __('general.download') !!}
                                             </a>
                                         </li>
                                     @endif
@@ -84,7 +84,7 @@
                                             <a class="font-weight-bold"
                                                href="{{asset('adminBoard/uploadedFiles/project/'. $project->file)}}"
                                                target="_blank">
-                                                <h5>{!! __('general.download') !!}</h5>
+                                                {!! __('general.download') !!}
                                             </a>
                                         </li>
                                     @endif
@@ -92,11 +92,12 @@
                                     @if ( $project->publications()->first() !=null  )
                                         <li class="share">
                                             <i class="fas fa-book"></i>
-                                            <h5>
-                                                <a href="{!! route('project-case-study',slug($project->{'title_'.Lang()}) )!!}">
-                                                    visit case studies
+
+                                                <a  class="font-weight-bold "
+                                                href="{!! route('project-case-study',slug($project->{'title_'.Lang()}) )!!}">
+                                                    {{{__('index.visit_case_studies')}}}
                                                 </a>
-                                            </h5>
+
                                         </li>
                                     @endif
 

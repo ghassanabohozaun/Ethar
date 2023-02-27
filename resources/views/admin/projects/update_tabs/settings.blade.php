@@ -81,9 +81,12 @@
                                     {{__('general.file_format_allow')}}
                                 </span>
                                 <span class="form-text text-danger" id="file_error"></span>
+                                @if($project->file != null)
                                 <a class="font-weight-bold"
                                    href="{{asset('adminBoard/uploadedFiles/project/'. $project->file)}}"
-                                   target="_blank">{!! __('general.download') !!}</a>
+                                   target="_blank">{!! __('general.download') !!}
+                                </a>
+                                @endif
                             </div>
                         </div>
 
@@ -102,9 +105,12 @@
                                 <span class="form-text text-muted">
                                     {{__('general.word_format_allow')}}
                                 </span>
+                                @if($project->word != null)
                                 <a class="font-weight-bold"
                                    href="{{asset('adminBoard/uploadedFiles/project/'. $project->word)}}"
-                                   target="_blank">{!! __('general.download') !!}</a>
+                                   target="_blank">{!! __('general.download') !!}
+                                </a>
+                                @endif
                                 <span class="form-text text-danger" id="word_error"></span>
 
                             </div>

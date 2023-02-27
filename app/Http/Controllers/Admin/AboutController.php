@@ -16,7 +16,7 @@ class AboutController extends Controller
 
     public function index()
     {
-        $abouts = About::paginate(15);
+        $abouts = About::orderByDesc('id')->get();
         $title = __('menu.abouts');
         return view('admin.abouts.index', compact('abouts', 'title'));
     }
@@ -39,7 +39,7 @@ class AboutController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/abouts');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 300);
         } else {
             $photo_path = '';
         }
@@ -83,7 +83,7 @@ class AboutController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/abouts');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 300);
 
             $image_path = public_path("\adminBoard\uploadedImages\abouts\\") . $about->photo;
 

@@ -138,15 +138,7 @@
                                                         </tr>
                                                     @endforelse
                                                     </tbody>
-                                                    <tfoot>
-                                                    <tr>
-                                                        <td colspan="7">
-                                                            <div class="float-right">
-                                                                {!! $abouts->appends(request()->all())->links() !!}
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    </tfoot>
+                                               
                                                 </table>
                                             </div>
                                         </div>

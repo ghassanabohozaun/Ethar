@@ -76,9 +76,14 @@
                             <input
                                 class="form-control  form-control-lg"
                                 type="file" name="file" id="file"
-
                                 placeholder=""/>
                                 <span class="form-text text-muted">{{__('general.file_format_allow')}}</span>
+                                @if($about->file != null)
+                                <a class="font-weight-bold"
+                                   href="{{asset('adminBoard/uploadedFiles/abouts/'. $about->file)}}"
+                                   target="_blank">{!! __('general.download') !!}
+                                </a>
+                                @endif
                             <span class="form-text text-danger"
                                   id="file_error"></span>
                         </div>
@@ -88,7 +93,7 @@
                      <!--begin::Group-->
                      <div class="form-group row">
                         <label class="col-xl-3 col-lg-3 col-form-label">
-                         {{__('about.type')}}
+                         {{__('abouts.type')}}
                         </label>
                         <div class="col-lg-9 col-xl-9">
 

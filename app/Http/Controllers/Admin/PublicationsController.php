@@ -38,7 +38,7 @@ class PublicationsController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/publications');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 300);
         } else {
             $photo_path = '';
         }
@@ -61,7 +61,7 @@ class PublicationsController extends Controller
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'file' => $file,
             'date' => $request->date,
-            'writer' => $request->writer,
+            // 'writer' => $request->writer,/
             'type' => $request->type,
             'projects_id' => $request->project_id,
             'status' => 'on',
@@ -88,7 +88,7 @@ class PublicationsController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('adminBoard/uploadedImages/publications');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 300);
 
             $image_path = public_path("\adminBoard\uploadedImages\publications\\") . $publication->photo;
               if (File::exists($image_path))
@@ -126,7 +126,7 @@ class PublicationsController extends Controller
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'file' => $file,
             'date' => $request->date,
-            'writer' => $request->writer,
+            // 'writer' => $request->writer,
             'type' => $request->type,
             'projects_id' => $request->project_id ,
         ]);
