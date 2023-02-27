@@ -78,7 +78,7 @@
                                                             <th>{!! __('projects.title_en') !!}</th>
                                                         @endif
                                                         <th>{!! __('projects.views') !!}</th>
-                                                        <th>{!! __('projects.date') !!}</th>
+                                                        <th>{!! __('projects.publish_date') !!}</th>
                                                         <th>{!! __('projects.type') !!}</th>
                                                         <th class="text-center"
                                                             style="width: 100px;">{!! __('general.actions') !!}</th>

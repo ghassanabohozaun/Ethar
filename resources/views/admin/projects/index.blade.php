@@ -78,7 +78,7 @@
                                                         @if($lang_en =setting()->site_lang_en == 'on')
                                                             <th>{!! __('projects.title_en') !!}</th>
                                                         @endif
-                                                        <th>{!! __('projects.date') !!}</th>
+                                                        <th>{!! __('projects.publish_date') !!}</th>
                                                         <th>{!! __('projects.type') !!}</th>
                                                         <th>{!! __('articles.status') !!}</th>
                                                         <th class="text-center"
