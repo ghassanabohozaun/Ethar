@@ -95,7 +95,7 @@
 
                                                                 @else
                                                                     <img
-                                                                        src="{{asset('adminBoard/uploadedImages/users/'.$user->photo)}}"
+                                                                        src="{{asset('adminBoard/uploadedImages/admin/'.$user->photo)}}"
                                                                         class="img-fluid img-thumbnail table-image "/>
                                                                 @endif
                                                             </td>
