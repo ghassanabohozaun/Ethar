@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
-      <change beforePath="$PROJECT_DIR$/.idea/etharps.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/founders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/last-articles.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +305,7 @@
       <workItem from="1677573353093" duration="980000" />
       <workItem from="1677574377801" duration="1577000" />
       <workItem from="1677576298001" duration="10000" />
-      <workItem from="1677576309475" duration="33000" />
+      <workItem from="1677576309475" duration="421000" />
     </task>
     <servers />
   </component>
