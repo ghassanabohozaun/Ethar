@@ -68,17 +68,37 @@
                             <div class="single-item my-social-style">
                                 <ul class="my-social-style-one clearfix  my-2">
                                     <li>
-                                        <a href="{{setting()->site_facebook ? setting()->site_facebook : 'javascript:void(0)'}}"
-                                           id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                                        <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
+                                           href="{!! setting()->site_facebook !!}"
+                                           target="_blank"
+                                           id="social-facebook-icon">
+                                            <i class="fab fa-facebook-f "></i>
+                                        </a>
+                                    </li>
                                     <li>
-                                        <a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}"
-                                           id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                                        <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
+                                           href="{!! setting()->site_twitter!!}"
+                                           target="_blank"
+                                           id="social-twitter-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
                                     <li>
-                                        <a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}"
-                                           id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                                        <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
+                                           href="{!! setting()->site_instagram !!}"
+                                           target="_blank"
+                                           id="social-instagram-icon">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
                                     <li>
-                                        <a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}"
-                                           id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                                        <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
+                                           href="{!! setting()->site_youtube !!}"
+                                           target="_blank"
+                                           id="social-youtube-icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="single-item">
@@ -97,7 +117,7 @@
             <div class="inner-box clearfix">
                 <div class="copyright text-center">
                     @if(Lang()=='ar')
-                        <p> &copy; جميع الحقوق محفوظة ,  <a href="{!! route('index') !!}"> جمعية ايثار</a> 2023.</p>
+                        <p> &copy; جميع الحقوق محفوظة , <a href="{!! route('index') !!}"> جمعية ايثار</a> 2023.</p>
                     @else
                         <p>Copyrights &copy; 2023 <a href="{!! route('index') !!}">Ethar,</a> All rights reserved .</p>
                     @endif
