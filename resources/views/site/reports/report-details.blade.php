@@ -15,7 +15,8 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
 
         <!-- header -->
@@ -32,8 +33,7 @@
                         <h1>{!! __('index.reports') !!} {!! $year !!}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">{!! __('index.home') !!}</a></li>
-                        <li>{!! __('index.reports') !!} {!! $year !!}</li>
+                        &nbsp;
                     </ul>
                 </div>
             </div>

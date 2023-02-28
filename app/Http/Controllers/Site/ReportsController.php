@@ -10,10 +10,11 @@ class ReportsController extends Controller
     // index
     public function index()
     {
+        $title = __('index.reports');
         $reports = Report::where('status', 'on')->select('year')->distinct('year')->get();
 
         if ($reports) {
-            return view('site.reports.report', compact('reports'));
+            return view('site.reports.report', compact('title', 'reports'));
         } else {
             return redirect(route('index'));
         }
@@ -26,7 +27,9 @@ class ReportsController extends Controller
 
         $reports = Report::where('status', 'on')->where('year', $year)->get();
         if ($reports) {
-            return view('site.reports.report-details', compact('reports','year'));
+            $title = __('index.reports') .' '.  $year;
+
+            return view('site.reports.report-details', compact('reports', 'year', 'title'));
         } else {
             return redirect(route('index'));
         }

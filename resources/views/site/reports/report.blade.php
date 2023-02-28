@@ -15,8 +15,8 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
-
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
         <!-- header -->
         @include('site.includes.header')
@@ -32,46 +32,45 @@
                         <h1>Reports</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="{!! route('index') !!}">Home</a></li>
-                        <li>Pages</li>
-                        <li>Reports</li>
+                        &nbsp;
                     </ul>
                 </div>
             </div>
         </section>
         <!-- End Page Title -->
         @if( $reports->isEmpty())
-        <!-- team-section -->
-        <section class="team-section centred">
-            <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
-        </section>
+            <!-- team-section -->
+            <section class="team-section centred">
+                <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
+            </section>
         @else
 
-        <!-- shop-details -->
-        <section class="shop-details">
-            <div class="auto-container">
-                <div class="discription-inner">
-                    <div class="row clearfix reports-section">
+            <!-- shop-details -->
+            <section class="shop-details">
+                <div class="auto-container">
+                    <div class="discription-inner">
+                        <div class="row clearfix reports-section">
 
-                        @foreach ($reports as $report)
+                            @foreach ($reports as $report)
 
-                            <div class="col-lg-3 col-md-3 col-sm-3 single-column">
-                                <a href="{!! route('report-details',$report->year) !!}">
-                                    <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
-                                        <img src="{!! asset('site/assets/images/pdf3.png') !!}" alt="{!! $report->year !!}" width="100">
-                                        <h3>  {!! $report->year !!} </h3>
-                                    </button>
-                                </a>
-                            </div>
-                        @endforeach
+                                <div class="col-lg-3 col-md-3 col-sm-3 single-column">
+                                    <a href="{!! route('report-details',$report->year) !!}">
+                                        <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
+                                            <img src="{!! asset('site/assets/images/pdf3.png') !!}"
+                                                 alt="{!! $report->year !!}" width="100">
+                                            <h3>  {!! $report->year !!} </h3>
+                                        </button>
+                                    </a>
+                                </div>
+                            @endforeach
 
 
+                        </div>
                     </div>
-                </div>
 
-            </div>
-        </section>
-        <!-- shop-details end -->
+                </div>
+            </section>
+            <!-- shop-details end -->
         @endif
 
         <!-- main-footer -->
