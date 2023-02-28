@@ -28,9 +28,14 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="current"><a href="{!! route('index') !!}">{!! __('index.home') !!}</a></li>
 
-                                <li class=" dropdown">
+                                {!! request()->getHost(); !!}
+                                <li class="{!! url()->current() =='http://127.0.0.1:8000/'.Lang()  ? 'current': '' !!}">
+                                    <a href="{!! route('index') !!}">{!! __('index.home') !!}
+                                    </a>
+                                </li>
+
+                                <li class="dropdown  {!! str_contains(url()->current(),'About')  ? 'current': '' !!}">
                                     <a href="#">{!! __('index.about') !!}</a>
                                     <ul>
                                         @foreach (abouts_type() as $type )
@@ -70,7 +75,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="dropdown">
+                                <li class="dropdown  {!! str_contains(url()->current(),'projects')  ? 'current': '' !!}">
                                     <a href="#">{!! __('index.projects') !!}</a>
                                     <ul>
                                         <li>
@@ -94,13 +99,14 @@
                                     </ul>
                                 </li>
 
-                                <li class="dropdown">
+                                <li class="{!! str_contains(url()->current(),'news')  ? 'current': '' !!}">
                                     <a href="{!! route('news') !!}">
                                         {!! __('index.news') !!}
                                     </a>
                                 </li>
 
-                                <li class="dropdown"><a href="#">{!! __('index.publications') !!}</a>
+                                <li class="dropdown  {!! str_contains(url()->current(),'publications')  ? 'current': '' !!}">
+                                    <a href="#">{!! __('index.publications') !!}</a>
                                     <ul>
                                         <li>
                                             <a href="{!! route('advertisements','Advertisements') !!}">{!! __('index.advertisements') !!}</a>
@@ -119,11 +125,11 @@
                                     </ul>
                                 </li>
 
-                                <li class="dropdown">
+                                <li class="dropdown {!! str_contains(url()->current(),'reports')  ? 'current': '' !!}">
                                     <a href="{!! route('reports') !!}">{!! __('index.reports') !!}</a>
                                 </li>
 
-                                <li class="dropdown">
+                                <li class="dropdown {!! str_contains(url()->current(),'videos') || str_contains(url()->current(),'photos-albums')   ? 'current': '' !!}">
                                     <a href="#">
                                         {!! __('index.media') !!}
                                     </a>
@@ -141,7 +147,7 @@
                                     </ul>
                                 </li>
 
-                                <li>
+                                <li class="{!! str_contains(url()->current(),'contact')  ? 'current': '' !!}">
                                     <a href="{!! route('contact') !!}">
                                         {!! __('index.contact') !!}
                                     </a>
@@ -154,19 +160,33 @@
                 <div class="nav-right-content clearfix">
                     @if(Lang()=='ar')
                         <ul class="social-style-one clearfix social-facebook-icon">
-                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="{{LaravelLocalization::getLocalizedURL('en')}}">EN</a></li>
-                            <li><a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                            <li style="color: #0c0e1a ; font-weight: bolder">
+                                <a href="{{LaravelLocalization::getLocalizedURL('en')}}">EN</a>
+                            </li>
+                            <li>
+                                <a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}"
+                                   id="social-youtube-icon"><i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}"
+                                   id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}"
+                                   id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}"
+                                   id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
                         </ul>
                     @else
                         <ul class="social-style-one clearfix social-facebook-icon">
-                            <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                            <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع</a></li>
+                            <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}"
+                                   id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                            <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}"
+                                   id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}"
+                                   id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}"
+                                   id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a
+                                    href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع</a></li>
                         </ul>
                     @endif
                 </div>

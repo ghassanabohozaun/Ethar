@@ -14,6 +14,26 @@
     margin-left: -120px;
 }
 
+
+.main-menu .navigation > li > a {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 600;
+    opacity: 1;
+    color: #232323;
+    padding-left: 17px;
+    z-index: 1;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+
 .main-menu .navigation > li > a:before {
     position: absolute;
     content: "";
@@ -26,6 +46,40 @@
     transition: all 500ms ease;
 }
 
+.main-menu .navigation > li > ul > li > a,
+.main-menu .navigation > li > .megamenu li > a {
+    position: relative;
+    display: block;
+    padding: 14px 0px 13px 0px;
+    line-height: 24px;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR",sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #232323;
+    text-align: left;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.main-menu .navigation > li > ul > li > ul > li > a {
+    position: relative;
+    display: block;
+    padding: 14px 0px 13px 0px;
+    line-height: 24px;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR",sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #232323;
+    text-align: left;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
 
 .case-block-four .inner-box .content-box .info-box li {
     position: relative;
