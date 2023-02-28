@@ -6,12 +6,10 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget about-widget">
                         <div class="title-box">
-                            <h3>About</h3>
+                            <h3>{{__('menu.abouts')}}</h3>
                         </div>
                         <div class="text">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book</p>
+                            <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 250, $end = ' ...')!!}</p>
                         </div>
                     </div>
                 </div>
@@ -69,10 +67,10 @@
 
                             <div class="single-item my-social-style">
                                 <ul class="my-social-style-one clearfix  my-2">
-                                    <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                                    <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="{{setting()->site_facebook}}" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                                    <li><a href="{{setting()->site_twitter}}" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="{{setting()->site_instagram}}" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="{{setting()->site_youtube}}" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                             <div class="single-item">
