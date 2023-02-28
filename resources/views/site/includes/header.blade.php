@@ -29,8 +29,9 @@
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
 
-                                {!! request()->getHost(); !!}
-                                <li class="{!! url()->current() =='http://127.0.0.1:8000/'.Lang()  ? 'current': '' !!}">
+                                {!! request()->getHttpHost() !!}
+
+                                <li class="{!! url()->current() == request()->getHost().'/'.Lang()  ? 'current': '' !!}">
                                     <a href="{!! route('index') !!}">{!! __('index.home') !!}
                                     </a>
                                 </li>
