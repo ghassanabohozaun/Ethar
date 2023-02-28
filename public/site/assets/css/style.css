@@ -93,7 +93,7 @@ body {
     line-height: 27px;
     font-weight: 400;
     background: #ffffff;
-    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -151,7 +151,7 @@ body {
 
 
 a {
-    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     text-decoration: none;
     transition: all 500ms ease;
     -moz-transition: all 500ms ease;
@@ -166,7 +166,7 @@ a:hover {
 }
 
 input, button, select, textarea {
-    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 400;
     font-size: 18px;
     background: transparent;
@@ -204,7 +204,7 @@ textarea:focus {
 
 p {
     position: relative;
-    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     color: #5f5e5e;
     font-weight: 400;
     margin: 0px;
@@ -213,7 +213,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     position: relative;
-    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 400;
     color: #232323;
     margin: 0px;
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .handle-preloader .animation-preloader .txt-loading .letters-loading {
-    font-family: "Jost", "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: "Jost", "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 400;
     letter-spacing: 15px;
     display: inline-block;
@@ -413,7 +413,7 @@ img {
     display: inline-block;
     overflow: hidden;
     vertical-align: middle;
-    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-size: 14px;
     line-height: 25px;
     font-weight: 700;
@@ -474,7 +474,7 @@ img {
     display: inline-block;
     font-size: 20px;
     font-weight: 700;
-    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     height: 50px;
     width: 50px;
     line-height: 50px;
@@ -590,7 +590,7 @@ img {
     display: block;
     font-size: 28px;
     line-height: 38px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     padding-bottom: 6px;
     margin-bottom: 6px;
@@ -704,7 +704,7 @@ img {
     width: 101px;
     height: 51px;
     background-repeat: no-repeat;
-    border-radius:2px
+    border-radius: 2px
 }
 
 
@@ -764,7 +764,7 @@ img {
     display: inline-block;
     font-size: 16px;
     line-height: 30px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
 }
 
@@ -821,7 +821,7 @@ img {
     height: 30px;
     line-height: 30px;
     font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 700;
 }
@@ -833,7 +833,7 @@ img {
     height: 30px;
     line-height: 30px;
     font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 700;
     border-radius: 30px;
@@ -931,7 +931,7 @@ img {
     display: inline-block;
     font-size: 30px;
     line-height: 30px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
 }
 
@@ -993,10 +993,11 @@ img {
     background-repeat: no-repeat;
 }
 
-.main-header .nav-right-content .cart-box  {
+.main-header .nav-right-content .cart-box {
     margin-left: 34px;
     margin-right: 34px
 }
+
 .main-header .nav-right-content .cart-box a {
     position: relative;
     display: inline-block;
@@ -1499,8 +1500,8 @@ img {
 }
 
 
-.mobile-menu .nav-logo img{
-    margin-top:20px;
+.mobile-menu .nav-logo img {
+    margin-top: 20px;
     border-radius: 15px;
 }
 
@@ -1769,9 +1770,9 @@ div#mCSB_1_container {
     transition: all 500ms ease;
 }
 
-.main-header .search-box-btn a{
+.main-header .search-box-btn a {
     font-size: 30px;
-    font-weight:bold;
+    font-weight: bold;
     color: #f08635;
     cursor: pointer;
 }
@@ -1948,7 +1949,7 @@ div#mCSB_1_container {
     position: relative;
     display: block;
     font-size: 18px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     background: #f4f1f0;
     font-weight: 700;
     color: #232323;
@@ -2007,7 +2008,7 @@ div#mCSB_1_container {
     width: 100% !important;
     padding: 0px 55px 0px 80px !important;
     box-shadow: none !important;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     border: none;
     text-align: left;
     font-size: 20px;
@@ -2024,7 +2025,7 @@ div#mCSB_1_container {
     font-size: 20px;
     font-weight: 700;
     color: #232323;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
 }
 
 .bootstrap-touchspin .input-group-btn-vertical > .btn.bootstrap-touchspin-down {
@@ -2056,7 +2057,7 @@ div#mCSB_1_container {
 .bootstrap-touchspin .glyphicon-chevron-up:before {
     content: "+";
     font-size: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
     font-weight: 600;
     transition: all 500ms ease;
@@ -2065,7 +2066,7 @@ div#mCSB_1_container {
 .bootstrap-touchspin .glyphicon-chevron-down:before {
     content: "-";
     font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
     font-weight: 600;
     transition: all 500ms ease;
@@ -2187,7 +2188,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 18px;
     line-height: 28px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     color: #232323;
     cursor: pointer;
@@ -2292,7 +2293,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 14px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #5f5e5e;
     font-weight: 700;
     margin-bottom: 13px;
@@ -2314,7 +2315,7 @@ div#mCSB_1_container {
     padding: 10px 20px;
     font-size: 18px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #5f5e5e;
     font-weight: 400;
     transition: all 500ms ease;
@@ -2615,7 +2616,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 36px;
     line-height: 46px;
-    font-family: 'Caveat', "ArbFONTSBEINNormalAR",cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     margin-top: 4px;
     margin-bottom: 2px;
     font-weight: 400;
@@ -2725,7 +2726,7 @@ div#mCSB_1_container {
     display: inline-block;
     overflow: hidden;
     vertical-align: middle;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-size: 14px;
     line-height: 25px;
     font-weight: 700;
@@ -2776,7 +2777,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 36px;
     line-height: 46px;
-    font-family: 'Caveat', "ArbFONTSBEINNormalAR",cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
 }
 
@@ -2835,7 +2836,7 @@ div#mCSB_1_container {
     text-align: center;
     background-color: #2b2b2b;
     font-size: 30px;
-    font-family: 'Caveat', "ArbFONTSBEINNormalAR",cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     border-radius: 50%;
 }
 
@@ -2849,7 +2850,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 24px;
     line-height: 32px;
-    font-family: 'Caveat', "ArbFONTSBEINNormalAR",cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     padding-bottom: 7px;
     margin-bottom: 12px;
@@ -3229,7 +3230,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 36px;
     line-height: 46px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     margin-bottom: 0px;
 }
@@ -3399,7 +3400,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 46px;
     line-height: 52px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     text-align: center;
     margin-bottom: 0px;
@@ -3926,7 +3927,7 @@ div#mCSB_1_container {
     right: 0px;
     font-size: 18px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -4302,7 +4303,7 @@ div#mCSB_1_container {
 .recent-case-section .single-item .text h3 span {
     font-size: 20px;
     font-weight: 400;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
 }
 
 .recent-case-section .single-item .text h6 {
@@ -4467,7 +4468,7 @@ div#mCSB_1_container {
     right: 20px;
     font-size: 80px;
     line-height: 80px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 600;
     color: rgba(255, 255, 255, 1);
     text-shadow: -1px -1px 0 #e2dfdd, 1px -1px 0 #e2dfdd, -1px 1px 0 #e2dfdd, 1px 1px 0 #e2dfdd;
@@ -4896,7 +4897,7 @@ div#mCSB_1_container {
     float: left;
     font-size: 22px;
     line-height: 26px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 700;
     padding-left: 25px;
     margin-right: 30px;
@@ -5069,7 +5070,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 26px;
     line-height: 36px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     margin-bottom: 0px;
 }
@@ -5362,7 +5363,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 26px;
     line-height: 34px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
 }
 
@@ -5491,7 +5492,7 @@ div#mCSB_1_container {
     right: 0px;
     font-size: 16px;
     line-height: 36px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 500;
     text-align: center;
@@ -5510,7 +5511,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 22px;
     line-height: 30px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     border-bottom: 2px solid;
 }
 
@@ -5735,7 +5736,7 @@ div#mCSB_1_container {
     text-align: center;
     padding: 0px 15px;
     font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     background-color: #232323;
     text-transform: uppercase;
@@ -5805,7 +5806,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 22px;
     line-height: 30px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     margin-bottom: 5px;
 }
@@ -5853,7 +5854,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 18px;
     line-height: 27px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     color: #949494;
     font-weight: 400;
     padding-left: 26px;
@@ -5953,7 +5954,7 @@ div#mCSB_1_container {
 }
 
 .footer-bottom .copyright p a {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
 }
 
 .footer-bottom .copyright p a:hover {
@@ -5982,7 +5983,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 24px;
     line-height: 26px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
 }
 
@@ -6030,7 +6031,7 @@ div#mCSB_1_container {
     position: relative;
     display: inline-block;
     font-size: 16px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     color: #fff;
 }
 
@@ -6149,14 +6150,14 @@ div#mCSB_1_container {
 
 .header-top-two .right-column .text p {
     font-size: 26px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     color: #fff;
     font-weight: 400;
 }
 
 .header-top-two .right-column .text p button {
     font-size: 26px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     transition: all 500ms ease;
 }
 
@@ -6352,7 +6353,7 @@ div#mCSB_1_container {
     width: 100% !important;
     padding: 0px 55px 0px 80px !important;
     box-shadow: none !important;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     border: none;
     text-align: left;
     font-size: 20px;
@@ -6369,7 +6370,7 @@ div#mCSB_1_container {
     font-size: 20px;
     font-weight: 700;
     color: #232323;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
 }
 
 .emergency-cause .inner-container .upper-content .right-column .donate-amount-info {
@@ -6411,7 +6412,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -6459,7 +6460,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -6567,7 +6568,7 @@ div#mCSB_1_container {
     position: relative;
     display: inline-block;
     font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     transition: all 500ms ease;
@@ -6656,7 +6657,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 24px;
     line-height: 34px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     padding-bottom: 5px;
     margin-bottom: 11px;
@@ -6877,7 +6878,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -7149,7 +7150,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 24px;
     line-height: 34px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     padding-bottom: 7px;
     margin-bottom: 11px;
@@ -7367,7 +7368,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
     font-weight: 500;
     padding-left: 22px;
@@ -7420,7 +7421,7 @@ div#mCSB_1_container {
     bottom: 100px;
     font-size: 100px;
     line-height: 100px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 700;
     z-index: 1;
 }
@@ -7585,7 +7586,7 @@ div#mCSB_1_container {
 
 .video-style-two .inner-container .text h3 span {
     font-size: 48px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
 }
 
@@ -7594,7 +7595,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 28px;
     line-height: 76px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     color: #ffffff;
     font-weight: 400;
     padding-left: 86px;
@@ -7954,7 +7955,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 38px;
     line-height: 50px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 0px;
@@ -8081,7 +8082,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 500;
 }
 
@@ -8464,7 +8465,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 24px;
     line-height: 28px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
 }
 
 .footer-top-two .post-widget .widget-title {
@@ -8663,7 +8664,7 @@ div#mCSB_1_container {
     margin-right: 20px;
     font-size: 14px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
@@ -8772,7 +8773,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 28px;
     line-height: 32px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     margin-bottom: 0px;
 }
@@ -8964,7 +8965,7 @@ div#mCSB_1_container {
     width: 170px;
     font-size: 24px;
     line-height: 32px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #949494;
     background-color: #ffffff;
     font-weight: 700;
@@ -9114,7 +9115,7 @@ div#mCSB_1_container {
     transform: translate(-50%, -50%);
     font-size: 200px;
     line-height: 200px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     color: #f4f1f0;
     font-weight: 700;
     text-transform: uppercase;
@@ -9481,7 +9482,7 @@ div#mCSB_1_container {
     justify-content: center;
     font-size: 26px;
     line-height: 26px;
-    font-family: 'Caveat', sans-serif;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -9632,7 +9633,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 14px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     color: #5f5e5e;
@@ -9759,7 +9760,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 70px;
     line-height: 70px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     color: #232323;
     text-align: center;
@@ -9770,7 +9771,7 @@ div#mCSB_1_container {
     position: relative;
     font-size: 26px;
     line-height: 36px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     color: #03c0a8;
     font-weight: 400;
     text-transform: capitalize;
@@ -9877,7 +9878,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 14px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
@@ -10239,7 +10240,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 26px;
     line-height: 36px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     margin-bottom: 0px;
 }
@@ -10786,7 +10787,7 @@ div#mCSB_1_container {
     right: -27px;
     font-size: 18px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -11143,7 +11144,7 @@ div#mCSB_1_container {
     right: -27px;
     font-size: 18px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -11748,7 +11749,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 36px;
     line-height: 44px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     color: #ffffff;
 }
@@ -12103,7 +12104,7 @@ div#mCSB_1_container {
 .case-details-content .content-four .single-item span {
     font-size: 28px;
     line-height: 30px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
 }
 
@@ -12597,7 +12598,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 22px;
     line-height: 26px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 700;
     padding-left: 25px;
     margin-right: 30px;
@@ -12664,7 +12665,7 @@ div#mCSB_1_container {
     width: 33.333%;
     font-size: 20px;
     line-height: 30px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     color: #232323;
     cursor: pointer;
@@ -12755,7 +12756,7 @@ div#mCSB_1_container {
     position: relative;
     display: inline-block;
     font-size: 16px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 700;
     width: 54px;
@@ -12849,7 +12850,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 28px;
     line-height: 32px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     margin-top: 12px;
     margin-bottom: 4px;
 }
@@ -12933,7 +12934,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 14px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
     font-weight: 700;
     text-transform: uppercase;
@@ -13012,7 +13013,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
     font-weight: 700;
     margin-bottom: 18px;
@@ -13148,7 +13149,7 @@ div#mCSB_1_container {
     right: 0px;
     font-size: 16px;
     line-height: 36px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 500;
     text-align: center;
@@ -13167,7 +13168,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 22px;
     line-height: 30px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     border-bottom: 2px solid;
 }
 
@@ -13342,7 +13343,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 500;
 }
 
@@ -13399,7 +13400,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 22px;
     line-height: 28px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
     font-weight: 400;
     border-bottom: 2px solid;
     margin-bottom: 9px;
@@ -13468,7 +13469,7 @@ div#mCSB_1_container {
     right: 0px;
     font-size: 16px;
     line-height: 36px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #ffffff;
     font-weight: 500;
     text-align: center;
@@ -13836,7 +13837,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 500;
 }
 
@@ -14186,7 +14187,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 24px;
     line-height: 30px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -14210,7 +14211,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 28px;
     line-height: 28px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
 }
 
 .product-details-content .text .category li a:hover {
@@ -14290,7 +14291,7 @@ div#mCSB_1_container {
     border-radius: 50% !important;
     padding: 0px !important;
     box-shadow: none !important;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     text-align: center;
     font-size: 20px;
     font-weight: 700;
@@ -14433,7 +14434,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
     border: 1px solid #dddad8;
     background: #fff;
@@ -14717,7 +14718,7 @@ div#mCSB_1_container {
     padding: 16px 28px 15px 40px;
     font-weight: 700;
     font-size: 20px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
     border-right: 1px solid #dddad8;
     text-align: center;
@@ -14780,7 +14781,7 @@ div#mCSB_1_container {
 
 .cart-table tbody tr .sub-total {
     font-size: 18px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     color: #232323;
 }
@@ -14820,7 +14821,7 @@ div#mCSB_1_container {
 
 .cart-table tbody tr .total-price {
     font-size: 18px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
 }
 
@@ -14854,7 +14855,7 @@ div#mCSB_1_container {
     border-radius: 15px;
     font-size: 20px;
     font-weight: 700;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #232323;
 }
 
@@ -14892,7 +14893,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 14px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     color: #fff;
     background: #232323;
@@ -14921,7 +14922,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 14px;
     line-height: 24px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 700;
     color: #fff;
     padding: 15px 33.5px;
@@ -15105,7 +15106,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR", sans-serif;
     color: #fff;
     font-weight: 700;
     margin-bottom: 11px;
@@ -15869,7 +15870,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 18px;
     line-height: 28px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -15883,7 +15884,7 @@ div#mCSB_1_container {
     display: inline-block;
     font-size: 18px;
     line-height: 28px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
     font-weight: 400;
     color: #5f5e5e;
 }
@@ -15897,7 +15898,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 28px;
     line-height: 32px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
 }
 
 .charity-shops .sec-title {

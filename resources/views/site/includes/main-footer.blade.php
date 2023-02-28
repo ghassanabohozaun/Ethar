@@ -9,7 +9,7 @@
                             <h3>{{__('menu.abouts')}}</h3>
                         </div>
                         <div class="text">
-                            <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 270, $end = ' ...')!!}</p>
+                            <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 280, $end = ' ...')!!}</p>
                         </div>
                     </div>
                 </div>
@@ -67,14 +67,22 @@
 
                             <div class="single-item my-social-style">
                                 <ul class="my-social-style-one clearfix  my-2">
-                                    <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                                    <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                                    <li>
+                                        <a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}"
+                                           id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                                    <li>
+                                        <a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}"
+                                           id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
+                                    <li>
+                                        <a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}"
+                                           id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                                    <li>
+                                        <a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}"
+                                           id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                             <div class="single-item">
-                               &nbsp;
+                                &nbsp;
                             </div>
 
                         </div>
@@ -88,7 +96,11 @@
         <div class="auto-container">
             <div class="inner-box clearfix">
                 <div class="copyright text-center">
-                    <p>&copy; 2023 <a href="{!! route('index') !!}">Ethar,</a> All rights reserved .</p>
+                    @if(Lang()=='ar')
+                        <p> &copy; جميع الحقوق محفوظة ,  <a href="{!! route('index') !!}"> جمعية ايثار</a> 2023.</p>
+                    @else
+                        <p>Copyrights &copy; 2023 <a href="{!! route('index') !!}">Ethar,</a> All rights reserved .</p>
+                    @endif
                 </div>
             </div>
         </div>

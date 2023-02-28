@@ -139,7 +139,7 @@
     display: inline-block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
     color: #5f5e5e;
     font-weight: 500;
     padding-left: 27px;
@@ -193,7 +193,7 @@
     float: left;
     font-size: 22px;
     line-height: 26px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR",cursive;
     font-weight: 700;
     padding-left: 25px;
     margin-right: 30px;
@@ -233,7 +233,7 @@
     float: left;
     font-size: 18px;
     line-height: 28px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
     color: #232323;
     font-weight: 700;
     text-align: center;
