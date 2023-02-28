@@ -31,10 +31,10 @@
                                         </p>
                                     </div>
                                     <div class="info clearfix">
-                                        <div class="link-box pull-left">
+                                        <div class="link-box {!! Lang()=='ar' ? 'pull-right' : 'pull-left' !!}">
                                             <a href="{!! route('new-details',slug($lastArticle->{'title_'.Lang()}) ) !!}">{!! __('index.more_details') !!}</a>
                                         </div>
-                                        <div class="comment-box pull-right">
+                                        <div class="comment-box {!! Lang()=='ar' ? 'pull-left' : 'pull-right' !!}">
                                             <a href="javascript:void(0)">
                                                 <i class="far fa-comment"></i>
                                                 {{-- {!! \App\Models\Comment::where('status','on')->where('post_id',$lastArticle->id)->count() !!} --}}
