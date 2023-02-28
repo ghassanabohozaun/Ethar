@@ -18,7 +18,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.0",
         "mcamara/laravel-localization": "^1.5",
-        "mews/captcha": "^3.2"
+        "mews/captcha": "^3.2",
+        "pusher/pusher-php-server": "~4.0"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.9.1",

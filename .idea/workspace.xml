@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates" />
+    <list default="true" id="9561e7fb-9c5b-4862-a612-c31995b9d8ba" name="Changes" comment="updates">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -176,7 +182,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/etharps/resources/views/admin/articles/comments&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/Ethar3&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -188,11 +194,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Ethar3" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\articles\comments" />
       <recent name="C:\laragon\www\etharps\public\site\assets\css" />
       <recent name="C:\laragon\www\etharps\resources\views\site\projects" />
       <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page\partners" />
-      <recent name="C:\laragon\www\etharps\resources\views\admin\landing-page" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\etharps\public\site\assets\js" />
@@ -297,6 +303,8 @@
       <workItem from="1677421810297" duration="21879000" />
       <workItem from="1677483083680" duration="18830000" />
       <workItem from="1677505658700" duration="4882000" />
+      <workItem from="1677573353093" duration="980000" />
+      <workItem from="1677574377801" duration="308000" />
     </task>
     <servers />
   </component>
