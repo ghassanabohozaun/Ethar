@@ -54,7 +54,7 @@ class Handler extends ExceptionHandler
             $statusCode = $exception->getStatusCode();
             switch ($statusCode) {
                 case '404':
-                    return response()->view('not-found');
+                    return response()->view('site.index');
             }
         }
         return parent::render($request, $exception);
