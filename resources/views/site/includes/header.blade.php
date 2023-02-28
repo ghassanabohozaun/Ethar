@@ -30,7 +30,7 @@
                             <ul class="navigation clearfix">
 
 {{--                                class="{!! Request::url() == request()->getHost().'/'.Lang()  ? 'current': '' !!}"--}}
-                                <li >
+                                <li class="current">
                                     <a href="{!! route('index') !!}">{!! __('index.home') !!}
                                     </a>
                                 </li>
