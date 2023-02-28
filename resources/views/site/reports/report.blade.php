@@ -40,7 +40,12 @@
             </div>
         </section>
         <!-- End Page Title -->
-
+        @if( $reports->isEmpty())
+        <!-- team-section -->
+        <section class="team-section centred">
+            <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
+        </section>
+        @else
 
         <!-- shop-details -->
         <section class="shop-details">
@@ -67,7 +72,7 @@
             </div>
         </section>
         <!-- shop-details end -->
-
+        @endif
 
         <!-- main-footer -->
         @include('site.includes.footer')
