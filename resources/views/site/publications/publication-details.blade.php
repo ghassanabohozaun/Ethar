@@ -73,6 +73,7 @@
                                 </div>
 
 
+                                <br/>
                                 <div class="lower-box clearfix">
 
                                     <div class="share-option pull-left">
