@@ -28,14 +28,14 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                
+
                                 <li class="{{ Route::currentRouteName() =='index'?'current':''}}">
                                     <a href="{!! route('index') !!}">{!! __('index.home') !!}
                                     </a>
                                 </li>
 
                                 <li class="dropdown  {!! str_contains(url()->current(),'About')  ? 'current': '' !!}">
-                                    <a href="#">{!! __('index.about') !!}</a>
+                                    <a href="javascript:void(0)">{!! __('index.about') !!}</a>
                                     <ul>
                                         @foreach (abouts_type() as $type )
                                             <li>
@@ -75,7 +75,7 @@
                                 </li>
 
                                 <li class="dropdown  {!! str_contains(url()->current(),'projects')  ? 'current': '' !!}">
-                                    <a href="#">{!! __('index.projects') !!}</a>
+                                    <a href="javascript:void(0)">{!! __('index.projects') !!}</a>
                                     <ul>
                                         <li>
                                             <a href="{!! route('projects','previous') !!}">
@@ -105,7 +105,7 @@
                                 </li>
 
                                 <li class="dropdown  {!! str_contains(url()->current(),'publications')  ? 'current': '' !!}">
-                                    <a href="#">{!! __('index.publications') !!}</a>
+                                    <a href="javascript:void(0)">{!! __('index.publications') !!}</a>
                                     <ul>
                                         <li>
                                             <a href="{!! route('advertisements','Advertisements') !!}">{!! __('index.advertisements') !!}</a>
@@ -124,7 +124,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="dropdown {!! str_contains(url()->current(),'reports')  ? 'current': '' !!}">
+                                <li class="{!! str_contains(url()->current(),'reports')  ? 'current': '' !!}">
                                     <a href="{!! route('reports') !!}">{!! __('index.reports') !!}</a>
                                 </li>
 
