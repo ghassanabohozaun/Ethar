@@ -30,20 +30,31 @@
                                 </div>
                             </div>
                             <ul class="social-links clearfix">
+
                                 <li>
-                                    <a href="{!! $founder->facebook  ??  'javascript:void(0)' !!}" target="_blank">
+                                    <a onclick="return {!! $founder->facebook? 'true':'false' !!};"
+                                       href="{!! $founder->facebook !!}"
+                                       target="_blank">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
-                                <li><a href="{!! $founder->twitter  ??  'javascript:void(0)' !!}" target="_blank">
+
+                                <li>
+                                    <a onclick="return {!! $founder->twitter? 'true':'false' !!};"
+                                       href="{!! $founder->twitter !!}"
+                                       target="_blank">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="{!! $founder->linkedIn  ??  'javascript:void(0)' !!}" target="_blank">
+                                    <a onclick="return {!! $founder->linkedIn? 'true':'false' !!};"
+                                       href="{!! $founder->linkedIn !!}"
+                                       target="_blank">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </li>
+
                             </ul>
                         </div>
                     </div>

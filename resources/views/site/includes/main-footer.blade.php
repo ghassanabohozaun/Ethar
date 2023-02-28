@@ -68,7 +68,7 @@
                             <div class="single-item my-social-style">
                                 <ul class="my-social-style-one clearfix  my-2">
                                     <li>
-                                        <a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}"
+                                        <a href="{{setting()->site_facebook ? setting()->site_facebook : 'javascript:void(0)'}}"
                                            id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
                                     <li>
                                         <a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}"
