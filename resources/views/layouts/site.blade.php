@@ -51,6 +51,7 @@
     @endif
     <link href="{!! asset('site/assets/css/style.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/responsive.css') !!}" rel="stylesheet">
+    <link href="{!! asset('site/assets/css/my-responsive.css') !!}" rel="stylesheet">
     <link href="{!! asset('site/assets/css/site-style.css') !!}" rel="stylesheet">
 
     @stack('styles')

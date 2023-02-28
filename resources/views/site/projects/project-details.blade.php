@@ -52,7 +52,7 @@
                             <li><i class="far fa-eye"></i> {!! $project->views !!}</li>
                         </ul>
                         <figure class="image-box">
-                            <img
+                            <img class="my-detail-image"
                                 src="{!!  asset('adminBoard/uploadedImages/projects/'. $project->photo) !!}"
                                 alt="{!! $project->{'title_'.Lang()} !!}">
                         </figure>
@@ -63,12 +63,10 @@
                             <div class="tab active-tab" id="tab-1">
                                 <div class="overview-inner">
                                     <div class="content-one">
-
                                         <p> {!! $project->{'details_'.Lang()} !!}</p>
                                     </div>
+
                                     <div class="lower-box clearfix">
-
-
 
                                         <div class="share-option pull-left">
 
@@ -81,8 +79,7 @@
                                                 </a>
                                             @endif
 
-
-                                            @if($project->file != null)
+                                            @if($project->word != null)
                                                 <a href="{!! asset('adminBoard/uploadedFiles/project/'. $project->word) !!}">
                                                     <h5 class="my-h1">
                                                         <i class="fas fa-file-word"></i>
