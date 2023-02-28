@@ -69,8 +69,8 @@
                                 <ul class="my-social-style-one clearfix  my-2">
                                     <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
                                     <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="{{setting()->site_instagram}}" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="{{setting()->site_youtube}}" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
                                 </ul>
                             </div>
                             <div class="single-item">

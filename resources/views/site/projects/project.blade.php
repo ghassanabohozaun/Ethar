@@ -39,6 +39,13 @@
         </section>
         <!-- End Page Title -->
 
+        @if( $projects->isEmpty())
+        <!-- team-section -->
+        <section class="team-section centred">
+            <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
+        </section>
+        @else
+
 
         <!-- case-page-section -->
         <section class="case-page-section list-view">
@@ -116,6 +123,7 @@
             </div>
         </section>
         <!-- case-page-section end -->
+        @endif
 
 
         <!-- main-footer -->

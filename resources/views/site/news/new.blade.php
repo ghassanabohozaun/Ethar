@@ -38,7 +38,12 @@
             </div>
         </section>
         <!-- End Page Title -->
-
+        @if( $news->isEmpty())
+        <!-- team-section -->
+        <section class="team-section centred">
+            <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
+        </section>
+        @else
 
         <section class="blog-grid">
             <div class="auto-container">
@@ -83,6 +88,7 @@
                 </div>
             </div>
         </section>
+        @endif
 
 
         <!-- main-footer -->
