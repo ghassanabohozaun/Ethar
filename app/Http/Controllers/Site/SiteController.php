@@ -82,7 +82,6 @@ class SiteController extends Controller
 
 
         $founders = Team::orderByDesc('id')->where('status', 'on')->where('type', 'founder')->get();
-        dd($founders);
         $testimonials = testimonial::orderByDesc('id')->where('status', 'on')->get();
         $partners = Partner::orderByDesc('id')->where('status', 'on')->get();
 
