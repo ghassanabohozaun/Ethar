@@ -44,6 +44,7 @@ class ProjectController extends Controller
         }
     }
 
+    //get case study of  project
     function getCaseStudies($name){
         $title = returnSpaceBetweenString($name);
         $project = Projects::orderByDesc('id')->where('title_'.Lang() ,$title)->where('status' ,'on')->first();
