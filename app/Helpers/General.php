@@ -1,6 +1,7 @@
 <?php
 use App\Models\AboutType;
 use App\Models\Projects;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 
 //  setting Helper Function
@@ -61,6 +62,13 @@ function fixedTexts()
 }
 
 function projects(){
-   return   Projects::orderByDesc('id')->where('status' ,'on')->where('type' ,'current')->limit(4)->get() ;
+   return   Projects::orderByDesc('id')->where('status' ,'on')->where('type' ,'current')->where(function ($q) {
+        if(LaravelLocalization::getCurrentLocale() == 'ar'){
+            $q->where('language', 'ar')
+            ->orWhere('language', 'ar_en');
+        }else{
+            $q->orWhere('language', 'ar_en');
+        }
+   })->limit(4)->get() ;
 }
 
