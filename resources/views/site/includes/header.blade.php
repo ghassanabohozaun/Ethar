@@ -28,9 +28,8 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-
-{{--                                class="{!! Request::url() == request()->getHost().'/'.Lang()  ? 'current': '' !!}"--}}
-                                <li class="current">
+                                
+                                <li class="{{ Route::currentRouteName() =='index'?'current':''}}">
                                     <a href="{!! route('index') !!}">{!! __('index.home') !!}
                                     </a>
                                 </li>
