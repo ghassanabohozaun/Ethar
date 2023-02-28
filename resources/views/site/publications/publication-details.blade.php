@@ -81,42 +81,25 @@
                                             <a href="{!! asset('adminBoard/uploadedFiles/publications/'. $publication->file) !!}">
                                                 <h5 class="my-h1">
                                                     <i class="fas fa-file-pdf"></i>
-                                                    {!! __('index.pdf') !!}
+                                                    {!! __('general.download') !!}
                                                 </h5>
                                             </a>
                                         @endif
 
                                     </div>
                                 </div>
-
-
-{{--                                @if($publication->file != null)--}}
-{{--                                    <div class="font-weight-bold mt-5">--}}
-{{--                                        <h5>--}}
-{{--                                            <a class="font-weight-bold"--}}
-{{--                                               href="{{asset('adminBoard/uploadedFiles/publications//'. $publication->file)}}"--}}
-{{--                                               target="_blank">{!! __('general.download') !!}--}}
-{{--                                                PDF--}}
-{{--                                            </a>--}}
-{{--                                        </h5>--}}
-{{--                                    </div>--}}
-{{--                                @endif--}}
                             </div>
                         </div>
                     </div>
                     <!-- left end -->
-
-
                 </div>
             </div>
         </section>
         <!-- sidebar-page-container end -->
 
-
         <!-- main-footer -->
         @include('site.includes.footer')
         <!-- main-footer end -->
-
 
     </div>
 

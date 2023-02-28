@@ -63,9 +63,7 @@
                                         <br/>
 
                                         <div class="lower-box clearfix">
-
                                             <div class="share-option pull-left">
-
                                                 @if($about->file != null)
                                                     <a href="{{asset('adminBoard/uploadedFiles/abouts//'. $about->file)}}">
                                                         <h5 class="my-h1">
@@ -74,13 +72,9 @@
                                                         </h5>
                                                     </a>
                                                 @endif
-
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -92,11 +86,9 @@
 
         @endif
 
-
         <!-- main-footer -->
         @include('site.includes.footer')
         <!-- main-footer end -->
-
 
     </div>
 
