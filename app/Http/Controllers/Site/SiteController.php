@@ -36,7 +36,7 @@ class SiteController extends Controller
         if (LaravelLocalization::getCurrentLocale() == 'ar') {
 
             // Slider
-            $sliders = Slider::orderByDesc('id')->where('status', 'on')
+            $sliders = Slider::where('status', 'on')
                 ->orderBy('order', 'desc')
                 ->where(function ($q) {
                     $q->where('language', 'ar')
@@ -60,7 +60,7 @@ class SiteController extends Controller
 
         } else {
             // Slider
-            $sliders = Slider::orderByDesc('id')->where('status', 'on')
+            $sliders = Slider::where('status', 'on')
                 ->orderBy('order', 'desc')
                 ->where(function ($q) {
                     $q->where('language', 'ar_en');
