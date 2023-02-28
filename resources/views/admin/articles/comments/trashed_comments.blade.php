@@ -81,17 +81,14 @@
                                                         <th>{{__('articles.person_email')}}</th>
                                                         <th>{{__('articles.commentary')}}</th>
                                                         <th>{{__('articles.publish_date')}}</th>
-                                                        <th class="text-center" style="width: 150px;">{{__('general.actions')}}</th>
+                                                        <th class="text-center"
+                                                            style="width: 150px;">{{__('general.actions')}}</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
                                                     @forelse($trashedComments as $comment)
                                                         <tr>
-                                                            <td>
-                                                                <img
-                                                                    src="{{ asset('adminBoard/uploadedImages/articles/comments/'.$comment->photo) }}"
-                                                                    class="img-fluid img-thumbnail table-image "/>
-                                                            </td>
+                                                            <td>@include('admin.articles.comments.parts.photo')</td>
                                                             <td>{{ $comment->person_ip }}</td>
                                                             <td>{{ $comment->person_name }}</td>
                                                             <td>{{ $comment->person_email }}</td>
