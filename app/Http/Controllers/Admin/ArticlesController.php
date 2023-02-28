@@ -61,6 +61,7 @@ class ArticlesController extends Controller
             'abstract_en' => $lang_en == 'on' ? $request->abstract_en : null,
             'publish_date' => $request->publish_date,
             'publisher_name' => $request->publisher_name,
+            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
