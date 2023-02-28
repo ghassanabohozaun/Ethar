@@ -345,7 +345,7 @@
 
             <div class="social-links">
                 @if(Lang()=='ar')
-                    <ul class="clearfix">
+                    <ul class="clearfix font-size-14">
                         <li style="color: #0c0e1a ; font-weight: bolder">
                             <a href="{{LaravelLocalization::getLocalizedURL('en')}}">EN</a>
                         </li>
@@ -353,7 +353,7 @@
                             <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
                                href="{!! setting()->site_youtube !!}"
                                target="_blank"
-                               id="social-youtube-icon">
+                               id="social-youtube-icon font-size-14">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
@@ -361,7 +361,7 @@
                             <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
                                href="{!! setting()->site_instagram !!}"
                                target="_blank"
-                               id="social-instagram-icon">
+                               id="social-instagram-icon font-size-14">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>
@@ -369,7 +369,7 @@
                             <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
                                href="{!! setting()->site_twitter!!}"
                                target="_blank"
-                               id="social-twitter-icon">
+                               id="social-twitter-icon font-size-14">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
@@ -377,18 +377,18 @@
                             <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
                                href="{!! setting()->site_facebook !!}"
                                target="_blank"
-                               id="social-facebook-icon">
+                               id="social-facebook-icon font-size-14">
                                 <i class="fab fa-facebook-f "></i>
                             </a>
                         </li>
                     </ul>
                 @else
-                    <ul class="clearfix">
+                    <ul class="clearfix font-size-14">
                         <li>
                             <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
                                href="{!! setting()->site_facebook !!}"
                                target="_blank"
-                               id="social-facebook-icon">
+                               id="social-facebook-icon font-size-14">
                                 <i class="fab fa-facebook-f "></i>
                             </a>
                         </li>
@@ -404,7 +404,7 @@
                             <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
                                href="{!! setting()->site_instagram !!}"
                                target="_blank"
-                               id="social-instagram-icon">
+                               id="social-instagram-icon font-size-14">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>
@@ -412,7 +412,7 @@
                             <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
                                href="{!! setting()->site_youtube !!}"
                                target="_blank"
-                               id="social-youtube-icon">
+                               id="social-youtube-icon font-size-14">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>

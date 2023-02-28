@@ -93,25 +93,27 @@ class SiteController extends Controller
     {
         // return current name
         $name = returnSpaceBetweenString($name);
-
+        $title = $name;
         $about_type = AboutType::where('name_' . Lang(), $name)->first();
         if (!$about_type) {
             return redirect(route('index'));
         }
         $about = About::status()->where('about_type_id', $about_type->id)->first();
         if ($about) {
-            return view('site.about', compact('about', 'about_type'));
+            return view('site.about', compact('about', 'about_type', 'title'));
         } else {
-            return view('site.about', compact('about_type'));
+            return view('site.about', compact('about_type', 'title'));
         }
     }
 
     //FAQ
     function qa()
     {
+
+        $title = __('index.faq');
         $qas = QA::orderByDesc('id')->get();
         if ($qas) {
-            return view('site.faq', compact('qas'));
+            return view('site.faq', compact('qas', 'title'));
         } else {
             return redirect()->back();
         }
