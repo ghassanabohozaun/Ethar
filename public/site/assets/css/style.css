@@ -151,7 +151,7 @@ body {
 
 
 a {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
     text-decoration: none;
     transition: all 500ms ease;
     -moz-transition: all 500ms ease;
