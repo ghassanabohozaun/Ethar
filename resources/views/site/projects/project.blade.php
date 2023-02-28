@@ -56,7 +56,7 @@
                             </div>
                             <div class="content-box">
                                 <div class="text my-word-break">
-                                    <div class="category">
+                                    <div class="category ">
                                         <a href="#"># {!! $project->type == 'previous' ? __('index.previous_project') : __('index.current_project')  !!} </a>
                                     </div>
                                     <h3>
