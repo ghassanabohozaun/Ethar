@@ -61,20 +61,36 @@
                                     <div class="text">
                                         <p>{!!$about->{'details_'.Lang()} !!}</p>
                                         <br/>
-                                     
-                                        @if($about->file != null)
 
-                                            <ul class="info-box clearfix">
-                                                <li class="share">
-                                                    <i class="fas fa-file-pdf" style="color: rgba(217,70,70,0.9)">
-                                                    </i>
-                                                    <a class="font-weight-bold"
-                                                       href="{{asset('adminBoard\\uploadedFiles\\abouts\\'. $about->file)}}"
-                                                       target="_blank">{!! __('general.download') !!}</a>
-                                                </li>
-                                            </ul>
+                                        <div class="lower-box clearfix">
 
-                                        @endif
+                                            <div class="share-option pull-left">
+
+                                                @if($about->file != null)
+                                                    <a    href="{{asset('adminBoard/uploadedFiles/abouts//'. $about->file)}}">
+                                                        <h5 class="my-h1">
+                                                            <i class="fas fa-file-pdf"></i>
+                                                            {!! __('index.pdf') !!}
+                                                        </h5>
+                                                    </a>
+                                                @endif
+
+                                            </div>
+                                        </div>
+
+{{--                                        @if($about->file != null)--}}
+
+{{--                                            <ul class="info-box clearfix">--}}
+{{--                                                <li class="share">--}}
+{{--                                                    <i class="fas fa-file-pdf" style="color: rgba(217,70,70,0.9)">--}}
+{{--                                                    </i>--}}
+{{--                                                    <a class="font-weight-bold"--}}
+{{--                                                       href="{{asset('adminBoard\\uploadedFiles\\abouts\\'. $about->file)}}"--}}
+{{--                                                       target="_blank">{!! __('general.download') !!}</a>--}}
+{{--                                                </li>--}}
+{{--                                            </ul>--}}
+
+{{--                                        @endif--}}
 
 
                                     </div>
