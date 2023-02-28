@@ -42,12 +42,6 @@ Route::group([
     Route::post('switch-frontend-lang', 'DashboardController@switchFrontendLang')
         ->name('switch.frontend.lang');
 
-    /////////////////////////////////////////////////////////////////////////////////////////////
-    /// Revenues Routes
-    Route::group(['prefix' => 'Revenues', 'middleware' => 'can:revenues'], function () {
-        Route::get('/', 'RevenuesController@index')->name('admin.revenues');
-        Route::get('/get-revenues', 'RevenuesController@getRevenues')->name('admin.get.revenues');
-    });
 
     /////////////////////////////////////////////////////////////////////////////////////////////
     /// Landing Page Routes
