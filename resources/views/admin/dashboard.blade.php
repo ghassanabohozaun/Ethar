@@ -263,7 +263,18 @@
                                     @else
                                     <div class="table-responsive ">
                                         <table class="table" style="text-align: center;vertical-align: middle;">
-                                          
+                                            <thead>
+                                            <tr>
+
+                                                <th scope="col">#</th>
+                                                <th scope="col">{!! __('articles.photo') !!}</th>
+                                                <th scope="col">{!! __('articles.title') !!}</th>
+                                                <th scope="col">{!! __('index.views_count') !!}</th>
+                                                
+
+
+                                            </tr>
+                                            </thead>
                                             <tbody>
                                             @foreach($articles as $key=>$article)
                                                 <tr>
