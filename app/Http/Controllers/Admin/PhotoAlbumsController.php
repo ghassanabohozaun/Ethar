@@ -172,7 +172,7 @@ class PhotoAlbumsController extends Controller
 
             $image = $request->file('file');
             $destinationPath = public_path('/adminBoard/uploadedImages/albums_photos//');
-            $filePath = $this->saveResizeImage($image, $destinationPath, 900, 800);
+            $filePath = $this->saveResizeImage($image, $destinationPath, 1200, 800);
 
             $file = new Upload_Files();
             $file->file_name = $request->file('file')->getClientOriginalName();
