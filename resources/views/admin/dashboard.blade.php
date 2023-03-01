@@ -227,97 +227,95 @@
             </div>
             <!--end::Last Courses-->
 
-            <div class="row ">
 
-                <!--begin::-->
-                <div class="card card-custom gutter-b">
-                    <!--begin::Header-->
-                    <div class="card-header border-0 pt-5">
-                        <h3 class="card-title align-items-start flex-column">
+            <!--begin::-->
+            <div class="card card-custom gutter-b">
+                <!--begin::Header-->
+                <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column">
                             <span class="card-label font-weight-bolder text-dark">
                             {{__('site.Latest_comments')}}
                             </span>
-                        </h3>
-                    </div>
-                    <!--end::Header-->
+                    </h3>
+                </div>
+                <!--end::Header-->
 
 
-                    <!--begin::Body-->
-                    <div class="card-body py-2" style=" ">
-                        <div class="container-fluid">
-                            <div class="row">
+                <!--begin::Body-->
+                <div class="card-body py-2" style=" ">
+                    <div class="container-fluid">
+                        <div class="row">
 
 
-                                <div class="col-6">
-                                    <div class="table-responsive">
-                                        <table class="table" style="text-align: center;vertical-align: middle;">
-                                            <thead>
+                            <div class="col-6">
+                                <div class="table-responsive">
+                                    <table class="table" style="text-align: center;vertical-align: middle;">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">{!! __('articles.photo') !!}</th>
+                                            <th scope="col">{!! __('articles.title') !!}</th>
+                                            <th scope="col">{!! __('index.views_count') !!}</th>
+
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($articles as $key=>$article)
                                             <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">{!! __('articles.photo') !!}</th>
-                                                <th scope="col">{!! __('articles.title') !!}</th>
-                                                <th scope="col">{!! __('index.views_count') !!}</th>
-
-
+                                                <td>{!! $key+1 !!}</td>
+                                                <td>
+                                                    <img
+                                                        src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
+                                                        class="img-fluid img-thumbnail table-image "/>
+                                                </td>
+                                                <td>{!!  $article->{'title_'.Lang()}!!}</td>
+                                                <td>{!!  $article->views!!}</td>
                                             </tr>
-                                            </thead>
-                                            <tbody>
-                                            @foreach($articles as $key=>$article)
-                                                <tr>
-                                                    <td>{!! $key+1 !!}</td>
-                                                    <td>
-                                                        <img
-                                                            src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
-                                                            class="img-fluid img-thumbnail table-image "/>
-                                                    </td>
-                                                    <td>{!!  $article->{'title_'.Lang()}!!}</td>
-                                                    <td>{!!  $article->views!!}</td>
-                                                </tr>
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
-
-
-                                <div class="col-6">
-                                    <div class="table-responsive ">
-                                        <table class="table" style="text-align: center;vertical-align: middle;">
-                                            <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">{!! __('articles.person_name') !!}</th>
-                                                <th scope="col">{!! __('articles.commentary') !!}</th>
-                                                <th scope="col">{!! __('articles.date') !!}</th>
-
-
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            @foreach($comments as $key=>$comment)
-                                                <tr>
-                                                    <td>{!! $key+1 !!}</td>
-                                                    <td>{!!  $comment->person_name!!}    </td>
-                                                    <td>{!!  $comment->commentary!!}</td>
-                                                    <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
-
-                                                </tr>
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-
                             </div>
+
+
+                            <div class="col-6">
+                                <div class="table-responsive ">
+                                    <table class="table" style="text-align: center;vertical-align: middle;">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">{!! __('articles.person_name') !!}</th>
+                                            <th scope="col">{!! __('articles.commentary') !!}</th>
+                                            <th scope="col">{!! __('articles.date') !!}</th>
+
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($comments as $key=>$comment)
+                                            <tr>
+                                                <td>{!! $key+1 !!}</td>
+                                                <td>{!!  $comment->person_name!!}    </td>
+                                                <td>{!!  $comment->commentary!!}</td>
+                                                <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
+
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
-                    <!--end::Body-->
-
-
                 </div>
-                <!--end::-->
+                <!--end::Body-->
+
+
             </div>
+            <!--end::-->
 
 
         </div>
