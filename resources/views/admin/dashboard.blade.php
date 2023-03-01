@@ -244,7 +244,7 @@
                                 <div class="card-header border-0 pt-5">
                                     <h3 class="card-title align-items-start flex-column">
                             <span class="card-label font-weight-bolder text-dark">
-                            {{__('site.Latest_articels')}}
+                            {{__('site.Latest_articles')}}
                             </span>
                                     </h3>
                                 </div>
