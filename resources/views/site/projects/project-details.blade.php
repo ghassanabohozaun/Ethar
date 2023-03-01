@@ -64,8 +64,8 @@
                                 <div class="tabs-content">
                                     <div class="tab active-tab" id="tab-1">
                                         <div class="overview-inner">
-                                            <div class="content-one">
-                                                <p> {!! $project->{'details_'.Lang()} !!}</p>
+                                            <div class="content-one my-content-one" >
+                                                <p > {!! $project->{'details_'.Lang()} !!}</p>
                                             </div>
 
                                             <div class="lower-box clearfix">

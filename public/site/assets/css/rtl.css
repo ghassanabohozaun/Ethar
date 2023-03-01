@@ -471,6 +471,10 @@
     margin-right: -120px;
 }
 
+.my-content-one{
+    text-align: right
+}
+
 .main-menu .navigation > li > a {
     position: relative;
     display: block;
