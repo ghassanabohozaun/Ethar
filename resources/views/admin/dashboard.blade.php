@@ -265,7 +265,7 @@
                                                 <td>
                                                     <img
                                                         src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
-                                                        class="img-fluid img-thumbnail table-image" style="width: 70px; height: 50px"/>
+                                                        class="img-fluid img-thumbnail table-image" style="width: 80px; height: 60px"/>
                                                 </td>
                                                 <td>{!!  $article->{'title_'.Lang()}!!}</td>
                                                 <td>{!!  $article->views!!}</td>
