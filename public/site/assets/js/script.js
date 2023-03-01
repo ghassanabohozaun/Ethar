@@ -380,9 +380,28 @@
             nav: true,
             smartSpeed: 500,
             autoplay: 1000,
-            items:5,
+            // items:5,
             navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
-
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                800: {
+                    items: 3
+                },
+                1024: {
+                    items: 4
+                },
+                1200: {
+                    items: 4
+                },
+                1600: {
+                    items: 5
+                }
+            }
         });
     }
 
