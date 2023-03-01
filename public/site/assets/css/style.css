@@ -2651,7 +2651,7 @@ div#mCSB_1_container {
 .banner-carousel .banner-content .swiper-slide .content-box p {
     position: relative;
     display: block;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 30px;
     color: #ffffff;
     margin-top: 21px;
@@ -6216,7 +6216,7 @@ div#mCSB_1_container {
 }
 
 .banner-section.style-two .banner-carousel .banner-content .swiper-slide .content-box h2 {
-    font-size: 120px;
+    font-size: 60px;
     line-height: 120px;
 }
 
