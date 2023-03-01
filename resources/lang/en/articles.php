@@ -17,6 +17,7 @@ return [
     'publisher_name'=>'Article Publisher Name',
     'file'=>'File',
     'status'=>'Status',
+    'title'=>'Article Title',
 
 
     'enter_photo'=>'Enter Article photo',
@@ -64,6 +65,7 @@ return [
     'commentary'=>'Commentary',
     'status'=>'Status',
     'post_id'=>'Post ID',
+    'date' => 'Commentary Date',
 
     'enter_person_ip'=>'Person IP',
     'enter_person_name'=>'Person Name',

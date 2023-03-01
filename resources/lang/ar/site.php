@@ -6,6 +6,9 @@ return [
 'Publications' => 'المنشورات' ,
 'Reports' => 'التقارير',
 'Latest_News' => 'اخر الاخبار ',
+'Latest_Article' => 'اخر المقالات ',
+'Latest_comments' => 'اخر التعليقات ',
+
 
 
 'Advertisements' => 'الإعلانات',

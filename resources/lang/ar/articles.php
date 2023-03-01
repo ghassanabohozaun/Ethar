@@ -17,6 +17,7 @@ return [
     'publisher_name' => 'اسم ناشر المقال',
     'file' => 'الملف',
     'status' => 'الحالة',
+    'title' => 'عنوان المقال',
 
 
     'enter_photo' => 'ادخل صورة المقال',
@@ -66,6 +67,7 @@ return [
     'status' => 'حالة التعليق',
     'gender' => 'الجنس',
     'post_id' => 'رقم المنشور',
+    'date' => 'تاريخ التعليق'  ,
 
 
     'enter_person_ip' => 'ادخل رقم IP',

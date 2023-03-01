@@ -191,86 +191,160 @@
             <!--end::Counters-->
 
 
-            <!--begin::Flow Charts-->
-            <div class="card card-custom gutter-b">
+           <!--begin::Flow Charts-->
+           <div class="card card-custom gutter-b">
 
+            <div class="card-body py-2" style="">
+                <div class="container-fluid">
+                    <div class="row">
 
-                <div class="card-body py-2" style="">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <h3>Charts</h3>
-
-                            <div>
-{{--                                <canvas id="myChart"  width="1200" height="400"></canvas>--}}
+                        <!--begin::Registration-->
+                        <div class="col-lg-6">
+                            <div class="col-12">
+                                <div style="height: 260px;width: 100% ; margin: auto">
+                                    <canvas id="barChart"></canvas>
+                                </div>
                             </div>
-
                         </div>
+                        <!--end::Registration-->
+
+
+                        <!--begin::Registration-->
+                        <div class="col-lg-6">
+                            <div class="col-12">
+                                <div style="height: 260px;width: 100% ; margin: auto">
+                                    <canvas id="barChart2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Registration-->
+
                     </div>
                 </div>
-
-                <!--end::Body-->
             </div>
-            <!--end::Last Courses-->
 
+            <!--end::Body-->
+        </div>
+        <!--end::Last Courses-->
+        
+            <div class="row ">
+                <!--begin::Last Articles-->
+                <div class="card card-custom gutter-b col-lg-6">
+                    <!--begin::Header-->
+                    <div class="card-header border-0 pt-5">
+                        <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label font-weight-bolder text-dark">
+                                {{__('site.Latest_Article')}}
+                            </span>
+                        </h3>
+                    </div>
+                    <!--end::Header-->
 
-            <!--begin::Last Courses-->
-            <div class="card card-custom gutter-b">
-                <!--begin::Header-->
-                <div class="card-header border-0 pt-5">
-                    <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label font-weight-bolder text-dark">
-                           Last Articles
-                        </span>
-                    </h3>
+                                @if($articles->isEmpty())
+                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
+                                            class="img-fluid" id="no_data_img"
+                                            title="{!! __('site.no_date') !!}">
+                                    @else
+                                    <!--begin::Body-->
+                                        <div class="card-body py-2" style="overflow:auto; height: 350px">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="table-responsive ">
+                                                        <table class="table" style="text-align: center;vertical-align: middle;">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">{!! __('articles.photo') !!}</th>
+                                                                <th scope="col">{!! __('articles.title') !!}</th>
+                                                                <th scope="col">{!! __('index.views_count') !!}</th>
+                                                                
+
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            @foreach($articles as $key=>$article)
+                                                                <tr>
+                                                                    <td>{!! $key+1 !!}</td>
+                                                                    <td>
+                                                                        <img
+                                                                            src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
+                                                                            class="img-fluid img-thumbnail table-image "/>
+                                                                    </td>
+                                                                    <td>{!!  $article->{'title_'.Lang()}!!}</td>
+                                                                    <td>{!!  $article->views!!}</td>
+                                                                </tr>
+                                                            @endforeach
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Body-->
+                                    @endif 
+
                 </div>
-                <!--end::Header-->
+                <!--end::Last Articles-->
 
-                {{--                @if($courses->isEmpty())--}}
-                {{--                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"--}}
-                {{--                         class="img-fluid" id="no_data_img"--}}
-                {{--                         title="{!! __('site.no_date') !!}">--}}
-                {{--                @else--}}
-                {{--                <!--begin::Body-->--}}
-                {{--                    <div class="card-body py-2" style="overflow:auto; height: 350px">--}}
-                {{--                        <div class="container-fluid">--}}
-                {{--                            <div class="row">--}}
-                {{--                                <div class="table-responsive">--}}
-                {{--                                    <table class="table" style="text-align: center;vertical-align: middle;">--}}
-                {{--                                        <thead>--}}
-                {{--                                        <tr>--}}
-                {{--                                            <th scope="col">#</th>--}}
-                {{--                                            <th scope="col">{!! __('courses.title_ar') !!}</th>--}}
-                {{--                                            <th scope="col">{!! __('courses.title_en') !!}</th>--}}
-                {{--                                            <th scope="col">{!! __('courses.teacher_id') !!}</th>--}}
-                {{--                                            <th scope="col">{!! __('courses.hours') !!}</th>--}}
-                {{--                                            <th scope="col">{!! __('courses.cost') !!}</th>--}}
+                <!--begin::Last Commint-->
+                <div class="card card-custom gutter-b col-lg-6">
+                    <!--begin::Header-->
+                    <div class="card-header border-0 pt-5">
+                        <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label font-weight-bolder text-dark">
+                            {{__('site.Latest_comments')}}
+                            </span>
+                        </h3>
+                    </div>
+                    <!--end::Header-->
 
+                                @if($comments->isEmpty())
+                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
+                                            class="img-fluid" id="no_data_img"
+                                            title="{!! __('site.no_date') !!}">
+                                    @else
+                                    <!--begin::Body-->
+                                        <div class="card-body py-2" style="overflow:auto; height: 350px">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="table-responsive ">
+                                                        <table class="table" style="text-align: center;vertical-align: middle;">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">{!! __('articles.person_name') !!}</th>
+                                                                <th scope="col">{!! __('articles.commentary') !!}</th>
+                                                                <th scope="col">{!! __('articles.date') !!}</th>
+                                                                
 
-                {{--                                        </tr>--}}
-                {{--                                        </thead>--}}
-                {{--                                        <tbody>--}}
-                {{--                                        @foreach($courses as $key=>$course)--}}
-                {{--                                            <tr>--}}
-                {{--                                                <td>{!! $key+1 !!}</td>--}}
-                {{--                                                <td>{!!  $course->title_ar!!}</td>--}}
-                {{--                                                <td>{!!  $course->title_en!!}</td>--}}
-                {{--                                                <td>{!!  $course->teacher->teacher_full_name!!}</td>--}}
-                {{--                                                <td>{!!  $course->hours!!}</td>--}}
-                {{--                                                <td>{!!  $course->cost!!}</td>--}}
-                {{--                                            </tr>--}}
-                {{--                                        @endforeach--}}
-                {{--                                        </tbody>--}}
-                {{--                                    </table>--}}
-                {{--                                </div>--}}
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            @foreach($comments as $key=>$comment)
+                                                                <tr>
+                                                                    <td>{!! $key+1 !!}</td>
+                                                                    <td>{!!  $comment->person_name!!}	</td>
+                                                                    <td>{!!  $comment->commentary!!}</td>
+                                                                    <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
 
-                {{--                            </div>--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                    <!--end::Body-->--}}
-                {{--                @endif--}}
+                                                                </tr>
+                                                            @endforeach
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
 
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Body-->
+                                    @endif 
+
+                </div>
+                <!--end::Last Commint-->
             </div>
-            <!--end::Last Courses-->
 
 
         </div>
@@ -281,92 +355,66 @@
 
 @endsection
 
-@push('js')
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const ctx = document.getElementById('myChart');
 
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
+@push('js')
+
+    <script type="text/javascript" src="{!! asset('adminBoard/assets/js/Chart.bundle.min.js') !!}"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            var ArticleData = <?php echo json_encode($ArticleData); ?>;
+            var barCanvas = $("#barChart");
+            var barChart = new Chart(barCanvas, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [
+                        {
+                            label: '{!! trans('dashboard.chart_article') !!}',
+                            data: ArticleData,
+                            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'purple', 'pink', 'indigo', 'silver', 'gold', 'brown']
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxis: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
                     }
                 }
-            }
+            })
         });
+
+
+        $(function () {
+            var ProjectData = <?php echo json_encode($ProjectData); ?>;
+            var barCanvas = $("#barChart2");
+            var barChart = new Chart(barCanvas, {
+                type: 'line',
+                data: {
+                    labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],
+                    datasets: [
+                        {
+                            label: '{!! trans('dashboard.chart_projects') !!}',
+                            data: ProjectData,
+                            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'purple', 'pink', 'indigo', 'silver', 'gold', 'brown']
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxis: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            })
+        });
+
     </script>
-
 @endpush
-
-{{--@push('js')--}}
-
-{{--    <script type="text/javascript" src="{!! asset('adminBoard/assets/js/Chart.bundle.min.js') !!}"></script>--}}
-{{--    <script type="text/javascript">--}}
-
-{{--        $(function () {--}}
-{{--            var datas = <?php echo json_encode($datas); ?>;--}}
-{{--            var barCanvas = $("#barChart");--}}
-{{--            var barChart = new Chart(barCanvas, {--}}
-{{--                type: 'bar',--}}
-{{--                data: {--}}
-{{--                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],--}}
-{{--                    datasets: [--}}
-{{--                        {--}}
-{{--                            label: '{!! __('dashboard.new_mawobs_growth') !!}',--}}
-{{--                            data: datas,--}}
-{{--                            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'purple', 'pink', 'indigo', 'silver', 'gold', 'brown']--}}
-{{--                        }--}}
-{{--                    ]--}}
-{{--                },--}}
-{{--                options: {--}}
-{{--                    scales: {--}}
-{{--                        yAxis: [{--}}
-{{--                            ticks: {--}}
-{{--                                beginAtZero: true--}}
-{{--                            }--}}
-{{--                        }]--}}
-{{--                    }--}}
-{{--                }--}}
-{{--            })--}}
-{{--        });--}}
-
-
-{{--        $(function () {--}}
-{{--            var RevenueData = <?php echo json_encode($RevenueData); ?>;--}}
-{{--            var barCanvas = $("#barChart2");--}}
-{{--            var barChart = new Chart(barCanvas, {--}}
-{{--                type: 'line',--}}
-{{--                data: {--}}
-{{--                    labels: ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'],--}}
-{{--                    datasets: [--}}
-{{--                        {--}}
-{{--                            label: '{!! __('dashboard.new_revenues_growth') !!}',--}}
-{{--                            data: RevenueData,--}}
-{{--                            backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'violet', 'purple', 'pink', 'indigo', 'silver', 'gold', 'brown']--}}
-{{--                        }--}}
-{{--                    ]--}}
-{{--                },--}}
-{{--                options: {--}}
-{{--                    scales: {--}}
-{{--                        yAxis: [{--}}
-{{--                            ticks: {--}}
-{{--                                beginAtZero: true--}}
-{{--                            }--}}
-{{--                        }]--}}
-{{--                    }--}}
-{{--                }--}}
-{{--            })--}}
-{{--        });--}}
-
-{{--    </script>--}}
-{{--@endpush--}}

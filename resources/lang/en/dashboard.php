@@ -5,7 +5,8 @@ return [
     'teacher_panel'=>'Teacher Panel',
     'admin_panel'=>'Admin Panel',
     'panels'=>"Panels",
-
+    'chart_article' => 'Article views Growth',
+    'chart_projects' => 'Project Views Growth',
 
 
     'dashboard' => 'Dashboard',

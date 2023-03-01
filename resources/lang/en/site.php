@@ -6,7 +6,8 @@ return [
 'Publications' => 'Publications' ,
 'Reports' => 'Reports',
 'Latest_News' => 'Latest News',
-
+'Latest_Article' => 'Last Articles',
+'Latest_comments' => 'Last Comments',
 'Advertisements' => 'Advertisements',
 'Brochures' => 'Brochures',
 'CaseStudy' => 'Case Study',

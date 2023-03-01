@@ -6,6 +6,8 @@ return [
     'teacher_panel'=>'لوحة تحكم المدرس',
     'admin_panel'=>'لوحة تحكم الإدارة',
     'panels'=>"لوحات التحكم",
+    'chart_article' => 'نمو مشاهدات المقالات',
+    'chart_projects' => 'نمو مشاهدات المشاريع',
 
 
 
