@@ -230,15 +230,7 @@
 
             <!--begin::-->
             <div class="card card-custom gutter-b">
-                <!--begin::Header-->
-                <div class="card-header border-0 pt-5">
-                    <h3 class="card-title align-items-start flex-column">
-                            <span class="card-label font-weight-bolder text-dark">
-                            {{__('site.Latest_comments')}}
-                            </span>
-                    </h3>
-                </div>
-                <!--end::Header-->
+
 
 
                 <!--begin::Body-->
@@ -248,6 +240,15 @@
 
 
                             <div class="col-6">
+                                <!--begin::Header-->
+                                <div class="card-header border-0 pt-5">
+                                    <h3 class="card-title align-items-start flex-column">
+                            <span class="card-label font-weight-bolder text-dark">
+                            {{__('site.Latest_comments')}}
+                            </span>
+                                    </h3>
+                                </div>
+                                <!--end::Header-->
                                 <div class="table-responsive">
                                     <table class="table" style="text-align: center;vertical-align: middle;">
                                         <thead>
