@@ -7,8 +7,8 @@ use App\Http\Requests\PhotoAlbumsRequest;
 use App\Models\PhotoAlbum;
 use App\Traits\GeneralTrait;
 use App\Upload_Files;
-use Illuminate\Http\Request;
 use File;
+use Illuminate\Http\Request;
 
 class PhotoAlbumsController extends Controller
 {
@@ -49,6 +49,7 @@ class PhotoAlbumsController extends Controller
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'year' => $request->year,
+            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
