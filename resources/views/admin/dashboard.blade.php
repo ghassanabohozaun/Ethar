@@ -232,7 +232,6 @@
             <div class="card card-custom gutter-b">
 
 
-
                 <!--begin::Body-->
                 <div class="card-body py-2" style=" ">
                     <div class="container-fluid">
@@ -244,7 +243,7 @@
                                 <div class="card-header border-0 pt-5">
                                     <h3 class="card-title align-items-start flex-column">
                             <span class="card-label font-weight-bolder text-dark">
-                            {{__('site.Latest_articles')}}
+                            {{__('dashboard.last_articles')}}
                             </span>
                                     </h3>
                                 </div>
@@ -285,7 +284,7 @@
                                 <div class="card-header border-0 pt-5">
                                     <h3 class="card-title align-items-start flex-column">
                             <span class="card-label font-weight-bolder text-dark">
-                            {{__('site.Latest_comments')}}
+                            {{__('site.last_comments')}}
                             </span>
                                     </h3>
                                 </div>
