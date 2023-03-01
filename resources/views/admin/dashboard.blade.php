@@ -247,11 +247,7 @@
                         <div class="container-fluid">
                             <div class="row">
 
-                                @if($articles->isEmpty())
-                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
-                                         class="img-fluid" id="no_data_img"
-                                         title="{!! __('site.no_date') !!}">
-                                @else
+
                                 <div class="col-6">
                                     <div class="table-responsive ">
                                         <table class="table" style="text-align: center;vertical-align: middle;">
@@ -282,13 +278,8 @@
                                         </table>
                                     </div>
                                 </div>
-                                @endif
 
-                                @if($comments->isEmpty())
-                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
-                                         class="img-fluid" id="no_data_img"
-                                         title="{!! __('site.no_date') !!}">
-                                @else
+
                                     <div class="col-6">
                                         <div class="table-responsive ">
                                             <table class="table" style="text-align: center;vertical-align: middle;">
@@ -316,7 +307,7 @@
                                             </table>
                                         </div>
                                     </div>
-                                @endif
+
 
 
                             </div>
