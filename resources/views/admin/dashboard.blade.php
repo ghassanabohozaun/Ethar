@@ -87,7 +87,7 @@
                     <div class="card card-custom bg-primary-o-50 card-stretch gutter-b">
                         <!--begin::Body-->
                         <div class="card-body">
-                          
+
                                 <!--begin::Svg Icon-->
                                 <span>
                                     <span class="svg-icon svg-icon-primary svg-icon-3x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Shopping\Wallet.svg--><svg
@@ -107,7 +107,7 @@
                                     </svg><!--end::Svg Icon--></span>
                             </span>
                                 <!--end::Svg Icon-->
-                     
+
                             <span
                                 class="card-title font-weight-bolder font-size-h2 mb-0 mt-6 text-hover-primary d-block">
                                 {{App\Models\Article::count()}}
@@ -213,8 +213,8 @@
                         <!--begin::Registration-->
                         <div class="col-lg-6">
                             <div class="col-12">
-                                <div style="height: 260px;width: 100% ; margin: auto">
-                                    <canvas id="barChart"></canvas>
+                                <div style="width: 100% ; margin: auto">
+                                    <canvas id="barChart" width="1100" height="600"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -224,8 +224,8 @@
                         <!--begin::Registration-->
                         <div class="col-lg-6">
                             <div class="col-12">
-                                <div style="height: 260px;width: 100% ; margin: auto">
-                                    <canvas id="barChart2"></canvas>
+                                <div style="width: 100% ; margin: auto">
+                                    <canvas id="barChart2"  width="1100" height="600"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -238,10 +238,10 @@
             <!--end::Body-->
         </div>
         <!--end::Last Courses-->
-       
+
             <!--begin::Last Articles-->
-            <div class="card card-custom gutter-b "> 
-                
+            <div class="card card-custom gutter-b ">
+
                 <!--begin::Body-->
                     <div class="card-body py-2" style="">
                         <div class="container-fluid">
@@ -265,13 +265,10 @@
                                         <table class="table" style="text-align: center;vertical-align: middle;">
                                             <thead>
                                             <tr>
-
                                                 <th scope="col">#</th>
                                                 <th scope="col">{!! __('articles.photo') !!}</th>
                                                 <th scope="col">{!! __('articles.title') !!}</th>
                                                 <th scope="col">{!! __('index.views_count') !!}</th>
-                                                
-
 
                                             </tr>
                                             </thead>
@@ -291,7 +288,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    @endif 
+                                    @endif
                                 </div>
 
                                 <div class="col-6">
@@ -304,14 +301,14 @@
                                         </h3>
                                     </div>
                                     <!--end::Header-->
-                                    
+
                                     @if($comments->isEmpty())
                                     <img src="{!! asset('site/images/noRecordFound.svg') !!}"
                                             class="img-fluid" id="no_data_img"
                                             title="{!! __('site.no_date') !!}">
                                     @else
                                     <!--begin::Body-->
-            
+
                                     <div class="table-responsive ">
                                         <table class="table" style="text-align: center;vertical-align: middle;">
                                             <thead>
@@ -338,13 +335,13 @@
                                     </div>
                                     @endif
 
-                            
-                    
+
+
                                 <!--end::Body-->
-                        
+
                                 </div>
 
-                            
+
                             </div>
                         </div>
                     </div>
@@ -352,9 +349,9 @@
 
             </div>
             <!--end::Last Articles-->
-              
-            
-    
+
+
+
 
 
         </div>

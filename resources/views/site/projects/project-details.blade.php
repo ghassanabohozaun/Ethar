@@ -42,10 +42,10 @@
 
 
         <!-- event-details -->
-        <section class="event-details">
+        <section class="event-details centred">
             <div class="auto-container">
-                <div class="row clearfix">
-                    <div class="col-lg-8 col-md-8 col-sm-8 content-side">
+                <div class="row clearfix justify-content-md-center">
+                    <div class=" col-lg-8 col-md-8 col-sm-8 content-side">
                         <div class="event-details-content">
                             <div class="upper-box">
                                 <h2> {!! $project->{'title_'.Lang()} !!}</h2>
@@ -64,8 +64,8 @@
                                 <div class="tabs-content">
                                     <div class="tab active-tab" id="tab-1">
                                         <div class="overview-inner">
-                                            <div class="content-one">
-                                                <p> {!! $project->{'details_'.Lang()} !!}</p>
+                                            <div class="content-one my-content-one" >
+                                                <p > {!! $project->{'details_'.Lang()} !!}</p>
                                             </div>
 
                                             <div class="lower-box clearfix">
