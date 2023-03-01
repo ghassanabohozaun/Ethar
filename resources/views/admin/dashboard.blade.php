@@ -230,7 +230,7 @@
             <div class="row ">
 
                 <!--begin::-->
-                <div class="card card-custom gutter-b col-lg-6">
+                <div class="card card-custom gutter-b">
                     <!--begin::Header-->
                     <div class="card-header border-0 pt-5">
                         <h3 class="card-title align-items-start flex-column">
