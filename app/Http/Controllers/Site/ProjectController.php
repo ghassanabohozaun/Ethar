@@ -24,7 +24,7 @@ class ProjectController extends Controller
 
         }
         if($projects){
-            $title = $type; 
+            $title =__("projects.$type") ; 
             return view('site.projects.project' , compact('projects' , 'type' , 'title'));
         }else{
             return redirect(route('index'));
