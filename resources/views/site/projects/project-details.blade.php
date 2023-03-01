@@ -44,54 +44,58 @@
         <!-- event-details -->
         <section class="event-details">
             <div class="auto-container">
-                <div class="event-details-content">
-                    <div class="upper-box centred">
-                        <h2> {!! $project->{'title_'.Lang()} !!}</h2>
-                        <ul class="events-info clearfix">
-                            <li><i class="far fa-calendar"></i>{!! $project->date !!}</li>
-                            <li><i class="far fa-eye"></i> {!! $project->views !!}</li>
-                        </ul>
-                        <figure class="image-box">
-                            <img class="my-detail-image"
-                                src="{!!  asset('adminBoard/uploadedImages/projects/'. $project->photo) !!}"
-                                alt="{!! $project->{'title_'.Lang()} !!}">
-                        </figure>
-                    </div>
-                    <div class="tabs-box">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-8 col-sm-8 content-side">
+                        <div class="event-details-content">
+                            <div class="upper-box">
+                                <h2> {!! $project->{'title_'.Lang()} !!}</h2>
+                                <ul class="events-info clearfix">
+                                    <li><i class="far fa-calendar"></i>{!! $project->date !!}</li>
+                                    <li><i class="far fa-eye"></i> {!! $project->views !!}</li>
+                                </ul>
+                                <figure class="image-box">
+                                    <img class=""
+                                         src="{!!  asset('adminBoard/uploadedImages/projects/'. $project->photo) !!}"
+                                         alt="{!! $project->{'title_'.Lang()} !!}">
+                                </figure>
+                            </div>
+                            <div class="tabs-box">
 
-                        <div class="tabs-content">
-                            <div class="tab active-tab" id="tab-1">
-                                <div class="overview-inner">
-                                    <div class="content-one">
-                                        <p> {!! $project->{'details_'.Lang()} !!}</p>
-                                    </div>
+                                <div class="tabs-content">
+                                    <div class="tab active-tab" id="tab-1">
+                                        <div class="overview-inner">
+                                            <div class="content-one">
+                                                <p> {!! $project->{'details_'.Lang()} !!}</p>
+                                            </div>
 
-                                    <div class="lower-box clearfix">
+                                            <div class="lower-box clearfix">
 
-                                        <div class="share-option pull-left">
+                                                <div class="share-option pull-left">
 
-                                            @if($project->file != null)
-                                                <a href="{!! asset('adminBoard/uploadedFiles/project/'. $project->file) !!}">
-                                                    <h5 class="my-h1">
-                                                        <i class="fas fa-file-pdf"></i>
-                                                        {!! __('index.pdf') !!}
-                                                    </h5>
-                                                </a>
-                                            @endif
+                                                    @if($project->file != null)
+                                                        <a href="{!! asset('adminBoard/uploadedFiles/project/'. $project->file) !!}">
+                                                            <h5 class="my-h1">
+                                                                <i class="fas fa-file-pdf"></i>
+                                                                {!! __('index.pdf') !!}
+                                                            </h5>
+                                                        </a>
+                                                    @endif
 
-                                            @if($project->word != null)
-                                                <a href="{!! asset('adminBoard/uploadedFiles/project/'. $project->word) !!}">
-                                                    <h5 class="my-h1">
-                                                        <i class="fas fa-file-word"></i>
-                                                        {!! __('index.word') !!}
-                                                    </h5>
-                                                </a>
-                                            @endif
+                                                    @if($project->word != null)
+                                                        <a href="{!! asset('adminBoard/uploadedFiles/project/'. $project->word) !!}">
+                                                            <h5 class="my-h1">
+                                                                <i class="fas fa-file-word"></i>
+                                                                {!! __('index.word') !!}
+                                                            </h5>
+                                                        </a>
+                                                    @endif
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
