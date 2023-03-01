@@ -60,6 +60,7 @@ class VideosController extends Controller
             'link' => $VideoLink,
             'duration' => $request->duration,
             'added_date' => $request->added_date,
+            'status' => 'on',
         ]);
 
         return $this->returnSuccessMessage(__('general.add_success_message'));
@@ -112,7 +113,7 @@ class VideosController extends Controller
         }
 
         if ($request->hasFile('photo')) {
-            $image_path =public_path('/adminBoard/uploadedImages/videos//') . $video->photo;
+            $image_path = public_path('/adminBoard/uploadedImages/videos//') . $video->photo;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
@@ -162,7 +163,7 @@ class VideosController extends Controller
                 return redirect()->route('admin.not.found');
             }
             if (!empty($video->photo)) {
-                $image_path =  public_path('/adminBoard/uploadedImages/videos//') . $video->photo;
+                $image_path = public_path('/adminBoard/uploadedImages/videos//') . $video->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
