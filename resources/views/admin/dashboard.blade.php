@@ -228,27 +228,31 @@
             <!--end::Last Courses-->
 
             <div class="row ">
-                <!--begin::Last Articles-->
+
+                <!--begin::-->
                 <div class="card card-custom gutter-b col-lg-6">
                     <!--begin::Header-->
                     <div class="card-header border-0 pt-5">
                         <h3 class="card-title align-items-start flex-column">
                             <span class="card-label font-weight-bolder text-dark">
-                                {{__('site.Latest_Article')}}
+                            {{__('site.Latest_comments')}}
                             </span>
                         </h3>
                     </div>
                     <!--end::Header-->
 
-                    @if($articles->isEmpty())
-                        <img src="{!! asset('site/images/noRecordFound.svg') !!}"
-                             class="img-fluid" id="no_data_img"
-                             title="{!! __('site.no_date') !!}">
-                    @else
-                        <!--begin::Body-->
-                        <div class="card-body py-2" style="overflow:auto; height: 350px">
-                            <div class="container-fluid">
-                                <div class="row">
+
+                    <!--begin::Body-->
+                    <div class="card-body py-2" style="overflow:auto; height: 350px">
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                @if($articles->isEmpty())
+                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
+                                         class="img-fluid" id="no_data_img"
+                                         title="{!! __('site.no_date') !!}">
+                                @else
+                                <div class="col-6">
                                     <div class="table-responsive ">
                                         <table class="table" style="text-align: center;vertical-align: middle;">
                                             <thead>
@@ -277,34 +281,9 @@
                                             </tbody>
                                         </table>
                                     </div>
-
-
                                 </div>
-                            </div>
-                        </div>
-                        <!--end::Body-->
-                    @endif
+                                @endif
 
-                </div>
-                <!--end::Last Articles-->
-
-                <!--begin::Last Commint-->
-                <div class="card card-custom gutter-b col-lg-6">
-                    <!--begin::Header-->
-                    <div class="card-header border-0 pt-5">
-                        <h3 class="card-title align-items-start flex-column">
-                            <span class="card-label font-weight-bolder text-dark">
-                            {{__('site.Latest_comments')}}
-                            </span>
-                        </h3>
-                    </div>
-                    <!--end::Header-->
-
-
-                    <!--begin::Body-->
-                    <div class="card-body py-2" style="overflow:auto; height: 350px">
-                        <div class="container-fluid">
-                            <div class="row">
                                 @if($comments->isEmpty())
                                     <img src="{!! asset('site/images/noRecordFound.svg') !!}"
                                          class="img-fluid" id="no_data_img"
