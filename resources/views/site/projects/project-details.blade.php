@@ -64,9 +64,31 @@
                                 <div class="tabs-content">
                                     <div class="tab active-tab" id="tab-1">
                                         <div class="overview-inner">
-                                            <div class="content-one my-content-one" >
+                                            <div class="content-one">
                                                 <p > {!! $project->{'details_'.Lang()} !!}</p>
                                             </div>
+
+
+{{--                                            <div class="single-item my-social-style">--}}
+{{--                                                <ul class="my-social-style-one clearfix  my-2">--}}
+{{--                                                    <li>--}}
+{{--                                                        <a href="" style="font-size: 20px">--}}
+{{--                                                            <i class="fas fa-file-pdf"></i>--}}
+{{--                                                            {!! __('index.pdf') !!}--}}
+{{--                                                        </a>--}}
+
+{{--                                                    </li>--}}
+{{--                                                    <li>--}}
+{{--                                                        <a href="" style="font-size: 20px">--}}
+{{--                                                            <i class="fas fa-file-word"></i>--}}
+{{--                                                            {!! __('index.word') !!}--}}
+{{--                                                        </a>--}}
+
+{{--                                                    </li>--}}
+
+
+{{--                                                </ul>--}}
+{{--                                            </div>--}}
 
                                             <div class="lower-box clearfix">
 
