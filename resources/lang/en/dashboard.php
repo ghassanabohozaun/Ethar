@@ -7,7 +7,10 @@ return [
     'panels'=>"Panels",
     'chart_article' => 'Article views Growth',
     'chart_projects' => 'Project Views Growth',
-
+    'project_counter' => 'Number of Projects' , 
+    'article_counter' => 'Number of Articles' , 
+    'publication_counter' =>  'Number of Publication' , 
+    'report_counter' => 'Number of Reports' ,
 
     'dashboard' => 'Dashboard',
     'home' => 'Home',

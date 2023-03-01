@@ -8,7 +8,10 @@ return [
     'panels'=>"لوحات التحكم",
     'chart_article' => 'نمو مشاهدات المقالات',
     'chart_projects' => 'نمو مشاهدات المشاريع',
-
+    'project_counter' => 'عدد المشاريع ' , 
+    'article_counter' => 'عدد المقالات' , 
+    'publication_counter' =>  'عدد المنشورت ' , 
+    'report_counter' => 'عدد التقارير' ,
 
 
     'dashboard' => 'لوحة التحكم',
