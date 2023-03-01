@@ -44,7 +44,7 @@ class VideosController extends Controller
         // save image
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
-            $destinationPath = public_path('\adminBoard\uploadedImages\videos\\');
+            $destinationPath = public_path('/adminBoard/uploadedImages/videos//');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = '';
@@ -112,18 +112,18 @@ class VideosController extends Controller
         }
 
         if ($request->hasFile('photo')) {
-            $image_path =public_path('\adminBoard\uploadedImages\videos\\') . $video->photo;
+            $image_path =public_path('/adminBoard/uploadedImages/videos//') . $video->photo;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
 
             if (!empty($video->photo)) {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\videos\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/videos//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 1920, 908);
             } else {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\videos\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/videos//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 1920, 908);
             }
         } else {
@@ -162,7 +162,7 @@ class VideosController extends Controller
                 return redirect()->route('admin.not.found');
             }
             if (!empty($video->photo)) {
-                $image_path =  public_path('\adminBoard\uploadedImages\videos\\') . $video->photo;
+                $image_path =  public_path('/adminBoard/uploadedImages/videos//') . $video->photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
