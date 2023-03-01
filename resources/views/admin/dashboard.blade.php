@@ -243,13 +243,13 @@
 
 
                     <!--begin::Body-->
-                    <div class="card-body py-2" style="overflow:auto; height: 350px">
+                    <div class="card-body py-2" style=" ">
                         <div class="container-fluid">
                             <div class="row">
 
 
                                 <div class="col-6">
-                                    <div class="table-responsive ">
+                                    <div class="table-responsive">
                                         <table class="table" style="text-align: center;vertical-align: middle;">
                                             <thead>
                                             <tr>
@@ -280,34 +280,33 @@
                                 </div>
 
 
-                                    <div class="col-6">
-                                        <div class="table-responsive ">
-                                            <table class="table" style="text-align: center;vertical-align: middle;">
-                                                <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">{!! __('articles.person_name') !!}</th>
-                                                    <th scope="col">{!! __('articles.commentary') !!}</th>
-                                                    <th scope="col">{!! __('articles.date') !!}</th>
+                                <div class="col-6">
+                                    <div class="table-responsive ">
+                                        <table class="table" style="text-align: center;vertical-align: middle;">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">{!! __('articles.person_name') !!}</th>
+                                                <th scope="col">{!! __('articles.commentary') !!}</th>
+                                                <th scope="col">{!! __('articles.date') !!}</th>
 
+
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($comments as $key=>$comment)
+                                                <tr>
+                                                    <td>{!! $key+1 !!}</td>
+                                                    <td>{!!  $comment->person_name!!}    </td>
+                                                    <td>{!!  $comment->commentary!!}</td>
+                                                    <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
 
                                                 </tr>
-                                                </thead>
-                                                <tbody>
-                                                @foreach($comments as $key=>$comment)
-                                                    <tr>
-                                                        <td>{!! $key+1 !!}</td>
-                                                        <td>{!!  $comment->person_name!!}    </td>
-                                                        <td>{!!  $comment->commentary!!}</td>
-                                                        <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
-
-                                                    </tr>
-                                                @endforeach
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
                                     </div>
-
+                                </div>
 
 
                             </div>
@@ -317,7 +316,7 @@
 
 
                 </div>
-                <!--end::Last Commint-->
+                <!--end::-->
             </div>
 
 
