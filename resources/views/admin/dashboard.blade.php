@@ -201,8 +201,8 @@
                         <!--begin::Registration-->
                         <div class="col-lg-6">
                             <div class="col-12">
-                                <div style="height: 300px;width: 100% ; margin: auto">
-                                    <canvas id="barChart"></canvas>
+                                <div style="height: 350px;width: 100% ; margin: auto">
+                                    <canvas id="barChart"  width="1100" height="350"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -212,8 +212,8 @@
                         <!--begin::Registration-->
                         <div class="col-lg-6">
                             <div class="col-12">
-                                <div style="height: 300px;width: 100% ; margin: auto">
-                                    <canvas id="barChart2"></canvas>
+                                <div style="height: 350px;width: 100% ; margin: auto">
+                                    <canvas id="barChart2"  width="1100" height="350"></canvas>
                                 </div>
                             </div>
                         </div>
