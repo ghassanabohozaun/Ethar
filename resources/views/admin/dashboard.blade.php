@@ -212,7 +212,7 @@
                         <!--begin::Registration-->
                         <div class="col-lg-6">
                             <div class="col-12">
-                                <div style="height: 350px;width: 100% ; margin: auto">
+                                <div style="width: 100% ; margin: auto">
                                     <canvas id="barChart2"  width="1100" height="500"></canvas>
                                 </div>
                             </div>
