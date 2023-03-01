@@ -64,9 +64,7 @@ Route::group(
     Route::get('/videos', [MediaController::class, 'videos'])->name('videos');
 
 
-    Route::get('/contact', function () {
-        return view('site.contact');
-    })->name('contact');
+    Route::get('/contact', [SiteController::class, 'getContact'])->name('contact');
 
 
     Route::post('/send-contact-message', 'SiteController@sendContactMessage')->name('send-contact-message');

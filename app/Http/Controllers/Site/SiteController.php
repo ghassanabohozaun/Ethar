@@ -120,6 +120,10 @@ class SiteController extends Controller
 
     }
 
+    function getContact(){
+        $title = __('index.contact');
+        return view('site.contact' , compact('title'));
+    }
 
     // Send Contact Message
     public function sendContactMessage(SupportCenterRequest $request)

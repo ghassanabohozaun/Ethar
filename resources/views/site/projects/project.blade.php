@@ -10,7 +10,6 @@
     <meta name="application-name" content="{!! Lang()=='ar' ? setting()->site_name_ar : setting()->site_name_en !!}"/>
     <meta name="author" content="{!! Lang()=='ar' ? setting()->site_name_ar : setting()->site_name_en !!}"/>
 @endsection
-
 @push('css')
 @endpush
 @section('content')

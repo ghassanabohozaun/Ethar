@@ -20,7 +20,8 @@ class PublicationController extends Controller
             })->paginate(8) ;
         }
         if($publications){
-            return view('site.publications.publication' , compact('publications' , 'type'));
+            $title = __("site.$type");
+            return view('site.publications.publication' , compact('publications' , 'type' , 'title'));
         }else{
             return redirect(route('index'));
         }
@@ -34,7 +35,8 @@ class PublicationController extends Controller
 
         if($publication){
             $publication->increment('views', 1);
-            return view('site.publications.publication-details' , compact('publication' ));
+            $title = __('menu.publications');
+            return view('site.publications.publication-details' , compact('publication','title' ));
         }else{
             return redirect(route('index'));
         }

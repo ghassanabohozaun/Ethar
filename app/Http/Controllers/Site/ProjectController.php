@@ -24,7 +24,8 @@ class ProjectController extends Controller
 
         }
         if($projects){
-            return view('site.projects.project' , compact('projects' , 'type'));
+            $title = $type; 
+            return view('site.projects.project' , compact('projects' , 'type' , 'title'));
         }else{
             return redirect(route('index'));
         }
@@ -37,8 +38,10 @@ class ProjectController extends Controller
          $news =Article::orderByDesc('id')->where('status' ,'on')->limit(3)->get();
 
         if($project){
+
             $project->increment('views', 1);
-            return view('site.projects.project-details' , compact('project' ,'news'));
+            $title = __('menu.projects');
+            return view('site.projects.project-details' , compact('project' ,'news' , 'title'));
         }else{
             return redirect(route('index'));
         }

@@ -28,7 +28,8 @@ class NewsController extends Controller
         })->paginate(6);
        }
         if ($news) {
-            return view('site.news.new', compact('news'));
+            $title = __('menu.articles');
+            return view('site.news.new', compact('news' , 'title'));
         } else {
             return redirect(route('index'));
         }
