@@ -36,7 +36,7 @@ class PhotoAlbumsController extends Controller
         // save image
         if ($request->hasFile('main_photo')) {
             $image = $request->file('main_photo');
-            $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
+            $destinationPath = public_path('/adminBoard/uploadedImages/albums//');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
         } else {
             $photo_path = '';
@@ -78,23 +78,23 @@ class PhotoAlbumsController extends Controller
         if ($request->hasFile('main_photo')) {
             if (!empty($photoAlbum->main_photo)) {
 
-                $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                $image_path = public_path('/adminBoard/uploadedImages/albums//') . $photoAlbum->main_photo;
                 if (\Illuminate\Support\Facades\File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('main_photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/albums//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
 
             } else {
-                $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                $image_path = public_path('/adminBoard/uploadedImages/albums//') . $photoAlbum->main_photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
 
                 $image = $request->file('main_photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\albums\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/albums//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 500, 500);
             }
         } else {
@@ -132,7 +132,7 @@ class PhotoAlbumsController extends Controller
             }
             ////////////////////  delete Main Album Photo
             if (!empty($photoAlbum->main_photo)) {
-                $image_path = public_path('\adminBoard\uploadedImages\albums\\') . $photoAlbum->main_photo;
+                $image_path = public_path('/adminBoard/uploadedImage/albums//') . $photoAlbum->main_photo;
                 if (File::exists($image_path)) {
                     File::delete($image_path);
                 }
@@ -170,7 +170,7 @@ class PhotoAlbumsController extends Controller
         if ($request->hasFile('file')) {
 
             $image = $request->file('file');
-            $destinationPath = public_path('\adminBoard\uploadedImages\albums_photos\\');
+            $destinationPath = public_path('/adminBoard/uploadedImages/albums_photos//');
             $filePath = $this->saveResizeImage($image, $destinationPath, 500, 500);
 
             $file = new Upload_Files();
@@ -193,7 +193,7 @@ class PhotoAlbumsController extends Controller
     {
         if ($request->ajax()) {
             $file = Upload_Files::find($request->id);
-            $image_path = public_path('\adminBoard\uploadedImages\albums_photos\\') . $file->full_path_after_upload;
+            $image_path = public_path('/adminBoard/uploadedImages/albums_photos//') . $file->full_path_after_upload;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
