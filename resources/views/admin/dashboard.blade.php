@@ -191,41 +191,41 @@
             <!--end::Counters-->
 
 
-           <!--begin::Flow Charts-->
-           <div class="card card-custom gutter-b">
+            <!--begin::Flow Charts-->
+            <div class="card card-custom gutter-b">
 
-            <div class="card-body py-2" style="">
-                <div class="container-fluid">
-                    <div class="row">
+                <div class="card-body py-2" style="">
+                    <div class="container-fluid">
+                        <div class="row">
 
-                        <!--begin::Registration-->
-                        <div class="col-lg-6">
-                            <div class="col-12">
-                                <div style="width: 100% ; margin: auto">
-                                    <canvas id="barChart"  width="1100" height="500"></canvas>
+                            <!--begin::Registration-->
+                            <div class="col-lg-6">
+                                <div class="col-12">
+                                    <div style="width: 100% ; margin: auto">
+                                        <canvas id="barChart" width="1100" height="500"></canvas>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--end::Registration-->
+                            <!--end::Registration-->
 
 
-                        <!--begin::Registration-->
-                        <div class="col-lg-6">
-                            <div class="col-12">
-                                <div style="width: 100% ; margin: auto">
-                                    <canvas id="barChart2"  width="1100" height="500"></canvas>
+                            <!--begin::Registration-->
+                            <div class="col-lg-6">
+                                <div class="col-12">
+                                    <div style="width: 100% ; margin: auto">
+                                        <canvas id="barChart2" width="1100" height="500"></canvas>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--end::Registration-->
+                            <!--end::Registration-->
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!--end::Body-->
-        </div>
-        <!--end::Last Courses-->
+                <!--end::Body-->
+            </div>
+            <!--end::Last Courses-->
 
             <div class="row ">
                 <!--begin::Last Articles-->
@@ -240,50 +240,50 @@
                     </div>
                     <!--end::Header-->
 
-                                @if($articles->isEmpty())
-                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
-                                            class="img-fluid" id="no_data_img"
-                                            title="{!! __('site.no_date') !!}">
-                                    @else
-                                    <!--begin::Body-->
-                                        <div class="card-body py-2" style="overflow:auto; height: 350px">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="table-responsive ">
-                                                        <table class="table" style="text-align: center;vertical-align: middle;">
-                                                            <thead>
-                                                            <tr>
-                                                                <th scope="col">#</th>
-                                                                <th scope="col">{!! __('articles.photo') !!}</th>
-                                                                <th scope="col">{!! __('articles.title') !!}</th>
-                                                                <th scope="col">{!! __('index.views_count') !!}</th>
+                    @if($articles->isEmpty())
+                        <img src="{!! asset('site/images/noRecordFound.svg') !!}"
+                             class="img-fluid" id="no_data_img"
+                             title="{!! __('site.no_date') !!}">
+                    @else
+                        <!--begin::Body-->
+                        <div class="card-body py-2" style="overflow:auto; height: 350px">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="table-responsive ">
+                                        <table class="table" style="text-align: center;vertical-align: middle;">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">{!! __('articles.photo') !!}</th>
+                                                <th scope="col">{!! __('articles.title') !!}</th>
+                                                <th scope="col">{!! __('index.views_count') !!}</th>
 
 
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            @foreach($articles as $key=>$article)
-                                                                <tr>
-                                                                    <td>{!! $key+1 !!}</td>
-                                                                    <td>
-                                                                        <img
-                                                                            src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
-                                                                            class="img-fluid img-thumbnail table-image "/>
-                                                                    </td>
-                                                                    <td>{!!  $article->{'title_'.Lang()}!!}</td>
-                                                                    <td>{!!  $article->views!!}</td>
-                                                                </tr>
-                                                            @endforeach
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($articles as $key=>$article)
+                                                <tr>
+                                                    <td>{!! $key+1 !!}</td>
+                                                    <td>
+                                                        <img
+                                                            src="{{ asset('adminBoard/uploadedImages/articles/'.$article->photo) }}"
+                                                            class="img-fluid img-thumbnail table-image "/>
+                                                    </td>
+                                                    <td>{!!  $article->{'title_'.Lang()}!!}</td>
+                                                    <td>{!!  $article->views!!}</td>
+                                                </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
 
 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--end::Body-->
-                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Body-->
+                    @endif
 
                 </div>
                 <!--end::Last Articles-->
@@ -300,47 +300,51 @@
                     </div>
                     <!--end::Header-->
 
+
+                    <!--begin::Body-->
+                    <div class="card-body py-2" style="overflow:auto; height: 350px">
+                        <div class="container-fluid">
+                            <div class="row">
                                 @if($comments->isEmpty())
                                     <img src="{!! asset('site/images/noRecordFound.svg') !!}"
-                                            class="img-fluid" id="no_data_img"
-                                            title="{!! __('site.no_date') !!}">
-                                    @else
-                                    <!--begin::Body-->
-                                        <div class="card-body py-2" style="overflow:auto; height: 350px">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="table-responsive ">
-                                                        <table class="table" style="text-align: center;vertical-align: middle;">
-                                                            <thead>
-                                                            <tr>
-                                                                <th scope="col">#</th>
-                                                                <th scope="col">{!! __('articles.person_name') !!}</th>
-                                                                <th scope="col">{!! __('articles.commentary') !!}</th>
-                                                                <th scope="col">{!! __('articles.date') !!}</th>
+                                         class="img-fluid" id="no_data_img"
+                                         title="{!! __('site.no_date') !!}">
+                                @else
+                                    <div class="col-6">
+                                        <div class="table-responsive ">
+                                            <table class="table" style="text-align: center;vertical-align: middle;">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">{!! __('articles.person_name') !!}</th>
+                                                    <th scope="col">{!! __('articles.commentary') !!}</th>
+                                                    <th scope="col">{!! __('articles.date') !!}</th>
 
 
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            @foreach($comments as $key=>$comment)
-                                                                <tr>
-                                                                    <td>{!! $key+1 !!}</td>
-                                                                    <td>{!!  $comment->person_name!!}	</td>
-                                                                    <td>{!!  $comment->commentary!!}</td>
-                                                                    <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach($comments as $key=>$comment)
+                                                    <tr>
+                                                        <td>{!! $key+1 !!}</td>
+                                                        <td>{!!  $comment->person_name!!}    </td>
+                                                        <td>{!!  $comment->commentary!!}</td>
+                                                        <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
 
-                                                                </tr>
-                                                            @endforeach
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
                                         </div>
-                                        <!--end::Body-->
-                                    @endif
+                                    </div>
+                                @endif
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Body-->
+
 
                 </div>
                 <!--end::Last Commint-->
