@@ -16,5 +16,7 @@ return [
 'details'   => 'Details ' ,
 'counter'   =>'Counters',
 
+'current' => 'Current Projects',
+'previous' => 'Previous Projects',
 
 ];

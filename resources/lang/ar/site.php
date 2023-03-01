@@ -17,4 +17,7 @@ return [
 'ScientificArticles' => 'المقالات العلمية',
 'details'   => 'تفاصيل ' ,
 'counter'   =>'عداد',
+
+'current' => 'مشروع حالي ',
+'previous' => 'مشروع سابق',
 ];
