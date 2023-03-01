@@ -28,14 +28,14 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                
+
                                 <li class="{{ Route::currentRouteName() =='index'?'current':''}}">
                                     <a href="{!! route('index') !!}">{!! __('index.home') !!}
                                     </a>
                                 </li>
 
                                 <li class="dropdown  {!! str_contains(url()->current(),'About')  ? 'current': '' !!}">
-                                    <a href="#">{!! __('index.about') !!}</a>
+                                    <a href="javascript:void(0)">{!! __('index.about') !!}</a>
                                     <ul>
                                         @foreach (abouts_type() as $type )
                                             <li>
@@ -75,7 +75,7 @@
                                 </li>
 
                                 <li class="dropdown  {!! str_contains(url()->current(),'projects')  ? 'current': '' !!}">
-                                    <a href="#">{!! __('index.projects') !!}</a>
+                                    <a href="javascript:void(0)">{!! __('index.projects') !!}</a>
                                     <ul>
                                         <li>
                                             <a href="{!! route('projects','previous') !!}">
@@ -105,7 +105,7 @@
                                 </li>
 
                                 <li class="dropdown  {!! str_contains(url()->current(),'publications')  ? 'current': '' !!}">
-                                    <a href="#">{!! __('index.publications') !!}</a>
+                                    <a href="javascript:void(0)">{!! __('index.publications') !!}</a>
                                     <ul>
                                         <li>
                                             <a href="{!! route('advertisements','Advertisements') !!}">{!! __('index.advertisements') !!}</a>
@@ -124,7 +124,7 @@
                                     </ul>
                                 </li>
 
-                                <li class="dropdown {!! str_contains(url()->current(),'reports')  ? 'current': '' !!}">
+                                <li class="{!! str_contains(url()->current(),'reports')  ? 'current': '' !!}">
                                     <a href="{!! route('reports') !!}">{!! __('index.reports') !!}</a>
                                 </li>
 
@@ -163,27 +163,72 @@
                                 <a href="{{LaravelLocalization::getLocalizedURL('en')}}">EN</a>
                             </li>
                             <li>
-                                <a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}"
-                                   id="social-youtube-icon"><i class="fab fa-youtube"></i>
+                                <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
+                                   href="{!! setting()->site_youtube !!}"
+                                   target="_blank"
+                                   id="social-youtube-icon">
+                                    <i class="fab fa-youtube"></i>
                                 </a>
                             </li>
-                            <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}"
-                                   id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}"
-                                   id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}"
-                                   id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                            <li>
+                                <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
+                                   href="{!! setting()->site_instagram !!}"
+                                   target="_blank"
+                                   id="social-instagram-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
+                                   href="{!! setting()->site_twitter!!}"
+                                   target="_blank"
+                                   id="social-twitter-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
+                                   href="{!! setting()->site_facebook !!}"
+                                   target="_blank"
+                                   id="social-facebook-icon">
+                                    <i class="fab fa-facebook-f "></i>
+                                </a>
+                            </li>
                         </ul>
                     @else
                         <ul class="social-style-one clearfix social-facebook-icon">
-                            <li><a href="{{setting()->site_facebook ?setting()->site_facebook : 'javascript:void(0)'}}"
-                                   id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                            <li><a href="{{setting()->site_twitter?setting()->site_twitter: 'javascript:void(0)'}}"
-                                   id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="{{setting()->site_instagram?setting()->site_instagram: 'javascript:void(0)'}}"
-                                   id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="{{setting()->site_youtube?setting()->site_youtube: 'javascript:void(0)'}}"
-                                   id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
+                            <li>
+                                <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
+                                   href="{!! setting()->site_facebook !!}"
+                                   target="_blank"
+                                   id="social-facebook-icon">
+                                    <i class="fab fa-facebook-f "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
+                                   href="{!! setting()->site_twitter!!}"
+                                   target="_blank"
+                                   id="social-twitter-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
+                                   href="{!! setting()->site_instagram !!}"
+                                   target="_blank"
+                                   id="social-instagram-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
+                                   href="{!! setting()->site_youtube !!}"
+                                   target="_blank"
+                                   id="social-youtube-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
                             <li style="color: #0c0e1a ; font-weight: bolder"><a
                                     href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع</a></li>
                         </ul>
@@ -205,19 +250,78 @@
                 <div class="nav-right-content clearfix">
                     @if(Lang()=='ar')
                         <ul class="social-style-one clearfix social-facebook-icon">
-                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/en">EN</a></li>
-                            <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
+                            <li style="color: #0c0e1a ; font-weight: bolder">
+                                <a href="{{LaravelLocalization::getLocalizedURL('en')}}">EN</a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
+                                   href="{!! setting()->site_youtube !!}"
+                                   target="_blank"
+                                   id="social-youtube-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
+                                   href="{!! setting()->site_instagram !!}"
+                                   target="_blank"
+                                   id="social-instagram-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
+                                   href="{!! setting()->site_twitter!!}"
+                                   target="_blank"
+                                   id="social-twitter-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
+                                   href="{!! setting()->site_facebook !!}"
+                                   target="_blank"
+                                   id="social-facebook-icon">
+                                    <i class="fab fa-facebook-f "></i>
+                                </a>
+                            </li>
                         </ul>
                     @else
                         <ul class="social-style-one clearfix social-facebook-icon">
-                            <li><a href="#" id="social-facebook-icon"><i class="fab fa-facebook-f "></i></a></li>
-                            <li><a href="#" id="social-twitter-icon"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" id="social-instagram-icon"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#" id="social-youtube-icon"><i class="fab fa-youtube"></i></a></li>
-                            <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
+                            <li>
+                                <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
+                                   href="{!! setting()->site_facebook !!}"
+                                   target="_blank"
+                                   id="social-facebook-icon">
+                                    <i class="fab fa-facebook-f "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
+                                   href="{!! setting()->site_twitter!!}"
+                                   target="_blank"
+                                   id="social-twitter-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
+                                   href="{!! setting()->site_instagram !!}"
+                                   target="_blank"
+                                   id="social-instagram-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
+                                   href="{!! setting()->site_youtube !!}"
+                                   target="_blank"
+                                   id="social-youtube-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li style="color: #0c0e1a ; font-weight: bolder"><a
+                                    href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع</a></li>
                         </ul>
                     @endif
                 </div>
@@ -241,20 +345,79 @@
 
             <div class="social-links">
                 @if(Lang()=='ar')
-                    <ul class="clearfix">
-                        <li style="color: #0c0e1a ; font-weight: bolder"><a href="/en">EN</a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-f "></i></a></li>
+                    <ul class="clearfix font-size-14">
+                        <li style="color: #0c0e1a ; font-weight: bolder">
+                            <a href="{{LaravelLocalization::getLocalizedURL('en')}}">EN</a>
+                        </li>
+                        <li>
+                            <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
+                               href="{!! setting()->site_youtube !!}"
+                               target="_blank"
+                               id="social-youtube-icon font-size-14">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
+                               href="{!! setting()->site_instagram !!}"
+                               target="_blank"
+                               id="social-instagram-icon font-size-14">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
+                               href="{!! setting()->site_twitter!!}"
+                               target="_blank"
+                               id="social-twitter-icon font-size-14">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
+                               href="{!! setting()->site_facebook !!}"
+                               target="_blank"
+                               id="social-facebook-icon font-size-14">
+                                <i class="fab fa-facebook-f "></i>
+                            </a>
+                        </li>
                     </ul>
                 @else
-                    <ul class="clearfix">
-                        <li><a href="#"><i class="fab fa-facebook-f "></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        <li style="color: #0c0e1a ; font-weight: bolder"><a href="/ar"> ع</a></li>
+                    <ul class="clearfix font-size-14">
+                        <li>
+                            <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
+                               href="{!! setting()->site_facebook !!}"
+                               target="_blank"
+                               id="social-facebook-icon font-size-14">
+                                <i class="fab fa-facebook-f "></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="return {!! setting()->site_twitter ? 'true':'false' !!};"
+                               href="{!! setting()->site_twitter!!}"
+                               target="_blank"
+                               id="social-twitter-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="return {!! setting()->site_instagram ? 'true':'false' !!};"
+                               href="{!! setting()->site_instagram !!}"
+                               target="_blank"
+                               id="social-instagram-icon font-size-14">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="return {!! setting()->site_youtube ? 'true':'false' !!};"
+                               href="{!! setting()->site_youtube !!}"
+                               target="_blank"
+                               id="social-youtube-icon font-size-14">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li style="color: #0c0e1a ; font-weight: bolder"><a
+                                href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع</a></li>
                     </ul>
                 @endif
 

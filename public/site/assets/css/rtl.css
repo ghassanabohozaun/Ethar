@@ -543,7 +543,7 @@
     float: right;
     padding-left: 55px;
     min-height: 49px;
-    /*padding-right: 50px;*/
+    padding-right: 50px;
 }
 
 .case-block-four .inner-box .content-box .info-box li i {
@@ -599,7 +599,7 @@
     display: inline-block;
     font-size: 16px;
     line-height: 26px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
     color: #5f5e5e;
     font-weight: 500;
     padding-left: 40px;
@@ -657,7 +657,7 @@
     float: right;
     font-size: 25px;
     line-height: 26px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Caveat', "ArbFONTSBEINNormalAR",cursive;
     font-weight: 700;
     padding-left: 25px;
     margin-right: 30px;
@@ -692,7 +692,7 @@
     float: right;
     font-size: 18px;
     line-height: 28px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', "ArbFONTSBEINNormalAR",sans-serif;
     color: #232323;
     font-weight: 700;
     text-align: center;

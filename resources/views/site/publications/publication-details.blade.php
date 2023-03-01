@@ -30,25 +30,13 @@
                 <div class="content-box">
                     <div class="title">
                         @if (Lang() == 'ar')
-                        <h1>{{ __('site.details') .' ' . __('site.'.$publication->type)  }} </h1>
-                            
+                            <h1>{{ __('site.details') .' ' . __('site.'.$publication->type)  }} </h1>
                         @else
-                        <h1>{{ __('site.'.$publication->type) .' '. __('site.details')}} </h1>
-                            
+                            <h1>{{ __('site.'.$publication->type) .' '. __('site.details')}} </h1>
                         @endif
-                       
                     </div>
                     <ul class="bread-crumb clearfix">
-                        {{-- <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
-                        <li>
-                            @if (Lang() == 'ar')
-                           {{ __('site.details') .' ' . __('site.'.$publication->type)  }} 
-                                
-                            @else
-                            {{ __('site.'.$publication->type) .' '. __('site.details')}} 
-                                
-                            @endif
-                        </li> --}}
+                        &nbsp;
                     </ul>
                 </div>
             </div>
@@ -67,7 +55,7 @@
                                     <span># {{ __('site.'.$publication->type)}} #</span>
                                     <h2>{{$publication->{'title_'.Lang()} }}</h2>
                                     <ul class="post-info clearfix">
-                                        
+
                                         <li style="">
                                             <i class="far fa-eye"></i>
                                             {{$publication->views}}
@@ -75,37 +63,44 @@
                                     </ul>
                                 </div>
                                 <figure class="image-box">
-                                    <img src="{!! asset('adminBoard\\uploadedImages\\publications\\'. $publication->photo) !!}" alt="">
+                                    <img
+                                        src="{!! asset('adminBoard\\uploadedImages\\publications\\'. $publication->photo) !!}"
+                                        alt="">
                                     <span class="post-date">{{$publication->date}}</span>
                                 </figure>
                                 <div class="text">
                                     <p>{!! $publication->{'details_'.Lang()} !!}</p>
                                 </div>
 
-                                <br/>
-                                @if($publication->file != null)
-                                <div class="font-weight-bold mt-5"><h5> <a class="font-weight-bold"
-                                    href="{{asset('adminBoard\\uploadedFiles\\publications\\'. $publication->file)}}"
-                                    target="_blank">{!! __('general.download') !!} PDF</a></h5>
+
+                                <br/>   <br/>
+                                <div class="lower-box clearfix">
+
+                                    <div class="share-option pull-left">
+
+                                        @if($publication->file != null)
+                                            <a href="{!! asset('adminBoard/uploadedFiles/publications/'. $publication->file) !!}">
+                                                <h5 class="my-h1">
+                                                    <i class="fas fa-file-pdf"></i>
+                                                    {!! __('general.download') !!}
+                                                </h5>
+                                            </a>
+                                        @endif
+
+                                    </div>
                                 </div>
-                                @endif
                             </div>
                         </div>
                     </div>
                     <!-- left end -->
-
-
-
                 </div>
             </div>
         </section>
         <!-- sidebar-page-container end -->
 
-
         <!-- main-footer -->
         @include('site.includes.footer')
         <!-- main-footer end -->
-
 
     </div>
 

@@ -75,8 +75,7 @@ class CommentsController extends Controller
 
         ]);
 
-        return $this->returnSuccessMessage(__('general.add_success_comment'));
-
+        return $this->returnSuccessMessage(__('general.add_success_message'));
     }
 
 

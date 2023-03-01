@@ -21,29 +21,29 @@
         @include('site.includes.header')
         <!-- header end -->
 
-            <!-- Page Title -->
-            <section class="page-title"
-                     style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
+        <!-- Page Title -->
+        <section class="page-title"
+                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
 
-                <div class="auto-container">
-                    <div class="content-box">
-                        <div class="title">
-                            <h1>{{$about_type->{'name_'.Lang()} }}</h1>
-                        </div>
-                        <ul class="bread-crumb clearfix">
-                            &nbsp;
-                        </ul>
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="title">
+                        <h1>{{$about_type->{'name_'.Lang()} }}</h1>
                     </div>
+                    <ul class="bread-crumb clearfix">
+                        &nbsp;
+                    </ul>
                 </div>
-            </section>
-            <!-- End Page Title -->
+            </div>
+        </section>
+        <!-- End Page Title -->
 
-            @if( !isset($about))
+        @if( !isset($about))
             <!-- team-section -->
             <section class="team-section centred">
                 <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
             </section>
-            @else
+        @else
 
             <!-- about-style-three -->
             <section class="about-style-three">
@@ -61,24 +61,20 @@
                                     <div class="text">
                                         <p>{!!$about->{'details_'.Lang()} !!}</p>
                                         <br/>
-                                     
-                                        @if($about->file != null)
 
-                                            <ul class="info-box clearfix">
-                                                <li class="share">
-                                                    <i class="fas fa-file-pdf" style="color: rgba(217,70,70,0.9)">
-                                                    </i>
-                                                    <a class="font-weight-bold"
-                                                       href="{{asset('adminBoard\\uploadedFiles\\abouts\\'. $about->file)}}"
-                                                       target="_blank">{!! __('general.download') !!}</a>
-                                                </li>
-                                            </ul>
-
-                                        @endif
-
-
+                                        <div class="lower-box clearfix">
+                                            <div class="share-option pull-left">
+                                                @if($about->file != null)
+                                                    <a href="{{asset('adminBoard/uploadedFiles/abouts//'. $about->file)}}">
+                                                        <h5 class="my-h1">
+                                                            <i class="fas fa-file-pdf"></i>
+                                                            {!! __('general.download') !!}
+                                                        </h5>
+                                                    </a>
+                                                @endif
+                                            </div>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -88,14 +84,11 @@
             </section>
             <!-- about-style-three end -->
 
-
         @endif
-
 
         <!-- main-footer -->
         @include('site.includes.footer')
         <!-- main-footer end -->
-
 
     </div>
 

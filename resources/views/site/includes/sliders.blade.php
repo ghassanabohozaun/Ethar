@@ -42,8 +42,12 @@
             </div>
             <div class="swiper-nav-button">
                 <!-- Add Arrows -->
-                <div class="swiper-button-next"><i class="far fa-arrow-right"></i></div>
-                <div class="swiper-button-prev"><i class="far fa-arrow-left"></i></div>
+                <div class="swiper-button-next">
+                    <i class="far {!! Lang()=='ar'? 'fa-arrow-left' :'fa-arrow-right' !!}"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="far {!! Lang()=='ar'? 'fa-arrow-right' :'fa-arrow-left' !!} "></i>
+                </div>
             </div>
         </div>
     </div>
