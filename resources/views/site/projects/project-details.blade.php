@@ -45,7 +45,7 @@
         <section class="event-details centred">
             <div class="auto-container">
                 <div class="row clearfix">
-                    <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="col-lg-8 col-md-8 col-sm-8 content-side">
                         <div class="event-details-content">
                             <div class="upper-box">
                                 <h2> {!! $project->{'title_'.Lang()} !!}</h2>
