@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'permissions' => json_encode([
                 'dashboard', 'settings', 'admins', 'roles', 'users', 'support-center', 'reports', 'articles',
                 'landing-page', 'projects', 'testimonials', 'publications', 'videos', 'photos', 'yearly-reports',
-                'abouts', 'teams'
+                'abouts', 'teams','faq'
             ]),
         ]);
 
