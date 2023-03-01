@@ -201,7 +201,7 @@
                         <!--begin::Registration-->
                         <div class="col-lg-6">
                             <div class="col-12">
-                                <div style="height: 260px;width: 100% ; margin: auto">
+                                <div style="height: 300px;width: 100% ; margin: auto">
                                     <canvas id="barChart"></canvas>
                                 </div>
                             </div>
@@ -212,7 +212,7 @@
                         <!--begin::Registration-->
                         <div class="col-lg-6">
                             <div class="col-12">
-                                <div style="height: 260px;width: 100% ; margin: auto">
+                                <div style="height: 300px;width: 100% ; margin: auto">
                                     <canvas id="barChart2"></canvas>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
             <!--end::Body-->
         </div>
         <!--end::Last Courses-->
-        
+
             <div class="row ">
                 <!--begin::Last Articles-->
                 <div class="card card-custom gutter-b col-lg-6">
@@ -257,7 +257,7 @@
                                                                 <th scope="col">{!! __('articles.photo') !!}</th>
                                                                 <th scope="col">{!! __('articles.title') !!}</th>
                                                                 <th scope="col">{!! __('index.views_count') !!}</th>
-                                                                
+
 
                                                             </tr>
                                                             </thead>
@@ -278,12 +278,12 @@
                                                         </table>
                                                     </div>
 
-                                                
+
                                                 </div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
-                                    @endif 
+                                    @endif
 
                 </div>
                 <!--end::Last Articles-->
@@ -317,7 +317,7 @@
                                                                 <th scope="col">{!! __('articles.person_name') !!}</th>
                                                                 <th scope="col">{!! __('articles.commentary') !!}</th>
                                                                 <th scope="col">{!! __('articles.date') !!}</th>
-                                                                
+
 
                                                             </tr>
                                                             </thead>
@@ -335,12 +335,12 @@
                                                         </table>
                                                     </div>
 
-                                                
+
                                                 </div>
                                             </div>
                                         </div>
                                         <!--end::Body-->
-                                    @endif 
+                                    @endif
 
                 </div>
                 <!--end::Last Commint-->
