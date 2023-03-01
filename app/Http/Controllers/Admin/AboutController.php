@@ -85,7 +85,7 @@ class AboutController extends Controller
             $destinationPath = public_path('adminBoard/uploadedImages/abouts');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 300);
 
-            $image_path = public_path("\adminBoard\uploadedImages\abouts\\") . $about->photo;
+            $image_path = public_path("/adminBoard/uploadedImages\abouts\\") . $about->photo;
 
             if (File::exists($image_path))
             {

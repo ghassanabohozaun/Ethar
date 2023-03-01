@@ -97,18 +97,18 @@ class ArticlesController extends Controller
 
         if ($request->hasFile('photo')) {
 
-            $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
+            $image_path = public_path("/adminBoard/uploadedImages/articles//") . $article->photo;
             if (File::exists($image_path)) {
                 File::delete($image_path);
             }
 
             if (!empty($article->photo)) {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/articles//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 350);
             } else {
                 $image = $request->file('photo');
-                $destinationPath = public_path('\adminBoard\uploadedImages\articles\\');
+                $destinationPath = public_path('/adminBoard/uploadedImages/articles//');
                 $photo_path = $this->saveResizeImage($image, $destinationPath, 370, 350);
             }
         } else {
@@ -183,7 +183,7 @@ class ArticlesController extends Controller
                 }
 
                 if (!empty($article->photo)) {
-                    $image_path = public_path("\adminBoard\uploadedImages\articles\\") . $article->photo;
+                    $image_path = public_path("/adminBoard/uploadedImages/articles//") . $article->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }

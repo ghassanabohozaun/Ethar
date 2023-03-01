@@ -90,7 +90,7 @@ class PublicationsController extends Controller
             $destinationPath = public_path('adminBoard/uploadedImages/publications');
             $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 300);
 
-            $image_path = public_path("\adminBoard\uploadedImages\publications\\") . $publication->photo;
+            $image_path = public_path("/adminBoard/uploadedImages/publications//") . $publication->photo;
               if (File::exists($image_path))
               {
                 File::delete($image_path);
@@ -106,7 +106,7 @@ class PublicationsController extends Controller
 
             $file = $this->saveFile($request->file('file'), 'adminBoard/uploadedFiles/publications');
 
-            $file_path = public_path("\adminBoard\uploadedFiles\\publications\\") . $publication->file;
+            $file_path = public_path("/adminBoard/uploadedFiles/publications//") . $publication->file;
 
             if (File::exists($file_path))
             {
@@ -190,14 +190,14 @@ class PublicationsController extends Controller
                 }
 
                 if (!empty($publication->photo)) {
-                    $image_path = public_path("\adminBoard\uploadedImages\publications\\") . $publication->photo;
+                    $image_path = public_path("/adminBoard/uploadedImages/publications//") . $publication->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }
                 }
 
                 if (!empty($publication->file)) {
-                    $image_path = public_path("\adminBoard\uploadedImages\publications\\") . $publication->photo;
+                    $image_path = public_path("/adminBoard/uploadedImages/publications//") . $publication->photo;
                     if (File::exists($image_path)) {
                         File::delete($image_path);
                     }
