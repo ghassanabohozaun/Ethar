@@ -17,11 +17,9 @@
 
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
 
-
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
-
 
         <!-- Page Title -->
         <section class="page-title"
@@ -73,7 +71,7 @@
                                 </div>
 
 
-                                <br/>   <br/>
+                                <br/> <br/>
                                 <div class="lower-box clearfix">
 
                                     <div class="share-option pull-left">
