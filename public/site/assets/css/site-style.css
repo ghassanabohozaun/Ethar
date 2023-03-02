@@ -187,8 +187,22 @@
     line-height: 44px;
     background: transparent;
     font-size: 14px;
-    color: #232323;
-    text-align: center;
+    color: #f65024;
+    font-weight: bold;
     border-radius: 50%;
     z-index: 1;
+}
+
+.my-download-link li a:hover {
+    color: #f65024;
+}
+
+
+.case-block-four .inner-box .content-box .info-box li i {
+    color: #f65024;
+}
+
+
+.case-block-four .inner-box .content-box .info-box li a:hover {
+    color: #f65024;
 }

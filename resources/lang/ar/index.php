@@ -44,8 +44,8 @@ return array(
     'stars' => 'نجوم',
     'founder' => 'مؤسس',
     'articles' => 'المقالات',
-    'word' => 'ملف الورد',
-    'pdf' => 'ملف pdf',
+    'word' => 'تحميل ملف الورد',
+    'pdf' => 'تحميل ملف PDF',
     'visit_case_studies' => 'زيارة دراسات الحالة',
     'administrative' => 'التقرير الاداري',
     'financial' => 'التقرير المالي',
@@ -70,24 +70,23 @@ return array(
     'comments_count' => 'تعليق',
 
 
-
-    'leave_Reply'=>'اترك لنا ردك',
-    'required_fields_are_marked'=>'لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة محددة',
+    'leave_Reply' => 'اترك لنا ردك',
+    'required_fields_are_marked' => 'لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة محددة',
     'you_comment' => 'تعليقك',
     'you_name' => 'اسمك',
     'your_email' => 'ايميلك',
     'submit' => 'أرسل',
 
-    'my_comments'=>'التعليقات',
+    'my_comments' => 'التعليقات',
     'you_comment_required' => 'تعليقك مطلوب',
     'you_name_required' => 'اسمك مطلوب',
     'your_email_required' => 'ايميلك مطلوب',
     'email_email' => 'الايميل يجب ان يكون : someone@someone.com',
 
 
-    'play_video'=>'تشغيل الفيديو',
+    'play_video' => 'تشغيل الفيديو',
 
-    'view_all'=>'عرض الكل',
+    'view_all' => 'عرض الكل',
 
     'no_data_found' => 'عذراً, لا يوجد بيانات حالياً',
 

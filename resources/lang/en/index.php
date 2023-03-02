@@ -44,8 +44,8 @@ return [
     'beneficiaries' => 'Beneficiaries',
     'founder' => 'Founder',
     'articles' => 'Articles',
-    'word' => 'Words',
-    'pdf' => 'PDF',
+    'word' => 'Download Word',
+    'pdf' => 'Download PDF',
     'visit_case_studies' => 'Visit Case Studies',
     'administrative' => 'Administrative Report',
     'financial' => 'Financial Report',
@@ -84,7 +84,7 @@ return [
     'email_email' => 'Your email must be in : someone@someone.com',
 
     'play_video' => 'Play Video',
-    'view_all'=>'View All',
+    'view_all' => 'View All',
 
     'no_data_found' => 'Sorry, There are no data currently',
     'send_success_message' => 'Message Sent Successfully',

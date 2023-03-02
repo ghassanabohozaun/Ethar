@@ -69,28 +69,25 @@
                                             </div>
 
 
-                                            <div class="single-item my-social-style">
-                                                <ul class="my-download-link  clearfix  my-2">
-                                                    <li>
-                                                        <a href="" style="font-size: 20px">
-                                                            <i class="fas fa-file-pdf"></i>
-                                                            {!! __('index.pdf') !!}
-                                                        </a>
-
-                                                    </li>
-                                                    <li>
-                                                        <a href="" style="font-size: 20px">
-                                                            <i class="fas fa-file-word"></i>
-                                                            {!! __('index.word') !!}
-                                                        </a>
-
-                                                    </li>
 
 
-                                                </ul>
-                                            </div>
+                                                <div class="single-item my-social-style  text-left"">
+                                                    <ul class="my-download-link  clearfix  my-2">
+                                                        <li>
+                                                            <a href="" style="font-size: 20px">
+                                                                <i class="fas fa-file-pdf"></i>
+                                                                {!! __('index.pdf') !!}
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" style="font-size: 20px">
+                                                                <i class="fas fa-file-word"></i>
+                                                                {!! __('index.word') !!}
+                                                            </a>
+                                                        </li>
 
-{{--                                            <div class="lower-box clearfix">--}}
+                                                    </ul>
+                                                </div>
 
 {{--                                                <div class="share-option pull-left">--}}
 
