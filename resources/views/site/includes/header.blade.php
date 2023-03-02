@@ -3,7 +3,7 @@
     <!-- logo-box -->
     <div class="logo-box">
         <figure class="logo"><a href="{!! route('index') !!}"><img
-                    src="{!! asset('site/assets/images/333.jpg') !!}" alt=""></a></figure>
+                    src="{!! asset('site/assets/images/etharLogo2.jpg') !!}" alt=""></a></figure>
     </div>
     <!-- header-top -->
     <div class="header-top">
