@@ -119,7 +119,7 @@ body {
 
 .auto-container {
     position: static;
-    max-width: 1600px;
+    max-width: 1550px;
     padding: 0px 15px;
     margin: 0 auto;
 }
