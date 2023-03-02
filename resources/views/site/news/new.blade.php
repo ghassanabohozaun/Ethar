@@ -15,7 +15,8 @@
 @endpush
 @section('content')
 
-    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}">
+    <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
+         style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
 
         <!-- header -->
@@ -32,7 +33,7 @@
                         <h1>{{__('index.news')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-
+                     &nbsp;
                     </ul>
                 </div>
             </div>
@@ -71,7 +72,7 @@
                                         <div class="link-box pull-left"><a href="{!! route('new-details',slug($new->{'title_'.Lang()}) ) !!}">More Details</a>
                                         </div>
                                         <div class="comment-box pull-right">
-                                            <a href="#l"><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</a>
+                                            <a href="#"><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</a>
                                         </div>
                                     </div>
                                 </div>
