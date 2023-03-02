@@ -20,12 +20,26 @@
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
+                                @foreach (abouts_type() as $type )
+                                    <li>
+                                        <a href="{!! route('about',slug($type->{'name_'.Lang()})) !!}">
+                                            {{ $type->{'name_'.Lang()} }}
+                                        </a>
+                                    </li>
+
+                                @endforeach
+
+                                <li>
+                                    <a href="{!! route('projects','previous') !!}">
+                                        {!! __('index.previous_projects') !!}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{!! route('projects','current') !!}">
+                                        {!! __('index.current_projects') !!}
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -37,12 +51,30 @@
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
-                                <li><a href="#">Related Page Link</a></li>
+                                <li>
+                                    <a href="{!! route('advertisements','Advertisements') !!}">{!! __('index.advertisements') !!}</a>
+                                </li>
+                                <li>
+                                    <a href="{!! route('advertisements','Brochures') !!}">{!! __('index.brochures') !!}</a>
+                                </li>
+                                <li>
+                                    <a href="{!! route('advertisements','CaseStudy') !!}">{!! __('index.case_study') !!}</a>
+                                </li>
+                                <li>
+                                    <a href="{!! route('advertisements','ScientificArticles') !!}">{!! __('index.scientific_articles') !!}</a>
+
+                                </li>
+
+                                <li>
+                                    <a href="{!! route('reports') !!}">{!! __('index.reports') !!}</a>
+                                </li>
+
+                                <li>
+                                    <a href="{!! route('contact') !!}">
+                                        {!! __('index.contact') !!}
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>

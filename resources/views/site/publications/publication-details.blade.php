@@ -44,7 +44,7 @@
         <!-- sidebar-page-container -->
         <section class="sidebar-page-container">
             <div class="auto-container">
-                <div class="row clearfix">
+                <div class="row clearfix justify-content-md-center">
                     <!-- left  -->
                     <div class="col-lg-8 col-md-12 col-sm-12 content-side">
                         <div class="blog-details-content">

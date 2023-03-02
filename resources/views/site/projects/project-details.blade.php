@@ -65,51 +65,27 @@
                                     <div class="tab active-tab" id="tab-1">
                                         <div class="overview-inner">
                                             <div class="content-one my-content-one">
-                                                <p > {!! $project->{'details_'.Lang()} !!}</p>
+                                                <p> {!! $project->{'details_'.Lang()} !!}</p>
                                             </div>
 
+                                            <div class="single-item my-social-style  text-left">
+                                                <ul class="my-download-link  clearfix  my-2">
+                                                    <li>
+                                                        <a href="" style="font-size: 20px">
+                                                            <i class="fas fa-file-pdf"></i>
+                                                            {!! __('index.pdf') !!}
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" style="font-size: 20px">
+                                                            <i class="fas fa-file-word"></i>
+                                                            {!! __('index.word') !!}
+                                                        </a>
+                                                    </li>
 
+                                                </ul>
+                                            </div>
 
-
-                                                <div class="single-item my-social-style  text-left"">
-                                                    <ul class="my-download-link  clearfix  my-2">
-                                                        <li>
-                                                            <a href="" style="font-size: 20px">
-                                                                <i class="fas fa-file-pdf"></i>
-                                                                {!! __('index.pdf') !!}
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="" style="font-size: 20px">
-                                                                <i class="fas fa-file-word"></i>
-                                                                {!! __('index.word') !!}
-                                                            </a>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-
-{{--                                                <div class="share-option pull-left">--}}
-
-{{--                                                    @if($project->file != null)--}}
-{{--                                                        <a href="{!! asset('adminBoard/uploadedFiles/project/'. $project->file) !!}">--}}
-{{--                                                            <h5 class="my-h1">--}}
-{{--                                                                <i class="fas fa-file-pdf"></i>--}}
-{{--                                                                {!! __('index.pdf') !!}--}}
-{{--                                                            </h5>--}}
-{{--                                                        </a>--}}
-{{--                                                    @endif--}}
-
-{{--                                                    @if($project->word != null)--}}
-{{--                                                        <a href="{!! asset('adminBoard/uploadedFiles/project/'. $project->word) !!}">--}}
-{{--                                                            <h5 class="my-h1">--}}
-{{--                                                                <i class="fas fa-file-word"></i>--}}
-{{--                                                                {!! __('index.word') !!}--}}
-{{--                                                            </h5>--}}
-{{--                                                        </a>--}}
-{{--                                                    @endif--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
                                         </div>
                                     </div>
 
