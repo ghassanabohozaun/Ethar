@@ -70,7 +70,7 @@
 
 
                                             <div class="single-item my-social-style">
-                                                <ul class="my-social-style-one clearfix  my-2">
+                                                <ul class="my-download-link  clearfix  my-2">
                                                     <li>
                                                         <a href="" style="font-size: 20px">
                                                             <i class="fas fa-file-pdf"></i>
