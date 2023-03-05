@@ -257,7 +257,7 @@
                                     </div>
                                     <!--end::Header-->
                                     @if($articles->isEmpty())
-                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
+                                    <img src="{!! asset('site/images/assets/noRecordFound.svg') !!}"
                                             class="img-fluid" id="no_data_img"
                                             title="{!! __('site.no_date') !!}">
                                     @else
@@ -303,7 +303,7 @@
                                     <!--end::Header-->
 
                                     @if($comments->isEmpty())
-                                    <img src="{!! asset('site/images/noRecordFound.svg') !!}"
+                                    <img src="{!! asset('site/images/assets/noRecordFound.svg') !!}"
                                             class="img-fluid" id="no_data_img"
                                             title="{!! __('site.no_date') !!}">
                                     @else
