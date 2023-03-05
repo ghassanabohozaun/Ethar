@@ -9,10 +9,10 @@
                         </div>
                         <div class="auto-container">
                             <div class="content-box">
-                                <figure class="icon-layer">
-                                    <img src="{!! asset('site/assets/images/icons/heart-5.png') !!}"
-                                         alt="{!!  $slider->{'title_'.Lang()} !!}">
-                                </figure>
+{{--                                <figure class="icon-layer">--}}
+{{--                                    <img src="{!! asset('site/assets/images/icons/heart-5.png') !!}"--}}
+{{--                                         alt="{!!  $slider->{'title_'.Lang()} !!}">--}}
+{{--                                </figure>--}}
                                 <div class="shape"
                                      style="background-image: url({{asset('site/assets/images/shape/shape-31.png')}});">
                                 </div>
