@@ -2,8 +2,11 @@
 <header class="main-header header-style-one">
     <!-- logo-box -->
     <div class="logo-box">
-        <figure class="logo"><a href="{!! route('index') !!}"><img
-                    src="{!! asset('site/assets/images/etharLogo2.jpg') !!}" alt=""></a></figure>
+        <figure class="logo">
+            <a href="{!! route('index') !!}">
+                <img src="{!! asset('site/assets/images/etharLogo2.jpg') !!}" alt="">
+            </a>
+        </figure>
     </div>
     <!-- header-top -->
     <div class="header-top">
