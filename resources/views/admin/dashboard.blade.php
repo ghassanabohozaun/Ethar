@@ -88,8 +88,8 @@
                         <!--begin::Body-->
                         <div class="card-body">
 
-                                <!--begin::Svg Icon-->
-                                <span>
+                            <!--begin::Svg Icon-->
+                            <span>
                                     <span class="svg-icon svg-icon-primary svg-icon-3x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Shopping\Wallet.svg--><svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -106,7 +106,7 @@
                                     </g>
                                     </svg><!--end::Svg Icon--></span>
                             </span>
-                                <!--end::Svg Icon-->
+                            <!--end::Svg Icon-->
 
                             <span
                                 class="card-title font-weight-bolder font-size-h2 mb-0 mt-6 text-hover-primary d-block">
@@ -203,64 +203,64 @@
             <!--end::Counters-->
 
 
-           <!--begin::Flow Charts-->
-           <div class="card card-custom gutter-b">
+            <!--begin::Flow Charts-->
+            <div class="card card-custom gutter-b">
 
-            <div class="card-body py-2" style="">
-                <div class="container-fluid">
-                    <div class="row">
+                <div class="card-body py-2" style="">
+                    <div class="container-fluid">
+                        <div class="row">
 
-                        <!--begin::Registration-->
-                        <div class="col-lg-6">
-                            <div class="col-12">
-                                <div style="width: 100% ; margin: auto">
-                                    <canvas id="barChart" width="1100" height="600"></canvas>
+                            <!--begin::Registration-->
+                            <div class="col-lg-6">
+                                <div class="col-12">
+                                    <div style="width: 100% ; margin: auto">
+                                        <canvas id="barChart" width="1100" height="600"></canvas>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--end::Registration-->
+                            <!--end::Registration-->
 
 
-                        <!--begin::Registration-->
-                        <div class="col-lg-6">
-                            <div class="col-12">
-                                <div style="width: 100% ; margin: auto">
-                                    <canvas id="barChart2"  width="1100" height="600"></canvas>
+                            <!--begin::Registration-->
+                            <div class="col-lg-6">
+                                <div class="col-12">
+                                    <div style="width: 100% ; margin: auto">
+                                        <canvas id="barChart2" width="1100" height="600"></canvas>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--end::Registration-->
+                            <!--end::Registration-->
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!--end::Body-->
-        </div>
-        <!--end::Last Courses-->
+                <!--end::Body-->
+            </div>
+            <!--end::Last Courses-->
 
             <!--begin::Last Articles-->
             <div class="card card-custom gutter-b ">
 
                 <!--begin::Body-->
-                    <div class="card-body py-2" style="">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-6">
-                                    <!--begin::Header-->
-                                    <div class="card-header border-0 pt-5">
-                                        <h3 class="card-title align-items-start flex-column">
+                <div class="card-body py-2" style="">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-6">
+                                <!--begin::Header-->
+                                <div class="card-header border-0 pt-5">
+                                    <h3 class="card-title align-items-start flex-column">
                                             <span class="card-label font-weight-bolder text-dark">
                                                 {{__('site.Latest_Article')}}
                                             </span>
-                                        </h3>
-                                    </div>
-                                    <!--end::Header-->
-                                    @if($articles->isEmpty())
-                                    <img src="{!! asset('site/images/assets/noRecordFound.svg') !!}"
-                                            class="img-fluid" id="no_data_img"
-                                            title="{!! __('site.no_date') !!}">
-                                    @else
+                                    </h3>
+                                </div>
+                                <!--end::Header-->
+                                @if($articles->isEmpty())
+                                    <img src="{!! asset('adminBoard/images/noRecordFound.svg') !!}"
+                                         class="img-fluid" id="no_data_img"
+                                         title="{!! __('site.no_date') !!}">
+                                @else
                                     <div class="table-responsive ">
                                         <table class="table" style="text-align: center;vertical-align: middle;">
                                             <thead>
@@ -288,25 +288,25 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    @endif
-                                </div>
+                                @endif
+                            </div>
 
-                                <div class="col-6">
-                                    <!--begin::Header-->
-                                    <div class="card-header border-0 pt-5">
-                                        <h3 class="card-title align-items-start flex-column">
+                            <div class="col-6">
+                                <!--begin::Header-->
+                                <div class="card-header border-0 pt-5">
+                                    <h3 class="card-title align-items-start flex-column">
                                             <span class="card-label font-weight-bolder text-dark">
                                             {{__('site.Latest_comments')}}
                                             </span>
-                                        </h3>
-                                    </div>
-                                    <!--end::Header-->
+                                    </h3>
+                                </div>
+                                <!--end::Header-->
 
-                                    @if($comments->isEmpty())
-                                    <img src="{!! asset('site/images/assets/noRecordFound.svg') !!}"
-                                            class="img-fluid" id="no_data_img"
-                                            title="{!! __('site.no_date') !!}">
-                                    @else
+                                @if($comments->isEmpty())
+                                    <img src="{!! asset('adminBoard/images/noRecordFound.svg') !!}"
+                                         class="img-fluid" id="no_data_img"
+                                         title="{!! __('site.no_date') !!}">
+                                @else
                                     <!--begin::Body-->
 
                                     <div class="table-responsive ">
@@ -324,7 +324,7 @@
                                             @foreach($comments as $key=>$comment)
                                                 <tr>
                                                     <td>{!! $key+1 !!}</td>
-                                                    <td>{!!  $comment->person_name!!}	</td>
+                                                    <td>{!!  $comment->person_name!!}    </td>
                                                     <td>{!!  $comment->commentary!!}</td>
                                                     <td>{!!  $comment->created_at->format('Y-m-d')!!}</td>
 
@@ -333,25 +333,22 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    @endif
+                                @endif
 
 
 
                                 <!--end::Body-->
 
-                                </div>
-
-
                             </div>
+
+
                         </div>
                     </div>
-                    <!--end::Body-->
+                </div>
+                <!--end::Body-->
 
             </div>
             <!--end::Last Articles-->
-
-
-
 
 
         </div>
