@@ -4,7 +4,7 @@
     <div class="logo-box">
         <figure class="logo">
             <a href="{!! route('index') !!}">
-                <img src="{!! asset('site/assets/images/etharLogo2.jpg') !!}" alt="">
+                <img src="{!! asset('site/assets/images/etharLogo2.jpg') !!}" alt="" width="180">
             </a>
         </figure>
     </div>
