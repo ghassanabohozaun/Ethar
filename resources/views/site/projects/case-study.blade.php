@@ -33,7 +33,7 @@
                     </div>
                     <ul class="bread-crumb clearfix">
                         {{-- <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
-                       
+
                         <li>{{ __('site.'.$type)}}</li> --}}
                         &nbsp;‏
 
@@ -55,7 +55,7 @@
                         <div class="news-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms"
                              data-wow-duration="1500ms"
                              style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
-                                
+
                              <div class="inner-box">
                                 <figure class="image-box">
                                     <a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">
@@ -65,7 +65,7 @@
                                 <div class="content-box">
                                     <div class="text  my-word-break">
                                         <span class="post-date">{{$publication->date}}</span>
-                                        
+
                                         <h3><a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">{{$publication->{'title_'.Lang()} }}</a>
                                         </h3>
                                         <p>
@@ -73,9 +73,9 @@
                                         </p>
                                     </div>
                                     <div class="info clearfix">
-                                        <div class="link-box pull-left"><a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">More Details</a>
+                                        <div class="link-box pull-left"><a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">{!! __('index.more_details') !!}</a>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                     </div>
                     @endforeach
 
-              
+
 
                 </div>
                 <div class="more-btn centred"><a href="#" class="theme-btn btn-one">Load More</a></div>

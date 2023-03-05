@@ -45,70 +45,78 @@
         <!-- End Page Title -->
 
 
-            @if($publications->isEmpty())
+        @if($publications->isEmpty())
             <!-- team-section -->
             <section class="team-section centred">
                 <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
             </section>
-             @else
-            
-        <section class="blog-grid">
-          
-            <div class="auto-container">
-        
-               
-                <div class="row clearfix">
-                   
-                   
-                    @foreach ($publications as $publication)
+        @else
 
-                    <div class="col-lg-4 col-md-6 col-sm-12 news-block">
-                        <div class="news-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms"
-                             data-wow-duration="1500ms"
-                             style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+            <section class="blog-grid">
 
-                             <div class="inner-box">
-                                <figure class="image-box">
-                                    <a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">
-                                        <img src="{!! asset('adminBoard\\uploadedImages\\publications\\'. $publication->photo) !!}" alt="">
-                                    </a>
-                                </figure>
-                                <div class="content-box">
-                                    <div class="text my-word-break">
-                                        <span class="post-date">{{$publication->date}}</span>
+                <div class="auto-container">
 
-                                        <h3><a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">{{$publication->{'title_'.Lang()} }}</a>
-                                        </h3>
-                                        <p>{!! \Illuminate\Support\Str::limit(strip_tags($publication->{'details_'.Lang()}),$limit = 50, $end = ' ...')!!}</p>
 
-                                    </div>
-                                    <div class="info clearfix">
-                                        <div class="link-box pull-left"><a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">More Details</a>
+                    <div class="row clearfix">
+
+
+                        @foreach ($publications as $publication)
+
+                            <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+                                <div class="news-block-one wow fadeInUp animated animated animated"
+                                     data-wow-delay="00ms"
+                                     data-wow-duration="1500ms"
+                                     style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+
+                                    <div class="inner-box">
+                                        <figure class="image-box">
+                                            <a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">
+                                                <img
+                                                    src="{!! asset('adminBoard\\uploadedImages\\publications\\'. $publication->photo) !!}"
+                                                    alt="">
+                                            </a>
+                                        </figure>
+                                        <div class="content-box">
+                                            <div class="text my-word-break">
+                                                <span class="post-date">{{$publication->date}}</span>
+
+                                                <h3>
+                                                    <a href="{{route('advertisement-details',slug($publication->{'title_'.Lang()}) )}}">{{$publication->{'title_'.Lang()} }}</a>
+                                                </h3>
+                                                <p>{!! \Illuminate\Support\Str::limit(strip_tags($publication->{'details_'.Lang()}),$limit = 50, $end = ' ...')!!}</p>
+
+                                            </div>
+                                            <div class="info clearfix">
+                                                <div class="link-box {{Lang()=='ar'? 'pull-right': 'pull-left'}}">
+                                                    <a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">
+                                                        {!! __('index.more_details') !!}
+                                                    </a>
+                                                </div>
+                                                <div class="comment-box {{Lang()=='ar'? 'pull-left': 'pull-right'}}">
+                                                    <a href="#"><i class="far fa-eye"></i>{{$publication->views}}</a>
+                                                </div>
+                                            </div>
                                         </div>
-
                                     </div>
+
                                 </div>
                             </div>
+                        @endforeach
 
-                        </div>
+
                     </div>
-                    @endforeach
-
+                    {{ $publications->links('vendor.pagination.my-bootstrap') }}
 
 
                 </div>
-                {{ $publications->links('vendor.pagination.my-bootstrap') }}
 
-           
-            </div>
-
-        </section>
+            </section>
         @endif
-            
-       
-   
 
-  
+
+
+
+
 
 
 

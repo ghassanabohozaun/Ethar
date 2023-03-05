@@ -69,9 +69,9 @@
                                         <p > {!! \Illuminate\Support\Str::limit(strip_tags($new->{'abstract_'.Lang()}),$limit = 50, $end = ' ...')!!} </p>
                                     </div>
                                     <div class="info clearfix">
-                                        <div class="link-box pull-left"><a href="{!! route('new-details',slug($new->{'title_'.Lang()}) ) !!}">More Details</a>
+                                        <div class="link-box {{Lang()=='ar'? 'pull-right': 'pull-left'}}"><a href="{!! route('new-details',slug($new->{'title_'.Lang()}) ) !!}">{!! __('index.more_details') !!}</a>
                                         </div>
-                                        <div class="comment-box pull-right">
+                                        <div class="comment-box {{Lang()=='ar'? 'pull-left': 'pull-right'}}">
                                             <a href="#"><i class="far fa-comment"></i>{{$new->comments()->count()}} Cmts</a>
                                         </div>
                                     </div>
