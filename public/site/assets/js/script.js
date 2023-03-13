@@ -375,7 +375,7 @@
     if ($('.five-item-carousel').length) {
         $('.five-item-carousel').owlCarousel({
             // rtl: true,
-            // loop: true,
+             loop: false,
             margin: 30,
             nav: true,
             smartSpeed: 500,
