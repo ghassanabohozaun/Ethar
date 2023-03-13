@@ -56,7 +56,7 @@
                                     <h4>{!! __('index.contact') !!}</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
-                                        <p>{!! __('index.phone') !!}<br/><a href="tel:00972592404940">0597500614</a>
+                                        <p>{!! __('index.phone') !!}<br/><a href="tel:0597500614">0597500614</a>
                                         </p>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@
                                     <h4>{!! __('index.emergency_contact') !!}</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-phone-call"></i></div>
-                                        <p>{!! __('index.phone') !!}<br/><a href="tel:00972592404940">0597500614</a>
+                                        <p>{!! __('index.phone') !!}<br/><a href="tel:0597500614">0597500614</a>
                                         </p>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                     <h4>{!! __('index.email_address') !!}</h4>
                                     <div class="text">
                                         <div class="icon-box"><i class="icon-letter"></i></div>
-                                        <p>{!! __('index.mail_to') !!}<br/><a href="mailto:info@example.com">etharps1@gmail.com</a>
+                                        <p>{!! __('index.mail_to') !!}<br/><a href="mailto:etharps1@gmail.com">etharps1@gmail.com</a>
                                         </p>
                                     </div>
                                 </div>
