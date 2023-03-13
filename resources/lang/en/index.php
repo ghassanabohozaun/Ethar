@@ -61,7 +61,7 @@ return [
     'mail_to' => 'Mail to',
     'address' => 'Address',
     'palestine' => 'palestine , Gaza strip',
-    'khan_younes' => 'Khan Younes',
+    'khan_younes' => 'Khan Younes - Al-Katiba',
     'your_name' => 'Your Name',
     'title' => 'Title',
     'message' => 'Message',

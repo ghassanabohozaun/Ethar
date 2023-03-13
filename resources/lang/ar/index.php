@@ -60,7 +60,7 @@ return array(
     'mail_to' => 'بريد الي',
     'address' => 'العنوان',
     'palestine' => 'فلسطين ,  قطاع غزة',
-    'khan_younes' => 'خانيونس',
+    'khan_younes' => 'خانيونس - الكتيبة - ',
     'your_name' => 'اسمك',
     'email_address' => 'البريد الكتروني',
     'title' => 'عنوان الرسالة',
