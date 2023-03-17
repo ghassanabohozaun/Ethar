@@ -27,6 +27,8 @@ class MediaController extends Controller
     function photosAlbumsDetails($title)
     {
         $title = returnSpaceBetweenString($title);
+        return $title;
+
         $photoAlbum = PhotoAlbum::orderByDesc('id')->where('title_' . Lang(), $title)->where('status', 'on')->first();
         $photoAlbumID = $photoAlbum->id;
         $photos = Upload_Files::where('relation_id', $photoAlbumID)->orderByDesc('created_at')->get();
