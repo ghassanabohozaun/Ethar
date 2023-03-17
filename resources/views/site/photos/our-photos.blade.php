@@ -41,7 +41,7 @@
         <!-- End Page Title -->
 
         <!-- portfolio-section -->
-        <section class="portfolio-section centred">
+        <section class="portfolio-section centred justify-content-center">
 
             @if($photosAlbums->isEmpty())
                 <h1 class="my-h1 text-center">{!! __('index.no_data_found') !!}</h1>
@@ -59,7 +59,7 @@
                             </ul>
                         </div>
 
-                        <div class="items-container row clearfix justify-content-center">
+                        <div class="items-container row clearfix ">
 
                             @foreach($photosAlbums as $photosAlbum)
 
