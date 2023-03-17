@@ -64,7 +64,7 @@
                             @foreach($photosAlbums as $photosAlbum)
 
                                 <div
-                                    class="col-lg-3 col-md-6 col-sm-12 masonry-item small-column all {!! $photosAlbum->year !!}">
+                                    class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column all {!! $photosAlbum->year !!}">
                                     <div class="portfolio-block-one">
                                         <div class="inner-box">
                                             <figure class="image">
