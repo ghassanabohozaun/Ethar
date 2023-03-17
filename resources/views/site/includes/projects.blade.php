@@ -10,7 +10,7 @@
                 </p>
             </div>
 
-            <div class="row clearfix">
+            <div class="row clearfix justify-content-center">
 
                 @foreach($lastProjects as $project)
                     <div class="col-lg-3 col-md-6 col-sm-12 case-block">
