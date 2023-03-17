@@ -59,7 +59,7 @@
                             </ul>
                         </div>
 
-                        <div class="items-container row clearfix">
+                        <div class="items-container row clearfix justify-content-center">
 
                             @foreach($photosAlbums as $photosAlbum)
 
