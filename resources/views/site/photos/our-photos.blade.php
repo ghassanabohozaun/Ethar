@@ -18,11 +18,9 @@
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
          style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
-
         <!-- header -->
         @include('site.includes.header')
         <!-- header end -->
-
 
         <!-- Page Title -->
         <section class="page-title"
@@ -41,7 +39,7 @@
         <!-- End Page Title -->
 
         <!-- portfolio-section -->
-        <section class="portfolio-section centred justify-content-center">
+        <section class="portfolio-section centred">
 
             @if($photosAlbums->isEmpty())
                 <h1 class="my-h1 text-center">{!! __('index.no_data_found') !!}</h1>
@@ -88,10 +86,7 @@
                                         </div>
                                     </div>
                                 </div>
-
                             @endforeach
-
-
                         </div>
                     </div>
 
@@ -100,12 +95,9 @@
         </section>
         <!-- portfolio-section end -->
 
-
         <!-- main-footer -->
         @include('site.includes.footer')
         <!-- main-footer end -->
 
-
     </div>
-
 @endsection

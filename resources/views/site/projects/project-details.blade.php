@@ -70,18 +70,22 @@
 
                                             <div class="single-item my-social-style  text-left">
                                                 <ul class="my-download-link  clearfix  my-2">
+                                                    @if($project->file != null)
                                                     <li>
                                                         <a href="" style="font-size: 20px">
                                                             <i class="fas fa-file-pdf"></i>
                                                             {!! __('index.pdf') !!}
                                                         </a>
                                                     </li>
-                                                    <li>
-                                                        <a href="" style="font-size: 20px">
-                                                            <i class="fas fa-file-word"></i>
-                                                            {!! __('index.word') !!}
-                                                        </a>
-                                                    </li>
+                                                    @endif
+                                                    @if($project->word != null)
+                                                        <li>
+                                                            <a href="" style="font-size: 20px">
+                                                                <i class="fas fa-file-word"></i>
+                                                                {!! __('index.word') !!}
+                                                            </a>
+                                                        </li>
+                                                    @endif
 
                                                 </ul>
                                             </div>
