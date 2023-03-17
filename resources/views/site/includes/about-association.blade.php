@@ -35,9 +35,9 @@
                             <div class="text">
                                 <p>{!! fixedTexts()->{'about_association_details_'.Lang()} !!}</p>
                             </div>
-                            <div class="btn-box">
-                                <a href="#" class="theme-btn btn-one">{!! __('index.read_more') !!}</a>
-                            </div>
+{{--                            <div class="btn-box">--}}
+{{--                                <a href="#" class="theme-btn btn-one">{!! __('index.read_more') !!}</a>--}}
+{{--                            </div>--}}
                         </div>
                         <div class="funfact-inner">
                             <div class="counter-block-one wow fadeInRight animated animated animated"
