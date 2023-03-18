@@ -5,8 +5,7 @@
         <div class="shape"></div>
         <figure class="logo">
             <a href="{!! route('index') !!}">
-                <img src="{!! asset('site/assets/images/logo111.png') !!}" alt=""
-                     style=" {!! Lang()=='ar'? 'padding-right: 50px'  : 'padding-left: 50px' !!};">
+                <img src="{!! asset('site/assets/images/logo111.png') !!}" alt="">
             </a>
         </figure>
     </div>
@@ -24,7 +23,7 @@
         <div class="outer-container">
             <div class="outer-box">
                 @if(Lang()=='ar')
-                    <div class="text text-center ">
+                    <div class="text text-center font-weight-bold">
                         <span style="color: darkred"> جمعية ايثار فلسطين</span>
                         <br/>
                         <span style="color: green"> للتنمية والتطوير المجتمعي</span>
@@ -36,8 +35,6 @@
                         <span style="color: green"> for Community Development</span>
                     </div>
                 @endif
-
-
                 <div class="menu-area clearfix">
                     <!--Mobile Navigation Toggler-->
                     <div class="mobile-nav-toggler">
