@@ -2,16 +2,12 @@
 <header class="main-header header-style-one">
     <!-- logo-box -->
     <div class="logo-box">
+        <div class="shape"></div>
         <figure class="logo">
-            @if(Lang()=='ar')
-                <a href="{!! route('index') !!}">
-                    <img src="{!! asset('site/assets/images/logoAr.png') !!}" alt="">
-                </a>
-            @else
-                <a href="{!! route('index') !!}">
-                    <img src="{!! asset('site/assets/images/logoEn.png') !!}" alt="">
-                </a>
-            @endif
+            <a href="{!! route('index') !!}">
+                <img src="{!! asset('site/assets/images/logo111.png') !!}" alt=""
+                     style=" {!! Lang()=='ar'? 'padding-right: 50px'  : 'padding-left: 50px' !!};">
+            </a>
         </figure>
     </div>
     <!-- header-top -->
@@ -27,8 +23,21 @@
     <div class="header-lower">
         <div class="outer-container">
             <div class="outer-box">
-                <div class="text">
-                </div>
+                @if(Lang()=='ar')
+                    <div class="text text-center ">
+                        <span style="color: darkred"> جمعية ايثار فلسطين</span>
+                        <br/>
+                        <span style="color: green"> للتنمية والتطوير المجتمعي</span>
+                    </div>
+                @else
+                    <div class="text text-center ">
+                        <span style="color: darkred"> Palestine Ethar Society</span>
+                        <br/>
+                        <span style="color: green"> for Community Development</span>
+                    </div>
+                @endif
+
+
                 <div class="menu-area clearfix">
                     <!--Mobile Navigation Toggler-->
                     <div class="mobile-nav-toggler">
