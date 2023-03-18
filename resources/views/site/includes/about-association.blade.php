@@ -7,10 +7,10 @@
                 <div class="image_block_1">
                     <div class="image-box">
                         <figure class="image image-1">
-                            <img src="{!! asset('/site/assets/images/resource/about-1.png') !!}" alt="">
+                            <img src="{!! asset('/site/assets/images/about1.png') !!}" alt="">
                         </figure>
                         <figure class="image image-2">
-                            <img src="{!! asset('/site/assets/images/resource/about-2.png') !!}" alt="">
+                            <img src="{!! asset('/site/assets/images/about2.png') !!}" alt="">
                         </figure>
                         <figure class="image image-3">
                             <img src="{!! asset('/site/assets/images/icons/heart-2.png') !!}" alt="">

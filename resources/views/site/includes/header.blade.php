@@ -15,12 +15,14 @@
         </figure>
     </div>
     <!-- header-top -->
+
     <div class="header-top">
         <div class="outer-container">
             <div class="top-inner clearfix">
             </div>
         </div>
     </div>
+
     <!-- header-lower -->
     <div class="header-lower">
         <div class="outer-container">
@@ -337,7 +339,6 @@
             </div>
         </div>
     </div>
-
     <!-- Mobile Menu  -->
     <div class="mobile-menu">
         <div class="menu-backdrop"></div>
@@ -432,8 +433,8 @@
 
             </div>
         </nav>
-    </div><!-- End Mobile Menu -->
-
+    </div>
+    <!-- End Mobile Menu -->
 
 </header>
 <!-- main-header end -->
