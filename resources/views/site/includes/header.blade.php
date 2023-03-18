@@ -3,9 +3,15 @@
     <!-- logo-box -->
     <div class="logo-box">
         <figure class="logo">
-            <a href="{!! route('index') !!}">
-                <img src="{!! asset('site/assets/images/etharLogo2.jpg') !!}" alt="" width="180">
-            </a>
+            @if(Lang()=='ar')
+                <a href="{!! route('index') !!}">
+                    <img src="{!! asset('site/assets/images/logoAr.png') !!}" alt="">
+                </a>
+            @else
+                <a href="{!! route('index') !!}">
+                    <img src="{!! asset('site/assets/images/logoEn.png') !!}" alt="">
+                </a>
+            @endif
         </figure>
     </div>
     <!-- header-top -->

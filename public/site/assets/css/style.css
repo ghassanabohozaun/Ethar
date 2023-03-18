@@ -692,7 +692,7 @@ img {
     position: absolute;
     left: 0px;
     top: 0px;
-    max-width: 220px;
+    /*max-width: 220px;*/
     z-index: 1;
 
 }
