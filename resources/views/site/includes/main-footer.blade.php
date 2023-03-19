@@ -86,15 +86,16 @@
                         </div>
                         <div class="widget-content">
                             <div class="single-item">
-                                <h5>00972592454545</h5>
+                                <h5>0597500614</h5>
                             </div>
                             <div class="single-item">
-                                <h5>example@info.com</h5>
+                                <h5>etharps1@gmail.com</h5>
                                 <p></p>
                             </div>
 
                             <div class="single-item">
-                                <h5>Palestine , Gaza</h5>
+                                <h5>palestine , Gaza strip
+                                    Khan Younes - Al-Katiba</h5>
                             </div>
 
                             <div class="single-item my-social-style">
@@ -151,7 +152,7 @@
                     @if(Lang()=='ar')
                         <p> &copy; جميع الحقوق محفوظة , <a href="{!! route('index') !!}"> جمعية ايثار</a> 2023.</p>
                     @else
-                        <p>Copyrights &copy; 2023 <a href="{!! route('index') !!}">Ethar,</a> All rights reserved .</p>
+                        <p> &copy; 2023 <a href="{!! route('index') !!}">Ethar,</a> All rights reserved .</p>
                     @endif
                 </div>
             </div>
