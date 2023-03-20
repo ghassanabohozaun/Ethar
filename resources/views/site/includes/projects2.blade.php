@@ -24,7 +24,7 @@
                                             <h2>{!!  $project->{'title_'.Lang()} !!}</h2>
                                         </div>
                                         <div class="text">
-                                            <p>{!! \Illuminate\Support\Str::limit(strip_tags($project->{'details_'.Lang()}),$limit = 200, $end = ' ...')!!} </p>
+                                            <p>{!! \Illuminate\Support\Str::limit(strip_tags($project->{'details_'.Lang()}),$limit = 300, $end = ' ...')!!} </p>
                                         </div>
                                         <div class="video-btn">
                                             <div class="shape"

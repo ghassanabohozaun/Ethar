@@ -69,6 +69,7 @@ return array(
     'send_message' => 'ارسل الرسالة',
     'views_count' => 'مشاهدة',
     'comments_count' => 'تعليق',
+    'download'=>'تحميل',
 
 
     'leave_Reply' => 'اترك لنا ردك',

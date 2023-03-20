@@ -50,7 +50,7 @@ return [
     'administrative' => 'Administrative Report',
     'financial' => 'Financial Report',
     'association_financial_guide'=>'Association financial guide',
-
+    'download'=>'Download',
 
     'email' => 'Email must be :',
     'drop_Line' => 'Drop a Line',

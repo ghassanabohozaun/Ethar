@@ -59,7 +59,6 @@
             </section>
         @else
 
-
             <!-- shop-details -->
             <section class="shop-details">
                 <div class="auto-container">

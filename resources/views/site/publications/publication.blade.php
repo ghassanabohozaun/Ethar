@@ -82,6 +82,16 @@
 
                                             </div>
                                             @if($publication->type  == 'Brochures')
+                                                <div class="info clearfix">
+                                                    <ul class="my-download-link  clearfix ">
+                                                        <li>
+                                                            <a  href="{!! asset('adminBoard/uploadedFiles/publications/'. $publication->file) !!}"  style="font-size: 20px">
+                                                                <i class="fas fa-file-pdf"></i>
+                                                                {!! __('index.download') !!}
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             @else
                                                 <div class="info clearfix">
                                                     <div class="link-box {{Lang()=='ar'? 'pull-right': 'pull-left'}}">
