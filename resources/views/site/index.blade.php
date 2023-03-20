@@ -26,13 +26,14 @@
         @include('site.includes.sliders')
         <!-- sliders end -->
 
+        <!-- about-section -->
+        @include('site.includes.about-association')
+        <!-- about-section end -->
+
         <!-- projects -->
         @include('site.includes.projects')
         <!-- projects end -->
 
-        <!-- about-section -->
-        @include('site.includes.about-association')
-        <!-- about-section end -->
 
         <!-- founders -->
         @include('site.includes.founders')
