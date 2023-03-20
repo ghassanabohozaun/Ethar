@@ -374,7 +374,7 @@
     // Five Item Carousel
     if ($('.five-item-carousel').length) {
         $('.five-item-carousel').owlCarousel({
-            // rtl: true,
+             rtl: true,
             // loop: true,
             margin: 30,
             nav: true,
