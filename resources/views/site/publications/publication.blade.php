@@ -81,16 +81,22 @@
                                                 <p>{!! \Illuminate\Support\Str::limit(strip_tags($publication->{'details_'.Lang()}),$limit = 50, $end = ' ...')!!}</p>
 
                                             </div>
-                                            <div class="info clearfix">
-                                                <div class="link-box {{Lang()=='ar'? 'pull-right': 'pull-left'}}">
-                                                    <a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">
-                                                        {!! __('index.more_details') !!}
-                                                    </a>
+                                            @if($publication->type  == 'Brochures')
+                                            @else
+                                                <div class="info clearfix">
+                                                    <div class="link-box {{Lang()=='ar'? 'pull-right': 'pull-left'}}">
+                                                        <a href="{!! route('advertisement-details',slug($publication->{'title_'.Lang()}) ) !!}">
+                                                            {!! __('index.more_details') !!}
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment-box {{Lang()=='ar'? 'pull-left': 'pull-right'}}">
+                                                        <a href="#"><i class="far fa-eye"></i>{{$publication->views}}</a>
+                                                    </div>
                                                 </div>
-                                                <div class="comment-box {{Lang()=='ar'? 'pull-left': 'pull-right'}}">
-                                                    <a href="#"><i class="far fa-eye"></i>{{$publication->views}}</a>
-                                                </div>
-                                            </div>
+                                            @endif
+
+
+
                                         </div>
                                     </div>
 

@@ -27,7 +27,7 @@ class PublicationsController extends Controller
     {
         $title = __('menu.add_new_publication');
         $projects = Projects::all();
-        return view('admin.publications.create' , compact('title' , 'projects'));
+        return view('admin.publications.create', compact('title', 'projects'));
     }
 
     // store
@@ -52,16 +52,16 @@ class PublicationsController extends Controller
 
 
         $lang_en = setting()->site_lang_en;
-            Publications::create([
+        Publications::create([
             'photo' => $photo_path,
-            'language' =>  $lang_en == 'on' ? 'ar_en' :'ar',
+            'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
             'details_ar' => $request->details_ar,
             'details_en' => $lang_en == 'on' ? $request->details_en : null,
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'file' => $file,
             'date' => $request->date,
-            // 'writer' => $request->writer,/
+            'writer' => '',
             'type' => $request->type,
             'projects_id' => $request->project_id,
             'status' => 'on',
@@ -75,7 +75,7 @@ class PublicationsController extends Controller
     {
         $publication = Publications::findOrFail($id);
         $projects = Projects::all();
-        return view('admin.publications.update', compact('publication' , 'projects'));
+        return view('admin.publications.update', compact('publication', 'projects'));
     }
 
     // update
@@ -91,10 +91,9 @@ class PublicationsController extends Controller
             $photo_path = $this->saveResizeImage($image, $destinationPath, 530, 300);
 
             $image_path = public_path("/adminBoard/uploadedImages/publications//") . $publication->photo;
-              if (File::exists($image_path))
-              {
+            if (File::exists($image_path)) {
                 File::delete($image_path);
-              }
+            }
 
         } else {
             $photo_path = $publication->photo;
@@ -108,9 +107,8 @@ class PublicationsController extends Controller
 
             $file_path = public_path("/adminBoard/uploadedFiles/publications//") . $publication->file;
 
-            if (File::exists($file_path))
-            {
-              File::delete($file_path);
+            if (File::exists($file_path)) {
+                File::delete($file_path);
             }
         } else {
             $file = $publication->file;
@@ -119,16 +117,16 @@ class PublicationsController extends Controller
         $lang_en = setting()->site_lang_en;
         $publication->update([
             'photo' => $photo_path,
-            'language' =>  $lang_en == 'on' ? 'ar_en' :'ar',
+            'language' => $lang_en == 'on' ? 'ar_en' : 'ar',
             'details_ar' => $request->details_ar,
             'details_en' => $lang_en == 'on' ? $request->details_en : null,
             'title_ar' => $request->title_ar,
             'title_en' => $lang_en == 'on' ? $request->title_en : null,
             'file' => $file,
             'date' => $request->date,
-            // 'writer' => $request->writer,
+            'writer' => '',
             'type' => $request->type,
-            'projects_id' => $request->project_id ,
+            'projects_id' => $request->project_id,
         ]);
 
         return $this->returnSuccessMessage(__('general.update_success_message'));
