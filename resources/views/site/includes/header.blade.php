@@ -60,7 +60,6 @@
                                                     {{ $type->{'name_'.Lang()} }}
                                                 </a>
                                             </li>
-
                                         @endforeach
                                         <li>
                                             <a href="{!! route('faq') !!}">
@@ -76,11 +75,11 @@
                                                         {!! __('index.founders') !!}
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a href="{!! route('directors') !!}">
-                                                        {!! __('index.directors') !!}
-                                                    </a>
-                                                </li>
+{{--                                                <li>--}}
+{{--                                                    <a href="{!! route('directors') !!}">--}}
+{{--                                                        {!! __('index.directors') !!}--}}
+{{--                                                    </a>--}}
+{{--                                                </li>--}}
                                                 <li>
                                                     <a href="{!! route('team') !!}">
                                                         {!! __('index.team') !!}
