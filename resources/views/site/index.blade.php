@@ -47,7 +47,7 @@
         <!-- testimonial-section -->
 
         <!-- counters-section -->
-        @include('site.includes.counters-section')
+{{--        @include('site.includes.counters-section')--}}
         <!-- counters-section end -->
 
         <!-- partners-section -->
