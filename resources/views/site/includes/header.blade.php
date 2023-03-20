@@ -5,7 +5,7 @@
         <div class="shape"></div>
         <figure class="logo">
             <a href="{!! route('index') !!}">
-                <img src="{!! asset('site/assets/images/logo111.png') !!}" alt="">
+                <img src="{!! asset('site/assets/images/my-logo.png') !!}" alt="LOGO">
             </a>
         </figure>
     </div>
@@ -111,7 +111,7 @@
                                                 </a>
                                             </li>
                                         @endforeach
-                                        
+
                                     </ul>
                                 </li>
 
@@ -350,10 +350,10 @@
         <div class="menu-backdrop"></div>
         <div class="close-btn"><i class="fas fa-times"></i></div>
 
-        <nav class="menu-box">
-            <div class="nav-logo {!! Lang() == 'ar' ? 'rtl' : 'ltr' !!}">
+        <nav class="menu-box text-center">
+            <div class="nav-logo text-center">
                 <a href="{!! route('index') !!}">
-                    <img src="{!! asset('site/assets/images/etharLogo.jpg') !!}" width="150" alt="" title="">
+                    <img src="{!! asset('site/assets/images/my-logo-2.jpg') !!}" width="100" alt="" title="">
                 </a>
             </div>
             <div class="menu-outer">
