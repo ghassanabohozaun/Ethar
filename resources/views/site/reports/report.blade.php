@@ -59,6 +59,7 @@
             </section>
         @else
 
+
             <!-- shop-details -->
             <section class="shop-details">
                 <div class="auto-container">
@@ -66,7 +67,6 @@
                         <div class="row clearfix reports-section">
 
                             @foreach ($reports as $report)
-
                                 <div class="col-lg-3 col-md-3 col-sm-3 single-column">
                                     <a href="{!! route('report-details',$report->year) !!}">
                                         <button type="button" class="theme-btn btn-one col-lg-12 col-md-12 col-sm-12">
@@ -77,7 +77,6 @@
                                     </a>
                                 </div>
                             @endforeach
-
 
                         </div>
                     </div>
