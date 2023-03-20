@@ -53,10 +53,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 content-column">
                             <div class="content_block_6">
                                 <div class="content-box">
-                                    <div class="sec-title">
-                                        <span class="top-text">{{$about->type->{'name_'.Lang()} }}</span>
-                                        <h2>{{$about->{'title_'.Lang()} }}</h2>
-                                    </div>
+
 
                                     <div class="text">
                                         <p>{!!$about->{'details_'.Lang()} !!}</p>
