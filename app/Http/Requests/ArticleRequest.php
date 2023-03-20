@@ -25,7 +25,6 @@ class ArticleRequest extends FormRequest
                 'abstract_ar' => 'required',
                 'abstract_en' => 'required',
                 'publish_date' => 'required',
-                'publisher_name' => 'required',
                 'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
             ];
 
