@@ -26,7 +26,6 @@ class ArticleUpdateRequest extends FormRequest
                 'abstract_ar' => 'required',
                 'abstract_en' => 'required',
                 'publish_date' => 'required',
-                'publisher_name' => 'required',
             ];
         } else {
             return [
@@ -34,7 +33,6 @@ class ArticleUpdateRequest extends FormRequest
                 'title_ar' => 'required',
                 'abstract_ar' => 'required',
                 'publish_date' => 'required',
-                'publisher_name' => 'required',
             ];
         }
     }
