@@ -27,8 +27,8 @@ class PublicationsRequest extends FormRequest
                     'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
                     'title_ar' => 'required',
                     'title_en' => 'required_if:english,on',
-                    'details_ar' => 'required',
-                    'details_en' => 'required_if:english,on',
+//                    'details_ar' => 'required',
+//                    'details_en' => 'required_if:english,on',
                     'date' => 'required',
                     // 'writer' => 'required',
                     'file'   => ['mimes:pdf']

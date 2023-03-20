@@ -28,8 +28,8 @@ class AboutsRequest extends FormRequest
                 'photo' => 'image|mimes:jpeg,jpg,png|max:1024',
                 'title_ar' => 'required',
                 'title_en' =>'required_if:english,on',
-                'details_ar' => 'required',
-                'details_en' => 'required_if:english,on',
+//                'details_ar' => 'required',
+//                'details_en' => 'required_if:english,on',
                 'type_id' =>['required','exists:about_types,id']
             ];
 
