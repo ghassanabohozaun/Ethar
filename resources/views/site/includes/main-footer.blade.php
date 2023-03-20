@@ -86,17 +86,24 @@
                         </div>
                         <div class="widget-content">
                             <div class="single-item">
-                                <h5>0597500614</h5>
+                                <h5>970597500614</h5>
                             </div>
                             <div class="single-item">
                                 <h5>etharps1@gmail.com</h5>
                                 <p></p>
                             </div>
 
-                            <div class="single-item">
-                                <h5>palestine , Gaza strip
-                                    Khan Younes - Al-Katiba</h5>
-                            </div>
+                            @if(Lang() =='ar')
+                                <div class="single-item">
+                                    <h5>فلسطين  - قطاع غزة</h5>
+                                    <h5>خانيونس - الكتيبة</h5>
+                                </div>
+                            @else
+                                <div class="single-item">
+                                    <h5>palestine , Gaza strip</h5>
+                                    <h5> Khan Younes - Al-Katiba</h5>
+                                </div>
+                            @endif
 
                             <div class="single-item my-social-style">
                                 <ul class="my-social-style-one clearfix  my-2">
