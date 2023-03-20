@@ -26,7 +26,7 @@ class TeamsController extends Controller
     {
         $title = __('index.directors');
 
-        $directors = Team::orderByDesc('id')->where('status', 'on')->where('type', 'director')->get();
+        $directors = Team::orderBy('created_at','asc')->where('status', 'on')->where('type', 'director')->get();
         return view('site.directors', compact('title', 'directors'));
     }
 
@@ -36,7 +36,7 @@ class TeamsController extends Controller
     {
         $title = __('index.team');
 
-        $teams = Team::orderByDesc('id')->where('status', 'on')->where('type', 'member')->get();
+        $teams = Team::orderBy('created_at','asc')->where('status', 'on')->where('type', 'member')->get();
         return view('site.team', compact('title', 'teams'));
     }
 
