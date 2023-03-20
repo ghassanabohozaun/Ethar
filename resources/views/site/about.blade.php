@@ -51,14 +51,37 @@
                     <div class="row clearfix">
 
                         <div class="col-lg-12 col-md-12 col-sm-12 content-column">
-                            <div class="content_block_6">
-                                <div class="content-box">
 
+                            @if($about_type->{'name_'.Lang()} != 'Work Ethics' || $about_type->{'name_'.Lang()} != 'اخلاقيات العمل' )
+                                <div class="content_block_6">
+                                    <div class="content-box">
+                                        <div class="sec-title">
+                                            <span class="top-text">{{$about->type->{'name_'.Lang()} }}</span>
+                                            <h2>{{$about->{'title_'.Lang()} }}</h2>
+                                        </div>
 
-                                    <div class="text">
-                                        <p>{!!$about->{'details_'.Lang()} !!}</p>
-                                        <br/>
+                                        <div class="text">
+                                            <p>{!!$about->{'details_'.Lang()} !!}</p>
+                                            <br/>
 
+                                            <div class="lower-box clearfix">
+                                                <div class="share-option pull-left">
+                                                    @if($about->file != null)
+                                                        <a href="{{asset('adminBoard/uploadedFiles/abouts//'. $about->file)}}">
+                                                            <h5 class="my-h1">
+                                                                <i class="fas fa-file-pdf"></i>
+                                                                {!! __('general.download') !!}
+                                                            </h5>
+                                                        </a>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @else
+                                <div class="content_block_6">
+                                    <div class="content-box">
                                         <div class="lower-box clearfix">
                                             <div class="share-option pull-left">
                                                 @if($about->file != null)
@@ -73,7 +96,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
+                            @endif
                         </div>
 
                     </div>
