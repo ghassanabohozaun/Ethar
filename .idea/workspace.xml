@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0b14ed9-714a-4edd-9193-87b328b07400" name="Changes" comment="" />
+    <list default="true" id="b0b14ed9-714a-4edd-9193-87b328b07400" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/site/Association-financial-guide.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/site/reports/report.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/reports/report.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +144,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/Ethar3/resources/views/site/includes",
+    "last_opened_file_path": "C:/laragon/www/Ethar3/public/site",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -151,11 +155,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\Ethar3\public\site" />
       <recent name="C:\laragon\www\Ethar3\resources\views\site\includes" />
       <recent name="C:\laragon\www\Ethar3\public\site\assets\images" />
       <recent name="C:\laragon\www\Ethar3\public\site\assets\fonts" />
       <recent name="C:\laragon\www\Ethar3\public\site\assets\css" />
-      <recent name="C:\laragon\www\Ethar3\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Ethar3\public\adminBoard\images" />
@@ -191,7 +195,7 @@
       <workItem from="1679140807424" duration="1967000" />
       <workItem from="1679237998044" duration="2004000" />
       <workItem from="1679305953271" duration="1936000" />
-      <workItem from="1679320772207" duration="7474000" />
+      <workItem from="1679320772207" duration="8508000" />
     </task>
     <servers />
   </component>

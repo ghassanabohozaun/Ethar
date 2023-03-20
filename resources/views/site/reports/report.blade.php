@@ -41,7 +41,12 @@
         @if( $reports->isEmpty())
             <!-- team-section -->
             <section class="team-section centred">
-                <h1 class="my-h1">{!! __('index.no_data_found') !!}</h1>
+                <h1 class="my-h1">
+                    <a href="{!! asset('/site/Association-financial-guide.pdf') !!}">
+                        <i class="fas fa-file-pdf"></i>
+                        Download
+                    </a>
+                </h1>
             </section>
         @else
 
