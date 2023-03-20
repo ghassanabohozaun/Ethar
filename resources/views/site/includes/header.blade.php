@@ -75,11 +75,11 @@
                                                         {!! __('index.founders') !!}
                                                     </a>
                                                 </li>
-{{--                                                <li>--}}
-{{--                                                    <a href="{!! route('directors') !!}">--}}
-{{--                                                        {!! __('index.directors') !!}--}}
-{{--                                                    </a>--}}
-{{--                                                </li>--}}
+                                                {{--                                                <li>--}}
+                                                {{--                                                    <a href="{!! route('directors') !!}">--}}
+                                                {{--                                                        {!! __('index.directors') !!}--}}
+                                                {{--                                                    </a>--}}
+                                                {{--                                                </li>--}}
                                                 <li>
                                                     <a href="{!! route('team') !!}">
                                                         {!! __('index.team') !!}
@@ -94,15 +94,16 @@
                                     <a href="javascript:void(0)">{!! __('index.projects') !!}</a>
                                     <ul>
                                         <li>
-                                            <a href="{!! route('projects','previous') !!}">
-                                                {!! __('index.previous_projects') !!}
-                                            </a>
-                                        </li>
-                                        <li>
                                             <a href="{!! route('projects','current') !!}">
                                                 {!! __('index.current_projects') !!}
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="{!! route('projects','previous') !!}">
+                                                {!! __('index.previous_projects') !!}
+                                            </a>
+                                        </li>
+
                                         @foreach (projects() as $project)
                                             <li>
                                                 <a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">
