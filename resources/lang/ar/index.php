@@ -49,6 +49,7 @@ return array(
     'visit_case_studies' => 'زيارة دراسات الحالة',
     'administrative' => 'التقرير الاداري',
     'financial' => 'التقرير المالي',
+    'association_financial_guide'=>'الدليل المالي للجمعية',
 
     'email' => 'الايميل يجب ان يكون :',
     'drop_Line' => 'اكتب الرسالة',

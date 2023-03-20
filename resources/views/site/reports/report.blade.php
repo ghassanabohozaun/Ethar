@@ -40,13 +40,22 @@
         <!-- End Page Title -->
         @if( $reports->isEmpty())
             <!-- team-section -->
-            <section class="team-section centred">
-                <h1 class="my-h1">
-                    <a href="{!! asset('/site/Association-financial-guide.pdf') !!}">
-                        <i class="fas fa-file-pdf"></i>
-                        Download
-                    </a>
-                </h1>
+            <section class="shop-details">
+                <div class="auto-container">
+                    <div class="discription-inner">
+                        <div class="row clearfix reports-section">
+                            <ul class="my-download-link  clearfix   ">
+                                <li>
+                                    <a href="{!! asset('/site/Association-financial-guide.pdf') !!}"
+                                       style="font-size: 25px">
+                                        <i class="fas fa-file-pdf"></i>
+                                        {!! __('index.association_financial_guide') !!}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
         @else
 

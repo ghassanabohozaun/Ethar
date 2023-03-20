@@ -49,6 +49,8 @@ return [
     'visit_case_studies' => 'Visit Case Studies',
     'administrative' => 'Administrative Report',
     'financial' => 'Financial Report',
+    'association_financial_guide'=>'Association financial guide',
+
 
     'email' => 'Email must be :',
     'drop_Line' => 'Drop a Line',
