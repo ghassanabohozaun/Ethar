@@ -9,7 +9,7 @@
                             <h3>{{__('menu.abouts')}}</h3>
                         </div>
                         <div class="text">
-                            <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 280, $end = ' ...')!!}</p>
+                            <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 290, $end = ' ...')!!}</p>
                         </div>
                     </div>
                 </div>
