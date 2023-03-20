@@ -17,7 +17,7 @@ class TeamsController extends Controller
     {
         $title = __('index.founders');
 
-        $founders = Team::orderBy('created_at','desc')->where('status', 'on')->where('type', 'founder')->get();
+        $founders = Team::orderBy('created_at','asc')->where('status', 'on')->where('type', 'founder')->get();
         return view('site.founders', compact('title', 'founders'));
     }
 
