@@ -23,7 +23,7 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/12.jpg') !!});">
+                 style="background-image: url({!! asset('site/assets/images/background/headerPhoto.png') !!});">
 
             <div class="auto-container">
                 <div class="content-box">
@@ -55,7 +55,7 @@
                                 <div class="content-box">
                                     <div class="sec-title">
                                         <span class="top-text">{{$about->type->{'name_'.Lang()} }}</span>
-                                        <h2>{{$about->{'title_'.Lang()} }}</h2>
+{{--                                        <h2>{{$about->{'title_'.Lang()} }}</h2>--}}
                                     </div>
 
                                     <div class="text">
