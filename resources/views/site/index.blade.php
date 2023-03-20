@@ -31,7 +31,7 @@
         <!-- about-section end -->
 
         <!-- projects -->
-        @include('site.includes.projects')
+        @include('site.includes.projects2')
         <!-- projects end -->
 
 
