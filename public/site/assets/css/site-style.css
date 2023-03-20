@@ -208,13 +208,22 @@
 }
 
 .logo_name_ar {
-    font-size: 50px;
+    font-size: 20px;
     font-weight: bolder
 }
 
 .logo_name_en {
-    font-size: 50px;
+    font-size: 20px;
     font-weight: bolder
+}
+
+
+#my_darkred {
+    color: darkred
+}
+
+#my_green {
+    color: green
 }
 
 
