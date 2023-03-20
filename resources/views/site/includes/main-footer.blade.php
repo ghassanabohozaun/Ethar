@@ -40,6 +40,14 @@
                                     </a>
                                 </li>
 
+                                <li>
+                                    <a href="{!! route('photos-albums') !!}">{!! __('index.our_photos') !!}</a>
+                                </li>
+
+                                <li>
+                                    <a href="{!! route('videos') !!}">{!! __('index.our_videos') !!}</a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -95,7 +103,7 @@
 
                             @if(Lang() =='ar')
                                 <div class="single-item">
-                                    <h5>فلسطين  - قطاع غزة</h5>
+                                    <h5>فلسطين - قطاع غزة</h5>
                                     <h5>خانيونس - الكتيبة</h5>
                                 </div>
                             @else
