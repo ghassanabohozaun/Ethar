@@ -25,19 +25,14 @@
 
         <!-- Page Title -->
         <section class="page-title"
-                 style="background-image: url({!! asset('site/assets/images/background/headerPhoto.png') !!});">
+                 style="background-image: url({!! asset('site/assets/images/headerPhoto.png') !!});">
             <div class="auto-container">
                 <div class="content-box">
                     <div class="title">
                         <h1>{{$project->{'title_'.Lang()} .' '. __('site.CaseStudy')}}</h1>
                     </div>
                     <ul class="bread-crumb clearfix">
-                        {{-- <li><a href="{!! route('index') !!}">{{__('index.home')}}</a></li>
-
-                        <li>{{ __('site.'.$type)}}</li> --}}
-                        &nbsp;‏
-
-
+                        &nbsp;
                     </ul>
                 </div>
             </div>
