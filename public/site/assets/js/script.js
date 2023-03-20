@@ -469,7 +469,8 @@
             nav: true,
             smartSpeed: 500,
             autoplay: 1000,
-            items: 5,
+            items: 1,
+            // items: 5,
             navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
         });
     }
