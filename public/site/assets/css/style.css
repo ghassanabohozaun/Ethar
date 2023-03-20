@@ -493,7 +493,7 @@ img {
 }
 
 .sec-pad {
-    padding: 101px 0px 110px 0px;
+    padding: 65px 0px 65px 0px;
 }
 
 .mr-0 {
@@ -3005,7 +3005,7 @@ div#mCSB_1_container {
     left: 0px;
     top: 0px;
     width: calc(50% - 40px);
-    height: 100%;
+    height: 95%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right center;
@@ -4999,7 +4999,7 @@ div#mCSB_1_container {
 
 .team-section {
     position: relative;
-    padding: 102px 0px;
+    padding: 60px 0px;
 }
 
 .team-block-one {

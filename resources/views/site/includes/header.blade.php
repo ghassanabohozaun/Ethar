@@ -23,16 +23,16 @@
         <div class="outer-container">
             <div class="outer-box">
                 @if(Lang()=='ar')
-                    <div class="text text-center font-weight-bold">
-                        <span style="color: darkred"> جمعية ايثار فلسطين</span>
+                    <div class="text text-center font-weight-bold logo_name_ar">
+                        <span   id="my_darkred "> جمعية ايثار فلسطين</span>
                         <br/>
-                        <span style="color: green"> للتنمية والتطوير المجتمعي</span>
+                        <span   id="my_green"> للتنمية والتطوير المجتمعي</span>
                     </div>
                 @else
-                    <div class="text text-center ">
-                        <span style="color: darkred"> Palestine Ethar Society</span>
+                    <div class="text text-center logo_name_en">
+                        <span id="my_darkred"> Palestine Ethar Society</span>
                         <br/>
-                        <span style="color: green"> for Community Development</span>
+                        <span id="my_green"> for Community Development</span>
                     </div>
                 @endif
                 <div class="menu-area clearfix">
