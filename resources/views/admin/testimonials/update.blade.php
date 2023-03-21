@@ -368,7 +368,6 @@
             $('#name_ar').css('border-color', '');
             $('#name_en').css('border-color', '');
             $('#age').css('border-color', '');
-            $('#country').css('border-color', '');
             $('#gender').css('border-color', '');
             $('#job_title_ar').css('border-color', '');
             $('#job_title_en').css('border-color', '');
@@ -382,7 +381,6 @@
             $('#name_ar_error').text('');
             $('#name_en_error').text('');
             $('#age_error').text('');
-            $('#country_error').text('');
             $('#gender_error').text('');
             $('#job_title_ar_error').text('');
             $('#job_title_en_error').text('');

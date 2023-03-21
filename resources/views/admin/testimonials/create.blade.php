@@ -308,10 +308,8 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
                                                 </div>
                                                 <!--begin::body-->
-
                                             </div>
                                         </div>
 
