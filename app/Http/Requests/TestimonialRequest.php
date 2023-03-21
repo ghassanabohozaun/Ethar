@@ -32,7 +32,7 @@ class TestimonialRequest extends FormRequest
                 'name_ar' => 'required',
                 'name_en' => 'required',
                 'age' => 'required',
-                'country' => 'required',
+//                'country' => 'required',
                 'gender' => 'required',
                 'rating' => 'required',
             ];
@@ -42,7 +42,7 @@ class TestimonialRequest extends FormRequest
                 'opinion_ar' => 'required',
                 'name_ar' => 'required',
                 'age' => 'required',
-                'country' => 'required',
+//                'country' => 'required',
                 'gender' => 'required',
                 'rating' => 'required',
             ];
