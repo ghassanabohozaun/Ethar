@@ -350,7 +350,7 @@
         <div class="menu-backdrop"></div>
         <div class="close-btn"><i class="fas fa-times"></i></div>
 
-        <nav class="menu-box text-center">
+        <nav class="menu-box">
             <div class="nav-logo text-center">
                 <a href="{!! route('index') !!}">
                     <img src="{!! asset('site/assets/images/my-logo-2.jpg') !!}" width="100" alt="" title="">
