@@ -25,7 +25,7 @@
 
                     <div class="inner-box">
                         <figure class="image-box">
-                            <img src="{!! asset('site/assets/images/resource/testimonial-1.jpg') !!}"
+                            <img src="{!! asset('site/assets/images/testimonial-1.jpg') !!}"
                                  alt="{!! __('index.testimonials') !!}">
                         </figure>
                         <div class="testimonial-inner">
