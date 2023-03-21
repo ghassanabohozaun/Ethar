@@ -89,7 +89,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -127,7 +126,6 @@
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
-
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
@@ -187,8 +185,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -237,7 +233,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -255,7 +250,6 @@
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
-
 
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
@@ -302,7 +296,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -320,7 +313,6 @@
                                                     </div>
                                                     <!--end::Group-->
 
-
                                                     <!--begin::Group-->
                                                     <div class="form-group row">
                                                         <label class="col-xl-3 col-lg-3 col-form-label">
@@ -337,7 +329,6 @@
                                                         </div>
                                                     </div>
                                                     <!--end::Group-->
-
 
                                                 </div>
                                                 <!--begin::body-->
