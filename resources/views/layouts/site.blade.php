@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{!! asset(Storage::url(setting()->site_icon)) !!}">
 
     <!-- Fav Icon -->
-    <link rel="icon" href="{!! asset('site/assets/images/etharLogo.jpg') !!}" type="image/x-icon">
+    <link rel="icon" href="{!! asset(Storage::url(setting()->site_icon)) !!}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
