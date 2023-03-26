@@ -588,10 +588,10 @@ img {
 .sec-title .top-text {
     position: relative;
     display: block;
-    font-size: 28px;
+    font-size: 35px;
     line-height: 38px;
     font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
-    font-weight: 400;
+    font-weight: 600;
     padding-bottom: 6px;
     margin-bottom: 6px;
 }

@@ -18,10 +18,6 @@
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
          style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
-        test
-        test
-        test
-
         <!-- main header -->
         @include('site.includes.header')
         <!-- main-header end -->
