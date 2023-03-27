@@ -37,7 +37,7 @@ class PartnersController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('/adminBoard/uploadedImages/partners//');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 215, 125);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 200);
         } else {
             $photo_path = '';
         }
@@ -84,11 +84,11 @@ class PartnersController extends Controller
             if (!empty($partner->photo)) {
                 $image = $request->file('photo');
                 $destinationPath = public_path('/adminBoard/uploadedImages/partners//');
-                $photo_path = $this->saveResizeImage($image, $destinationPath, 215, 125);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 200);
             } else {
                 $image = $request->file('photo');
                 $destinationPath = public_path('/adminBoard/uploadedImages/partners//');
-                $photo_path = $this->saveResizeImage($image, $destinationPath, 215, 125);
+                $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 200);
             }
         } else {
             if (!empty($partner->photo)) {
