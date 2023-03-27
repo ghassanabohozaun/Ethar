@@ -931,7 +931,7 @@ img {
     display: inline-block;
     font-size: 20px;
     line-height: 30px;
-   /*font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;*/
+    /*font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;*/
     font-weight: 700;
 }
 
@@ -3166,6 +3166,7 @@ div#mCSB_1_container {
     position: relative;
     display: block;
     margin-bottom: 42px;
+    text-align: justify;
 }
 
 .content_block_1 .content-box .inner .text p {
