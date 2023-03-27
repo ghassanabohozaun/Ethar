@@ -18,6 +18,12 @@
     <div class="boxed_wrapper {!! Lang()=='ar' ? 'rtl':'' !!}"
          style="background-image: url({!! asset('/site/assets/images/shape/shape-23.png') !!});">
 
+        clients-carousel
+
+        clients-carousel
+
+        clients-carousel
+
         <!-- main header -->
         @include('site.includes.header')
         <!-- main-header end -->
