@@ -591,7 +591,7 @@ img {
     font-size: 40px;
     line-height: 38px;
     font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;
-    font-weight: 600;
+    font-weight: 700;
     padding-bottom: 6px;
     margin-bottom: 6px;
 }
@@ -4523,7 +4523,8 @@ div#mCSB_1_container {
     content: '';
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(0deg, rgba(35, 35, 35, 1) 50%, rgba(35, 35, 35, 0.85) 100%);
+    /*background: -webkit-linear-gradient(0deg, rgba(35, 35, 35, 1) 50%, rgba(35, 35, 35, 0.85) 100%);*/
+    background: -webkit-linear-gradient(0deg, #03c0a8 100%, rgb(139 200 223 / 85%) 100%);
     top: 0px;
     left: 0px;
 }
@@ -4559,7 +4560,7 @@ div#mCSB_1_container {
 }
 
 .video-section .content-box .text p {
-    color: #949494;
+    color: #000000;
 }
 
 .video-section .content-box .video-btn {
@@ -5780,7 +5781,7 @@ div#mCSB_1_container {
 .main-footer {
     position: relative;
     width: 100%;
-    background-color: #232323;
+    //background-color: #bfb6b6;
 }
 
 .footer-top {
@@ -5817,12 +5818,12 @@ div#mCSB_1_container {
     display: block;
     font-size: 22px;
     line-height: 26px;
-    color: #ffffff;
+    color: #000000;
     font-weight: 700;
 }
 
 .footer-top .about-widget .text p {
-    color: #949494;
+    color: #333333;
     margin-bottom: 27px;
 }
 
@@ -5856,7 +5857,7 @@ div#mCSB_1_container {
     font-size: 18px;
     line-height: 27px;
     font-family: 'Nunito Sans', "ArbFONTSBEINNormalAR", sans-serif;
-    color: #949494;
+    color: #333333;
     font-weight: 400;
     padding-left: 26px;
 }
@@ -5937,7 +5938,7 @@ div#mCSB_1_container {
     display: block;
     font-size: 18px;
     line-height: 26px;
-    color: #ffffff;
+    color: #333333;
     font-weight: 700;
     margin-bottom: 7px;
 }
@@ -5945,12 +5946,12 @@ div#mCSB_1_container {
 .footer-bottom {
     position: relative;
     width: 100%;
-    background-color: #1a1a1a;
+    background-color: #f4f1f0;
     padding: 27px 0px;
 }
 
 .footer-bottom .copyright p {
-    color: #949494;
+    color: #333333;
     line-height: 26px;
 }
 
@@ -7975,6 +7976,7 @@ div#mCSB_1_container {
 
 .clients-section {
     position: relative;
+    background: -webkit-linear-gradient(0deg, #03c0a8 100%, rgb(139 200 223 / 85%) 100%);
 }
 
 .clients-section .clients-logo-box img {

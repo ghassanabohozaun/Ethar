@@ -1,4 +1,4 @@
-<section class="video-section" style="background-image: url({!! asset('site/assets/images/headerPhoto.png') !!});">
+<section class="video-section">
     <div class="auto-container">
         <div class="video-carousel owl-carousel owl-theme owl-dots-none owl-loaded owl-drag">
 

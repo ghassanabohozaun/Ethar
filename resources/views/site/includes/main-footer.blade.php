@@ -1,5 +1,5 @@
 <!-- main-footer -->
-<section class="main-footer">
+<section class="main-footer" >
     <div class="footer-top">
         <div class="auto-container">
             <div class="row clearfix">

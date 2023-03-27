@@ -1,4 +1,4 @@
-<section class="red-color clients-section" style="background-color: #f65024">
+<section class="red-color clients-section">
     <div class="outer-container">
         <div class="clients-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
             @foreach($partners as $partner)
