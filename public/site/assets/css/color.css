@@ -21,7 +21,7 @@
 }
 
 .handle-preloader .animation-preloader .spinner{
-  border: 3px solid #f65024; 
+  border: 3px solid #f65024;
 }
 
 .theme-btn.btn-one{
@@ -250,7 +250,7 @@
   background-color: #f65024;
 }
 
-.banner-section .banner-thumbs-carousel .swiper-button-next:hover, 
+.banner-section .banner-thumbs-carousel .swiper-button-next:hover,
 .banner-section .banner-thumbs-carousel .swiper-button-prev:hover{
   color: #f65024;
 }
@@ -529,7 +529,7 @@
 	color: #ea2722;
 }
 
-.red-color .main-menu .navigation > li > ul > li > a:hover, 
+.red-color .main-menu .navigation > li > ul > li > a:hover,
 .red-color .main-menu .navigation > li > .megamenu li > a:hover{
 	color: #ea2722;
 }
@@ -551,7 +551,7 @@
 }
 
 .red-color .handle-preloader .animation-preloader .spinner{
-  border: 3px solid #ea2722; 
+  border: 3px solid #ea2722;
 }
 
 .red-color .search-box-outer .dropdown-menu{
@@ -566,7 +566,7 @@
 	background-color: #f4a51e;
 }
 
-.red-color .banner-section .banner-content .swiper-button-prev:hover, 
+.red-color .banner-section .banner-content .swiper-button-prev:hover,
 .red-color .banner-section .banner-content .swiper-button-next:hover{
 	background-color: #ea2722;
 }
@@ -704,7 +704,7 @@
 	color: #ea2722;
 }
 
-.red-color .bootstrap-touchspin .glyphicon-chevron-up:hover:before, 
+.red-color .bootstrap-touchspin .glyphicon-chevron-up:hover:before,
 .red-color .bootstrap-touchspin .glyphicon-chevron-down:hover:before{
 	color: #ea2722;
 }
@@ -1639,7 +1639,7 @@
 }
 
 .cart-section .apply-coupon .form-group input:focus{
-	border-color: #f65024 !important; 
+	border-color: #f65024 !important;
 }
 
 .cart-section .apply-coupon .form-group button:hover{

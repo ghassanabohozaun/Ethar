@@ -28,7 +28,8 @@
                                         </div>
                                         <div class="video-btn">
                                             <div class="shape"
-                                                 style="background-image: url({!! asset('/site/assets/images/shape/shape-16.png') !!});">
+{{--                                                 style="background-image: url({!! asset('/site/assets/images/shape/shape-16.png') !!});"--}}
+                                            >
                                             </div>
                                             <a href="{!! route('project-details',slug($project->{'title_'.Lang()}) )!!}">
                                                 <i class="fa fa-arrow-alt-circle-right"></i>

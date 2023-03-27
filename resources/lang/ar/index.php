@@ -94,5 +94,6 @@ return array(
 
     'send_success_message' => 'تم ارسال رسالتك بنجاح',
     'add_success_comment' => 'تم اضافة تعليقك بنجاح',
-
+    'related_pages'=>'صفحات ذات صلة',
+    'contact_us'=>'اتصل بنا',
 );

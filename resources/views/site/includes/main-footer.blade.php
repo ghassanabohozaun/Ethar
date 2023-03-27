@@ -16,7 +16,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget links-widget ml-30">
                         <div class="widget-title">
-                            <h3>Related Pages</h3>
+                            <h3>{!! __('index.related_pages') !!}</h3>
                         </div>
                         <div class="widget-content">
                             <ul class="links-list clearfix">
@@ -90,7 +90,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget contact-widget ml-30">
                         <div class="title-box">
-                            <h3>Contact Us</h3>
+                            <h3>{!! __('index.contact_us') !!}</h3>
                         </div>
                         <div class="widget-content">
                             <div class="single-item">

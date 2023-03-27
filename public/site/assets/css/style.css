@@ -4586,9 +4586,9 @@ div#mCSB_1_container {
 .video-section .content-box .video-btn a {
     position: relative;
     display: inline-block;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -4599,7 +4599,7 @@ div#mCSB_1_container {
 }
 
 .video-section .content-box .video-btn a:hover {
-
+  color: #ffffff;
 }
 
 .video-section .owl-nav {
