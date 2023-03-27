@@ -92,6 +92,6 @@ return [
     'send_success_message' => 'Message Sent Successfully',
     'add_success_comment' => 'Comment Added Successfully',
 
-    'related_pages'=>'صفحات ذات صلة',
-    'contact_us'=>'اتصل بنا',
+    'related_pages'=>'Related Pages',
+    'contact_us'=>'Contact Us',
 ];
