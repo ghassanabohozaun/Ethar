@@ -33,7 +33,7 @@
                                 <h2>{!! fixedTexts()->{'about_association_title_'.Lang()} !!}</h2>
                             </div>
                             <div class="text">
-                                <p>{!! fixedTexts()->{'about_association_details_'.Lang()} !!}</p>
+                                <p style="text-align:justify">{!! fixedTexts()->{'about_association_details_'.Lang()} !!}</p>
                             </div>
 {{--                            <div class="btn-box">--}}
 {{--                                <a href="#" class="theme-btn btn-one">{!! __('index.read_more') !!}</a>--}}
