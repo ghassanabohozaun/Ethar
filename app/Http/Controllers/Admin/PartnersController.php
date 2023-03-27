@@ -37,7 +37,7 @@ class PartnersController extends Controller
         if ($request->hasFile('photo')) {
             $image = $request->file('photo');
             $destinationPath = public_path('/adminBoard/uploadedImages/partners//');
-            $photo_path = $this->saveResizeImage($image, $destinationPath, 280, 250);
+            $photo_path = $this->saveResizeImage($image, $destinationPath, 250, 250);
         } else {
             $photo_path = '';
         }
