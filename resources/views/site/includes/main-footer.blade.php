@@ -9,7 +9,7 @@
                             <h3>{{__('menu.abouts')}}</h3>
                         </div>
                         <div class="text">
-                            <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 290, $end = ' ...')!!}</p>
+                            <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 280, $end = ' ...')!!}</p>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                             @endif
 
                             <div class="single-item my-social-style">
-                                <ul class="my-social-style-one clearfix  my-2">
+                                <ul class="social-style-one clearfix  my-2">
                                     <li>
                                         <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
                                            href="{!! setting()->site_facebook !!}"
