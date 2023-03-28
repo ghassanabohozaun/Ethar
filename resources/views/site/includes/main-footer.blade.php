@@ -1,5 +1,5 @@
 <!-- main-footer -->
-<section class="main-footer"  style="background-image: url(http://127.0.0.1:8000/site/assets/images/shape/shape-24.png);">
+<section class="main-footer"  style="background-image: url("{!! asset('/site/assets/images/shape/shape-24.png') !!}");">
     <div class="footer-top">
         <div class="auto-container">
             <div class="row clearfix">
