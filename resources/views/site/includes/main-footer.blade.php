@@ -1,6 +1,6 @@
 <!-- main-footer -->
-<section class="main-footer"  style="background-image: url("{!! asset('/site/assets/images/shape/shape-24.png') !!}");">
-    <div class="footer-top">
+<section class="main-footer"  style="background-image: url({{asset('site/assets/images/shape/shape-24.png')}});">
+    <div class="footer-top"  style="background-image: url({{asset('site/assets/images/shape/shape-24.png')}});">
         <div class="auto-container">
             <div class="row clearfix">
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
