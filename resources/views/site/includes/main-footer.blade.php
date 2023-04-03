@@ -117,8 +117,8 @@
                                 </div>
                             @endif
 
-                            <div class="single-item my-social-style">
-                                <ul class="social-style-one clearfix  my-2">
+                            <div class="single-item  ">
+                                <ul class="social-style-one my-social-style clearfix  my-2">
                                     <li>
                                         <a onclick="return {!! setting()->site_facebook ? 'true':'false' !!};"
                                            href="{!! setting()->site_facebook !!}"

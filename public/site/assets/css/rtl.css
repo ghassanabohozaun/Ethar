@@ -456,6 +456,11 @@
     margin-left: 5px;
 }
 
+.my-social-style{
+    float: right;
+}
+
+
 .sec-title .top-text:before {
     position: absolute;
     content: '';
