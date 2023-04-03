@@ -11,6 +11,7 @@ use App\Models\Article;
 use App\Models\Partner;
 use App\Models\Projects;
 use App\Models\QA;
+use App\Models\Setting;
 use App\Models\Slider;
 use App\Models\SupportCenter;
 use App\Models\Team;
@@ -81,9 +82,14 @@ class SiteController extends Controller
         }
 
 
-        $founders = Team::orderBy('created_at','asc')->where('status', 'on')->where('type', 'founder')->get();
+        $founders = Team::orderBy('created_at', 'asc')->where('status', 'on')->where('type', 'founder')->get();
         $testimonials = testimonial::orderByDesc('id')->where('status', 'on')->get();
         $partners = Partner::orderByDesc('id')->where('status', 'on')->get();
+
+
+        // update Website visitor counter
+        $visitorsCounter = Setting::where('id', 1)->first()->visitors_counter;
+        Setting::where('id', 1)->update(['visitors_counter' => $visitorsCounter + 1]);
 
         return view('site.index', compact('title', 'sliders', 'lastProjects', 'founders', 'lastArticles', 'testimonials', 'partners'));
     }
@@ -120,9 +126,10 @@ class SiteController extends Controller
 
     }
 
-    function getContact(){
+    function getContact()
+    {
         $title = __('index.contact');
-        return view('site.contact' , compact('title'));
+        return view('site.contact', compact('title'));
     }
 
     // Send Contact Message

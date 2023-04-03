@@ -34,6 +34,7 @@ class CreateSettingsTable extends Migration
             $table->longText('site_keywords_en')->nullable();
             $table->longText('site_icon')->nullable();
             $table->longText('site_logo')->nullable();
+            $table->bigInteger('visitors_counter')->nullable();
             $table->timestamps();
         });
     }

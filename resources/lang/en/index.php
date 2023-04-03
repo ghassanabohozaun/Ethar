@@ -49,8 +49,8 @@ return [
     'visit_case_studies' => 'Visit Case Studies',
     'administrative' => 'Administrative Report',
     'financial' => 'Financial Report',
-    'association_financial_guide'=>'Association financial guide',
-    'download'=>'Download',
+    'association_financial_guide' => 'Association financial guide',
+    'download' => 'Download',
 
     'email' => 'Email must be :',
     'drop_Line' => 'Drop a Line',
@@ -92,6 +92,8 @@ return [
     'send_success_message' => 'Message Sent Successfully',
     'add_success_comment' => 'Comment Added Successfully',
 
-    'related_pages'=>'Related Pages',
-    'contact_us'=>'Contact Us',
+    'related_pages' => 'Related Pages',
+    'contact_us' => 'Contact Us',
+    'visitors_counter' => 'Visitors Counter'
+
 ];

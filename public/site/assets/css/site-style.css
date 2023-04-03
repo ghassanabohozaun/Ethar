@@ -234,3 +234,10 @@
 #my_green {
     color: green
 }
+
+.visitors_text{
+    font-size: 20px;line-height: 26px;color: #333333;font-weight: 700;margin-bottom: 7px;
+}
+.visitors_number{
+    color: #ea2722;font-size: 20px;line-height: 26px; font-weight: bolder
+ }

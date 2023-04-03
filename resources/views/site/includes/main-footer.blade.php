@@ -1,6 +1,6 @@
 <!-- main-footer -->
-<section class="main-footer"  style="background-image: url({{asset('site/assets/images/shape/shape-24.png')}});">
-    <div class="footer-top"  style="background-image: url({{asset('site/assets/images/shape/shape-24.png')}});">
+<section class="main-footer" style="background-image: url({{asset('site/assets/images/shape/shape-24.png')}});">
+    <div class="footer-top" style="background-image: url({{asset('site/assets/images/shape/shape-24.png')}});">
         <div class="auto-container">
             <div class="row clearfix">
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
@@ -11,6 +11,10 @@
                         <div class="text">
                             <p>{!! \Illuminate\Support\Str::limit(strip_tags(fixedTexts()->{'about_association_details_'.Lang()}),$limit = 280, $end = ' ...')!!}</p>
                         </div>
+
+                        <span class="visitors_text">{!! __('index.visitors_counter') !!}  :</span>
+                        <span class="visitors_number">{!! setting()->visitors_counter !!}</span>
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">

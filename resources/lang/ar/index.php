@@ -96,4 +96,5 @@ return array(
     'add_success_comment' => 'تم اضافة تعليقك بنجاح',
     'related_pages'=>'صفحات ذات صلة',
     'contact_us'=>'اتصل بنا',
+    'visitors_counter'=>'عدد الزيارات'
 );
