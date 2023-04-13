@@ -3,7 +3,7 @@
         <div class="clients-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
             @foreach($partners as $partner)
                 <figure class="clients-logo-box">
-                    <a href="#">
+                    <a href="{!! $partner->url ? $partner->url : '#'  !!}">
                         <img src="{{asset('adminBoard/uploadedImages/partners/'.$partner->photo)}}"
                         alt="{!! $partner->{'name_'.Lang()} !!}">
                     </a>
