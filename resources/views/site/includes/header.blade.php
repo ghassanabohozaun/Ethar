@@ -5,7 +5,7 @@
         <div class="shape"></div>
         <figure class="logo">
             <a href="{!! route('index') !!}">
-                <img src="{!! asset('site/assets/images/my-logo.png') !!}" alt="LOGO">
+                <img src="{!! asset('site/assets/images/etharLogo3.png') !!}"  width="100" height="100" alt="LOGO">
             </a>
         </figure>
     </div>

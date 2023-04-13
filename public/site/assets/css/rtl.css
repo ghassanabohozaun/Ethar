@@ -94,7 +94,7 @@
 
 .header-style-one .logo-box .logo img {
     border-bottom-left-radius: 20px;
-    padding-right: 50px
+    padding-right: 10px
 }
 
 
@@ -739,3 +739,9 @@
     left: -15px;
 }
 
+
+.header-lower .outer-box .text {
+    position: relative;
+    margin-right: -60px;
+    padding-right: -50px;
+}

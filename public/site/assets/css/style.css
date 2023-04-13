@@ -914,11 +914,6 @@ img {
     justify-content: space-between;
 }
 
-.header-lower .outer-box .text {
-    position: relative;
-    /*margin-left: 40px;*/
-    /*padding-left: 30px;*/
-}
 
 .header-lower .outer-box .text .icon-box {
     position: absolute;
@@ -929,8 +924,8 @@ img {
 .header-lower .outer-box .text span {
     position: relative;
     display: inline-block;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 20px;
     /*font-family: 'Caveat', "ArbFONTSBEINNormalAR", cursive;*/
     font-weight: 700;
 }

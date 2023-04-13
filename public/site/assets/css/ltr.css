@@ -1,6 +1,6 @@
 .header-style-one .logo-box .logo img {
     border-bottom-right-radius: 20px;
-    padding-left: 50px
+    padding-left: 10px
 }
 
 .my-social-style-one li {
@@ -276,3 +276,9 @@
     right: -15px;
 }
 
+
+.header-lower .outer-box .text {
+    position: relative;
+    margin-left: -50px;
+    padding-left: -50px;
+}
