@@ -14,6 +14,7 @@ class Partner extends Model
         'photo',
         'name_ar',
         'name_en',
+        'url',
         'status',
     ];
     protected $hidden = ['updated_at'];

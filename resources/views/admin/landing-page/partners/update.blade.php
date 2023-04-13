@@ -166,6 +166,25 @@
                                                     </div>
                                                     <!--end::Group-->
 
+                                                    <!--begin::url-->
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 col-form-label">
+                                                            {{__('partners.url')}}
+                                                        </label>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <input value="{{$partner->url}}"
+                                                                   class="form-control form-control-solid form-control-lg"
+                                                                   name="url" id="url" type="text"
+                                                                   placeholder=" {{__('partners.enter_url')}}"
+                                                                   autocomplete="off"/>
+                                                            <span class="form-text text-danger"
+                                                                  id="url_en_error"></span>
+                                                        </div>
+                                                    </div>
+                                                    <!--end::url-->
+
+
+
                                                 </div>
                                                 <!--begin::body-->
 
@@ -201,10 +220,12 @@
             $('#name_ar').css('border-color', '');
             $('#name_en').css('border-color', '');
             $('#photo').css('border-color', '');
+            $('#url').css('border-color', '');
 
             $('#name_ar_error').text('');
             $('#name_en_error').text('');
             $('photo_error').text('');
+            $('url_error').text('');
             /////////////////////////////////////////////////////////////
             var data = new FormData(this);
             var type = $(this).attr('method');
