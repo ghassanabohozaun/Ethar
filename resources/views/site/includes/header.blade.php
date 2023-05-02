@@ -5,7 +5,12 @@
         <div class="shape"></div>
         <figure class="logo">
             <a href="{!! route('index') !!}">
-                <img src="{!! asset('site/assets/images/etharLogo3.png') !!}"  width="100" height="100" alt="LOGO">
+                @if(Lang()=='en')
+                <img src="{!! asset('site/assets/images/LogoEn.svg') !!}"  width="310"  alt="LOGO">
+                @else
+                    <img src="{!! asset('site/assets/images/LogoAr.svg') !!}"  width="320"  alt="LOGO">
+
+                @endif
             </a>
         </figure>
     </div>
@@ -22,19 +27,20 @@
     <div class="header-lower">
         <div class="outer-container">
             <div class="outer-box">
-                @if(Lang()=='ar')
-                    <div class="text text-center font-weight-bold ">
-                        <span  id="my_darkred"> جمعية ايثار فلسطين</span>
-                        <br/>
-                        <span id="my_green"> للتنمية والتطوير المجتمعي</span>
-                    </div>
-                @else
-                    <div class="text text-center">
-                        <span id="my_darkred"> Palestine Ethar Society</span>
-                        <br/>
-                        <span id="my_green"> for Community Development</span>
-                    </div>
-                @endif
+
+{{--                @if(Lang()=='ar')--}}
+{{--                    <div class="text text-center font-weight-bold ">--}}
+{{--                        <span  id="my_darkred"> جمعية ايثار فلسطين</span>--}}
+{{--                        <br/>--}}
+{{--                        <span id="my_green"> للتنمية والتطوير المجتمعي</span>--}}
+{{--                    </div>--}}
+{{--                @else--}}
+{{--                    <div class="text text-center">--}}
+{{--                        <span id="my_darkred"> Palestine Ethar Society</span>--}}
+{{--                        <br/>--}}
+{{--                        <span id="my_green"> for Community Development</span>--}}
+{{--                    </div>--}}
+{{--                @endif--}}
                 <div class="menu-area clearfix">
                     <!--Mobile Navigation Toggler-->
                     <div class="mobile-nav-toggler">

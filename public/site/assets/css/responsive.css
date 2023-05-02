@@ -84,8 +84,12 @@
 @media only screen and (max-width: 1599px){
 
   .header-lower .outer-box .text{
-    display: none;
+    display: block;
   }
+
+    .main-header .nav-right-content .social-style-one{
+        display: none;
+    }
 
 }
 
@@ -109,7 +113,9 @@
 
 @media only screen and (max-width: 1299px){
 
-
+    .main-header .nav-right-content .social-style-one{
+        display: none;
+    }
 
 }
 
