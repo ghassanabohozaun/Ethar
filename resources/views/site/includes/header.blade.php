@@ -6,9 +6,9 @@
         <figure class="logo">
             <a href="{!! route('index') !!}">
                 @if(Lang()=='en')
-                <img src="{!! asset('site/assets/images/LogoEn.svg') !!}"  width="310"  alt="LOGO">
+                    <img src="{!! asset('site/assets/images/LogoEn.svg') !!}" width="310" alt="LOGO">
                 @else
-                    <img src="{!! asset('site/assets/images/LogoAr.svg') !!}"  width="320"  alt="LOGO">
+                    <img src="{!! asset('site/assets/images/LogoAr.svg') !!}" width="310" alt="LOGO">
 
                 @endif
             </a>
@@ -27,20 +27,6 @@
     <div class="header-lower">
         <div class="outer-container">
             <div class="outer-box">
-
-{{--                @if(Lang()=='ar')--}}
-{{--                    <div class="text text-center font-weight-bold ">--}}
-{{--                        <span  id="my_darkred"> جمعية ايثار فلسطين</span>--}}
-{{--                        <br/>--}}
-{{--                        <span id="my_green"> للتنمية والتطوير المجتمعي</span>--}}
-{{--                    </div>--}}
-{{--                @else--}}
-{{--                    <div class="text text-center">--}}
-{{--                        <span id="my_darkred"> Palestine Ethar Society</span>--}}
-{{--                        <br/>--}}
-{{--                        <span id="my_green"> for Community Development</span>--}}
-{{--                    </div>--}}
-{{--                @endif--}}
                 <div class="menu-area clearfix">
                     <!--Mobile Navigation Toggler-->
                     <div class="mobile-nav-toggler">
@@ -359,7 +345,12 @@
         <nav class="menu-box">
             <div class="nav-logo text-center">
                 <a href="{!! route('index') !!}">
-                    <img src="{!! asset('site/assets/images/my-logo-2.jpg') !!}" width="100" alt="" title="">
+                    @if(Lang()=='en')
+                        <img src="{!! asset('site/assets/images/LogoWhiteEn.svg') !!}" width="450" alt="" title="">
+                    @else
+                        <img src="{!! asset('site/assets/images/LogoWhiteAr.svg') !!}" width="450" alt="" title="">
+
+                    @endif
                 </a>
             </div>
             <div class="menu-outer">
@@ -438,8 +429,9 @@
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
-                        <li style="color: #0c0e1a ; font-weight: bolder"><a
-                                href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع</a></li>
+                        <li style="color: #0c0e1a ; font-weight: bolder">
+                            <a href="{{LaravelLocalization::getLocalizedURL('ar')}}"> ع </a>
+                        </li>
                     </ul>
                 @endif
 
