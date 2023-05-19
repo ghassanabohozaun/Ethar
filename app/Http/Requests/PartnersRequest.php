@@ -25,6 +25,9 @@ class PartnersRequest extends FormRequest
     {
         return [
             'photo' => 'required_without:hidden_photo|image|mimes:jpeg,jpg,png|max:1024',
+            'name_ar' => 'required',
+            'name_en' => 'required',
+
         ];
     }
 

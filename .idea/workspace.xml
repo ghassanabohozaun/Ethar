@@ -5,14 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6465762-4658-4e2f-9971-2a59db055c7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/site/assets/images/LogoEn2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/site/assets/images/LogoWhiteAr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/site/assets/images/LogoWhiteEn.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Ethar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ethar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site/assets/images/LogoEn.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/site/assets/images/LogoEn.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/site/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/PartnersRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/PartnersRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_08_082754_create_admins_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_12_162423_create_settings_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_22_105523_create_files_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_24_091414_create_sliders_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_012_12_174240_create_articles_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_08_103348_create_roles_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_08_12_154447_create_support_centers_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_10_091319_create_projects_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_12_075107_create_publications_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_12_113978_create_videos_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_12_131605_create_reports_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_15_073340_create_about_types_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_15_073354_create_abouts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_01_15_132700_create_faq_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_02_23_162527_create_fixed_texts_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_02_24_090854_create_partners_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_27_090804_create_photo_albums_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_27_090854_create_teams_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_08_28_090854_create_comments_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_1_11_160238_create_testimonials_table.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,22 +169,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/laragon/www/Ethar/public/site/assets/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/laragon/www/Ethar/public/site/assets/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\Ethar\public\site\assets\images" />
@@ -207,7 +227,13 @@
       <workItem from="1682859838091" duration="86000" />
       <workItem from="1682933333633" duration="858000" />
       <workItem from="1682945995137" duration="1168000" />
-      <workItem from="1683009393329" duration="5964000" />
+      <workItem from="1683009393329" duration="6102000" />
+      <workItem from="1683024214171" duration="690000" />
+      <workItem from="1683121504309" duration="846000" />
+      <workItem from="1684388573009" duration="348000" />
+      <workItem from="1684388970232" duration="401000" />
+      <workItem from="1684392203516" duration="12000" />
+      <workItem from="1684514935053" duration="211000" />
     </task>
     <servers />
   </component>
