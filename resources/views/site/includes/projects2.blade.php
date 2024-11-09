@@ -1,3 +1,4 @@
+@if(!$lastProjects->isEmpty())
 <section class="video-section">
     <div class="auto-container">
         <div class="video-carousel owl-carousel owl-theme owl-dots-none owl-loaded owl-drag">
@@ -58,3 +59,4 @@
         </div>
     </div>
 </section>
+@endif

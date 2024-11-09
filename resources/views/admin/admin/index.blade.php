@@ -312,7 +312,6 @@
     <script type="text/javascript">
         var admin_photo = new KTImageInput('kt_admin_photo');
 
-
         $('body').on('click', '#admin_update_modal', function (e) {
             e.preventDefault();
             $.notifyClose();
